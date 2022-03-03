@@ -1,3 +1,12 @@
+---
+name: PR
+about: Pull request.
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 #### About pull request
 - To get more insight, please check the related issue #XXX.
 
