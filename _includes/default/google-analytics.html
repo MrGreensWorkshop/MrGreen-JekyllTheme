@@ -1,0 +1,24 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{% if site.data.conf.main.cookie_consent.enable -%}
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {dataLayer.push(arguments);}
+  CookieConsent.gtag = gtag;
+  if (Object.keys(consent_settings).length > 0) gtag("consent", "default", consent_settings);
+  if (Object.keys(default_configs).length > 0) gtag("set", default_configs);
+</script>
+{%- endif %}
+
+{%-comment-%} for more info https://developers.google.com/web/ilt/pwa/lab-integrating-analytics?hl=en {%-endcomment-%}
+<script defer src="https://www.googletagmanager.com/gtag/js?id={{ site.data.owner.google_analytics_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.data.owner.google_analytics_id }}');
+</script>

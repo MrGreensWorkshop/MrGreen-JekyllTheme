@@ -1,0 +1,19 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: lng_code {%-endcomment-%}
+
+{%- assign lng_code = site.data.lang[include.lng].lng.code -%}
+{%- if include.country != nil %}
+  {%- assign add_country = include.country -%}
+{%- else- %}
+  {%- assign add_country = site.data.conf.main.html_lng_with_country_code -%}
+{%- endif -%}
+{%- if add_country == true -%}
+  {%- assign joinWith = include.joinWith | default: "-" -%}
+  {%- assign lng_code = lng_code | append: joinWith | append: site.data.lang[include.lng].lng.country -%}
+  {%- assign lng_code = lng_code | append: '@@' | remove_first: '-@@' | remove_first: '@@' -%}
+{%- endif -%}

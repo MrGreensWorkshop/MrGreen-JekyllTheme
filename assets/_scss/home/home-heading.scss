@@ -1,0 +1,55 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.home-heading-container {
+  @include get_scheme(home-heading-colors-);
+}
+
+.home-heading {
+  width: calc(100% + (var(--text-spacing) * 2));
+  margin-top: calc(-1 * var(--text-spacing));
+  margin-left: calc(-1 * var(--text-spacing));
+  height: calc(100vw - (50vh / 2));
+  max-height: 250px;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: inset 0 -8px 5px -1px var(--home-heading-shadow-color);
+  /* for centering home-heading-message */
+  display: table;
+}
+
+.home-heading-message {
+  font-size: 4.2rem;
+  font-weight: 700;
+  color: var(--home-heading-message-color);
+  text-align: center;
+  /* for centering home-heading-message */
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.home-intro-text {
+  text-align: justify;
+  margin-top: calc(var(--text-spacing) - 3px);
+}
+
+.home-intro-text > h1,
+.home-intro-text > h2,
+.home-intro-text > h3,
+.home-intro-text > h4,
+.home-intro-text > h5,
+.home-intro-text > h6 {
+  color: var(--home-intro-text-header-color);
+}
+
+.home-intro-text > p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+/* remove last spacing */
+.home-intro-text > p:last-child {
+  margin-bottom: 0px;
+}

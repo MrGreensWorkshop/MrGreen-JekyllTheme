@@ -1,0 +1,7 @@
+---
+layout: json/search
+
+# optional
+# to disable this page, simply set published: false or delete this file
+#published: false
+---

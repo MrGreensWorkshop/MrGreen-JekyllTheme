@@ -1,0 +1,152 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.archives {
+  @include get_scheme(archives-colors-);
+  --archives-line-left-offset: 70px;
+  margin-top: 15px;
+}
+
+/* line */
+.archives .year > .month > ul:before {
+  content: "";
+  width: 2px;
+  position: absolute;
+  bottom: 25px;
+  top: -25px;
+  /* line left */
+  left: calc(var(--archives-line-left-offset) + 2.5px);
+  z-index: 1;
+  background: var(--archives-line-color);
+}
+
+/* bottom of last month dot, connect line. */
+.archives .year:last-of-type > .month:last-of-type > ul:before {
+  bottom: 9px;
+}
+
+/* bottom of last year dot, connect line. */
+.archives .year > .month:last-of-type > ul:before {
+  bottom: -20px;
+}
+
+/* year text */
+.archives .year > h6 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--archives-year-text-color);
+  position: absolute;
+  right: calc(100% - (var(--archives-line-left-offset) - 10px));
+  white-space: nowrap;
+  margin-top: -41px;
+}
+
+.archives .year,
+.archives .year > .month {
+  position: relative;
+}
+
+/* month text */
+.archives .year > .month > h6 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--archives-month-text-color);
+  position: absolute;
+  right: calc(100% - (var(--archives-line-left-offset) - 10px));
+  white-space: nowrap;
+  margin-top: -38px;
+}
+
+.archives .year > .month > ul {
+  list-style: none;
+  padding: 0;
+  /* items left */
+  padding-left: calc(var(--archives-line-left-offset) + 5px);
+  font-size: 1.6rem;
+}
+
+.archives .year > .month > ul:last-child {
+  margin-bottom: 0;
+}
+
+/* dots */
+.archives .year:before,
+.archives .year > .month:before,
+.archives .year > .month > ul > li:before {
+  content: "";
+  display: block;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: var(--archives-dot-color);
+  box-shadow: 0 0 3px 0 var(--archives-dot-color);
+}
+
+/* dot year */
+/* dot with hole */
+.archives .year:before {
+  border: 3px solid;
+  border-color: var(--archives-dot-color);
+  background-color: transparent;
+  width: 12px;
+  height: 12px;
+  margin-left: calc(var(--archives-line-left-offset) - 2.5px);
+  margin-bottom: 25px;
+}
+
+/* dot month */
+.archives .year > .month:before {
+  width: 10px;
+  height: 10px;
+  margin-left: calc(var(--archives-line-left-offset) - 1.5px);
+  margin-bottom: 25px;
+}
+
+/* dot day */
+.archives .year > .month > ul > li:before {
+  width: 7px;
+  height: 7px;
+  margin-left: -5px;
+  margin-bottom: -15px;
+}
+
+.archives .year > .month > ul > li > a {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* text left */
+.archives .year > .month > ul > li > a {
+  margin-left: 13px;
+}
+
+/* day text */
+.archives .year > .month > ul > li > span {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--archives-day-text-color);
+  position: absolute;
+  right: calc(100% - (var(--archives-line-left-offset) - 10px));
+  white-space: nowrap;
+  margin-top: 1.5px;
+}
+
+/* space between years */
+.archives .year:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+/* space between months */
+.archives .year > .month:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+/* space between days */
+.archives .year > .month > ul > li:not(:last-child) {
+  padding-bottom: 20px;
+}

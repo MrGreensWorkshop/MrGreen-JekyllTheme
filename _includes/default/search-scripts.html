@@ -1,0 +1,80 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+<script src="{{ site.baseurl }}/assets/js/simple-jekyll-search-1.9.2.min.js"></script>
+{%- include multi_lng/get-page-by-layout.liquid layout = 'json/search' -%}
+
+{%- assign search_json_path = site.baseurl | append: layout_page_obj.url -%}
+
+<script>
+  function loadSearch(jsonData, searchParam) {
+    if (!jsonData) jsonData = '{{ search_json_path }}';
+    var searchInput = document.getElementById('search-box');
+
+    const simpleJekyllSearch = SimpleJekyllSearch({
+      searchInput: searchInput
+      ,resultsContainer: document.getElementById('search-results')
+      ,json: jsonData
+      ,searchResultTemplate: '<li><a href="{url}">{title}<span>{date}</span></a></li>'
+      ,noResultsText: '<li>{{ site.data.lang[lng].search.noResultText }}</li>'
+      ,limit: 10
+      ,fuzzy: false
+    {%- if site.data.conf.main.search_disable_auto_search %}
+      ,formSubmit: document.getElementById('searchbox-form')
+    {%- endif %}
+      {%- comment %},exclude: ['']{% endcomment %}
+    });
+
+    if (searchParam) {
+      searchInput.value = searchParam;
+      searchInput.focus();
+      searchInput.disabled=false;
+      setTimeout(function(){
+        simpleJekyllSearch.search(searchParam);
+      }, 400);
+    }
+  }
+
+  {% if site.data.conf.main.search_with_uri != true -%}
+    loadSearch();
+  {% endif -%}
+</script>
+
+{% if site.data.conf.main.search_with_uri -%}
+  <script>
+    function isEmpty(value) {
+      if (value === "" || value === null || typeof value === "undefined") return true;
+      return false;
+    }
+
+    function getQueryParam (param, mach = true) {
+      var queryString = window.location.search.substring(1);
+      if (isEmpty(queryString)) return null;
+      var queries = queryString.split("&");
+      for (var i in queries) {
+        var pair = decodeURIComponent(queries[i]).split("=");
+        if (mach == true){
+          if (pair[0] == param) {
+            if (isEmpty(pair[1]) === false) return pair[1];
+          }
+        }else{
+          return pair;
+        }
+        break;
+      }
+      return null;
+    }
+
+    const searchParam = getQueryParam('search');
+
+    (async () => {
+      let resp = await fetch('{{ search_json_path }}');
+      if (!resp.ok) return;
+      let jsonData = await resp.json();
+      loadSearch(jsonData, searchParam);
+    })();
+  </script>
+{%- endif %}

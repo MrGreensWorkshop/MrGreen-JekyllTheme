@@ -1,0 +1,87 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.top-nav-buttons,
+.side-nav-buttons {
+  @include get_scheme(navigation-buttons-colors-);
+}
+
+.side-nav-buttons {
+  text-align: center;
+}
+
+/* side nav and top nav buttons */
+.side-nav-buttons ul {
+  list-style: none;
+  margin-bottom: 0px;
+
+  display: inline-block;
+  text-align: left;
+}
+
+.top-nav-buttons li,
+.side-nav-buttons li {
+  font-weight: 400;
+  font-size: 1.7rem;
+  list-style: none;
+}
+
+/* button spacing */
+.side-nav-buttons li {
+  line-height: 1.7rem;
+}
+
+.side-nav-buttons li > a {
+  /* padding around links */
+  padding: 8px;
+}
+
+.side-nav-buttons li > a > i {
+  font-size: 1.7rem;
+  margin-right: 10px;
+}
+
+/* to remove scroll bar inside the menu */
+.top-nav-buttons {
+  overflow-y: hidden !important;
+}
+
+.top-nav-buttons li {
+  line-height: 2rem;
+}
+
+/* icon size */
+.top-nav-buttons li > a > i {
+  font-size: 1.7rem;
+  padding-right: 8px;
+}
+
+.top-nav-buttons li > a,
+.side-nav-buttons li > a {
+  color: var(--side-top-nav-buttons-text-color);
+  display: block;
+}
+
+.top-nav-buttons li > .active-page,
+.side-nav-buttons li > .active-page {
+  color: var(--side-top-nav-buttons-active-text-color);
+}
+
+.top-nav-buttons li > a:hover,
+.side-nav-buttons li > a:hover {
+  color: var(--side-top-nav-buttons-hover-text-color);
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.top-nav-buttons li > a:hover,
+.top-nav-buttons li > a:active,
+.top-nav-buttons li > a:focus,
+.side-nav-buttons li > a:hover,
+.side-nav-buttons li > a:active,
+.side-nav-buttons li > a:focus {
+  text-decoration: none;
+  background-color: transparent !important;
+}

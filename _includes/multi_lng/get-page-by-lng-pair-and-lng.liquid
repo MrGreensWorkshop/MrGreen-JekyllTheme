@@ -1,0 +1,24 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: out_lng_page {%-endcomment-%}
+
+{%- if include.lng != nil -%}
+  {%- assign page_lng = include.lng -%}
+{%- else -%}
+  {%- include multi_lng/get-lng-by-url.liquid -%}
+  {%- assign page_lng = get_lng -%}
+{%- endif -%}
+
+{%- include multi_lng/get-pages-by-lng-pair.liquid lng_pair=include.lng_pair layout=include.layout pages=include.pages -%}
+
+{%- for _page in lng_page_pair -%}
+  {%- include multi_lng/get-lng-by-url.liquid url = _page.url -%}
+  {%- if get_lng == page_lng -%}
+    {%- assign out_lng_page = _page -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}

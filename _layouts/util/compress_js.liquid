@@ -1,0 +1,31 @@
+---
+# Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+# Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+# Licensed under MIT
+---
+{%-comment-%}
+  This will remove comments, line breaks and spaces in the js files.
+  All comments must be inside '/* */' . Don't use '//' for comments.
+{%-endcomment-%}
+
+{%-comment-%} out: compress_js_out {%-endcomment-%}
+
+{%- assign compress_js_out = content -%}
+
+{%- assign tag_start = '/*' -%}
+{%- assign tag_end = '*/' -%}
+{%- if compress_js_out contains tag_start and jekyll.environment != site.compress_js.ignore -%}
+  {%- assign tmp_content = compress_js_out | split: tag_start -%}
+  {%- assign compress_js_out = nil -%}
+  {%- for item in tmp_content offset: 1 -%}
+    {%- assign tuple = item | split: tag_end -%}
+    {%- capture _tmp -%} {{ tag_start }}{{ tuple[0] }}{{ tag_end }} {%- endcapture -%}
+    {%- assign code_out = tuple[1] -%}
+    {%- if jekyll.environment == 'production' or site.compress_js.linebreak_and_space -%}
+      {%- assign code_out = code_out | split: " " | join: " " -%}
+    {%- endif -%}
+    {%- if forloop.first  -%} {%- assign code_out = _tmp | append: code_out -%} {%- endif -%}
+    {%- assign compress_js_out = compress_js_out | append: code_out | append: " "  -%}
+  {%- endfor -%}
+{%- endif -%}
+{{ compress_js_out }}

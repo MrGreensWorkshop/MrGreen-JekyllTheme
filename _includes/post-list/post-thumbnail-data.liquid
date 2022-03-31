@@ -1,0 +1,23 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign image = '/assets/img/default/1x1px.png' -%}
+{%- assign display = nil -%}
+{%- assign max_width = nil -%}
+{%- assign title_sub = nil -%}
+
+{%- if site.data.conf.posts.thumbnail_img and include.post.img -%}
+  {%- assign image = include.post.img -%}
+{%- else -%}
+  {%- if site.data.conf.posts.thumbnail_img_fill != true -%}
+    {%- assign display = 'display: none;' -%}
+    {%- assign max_width= "style='width:100%;'" -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- include post-list/post-custom-excerpt.liquid content = include.post.content -%}
+
+{%- include post_common/post-info-data.liquid date = include.post.date url=include.post.url content = include.post.content title = include.post.title comment_off = include.post.comments_disable -%}

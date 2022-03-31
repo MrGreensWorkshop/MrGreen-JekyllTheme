@@ -1,0 +1,12 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: layout_page_obj, layout_page_url {%-endcomment-%}
+
+{%- include multi_lng/get-pages-by-lng.liquid pages = site.pages -%}
+{%- assign layout_page_obj = nil %}{%- assign layout_page_url = nil %}
+{%- assign layout_page_obj = lng_pages | where_exp: "item", "item.layout == include.layout" | first -%}
+{%- assign layout_page_url = layout_page_obj.url | absolute_url -%}

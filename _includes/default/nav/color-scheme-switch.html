@@ -1,0 +1,19 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign tooltip_placement = "bottom" -%}
+{%- if include.switch_id == "color_scheme_switch_side" -%} {%- assign tooltip_placement = "top" -%} {%- endif -%}
+{%- if site.data.conf.main.color_scheme_switch_tooltip -%}
+  {%- capture tooltip_color_scheme_switch -%}
+    data-toggle="tooltip" data-placement="{{ tooltip_placement }}" title="{{ site.data.lang[lng].color_scheme_switch_tooltip }}"
+  {%- endcapture %}
+{%- endif -%}
+<div class="{{ include.switch_id }}_holder" {{ tooltip_color_scheme_switch }}>
+  <label class="color-scheme-switch {{ include.effect }}">
+    <input type="checkbox" class="checkbox_color_switch" />
+    <span></span>
+  </label>
+</div>

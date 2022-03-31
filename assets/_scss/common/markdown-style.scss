@@ -1,0 +1,137 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+/* common for projects, post */
+.markdown-style {
+  @include get_scheme(markdown-style-colors-);
+  @include get_scheme(bootstrap-dark-table-striped-colors-);
+  @include get_scheme(bootstrap-dark-table-colors-);
+}
+
+/* tables */
+/* add scroll for mobile screens */
+.markdown-style .table {
+  display: block;
+  overflow-x: auto;
+  width: revert;
+}
+
+/* narrow rows and smaller texts */
+.markdown-style .table > thead > tr th,
+.markdown-style .table > tbody > tr td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 1.316rem;
+}
+
+/* add border at the end */
+.markdown-style .table-striped > tbody > tr:last-child {
+  border-bottom: 1px solid;
+}
+
+/* list items indents */
+.markdown-style ul,
+.markdown-style ol {
+  margin-left: -5px;
+}
+/* list items indents */
+.markdown-style li {
+  margin-left: -15px;
+}
+
+.markdown-style p,
+.markdown-style ul,
+.markdown-style ol,
+.markdown-style li p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+
+/* center items */
+.markdown-style [data-align="center"] {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+}
+
+/* for centering tables */
+.markdown-style .table[data-align="center"] {
+  display: revert;
+  text-align: revert;
+}
+
+/* for centered tables scroll on mobile screen */
+@media (max-width: 500px) {
+  .markdown-style .table[data-align="center"] {
+    display: block;
+  }
+}
+
+.markdown-style blockquote {
+  text-align: justify;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  margin-left: calc(-1 * var(--text-spacing));
+  margin-right: calc(-1 * var(--text-spacing));
+}
+
+.markdown-style blockquote > p {
+  font-size: 1.65rem;
+  font-weight: 300;
+}
+
+/* bootstrap color overrides */
+.markdown-style > h1,
+.markdown-style > h2,
+.markdown-style > h3,
+.markdown-style > h4,
+.markdown-style > h5,
+.markdown-style > h6 {
+  color: var(--markdown-styles-header-text-color);
+}
+
+.markdown-style .table-striped > tbody > tr:last-child {
+  border-bottom-color: var(--markdown-styles-table-border-color);
+}
+
+.markdown-style blockquote {
+  border-left-color: var(--markdown-styles-blockquote-side-color);
+  border-right-color: var(--markdown-styles-blockquote-side-color);
+  background-color: var(--markdown-styles-blockquote-background-color);
+}
+
+.markdown-style kbd {
+  background-color: var(--markdown-styles-kbd-background-color);
+  color: var(--markdown-styles-kbd-text-color);
+  box-shadow: revert;
+}
+
+/* code */
+.markdown-style pre {
+  background-color: var(--markdown-styles-code-background-color);
+  font-size: 1.4rem;
+}
+
+/* code */
+.markdown-style .highlight {
+  background-color: var(--markdown-styles-code-background-color);
+  color: var(--markdown-styles-code-text-color);
+  font-size: 1.4rem;
+}
+
+/* code */
+.markdown-style pre > code {
+  background-color: var(--markdown-styles-code-background-color);
+  color: var(--markdown-styles-code-text-color);
+}
+
+/* Quoted text */
+.markdown-style code {
+  background-color: var(--markdown-styles-quote-background-color);
+  color: var(--markdown-styles-quote-text-color);
+  overflow-wrap: break-word;
+}

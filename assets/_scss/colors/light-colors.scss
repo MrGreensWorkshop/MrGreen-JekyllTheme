@@ -1,0 +1,238 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+// don't add any class. only definitions
+// otherwise it will be added to all output css files
+
+// light color scheme definitions
+$brand-color-light: #416289;
+$main-background-light: #efefef;
+$button-color-light: #a19e9e;
+$menu-background-light: #f9f9f9;
+$header-color-light: #5f5e5e;
+$container-background-light: #fff;
+$hr-color-light: #eee;
+$anchor-text-color-light: #3389de;
+
+// layout: default
+// default/body-main-styles
+%body-main-styles-colors-light {
+  --body-anchor-text-color: #{$anchor-text-color-light};
+  --body-anchor-hover-text-color: #2f6597;
+  --body-text-color: #6a6a6a;
+  --body-header-text-color: #{$header-color-light};
+  --body-background-color: #{$main-background-light};
+  --body-hr-color: #{$hr-color-light};
+}
+// default/nav/color-scheme-switch
+%color-scheme-switch-colors-light {
+  --color-scheme-switch-color: #{$button-color-light};
+  --color-scheme-switch-hover-color: #303033;
+}
+// default/contact
+%contact-colors-light {
+  --contact-icons-color: #{$button-color-light};
+  --contact-icons-hover-color: #303033;
+  --contact-header-color: #{$button-color-light};
+}
+// default/default
+%default-colors-light {
+  --multipurpose-container-background-color: #{$container-background-light};
+  --multipurpose-container-shadow: 1px 1px 0 1px #e5e2e2fb;
+}
+// default/footer
+%footer-colors-light {
+  --footer-background-color: #{$main-background-light};
+  --footer-text-color: #808080;
+}
+// default/nav/lang-switch
+%lang-switch-colors-light {
+  --lang-switch-text-color: #{$button-color-light};
+  --lang-switch-hover-text-color: #000;
+  --lang-switch-active-text-color: #000;
+}
+// default/sliding-msg-box
+%sliding-msg-box-colors-light {
+  --sliding-msg-box-background-color: #{$menu-background-light};
+  --sliding-msg-box-border-color: #d9d9d9;
+  --sliding-msg-box-header-color: #{$header-color-light};
+  --sliding-msg-box-header-shadow-color: #0102034d;
+}
+// default/nav/navigation-buttons
+%navigation-buttons-colors-light {
+  --side-top-nav-buttons-text-color: #{$button-color-light};
+  --side-top-nav-buttons-hover-text-color: #303033;
+  --side-top-nav-buttons-active-text-color: #303033;
+}
+// default/nav/navigation
+%navigation-colors-light {
+  --side-top-nav-brand-text-color: #{$brand-color-light};
+  --side-top-nav-brand-hover-text-color: #{$header-color-light};
+  --side-top-nav-background-color: #{$menu-background-light};
+  --side-nav-sub-title-text-color: #6e6e6e;
+  --side-nav-copyright-text-color: #{$button-color-light};
+  --side-nav-right-border-color: #{$hr-color-light};
+}
+// default/nav/navigation-side-nav-bottom-buttons
+%navigation-bottom-colors-light {
+  --side-nav-bottom-buttons-color: #{$button-color-light};
+  --side-nav-bottom-buttons-hover-color: #303033;
+}
+// default/scroll-to-top
+%scroll-to-top-colors-light {
+  --scroll-to-top-background-color: #f1f1f1;
+  --scroll-to-top-color: #696767;
+  --scroll-to-top-border-color: #8b8b8b;
+  --scroll-to-top-shadow-color: #5a5a5a85;
+}
+// default/searchbox
+%searchbox-colors-light {
+  --searchbox-border-color: #cfcfcf;
+  --searchbox-background-color: #e6e6e6;
+  --searchbox-focus-background-color: #fff;
+  --searchbox-focus-text-color: #000;
+  --searchbox-focus-border-color: #0e82b0;
+  --searchbox-focus-shadow-color: #175871a0;
+}
+// default/searchresult
+%searchresult-colors-light {
+  --searchresult-color: #8b8b8b;
+  --searchresult-background-color: #{$container-background-light};
+  --searchresult-hover-text-color: #000;
+  --searchresult-divider-line-color: #{$hr-color-light};
+  --searchresult-shadow-color: #00000030;
+}
+// default/cookie-consent
+%consent-bar-colors-light {
+  --consent-bar-background-color: #{$menu-background-light};
+  --consent-bar-shadow-color: #00000055;
+}
+%consent-settings-colors-light {
+  --consent-settings-active-text-color: #{$anchor-text-color-light};
+}
+// common/button
+%button-colors-light {
+  --button-text-color: #777;
+  --button-border-color: #ccc;
+  --button-background-color: #fff;
+  --button-shadow-color: #77747455;
+  --button-hover-text-color: #{$header-color-light};
+  --button-hover-border-color: #adadad;
+  --button-hover-background-color: #eee;
+  --button-active-shadow-color: #00000020;
+  --button-priority-color: #000;
+  --button-priority-background-color: #5ac0c57d;
+}
+// common/slide-switch
+%slide-switch-colors-light {
+  --slide-switch-slider-color: #efefef;
+  --slide-switch-slider-shadow-color: #77747455;
+  --slide-switch-off-background-color: #{$button-color-light};
+  --slide-switch-on-background-color: #{$anchor-text-color-light};
+}
+// common/close-button
+%close-button-colors-light {
+  --close-button-color: #{$button-color-light};
+  --close-button-hover-color: #{$header-color-light};
+}
+// layout: projects, post, post-list
+// common/markdown-style
+%markdown-style-colors-light {
+  --markdown-styles-header-text-color: #{$header-color-light};
+  --markdown-styles-table-border-color: #ddd;
+  --markdown-styles-blockquote-background-color: #eee;
+  --markdown-styles-blockquote-side-color: #{$brand-color-light};
+  --markdown-styles-kbd-background-color: #888;
+  --markdown-styles-kbd-text-color: #eee;
+  --markdown-styles-code-background-color: #eee;
+  --markdown-styles-code-text-color: #333;
+  --markdown-styles-quote-background-color: #eee;
+  --markdown-styles-quote-text-color: #{$header-color-light};
+}
+// layout: post, post-list
+// common/post-info
+%post-info-colors-light {
+  --post-title-text-color: #{$header-color-light};
+  --post-meta-text-color: #808080;
+}
+// common/share
+%share-colors-light {
+  --share-label-text-color: #{$header-color-light};
+  --share-button-text-color: #{$button-color-light};
+  --share-button-hover-text-color: #303033;
+}
+// layout: post
+// post/table-of-contents
+%table-of-contents-colors-light {
+  --table-of-contents-focus-text-color: #444;
+  --table-of-contents-focus-border-left-color: #{$brand-color-light};
+  --table-of-contents-hover-text-color: #444;
+  --table-of-contents-hover-border-left-color: #{$brand-color-light};
+  --table-of-contents-shadow-color: #77747455;
+}
+// layout: post-list
+// post-list/thumbnails
+%thumbnails-colors-light {
+  --thumbnail-background-color: #{$container-background-light};
+  --thumbnail-excerpt-text-color: #555;
+  --thumbnail-shadow: 0 1px 2px 0 #0102031a;
+  --thumbnail-hover-shadow: 0 7px 30px -8px #0102034d;
+}
+// post-list/upside-down-tabs
+%upside-down-tabs-colors-light {
+  --tabs-border-color: #bfbfbf;
+  --tab-panel-background-color: #{$menu-background-light};
+  --tab-button-active-background-color: #{$menu-background-light};
+  --tab-button-active-text-color: #555;
+  --tab-button-background-color: #{$menu-background-light};
+  --tab-button-hover-background-color: #{$main-background-light};
+  --tab-button-hover-text-color: #555;
+  --tab-button-text-color: #{$button-color-light};
+  --tab-content-button-text-color: #{$button-color-light};
+  --tab-content-button-hover-text-color: #303033;
+  --post-query-result-title-color: #555;
+}
+// layout: home
+// home/home-heading
+%home-heading-colors-light {
+  --home-heading-message-color: #fff;
+  --home-intro-text-header-color: #{$header-color-light};
+  --home-heading-shadow-color: #77747455;
+}
+// layout: about
+// about/about-style
+%about-style-colors-light {
+  --about-header-title-color: #{$brand-color-light};
+  --about-header-sub-title-color: #808080;
+  // currently from multipurpose-container
+  //--about-msg-text-color: #7a7979;
+}
+// layout: archives
+// archives/archives
+%archives-colors-light {
+  --archives-year-text-color: #3b3b3b;
+  --archives-month-text-color: #5f5e5e;
+  --archives-day-text-color: #989898;
+  --archives-dot-color: #d9d9d9;
+  --archives-line-color: #d9d9d9;
+}
+// layout: links
+// links/link-style
+%link-style-colors-light {
+  --links-button-text-color: #{$container-background-light};
+  --links-button-border-color: #{$container-background-light};
+  --links-button-hover-color: #{$container-background-light};
+}
+// layout: projects
+// projects/project-container
+%project-container-colors-light {
+  --project-category-text-color: #808080;
+  --project-date-text-color: #808080;
+  // for accessibility purpose taken from link color
+  //--project-read-more-less-text-color: black;
+  --project-button-text-color: #fff;
+  --project-button-border-color: #fff;
+  --project-button-hover-color: #fff;
+}

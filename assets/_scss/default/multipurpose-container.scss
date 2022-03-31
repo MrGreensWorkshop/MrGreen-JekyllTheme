@@ -1,0 +1,43 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+#main-wrapper {
+  padding-left: var(--side-nav-width);
+  transition: all 0.4s ease;
+}
+
+.main-container {
+  min-height: calc(100vh - (var(--top-nav-height) + var(--footer-height)));
+  max-width: var(--main-container-max-width);
+  padding-left: var(--main-container-margin);
+  padding-right: var(--main-container-margin);
+  padding-top: var(--main-container-margin);
+  padding-bottom: var(--main-container-padding-bottom);
+}
+
+.multipurpose-container {
+  @include get_scheme(default-colors-);
+  background-color: var(--multipurpose-container-background-color);
+  box-shadow: var(--multipurpose-container-shadow);
+  border-radius: 10px;
+  padding: var(--text-spacing);
+  margin-bottom: var(--multipurpose-container-margin-bottom);
+}
+
+/* for bottom spacing */
+.multipurpose-container:last-child {
+  margin-bottom: 0px;
+}
+
+.multipurpose-container h1:first-child,
+.multipurpose-container h2:first-child,
+.multipurpose-container h3:first-child {
+  margin-top: 0px;
+}
+
+.multipurpose-container > p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}

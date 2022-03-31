@@ -1,0 +1,32 @@
+######################### About ###########################
+
+home:
+  # enables new posts
+  new_posts: true
+  # to remove limit, please comment it
+  new_posts_count_limit: 3
+
+######################### About ###########################
+
+about:
+  # make sure email address is defined in _data/owner.yml
+  show_email: false
+  # make sure contacts is defined in _data/owner.yml
+  show_contacts: true
+  # to disable icon, comment below
+  #sub_title_icon: "fa fa-star"
+  # to disable icon, comment below
+  email_icon: "fa fa-envelope-o"
+
+######################### Links ###########################
+
+links:
+  # to use row as a thumb to open the links, set to true, or to use a href links to open links, set to false.
+  # if you set to false, it also disables the hover background color change.
+  use_rows_as_link: true
+
+######################### Projects ###########################
+
+projects:
+  # if no picture is provided for projects list item, this fills with an empty picture for better look.
+  project_img_fill: true

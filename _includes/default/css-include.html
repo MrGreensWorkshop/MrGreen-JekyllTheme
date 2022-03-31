@@ -1,0 +1,40 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{% if site.data.conf.main.use_cdn_resources_if_available -%}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{%- else %}
+  <link href="{{ site.baseurl }}/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ site.baseurl }}/assets/css/font-awesome.min.css" rel="stylesheet">
+{%- endif %}
+
+<link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
+
+{%- if site.data.conf.posts.post_table_of_contents and page.layout == "post"-%}
+  {% if site.data.conf.main.use_cdn_resources_if_available -%}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v0.4.1/dist/bootstrap-toc.min.css">
+  {%- else %}
+    <link href="{{ site.baseurl }}/assets/css/bootstrap-toc.min.css" rel="stylesheet">
+  {%- endif %}
+{% endif -%}
+
+{%- assign img_viewer = nil -%}
+{%- if site.data.conf.main.image_viewer == true -%}
+  {%- if page.image_viewer_on == true or site.data.conf.main.image_viewer_posts == true and page.layout == 'post' -%}
+    {%- assign img_viewer = true -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- if img_viewer == true -%}
+  {% if site.data.conf.main.use_cdn_resources_if_available -%}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+  {%- else %}
+    <link href="{{ site.baseurl }}/assets/css/magnific-popup.css" rel="stylesheet">
+  {%- endif %}
+{% endif -%}
+
+<link href="{{ site.baseurl }}/assets/css/nav-media.css" rel="stylesheet">

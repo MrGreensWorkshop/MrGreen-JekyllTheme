@@ -1,0 +1,38 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign page_no = 1 -%}
+{%- assign prev_page_url = nil %}
+{%- assign next_page_url = nil %}
+{%- capture page_number_list %}
+{%- for page in include.pages %}
+  {%- assign active = "" %}{% assign page_url = "" %}
+  {%- assign page_url = page.url %}
+  {%- if forloop.first == true %}{% assign first_page_url = page_url %}{% endif %}
+  {%- if page_url == include.current_page_url %}
+    {% assign active ='class="active"' %}
+    {% assign page_url ='javascript:void(0);' %}
+    {%- assign page_no_prev =  page_no | minus:2 %}
+    {%- if page_no_prev < 0 %}{%- assign page_no_prev = nil %}{%endif%}
+    {%- assign prev_page_url = include.pages[page_no_prev].url %}
+    {%- assign next_page_url = include.pages[page_no].url %}
+  {% endif -%}
+  <li {{active}}><a href="{{ site.baseurl }}{{page_url}}">{{ page_no }}</a></li>
+  {%- assign page_no =  page_no | plus:1 %}
+  {%- if forloop.last == true %}{% assign last_page_url = page_url %}{% endif %}
+{% endfor -%}
+{% endcapture -%}
+{%- if prev_page_url == nil %}{% assign disable_prev ='class="disabled"' %}{% endif -%}
+{%- if next_page_url == nil %}{% assign disable_next ='class="disabled"' %}{% endif -%}
+{%- if site.data.conf.posts.pager_page_numbers_first_last_buttons %}
+  <li {{disable_prev}}><a href="{{ site.baseurl }}{{ first_page_url }}">First</a></li>
+{% endif -%}
+  <li {{disable_prev}}><a href="{{ site.baseurl }}{{ prev_page_url }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+{{ page_number_list }}
+  <li {{disable_next}}><a href="{{ site.baseurl }}{{ next_page_url }}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+{%- if site.data.conf.posts.pager_page_numbers_first_last_buttons %}
+  <li {{disable_next}}><a href="{{ site.baseurl }}{{ last_page_url }}">Last</a></li>
+{% endif -%}

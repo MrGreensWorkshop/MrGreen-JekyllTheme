@@ -1,0 +1,35 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign data_conf = site.data.lang[lng].cookie_consent.panel_bar -%}
+{%- assign info_text = data_conf.msg -%}
+{%- include multi_lng/get-page-by-layout.liquid layout = 'privacy-policy' -%}
+{%- assign link_text = site.data.lang[lng].cookie_consent.privacy_policy_link_text -%}
+{%- assign privacy_policy_link = nil -%}
+{%- if link_text != nil and link_text != empty and layout_page_obj.url != nil %}
+  {%- assign privacy_policy_link = site.baseurl | append: '<a href="' | append: layout_page_obj.url | append: '">' | append: link_text | append: '</a>' -%}
+{% endif -%}
+{%- assign info_text = info_text | replace: site.data.conf.main.cookie_consent.privacy_link_replace, privacy_policy_link -%}
+
+<div class="consent-bar">
+  <a class="close-button" href="javascript:void(0);" onclick="CookieConsent.hideConsentBar();"><i class="fa-fw fa fa-times"></i></a>
+  <p>{{ info_text }}</p>
+  {%- assign items = site.data.conf.main.cookie_consent.bar_buttons %}
+  {%- for index in (1..items.size) %}
+    {%- for item in items %}
+      {%- assign name = item[0] -%}
+      {%- assign arguments = nil -%}
+      {%- for arg in item[1] %}
+        {%- if forloop.first %}{% continue %}{% endif -%}
+        {%- assign arguments = arguments | append: arg -%}
+        {%- unless forloop.last %}{%- assign arguments = arguments | append: " " -%} {% endunless -%}
+      {%-endfor%}
+      {%-if index == item[1][0] %}
+        <a href="javascript:void(0);" class="btn-base {{ arguments }}" onclick="CookieConsent.consentBarDone('{{ name }}');" role="button">{{ data_conf.buttons[name] }}</a>
+      {%-endif-%}
+    {%-endfor%}
+  {%-endfor%}
+</div>

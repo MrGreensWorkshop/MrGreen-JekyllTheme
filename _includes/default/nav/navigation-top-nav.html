@@ -1,0 +1,32 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+<nav class="navbar navbar-default top-nav">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed pull-left top-nav-menu-toggle" data-toggle="collapse" data-target="#id_top-nav-menu-toggle" aria-expanded="false">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    {% if site.data.conf.main.top_nav_brand_text_enable -%}
+      {% include multi_lng/get-page-by-layout.liquid layout = 'home' -%}
+      <a class="navbar-brand top-nav-brand" href="{{ site.baseurl }}{{ layout_page_obj.url }}" translate="no">{{ site.data.owner.brand }}</a>
+    {% endif -%}
+  </div>
+  {%- if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 and site.data.conf.main.language_switch_top_nav %}
+    {% include default/nav/lang-switch.html -%}
+  {% endif %}
+  {% if site.data.conf.main.color_scheme_dark and site.data.conf.main.color_scheme_switch_top_nav -%}
+    {%- include default/nav/color-scheme-switch.html switch_id="color_scheme_switch_top" effect = site.data.conf.main.color_scheme_switch_top_nav_hover_effect -%}
+  {%- endif %}
+  {% unless site.data.conf.main.side_nav_toggle_button_no_top_nav_buttons -%}
+  <div class="collapse navbar-collapse top-nav-buttons" id="id_top-nav-menu-toggle">
+    <ul class="nav nav-pills">
+      {% include default/nav/navigation-buttons.html effect = site.data.conf.main.top_nav_buttons_hover_effect -%}
+    </ul>
+  </div>
+  {%- endunless %}
+</nav>

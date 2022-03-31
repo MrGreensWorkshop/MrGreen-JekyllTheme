@@ -1,0 +1,81 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.links-heading-container .link-buttons {
+  @include get_scheme(link-style-colors-);
+  --multipurpose-button-text-color: var(--links-button-text-color);
+  --multipurpose-button-border-color: var(--links-button-border-color);
+  --multipurpose-button-hover-color: var(--links-button-hover-color);
+}
+
+.link-container {
+  @include get_scheme(bootstrap-dark-table-hover-colors-);
+  @include get_scheme(bootstrap-dark-table-colors-);
+  transition: border-left 1s;
+  margin-bottom: 10px;
+}
+
+.link-container:hover {
+  border-left: solid 2px;
+}
+
+.link-container > a {
+  cursor: unset;
+}
+
+.links-heading-container > p,
+.link-container > .table > tbody > tr > td,
+.link-container > .table > tbody > tr > th,
+.link-container > .table > tfoot > tr > td,
+.link-container > .table > tfoot > tr > th,
+.link-container > .table > thead > tr > td,
+.link-container > .table > thead > tr > th {
+  line-height: 2.4rem;
+}
+
+/* link info */
+.link-container > .table .link-item > td:last-child > p {
+  text-align: justify;
+}
+
+/* remove last spacing */
+.link-container > .table > tbody > tr td {
+  padding-bottom: 0px;
+}
+
+/* remove last spacing */
+.link-container > .table > tbody > tr:last-child p {
+  margin-bottom: 0px;
+}
+
+.link-container > .table > tbody,
+.link-container > .table {
+  margin-bottom: 0px;
+}
+
+/* anchor style */
+.link-container > .table > tbody > tr.link-item > td > p > b {
+  color: var(--body-anchor-text-color);
+}
+
+/* make site name column fixed width */
+.link-container > .table {
+  table-layout: fixed;
+}
+
+.link-container > .table > thead:first-child > tr:first-child > th:first-child {
+  height: auto;
+  width: 150px;
+}
+
+.link-container > .table > tbody > tr > td:first-child {
+  height: auto;
+  width: 150px;
+}
+
+/* remove table row lines. */
+/*.link-container > .table > tbody > tr > td {
+  border-top-color: transparent;
+}*/

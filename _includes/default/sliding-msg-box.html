@@ -1,0 +1,15 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- capture sliding_msg_box_html -%}
+<div class="slideBox {{ site.data.conf.main.language_translation_offer_slide }}">
+  <a class="close-button" href="javascript:void(0);"><i class="fa-fw fa fa-times"></i></a>
+</div>
+{%- endcapture -%}
+
+<script>
+  SlidingMsgBox.html = {{ sliding_msg_box_html | split: " " | join: " " | jsonify }};
+</script>

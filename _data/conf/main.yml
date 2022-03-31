@@ -1,0 +1,351 @@
+###########################################################
+#               General
+###########################################################
+# if this is true, resources are loaded from cdn (if available), otherwise they are loaded from site base.
+use_cdn_resources_if_available: true
+
+###########################################################
+#               Font
+###########################################################
+# if you want to load in css, change to false. (true is recommended(faster))
+google_font_load_in_head: true
+google_font_style_url: https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap
+google_font_precon_url: https://fonts.gstatic.com
+
+###########################################################
+#               Language
+###########################################################
+# need to match filename in _data/lang/[language].yml
+default_lng: en
+
+# to prevent adding languages with no folder
+# single language disables language switch
+# language order is linked to array order
+language_switch_lang_list: [en, ja]
+
+# if the opened page is not in the user's language list,
+# suggest language(s) matching with the one(s) in browser language list and user language list.
+language_translation_offer_box: true
+
+# Disable 3rd party translation suggestion for pages with translation.
+language_translation_offer_disable_ext_translation: true
+
+# select one below
+# 1. slideBoxTopToDown
+# 2. slideBoxBottomToUp
+language_translation_offer_slide: slideBoxTopToDown
+
+# this uses lng.code + lng.country defined in _data/lang/[language].yml
+# ex; false: en, true: en-US
+html_lng_with_country_code: true
+
+# this adds hover effect to language switch
+language_switch_hover_effect: "hover-effect"
+
+# this enables top nav language switch
+language_switch_top_nav: false
+
+# replace text with owner.brand
+brand_replace: "$site_brand"
+
+###########################################################
+#                Search
+###########################################################
+# to enable search feature, set to true
+# if you disable this feature, you don't need search.json file so please open the file and uncomment the "published: false"
+search_enable: true
+
+# if this is true, search list hides with mouse leave event
+# if this is false, search list hides with mouse click event
+# for mobile devices, it's better to be turned off.
+search_list_hide_mouseleave: false
+
+# to disable auto search while typing
+# when using mobile browser, search result is shown while typing, but you need to push search button on keyboard.
+# with this option search only is triggered when you finish input.
+# when using pc browser after input, push enter to search.
+search_disable_auto_search: true
+
+# to disable auto complete for search box
+# since search bar uses dropdown list style.
+# when auto_search is enabled, browsers auto complete box overlaps search result.
+search_disable_auto_complete: true
+
+# search with uri parameter on page load
+# ex. https://your_github_user_name.github.io/?search="hello"
+search_with_uri: true
+
+###########################################################
+#                Image Viewer
+###########################################################
+# this enables image viewer
+image_viewer: true
+
+# this enables image viewer for all posts
+# even if you disable for all posts, you can still turn on individually by adding "image_viewer_on: true" on header of any page.
+image_viewer_posts: true
+
+# css class at a mouse hover
+image_viewer_hover_cursor: mfp-zoom
+
+# this adds image path to end of error
+image_viewer_error_add_path: true
+
+###########################################################
+#                Image lazy loader
+###########################################################
+# this enables image lazy loader
+image_lazy_loader: true
+
+# this enables image lazy loader for all posts
+# even if you disable for all posts, you can still turn on individually by adding "image_lazy_loader_on: true" on header of any page.
+image_lazy_loader_posts: true
+
+###########################################################
+#                Color scheme switch
+###########################################################
+# this adds dark color schemes (set to false to disable this feature. This disables all dark styles)
+color_scheme_dark: true
+
+# this sets default color scheme to dark. (color_scheme_dark must be enabled)
+# page start will be dark color scheme. You can change color scheme using switches
+# this feature doesn't need switches.
+color_scheme_default_dark: false
+
+# default color will change based on browser dark color scheme (color_scheme_default_dark should be disabled.)
+# you don't need to enable this if any switch is enabled.
+color_scheme_browser_color_mode: true
+
+# side nav and top nav color scheme switches
+# when any switch is enabled, if browser color scheme is dark, site default color is set to dark at page load.
+# if user change the site color scheme using color scheme switch, setting will be saved with javascript localStorage api.
+
+# this adds color scheme switch to side nav bottom (color_scheme_dark must be enabled)
+color_scheme_switch_side_nav: true
+
+# this adds color scheme switch to top nav (color_scheme_dark must be enabled)
+color_scheme_switch_top_nav: true
+
+# this adds tooltip to color scheme switch
+color_scheme_switch_tooltip: true
+
+# this adds hover effect to top nav color scheme switch
+color_scheme_switch_top_nav_hover_effect: "hover-effect"
+
+###########################################################
+#                Scroll back to top
+###########################################################
+# when you scroll down the page, this button allows you to scroll back to top of the page
+scroll_back_to_top_button: true
+
+###########################################################
+#                Footer Text
+###########################################################
+# this enables side navigation bar footer
+side_nav_footer: true
+
+# this enables footer text to the bottom of the page
+main_footer: true
+
+# this sets footer text position to fixed positioning. Always visible.
+main_fixed_footer: true
+
+# this centers footer text (if creative_commons is enabled and screen width is lower than 500px, it will be left aligned)
+main_footer_centered: true
+
+###########################################################
+#                Side and Top Navigation
+###########################################################
+# this adds icons to side nav and top nav buttons
+side_and_top_nav_button_icons: true
+
+# this adds hover effect to top nav menu buttons
+top_nav_buttons_hover_effect: "hover-effect"
+
+# this adds hover effect to side nav menu buttons
+side_nav_buttons_hover_effect: "hover-effect"
+
+# 767px, 850px (nil will set to 767px)
+side_nav_close_limit: 767px
+
+# side nav and top nav buttons
+# button order is linked to key(layout name)
+# keys need to match with "_layouts"
+side_and_top_nav_buttons:
+  - home:
+    icon: "fa fa-home"
+  - post-list:
+    icon: "fa fa-pencil-square-o"
+  - archives:
+    icon: "fa fa-archive"
+  - projects:
+    icon: "fa fa-cog"
+  - links:
+    icon: "fa fa-link"
+  - about:
+    icon: "fa fa-user-o"
+
+# side nav toggle feature
+# when side nav is not visible and if you click top nav toggle button, side nav slides from left to right (disables top nav buttons)
+side_nav_toggle_button_no_top_nav_buttons: true
+
+# when side nav toggle feature is enabled, this lets you add close button inside side menu
+side_nav_toggle_close_button: true
+
+# change visibility of brand text of side nav
+side_nav_brand_text_enable: true
+
+# change visibility of brand text of top nav
+top_nav_brand_text_enable: true
+
+# set profile image
+# comment to disable the profile image
+side_nav_profile_img_path: /assets/img/posts/post_pic1.jpg
+
+# this adds hover effect to bottom buttons
+side_nav_bottom_buttons_hover_effect: "hover-effect"
+
+###########################################################
+#                Contact options on Side nav
+###########################################################
+# to enable contact panel on the side navigation, set to true
+contacts: true
+
+# this adds hover effect to contact icons
+contacts_buttons_hover_effect: "hover-effect-big"
+
+# open links in new tab
+contacts_open_in_new_tab: true
+
+###########################################################
+#                Copyright text
+###########################################################
+# this will add current year to the end of copyright_start_year which is defined in _data/owner.yml
+copyright_add_end_year: false
+
+# this uses copyright.additional_text defined in _data/lang/[language].yml
+# not recommended if creative_commons is enabled.
+copyright_add_text_to_end: false
+
+# this will add creative commons license. check _data/owner.yml for license type.
+creative_commons:
+  enable: true
+  tooltip: true
+  add_all_icons: true
+  license_url: "https://creativecommons.org/licenses/$license/4.0/deed.$lng"
+  license_replace: $license
+  lang_replace: $lng
+
+###########################################################
+#                Meta for SEO
+###########################################################
+meta:
+  # if you enabled add_hreflang in sitemap.xml, make this false. (According to SEO pros, prevent using both. )
+  hreflang: false
+  # please note that google does not use keywords, but other search engines may.
+  keywords: true
+  google_site_verify: false
+  twitter_card: true
+  open_graph: true
+  open_graph_locale: true
+  schema_markup: true
+  # use base url with languages suffixes.
+  schema_markup_base_url_with_lang: true
+  # organization, person, "" (set to "" to disable) (this will be only added to index.html)
+  schema_markup_thing: "person"
+  # organization, person "" (set to "" to disable)
+  schema_markup_publisher: "person"
+  # organization, person "" (set to "" to disable)
+  schema_post_author: "person"
+  # organization, person, "" (set to "" to disable)
+  schema_markup_copyright_holder: "person"
+  # true: add SearchAction to ld+json  (make sure search_with_uri is enabled)
+  # false: add nositelinkssearchbox to meta header
+  # commented: neither
+  schema_markup_google_sitelinks_searchbox: true
+  schema_markup_breadcrumb: true
+  # Article or BlogPosting
+  schema_markup_post_type: BlogPosting
+  schema_markup_post: true
+  schema_markup_post_add_postbody: true
+  schema_markup_logo_img: /assets/img/favicons/apple-touch-icon.png
+  schema_markup_about_img: /assets/img/about/about.jpg
+  schema_markup_default_meta_img: /assets/img/about/about.jpg
+  mobile_app: true
+  android_mobile_app: true
+  ios_mobile_app: true
+  ios_ios_mobile_app_link_fix: false
+  win_phone_app: true
+
+###########################################################
+#                Google
+###########################################################
+google:
+  analytics:
+    # disable this feature entirely for development or production env.
+    ignore: development
+  site_verification:
+    # disable this feature entirely for development or production env.
+    ignore: development
+
+###########################################################
+#                Cookie consent
+###########################################################
+# make sure google_analytics_id is set in _data/owner.yml
+# make sure your environment does not match with google.analytics.ignore
+cookie_consent:
+  enable: true
+  # if this is true, the consent box will be hidden even if the user does not change the switch position.
+  hide_consent_bar_with_save_button: true
+  gtag_default_config:
+    # settings below will be set with gtag("set", ...)
+    # these setting may be different in your case. Please check before using it.
+    # https://developers.google.com/analytics/devguides/collection/gtagjs
+    anonymize_ip: true
+    ads_data_redaction: true
+    cookie_flags: 'SameSite=None;Secure'
+  groups:
+    # google gtag default settings with categories
+    # settings below categories will be set with gtag("consent", "default", ...)
+    # these setting may be different in your case. Please check before using it.
+    # https://developers.google.com/tag-platform/devguides/consent
+    # for group, set security_storage, analytics_storage, functionality_storage, personalization_storage, ad_storage
+    # for value, set "granted" or "denied"
+    necessary:
+      group: [security_storage]
+      value: "granted"
+      wait_for_update: 500
+      # same as domain in _config.yml file
+      cookie_domain: ""
+      no_check_box: true
+    analytics:
+      group: [analytics_storage]
+      value: "denied"
+    preferences:
+      group: [functionality_storage, personalization_storage]
+      value: "denied"
+    advertising:
+      group: [ad_storage]
+      value: "denied"
+  groups_switches_and_values:
+    # set values true or false or hide
+    analytics: true
+    preferences: false
+    advertising: false
+  bar_buttons:
+    # button order and options, for deleting buttons set order to zero
+    accept: [3, btn-priority]
+    settings: [2]
+    deny: [1]
+  setting_buttons:
+    # button order and options, for deleting buttons set order to zero
+    accept: [2, btn-priority]
+    save: [3]
+    deny: [1, btn-left]
+  # replace text with related cookie_consent.panel_settings.gtag_info item
+  gtag_info_replace: "$gtag_info"
+  privacy_link_replace: "$privacy_link"
+  # this adds cookie setting button to side nav bottom
+  side_nav_setting_button:
+    enable: true
+    tooltip: true

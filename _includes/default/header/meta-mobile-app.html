@@ -1,0 +1,30 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign app_name = site.data.owner.brand | append: "'s App" %}
+{%-comment-%} Don't forget to set published: true in /assets/manifest.json {%-endcomment%}
+<link rel="manifest" href="{{ site.baseurl }}/assets/manifest.json">
+
+{%- if site.data.conf.main.meta.android_mobile_app %}
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#f0f0f0">
+{%- endif %}
+
+{%- if site.data.conf.main.meta.ios_mobile_app %}
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ app_name }}">
+  {%-comment-%} content can be: default, black, black-translucent {%-endcomment%}
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  {%-comment-%}<link rel="apple-touch-startup-image" href="{{ site.baseurl }}/assets/img/favicons/screensize.png">{%-endcomment-%}
+{%- endif %}
+
+{%- if site.data.conf.main.meta.win_phone_app %}
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-starturl" content="{{ site.baseurl }}/">
+  <meta name="application-name" content="{{ app_name }}">
+  {%-comment-%} browserconfig.xml could be inline. {%-endcomment%}
+  <meta name="msapplication-config" content="{{ site.baseurl }}/assets/img/favicons/browserconfig.xml">
+{%- endif %}

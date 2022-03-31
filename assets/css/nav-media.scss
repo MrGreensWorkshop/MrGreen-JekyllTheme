@@ -1,0 +1,86 @@
+---
+---
+/*! Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ *  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ *  Licensed under MIT
+*/
+
+/* side nav collapse threshold */
+
+{% if site.data.conf.main.side_nav_close_limit == nil %}
+  {% assign _width = "767px" %}
+{% else %}
+  {% assign _width = site.data.conf.main.side_nav_close_limit %}
+{% endif %}
+
+@media (max-width: {{ _width }})
+{
+  /* since 767px is default for bootstrap 3.3.7, we need this other than 767px */
+  {% if _width != "767px" %} @import "default/nav/navigation-top-collapse"; {% endif %}
+
+  /* enable top nav bar */
+  .top-nav {
+    display: block;
+  }
+
+  /* disable side nav */
+  :root {
+    --side-nav-width: 0px;
+    --top-nav-height: var(--top-nav-height-def);
+  }
+
+  /* disable side nav */
+  #side-nav-container {
+    left: calc(-1 * var(--side-nav-width-def));
+  }
+
+{% if site.data.conf.posts.post_query == true and site.data.conf.posts.post_query_tabs == true %}
+  .upside-down-tabs {
+    left: 0px;
+    width: 100%;
+  }
+{% endif %}
+
+{% if site.data.conf.main.search_enable == true %}
+  .searchbox-container {
+    /* fixed to top nav */
+    position: absolute;
+    top: 10px;
+    left: unset;
+    right: var(--main-container-margin);
+  }
+
+  /* right to left opening */
+  #search-box {
+    --searchbox-expand-width: calc(100vw - (var(--main-container-margin) * 2));
+  }
+{% endif %}
+
+{% if site.data.conf.main.color_scheme_dark == true and site.data.conf.main.color_scheme_switch_top_nav %}
+  .color_scheme_switch_top_holder {
+    /* fixed to top nav */
+    position: absolute;
+    display: inline;
+    top: 14px;
+    right: calc(var(--main-container-margin) + 60px);
+  }
+{% endif %}
+
+{% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 and site.data.conf.main.language_switch_top_nav %}
+  .top-nav > .lang-switch {
+    /* fixed to top nav */
+    position: absolute;
+    display: inline;
+    top: 14px;
+    left: unset;
+    right: calc(var(--main-container-margin) + 100px);
+  }
+{% endif %}
+
+{% if site.data.conf.posts.post_table_of_contents %}
+  #toc-container {
+    display: none;
+  }
+{% endif %}
+
+}

@@ -1,0 +1,19 @@
+---
+# Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+# Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+# Licensed under MIT
+
+layout: util/compress
+---
+{%- include multi_lng/get-pages-by-lng.liquid pages = site.posts -%}
+{%- include json/search-data.liquid pages=lng_pages -%}
+{%- assign post_json = search_json_out -%}
+
+{%- include multi_lng/get-pages-by-lng.liquid pages = site.html_pages -%}
+{%- include json/search-data.liquid pages=lng_pages -%}
+{%- assign page_json = search_json_out -%}
+
+{%- assign json = post_json | append: page_json -%}
+
+{%- include json/remove-last-comma.liquid json=json -%}
+{{ trim_json_out }}

@@ -1,0 +1,18 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.close-button {
+  @include get_scheme(close-button-colors-);
+  vertical-align: middle;
+}
+
+.close-button > i{
+  color: var(--close-button-color);
+  font-size: 1.7rem;
+}
+
+.close-button > i:hover {
+  color: var(--close-button-hover-color);
+}

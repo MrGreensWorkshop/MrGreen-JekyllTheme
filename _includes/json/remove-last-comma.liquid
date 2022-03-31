@@ -1,0 +1,17 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: trim_json_out {%-endcomment-%}
+
+{%- if include.json != empty and include.json != nil -%}
+  {%-comment-%} remove last comma {%-endcomment-%}
+  {%- assign _json = include.json | append: '@_' | remove_first: ',@_' -%}
+  {%- capture trim_json_out -%}
+  [
+    {{ _json }}
+  ]
+  {%- endcapture -%}
+{%- endif -%}

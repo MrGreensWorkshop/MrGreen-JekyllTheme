@@ -1,0 +1,17 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: copyright_text_out {%-endcomment-%}
+
+{%- assign copyright_year = site.data.owner.copyright_start_year -%}
+{%- if site.data.conf.main.copyright_add_end_year and copyright_year != nil and copyright_year != empty -%}
+  {%- assign copyright_year_end = site.time | date: '%Y' %}
+  {%- if copyright_year != copyright_year_end -%}
+    {%- capture copyright_year %}{{ copyright_year }} - {{ copyright_year_end }} {%- endcapture -%}
+  {%-endif-%}
+{%- endif -%}
+
+{%- capture copyright_text_out -%} &copy; {{ copyright_year }} {{ site.data.owner.brand }}. {%- endcapture -%}

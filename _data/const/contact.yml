@@ -1,0 +1,26 @@
+# The contact account constants
+# for icons https://fontawesome.com/v4.7/icons/
+# keys need to match with accounts in _data/owner.yml file
+
+github:
+  icon: "fa fa-github"
+  url: "https://www.github.com"
+email:
+  icon: "fa fa-envelope-o"
+  url: ""
+linkedin:
+  icon: "fa fa-linkedin"
+  url: "https://www.linkedin.com"
+twitter:
+  icon: "fa fa-twitter"
+  url: "https://www.twitter.com"
+instagram:
+  icon: "fa fa-instagram"
+  url: "https://www.instagram.com"
+facebook:
+  icon: "fa fa-facebook"
+  url: "https://www.facebook.com"
+# add your new contact
+# your_new_contact:
+#   icon: "fa fa-font"
+#   url: "https://www.example.com"

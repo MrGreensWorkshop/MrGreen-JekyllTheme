@@ -1,0 +1,210 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign post_comment_enabled = false -%}
+{%if page.layout == 'post' and page.comments_disable != true -%}
+  {%- assign post_comment_enabled = true -%}
+{% endif -%}
+
+{%- if post_comment_enabled -%}
+  {%- if site.data.conf.posts.comments.disqus.consent.enable %}
+    {%- if site.data.conf.posts.comments.disqus.load_mode == 'click_to_load'
+        or site.data.conf.posts.comments.disqus.load_mode == 'scroll_to_load_but_mobile_click_to_load' %}
+
+      {%- assign link_tag = '<a href="$link_url" target="_blank" rel="noopener noreferrer">$link_text</a>' -%}
+      {%- assign terms_link_tag = link_tag
+        | replace: '$link_url', site.data.conf.posts.comments.disqus.consent.terms_url
+        | replace: '$link_text', site.data.lang[lng].post.comments.disqus.consent.terms_link_text
+      -%}
+      {%- assign policy_link_tag = link_tag
+        | replace: '$link_url', site.data.conf.posts.comments.disqus.consent.privacy_url
+        | replace: '$link_text', site.data.lang[lng].post.comments.disqus.consent.privacy_link_text
+      -%}
+      {%- assign setting_link_tag = link_tag
+        | replace: '$link_url', site.data.conf.posts.comments.disqus.consent.settings_url
+        | replace: '$link_text', site.data.lang[lng].post.comments.disqus.consent.settings_link_text
+      -%}
+
+      {% capture disqus_consent_html -%}
+      <div class="multipurpose-container" style="margin:20px">
+        <h4 style="margin-top: 0;">{{ site.data.lang[lng].post.comments.disqus.consent.title }}</h4>
+        <p>
+          {{ site.data.lang[lng].post.comments.disqus.consent.text
+            | replace: site.data.conf.posts.comments.disqus.consent.terms_replace, terms_link_tag
+            | replace: site.data.conf.posts.comments.disqus.consent.privacy_replace, policy_link_tag
+            | replace: site.data.conf.posts.comments.disqus.consent.settings_replace, setting_link_tag
+          }}
+        </p>
+        <a href="javascript:void(0);" class="btn-base btn-priority load_comments" data-comment-always-load role="button">{{ site.data.lang[lng].post.comments.disqus.consent.button.load_and_do_not_ask_again }}</a>
+        &nbsp;<a href="javascript:void(0);" class="btn-base load_comments" role="button">{{ site.data.lang[lng].post.comments.disqus.consent.button.load_once }}</a>
+      </div>
+      {%- endcapture %}
+    {% endif -%}
+  {% endif -%}
+
+  {%- include multi_lng/get-lng-code.liquid lng = lng country = false -%}
+
+  <script>
+  const disqus_consent_msg = {{ site.data.conf.posts.comments.disqus.consent.enable }};
+  var disqus_config = function () {
+    this.language = "{{ lng_code }}";
+    this.page.url = '{{ page.url | absolute_url }}';
+    this.page.identifier = '{{ site.baseurl }}{{ page.url }}';
+  };
+
+  function disqusLoader() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://{{ site.data.owner.disqus_shortname }}.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+
+  /* reload when data-color-scheme changes. (dark, light) */
+  {%- if site.data.conf.main.color_scheme_dark == true %}
+  function disqusReloader() {
+    if (typeof DISQUS === "undefined") return;
+    DISQUS.reset({
+      reload: true
+      ,config: disqus_config
+    });
+  }
+  const color_scheme_observer = new MutationObserver(disqusReloader);
+  color_scheme_observer.observe(document.body, {attributeFilter: ["data-color-scheme"]});
+  {% endif -%}
+
+  /* comments load mode */
+  {%- if site.data.conf.posts.comments.disqus.load_mode == 'click_to_load'
+    or site.data.conf.posts.comments.disqus.load_mode == 'scroll_to_load_but_mobile_click_to_load' %}
+  let discusLoadDoNotAskStorageKey = "disqusLoadDoNotAskAgain";
+
+  function add_click_to_load_button() {
+    if (localStorage.getItem(discusLoadDoNotAskStorageKey)) disqusLoader();
+
+    /* create element */
+    let newElement = document.createElement("div");
+
+    if (disqus_consent_msg == true) {
+      newElement.innerHTML = {{ disqus_consent_html | split: " " | join: " " | jsonify }};
+    } else {
+      newElement.innerHTML = '<a href="javascript:void(0);" class="btn-base load_comments" role="button">{{ site.data.lang[lng].post.comments.disqus.click_to_load }}</a>';
+      newElement.style.textAlign = 'center';
+      newElement.style.minHeight = '20px';
+    }
+
+    /* add button */
+    let holder = document.querySelector('#disqus_thread');
+    if (!holder) return;
+    holder.appendChild(newElement);
+    /* add button click event */
+    let buttons = document.querySelectorAll('#disqus_thread .load_comments');
+    if (!buttons) return;
+    buttons.forEach(function (button) {
+      button.addEventListener('click', buttonCallback);
+    });
+
+    function buttonCallback(e) {
+      disqusLoader();
+      /* scroll to page bottom to see comments. */
+      document.getElementById('disqus_thread').style.height = '394px';
+      window.scrollTo(0, document.body.scrollHeight);
+      if (e.target.hasAttribute('data-comment-always-load')) {
+        localStorage.setItem(discusLoadDoNotAskStorageKey, true);
+      }
+    };
+  }
+  {% endif -%}
+
+  /* load when slide to the end of page */
+  {%- if site.data.conf.posts.comments.disqus.load_mode == 'scroll_to_load'
+    or site.data.conf.posts.comments.disqus.load_mode == 'scroll_to_load_but_mobile_click_to_load' %}
+
+  function page_bottom_Check(event) {
+    let wind = event.target.scrollingElement;
+    if (wind.offsetHeight + wind.scrollTop >= wind.scrollHeight - commentPageOffset) {
+      disqusLoader();
+      document.removeEventListener('scroll', page_bottom_Check);
+    }
+  }
+
+  const commentPageOffset = document.querySelector('#disqus_thread').clientHeight;
+  document.addEventListener('scroll', page_bottom_Check);
+
+  window.addEventListener("load", function() {
+    isMobile = navigator.userAgent.toLowerCase().match(/mobile/i);
+    let checkScroll = true;
+    if (isMobile) {
+    {%- if site.data.conf.posts.comments.disqus.load_mode == 'scroll_to_load_but_mobile_click_to_load' %}
+      document.removeEventListener('scroll', page_bottom_Check);
+      add_click_to_load_button();
+      checkScroll = false;
+    {% endif -%}
+      clientHeight = document.documentElement.clientHeight + 56; /* mobile fix */
+    } else {
+      clientHeight = document.documentElement.clientHeight;
+    }
+
+    const scroll_enabled = document.documentElement.scrollHeight > clientHeight;
+    if (checkScroll == true && scroll_enabled == false) {
+      /* if no scroll bar, load at startup */
+      document.removeEventListener('scroll', page_bottom_Check);
+      disqusLoader();
+    }
+  });
+  {% endif -%}
+
+  {%- if site.data.conf.posts.comments.disqus.load_mode == 'click_to_load' %}
+  window.addEventListener("load", add_click_to_load_button);
+  {% endif -%}
+
+  {%- if site.data.conf.posts.comments.disqus.load_mode != 'click_to_load'
+    and site.data.conf.posts.comments.disqus.load_mode != 'scroll_to_load'
+    and site.data.conf.posts.comments.disqus.load_mode != 'scroll_to_load_but_mobile_click_to_load' %}
+  disqusLoader();
+  {% endif -%}
+  </script>
+{%- endif %}
+
+{%comment-%} add comment count {%-endcomment-%}
+{%- if post_comment_enabled or page.layout == 'post-list' -%}
+  {% if page.comments_disable != true and site.data.conf.posts.comments.disqus.comment_count %}
+    <script id="dsq-count-scr" src="https://{{ site.data.owner.disqus_shortname }}.disqus.com/count.js" async></script>
+    {%comment-%} scroll to comments {%-endcomment-%}
+    {%if post_comment_enabled -%}
+      <script>
+        if (window.location.hash == "#disqus_thread") {
+          let element = document.getElementById('disqus_thread');
+          $("html, body").animate({ scrollTop: $(element).offset().top }, 600);
+        }
+      </script>
+     {% endif -%}
+  {% endif -%}
+{% endif -%}
+
+{%comment-%} comment count auto reload after post query runs {%-endcomment-%}
+{% if site.data.conf.posts.post_query == true and page.layout == 'post-list' %}
+  {% if site.data.conf.posts.comments.disqus.comment_count %}
+    <script>
+      function reloadDisqusCommentCount() {
+        if (typeof DISQUSWIDGETS === "undefined") return;
+        DISQUSWIDGETS.getCount({ reset: true });
+      }
+      function checkPostListChange(mutationList) {
+        mutationList.every(function(mutation) {
+          if (mutation.target.constructor.name == "HTMLDivElement"){
+            /* if is there any posts */
+            if (mutation.target.childElementCount > 0) reloadDisqusCommentCount();
+            return false;
+          }
+        });
+      }
+      const post_query_observer = new MutationObserver(checkPostListChange);
+      let element = document.querySelector('.post-list-container');
+      if (element !== null){
+        post_query_observer.observe(element, {attributes: false, childList: true, subtree: true});
+      }
+    </script>
+  {% endif -%}
+{% endif -%}

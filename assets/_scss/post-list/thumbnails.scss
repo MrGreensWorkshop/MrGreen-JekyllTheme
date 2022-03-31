@@ -1,0 +1,78 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.thumbnails {
+  @include get_scheme(thumbnails-colors-);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  margin-bottom: 15px; /* space between thumbnails */
+  box-shadow: var(--thumbnail-shadow);
+  transition: all 0.3s ease;
+  background-color: var(--thumbnail-background-color);
+}
+
+/* make whole thumbnail clickable */
+.thumbnails > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.thumbnails:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--thumbnail-hover-shadow);
+}
+
+.thumbnails > .image-holder {
+  width: 30%;
+  max-width: 100%;
+  min-width: 150px;
+  /* column view picture height */
+  min-height: 120px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: 50% 50%;
+  border: none;
+}
+
+.thumbnails > .excerpt-holder {
+  width: 70%;
+  padding: calc(var(--text-spacing) / 1.5);
+  overflow: hidden;
+}
+
+.thumbnails > .excerpt-holder > p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  /* excerpt text color */
+  color: var(--thumbnail-excerpt-text-color);
+}
+
+/* make meta element clickable (ex: comment links) */
+.thumbnails > .excerpt-holder > .meta > .meta-link {
+  position: relative;
+}
+
+.thumbnails > .excerpt-holder > .meta > .meta-link > a:first-of-type:hover,
+.thumbnails > .excerpt-holder > .meta > .meta-link > a:first-of-type:active,
+.thumbnails > .excerpt-holder > .meta > .meta-link > a:first-of-type:focus {
+  cursor: default;
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .thumbnails {
+    flex-direction: column;
+  }
+  .thumbnails > .image-holder,
+  .thumbnails > .excerpt-holder {
+    width: 100%;
+  }
+}

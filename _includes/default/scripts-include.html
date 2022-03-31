@@ -1,0 +1,200 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{% if site.data.conf.main.use_cdn_resources_if_available -%}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+{%- else %}
+  <script src="{{ site.baseurl }}/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
+{%- endif %}
+
+{%- if site.data.conf.posts.post_table_of_contents == true and page.layout == 'post' -%}
+  {%- comment -%} this must be after bootstrap.min.js {%- endcomment -%}
+  {% if site.data.conf.main.use_cdn_resources_if_available -%}
+    <script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v0.4.1/dist/bootstrap-toc.min.js"></script>
+  {%- else %}
+    <script src="{{ site.baseurl }}/assets/js/bootstrap-toc.min.js"></script>
+  {%- endif %}
+{%- endif %}
+
+<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+
+{%- if site.data.conf.main.image_viewer == true -%}
+  {%- if page.image_viewer_on == true or site.data.conf.main.image_viewer_posts == true and page.layout == 'post' -%}
+    {%-if site.data.conf.main.image_viewer_error_add_path -%}{%- assign err_img_path = '<br><br>%url%' -%} {%-endif-%}
+    {% if site.data.conf.main.use_cdn_resources_if_available -%}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    {%- else %}
+      <script src="{{ site.baseurl }}/assets/js/jquery.magnific-popup.min.js"></script>
+    {%- endif %}
+    <script>
+      $(function () {
+        $('.imgViewer').magnificPopup({
+          type: 'image'
+          ,image: {
+            titleSrc: 'alt'
+            /* Error message */
+            ,tError: '{{ site.data.lang[lng].image_viewer.load_error }}{{ err_img_path }}'
+            /* Set to null to disable zoom out cursor. */
+            /*,cursor: null */
+          }
+          ,closeOnContentClick: true
+          ,showCloseBtn: false
+          ,zoom: {
+            /* By default it's false, so don't forget to enable it */
+            enabled: true
+            /* duration of the effect, in milliseconds */
+            ,duration: 300
+            /* CSS transition easing function */
+            ,easing: 'ease-in-out'
+          }
+        });
+      });
+    </script>
+  {%- endif %}
+{%- endif %}
+
+{%- if site.data.conf.main.image_lazy_loader == true -%}
+  {%- if page.image_lazy_loader_on == true or site.data.conf.main.image_lazy_loader_posts == true and page.layout == 'post' -%}
+    {% if site.data.conf.main.use_cdn_resources_if_available -%}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js"></script>
+    {%- else %}
+      <script src="{{ site.baseurl }}/assets/js/lozad.min.js"></script>
+    {%- endif %}
+    <script>
+      /* lazy loads elements with default selector as '.lozad' */
+      const observer = lozad();
+      observer.observe();
+    </script>
+  {%- endif %}
+{%- endif %}
+
+{% if site.data.conf.posts.pager_page_numbers_auto_generator == true -%}
+  {%- assign paginator_enabled = nil -%}
+  {%- assign lng_pages = nil -%}
+  {%- if page.layout == 'post' and site.data.conf.posts.pager_navigation_post == 'page_numbers' %}
+    {%- include multi_lng/get-pages-by-lng.liquid pages = site.posts -%}
+  {%- elsif page.layout == 'post-list' and site.data.conf.posts.pager_navigation_post_list == 'page_numbers' %}
+    {% if paginator.total_pages > 1 -%}
+      {%- assign page_url_list = site.html_pages | where_exp: "item", "item.layout == 'post-list'" -%}
+      {%- include multi_lng/get-pages-by-lng.liquid pages = page_url_list -%}
+    {%- elsif site.data.conf.posts.post_query_mode_startup == 'paginator' or site.data.conf.posts.post_query_mode_query == 'paginator' -%}
+      {%- assign paginator_enabled = true -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if lng_pages.size > 1 or paginator_enabled -%}
+    {%- assign separator = '", "' | append : site.baseurl %}
+    {%- assign lng_pages = lng_pages | map: "url" | join: separator | prepend : site.baseurl -%}
+    <script>
+      PagerPageNumbers.setProperties({
+        paginatorListContainerName: ".pagination_wrapper .pagination"
+        ,pageList: ["{{lng_pages}}"]
+      {%- if site.data.conf.posts.pager_page_numbers_first_last_buttons %}
+        ,firstButtonName: '{{ site.data.lang[lng].post.pager_buttons.first_post }}'
+        ,lastButtonName: '{{ site.data.lang[lng].post.pager_buttons.last_post }}'
+      {%- endif %}
+        ,prevButtonName: "«"
+        ,nextButtonName: "»"
+      });
+    </script>
+  {%- endif %}
+{%- endif %}
+
+{% if site.data.conf.posts.post_query == true and page.layout == 'post-list' %}
+  {%- assign restore_page_content = nil -%}
+  {%- if site.paginate > 0 and lng == site.data.conf.main.default_lng %}
+    {% assign restore_page_content = true %}
+  {%- endif %}
+  {%- capture thumbnail_html%}
+    {%- include post-list/post-thumbnail-html.html
+      url = '{url}'
+      image = '{image}'
+      max_width = '{max_width}'
+      display= '{display}'
+      title = '{title}'
+      title_sub = '{title_sub}'
+      date = '{date}'
+      read_time = '{read_time}'
+      comment_style = '{comment_style}'
+    -%}
+  {% endcapture -%}
+  {%- include multi_lng/get-page-by-layout.liquid layout = 'json/post-query' -%}
+  <script>
+    PostQuery.setProperties({
+      jsonPath: "{{ site.baseurl }}{{ layout_page_obj.url }}"
+      ,queryResultFormat: {{thumbnail_html | split: " " | join: " " | jsonify}}
+      ,resultListName: ".post-list-container"
+      ,resultHeaderName: ".post-list-header"
+      ,resultHeaderTagName: "h5"
+      ,resultMsgTagName: "p"
+      ,resultFoundTitleFormat: '{{ site.data.lang[lng].post-list.upside_down_tabs.msg.resultFoundTitleFormat }}'
+      ,resultFoundThumbIcons: {{ site.data.conf.posts.post_query_tabs_item_icons | jsonify }}
+      ,resultFoundThumbTemplate: '<label class="filter-item"><i class="fa-fw {icon} filter-title" aria-hidden="true"></i><p>{value}</p><a class="close-button" href="javascript:void(0);" onclick="PostQuery.showAll();"><i class="fa-fw fa fa-times"></i></a></label>'
+      ,resultKeyValList: {{ site.data.lang[lng].post-list.upside_down_tabs.msg.property_list | jsonify }}
+      ,showAllFunction: "{{ restore_page_content }}"
+      /* this setting is only useful on single language site. Hide paginator when post query runs. */
+      ,hideElementWhenResultShown: ".pagination_wrapper"
+      ,resultStartUpDisplayMode: PostQuery.outMode.{{ site.data.conf.posts.post_query_mode_startup }}
+      ,resultQueryDisplayMode: PostQuery.outMode.{{ site.data.conf.posts.post_query_mode_query }}
+      /* scroll_to_load opt, approx. thumb height to calculate how many can be loaded on screen */
+      ,thumb_height: 140
+      ,paginator_post_per_page: {% if site.paginate != nil -%} {{ site.paginate }} {%-else-%} {{ site.data.conf.posts.post_query_paginator_post_per_page }} {%- endif %}
+    });
+
+  {%- if paginator.total_pages == nil or lng != site.data.conf.main.default_lng %}
+    $(window).bind('post-query-ready', function() {
+      PostQuery.showAll();
+    });
+  {% endif -%}
+
+  {%- if site.data.conf.main.meta.ios_ios_mobile_app_link_fix %}
+    let disable_list = $(".upside-down-tabs").find('a');
+    if (disable_list.length > 0) disable_list.addClass('passthislinks');
+  {% endif -%}
+  </script>
+{%- endif %}
+
+{%comment-%} Search {%-endcomment-%}
+{% if site.data.conf.main.search_enable -%}
+  {%- include default/search-scripts.html -%}
+{% endif -%}
+
+{%comment-%} add disqus comment feature {%-endcomment-%}
+{%- if
+  site.data.conf.posts.comments.enable and
+  site.data.conf.posts.comments.disqus.enable and
+  site.data.owner.disqus_shortname != nil and
+  site.data.owner.disqus_shortname != empty
+-%}
+  {%- include default/disqus-scripts.html -%}
+{% endif -%}
+
+{% if site.data.conf.main.cookie_consent.enable -%}
+  {%- include default/google-consent-init.html -%}
+{% endif -%}
+
+{% if site.data.owner.google_analytics_id != empty and site.data.owner.google_analytics_id != nil and jekyll.environment != site.data.conf.main.google.analytics.ignore -%}
+  {%- include default/google-analytics.html -%}
+{% endif -%}
+
+{% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 and site.data.conf.main.language_translation_offer_box -%}
+  {%- include default/sliding-msg-box.html -%}
+  {%- include multi_lng/lang-offer-msg-box.html -%}
+{% endif -%}
+
+{%- comment -%} iOS Safari Web App fix for open links inside app. (prevent opening in safari) {%- endcomment -%}
+{%- if site.data.conf.main.meta.ios_ios_mobile_app_link_fix %}
+<script>
+  $('a').click(function() {
+    if(!$(this).hasClass('passthislinks')) {
+      window.location = $(this).attr('href');
+      return false;
+    }
+  });
+</script>
+{%- endif -%}

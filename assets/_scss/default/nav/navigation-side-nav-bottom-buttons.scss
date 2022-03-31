@@ -1,0 +1,53 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+:root {
+  --side-nav-bottom-buttons-container-height: 51px;
+}
+
+.side-nav-bottom-buttons-container {
+  @include get_scheme(navigation-bottom-colors-);
+}
+
+.side-nav-bottom-buttons-container {
+  position: relative;
+  padding: 0 var(--side-nav-side-margin);
+}
+
+.side-nav-bottom-buttons-container > hr {
+  margin: 0;
+  transition: all 0.4s ease;
+}
+
+.side-nav-bottom-buttons-container > ul {
+  text-align: center;
+  padding: 0;
+  margin: 10px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 0;
+}
+
+.side-nav-bottom-buttons-container > ul:hover {
+  white-space: unset;
+}
+
+.side-nav-bottom-buttons-container > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.side-nav-bottom-buttons-container > ul > li:not(:last-child) > * {
+  margin-right: 5px;
+}
+
+.side-nav-bottom-buttons-container > ul > li > * {
+  color: var(--side-nav-bottom-buttons-color);
+  padding: 6px;
+}
+
+.side-nav-bottom-buttons-container > ul > li > *:hover {
+  color: var(--side-nav-bottom-buttons-hover-color);
+}

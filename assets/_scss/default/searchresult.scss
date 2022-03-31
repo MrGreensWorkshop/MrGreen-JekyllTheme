@@ -1,0 +1,75 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+/* Search result dropdown */
+#search-results {
+  @include get_scheme(searchresult-colors-);
+  display: block;
+  background-color: var(--searchresult-background-color);
+  list-style: none;
+  padding: 0;
+  transition: 0.2s ease;
+  position: relative;
+  box-shadow: 0 8px 17px 0 var(--searchresult-shadow-color),
+    0 6px 20px 0 var(--searchresult-shadow-color);
+  border-radius: 13px;
+  border: 0;
+  z-index: 999;
+  width: auto;
+  margin-left: 23px;
+  font-size: 1.4rem;
+}
+
+#search-results.hide {
+  opacity: 0;
+  transform: translateY(-1vh);
+  display: none;
+}
+
+#search-results > li {
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 3rem;
+  font-weight: 400;
+  /* for no result text */
+  color: var(--searchresult-color);
+}
+
+#search-results > li:not(:first-child) {
+  border-top: 1px solid var(--searchresult-divider-line-color);
+  border-radius: 20px;
+}
+
+#search-results > li > a {
+  padding: 1px;
+  /* for search result text */
+  color: var(--searchresult-color);
+  display: block;
+}
+
+#search-results > li > a:hover {
+  color: var(--searchresult-hover-text-color);
+  transition: all 0.2s ease;
+}
+
+#search-results > li > a:hover,
+#search-results > li > a:active,
+#search-results > li > a:focus {
+  text-decoration: none;
+}
+
+/* search result date */
+#search-results > li span {
+  position: absolute;
+  right: 12px;
+}
+
+/* add an ellipsis if search result text is too long */
+#search-results > li :not(span) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 73%;
+}

@@ -1,0 +1,31 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- comment -%} Add sitebaseurl and image paths to images. {%- endcomment -%}
+{%-comment-%} out: img_path_converter_out {%-endcomment-%}
+{%- assign img_path_converter_out = include.content -%}
+
+{% comment %} create an empty array {% endcomment -%}
+{%- assign tag_list = '' | split: '' -%}
+{%- assign tag_list = tag_list | push: '<img src=","' -%}
+{%- assign tag_list = tag_list | push: "background-image:url(','" -%}
+
+{%- for tag in tag_list -%}
+  {%- assign tag_item = tag | split:"," -%}{%- assign tag_start = tag_item[0] -%}{%- assign tag_end = tag_item[1] -%}
+  {%- if img_path_converter_out contains tag_start -%}
+    {%- assign tmp_content = img_path_converter_out | split: tag_start -%}
+    {%- for item in tmp_content offset: 1 -%}
+      {%- assign img_name = item | split: tag_end | first -%}
+      {%- if img_name == empty or img_name == nil -%} {%-continue-%} {%-endif-%}
+      {%- capture img_tag_in -%} {{ tag_start }}{{ img_name }}{{ tag_end }} {%- endcapture -%}
+      {%- include default/img/get-img-path.liquid img_name=img_name layout=include.layout absolute=false -%}
+      {%- capture img_tag_path -%} {{ tag_start }}{{ get_img_path_out }}{{ tag_end }} {%- endcapture -%}
+      {%- include default/img/set-img-loader-viewer.liquid tag_start=tag_start img_path=get_img_path_out img_tag=img_tag_path -%}
+      {%- assign img_path_converter_out = img_path_converter_out | replace: img_tag_in, set_img_loader_viewer_out -%}
+      {%-comment%} for DEBUG {%- assign img_path_converter_out = img_path_converter_out | append: get_img_path_out | append: "<br>"-%}{%endcomment-%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}

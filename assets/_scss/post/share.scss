@@ -1,0 +1,46 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+/* common for post, post-list */
+.share-holder {
+  @include get_scheme(share-colors-);
+}
+
+.share-label {
+  color: var(--share-label-text-color);
+  font-size: 1.4rem;
+}
+
+.share-buttons {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5rem;
+}
+
+.share-buttons li a {
+  font-size: 2rem;
+  border: none;
+  color: var(--share-button-text-color);
+  display: block;
+}
+
+.share-buttons li a:hover {
+  color: var(--share-button-hover-text-color);
+}
+
+.share-buttons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.share-buttons > li:first-child {
+  margin-left: 10px;
+}
+
+.share-buttons > li {
+  display: inline-block;
+  margin-right: 17px;
+}

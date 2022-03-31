@@ -1,0 +1,38 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+// don't add any class. only definitions and mixin
+// otherwise it will be added to all css file outputs
+
+// mixin
+@mixin get_scheme_opt($name, $dark_scheme_enabled: false) {
+  $dark_attr: '[data-color-scheme="dark"]';
+  $light: light;
+  $dark: dark;
+  // add light colors
+  @extend %#{$name + $light} !optional;
+  @if $dark_scheme_enabled == true {
+    // get parent
+    $_parent: #{&};
+    @if $_parent != ":root" {
+      // if not root, then add parent
+      #{$dark_attr} & {
+        // add dark colors
+        @extend %#{$name + $dark};
+      }
+    } @else {
+      //if root, then don't add parent
+      @at-root #{$dark_attr} {
+        // add dark colors
+        @extend %#{$name + $dark};
+      }
+      //@debug $name;
+    }
+  }
+}
+
+@import "colors/light-colors";
+@import "colors/dark-colors";
+@import "colors/bootstrap-dark-colors";

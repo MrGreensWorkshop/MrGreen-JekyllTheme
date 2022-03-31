@@ -1,0 +1,308 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- include multi_lng/get-lng-code.liquid lng = lng -%}
+
+{%-comment-%} get contact links {%-endcomment-%}
+{%- assign meta_contact_pages = '' | split: '' -%}
+{% for accounts in site.data.owner.contacts -%}
+  {%- assign account_var = accounts | first %}{% assign account_key = account_var[0] %}{% assign account_username = account_var[1] -%}
+  {%- if account_key == 'email' -%}{% continue %}{% endif -%}
+  {%- assign tmp_link = site.data.const.contact[account_key].url | append:'/' | append: account_username  -%}
+  {%- assign meta_contact_pages = meta_contact_pages | push: tmp_link  -%}
+{%- endfor -%}
+
+{%- assign base_url = '/' | absolute_url %}
+{%- if site.data.conf.main.meta.schema_markup_base_url_with_lang %}
+  {%- if lng != site.data.conf.main.default_lng %}
+    {%- assign base_url = base_url | append: lng | append: '/' -%}
+  {%- endif %}
+{%- endif %}
+
+{%-comment-%} to make sure it's unique, use urls {%-endcomment-%}
+{%- assign person_id = base_url | append: "#person" %}
+{%- assign organization_id = base_url | append: "#organization" %}
+{%- assign website_id = base_url | append: "#website" %}
+{%- assign breadcrumb_id = meta_page_url | append: "#breadcrumb" %}
+{%- assign webpage_id = meta_page_url | append: "#webpage" %}
+{%- assign content_id = meta_page_url | append: "#content" %}
+
+{%- assign google_searchlinks_en = nil %}
+{%- if site.data.conf.main.meta.schema_markup_google_sitelinks_searchbox and page.layout == 'home' %}{%- assign google_searchlinks_en = true %}{%- endif %}
+{%- assign post_en = nil %}
+{%- if site.data.conf.main.meta.schema_markup_post and page.layout == 'post' %}{%- assign post_en = true %}{%- endif %}
+
+{%-comment-%} could be person_id or organization_id {%-endcomment%}
+{%- if site.data.conf.main.meta.schema_markup_publisher == "organization" %}
+  {%- assign publisher_id = organization_id %}
+{%- elsif site.data.conf.main.meta.schema_markup_publisher == "person" %}
+  {%- assign publisher_id = person_id %}
+{%- endif %}
+{%-comment-%} could be person_id or organization_id or nil {%-endcomment%}
+{%- if site.data.conf.main.meta.schema_markup_copyright_holder == "organization" %}
+  {%- assign copyright_id = organization_id %}
+{%- elsif site.data.conf.main.meta.schema_markup_copyright_holder == "person" %}
+  {%- assign copyright_id = person_id %}
+{%- endif %}
+
+{%- if page.layout == 'home' %}
+  {%-comment-%} could be person_id or organization_id or nil {%-endcomment%}
+  {%- if site.data.conf.main.meta.schema_markup_thing == "organization" %}
+    {%- assign thing_id = organization_id %}
+  {%- elsif site.data.conf.main.meta.schema_markup_thing == "person" %}
+    {%- assign thing_id = person_id %}
+  {%- endif %}
+{%- endif %}
+
+{%- if post_en %}
+  {%-comment-%} could be person_id or organization_id or nil {%-endcomment%}
+  {%- if site.data.conf.main.meta.schema_post_author == "organization" %}
+    {%- assign author_id = organization_id %}
+  {%- elsif site.data.conf.main.meta.schema_post_author == "person" %}
+    {%- assign author_id = person_id %}
+  {%- endif %}
+{%- endif %}
+
+{%- assign organization_meta_ld_json = nil %}
+{%- assign person_meta_ld_json = nil %}
+{%- assign breadcrumb_meta_ld_json = nil %}
+{%- assign website_meta_ld_json = nil %}
+{%- assign webpage_meta_ld_json = nil %}
+{%- assign post_meta_ld_json = nil %}
+
+{%- assign meta_description = meta_desc | truncate: 150 %}
+
+{%- if publisher_id == organization_id or author_id == organization_id or copyright_id == organization_id or thing_id == organization_id -%}
+  {%-capture organization_meta_ld_json %}
+      "@type": "Organization"
+      ,"@id": "{{ organization_id }}"
+      ,"name": "{{ site.data.owner.brand }}"
+      ,"url": "{{ base_url }}"
+    {%- if meta_logo_image %}
+      ,"logo": "{{ meta_logo_image }}"
+    {%- endif %}
+    {%- if meta_about_image %}
+      ,"image": "{{ meta_about_image }}"
+    {%- endif %}
+    {%- if site_default_desc %}
+      ,"description": "{{ site_default_desc }}"
+    {%- endif %}
+  {%endcapture %}
+  {%- assign organization_obj_meta_ld_json = organization_meta_ld_json | prepend: '{' | append: '}' %}
+  {%- if publisher_id != organization_id and author_id != organization_id and copyright_id != organization_id and thing_id == organization_id -%}
+    {%- assign organization_obj_meta_ld_json = nil %}
+  {%- endif %}
+{%- endif %}
+
+
+{%- if publisher_id == person_id or author_id == person_id or copyright_id == person_id or thing_id == person_id -%}
+  {%- include multi_lng/get-page-by-layout.liquid layout = 'about' -%}
+  {%-capture person_meta_ld_json %}
+      "@type": "Person"
+      ,"@id": "{{ person_id }}"
+      ,"name": "{{ meta_author }}"
+      ,"url": "{{ layout_page_url }}"
+    {%- if meta_about_image %}
+      ,"image": "{{ meta_about_image }}"
+    {%- endif %}
+    {%- if site_default_desc %}
+      ,"description": "{{ site_default_desc }}"
+    {%- endif %}
+  {%endcapture %}
+  {%- assign person_obj_meta_ld_json = person_meta_ld_json | prepend: '{' | append: '}' %}
+  {%- if publisher_id != person_id and author_id != person_id and copyright_id != person_id and thing_id == person_id -%}
+    {%- assign person_obj_meta_ld_json = nil %}
+  {%- endif %}
+{%- endif %}
+
+{%- if site.data.conf.main.meta.schema_markup_breadcrumb -%}
+  {%- assign page_item_name = meta_title -%}
+  {%- assign breadcrumb_list = '' | split: '' -%}
+
+  {%- include multi_lng/get-page-by-layout.liquid layout = 'home' -%}
+  {%- assign home_button_name = layout_page_obj.button_name | default: site.data.lang[lng]['home'].button_name -%}
+
+  {%- if page.layout == 'home' %}
+    {%- assign page_item_name = home_button_name -%}
+  {%-else %}
+    {%- assign breadcrumb_item = '' | split: '' -%}
+    {%- assign breadcrumb_item = breadcrumb_item | push: home_button_name | push: layout_page_url %}
+    {%- assign breadcrumb_list = breadcrumb_list | push: breadcrumb_item %}
+  {%-endif%}
+
+  {%- if page.layout == 'post' %}
+    {%- include multi_lng/get-page-by-layout.liquid layout = 'post-list' -%}
+    {%- assign post_list_button_name = layout_page_obj.button_name | default: site.data.lang[lng]['post-list'].button_name -%}
+    {%- assign breadcrumb_item = '' | split: '' -%}
+    {%- assign breadcrumb_item = breadcrumb_item | push: post_list_button_name | push: layout_page_url %}
+    {%- assign breadcrumb_list = breadcrumb_list | push: breadcrumb_item %}
+  {%-endif%}
+
+  {%- assign breadcrumb_item = '' | split: '' -%}
+  {%- assign breadcrumb_item = breadcrumb_item | push: page_item_name | push: "" %}
+  {%- assign breadcrumb_list = breadcrumb_list | push: breadcrumb_item %}
+
+  {%-capture breadcrumb_meta_ld_json -%}
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ breadcrumb_id }}",
+      "itemListElement": [
+        {%- for item in breadcrumb_list %}
+        {
+          "@type": "ListItem"
+          ,"position": {{ forloop.index }}
+          ,"name": "{{ item[0] }}"
+        {%- if forloop.last != true %}
+          ,"item": "{{ item[1] }}"
+        {%- endif %}
+        }
+        {%- if forloop.last != true %},{%- endif %}
+        {%- endfor%}
+      ]
+    }
+  {%-endcapture %}
+{%- endif %}
+
+{%-capture website_meta_ld_json -%}
+  {
+    "@type": "WebSite"
+    ,"@id": "{{ website_id }}"
+    ,"url": "{{ base_url }}"
+    ,"name": "{{ site.data.owner.brand }}"
+  {%- if site_default_desc %}
+    ,"description": "{{ site_default_desc }}"
+  {%- endif %}
+  {%- if publisher_id %}
+    ,"publisher": {"@id": "{{ publisher_id }}"}
+  {%- endif %}
+    ,"inLanguage": "{{ lng_code }}"
+  {%- if meta_contact_pages.size > 0 %}
+    ,"sameAs": {{ meta_contact_pages | jsonify }}
+  {%- endif %}
+  {%- if copyright_id %}
+    ,"copyrightHolder" : {"@id": "{{ copyright_id }}"}
+    ,"copyrightYear" : "{{ site.data.owner.copyright_start_year }}"
+  {%- endif %}
+  {%-comment-%} google says add this only to home page. {%-endcomment%}
+  {%- if google_searchlinks_en %}
+    ,"potentialAction": {
+      "@type": "SearchAction"
+      ,"target": {
+        "@type": "EntryPoint"
+        ,"urlTemplate": "{{ base_url }}?search={search_term_string}"
+      }
+      ,"query-input": "required name=search_term_string"
+    }
+  {%- endif %}
+  }
+{%-endcapture %}
+
+{%-capture webpage_meta_ld_json -%}
+  {
+    "@type": "WebPage"
+    ,"@id": "{{ webpage_id }}"
+    ,"url": "{{ meta_page_url }}"
+    ,"name": "{{ meta_title | truncate: 110 }}"
+    ,"isPartOf": {"@id": "{{ website_id }}"}
+  {%- if site.data.conf.main.meta.schema_markup_breadcrumb %}
+    ,"breadcrumb": {"@id": "{{ breadcrumb_id }}"}
+  {%- endif %}
+  {%- if meta_image %}
+    ,"primaryImageOfPage": "{{ meta_image }}"
+  {%- endif %}
+    ,"datePublished": "{{ meta_date_published }}"
+    ,"dateModified": "{{ meta_date_modified }}"
+    ,"description": "{{ meta_description }}"
+    ,"inLanguage": "{{ lng_code }}"
+    ,"potentialAction": {
+      "@type": "ReadAction"
+      ,"target": "{{ meta_page_url }}"
+    }
+  }
+{%-endcapture %}
+
+
+{%- if post_en %}
+  {%-capture post_meta_ld_json -%}
+    {
+      "@type": "{{ site.data.conf.main.meta.schema_markup_post_type }}"
+      ,"@id": "{{ content_id }}"
+      ,"isPartOf": {"@id": "{{ webpage_id }}"}
+      ,"mainEntityOfPage": {"@id": "{{ webpage_id }}"}
+    {%- if publisher_id %}
+      ,"publisher": {"@id": "{{ publisher_id }}"}
+    {%- endif %}
+    {%- if author_id %}
+      ,"author": {"@id": "{{ author_id }}"}
+    {%- endif %}
+      ,"inLanguage": "{{ lng_code }}"
+      ,"headline": "{{ meta_title | truncate: 110 }}"
+    {%- if meta_image %}
+      ,"image": "{{ meta_image }}"
+      ,"thumbnailUrl": "{{ meta_image }}"
+    {%- endif %}
+      ,"datePublished": "{{ meta_date_published }}"
+      ,"dateModified": "{{ meta_date_modified }}"
+    {%- if meta_keywords.size > 0 %}
+      ,"articleSection": ["{{ meta_keywords | join: '", "' }}"]
+    {%- endif %}
+      ,"description": "{{ meta_description }}"
+    {%- if copyright_id %}
+      ,"copyrightHolder" : {"@id": "{{ copyright_id }}"}
+      ,"copyrightYear" : "{{ site.data.owner.copyright_start_year }}"
+    {%- endif %}
+      ,"wordCount": {{ content_output | number_of_words }}
+    {%- if site.data.conf.main.meta.schema_markup_post_add_postbody %}
+      ,"articleBody": {{ content_output | jsonify }}
+    {%- endif %}
+    }
+  {%-endcapture %}
+{%- endif %}
+
+
+{%- assign meta_ld_json_list = '' | split: '' -%}
+{%- assign meta_ld_json_list = meta_ld_json_list
+  | push: person_obj_meta_ld_json
+  | push: organization_obj_meta_ld_json
+  | push: website_meta_ld_json
+  | push: webpage_meta_ld_json
+  | push: breadcrumb_meta_ld_json
+  | push: post_meta_ld_json
+  | where_exp: "item", "item != nil"
+%}
+
+{%-capture meta_ld_json -%}
+{
+  "@context": "https://schema.org"
+  ,"@graph": [
+    {{ meta_ld_json_list | join: ',' }}
+  ]
+}
+{%-endcapture %}
+
+{%- if site.data.conf.main.meta.schema_markup_breadcrumb or post_en or google_searchlinks_en %}
+  <script type="application/ld+json">{{ meta_ld_json }}</script>
+{%- endif %}
+
+{%- if page.layout == 'home' %}
+  {%- if thing_id == organization_id %}
+    {%- assign thing_only_meta_ld_json = organization_meta_ld_json %}
+  {%- elsif thing_id == person_id %}
+    {%- assign thing_only_meta_ld_json = person_meta_ld_json %}
+  {%- endif %}
+  {%- if thing_only_meta_ld_json %}
+    {%-capture meta_ld_json -%}
+    {
+      "@context": "https://schema.org"
+      ,{{ thing_only_meta_ld_json }}
+    {%- if meta_contact_pages.size > 0 -%}
+      ,"sameAs": {{ meta_contact_pages | jsonify }}
+    {%- endif %}
+    }
+    {%-endcapture %}
+    <script type="application/ld+json">{{ meta_ld_json }}</script>
+  {%- endif %}
+{%- endif %}

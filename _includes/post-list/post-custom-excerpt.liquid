@@ -1,0 +1,26 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- if site.data.conf.posts.excerpt_end_separator == nil or site.data.conf.posts.excerpt_end_separator == empty-%}
+  {%- assign post_info = include.content -%}
+{%- else -%}
+  {%- assign post_info = include.content | split: site.data.conf.posts.excerpt_end_separator -%}
+  {%- assign post_info = post_info[0] | split: " " | join: " " -%}
+{%- endif -%}
+
+{%- assign word_count = include.limit_words | default: 25 -%}
+
+{%- comment %} check if excerpt_start_separator is defined and used in posts  {% endcomment -%}
+{%- assign excerptParts = post_info | split: site.data.conf.posts.excerpt_start_separator -%}
+{%- if site.data.conf.posts.excerpt_start_separator != nil and excerptParts[1] != nil -%}
+{%- comment %} if excerpt_start_separator is used in post, then get text between start and end {% endcomment -%}
+  {%- assign subtitle = excerptParts[1] -%}
+{%- else -%}
+{%- comment %} if excerpt_start_separator is not used in post, then use this {% endcomment -%}
+  {%- assign subtitle = post_info -%}
+{%- endif -%}
+
+{%- assign title_sub = subtitle | strip_html | split: " " | join: " " | truncatewords: word_count -%}

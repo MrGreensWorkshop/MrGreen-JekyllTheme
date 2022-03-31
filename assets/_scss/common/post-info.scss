@@ -1,0 +1,26 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+/* common for post, post-list */
+.post-container,
+.thumbnails {
+  @include get_scheme(post-info-colors-);
+}
+
+.meta {
+  color: var(--post-meta-text-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* thumbnail post title */
+/* post title */
+.post-title {
+  font-size: 2.6rem;
+  margin-top: -7px;
+  font-weight: 700;
+  padding-bottom: 5px;
+  color: var(--post-title-text-color);
+}

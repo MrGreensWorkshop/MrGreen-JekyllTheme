@@ -1,0 +1,49 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- if page.img -%}
+  {%- include default/img/get-img-path.liquid img_name=page.img layout=page.layout absolute=true -%}
+  {%comment-%} for blog images, google says, images should be at least 696 pixels wide. {%-endcomment-%}
+  {%- assign meta_image = get_img_path_out -%}
+{%-else %}
+  {%- assign meta_image = site.data.conf.main.meta.schema_markup_default_meta_img | absolute_url -%}
+{%- endif -%}
+
+{%-comment-%} Person or Organization logo and image {%-endcomment-%}
+{%-comment-%} google says, the image must be 112x112px, at minimum. {%-endcomment-%}
+{%- assign meta_logo_image = site.data.conf.main.meta.schema_markup_logo_img | absolute_url -%}
+{%- assign meta_about_image = site.data.conf.main.meta.schema_markup_about_img | absolute_url -%}
+
+{%-comment-%} meta description for site {%-endcomment-%}
+{%- assign site_default_desc = site.data.lang[lng].meta_common_description | replace: site.data.conf.main.brand_replace, site.data.owner.brand | truncate: 150 -%}
+
+{%- if page.layout == 'post' %}
+  {%- include post-list/post-custom-excerpt.liquid content = page.content limit_words = 25 -%}
+  {%- assign content_excerpt = title_sub | xml_escape -%}
+  {%- assign content_output = page.content | strip_html | split: " " | join: " " -%}
+{%- else -%}
+  {%-comment-%} get rendered page {%-endcomment-%}
+  {%- assign content_excerpt = site.html_pages | where_exp: "item", "item.url == page.url" | first -%}
+  {%- assign content_excerpt = content_excerpt.content -%}
+{%- endif -%}
+
+{%- assign content_excerpt = content_excerpt | strip_html | split: " " | join: " " -%}
+
+{%- assign meta_desc = page.meta_description | default: content_excerpt | default: site_default_desc -%}
+{%- assign page_title = page.title | default: site.data.lang[lng][page.layout].title -%}
+{%- include util/auto-content-post-title-rename.liquid title = page_title -%}
+{%- assign meta_title = page_title | xml_escape -%}
+{%- assign meta_author = page.author | default: site.data.owner.name -%}
+{%- assign meta_page_url = page.url | absolute_url -%}
+
+{%- assign meta_keywords = '' | split: '' -%}
+{%- assign meta_keywords = meta_keywords | push: page.category | push: page.tags | push: page.meta_keywords | where_exp: "item", "item != nil" -%}
+
+{%- assign meta_date_published = page.date | default: site.time -%}
+{%- assign meta_date_modified = page.meta_modify_date | default: meta_date_published -%}
+
+{%- assign meta_date_published = meta_date_published | date_to_xmlschema -%}
+{%- assign meta_date_modified = meta_date_modified | date_to_xmlschema -%}

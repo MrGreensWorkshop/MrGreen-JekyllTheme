@@ -1,0 +1,253 @@
+---
+---
+/*! Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ *  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ *  Licensed under MIT
+*/
+
+:root {
+  /* with profile img, 2.3rem, otherwise 3rem suits. */
+  --side-nav-brand-text-font-size: 2.3rem;
+  --side-nav-width: 230px;
+  --side-nav-width-def: 230px;
+  --side-nav-side-margin: 20px;
+  --top-nav-height: 0px;
+  --top-nav-height-def: 52px;
+  /* min:5px, nominal:3%, max:25px */
+  --text-spacing: clamp(5px, calc((100vw / 100) * 3 ), 25px);
+  /* min:5px, nominal:3.5%, max:40px */
+  --main-container-margin: clamp(5px, calc((100vw / 100) * 3.5 ), 40px);
+  /* any page bottom padding */
+  --main-container-padding-bottom: calc(var(--main-container-margin) / 2);
+  --main-container-width-limit: 800px;
+  --main-container-max-width: calc(var(--main-container-width-limit) + (var(--main-container-margin) * 2));
+  /* space between containers */
+  --multipurpose-container-margin-bottom: 20px;
+  --footer-height: 27px;
+}
+
+{% if site.data.conf.main.google_font_load_in_head == nil or site.data.conf.main.google_font_load_in_head == false %}
+  @import url({{ site.data.conf.main.google_font_style_url }});
+{% endif %}
+
+@import "colors/scheme";
+@mixin get_scheme($name) {
+  @include get_scheme_opt($name, {{ site.data.conf.main.color_scheme_dark }});
+}
+
+@import "default/body-main-styles";
+
+@import "default/multipurpose-container";
+
+@import "default/footer";
+{% if site.data.conf.main.main_fixed_footer and site.data.conf.main.main_footer %}
+  @import "default/footer-fixed-ext";
+{% endif %}
+
+@import "default/nav/navigation";
+@import "default/nav/navigation-buttons";
+
+{% if site.data.conf.main.side_nav_toggle_button_no_top_nav_buttons == true %}
+  @import "default/nav/navigation-top-side-nav-toggle";
+{% endif %}
+
+{% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 %}
+  @import "default/nav/lang-switch";
+{% endif %}
+
+{% if site.data.conf.main.scroll_back_to_top_button == true %}
+  @import "default/scroll-to-top";
+{% endif %}
+
+{% if site.data.conf.main.search_enable == true %}
+  @import "default/searchbox";
+  @import "default/searchresult";
+{% endif %}
+
+{% if site.data.conf.main.cookie_consent.enable == true %}
+  @import "common/button";
+  @import "common/slide-switch";
+  @import "default/cookie-consent";
+  {% assign cookie_consent_box_enabled = true %}
+  {% if site.data.conf.main.cookie_consent.side_nav_setting_button.enable == true %}
+    @import "default/nav/cookie-settings-button";
+    {% assign cookie_settings_button_enabled = true %}
+  {% endif %}
+{% endif %}
+
+{% if site.data.conf.posts.comments.enable and site.data.conf.posts.comments.disqus.enable %}
+  {% assign comment_disqus_enabled = true %}
+{% endif %}
+
+{% if
+  cookie_consent_box_enabled == true or
+  comment_disqus_enabled == true
+%}
+  @import "common/button";
+{% endif %}
+
+{% if
+  site.data.conf.main.top_nav_buttons_hover_effect or
+  site.data.conf.main.side_nav_buttons_hover_effect or
+  site.data.conf.main.contacts_buttons_hover_effect or
+  site.data.conf.main.language_switch_hover_effect or
+  site.data.conf.main.side_nav_bottom_buttons_hover_effect or
+  site.data.conf.main.color_scheme_switch_top_nav_hover_effect or
+  site.data.conf.posts.share_buttons_hover_effect or
+  site.data.conf.posts.post_query_tabs_tabs_hover_effect
+%}
+  @import "default/hover-ext";
+{% endif %}
+
+{% if site.data.conf.main.color_scheme_dark == true %}
+  {% if site.data.conf.main.color_scheme_switch_side_nav or site.data.conf.main.color_scheme_switch_top_nav %}
+    @import "default/nav/color-scheme-switch";
+    {% assign color_scheme_switch_enabled = true %}
+  {% endif %}
+  :root {
+    @include get_scheme(bootstrap-dark-tooltip-colors-);
+  }
+{% endif %}
+
+{% if
+  color_scheme_switch_enabled == true or
+  cookie_settings_button_enabled == true
+%}
+  @import "default/nav/navigation-side-nav-bottom-buttons";
+{% endif %}
+
+/**********************************************************
+* for common contents
+***********************************************************/
+
+{% if site.posts != nil and site.posts != empty %} {% assign post_exist = true %} {% endif %}
+
+{% assign pages = site.html_pages | where_exp: "item", "item.layout == 'home'" %}
+{% if pages.size > 0 %} {% assign home_page_exist = true %} {% endif %}
+
+{% assign pages = site.html_pages | where_exp: "item", "item.layout == 'post-list'" %}
+{% if pages.size > 0 %} {% assign post_list_page_exist = true %} {% endif %}
+
+{% assign pages = site.html_pages | where_exp: "item", "item.layout == 'archives'" %}
+{% if pages.size > 0 %} {% assign archives_page_exist = true %} {% endif %}
+
+{% assign pages = site.html_pages | where_exp: "item", "item.layout == 'about'" %}
+{% if pages.size > 0 %} {% assign about_page_exist = true %} {% endif %}
+
+{% assign pages = site.html_pages | where_exp: "item", "item.layout == 'links'" %}
+{% if pages.size > 0 %} {% assign links_page_exist = true %} {% endif %}
+
+{% assign pages = site.html_pages | where_exp: "item", "item.layout == 'projects'" %}
+{% if pages.size > 0 %} {% assign projects_page_exist = true %} {% endif %}
+
+{% if site.data.owner.contacts.size > 0 %}
+  {% if about_page_exist and site.data.conf.others.about.show_contacts %}
+    {% assign about_contact_enable = true %}
+  {% endif %}
+  {% if site.data.conf.main.contacts or about_contact_enable %}
+    @import "common/contact";
+  {% endif %}
+{% endif %}
+
+{% if post_list_page_exist or post_exist %}
+  @import "common/post-info";
+{% endif %}
+
+{% if post_exist or projects_page_exist %}
+  @import "common/markdown-style";
+{% endif %}
+
+{% if post_exist and site.data.conf.posts.pager_navigation_post != nil %}
+  {% assign post_pager_enable = true %}
+{% endif %}
+
+{% if post_list_page_exist and site.data.conf.posts.pager_navigation_post_list != nil %}
+  {% assign post_list_pager_enable = true %}
+{% endif %}
+
+{% if post_pager_enable or post_list_pager_enable %}
+  @import "common/pager";
+{% endif %}
+
+{% if links_page_exist or projects_page_exist %}
+  @import "common/multipurpose-button";
+{% endif %}
+
+{% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 and site.data.conf.main.language_translation_offer_box %}
+  {% assign language_translation_offer_box_enabled = true %}
+{% endif %}
+
+{% if language_translation_offer_box_enabled == true or cookie_consent_box_enabled == true %}
+  @import "default/sliding-msg-box";
+{% endif %}
+
+{% if post_exist and site.data.conf.posts.post_table_of_contents == true %}
+  {% assign toc_exist = true %}
+{% endif %}
+
+{% if post_list_page_exist and site.data.conf.posts.post_query_tabs == true and site.data.conf.posts.post_query == true %}
+  {% assign post_query_tabs_exist = true %}
+{% endif %}
+
+{% if
+  toc_exist == true or
+  post_query_tabs_exist == true or
+  language_translation_offer_box_enabled == true or
+  cookie_consent_box_enabled == true %}
+  @import "common/close-button";
+{% endif %}
+
+/**********************************************************
+* for layout specific content
+***********************************************************/
+
+{% if home_page_exist %}
+  @import "home/home-heading";
+  @import "home/new-posts";
+{% endif %}
+
+{% if about_page_exist %}
+  @import "about/about-style";
+
+  {% if site.data.conf.others.about.show_contacts and site.data.owner.contacts.size > 0 %}
+    @import "about/about-contact";
+  {% endif %}
+{% endif %}
+
+{% if post_exist %}
+  {% if site.data.conf.posts.share_buttons == true %}
+    @import "post/share";
+  {% endif %}
+
+  {% if toc_exist == true %}
+    @import "post/table-of-contents";
+  {% endif %}
+
+  {% if comment_disqus_enabled == true %}
+    #disqus_thread {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      /*min-height: 100px;*/
+    }
+  {% endif %}
+{% endif %}
+
+{% if post_list_page_exist %}
+  @import "post-list/thumbnails";
+
+  {% if post_query_tabs_exist == true %}
+    @import "post-list/upside-down-tabs";
+  {% endif %}
+{% endif %}
+
+{% if archives_page_exist %}
+  @import "archives/archives";
+{% endif %}
+
+{% if links_page_exist %}
+  @import "links/link-style";
+{% endif %}
+
+{% if projects_page_exist %}
+  @import "projects/project-container";
+{% endif %}

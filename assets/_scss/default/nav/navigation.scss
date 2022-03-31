@@ -1,0 +1,130 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+:root {
+  @include get_scheme(bootstrap-dark-navbar-colors-);
+}
+
+.top-nav,
+#side-nav-container {
+  @include get_scheme(navigation-colors-);
+  background: var(--side-top-nav-background-color);
+  transition: all 0.4s ease;
+}
+
+/* side nav */
+#side-nav-container {
+  width: var(--side-nav-width-def);
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  border-right: solid 1px var(--side-nav-right-border-color);
+  text-align: center;
+}
+
+.side-nav {
+  margin: 0;
+  padding: 0;
+  padding-top: var(--main-container-margin);
+  min-height: calc(100vh - var(--side-nav-bottom-buttons-container-height));
+  /* safari height fix */
+  width: calc(var(--side-nav-width-def) - 1px);
+  display: inline-block;
+}
+
+.side-nav > hr {
+  margin: 0 var(--side-nav-side-margin);
+  transition: all 0.4s ease;
+}
+
+/* side nav and top nav main title */
+.side-nav-brand {
+  text-align: center;
+}
+
+.side-nav-brand > img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+/* sub title text */
+.side-nav-brand > p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--side-nav-sub-title-text-color);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  display: inline-block;
+}
+
+.top-nav .top-nav-brand {
+  font-size: 2.52rem;
+  padding-left: 0;
+  margin-left: 5px;
+}
+
+.side-nav-brand > .brand-holder > a {
+  font-size: var(--side-nav-brand-text-font-size);
+}
+
+.top-nav .top-nav-brand,
+.side-nav-brand > .brand-holder > a {
+  color: var(--side-top-nav-brand-text-color);
+  font-weight: 700;
+}
+
+.top-nav .top-nav-brand:hover,
+.side-nav-brand > .brand-holder > a:hover {
+  transition: all 0.5s ease-in-out;
+  color: var(--side-top-nav-brand-hover-text-color);
+}
+
+.top-nav .top-nav-brand:hover,
+.top-nav .top-nav-brand:active,
+.top-nav .top-nav-brand:focus,
+.side-nav-brand > .brand-holder > a:hover,
+.side-nav-brand > .brand-holder > a:active,
+.side-nav-brand > .brand-holder > a:focus {
+  text-decoration: none;
+}
+
+/* side nav copyright and color scheme switch */
+.side-nav-footer {
+  font-size: 1.4rem;
+  text-indent: 0;
+  text-align: center;
+  line-height: 3rem;
+  color: var(--side-nav-copyright-text-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.side-nav-footer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* top navbar */
+.top-nav {
+  display: none;
+  margin-bottom: 0px;
+}
+
+/* top nav or side nav, show / hide button */
+.top-nav .top-nav-menu-toggle {
+  margin-left: 13px;
+  background-color: var(--side-top-nav-background-color);
+  opacity: 0.4;
+  transition: all 0.4s ease;
+}
+
+.top-nav .top-nav-menu-toggle:hover {
+  opacity: 1;
+}

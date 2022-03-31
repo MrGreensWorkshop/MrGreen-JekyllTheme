@@ -1,0 +1,61 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.new-posts-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.new-posts-container h1 {
+  font-size: 2.2rem;
+}
+
+.new-posts {
+  display: block;
+  list-style: none;
+  position: relative;
+  width: auto;
+  padding-left: 5px;
+  margin-bottom: 0px;
+}
+
+.new-posts > li {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.new-posts > li > a {
+  display: block;
+}
+
+/* post date */
+.new-posts > li span {
+  position: absolute;
+  right: 0px;
+}
+
+/* add an ellipsis if post title is too long */
+.new-posts > li :not(span) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 65%;
+}
+/* space between links */
+.new-posts > li:not(li:last-child) {
+  margin-bottom: 5px;
+}
+
+/* remove last spacing */
+.new-posts > li:last-child {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 500px) {
+  .new-posts-container {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}

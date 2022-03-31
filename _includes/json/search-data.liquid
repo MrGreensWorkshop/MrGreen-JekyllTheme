@@ -1,0 +1,37 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: search_json_out {%-endcomment-%}
+
+{%- assign search_json_out = nil -%}
+{%- assign _pages = include.pages | sort: 'date' | reverse -%}
+{%- for page_tmp in _pages -%}
+  {%- if page_tmp.on_site_search_exclude == true -%}{%- continue -%}{%- endif -%}
+  {%- assign page_content = page_tmp.content | default: page_tmp.output -%}
+  {%- assign page_dt = page_tmp.page_data | default: site.data.content.[page_tmp.layout][lng].page_data -%}
+  {%- assign page_dt = page_dt
+    | replace: '\n', ' ' | replace: '"', ' ' | replace: ', ', ' ' | replace: '=>', ' '
+    | replace: '[', '' | replace: ']' '' | replace: "{", '' | replace: "}", ' '
+    | split: " " | join: " "
+  -%}
+  {%- assign page_content = page_content | strip_html | split: " " | join: " " | default: page_dt -%}
+  {%- if page_tmp.date %}{%- assign page_date = page_tmp.date -%}{%- else -%}{%- assign page_date = site.time -%}{%- endif -%}
+  {%- assign page_title = page_tmp.title | default: site.data.lang[lng][page_tmp.layout].title -%}
+  {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
+  {%- if page_tmp.layout != "redirect" and page_content != empty -%}
+    {%- capture search_json -%}
+  {
+    "title"    : "{{ page_title | strip_html | split: " " | join: " " }}"
+    ,"category" : "{{ page_tmp.category | downcase }}"
+    ,"tags"     : "{{ page_tmp.tags | join: ', ' | downcase }}"
+    ,"url"      : "{{ site.baseurl }}{{ page_tmp.url }}"
+    ,"date"     : "{{ page_date | date: site.data.lang[lng].date.long }}"
+    ,"content"  : {{ page_content | jsonify }}
+  },
+    {%- endcapture -%}
+    {%- assign search_json_out = search_json_out | append: search_json -%}
+  {%- endif -%}
+{%- endfor -%}

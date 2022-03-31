@@ -1,0 +1,27 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign post_date = nil -%}
+{%- assign page_title = include.title -%}
+{%- assign post_url = include.url | prepend: site.baseurl -%}
+{%- assign read_time = nil -%}
+{%- assign comment_style = nil -%}
+
+{%- assign post_date = include.date | date: site.data.lang[lng].date.long -%}
+{%- capture read_time -%}
+  {%- capture words -%}
+    {{ include.content | number_of_words }}
+  {%- endcapture -%}
+  {%- unless words contains "-" -%}
+    {{ words | plus: 250 | divided_by: 250 | append: site.data.lang[lng].post.read_time.unit | append: site.data.lang[lng].post.read_time.text }}
+  {%- endunless -%}
+{% endcapture -%}
+
+{%- if include.comment_off -%}
+  {%- assign comment_style = "style='display:none;'" -%}
+{%- endif -%}
+
+{%- include util/auto-content-post-title-rename.liquid title = page_title -%}

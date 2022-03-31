@@ -1,0 +1,33 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: post_query_json_out {%-endcomment-%}
+
+{%- assign post_query_json_out = nil -%}
+{%- assign _posts = include.posts | sort: 'date' | reverse -%}
+{%- for post in _posts -%}
+  {%- include post-list/post-thumbnail-data.liquid post = post -%}
+  {%- include default/img/get-img-path.liquid img_name=image layout=post.layout absolute=false -%}
+  {%- capture post_query_json -%}
+  {
+    "title"     : "{{ page_title }}"
+    ,"title_sub": "{{ title_sub }}"
+    ,"category" : "{{ post.category | downcase }}"
+    ,"tags"     : "{{ post.tags | join: ', ' | downcase }}"
+    ,"url"      : "{{ post_url }}"
+    ,"image"    : "{{ get_img_path_out }}"
+    ,"max_width": "{{ max_width }}"
+    ,"display"  : "{{ display }}"
+    ,"read_time": "{{ read_time }}"
+    ,"date"     : "{{ post_date }}"
+    ,"year"     : "{{ post.date | date: "%Y" }}"
+    {% if site.data.conf.posts.comments.enable and site.data.conf.posts.comments.disqus.enable and site.data.conf.posts.comments.disqus.comment_count -%}
+    ,"comment_style": "{{ comment_style }}"
+    {% endif -%}
+  },
+  {%- endcapture -%}
+  {%- assign post_query_json_out = post_query_json_out | append: post_query_json -%}
+{%- endfor -%}

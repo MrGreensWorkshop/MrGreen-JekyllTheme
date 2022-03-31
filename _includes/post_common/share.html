@@ -1,0 +1,45 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%comment-%} Post share links {%-endcomment-%}
+
+{%- capture page_title -%} {{ include.title }} - {{ site.data.owner.brand }} {%- endcapture %}
+{%- assign page_title = page_title | uri_escape -%}
+{%- assign page_url = include.url | absolute_url | url_encode -%}
+{%- if site.data.conf.posts.share_buttons_hover_effect -%}
+  {%- capture effect_share_button -%}
+    class="{{ site.data.conf.posts.share_buttons_hover_effect }}"
+  {%- endcapture %}
+{%- endif -%}
+<hr>
+<div class="share-holder">
+  <span class="share-label">{{ site.data.lang[lng].post.share.heading }}: </span>
+  <ul class="share-buttons">
+    {% for share_const in site.data.const.share -%}
+      {% assign share_key = share_const | first | first -%}
+      {%- assign tag_url = share_const.url | replace: '{text}', page_title | replace: '{title}', page_title | replace: '{url}', page_url | escape_once -%}
+      {%- capture tag_attr -%} target="_blank" rel="noopener noreferrer" {%- endcapture -%}
+
+      {%- if share_key == "copy_link" -%}
+        {%- assign tag_url = 'javascript:void(0);' -%}
+        {%- capture tag_attr -%}
+          onclick="copyToClipboard('{{ include.url | absolute_url }}', '{{ site.data.lang[lng].post.share.link_copied }}')" id="copytoclipboard"
+        {%- endcapture -%}
+      {% endif -%}
+
+      {%- if site.data.conf.posts.share_buttons_tooltip -%}
+        {%- capture tooltip_share_buttons -%}
+          data-toggle="tooltip" data-placement="top" title="{{ site.data.lang[lng].post.share.tooltip[share_key] }}"
+        {%- endcapture %}
+      {%- endif %}
+      <li>
+        <a href="{{ tag_url }}" {{ tag_attr }} {{ tooltip_share_buttons }} {{ effect_share_button }}>
+          <i class="{{ share_const.icon }}{{' fa-fw'}}" aria-hidden="true"></i>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

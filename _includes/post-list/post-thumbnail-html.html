@@ -1,0 +1,15 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+<div class="thumbnails" >
+  <a href="{{include.url}}"></a>
+  <div class="image-holder" style="background-image:url('{{include.image}}');{{include.display}}"></div>
+  <div class="excerpt-holder" {{include.max_width}}>
+    <div class="post-title">{{include.title}}</div>
+    <p>{{include.title_sub}}</p>
+    {%- include post_common/post-info-html.html date=include.date read_time=include.read_time url=include.url comment_style = include.comment_style -%}
+  </div>
+</div>

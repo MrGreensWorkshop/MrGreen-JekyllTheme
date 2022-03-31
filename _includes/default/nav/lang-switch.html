@@ -1,0 +1,70 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- include multi_lng/get-pages-by-lng-pair.liquid lng_pair=page.lng_pair layout=page.layout pages=nil -%}
+
+{%- comment %} get language list from urls {% endcomment -%}
+{%- comment %} create an empty array {% endcomment -%}
+{%- assign lng_list = '' | split: '' -%}
+{%- for lng_page in lng_page_pair %}
+  {%- include multi_lng/get-lng-by-url.liquid url = lng_page.url -%}
+  {%- assign lng_list = lng_list | push: get_lng | uniq -%}
+{%- endfor -%}
+
+{%- assign exist_lng_list = '' | split: '' -%}
+{%- for tmp_lng in site.data.conf.main.language_switch_lang_list -%}
+  {%- assign match = nil -%}
+  {%- comment -%} make sure language translation and language folder exist {%- endcomment -%}
+  {%- for _lng in site.data.lang %}
+    {%-capture file_dir -%} /{{ _lng[0]}}/ {%-endcapture-%}
+    {%- assign file_exist = site.html_pages | where_exp: "item", "item.dir == file_dir" -%}
+    {%- if _lng[0] == tmp_lng -%}
+      {%- if _lng[0] == site.data.conf.main.default_lng or file_exist.size > 0 -%}
+        {%- assign match = true -%}
+      {% endif -%}
+    {% endif -%}
+  {% endfor -%}
+  {%- if match == nil -%}{%- continue -%}{% endif -%}
+  {%- assign exist_lng_list = exist_lng_list | push: tmp_lng -%}
+{%- endfor -%}
+
+{%- comment -%} only add when more than one language exist {%- endcomment -%}
+{%- if exist_lng_list.size > 1 %}
+
+<div class="lang-switch">
+  <p>[&nbsp;</p>
+  {%- if lng_page_pair.size == lng_list.size and lng_page_pair.size > 0 -%}
+    <ul translate="no">
+    {%- for tmp_lng in exist_lng_list -%}
+      {%- assign lng_set_flg = nil -%}
+      {%- for lng_page in lng_page_pair -%}
+        {%- include multi_lng/get-lng-by-url.liquid url = lng_page.url -%}
+        {%- if get_lng != tmp_lng -%}{%-continue-%}{%- endif -%}
+        {%- if get_lng == lng -%}{%- assign active_class = ' active-page' -%}{%- else -%}{%- assign active_class = '' -%}{%- endif -%}
+        {%- include multi_lng/get-lng-code.liquid lng = get_lng -%}
+        <li lang="{{ lng_code }}"><a href="{{ site.baseurl }}{{ lng_page.url }}" class="{{ active_class }} {{ site.data.conf.main.language_switch_hover_effect }}">{{ site.data.lang[get_lng].lng.switch_title }}&nbsp;</a></li>
+        {%- assign lng_set_flg = true -%}
+      {%- endfor -%}
+      {%- if lng_set_flg == nil -%}
+        <li>
+          <a href="javascript:void(0);" class="{{ site.data.conf.main.language_switch_hover_effect }}" onclick="showToolTip(this, '{{ site.data.lang[tmp_lng].no_translation_tooltip }}');" data-toggle="tooltip" data-placement="bottom" title="">
+            {{ site.data.lang[tmp_lng].lng.switch_title }}&nbsp;</a>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+    </ul>
+  {%- else -%}
+  {%- comment -%}
+    All individual pages have single language.
+    In case we get more than one page for single language, simply check mistakes for lang pair.
+    If you add the same lng_pair more than language count, this happens.
+  {%- endcomment -%}
+    <p>lang count ({{lng_list.size}}) and file count ({{lng_page_pair.size}}) don't match or file count is 0&nbsp;</p> {%-comment-%} for debug purpose {%-endcomment-%}
+  {%- endif -%}
+  <p>]</p>
+</div>
+
+{%- endif -%}

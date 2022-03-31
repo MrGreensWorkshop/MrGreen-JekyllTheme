@@ -1,0 +1,105 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+// don't add any class. only definitions
+// otherwise it will be added to all output css files
+
+// bootstrap colors for dark scheme
+
+// common/pager
+%bootstrap-dark-pagination-colors-dark {
+  --pagination-button-text-color: #{$header-color-dark};
+  --pagination-button-background-color: #222;
+  --pagination-button-border-color: #333;
+  --pagination-button-active-background-color: #{$button-color-dark};
+  --pagination-button-hover-background-color: #333;
+  .pagination > li:not(.disabled, .active) > a,
+  .pager > li:not(.disabled) > a {
+    color: var(--pagination-button-text-color);
+  }
+  .pagination > li.active > a {
+    border-color: var(--pagination-button-active-background-color);
+    background-color: var(--pagination-button-active-background-color);
+  }
+  .pager > li > a,
+  .pagination > li > a {
+    background-color: var(--pagination-button-background-color);
+    border-color: var(--pagination-button-border-color);
+  }
+  .pager > li > a:hover,
+  .pagination > li:not(.active) > a:hover {
+    background-color: var(--pagination-button-hover-background-color);
+  }
+}
+// post/table-of-contents
+%bootstrap-dark-panel-colors-dark {
+  .panel {
+    background-color: #212121;
+  }
+  .panel-default > .panel-heading {
+    color: #ccc;
+    background-color: #303030;
+    border-bottom-color: #333;
+  }
+  .panel-default {
+    border-color: #333;
+  }
+}
+// default
+%bootstrap-dark-tooltip-colors-dark {
+  .tooltip > .tooltip-inner,
+  .tooltip.top > .tooltip-arrow,
+  .tooltip.bottom > .tooltip-arrow,
+  .tooltip.left > .tooltip-arrow,
+  .tooltip.right > .tooltip-arrow {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
+  .tooltip.in {
+    opacity: 1;
+  }
+}
+// links post project
+%bootstrap-dark-table-colors-dark {
+  .table > thead > tr > th {
+    border-bottom-color: #444;
+  }
+  .table > tbody > tr > td {
+    border-top-color: #444;
+  }
+}
+// links
+%bootstrap-dark-table-hover-colors-dark {
+  .table-hover > tbody > tr:hover {
+    background-color: #333;
+  }
+}
+// post projects
+%bootstrap-dark-table-striped-colors-dark {
+  .table-striped > tbody > tr:nth-child(odd) {
+    background-color: #333;
+  }
+}
+// top-nav
+%bootstrap-dark-navbar-colors-dark {
+  // top nav menu button
+  .navbar-toggle {
+    border-color: #808080;
+  }
+  .navbar-toggle:hover,
+  .navbar-toggle:active,
+  .navbar-toggle:focus {
+    background-color: #222;
+  }
+  // top nav colors
+  .navbar {
+    background-color: #{$menu-background-dark};
+    border-color: #222;
+  }
+  //top nav open top border
+  .navbar > .navbar-collapse {
+    border-color: transparent;
+  }
+}

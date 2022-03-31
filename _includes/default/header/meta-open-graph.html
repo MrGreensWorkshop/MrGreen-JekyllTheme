@@ -1,0 +1,33 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} Open Graph https://ogp.me/ {%-endcomment%}
+
+{%- if page.layout == 'post' %}
+  {%- assign meta_og_type = "article" %}
+{%- else -%}
+  {%- assign meta_og_type = "website" %}
+{%- endif -%}
+<meta property="og:site_name" content="{{ site.data.owner.brand }}">
+<meta property="og:type" content="{{ meta_og_type }}">
+<meta property="og:title" content="{{ meta_title | truncate: 50 }}">
+<meta property="og:description" content="{{ meta_desc | truncate: 150 }}">
+<meta property="og:url" content="{{ meta_page_url }}">
+<meta property="og:image" content="{{ meta_image }}">
+
+{%- if site.data.conf.main.meta.open_graph_locale %}
+  {%- include default/header/meta-hreflang.html pages=nil lng_pair=page.lng_pair layout=page.layout head=nil hreflang=nil open_graph=true -%}
+{%- endif -%}
+
+{%- if page.layout == 'post' %}
+  <meta property="article:author" content="{{ meta_author }}">
+  <meta property="article:published_time" content="{{ meta_date_published }}">
+  <meta property="article:modified_time" content="{{ meta_date_modified }}">
+  <meta property="article:section" content="{{ page.category }}">
+  {%- for tag_name in page.tags %}
+  <meta property="article:tag" content="{{ tag_name }}">
+  {%- endfor %}
+{%- endif -%}

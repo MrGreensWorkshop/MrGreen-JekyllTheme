@@ -1,0 +1,65 @@
+---
+# Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+# Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+# Licensed under MIT
+
+layout: util/compress
+# https://www.sitemaps.org/protocol.html
+---
+{%- if page.add_post_thumb_pics -%}{%- assign xml_image_prop = 'xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"' -%}{%-endif-%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:xhtml="http://www.w3.org/1999/xhtml"
+{{ xml_image_prop }}>
+
+{%- comment %} create an empty array {% endcomment -%}
+{%- assign all_pages = '' | split: '' -%}
+{%- assign all_pages = all_pages | push: site.posts | push: site.html_pages -%}
+
+{%- for pages in all_pages %}
+  {%- for _page in pages %}
+    {%- include multi_lng/get-lng-by-url.liquid url = _page.url %}
+    {%- if get_lng != site.data.conf.main.default_lng %}{%continue%}{% endif %}
+    {%- assign page_title = _page.title | default: site.data.lang[get_lng][_page.layout].title %}
+    {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
+    {%- if _page.search_engine_exclude == true or _page.layout == "redirect" %}{%continue%}{% endif %}
+  <url>
+    <loc>{{ _page.url | absolute_url }}</loc>
+    {%- assign site_date = nil %}
+    {%- if page.add_page_lastmod_current_date %} {%- assign site_date = site.time %} {%- endif %}
+    {%- assign lastmod_date = nil %}
+    {%- assign lastmod_date = _page.meta_modify_date | default: _page.date | default: site_date %}
+  {%- if lastmod_date %}
+    <lastmod>{{ lastmod_date | date_to_xmlschema }}</lastmod>
+  {%- endif %}
+  {%- if page.changefreq %}
+    <changefreq>{{ page.changefreq }}</changefreq>
+  {%- endif %}
+  {%- if page.priority %}
+    <priority>{{ page.priority }}</priority>
+  {%- endif %}
+  {%- if page.add_post_thumb_pics and _page.img and _page.layout == "post" %}
+    <image:image>
+      {%- include default/img/get-img-path.liquid img_name=_page.img layout=_page.layout absolute=true %}
+      <image:loc>{{ get_img_path_out }}</image:loc>
+    {%- if page.add_post_thumb_pics_caption %}
+      <image:caption>{{ page_title }}</image:caption>
+    {%- endif %}
+    {%- if page.add_post_thumb_pics_title %}
+      <image:title>{{ page_title }}</image:title>
+    {%- endif %}
+    {%- if page.image_license_url %}
+      <image:license>{{ page.image_license_url }}</image:license>
+    {%- endif %}
+    </image:image>
+  {%- endif -%}
+  {%- if page.add_hreflang %}
+    {%- include default/header/meta-hreflang.html pages=pages lng_pair=_page.lng_pair layout=_page.layout head="xhtml:" hreflang=true open_graph=nil -%}
+  {%- endif %}
+  </url>
+  {%- endfor %}
+{%- endfor %}
+</urlset>

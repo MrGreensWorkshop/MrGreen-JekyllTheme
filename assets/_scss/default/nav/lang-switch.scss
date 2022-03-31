@@ -1,0 +1,53 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+#side-nav-container .lang-switch {
+  margin-top: 13px;
+}
+
+.lang-switch {
+  @include get_scheme(lang-switch-colors-);
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+.lang-switch li > a {
+  color: var(--lang-switch-text-color);
+  display: block;
+}
+
+.lang-switch li > a:hover {
+  color: var(--lang-switch-hover-text-color);
+  transition: all 0.2s ease;
+}
+
+.lang-switch li > a:hover,
+.lang-switch li > a:active,
+.lang-switch li > a:focus {
+  text-decoration: none;
+}
+
+.lang-switch ul,
+.lang-switch p {
+  display: inline;
+}
+
+.lang-switch li {
+  display: inline-block;
+}
+
+.lang-switch ul {
+  padding: 0;
+  margin: 0;
+}
+
+.lang-switch .active-page {
+  pointer-events: none;
+  color: var(--lang-switch-active-text-color);
+}
+
+.lang-switch > p {
+  color: var(--lang-switch-text-color);
+}

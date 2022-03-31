@@ -1,0 +1,52 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.scroll-to-top-container {
+  margin-bottom: 0;
+}
+
+.scroll-to-top-container li {
+  list-style: none;
+}
+
+#scroll-to-top {
+  @include get_scheme(scroll-to-top-colors-);
+  position: fixed;
+  display: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: 3;
+  background: var(--scroll-to-top-background-color);
+  color: var(--scroll-to-top-color);
+  box-shadow: 0 0 5px var(--scroll-to-top-shadow-color);
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+#scroll-to-top:hover {
+  opacity: 1;
+}
+
+#scroll-to-top > i {
+  color: var(--scroll-to-top-color);
+  font-size: 2.3rem;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#scroll-to-top {
+  bottom: 0px;
+  left: min(
+    calc(100vw - (var(--main-container-margin) / 2) - 40px),
+    calc(
+      var(--main-container-width-limit) + var(--main-container-margin) +
+        var(--side-nav-width)
+    )
+  );
+  margin-bottom: 30px;
+}

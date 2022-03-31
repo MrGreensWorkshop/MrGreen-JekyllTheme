@@ -1,0 +1,19 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- if site.data.conf.posts.pager_page_numbers_auto_generator %}{% assign hide_panel ='style="opacity:0"' %}{% endif -%}
+<div class="pagination_wrapper">
+  <nav aria-label="Page navigation">
+    <ul class="pagination" {{hide_panel}}>
+{%- if site.data.conf.posts.pager_page_numbers_auto_generator %}
+    {%comment-%} flickering fix {%-endcomment-%}
+    <li><a href="javascript:void(0);">1</a></li>
+{%- else %}
+  {% include post_common/pager-page-number-links.html pages = include.pages current_page_url = page.url -%}
+{% endif -%}
+    </ul>
+  </nav>
+</div>

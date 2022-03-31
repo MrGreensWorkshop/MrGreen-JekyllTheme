@@ -1,0 +1,47 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- include multi_lng/get-pages-by-lng.liquid pages = site.html_pages -%}
+
+{%- comment %} get blog page {% endcomment -%}
+{%- assign blogpage =  site.html_pages | where_exp: "item", "item.layout == 'post-list'" -%}
+
+{%- for tmp_page in blogpage -%}
+  {%- include multi_lng/get-lng-by-url.liquid url = tmp_page.url -%}
+  {%- if get_lng == lng -%}{%- assign blogpage = tmp_page %}{%break%}{% endif -%}
+{%- endfor -%}
+
+{%- comment %} add buttons {% endcomment -%}
+{%- for button in site.data.conf.main.side_and_top_nav_buttons -%}
+  {%- assign button_key = button | first | first %}
+  {%- comment %} get page with layout {% endcomment -%}
+  {%- assign _pages = lng_pages | where_exp: "item", "item.layout == button_key" -%}
+
+  {%- comment %} to avoid multiple post-list pages {% endcomment -%}
+  {%- if site.paginate > 0 and button_key == "post-list" and _pages.size > 1 -%}
+    {%- assign _tmp_page = _pages[0] -%}
+    {% comment %} create an empty array {% endcomment -%}
+    {%- assign _pages = '' | split: '' -%}
+    {%- assign _pages = _pages | push: _tmp_page -%}
+  {%-endif-%}
+
+  {%- for _page in _pages -%}
+    {%- comment %} clear values {% endcomment -%}
+    {%- assign icon_tag = '' -%}{%- assign active_class = '' -%}{%- assign active_style = '' -%}
+
+    {%- comment %} set active page class to display current page {% endcomment -%}
+    {%- if _page.url == page.url or _page.url == blogpage.url and page.layout == 'post-list' or page.layout == 'post' -%}{%- assign active_class = 'active-page' -%} {%- endif -%}
+    {%- if _page.url == page.url or _page.url == blogpage.url and page.layout == 'post-list' -%}{%- assign active_style = 'style="pointer-events: none;"' -%} {%- endif -%}
+
+    {%- comment %} check for override {% endcomment -%}
+    {%- assign button_icon = _page.icon | default: button.icon -%}
+    {%- assign button_name = _page.button_name | default: site.data.lang[lng][button_key].button_name -%}
+
+    {%- comment %} enable icons if it is set to true {% endcomment -%}
+    {%- if site.data.conf.main.side_and_top_nav_button_icons == true -%} {%- capture icon_tag -%} <i class="{{ 'fa-fw ' }}{{ button_icon }}" aria-hidden="true"></i> {%- endcapture -%} {%- endif -%}
+    <li {{active_style}}><a href="{{ site.baseurl }}{{ _page.url }}" class="{{ active_class }} {{ include.effect }}">{{ icon_tag }}{{ button_name }}</a></li>
+  {%- endfor -%}
+{%- endfor -%}

@@ -1,0 +1,62 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- include multi_lng/get-pages-by-lng.liquid pages = site.posts -%}
+<div class="tab-container">
+  <div class="upside-down-tabs">
+    <div class="tab-content">
+      {%comment-%} Categories {%-endcomment-%}
+      <div id="tab1" class="tab-pane link-buttons">
+        <ul class="nav nav-pills">
+          {%- assign _group = lng_pages | where_exp: "item", "item.category.size > 0" | group_by: "category" -%}
+          {% include post-list/tab-links.html type='category' list = _group icon=site.data.conf.posts.post_query_tabs_item_icons.category -%}
+        </ul>
+      </div>
+      {%comment-%} Tags {%-endcomment-%}
+      <div id="tab2" class="tab-pane link-buttons">
+        <ul class="nav nav-pills">
+          {%- assign _group = lng_pages | where_exp: "item", "item.tags.size > 0" | group_by: "tags" -%}
+          {% include post-list/tab-links.html type='tags' list = _group icon=site.data.conf.posts.post_query_tabs_item_icons.tags -%}
+        </ul>
+      </div>
+      {%comment-%} Years {%-endcomment-%}
+      <div id="tab3" class="tab-pane link-buttons">
+        <ul class="nav nav-pills">
+          {%- assign _group = lng_pages | sort: 'date' | reverse | group_by_exp:"post", "post.date | date: '%Y'" -%}
+          {% include post-list/tab-links.html type='year' list = _group icon=site.data.conf.posts.post_query_tabs_item_icons.year -%}
+        </ul>
+      </div>
+      {%comment-%} your new tab
+      <div id="tab4" class="tab-pane link-buttons">
+          tab3 content
+      </div>
+      {%-endcomment-%}
+    </div>
+    <ul class="nav nav-tabs">
+      <li><a href="#tab1" data-toggle="tab"><i class="{{ 'fa-fw ' }}{{ site.data.conf.posts.post_query_tabs_category_tab_icon }}" aria-hidden="true"></i>{{ site.data.lang[lng].post-list.upside_down_tabs.tab.categories }}</a></li>
+      <li><a href="#tab2" data-toggle="tab"><i class="{{ 'fa-fw ' }}{{ site.data.conf.posts.post_query_tabs_tag_tab_icon }}" aria-hidden="true"></i>{{ site.data.lang[lng].post-list.upside_down_tabs.tab.tags }}</a></li>
+      <li><a href="#tab3" data-toggle="tab"><i class="{{ 'fa-fw ' }}{{ site.data.conf.posts.post_query_tabs_year_tab_icon }}" aria-hidden="true"></i>{{ site.data.lang[lng].post-list.upside_down_tabs.tab.years }}</a></li>
+      {%comment-%} your new tab
+      <li><a href="#tab4" data-toggle="tab">title</a></li>
+      {%-endcomment-%}
+
+      {%- if site.data.conf.posts.post_query_tabs_clear_tab_enable %}
+        {%- if site.data.conf.posts.post_query_tabs_tooltip -%}
+          {%- capture tooltip_clear -%} data-toggle="tooltip" data-placement="bottom" title="{{ site.data.lang[lng].post-list.upside_down_tabs.tab.tooltip.clear }}" {%- endcapture %}
+        {%- endif -%}
+        <li {{ tooltip_clear }}>
+          <a href="javascript:void(0);" id="clear_filters" data-query-link onclick="PostQuery.showAll();"><i class="{{ 'fa-fw ' }}{{ site.data.conf.posts.post_query_tabs_clear_tab_icon }}" aria-hidden="true"></i>{%- if site.data.conf.posts.post_query_tabs_clear_tab_title_visible != false or site.data.conf.posts.post_query_tabs_clear_tab_icon == null or site.data.conf.posts.post_query_tabs_clear_tab_icon == "" %}{{ site.data.lang[lng].post-list.upside_down_tabs.tab.clear }}{% endif -%}</a>
+        </li>
+      {% endif -%}
+      {%- if site.data.conf.posts.post_query_tabs_tooltip -%}
+        {%- capture tooltip_close -%} data-toggle="tooltip" data-placement="bottom" title="{{ site.data.lang[lng].post-list.upside_down_tabs.tab.tooltip.close }}" {%- endcapture %}
+      {%- endif -%}
+      <li class="active" {{ tooltip_close }}>
+        <a href="javascript:void(0);" id="close_tabs"><i class="{{ 'fa-fw ' }}{{ site.data.conf.posts.post_query_tabs_close_tab_icon }}" aria-hidden="true"></i>{%- if site.data.conf.posts.post_query_tabs_close_tab_title_visible != false or site.data.conf.posts.post_query_tabs_close_tab_icon == null or site.data.conf.posts.post_query_tabs_close_tab_icon == null %}{{ site.data.lang[lng].post-list.upside_down_tabs.tab.close }}{% endif -%}</a>
+      </li>
+    </ul>
+  </div>
+</div>

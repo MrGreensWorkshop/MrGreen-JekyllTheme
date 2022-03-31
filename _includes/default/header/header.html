@@ -1,0 +1,70 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% assign page_title = page.title | default: site.data.lang[lng][page.layout].title -%}
+{%- include util/auto-content-post-title-rename.liquid title = page_title -%}
+<title>{{ site.data.owner.brand }} - {{ page_title }}</title>
+
+{%- if site.data.conf.main.google_font_load_in_head -%}
+  {%- include default/header/google-font-load.html %}
+{%- endif %}
+
+{% if site.data.owner.google_analytics_id != empty and site.data.owner.google_analytics_id != nil and jekyll.environment != site.data.conf.main.google.analytics.ignore -%}
+  <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com" crossorigin>
+{%- endif -%}
+
+{%-comment-%} Standard icons {%-endcomment%}
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/img/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/favicons/apple-touch-icon.png">
+
+{%- if page.search_engine_exclude == true %}
+  {%-comment-%} follow because all pages have navigation (links) {%-endcomment-%}
+  <meta name="robots" content="noindex, follow">
+{%- endif %}
+
+{%- if site.data.conf.main.meta.schema_markup_google_sitelinks_searchbox == false %}
+  <meta name="google" content="nositelinkssearchbox">
+{%- endif %}
+
+{%- if site.data.conf.main.meta.google_site_verify and site.data.owner.google_site_verification != empty and site.data.owner.google_site_verification != nil and jekyll.environment != site.data.conf.main.google.site_verification.ignore %}
+  <meta name="google-site-verification" content="{{ site.data.owner.google_site_verification }}">
+{%- endif %}
+
+{%- if site.data.conf.main.meta.mobile_app %}
+  {%- include default/header/meta-mobile-app.html %}
+{%- endif %}
+
+{%- if page.search_engine_exclude != true and page.layout != "redirect" %}
+  {%- if site.data.conf.main.meta.hreflang %}
+    {%- include default/header/meta-hreflang.html pages=nil lng_pair=page.lng_pair layout=page.layout head=nil hreflang=true open_graph=nil -%}
+  {%- endif -%}
+
+  {%- include default/header/meta-common-data.liquid %}
+
+  {%- if site.data.conf.main.meta.keywords and meta_keywords.size > 0 %}
+    <meta name="keywords" content="{{ meta_keywords | join: ', ' }}">
+  {%- endif %}
+
+  <meta name="description" content="{{ meta_desc | truncate: 150 }}">
+  <meta name="robots" content="index, follow">
+
+  {%- if site.data.conf.main.meta.twitter_card %}
+    {%- include default/header/meta-twitter.html %}
+  {%- endif -%}
+
+  {%- if site.data.conf.main.meta.open_graph %}
+    {%- include default/header/meta-open-graph.html %}
+  {%- endif %}
+
+  {%- if site.data.conf.main.meta.schema_markup %}
+    {%- include default/header/meta-schema-markup.html %}
+  {%- endif %}
+{%- endif %}

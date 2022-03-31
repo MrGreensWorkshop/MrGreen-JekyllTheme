@@ -1,0 +1,35 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign page_no = 1 -%}
+{%- assign prev_page_url = nil %}
+{%- assign next_page_url = nil %}
+{%- for page in include.pages %}
+  {%- if page.url == include.current_page_url %}
+    {%- assign page_no_prev =  page_no | minus:2 %}
+    {%- if page_no_prev < 0 %}{%- assign page_no_prev = nil %}{%endif%}
+    {%- assign prev_page_url = include.pages[page_no_prev].url %}
+    {%- assign next_page_url = include.pages[page_no].url %}
+  {% endif -%}
+  {%- assign page_no =  page_no | plus:1 %}
+{% endfor -%}
+
+{%- if prev_page_url == nil %}{% assign disable_prev ='disabled' %}{% endif -%}
+{%- if next_page_url == nil %}{% assign disable_next ='disabled' %}{% endif -%}
+
+{%- if include.side_aligned -%}
+  {%- assign side_align_next ='next' -%}
+  {%- assign side_align_prev ='previous' -%}
+{% endif -%}
+
+<div class="pagination_wrapper">
+  <nav aria-label="Page navigation">
+    <ul class="pager">
+      <li class="{{side_align_prev}} {{disable_next}}"><a href="{{ site.baseurl }}{{ next_page_url }}">{{ site.data.lang[lng].post.pager_buttons.older_post }}</a></li>
+      <li class="{{side_align_next}} {{disable_prev}}"><a href="{{ site.baseurl }}{{ prev_page_url }}">{{ site.data.lang[lng].post.pager_buttons.newer_post }}</a></li>
+    </ul>
+  </nav>
+</div>

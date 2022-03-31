@@ -1,0 +1,86 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+footer {
+  position: relative;
+}
+
+.footer-wrapper {
+  @include get_scheme(footer-colors-);
+  max-width: var(--main-container-max-width);
+  padding-left: var(--main-container-margin);
+  padding-right: var(--main-container-margin);
+}
+
+.footer-container {
+  bottom: 0;
+  z-index: 2;
+  background-color: var(--footer-background-color);
+  box-shadow: -20px 0px 0 0 var(--footer-background-color),
+    20px 0px 0 0 var(--footer-background-color);
+  display: block;
+  height: var(--footer-height);
+}
+
+.footer-container footer a {
+  border: none;
+}
+
+.footer-text,
+.footer-text p,
+.footer-powered {
+  display: inline-block;
+}
+
+.footer-text > a {
+  text-decoration: none;
+}
+
+/* to fix tooltip flickering */
+.footer-text .tooltip-inner {
+  max-width: 300px;
+}
+
+.footer-text p,
+.footer-powered {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: var(--footer-text-color);
+}
+
+.footer-text {
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.footer-powered {
+  z-index: 2;
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  background-color: var(--footer-background-color);
+}
+
+.footer-text-centered {
+  transform: translateX(-50%);
+  left: 50%;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .footer-text-centered.long-copyright {
+    transform: revert;
+    left: revert;
+    position: revert;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-powered > span {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: set_img_loader_viewer_out {%-endcomment-%}
+{%- assign set_img_loader_viewer_out = include.img_tag -%}
+{%- assign img_lazy_loader = false -%}{%- assign img_viewer = false -%}
+{%- if include.tag_start contains '<img src="' -%}
+  {%-comment-%} if it does not contain 1x1px.png {%-endcomment-%}
+  {%- unless include.img_path contains "1x1px.png" -%}
+
+    {%-comment-%} add image viewer if needed {%-endcomment-%}
+    {%- if site.data.conf.main.image_viewer == true -%}
+      {%- if page.image_viewer_on == true or site.data.conf.main.image_viewer_posts == true and page.layout == 'post' -%}
+        {%- assign img_viewer = true -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%-comment-%} add image lazy loader if needed {%-endcomment-%}
+    {%- if site.data.conf.main.image_lazy_loader == true -%}
+      {%- if page.image_lazy_loader_on == true or site.data.conf.main.image_lazy_loader_posts == true and page.layout == 'post' -%}
+        {%- assign img_lazy_loader = true -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if img_viewer == true and img_lazy_loader == false -%}
+      {%- capture set_img_loader_viewer_out -%} <img class="imgViewer {{ site.data.conf.main.image_viewer_hover_cursor }}" data-mfp-src="{{ include.img_path }}" src="{{ include.img_path }}" {%- endcapture -%}
+    {%- elsif img_viewer == false and img_lazy_loader == true -%}
+      {%- capture set_img_loader_viewer_out -%} <img class="lozad" data-src="{{ include.img_path }}" {%- endcapture -%}
+    {%- elsif img_viewer == true and img_lazy_loader == true -%}
+      {%- capture set_img_loader_viewer_out -%} <img class="lozad imgViewer {{ site.data.conf.main.image_viewer_hover_cursor }}" data-mfp-src="{{ include.img_path }}" data-src="{{ include.img_path }}" {%- endcapture -%}
+    {%- endif -%}
+  {%- endunless -%}
+{%- endif -%}

@@ -1,0 +1,38 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+/* side nav close button */
+.side-nav-close {
+  @include get_scheme(navigation-buttons-colors-);
+  position: absolute;
+  display: none;
+  z-index: 1001;
+  top: 9px;
+  left: 10px;
+  color: var(--side-top-nav-buttons-text-color);
+  transition: color 0.4s ease;
+}
+
+.side-nav-close:hover,
+.side-nav-close:active,
+.side-nav-close:focus {
+  text-decoration: none;
+}
+
+.side-nav-close:hover {
+  opacity: 1;
+  color: var(--side-top-nav-buttons-hover-text-color);
+}
+
+/* top nav buttons disable */
+.top-nav .top-nav-menu-toggle {
+  z-index: 1000;
+  position: fixed;
+  left: 1px;
+}
+
+.top-nav .top-nav-brand {
+  margin-left: 77px;
+}

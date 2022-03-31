@@ -1,0 +1,34 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{% include multi_lng/get-pages-by-lng-pair.liquid lng_pair=include.lng_pair layout=include.layout pages=include.pages %}
+{%- if lng_page_pair.size > 1 %}
+  {%- for lng_page in lng_page_pair %}
+    {%- include multi_lng/get-lng-by-url.liquid url=lng_page.url -%}
+    {%- include multi_lng/get-lng-code.liquid lng = get_lng country = include.open_graph joinWith = "_" %}
+    {%- if get_lng == lng and include.head == nil %}
+      {%- if include.hreflang %}
+        <link rel="canonical" href="{{ lng_page.url | absolute_url }}" />
+      {%- endif %}
+      {%- if include.open_graph and site.data.lang[get_lng].lng.code and site.data.lang[get_lng].lng.country %}
+        <meta property="og:locale" content="{{ lng_code }}" >
+      {%- endif %}
+    {%- else %}
+      {%- if include.open_graph and site.data.lang[get_lng].lng.code and site.data.lang[get_lng].lng.country %}
+        <meta property="og:locale:alternate" content="{{ lng_code }}">
+      {%- endif %}
+    {%- endif %}
+    {%- if get_lng == site.data.conf.main.default_lng %}
+      {%- if include.hreflang %}
+        <{{ include.head }}link rel="alternate" hreflang="x-default" href="{{ lng_page.url | absolute_url }}" />
+      {%- endif %}
+    {%- endif %}
+    {%- if include.hreflang %}
+      {%- include multi_lng/get-lng-code.liquid lng = get_lng %}
+      <{{ include.head }}link rel="alternate" hreflang="{{ lng_code }}" href="{{ lng_page.url | absolute_url }}" />
+    {%- endif %}
+  {%- endfor %}
+{%- endif -%}

@@ -1,0 +1,24 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: get_img_path_out {%-endcomment-%}
+{%- if include.img_name contains 'http://' or include.img_name contains 'https://' -%}
+  {%- capture get_img_path_out -%} {{ include.img_name }} {%- endcapture -%}
+{%- else -%}
+  {%- assign first_chr = include.img_name | slice: 0 -%}
+  {%- if first_chr == ':' -%}
+    {%- assign folder = include.layout -%}
+    {%- if include.layout == "post" or include.layout == "post-list" -%}{%- assign folder = "posts" -%}{%- endif -%}
+    {%- capture get_img_path_out -%} /assets/img/{{ folder }}{{ include.img_name | replace_first: ':', '/' }} {%- endcapture -%}
+  {%- elsif include.img_name != nil and include.img_name != empty -%}
+    {%- capture get_img_path_out -%} {{ include.img_name }} {%- endcapture -%}
+  {%- endif -%}
+  {%- if include.absolute -%}
+    {%- assign get_img_path_out = get_img_path_out | absolute_url -%}
+  {%- else -%}
+    {%- capture get_img_path_out -%} {{ site.baseurl }}{{ get_img_path_out }} {%- endcapture -%}
+  {%- endif -%}
+{%- endif -%}

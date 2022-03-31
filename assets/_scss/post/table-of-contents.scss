@@ -1,0 +1,64 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+#toc-container {
+  @include get_scheme(bootstrap-dark-panel-colors-);
+  @include get_scheme(table-of-contents-colors-);
+  height: auto;
+  position: fixed;
+  z-index: 1002;
+  /* table of contents box top */
+  top: 600px;
+  left: 10px;
+}
+
+#toc-container .panel.panel-default {
+  margin-bottom: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--table-of-contents-shadow-color);
+}
+
+#toc-container .panel.panel-default .panel-heading {
+  cursor: move;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  font-size: 1.4rem;
+  padding-right: 0;
+}
+
+#toc-container .panel.panel-default,
+#toc-container .panel.panel-default .panel-heading {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* close-button position */
+#toc-container .panel.panel-default .panel-heading a {
+  padding: 12px;
+}
+
+#table-of-contents {
+  margin-top: 0px;
+  position: relative;
+}
+
+#table-of-contents .nav > li > a {
+  font-size: 1.3rem;
+}
+
+#table-of-contents .nav .nav > li > a {
+  font-size: 1.2rem;
+}
+
+#table-of-contents .nav > li > a:focus,
+#table-of-contents .nav > li > a:hover {
+  color: var(--table-of-contents-hover-text-color);
+  border-left-color: var(--table-of-contents-hover-border-left-color);
+}
+
+#table-of-contents .nav > .active:focus > a,
+#table-of-contents .nav > .active > a {
+  color: var(--table-of-contents-focus-text-color);
+  border-left-color: var(--table-of-contents-focus-border-left-color);
+}

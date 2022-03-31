@@ -1,0 +1,23 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: get_lng {%-endcomment-%}
+
+{%- if include.url != nil %}
+  {%- assign url = include.url -%}
+{%- else %}
+  {%- assign url = page.url -%}
+{% endif -%}
+
+{%- assign get_lng = url | split: "/" -%}
+{%- assign get_lng = get_lng[1] -%}
+{%- assign set_flg = nil -%}
+{%- for _lang in site.data.conf.main.language_switch_lang_list %}
+  {%- if _lang == get_lng %}{%- assign set_flg = true -%}{%-break-%}{%-endif-%}
+{%- endfor -%}
+{%- if set_flg == nil or get_lng == nil -%}
+  {%- assign get_lng = site.data.conf.main.default_lng -%}
+{%-endif-%}

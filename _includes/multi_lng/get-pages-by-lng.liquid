@@ -1,0 +1,17 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: lng_pages {%-endcomment-%}
+
+{%- include multi_lng/get-lng-by-url.liquid -%}
+{%- assign lng = get_lng -%}
+{%- comment -%} create an empty array {%- endcomment -%}
+{%- assign lng_pages = '' | split: '' -%}
+{%- for page in include.pages -%}
+  {%- include multi_lng/get-lng-by-url.liquid url = page.url -%}
+  {%- if get_lng != lng -%}{%- continue -%}{%- endif -%}
+  {%- assign lng_pages = lng_pages | push: page -%}
+{%- endfor -%}

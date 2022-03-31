@@ -1,0 +1,23 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+<div class="meta">
+  {%comment-%} post date {%-endcomment-%}
+  <small>
+    &nbsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;{{include.date}}
+  </small>
+  {%comment-%} read time  {%-endcomment-%}
+  <small>
+    &nbsp;&nbsp;&nbsp;<span><i class="fa fa-clock-o"></i>&nbsp;{{include.read_time}}</span>
+  </small>
+  {%comment-%} comment count  {%-endcomment-%}
+  {%- if site.data.conf.posts.comments.enable and site.data.conf.posts.comments.disqus.enable and site.data.conf.posts.comments.disqus.comment_count %}
+  <small class="meta-link" {{include.comment_style}}>
+    &nbsp;&nbsp;&nbsp;<i class="fa fa-comments-o"></i>&nbsp;<a href="{{include.url}}#disqus_thread">-</a>
+    <a href="javascript:void(0);" onclick="window.location.href='{{include.url}}#disqus_thread'">{{ site.data.lang[lng].post.comments.disqus.count_title }}</a>
+  </small>
+  {% endif -%}
+</div>

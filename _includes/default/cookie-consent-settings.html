@@ -1,0 +1,72 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign data_conf = site.data.lang[lng].cookie_consent.panel_settings -%}
+{%- assign info_text = data_conf.msg -%}
+{%- include multi_lng/get-page-by-layout.liquid layout = 'privacy-policy' -%}
+{%- assign link_text = site.data.lang[lng].cookie_consent.privacy_policy_link_text -%}
+{%- assign privacy_policy_link = nil -%}
+{%- if link_text != nil and link_text != empty and layout_page_obj.url != nil %}
+  {%- assign privacy_policy_link = site.baseurl | append: '<a href="' | append: layout_page_obj.url | append: '">' | append: link_text | append: '</a>' -%}
+{% endif -%}
+{%- assign info_text = info_text | replace: site.data.conf.main.cookie_consent.privacy_link_replace, privacy_policy_link -%}
+
+<h5>{{ data_conf.title }}</h5>
+<br>
+<p class="info-text">{{ info_text }}</p>
+{%- for item in site.data.conf.main.cookie_consent.groups %}
+  {%- assign key = item[0] -%}
+  {%- assign no_check_box = item[1].no_check_box -%}
+  {%- assign checked_attr = nil -%}
+  {%- if site.data.conf.main.cookie_consent.groups_switches_and_values[key] == true -%} {%- assign checked_attr = 'checked="checked"' -%} {%- endif %}
+  {%- if site.data.conf.main.cookie_consent.groups_switches_and_values[key] == "hide" -%} {%- continue -%} {%- endif %}
+  <table>
+    <tr>
+      <td onclick="$('.info[data-consent-info={{ key }}]').slideToggle();$(this).children('i').toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o')">
+        <i class="fa-fw fa fa-plus-square-o" aria-hidden="true"></i>
+        <p>{{ data_conf.consent_types[key].title }}</p>
+      </td>
+      <td>
+        {% if no_check_box == true -%}
+          <span class="active_text">{{ data_conf.always_active }}</span>
+        {%-else-%}
+          <label class="slide-switch">
+            <input type="checkbox" class="checkbox_switch" {{ checked_attr }} data-consent="{{ key }}">
+            <span class="slider"></span>
+          </label>
+        {%- endif -%}
+      </td>
+    </tr>
+  </table>
+  <div class="info" data-consent-info="{{ key }}">
+    <p>
+      {%- assign gtag_info_text = nil -%}
+      {%- for item_info in item[1].group %}
+        {%- assign gtag_info_text = gtag_info_text | append: data_conf.gtag_info[item_info] | append: " " -%}
+      {%-endfor%}
+      {%- assign consent_item_info = data_conf.consent_types[key].info | replace: site.data.conf.main.cookie_consent.gtag_info_replace, gtag_info_text  -%}
+      {{ consent_item_info }}
+    </p>
+  </div>
+{%-endfor%}
+<br>
+<div class="button-holder">
+  {%- assign items = site.data.conf.main.cookie_consent.setting_buttons %}
+  {%- for index in (1..items.size) %}
+    {%- for item in items %}
+      {%- assign name = item[0] -%}
+      {%- assign arguments = nil -%}
+      {%- for arg in item[1] %}
+        {%- if forloop.first %}{% continue %}{% endif -%}
+        {%- assign arguments = arguments | append: arg -%}
+        {%- unless forloop.last %}{%- assign arguments = arguments | append: " " -%} {% endunless -%}
+      {%-endfor%}
+      {%-if index == item[1][0] %}
+        <a href="javascript:void(0);" class="btn-base {{ arguments }}" onclick="CookieConsent.consentSettingDone('{{ name }}');" role="button">{{ data_conf.buttons[name] }}</a>
+      {%-endif-%}
+    {%-endfor%}
+  {%-endfor%}
+</div>

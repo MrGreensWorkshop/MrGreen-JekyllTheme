@@ -1,0 +1,31 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{% if site.data.conf.main.color_scheme_dark and site.data.conf.main.color_scheme_switch_side_nav -%}
+  {%- assign color_scheme_switch_enabled = true -%}
+{%- endif -%}
+
+{% if site.data.conf.main.cookie_consent.enable and site.data.conf.main.cookie_consent.side_nav_setting_button.enable -%}
+  {%- assign cookie_settings_button_enabled = true -%}
+{%- endif -%}
+
+{% if color_scheme_switch_enabled == true %}
+  <div class="side-nav-bottom-buttons-container">
+    <hr>
+    <ul>
+      {% if color_scheme_switch_enabled -%}
+        <li>
+          {%- include default/nav/color-scheme-switch.html switch_id="color_scheme_switch_side" effect=site.data.conf.main.side_nav_bottom_buttons_hover_effect -%}
+        </li>
+      {%- endif -%}
+      {% if cookie_settings_button_enabled -%}
+        <li>
+          {%- include default/nav/cookie-settings-button.html effect=site.data.conf.main.side_nav_bottom_buttons_hover_effect -%}
+        </li>
+      {%- endif -%}
+    </ul>
+  </div>
+{%- endif -%}

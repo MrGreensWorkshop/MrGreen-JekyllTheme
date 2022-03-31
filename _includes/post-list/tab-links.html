@@ -1,0 +1,41 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- if site.data.conf.posts.post_query_tabs_tabs_hover_effect -%}
+  {%- capture effect_upside_button -%}
+    class="{{ site.data.conf.posts.post_query_tabs_tabs_hover_effect }}"
+  {%- endcapture %}
+{%- endif -%}
+
+{%- if site.data.conf.posts.post_query_tabs_all_button_enable %}
+<li>
+  <a href="javascript:void(0);" data-query-link onclick="PostQuery.runQuery('{{ include.type | downcase }}','all');" {{ effect_upside_button }}>
+  {%- if include.icon != null -%}<i class="{{ 'fa-fw ' }}{{ include.icon }}" aria-hidden="true"></i>{%- endif -%}
+  {{ site.data.lang[lng].post-list.upside_down_tabs.tab.all }}</a>
+</li>
+{% endif -%}
+
+{%- comment %} create an empty array {% endcomment -%}
+{%- assign item_list = '' | split: '' -%}
+
+{%- comment %} remove unwanted parts {% endcomment -%}
+{%- for _page in include.list -%}
+  {% assign grp_item = _page.name | remove: "[" | remove: "]" | remove: '"' | split: "," -%}
+  {%- for item in grp_item -%}
+    {%- assign item_tmp = item | strip -%}
+    {%- comment %} remove duplications {% endcomment -%}
+    {%- assign item_list = item_list | push: item_tmp | uniq -%}
+  {%- endfor -%}
+{%- endfor -%}
+
+{%- comment %} add links {% endcomment -%}
+{%- for _item in item_list %}
+  <li>
+    <a href="javascript:void(0);" data-query-link onclick="PostQuery.runQuery('{{ include.type | downcase }}','{{ _item | downcase }}');" {{ effect_upside_button }}>
+    {%- if include.icon != null -%}<i class="{{ 'fa-fw ' }}{{ include.icon }}" aria-hidden="true"></i>{%- endif -%}
+    {{ _item | capitalize }}</a>
+  </li>
+{%- endfor -%}

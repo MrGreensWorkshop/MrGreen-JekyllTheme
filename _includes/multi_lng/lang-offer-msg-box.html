@@ -1,0 +1,47 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- include multi_lng/get-pages-by-lng-pair.liquid lng_pair=page.lng_pair layout=page.layout pages=nil -%}
+
+{%- comment %} get language list from urls {% endcomment -%}
+{%- comment %} create an empty array {% endcomment -%}
+{%- assign lng_list = '' | split: '' -%}
+{%- for lng_page in lng_page_pair %}
+  {%- include multi_lng/get-lng-by-url.liquid url = lng_page.url -%}
+  {%- assign _url = lng_page.url | prepend : site.baseurl -%}
+  {%- if lng != get_lng %}
+    {%- assign _item = '' | split: '' -%}
+    {%- assign _item = _item | push: get_lng | push: site.data.lang[get_lng].lng.switch_title | push: _url -%}
+    {%- assign lng_list = lng_list | push: _item -%}
+  {%- endif -%}
+{%- endfor -%}
+
+
+{%- assign supported_lng_list = '' | split: '' -%}
+{%- for lng_name in site.data.conf.main.language_switch_lang_list %}
+
+  {% if lng_name != site.data.conf.main.default_lng -%}
+    {%- capture _url -%} {{ site.baseurl }}/{{ lng_name }} {%- endcapture -%}
+  {%-else-%}
+    {%- capture _url -%} {{ site.baseurl }}/ {%- endcapture -%}
+  {%- endif -%}
+
+  {%- assign _item = '' | split: '' -%}
+  {%- assign _item = _item | push: lng_name
+    | push: site.data.lang[lng_name].lng.switch_title
+    | push: _url | push: site.data.lang[lng_name].lng.offer.msg_page
+    | push: site.data.lang[lng_name].lng.offer.msg_site
+    | push: site.data.lang[lng_name].lng.offer.title
+  -%}
+  {%- assign supported_lng_list = supported_lng_list | push: _item -%}
+{%- endfor -%}
+
+<script>
+  LangOfferMsgBox.currentPageLng = "{{ lng }}";
+  LangOfferMsgBox.supportedLngList = {{ supported_lng_list | jsonify }};
+  LangOfferMsgBox.existLng = {{ lng_list | jsonify }};
+  LangOfferMsgBox.disableExtTranslationOffer = {{ site.data.conf.main.language_translation_offer_disable_ext_translation | default: 'false' }};
+</script>

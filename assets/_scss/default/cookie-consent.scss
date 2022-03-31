@@ -1,0 +1,105 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+/* consent bar */
+#consent-settings {
+  @include get_scheme(consent-settings-colors-);
+}
+
+.consent-bar {
+  @include get_scheme(consent-bar-colors-);
+  --consent-bar-left-right-margin: calc(var(--main-container-margin) - 10px);
+  z-index: 1003;
+  position: fixed;
+  padding: 10px 30px;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: calc(100% - (2 * var(--consent-bar-left-right-margin)));
+  background: var(--consent-bar-background-color);
+  box-shadow: 0 5px 50px var(--consent-bar-shadow-color);
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+  transition: all 0.4s ease;
+  margin-left: var(--consent-bar-left-right-margin);
+}
+
+.consent-bar > .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* consent settings */
+#consent-settings table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#consent-settings td {
+  padding: 8px;
+}
+
+#consent-settings td:first-child {
+  text-align: left;
+  width: 350px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#consent-settings td:first-child > i {
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+#consent-settings td:first-child > p {
+  font-weight: 500;
+  display: inline;
+  margin-bottom: 0;
+}
+
+#consent-settings td:last-child {
+  text-align: right;
+}
+
+#consent-settings .info-text {
+  white-space: initial;
+  /*text-align: justify;*/
+  text-justify: inter-word;
+}
+
+#consent-settings .info {
+  display: none;
+}
+
+#consent-settings .info p {
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 0px;
+  white-space: initial;
+  /*text-align: justify;*/
+  text-justify: inter-word;
+}
+
+#consent-settings .active_text {
+  color: var(--consent-settings-active-text-color);
+  font-weight: 400;
+}
+
+#consent-settings .button-holder {
+  text-align: right;
+}
+
+.consent-bar > .btn-base,
+#consent-settings .button-holder > .btn-base {
+  position: relative;
+  margin-left: 10px;
+}
+
+.consent-bar > .btn-left,
+#consent-settings .button-holder > .btn-left {
+  float: left;
+}

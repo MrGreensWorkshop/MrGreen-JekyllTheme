@@ -1,0 +1,38 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+/* common for post, post-list */
+.pagination_wrapper {
+  @include get_scheme(bootstrap-dark-pagination-colors-);
+  text-align: center;
+}
+
+.pagination_wrapper nav {
+  margin-bottom: -5px;
+}
+
+.pagination {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.4rem;
+}
+
+/* pagination buttons corners */
+.pager li > a,
+.pager li > span {
+  border-radius: 8px;
+}
+
+/* remove icons from disabled pagination buttons */
+.pagination > li.disabled,
+.pager > li.disabled {
+  pointer-events: none;
+}
+
+/* prevent paginator current number shown top on copyright text while scrolling */
+.pagination > li.active > a,
+.pagination > li.active > a:hover {
+  z-index: 0;
+}

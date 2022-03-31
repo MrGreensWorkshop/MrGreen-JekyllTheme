@@ -1,0 +1,43 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: website_info_text, website_info_text_first, website_info_text_second, page_title_text {%-endcomment-%}
+
+{%- include multi_lng/get-lng-by-url.liquid -%}
+{%- assign lng = get_lng -%}
+
+{%- assign readme_lng = lng -%}
+{%- if lng != "en" and lng != "ja"%}{%- assign readme_lng = "en" -%}{%-endif-%}
+
+{% include multi_lng/get-page-by-lng-pair-and-lng.liquid lng_pair="id_Mr_Green_Jekyll_Theme" layout="post" lng=readme_lng -%}
+
+{%- assign website_info_text = site.data.lang[lng].auto_content.text |
+  replace: "Jekyll", "[Jekyll](https://jekyllrb.com/)" |
+  replace: "GitHub Pages", "[GitHub Pages](https://pages.github.com/)" |
+  replace: site.data.conf.main.brand_replace, "[Mr. Green](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)"
+%}
+
+{%- capture website_info_text -%}
+{{ website_info_text }} [{{site.data.lang[lng].auto_content.more_info}}]({{ site.baseurl }}{{ out_lng_page.url }})
+{%- endcapture -%}
+
+{%- capture website_greeting_text -%}
+### {{ site.data.lang[lng].auto_content.greeting }}
+{%- endcapture -%}
+
+{%- capture page_title_text -%}
+# {{ site.data.lang[lng][page.layout].title }}
+{%- endcapture -%}
+
+{%- capture website_info_text_first -%}
+{{ website_greeting_text }}
+
+{{ site.data.lang[lng].auto_content.auto_generated_text }}
+{%- endcapture -%}
+
+{%- capture website_info_text_second -%}
+{{ website_info_text }}
+{%- endcapture -%}

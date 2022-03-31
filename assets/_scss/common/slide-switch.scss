@@ -1,0 +1,50 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.slide-switch {
+  @include get_scheme(slide-switch-colors-);
+  position: relative;
+  width: 40px;
+  height: 22px;
+  margin-bottom: 0px;
+  vertical-align: middle;
+}
+
+.slide-switch > .checkbox_switch {
+  display: none;
+}
+
+.slide-switch > .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 22px;
+  background-color: var(--slide-switch-off-background-color);
+  transition: 0.4s ease;
+}
+
+.slide-switch > .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: var(--slide-switch-slider-color);
+  box-shadow: 0 0 5px var(--slide-switch-slider-shadow-color);
+  transition: 0.4s ease;
+}
+
+.slide-switch > .checkbox_switch:checked + .slider {
+  background-color: var(--slide-switch-on-background-color);
+}
+
+.slide-switch > .checkbox_switch:checked + .slider:before {
+  transform: translateX(18px);
+}

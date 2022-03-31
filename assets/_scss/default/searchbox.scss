@@ -1,0 +1,82 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+/* search box */
+.searchbox-container {
+  position: fixed;
+  z-index: 1001;
+
+  top: 3px;
+  left: calc(var(--side-nav-width) + 5px);
+  transition: all 0.4s ease;
+}
+
+#search-box {
+  @include get_scheme(searchbox-colors-);
+  --searchbox-placeholder-left: 33px;
+  --searchbox-expand-width: min(
+    calc(100vw - var(--side-nav-width) - var(--main-container-margin)),
+    calc(var(--main-container-width-limit) + var(--main-container-margin))
+  );
+  outline: none;
+  box-sizing: content-box;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 8.5px center;
+  background-color: var(--searchbox-background-color);
+  border-radius: 20px;
+  border: solid 1px var(--searchbox-border-color);
+  height: 14px;
+  width: 14px;
+  padding: 8px 8.5px;
+  color: transparent;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 1.4rem;
+}
+
+#search-box:focus {
+  width: calc(
+    var(--searchbox-expand-width) - var(--searchbox-placeholder-left) - 2px
+  );
+  background-color: var(--searchbox-focus-background-color);
+  border-color: var(--searchbox-focus-border-color);
+  box-shadow: 0 0 5px var(--searchbox-focus-shadow-color);
+  padding-right: 0px;
+  padding-left: var(--searchbox-placeholder-left);
+  color: var(--searchbox-focus-text-color);
+  cursor: auto;
+}
+
+#search-box:hover {
+  background-color: var(--searchbox-focus-background-color);
+}
+
+#search-box:not(:focus)::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
+}
+#search-box:not(:focus):-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: transparent;
+}
+#search-box:not(:focus):-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+}
+#search-box:not(:focus)::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: transparent;
+}
+
+/* custom cancel button */
+/*#search-box::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+  cursor: pointer;
+}*/

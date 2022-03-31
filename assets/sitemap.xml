@@ -1,0 +1,18 @@
+---
+layout: xml/sitemap
+
+# optional
+# to disable this page, simply set published: false or delete this file
+#published: false
+
+# page specific settings
+# this will add all pages lastmod prop to current date. (if date is not defined in corresponding page)
+add_page_lastmod_current_date: false
+add_post_thumb_pics: true
+add_post_thumb_pics_title: true
+add_post_thumb_pics_caption: false
+add_hreflang: true
+#image_license_url: "https://example.com/image-license"
+#changefreq: monthly
+#priority: "1.0"
+---

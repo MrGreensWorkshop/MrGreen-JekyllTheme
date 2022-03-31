@@ -1,0 +1,19 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.about-container .about-header > .meta-container > .contact-container {
+  margin: 0;
+}
+
+.about-container .about-header > .meta-container > .contact-container > h3,
+.about-container .about-header > .meta-container > .contact-container > hr {
+  display: none;
+}
+
+.about-container .about-header > .meta-container > .contact-container > ul {
+  margin: 0 0;
+  text-align: unset;
+  overflow: visible;
+}

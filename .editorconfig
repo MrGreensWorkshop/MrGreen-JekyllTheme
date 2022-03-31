@@ -1,0 +1,24 @@
+# EditorConfig  https://editorconfig.org/
+# for VS Code or Notepad++ install plugin called EditorConfig
+
+# top-most EditorConfig file
+root = true
+
+# Matches any string of characters, except path separators
+[*]
+
+# Unix-style newlines with a newline ending every file
+# control how line breaks are represented.
+end_of_line = lf
+# ensure file ends with a newline
+insert_final_newline = true
+
+# remove any whitespace characters preceding newline characters
+trim_trailing_whitespace = true
+
+# Set default charset
+charset = utf-8
+
+# 2 space indentation
+indent_style = space
+indent_size = 2

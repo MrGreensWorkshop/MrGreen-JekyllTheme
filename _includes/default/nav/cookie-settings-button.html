@@ -1,0 +1,19 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- if site.data.conf.main.cookie_consent.side_nav_setting_button.tooltip -%}
+  {%- capture tooltip_setting_button -%}
+    data-toggle="tooltip" data-placement="top" title="{{ site.data.lang[lng].cookie_consent.side_nav_setting_button_tooltip }}"
+  {%- endcapture %}
+{%- endif -%}
+<div class="cookie-icon {{ include.effect }}" onclick="CookieConsent.showSettings();" {{ tooltip_setting_button }}>
+  <div class="cookie-wrapper">
+    <i class="fa fa-circle bitten-cookie" aria-hidden="true"></i>
+    <i class="fa fa-circle small-ellipse-icon" aria-hidden="true"></i>
+    <i class="fa fa-spinner inner-icon" aria-hidden="true"></i>
+    <i class="fa fa-circle-thin outer-icon" aria-hidden="true"></i>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+<div class="searchbox-container">
+  {%- if site.data.conf.main.search_disable_auto_complete -%}
+    {%- capture autocomplete %}autocomplete="off"{% endcapture -%}
+  {%- endif %}
+  <form id="searchbox-form" {{autocomplete}}>
+    <input type="search" id="search-box" placeholder="{{ site.data.lang[lng].search.placeholder }}"
+    onkeyup="if(this.value!==''){document.getElementById('search-results').style.display = 'block';}"
+    onfocusout="this.value='';"
+    onblur="setTimeout(function(){ document.getElementById('search-results').style.display = 'none'; }, 100);">
+    {% comment %} close search result if the mouse cursor leaves the result div {% endcomment -%}
+    {%- if site.data.conf.main.search_list_hide_mouseleave ==  true -%}
+      {%- comment %} close search result with mouse click {% endcomment -%}
+      {%- capture hide_mouseleave -%} onmouseleave="document.getElementById('search-results').style.display = 'none';" {%- endcapture -%}
+    {%- endif -%}
+    <ul id="search-results" {{ hide_mouseleave }}></ul>
+  </form>
+</div>

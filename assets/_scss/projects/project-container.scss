@@ -1,0 +1,137 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.project-heading-container {
+  background-size: cover;
+  text-align: center;
+}
+
+.project-heading-container .project-buttons {
+  @include get_scheme(project-container-colors-);
+  --multipurpose-button-text-color: var(--project-button-text-color);
+  --multipurpose-button-border-color: var(--project-button-border-color);
+  --multipurpose-button-hover-color: var(--project-button-hover-color);
+}
+
+.project-heading-container h1 {
+  font-size: 3.6rem;
+  line-height: 3.1rem;
+  font-weight: 700;
+}
+
+.project-heading-container p {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.project-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.project-container .project-img {
+  position: relative;
+  margin: 0;
+  display: block;
+  float: left;
+  z-index: 1;
+  padding-left: 0;
+}
+
+.project-container .project-img img {
+  border-radius: 10px;
+  min-height: 140px;
+  min-width: 140px;
+  max-height: 140px;
+  max-width: 140px;
+  object-fit: cover;
+}
+
+.project-container .project-header > h1 {
+  margin-top: 10px;
+}
+
+.project-container .project-header > h4 {
+  margin-bottom: 19px;
+}
+
+.project-container .project-header > hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 15px;
+}
+
+/* read more less text font */
+.project-container .read-more-less {
+  font-weight: 400;
+  font-size: 1.5rem;
+  /*color: var(--project-read-more-less-text-color);*/
+}
+
+.project-container .project-header > .read-more-less > .read-less {
+  display: none;
+}
+
+.project-container .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.project-container .row:first-child {
+  width: calc(100% + (var(--text-spacing) * 2));
+  margin-left: calc(-1 * var(--text-spacing));
+}
+
+.project-container .markdown-style {
+  display: none;
+  padding-top: calc(var(--text-spacing) / 1.5);
+  padding-bottom: calc(var(--text-spacing) / 2);
+}
+
+.project-container .project-header > h4 {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.project-container .project-header > .meta-container {
+  font-size: 0;
+}
+
+/* date and category font */
+.project-container .project-header > .meta-container p {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+/* category */
+.project-container .project-header > .meta-container > p.category {
+  text-align: left;
+  width: 25%;
+  color: var(--project-category-text-color);
+}
+
+/* date */
+.project-container .project-header > .meta-container > p.date {
+  text-align: left;
+  width: 35%;
+  color: var(--project-date-text-color);
+}
+
+.project-container .project-header > .meta-container .fa {
+  display: inline;
+}
+
+@media screen and (max-width: 500px) {
+  .project-container {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}

@@ -1,0 +1,21 @@
+# Configuring Git to handle line ending  https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings
+
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Declare files that will always have LF line endings on checkout.
+*.svg text eol=lf diff=html
+
+# Denote all files that are truly binary and should not be modified.
+
+# image files
+*.png binary
+*.jpg binary
+*.ico binary
+
+# font files
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.otf binary

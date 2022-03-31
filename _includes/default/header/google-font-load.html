@@ -1,0 +1,22 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} loading Google fonts (faster){%-endcomment%}
+
+{% if site.data.conf.main.google_font_precon_url != nil or site.data.conf.main.google_font_precon_url != empty -%}
+<link rel="preconnect" href="{{ site.data.conf.main.google_font_precon_url }}" crossorigin>
+{%-endif%}
+
+{%-comment-%} loading Google fonts faster {%-endcomment%}
+<link rel="preload" as="style" href="{{ site.data.conf.main.google_font_style_url }}">
+
+{%-comment-%} for old browsers {%-endcomment%}
+<link rel="stylesheet" href="{{ site.data.conf.main.google_font_style_url }}" media="print" onload="this.media='all'">
+
+{%-comment-%} for js disabled browsers {%-endcomment%}
+<noscript>
+  <link rel="stylesheet" href="{{ site.data.conf.main.google_font_style_url }}">
+</noscript>

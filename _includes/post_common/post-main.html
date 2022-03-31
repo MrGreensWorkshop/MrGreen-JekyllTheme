@@ -1,0 +1,19 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- include post_common/post-info-data.liquid date = include.post.date url=include.post.url title = include.post.title content = include.post.content comment_off = include.post.comments_disable -%}
+
+<div class="multipurpose-container post-container">
+  <div class="post-title">{{ page_title }}</div>
+  {%- include post_common/post-info-html.html date=post_date read_time=read_time url=post_url comment_style = comment_style -%}
+  <hr/>
+  <div class="markdown-style">
+    {{ include.post.content }}
+    {%- if site.data.conf.posts.share_buttons == true %}
+      {%- include post_common/share.html title = page_title url = include.post.url -%}
+    {% endif -%}
+  </div>
+</div>

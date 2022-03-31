@@ -1,0 +1,18 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{% capture consent_bar_html -%} {%- include default/cookie-consent-bar.html -%} {%- endcapture %}
+{% capture consent_setting_html -%} {%- include default/cookie-consent-settings.html -%} {%- endcapture %}
+
+<script>
+  CookieConsent.consentSettingHtml = {{ consent_setting_html | split: " " | join: " " | jsonify }};
+  CookieConsent.consentBarHtml = {{ consent_bar_html | split: " " | join: " " | jsonify }};
+  CookieConsent.consent_items = JSON.parse('{{ site.data.conf.main.cookie_consent.groups | jsonify }}');
+  CookieConsent.hideConsentBarWithSaveButton = {{ site.data.conf.main.cookie_consent.hide_consent_bar_with_save_button }};
+
+  const consent_settings = CookieConsent.getConsentSettings();
+  const default_configs = JSON.parse('{{ site.data.conf.main.cookie_consent.gtag_default_config | jsonify }}');
+</script>

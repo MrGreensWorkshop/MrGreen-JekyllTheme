@@ -1,0 +1,17 @@
+---
+# Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+# Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+# Licensed under MIT
+
+layout: none
+permalink: /robots.txt
+# search engine robots.txt https://www.robotstxt.org/orig.html
+# Disallow: Any empty value, indicates that all URLs can be retrieved. At least one Disallow field needs to be present in a record.
+# ex:
+# Disallow: # Allow everything
+# Disallow: / # Disallow everything
+---
+User-agent: *
+Disallow:
+
+Sitemap: {{ 'assets/sitemap.xml' | absolute_url }}

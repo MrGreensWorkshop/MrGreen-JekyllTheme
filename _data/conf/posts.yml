@@ -1,0 +1,162 @@
+######################### Posts ###########################
+
+###########################################################
+#                Table of contents
+###########################################################
+# to enable Table of contents in posts.
+post_table_of_contents: true
+
+# this adds tooltip to Table of contents
+post_table_of_contents_tooltip: true
+
+######################### Post-list #######################
+
+###########################################################
+#                Excerpt
+###########################################################
+# this is for thumbnails post excerpts. Please check the posts.
+# to use part of post as excerpts, please add these start and end.
+excerpt_end_separator: <!-- outline-end -->
+excerpt_start_separator: <!-- outline-start -->
+
+###########################################################
+#                Thumbnail Post
+###########################################################
+# in Blog page, if picture is provided for thumbnail, it will be shown on the left.
+thumbnail_img: true
+
+# in Blog page, if thumbnail_img is true and if no picture is provided for thumbnail, this fills with empty picture for clean look
+thumbnail_img_fill: true
+
+###########################################################
+#                Post Query
+###########################################################
+# this is needed for Upside Down Tabs and multilingual pages (dynamic pagination)
+# if you disable this feature, you don't need post-query.json file so please open the file and uncomment the "published: false"
+post_query: true
+
+# select one below
+# 1. scroll_to_load    # calculate approx. of how many post thumbnail can be listed on the screen, and loads only the number of thumbnails which fits to the screen + 1, remaining thumbnails will be loaded by page scroll.
+# 2. paginator         # activate javascript based paginator for multilingual sites
+
+# for page load
+# if you set to scroll_to_load, comment paginate on _config.yml
+post_query_mode_startup: paginator
+
+# for queries
+post_query_mode_query: scroll_to_load
+
+# this sets the number of post thumbnail shown per page
+# if site.paginate is not set(disabled), this will be used.
+# make sure this matches with _paginate on config.yml
+post_query_paginator_post_per_page: 5
+
+###########################################################
+#                Upside Down Tabs
+###########################################################
+# this will enable upside down tabs on Blog page
+# this allows you to list post with specific Categories, Tags, Years.
+# to enable this, you need to enable "post_query: true".
+# if you disable this feature, you don't need upside-down-tabs-slide.js file, and you can delete the file from _site folder
+post_query_tabs: true
+
+# this adds hover effect to upside down tab buttons
+post_query_tabs_tabs_hover_effect: "hover-effect"
+
+# this adds tooltip to upside down tabs
+post_query_tabs_tooltip: true
+
+# upside down tabs settings
+# tab icons
+post_query_tabs_category_tab_icon: "fa fa-list-ul"
+post_query_tabs_tag_tab_icon: "fa fa-tags"
+post_query_tabs_year_tab_icon: "fa fa-archive"
+post_query_tabs_clear_tab_icon: "fa fa-undo"
+post_query_tabs_close_tab_icon: "fa fa-angle-double-up"
+
+# items inside tabs
+post_query_tabs_item_icons:
+  # keys need to match with /query/post-query.json
+  tags: "fa fa-tag"
+  category: "fa fa-folder-o"
+  year: "fa fa-calendar-o"
+
+# hide tab titles
+post_query_tabs_clear_tab_title_visible: false
+post_query_tabs_close_tab_title_visible: false
+
+# enable tab: clear
+post_query_tabs_clear_tab_enable: false
+
+# show: all button, in all individual tabs
+post_query_tabs_all_button_enable: false
+
+############### Posts and Post-list Common ################
+
+###########################################################
+#                Share Buttons
+###########################################################
+# this enables share buttons at the bottom of the post pages
+share_buttons: true
+
+# this adds hover effect to share buttons
+share_buttons_hover_effect: "hover-effect-big"
+
+# this adds tooltip to share buttons
+share_buttons_tooltip: true
+
+###########################################################
+#                Pager Buttons
+###########################################################
+# select one below
+# 1. comment to remove paginator navigation
+# 2. prev_next_buttons
+# 3. page_numbers
+
+# pager for blog thumbnail list
+pager_navigation_post_list: page_numbers
+
+# pager for every post page
+pager_navigation_post: page_numbers
+
+# post page pager buttons alignment and blog thumbnail list pager buttons (if prev_next_buttons is enabled)
+# if you want to center aligned buttons, please set to false.
+pager_prev_next_buttons_side_aligned: true
+
+# if page_numbers is enabled and you have many pages, numbers may not fit in one line.
+# if you enable this option, this limits page numbers and covers window size changes.
+# if pager_navigation_post: page_numbers is enabled, this setting is highly recommended.
+pager_page_numbers_auto_generator: true
+
+# if page_numbers is enabled, you can enable and disable first and last buttons.
+pager_page_numbers_first_last_buttons: true
+
+###########################################################
+#                Comments
+###########################################################
+comments:
+  # to enable comments please set to true, comments can be disabled on any post by setting comments_disable: true
+  enable: true
+  # make sure disqus_shortname is set in _data/owner.yml
+  disqus:
+    # to enable disqus comments please set to true
+    enable: false
+    # login your disqus account, navigate to admin > settings > Community > Comment Count Link
+    # set Zero comments: 0, One comment: 1, Multiple comments: {num} and save it.
+    comment_count: true
+    # select one below
+    # 1. click_to_load
+    # 2. scroll_to_load
+    # 3. scroll_to_load_but_mobile_click_to_load
+    # 4. none of above (commented or "") load with page load (not recommended)
+    load_mode: click_to_load
+    consent:
+      # to enable consent for disqus comments please set to true
+      # make sure load_mode is scroll_to_load or scroll_to_load_but_mobile_click_to_load
+      enable: true
+      terms_url: "https://help.disqus.com/en/articles/1717102-terms-of-service"
+      privacy_url: "https://help.disqus.com/en/articles/1717103-disqus-privacy-policy"
+      settings_url: "https://disqus.com/data-sharing-settings"
+      terms_replace: $terms
+      privacy_replace: $privacy_policy
+      settings_replace: $settings_link

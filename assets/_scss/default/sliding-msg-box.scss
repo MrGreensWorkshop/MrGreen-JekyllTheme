@@ -1,0 +1,59 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.slideBox {
+  @include get_scheme(sliding-msg-box-colors-);
+}
+
+.slideBox {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  padding: 25px 40px;
+  min-width: 350px;
+  background: var(--sliding-msg-box-background-color);
+  border: 1px solid var(--sliding-msg-box-border-color);
+  box-shadow: 0 5px 50px var(--sliding-msg-box-header-shadow-color);
+  border-radius: 20px;
+  /* centering */
+  left: calc(50% - var(--side-nav-width));
+  transform: translateX(calc(-50% + var(--side-nav-width)));
+  transition: all 0.4s ease, background-color 0s, border-color 0s;
+}
+
+.slideBoxTopToDown{
+  top:-50%;
+}
+
+.slideBoxBottomToUp {
+  top:100%;
+}
+
+.slideBoxEnd {
+  transform: translate(calc(-50% + var(--side-nav-width)),-50%);
+  top: 50%;
+}
+
+.slideBox > .close-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.slideBox > .msg {
+  white-space: nowrap;
+  max-width: 450px;
+}
+
+.slideBox > .msg > h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--sliding-msg-box-header-color);
+}
+
+.slideBox > .checkBoxHolder {
+  bottom: 30px;
+  position: absolute;
+}

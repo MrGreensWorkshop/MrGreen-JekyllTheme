@@ -1,0 +1,24 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.hover-effect,
+.hover-effect-big {
+  --scale-effect-normal: scale(1.1);
+  --scale-effect-big: scale(1.2);
+  --scale-effect: transform 0.4s 10ms cubic-bezier(0, 0, 0.7, 2.9),
+    color 0.15s ease-in-out;
+  transition: var(--scale-effect);
+}
+
+.hover-effect:hover,
+.hover-effect.active-page,
+.hover-effect:not(.active-page):hover {
+  transform: var(--scale-effect-normal);
+}
+
+.hover-effect-big:hover,
+.hover-effect-big:not(.active-page):hover {
+  transform: var(--scale-effect-big);
+}

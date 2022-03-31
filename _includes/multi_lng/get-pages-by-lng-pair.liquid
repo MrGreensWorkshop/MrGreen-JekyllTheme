@@ -1,0 +1,38 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: lng_page_pair {%-endcomment-%}
+
+{%- if include.pages != nil -%}
+  {%- assign _pages = include.pages -%}
+{%- elsif include.layout == 'post' -%}
+  {%- assign _pages = site.posts -%}
+{%- elsif include.layout != 'post' -%}
+  {%- assign _pages = site.html_pages -%}
+{%- endif -%}
+
+{%-comment%} filter language pairs {%endcomment-%}
+{%- assign lng_page_pair = _pages | where_exp: "item", "item.lng_pair == include.lng_pair" | where_exp: "item", "item.lng_pair != nil" -%}
+
+{%-comment%} filter blog pagination pages, only use first page {%endcomment-%}
+{%- if include.layout == "post-list" and site.paginate > 0 -%}
+  {%- assign blog_list = '' | split: '' -%}
+  {%- assign blog_dir = site.paginate_path | split: ':' -%}
+  {%- assign blog_dir = blog_dir[0] -%}
+  {%- for lng_name in site.data.conf.main.language_switch_lang_list -%}
+    {%- assign blog_dir_test = blog_dir -%}
+    {% if lng_name != site.data.conf.main.default_lng -%}
+      {%- capture blog_dir_test -%} /{{ lng_name }}{{ blog_dir }} {%- endcapture -%}
+    {%- endif -%}
+    {%- for page_blog in lng_page_pair -%}
+      {%- if page_blog.dir == blog_dir_test -%}
+        {%- assign blog_list = blog_list | push: page_blog -%}
+        {%-break-%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+  {%- assign lng_page_pair = blog_list -%}
+{%- endif -%}

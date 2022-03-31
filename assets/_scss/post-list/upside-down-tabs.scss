@@ -1,0 +1,197 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+/* this is only valid when upside down tabs is activated. */
+.post-list-header {
+  margin-top: max(var(--main-container-margin) * 1.2, 40px);
+}
+
+/* this is only valid when upside down tabs is activated. (auto generated tag) */
+.post-list-header > h5 {
+  margin-top: 0;
+  color: var(--post-query-result-title-color);
+}
+
+.tab-container {
+  margin-top: calc(-1 * var(--main-container-margin));
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 998;
+}
+
+.upside-down-tabs {
+  @include get_scheme(upside-down-tabs-colors-);
+  --tab-button-font-size: 1.5rem;
+  --tab-button-font-weight: 400;
+  --tab-button-border-left-radius: 10px;
+  --tab-button-border-right-radius: 10px;
+
+  display: block;
+  position: absolute;
+  /* stick to page top */
+  /*position: fixed;*/
+
+  /* center */
+  left: 15px;
+  width: calc(100% - 15px);
+}
+
+.upside-down-tabs > .tab-content {
+  border: 1px solid var(--tabs-border-color);
+  border-bottom-right-radius: var(--tab-button-border-right-radius);
+  background-color: var(--tab-panel-background-color);
+  border-top-color: transparent;
+  border-top: none;
+
+  height: auto;
+  max-height: calc(100vh / 2);
+  overflow: auto;
+}
+
+.upside-down-tabs > .tab-content > .tab-pane {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.upside-down-tabs > .nav-tabs {
+  border-bottom: 0px;
+  border-top: 1px solid var(--tabs-border-color);
+  background-color: transparent;
+  border-radius: 0px;
+  border-bottom-right-radius: var(--tab-button-border-right-radius);
+  border-bottom-left-radius: var(--tab-button-border-left-radius);
+  border-top: none;
+}
+
+.upside-down-tabs > .nav-tabs > li {
+  margin-bottom: 0;
+  margin-top: -1px;
+  /* for hover gray button top */
+  padding-top: 1px;
+  /* tab button spacing */
+  /*margin-left: 1px;
+  margin-right: 1px;*/
+}
+
+/* show tab border lines for non active tabs. */
+.upside-down-tabs > .nav-tabs > li:not(.active) {
+  padding-top: 0px;
+  border: 1px solid var(--tabs-border-color);
+  border-top-color: transparent;
+  border-bottom-right-radius: var(--tab-button-border-right-radius);
+  border-bottom-left-radius: var(--tab-button-border-left-radius);
+}
+
+.upside-down-tabs > .nav-tabs > .active {
+  cursor: default;
+  background-color: var(--tab-panel-background-color);
+  border: 1px solid var(--tabs-border-color);
+  border-top-color: transparent;
+
+  border-radius: 0px;
+  border-bottom-right-radius: var(--tab-button-border-right-radius);
+  border-bottom-left-radius: var(--tab-button-border-left-radius);
+}
+
+.upside-down-tabs > .nav-tabs > li > a {
+  border-color: transparent !important;
+  padding: max(calc(var(--main-container-margin) / 6), 4px)
+    max(calc(var(--main-container-margin) / 3), 5px);
+  margin-right: 0px;
+  background-color: var(--tab-button-background-color);
+  border-radius: 0px;
+  border-bottom-right-radius: calc(var(--tab-button-border-right-radius) - 1px);
+  border-bottom-left-radius: calc(var(--tab-button-border-left-radius) - 1px);
+  color: var(--tab-button-text-color);
+  font-size: var(--tab-button-font-size);
+  font-weight: var(--tab-button-font-weight);
+}
+
+.upside-down-tabs > .nav-tabs > .active > a,
+.upside-down-tabs > .nav-tabs > .active > a:focus {
+  color: var(--tab-button-active-text-color) !important;
+  cursor: default;
+  background-color: var(--tab-button-active-background-color) !important;
+  border: 1px solid var(--tabs-border-color);
+  border-top-color: transparent;
+}
+
+.upside-down-tabs > .nav-tabs > li:not(.active) > a:hover {
+  background-color: var(--tab-button-hover-background-color);
+  color: var(--tab-button-hover-text-color);
+}
+
+/* buttons */
+.link-buttons li {
+  font-weight: 400;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.link-buttons li {
+  line-height: 1.7rem;
+}
+
+/* icon size */
+.link-buttons li > a > i {
+  font-size: 1.5rem;
+  padding-right: 8px;
+}
+
+.link-buttons li > a {
+  color: var(--tab-content-button-text-color);
+  display: block;
+}
+
+.link-buttons li > a:hover {
+  color: var(--tab-content-button-hover-text-color);
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.link-buttons li > a:hover,
+.link-buttons li > a:active,
+.link-buttons li > a:focus {
+  text-decoration: none;
+  background-color: transparent !important;
+}
+
+.filter-item {
+  @include get_scheme(upside-down-tabs-colors-);
+  border: 1px solid var(--tabs-border-color);
+  background-color: var(--tab-button-active-background-color);
+  border-radius: 15px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 5px;
+  margin-bottom: 0;
+}
+
+.filter-item > p {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-left: 4px;
+}
+
+.filter-item > .filter-title {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 360px) {
+  /* disable icons if page width is too narrow */
+  .upside-down-tabs > .nav-tabs > li > a:not(#close_tabs, #clear_filters) > i {
+    display: none;
+  }
+  .upside-down-tabs > .nav-tabs > li > a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

@@ -1,0 +1,98 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+:root {
+  @include get_scheme(body-main-styles-colors-);
+}
+
+html {
+  /* for comment page_bottom_Check */
+  height: 100%;
+  overflow-y: auto;
+  /* font size base definition */
+  font-size: 10px;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+body {
+  color: var(--body-text-color);
+  background-color: var(--body-background-color);
+  width: 100%;
+  border-width: 4px;
+  font-family: "Roboto", sans-serif;
+  /* this fixes black colored padding on the bottom of the page on firefox when address bar auto hides. */
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--body-header-text-color);
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.35rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+a {
+  color: var(--body-anchor-text-color);
+}
+
+a:hover {
+  color: var(--body-anchor-hover-text-color);
+}
+
+p {
+  font-weight: 300;
+}
+
+ul,
+ol {
+  font-weight: 300;
+}
+
+img {
+  height: auto;
+  max-width: 85%;
+}
+
+hr {
+  border-top-color: var(--body-hr-color);
+}

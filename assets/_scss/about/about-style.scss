@@ -1,0 +1,96 @@
+/* Mr. Green Jekyll Theme - v1.0.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.about-container {
+  @include get_scheme(about-style-colors-);
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 0;
+}
+
+.about-container .about-main {
+  position: relative;
+}
+
+.about-container,
+.about-container .about-img img {
+  border-radius: 10px;
+}
+
+.about-container .about-img img {
+  min-height: 140px;
+  min-width: 140px;
+  max-height: 140px;
+  max-width: 140px;
+  object-fit: cover;
+}
+
+.about-container .about-img {
+  float: left;
+}
+
+.about-container .about-header {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  margin-left: 160px;
+  margin-right: -20px;
+  padding-right: 0px;
+}
+
+.about-container .about-header > h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-top: 0px;
+  color: var(--about-header-title-color);
+}
+
+/* sub-title and email font */
+.about-container .about-header > .meta-container p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* sub-title color */
+.about-container .about-header > .meta-container > p.sub-title {
+  color: var(--about-header-sub-title-color);
+}
+
+/* .about-container .about-header>.meta-container>p.email>a */ /* email color */
+
+.about-container .about-divider hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 175px;
+  margin-right: 35px;
+  padding: 0px;
+}
+
+/* about message */
+.about-container .about-msg {
+  padding: var(--text-spacing);
+}
+
+/* remove last spacing */
+.about-container .about-msg :last-child {
+  margin-bottom: 0;
+}
+
+/* about text */
+.about-container .about-msg > p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  /*color: var(--about-msg-text-color);*/
+  text-align: justify;
+}
+
+@media screen and (max-width: 500px) {
+  .about-container {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
