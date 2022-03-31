@@ -27,12 +27,14 @@ creative_commons:
 
 # contact options (side nav bottom and about page)
 # the order of the items will be shown as here.
+# comment to remove any contact item
 contacts:
   - github: ""
   #- email: info@example.com
   - linkedin: ""
   - twitter: ""
   - instagram: ""
+  #- youtube: ""
   - facebook: ""
 # to add more, check the _data/const/contact.yml file
 #  - your_new_contact: ""
