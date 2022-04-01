@@ -72,11 +72,6 @@
 
 1. [Jekyll をインストール](https://jekyllrb.com/docs/installation/)する。
 1. リポをクローン、または [download](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest)し、コマンドプロンプトでフォルダに移動し、`bundle install` コマンドを実行する。
-1. \_config.yml を編集し、`url`と`baseurl`を編集する。(ローカルでテストするには不要)
-   ```yaml
-   url: ""
-   baseurl: ""
-   ```
 1. `bundle exec jekyll serve --watch --host 0.0.0.0 --safe`コマンドでビルドする。
     - `--host 0.0.0.0` を指定すると、同じ LAN から Web サーバーにアクセスすることができる。
     - `--safe`を指定すると、第三者のプラグインが追加されていないことが確認できる。(Github ページ開発用)
