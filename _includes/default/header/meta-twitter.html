@@ -10,11 +10,12 @@
   https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup
 {%-endcomment%}
 
-{%- assign tmp_obj =  site.data.owner.contacts | where_exp: "item", "item.twitter != nil" | first %}
-{%- assign tw_site = tmp_obj['twitter'] %}
+{%- assign tmp_obj =  site.data.owner.contacts | where_exp: "item", "item.twitter != nil" | where_exp: "item", "item.twitter != ''" | first %}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ meta_title | truncate: 70 }}">
-<meta name="twitter:site" content="@{{ tw_site }}">
+{% if tmp_obj.twitter != nil -%}
+  <meta name="twitter:site" content="@{{ tmp_obj.twitter }}">
+{%- endif %}
 <meta name="twitter:description" content="{{ meta_desc | truncate: 200 }}">
 <meta name="twitter:image" content="{{ meta_image }}">
 {%- comment -%} <meta name="twitter:image:alt" content="{{ meta_title | truncate: 420 }}"> {%-endcomment%}
