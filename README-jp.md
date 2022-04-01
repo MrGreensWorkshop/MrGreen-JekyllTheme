@@ -14,7 +14,7 @@
 <!-- readme -->
 
 <div align="center">
-  <img src="/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
+  <img src="https://mrgreen-jekylltheme.mrgreensworkshop.com/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
   <br><br>
   <a href="https://MrGreen-JekyllTheme.MrGreensWorkshop.com/ja" style="font-weight: bold;" >ライブデモはこちら</a>
 </div>

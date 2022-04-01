@@ -14,7 +14,7 @@
 <!-- readme -->
 
 <div align="center">
-  <img src="/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
+  <img src="https://mrgreen-jekylltheme.mrgreensworkshop.com/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
   <br><br>
   <a href="https://MrGreen-JekyllTheme.MrGreensWorkshop.com" style="font-weight: bold;" >Click here for live demo</a>
 </div>
@@ -65,7 +65,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 #### Github pages
 
 1. Fork the repo and rename to `your_github_user_name.github.io`
-1. Check Deploy status `Actions` tab on the repo. 
+1. Check Deploy status `Actions` tab on the repo.
 1. When it's turned to green, your site is up and running at `https://your_github_user_name.github.io`
 
 #### Local build
