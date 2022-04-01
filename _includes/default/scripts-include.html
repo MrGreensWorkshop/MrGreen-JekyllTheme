@@ -32,8 +32,9 @@
       <script src="{{ site.baseurl }}/assets/js/jquery.magnific-popup.min.js"></script>
     {%- endif %}
     <script>
+      $('.imgViewer[data-no-image-viewer]').css("cursor", "unset");
       $(function () {
-        $('.imgViewer').magnificPopup({
+        $('.imgViewer:not([data-no-image-viewer])').magnificPopup({
           type: 'image'
           ,image: {
             titleSrc: 'alt'

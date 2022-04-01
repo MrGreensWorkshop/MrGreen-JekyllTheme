@@ -1,17 +1,15 @@
-[[English](README.md#readme)] [日本語]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語]
 
 ## Mr. Green Jekyll テーマ
-
-[![GitHub issues](https://img.shields.io/github/issues/MrGreensWorkshop/MrGreen-JekyllTheme)](README-jp.md#readme)
-[![GitHub forks](https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme)](README-jp.md#readme)
-[![GitHub stars](https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme)](README-jp.md#readme)
-[![GitHub license](https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme)](LICENSE)
-[![Patreonで支援](https://shields.io/badge/Patreon-Tip%20me-blue?logo=Patreon)](https://patreon.com/MrGreensWorkshop "Patreonで支援")
-[![Ko-fiで支援](https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi)](https://www.ko-fi.com/MrGreensWorkshop "Ko-fiで支援")
+<!-- readme -->
+[<img src="https://img.shields.io/github/issues/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub issues" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/issues)
+[<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub forks" data-no-image-viewer>](#)
+[<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub stars" data-no-image-viewer>](#)
+[<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE)
+[<img src="https://shields.io/badge/Patreon-Tip%20me-blue?logo=Patreon" alt="Patreonで支援" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Patreonで支援")
+[<img src="https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi" alt="Ko-fiで支援" data-no-image-viewer>](https://www.ko-fi.com/MrGreensWorkshop "Ko-fiで支援")
 
 ---
-
-<!-- readme -->
 
 <div align="center">
   <img src="https://mrgreen-jekylltheme.mrgreensworkshop.com/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
