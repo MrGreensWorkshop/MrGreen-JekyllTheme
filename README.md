@@ -64,29 +64,14 @@ I was going to make my website and thought if I did it as a template, I could sh
 
 #### Github pages
 
-1. Fork the repo and rename to your_github_user_name.github.io
-1. On Github, open repo’s `Settings` and select `Pages` on the left. Select `Main` branch from the drop down box below `Source`.
-1. Edit \_config.yml and change `url` and `baseurl` like below and push changes.
-  set up site for `https://your_github_user_name.github.io` set only `url`, to setup to `https://your_github_user_name.github.io/blog` set `baseurl: "/blog"`
-
-   ```yaml
-   url: "https://your_github_user_name.github.io"
-   baseurl: ""
-   ```
-
-1. When you push changes, `pages build and deployment` action starts. You can check Deploy status `Actions` tab on the github
-
-ref: [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+1. Fork the repo and rename to `your_github_user_name.github.io`
+1. Check Deploy status `Actions` tab on the repo. 
+1. When it's turned to green, your site is up and running at `https://your_github_user_name.github.io`
 
 #### Local build
 
 1. [Install Jekyll](https://jekyllrb.com/docs/installation/) to your OS
 1. Clone or [download](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest) the repo, in command prompt go to the folder run `bundle install` command
-1. Edit \_config.yml and change `url` and `baseurl` (not necessary for local tests)
-   ```yaml
-   url: ""
-   baseurl: ""
-   ```
 1. Build using `bundle exec jekyll serve --watch --host 0.0.0.0 --safe` command
     - with `--host 0.0.0.0` parameter you can access web server from same lan.
     - with `--safe` parameter you can make sure no 3rd party plugin added. (for Github pages development)
