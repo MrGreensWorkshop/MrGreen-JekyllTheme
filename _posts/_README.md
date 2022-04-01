@@ -1,7 +1,9 @@
 [English] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)]
 
 ## Mr. Green Jekyll Theme
+
 <!-- readme -->
+
 [<img src="https://img.shields.io/github/issues/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub issues" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/issues)
 [<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub forks" data-no-image-viewer>](#readme)
 [<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub stars" data-no-image-viewer>](#readme)
@@ -16,6 +18,7 @@
   <br><br>
   <a href="https://MrGreen-JekyllTheme.MrGreensWorkshop.com" style="font-weight: bold;" >Click here for live demo</a>
 </div>
+
 
 ### Introduction
 
