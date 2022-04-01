@@ -64,29 +64,14 @@
 
 #### Github pages
 
-1. リポをフォークし、GitHubユーザー名.github.io として、名前をつける
-1. Github 上で、リポの `Settings` を開き、左側の`Pages`を選択する。`Source` の下にあるドロップダウン・ボックスから`Main`ブランチを選択する。
-1. \_config.yml を編集し、`url` と `baseurl`を以下のように変更し、プッシュする。
-  `https://GitHubユーザー名.github.io` にて公開するには、`url`のみ設定し、`https://GitHubユーザー名.github.io/blog` にて公開するには、`baseurl: "/blog"` も設定してください。
-
-   ```yaml
-   url: "https://GitHubユーザー名.github.io"
-   baseurl: ""
-   ```
-
-1. 変更をプッシュすると、`pages build and deployment`が開始する。デプロイのステイタスは、リポ上の `Actions` タブで確認できる。
-
-ref: [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+1. リポをフォークし、`GitHubユーザー名.github.io` として、名前を変える。
+1. デプロイのステイタスは、リポ上の `Actions` タブで確認する。
+1. 緑色に変わると、サイトは `https://GitHubユーザー名.github.io` で利用可能になる。
 
 #### Local build
 
 1. [Jekyll をインストール](https://jekyllrb.com/docs/installation/)する。
 1. リポをクローン、または [download](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest)し、コマンドプロンプトでフォルダに移動し、`bundle install` コマンドを実行する。
-1. \_config.yml を編集し、`url`と`baseurl`を編集する。(ローカルでテストするには不要)
-   ```yaml
-   url: ""
-   baseurl: ""
-   ```
 1. `bundle exec jekyll serve --watch --host 0.0.0.0 --safe`コマンドでビルドする。
     - `--host 0.0.0.0` を指定すると、同じ LAN から Web サーバーにアクセスすることができる。
     - `--safe`を指定すると、第三者のプラグインが追加されていないことが確認できる。(Github ページ開発用)
