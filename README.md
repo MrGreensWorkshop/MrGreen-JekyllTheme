@@ -2,7 +2,7 @@
 
 ## Mr. Green Jekyll Theme
 
-[![GitHub issues](https://img.shields.io/github/issues/MrGreensWorkshop/MrGreen-JekyllTheme)](README.md#readme)
+[![GitHub issues](https://img.shields.io/github/issues/MrGreensWorkshop/MrGreen-JekyllTheme)](#)
 [![GitHub forks](https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme)](README.md#readme)
 [![GitHub stars](https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme)](README.md#readme)
 [![GitHub license](https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme)](LICENSE)
