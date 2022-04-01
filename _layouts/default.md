@@ -34,7 +34,7 @@ layout: util/compress
 
   <body {{ default_dark }}>
     {% if color_scheme_enabled -%}
-      <script src="{{ site.baseurl }}/assets/js/color-scheme-attr-init.js" mode="{{ site.data.conf.main.color_scheme_default_dark }}"></script>
+      <script src="{{ site.baseurl }}/assets/js/color-scheme-attr-init.js" data-mode="{{ site.data.conf.main.color_scheme_default_dark }}"></script>
     {%- endif %}
     {% include default/nav/navigation-top-nav.html -%}
     {% include default/nav/navigation-side-nav.html -%}

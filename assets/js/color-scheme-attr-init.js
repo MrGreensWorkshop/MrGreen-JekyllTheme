@@ -20,7 +20,7 @@ layout: util/compress_js
   };
 
   function setColorScheme() {
-    let defaultColorSchemeDark = (document.currentScript.getAttribute('mode') == "true") ? true : false;
+    let defaultColorSchemeDark = (document.currentScript.dataset.mode == "true") ? true : false;
     /* get userColorScheme opt */
     const userColorScheme = defaultColorSchemeDark ? globals.mode.dark : null;
     /* get Browser dark color scheme */
