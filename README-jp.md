@@ -92,7 +92,7 @@
 
 このプロジェクト作成中に見つけた役立つサイトを紹介します。[リンクページへ](https://MrGreen-JekyllTheme.MrGreensWorkshop.com/ja/tabs/links.html)
 
-### [You Can Support My Work](https://github.com/MrGreensWorkshop#sponsorship)
+### [You Can Support My Work](https://github.com/MrGreensWorkshop/MrGreensWorkshop/blob/main/README-jp.md#スポンサーシップ)
 
 何もないところからプロジェクトを立ち上げるのは、とても時間がかかるものです。私がこの様なプロジェクトに取り組み続け、皆さんに新しいコンテンツを提供できるよう、支援をご検討いただければ幸いです。
 
