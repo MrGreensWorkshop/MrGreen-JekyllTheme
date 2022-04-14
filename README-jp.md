@@ -81,6 +81,7 @@
 ### Documentation
 
 ドキュメントが決して十分ではないことはわかっています。ドキュメントを書くよりもコードを書きたいのですが、将来的にはドキュメントとチュートリアル作成にも時間をかけるようにします。
+YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https://www.youtube.com/watch?v=x9lvXBKD2Us&list=PL8XOPe9jXvWOrg6XAulRzy9MQl_-A7Yns)を確認してみてください。
 
 ### Credits
 
