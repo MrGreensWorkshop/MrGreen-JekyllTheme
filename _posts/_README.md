@@ -65,7 +65,14 @@ I was going to make my website and thought if I did it as a template, I could sh
 
 #### Github pages
 
-1. Fork the repo and rename to `your_github_user_name.github.io`
+1. Fork the repo.
+1. Edit \_config.yml and change `url` like below and push changes.
+
+   ```yaml
+   url: "https://your_github_user_name.github.io"
+   ```
+
+1. Rename the repo name to `your_github_user_name.github.io`
 1. Check Deploy status `Actions` tab on the repo.
 1. When it's turned to green, your site is up and running at `https://your_github_user_name.github.io`
 

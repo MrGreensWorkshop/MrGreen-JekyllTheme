@@ -65,7 +65,14 @@
 
 #### Github pages
 
-1. リポをフォークし、`GitHubユーザー名.github.io` として、名前を変える。
+1. リポをフォークする。
+1. \_config.yml を編集し、`url` を以下のように変え、変更をプッシュする。
+
+   ```yaml
+   url: "https://GitHubユーザー名.github.io"
+   ```
+
+1. リポ名を `GitHubユーザー名.github.io` に変える。
 1. デプロイのステイタスは、リポ上の `Actions` タブで確認する。
 1. 緑色に変わると、サイトは `https://GitHubユーザー名.github.io` で利用可能になる。
 
