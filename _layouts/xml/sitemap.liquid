@@ -22,7 +22,6 @@ xmlns:xhtml="http://www.w3.org/1999/xhtml"
 {%- for pages in all_pages %}
   {%- for _page in pages %}
     {%- include multi_lng/get-lng-by-url.liquid url = _page.url %}
-    {%- if get_lng != site.data.conf.main.default_lng %}{%continue%}{% endif %}
     {%- assign page_title = _page.title | default: site.data.lang[get_lng][_page.layout].title %}
     {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
     {%- if _page.search_engine_exclude == true or _page.layout == "redirect" %}{%continue%}{% endif %}
