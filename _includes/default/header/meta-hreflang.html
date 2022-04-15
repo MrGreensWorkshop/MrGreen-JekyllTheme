@@ -29,7 +29,7 @@
     {%- if include.hreflang %}
       {%- include multi_lng/get-lng-code.liquid lng = get_lng %}
       <{{ include.head }}link rel="alternate" hreflang="{{ lng_code }}" href="{{ lng_page.url | absolute_url }}" />
-      {%- if site.data.conf.main.html_lng_with_country_code and include.head %}
+      {%- if site.data.conf.main.html_lng_with_country_code %}
         <{{ include.head }}link rel="alternate" hreflang="{{ get_lng }}" href="{{ lng_page.url | absolute_url }}" />
       {%- endif %}
     {%- endif %}
