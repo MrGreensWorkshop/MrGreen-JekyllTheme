@@ -81,6 +81,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 ### Documentation
 
 I know, I know, documents are never enough since I would rather write some code than write documents. But I will try to make time for documentation and tutorials.
+Check out [Mr. Green theme tutorials playlist](https://www.youtube.com/watch?v=Tz5iWWX0WD4&list=PLAymxPbYHgl-fFy5can7uZBMJtFWVcphD) on YouTube
 
 ### Credits
 
