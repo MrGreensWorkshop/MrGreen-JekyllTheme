@@ -1,6 +1,6 @@
-[English] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [[한글](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-kr.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [한글]
 
-## Mr. Green Jekyll Theme
+## Mr. Green Jekyll 테마
 
 <!-- readme -->
 
