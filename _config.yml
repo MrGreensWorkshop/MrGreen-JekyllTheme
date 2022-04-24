@@ -3,15 +3,15 @@
 ###########################################################
 # if you want to force HTTPS, specify the domain without the http at the start
 # set domain: "your_github_user_name.github.io"
-domain: ""
+domain: "junsusong98.github.io"
 
 # your web site url
 # for GitHub Pages, url: "https://your_github_user_name.github.io"
-url: ""
+url: "https://your_github_user_name.github.io"
 
 # path to this site
 # if your page is located at https://your_github_user_name.github.io/blog, then set baseurl: "/blog"
-baseurl: ""
+baseurl: "https://your_github_user_name.github.io/blog"
 
 # please use TZ database name column on the list table
 # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
