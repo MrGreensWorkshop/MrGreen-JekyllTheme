@@ -4,7 +4,7 @@ home:
   # enables new posts
   new_posts: true
   # to remove limit, please comment it
-  new_posts_count_limit: 3
+  new_posts_count_limit: 4
 
 ######################### About ###########################
 
