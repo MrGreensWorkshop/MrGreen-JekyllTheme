@@ -1,4 +1,4 @@
-[English] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [[한글](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-kr.md#readme)]
+[English] [[日本語](https://github.com/junsusong98/junsusong98.github.io/blob/main/README-jp.md#readme)] [[한글](https://github.com/junsusong98/junsusong98.github.io/blob/main/README-kr.md#readme)]
 
 ## Mr. Green Jekyll Theme
 
