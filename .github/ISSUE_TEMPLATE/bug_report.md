@@ -7,6 +7,9 @@ assignees: ''
 
 ---
 
+<!-- Use Discussions to ask a question https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/discussions -->
+<!-- Watch Mr. Green theme tutorials playlist on YouTube https://www.youtube.com/watch?v=Tz5iWWX0WD4&list=PLAymxPbYHgl-fFy5can7uZBMJtFWVcphD -->
+<!-- and make sure it's a real bug. -->
 <!-- Please make sure all fields are filled in, otherwise the issue will be closed automatically. -->
 
 **Describe the bug**
