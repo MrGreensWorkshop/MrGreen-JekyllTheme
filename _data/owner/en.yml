@@ -4,6 +4,9 @@
 # This is your brand name
 brand: "Your Brand"
 
+# text below the brand name
+brand_sub_text: "sub text"
+
 # used for seo meta post author (if it's not defined in post)
 name: "Your Name"
 

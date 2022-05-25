@@ -27,7 +27,6 @@ not_found:
 no_translation_tooltip: No Translation
 
 navigation:
-  brand_sub_text: Jekyll theme
   contact_header: Contact
 
 color_scheme_switch_tooltip: Color scheme

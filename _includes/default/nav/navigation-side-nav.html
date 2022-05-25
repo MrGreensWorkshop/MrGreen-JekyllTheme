@@ -16,7 +16,7 @@
           <a href="{{ site.baseurl }}{{ layout_page_obj.url }}" translate="no">{{ site.data.owner[lng].brand }}</a>
         {% endif -%}
       </div>
-      <p>&nbsp;{{ site.data.lang[lng].navigation.brand_sub_text }}</p>
+      <p>&nbsp;{{ site.data.owner[lng].brand_sub_text }}</p>
       <br>
       {%- if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 %}
         {% include default/nav/lang-switch.html -%}
