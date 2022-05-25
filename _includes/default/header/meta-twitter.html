@@ -10,7 +10,7 @@
   https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup
 {%-endcomment%}
 
-{%- assign tmp_obj =  site.data.owner.contacts | where_exp: "item", "item.twitter != nil" | where_exp: "item", "item.twitter != ''" | first %}
+{%- assign tmp_obj =  site.data.owner[lng].contacts | where_exp: "item", "item.twitter != nil" | where_exp: "item", "item.twitter != ''" | first %}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ meta_title | truncate: 70 }}">
 {% if tmp_obj.twitter != nil -%}

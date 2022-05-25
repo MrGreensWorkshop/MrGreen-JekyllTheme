@@ -9,9 +9,13 @@
 {% endif -%}
 {%- include default/copyright-text.liquid %}
 
+{%- if site.data.conf.main.creative_commons.enable -%}
+  {%- assign license_type = site.data.owner[lng].creative_commons.license_type -%}
+{%- endif -%}
+
 {%- if site.data.conf.main.creative_commons.enable and site.data.conf.main.creative_commons.tooltip-%}
   {%- capture tooltip_creative_commons -%}
-    data-toggle="tooltip" data-placement="top" data-tooltip-no-hide title="{{ site.data.lang[lng].creative_commons[site.data.owner.creative_commons.license_type] }}"
+    data-toggle="tooltip" data-placement="top" data-tooltip-no-hide title="{{ site.data.lang[lng].creative_commons[license_type] }}"
   {%- endcapture %}
 {%- endif -%}
 
@@ -28,7 +32,7 @@
 {%- endcapture %}
 
 {%- if site.data.conf.main.creative_commons.add_all_icons -%}
-  {%- assign lic_type_list = site.data.owner.creative_commons.license_type | split: '-' -%}
+  {%- assign lic_type_list = license_type | split: '-' -%}
   {%- assign img_list = nil -%}
   {%- for lic_type in lic_type_list %}
     {%- assign img_list = img_list | append: img_template | replace: '$lic_type', lic_type -%}
@@ -43,7 +47,7 @@
           <p>{{ copyright_text_out }} </p>
           {%- if site.data.conf.main.creative_commons.enable -%}
             {%- assign license_url = site.data.conf.main.creative_commons.license_url
-              | replace: site.data.conf.main.creative_commons.license_replace, site.data.owner.creative_commons.license_type
+              | replace: site.data.conf.main.creative_commons.license_replace, license_type
               | replace: site.data.conf.main.creative_commons.lang_replace, lng
             -%}
             <a href="{{ license_url }}" target="_blank" rel="noopener noreferrer" {{ tooltip_creative_commons }}>

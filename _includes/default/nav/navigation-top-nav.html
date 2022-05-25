@@ -13,7 +13,7 @@
     </button>
     {% if site.data.conf.main.top_nav_brand_text_enable -%}
       {% include multi_lng/get-page-by-layout.liquid layout = 'home' -%}
-      <a class="navbar-brand top-nav-brand" href="{{ site.baseurl }}{{ layout_page_obj.url }}" translate="no">{{ site.data.owner.brand }}</a>
+      <a class="navbar-brand top-nav-brand" href="{{ site.baseurl }}{{ layout_page_obj.url }}" translate="no">{{ site.data.owner[lng].brand }}</a>
     {% endif -%}
   </div>
   {%- if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 and site.data.conf.main.language_switch_top_nav %}

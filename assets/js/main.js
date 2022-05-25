@@ -24,7 +24,7 @@ layout: util/compress_js
   {% include_relative _js/default/scroll-to-top.js %}
 {%- endif %}
 
-{% assign email_exist = site.data.owner.contacts | where_exp: "item", "item.email != nil" | first -%}
+{% assign email_exist = site.data.owner[lng].contacts | where_exp: "item", "item.email != nil" | first -%}
 {% if email_exist -%}
   {% include_relative _js/default/set-email.js %}
 {%- endif %}

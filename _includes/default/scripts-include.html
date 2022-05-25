@@ -169,8 +169,8 @@
 {%- if
   site.data.conf.posts.comments.enable and
   site.data.conf.posts.comments.disqus.enable and
-  site.data.owner.disqus_shortname != nil and
-  site.data.owner.disqus_shortname != empty
+  site.data.owner[lng].disqus_shortname != nil and
+  site.data.owner[lng].disqus_shortname != empty
 -%}
   {%- include default/disqus-scripts.html -%}
 {% endif -%}
@@ -179,7 +179,7 @@
   {%- include default/google-consent-init.html -%}
 {% endif -%}
 
-{% if site.data.owner.google_analytics_id != empty and site.data.owner.google_analytics_id != nil and jekyll.environment != site.data.conf.main.google.analytics.ignore -%}
+{% if site.data.owner[lng].google_analytics_id != empty and site.data.owner[lng].google_analytics_id != nil and jekyll.environment != site.data.conf.main.google.analytics.ignore -%}
   {%- include default/google-analytics.html -%}
 {% endif -%}
 

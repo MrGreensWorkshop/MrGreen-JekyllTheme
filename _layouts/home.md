@@ -11,10 +11,10 @@ layout: default
 <div class="multipurpose-container home-heading-container">
   <div class="home-heading" style="background-image:url('{{ page.img }}');">
     <div class="home-heading-message">
-      {{ site.data.lang[lng].home.top_header_line1 | replace: site.data.conf.main.brand_replace, site.data.owner.brand }}
+      {{ site.data.lang[lng].home.top_header_line1 | replace: site.data.conf.main.brand_replace, site.data.owner[lng].brand }}
       {%- if site.data.lang[lng].home.top_header_line2 %}
         <br>
-        {{ site.data.lang[lng].home.top_header_line2 | replace: site.data.conf.main.brand_replace, site.data.owner.brand }}
+        {{ site.data.lang[lng].home.top_header_line2 | replace: site.data.conf.main.brand_replace, site.data.owner[lng].brand }}
       {% endif -%}
     </div>
   </div>

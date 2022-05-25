@@ -129,7 +129,7 @@ home:
   button_name: ホーム
   new_posts_title: 新着記事
   new_posts_show_more_button: もっと見る ...
-  # you can use $site_brand in line1 and line2 to convert your site.data.owner.brand text
+  # you can use $site_brand in line1 and line2 to convert your site.data.owner[lng].brand text
   top_header_line1: "ようこそ"
   # if commented, top header will be a single line
   top_header_line2: "$site_brand テーマへ"

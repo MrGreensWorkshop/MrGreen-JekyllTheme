@@ -4,7 +4,7 @@
   Licensed under MIT
 {%-endcomment-%}
 
-{%- assign app_name = site.data.owner.brand | append: "'s App" %}
+{%- assign app_name = site.data.owner[site.data.conf.main.default_lng].brand | append: "'s App" %}
 {%-comment-%} Don't forget to set published: true in /assets/manifest.json {%-endcomment%}
 <link rel="manifest" href="{{ site.baseurl }}/assets/manifest.json">
 

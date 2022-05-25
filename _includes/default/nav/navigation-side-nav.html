@@ -13,7 +13,7 @@
       {% endif -%}
       <div class="brand-holder">
         {% if site.data.conf.main.side_nav_brand_text_enable -%}
-          <a href="{{ site.baseurl }}{{ layout_page_obj.url }}" translate="no">{{ site.data.owner.brand }}</a>
+          <a href="{{ site.baseurl }}{{ layout_page_obj.url }}" translate="no">{{ site.data.owner[lng].brand }}</a>
         {% endif -%}
       </div>
       <p>&nbsp;{{ site.data.lang[lng].navigation.brand_sub_text }}</p>
@@ -37,7 +37,7 @@
     </div>
     <br>
     <br>
-    {%- if site.data.conf.main.contacts and site.data.owner.contacts.size > 0 -%}
+    {%- if site.data.conf.main.contacts and site.data.owner[lng].contacts.size > 0 -%}
       {% include default/nav/contact-links.html -%}
     {% endif %}
     <hr id="toc-view-top">
