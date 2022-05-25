@@ -24,10 +24,14 @@ layout: util/compress_js
   {% include_relative _js/default/scroll-to-top.js %}
 {%- endif %}
 
-{% assign email_exist = site.data.owner[lng].contacts | where_exp: "item", "item.email != nil" | first -%}
-{% if email_exist -%}
-  {% include_relative _js/default/set-email.js %}
-{%- endif %}
+{% for owner in site.data.owner %}
+{%- assign owner_lng = owner[1] %}
+  {% assign email_exist = owner_lng.contacts | where_exp: "item", "item.email != nil" | first -%}
+  {% if email_exist -%}
+    {% include_relative _js/default/set-email.js %}
+    {% break %}
+  {%- endif %}
+{% endfor %}
 
 {% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 and site.data.conf.main.language_translation_offer_box -%}
   {% include_relative _js/default/check-storage-availability.js %}
