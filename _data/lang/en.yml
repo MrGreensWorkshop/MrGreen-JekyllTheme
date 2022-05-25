@@ -164,18 +164,6 @@ projects:
 privacy-policy:
   title: &privacy_policy_title Privacy policy
 
-# seo meta this is needed for each language
-# If meta_description is not defined in front matter, it's created from (post / page) content,
-# if it has no content, this will be used for page description. It is also used in manifest.json
-meta_common_description: &meta_info $site_brand is a multilingual theme generated with Jekyll and fully compatible with GitHub Pages.
-
-auto_content:
-  title: Sample post (auto generated)
-  greeting: Hello!
-  text: *meta_info
-  more_info: Learn More.
-  auto_generated_text: This is an auto generated sample content for display in the selected language.
-
 cookie_consent:
   privacy_policy_link_text: *privacy_policy_title
   side_nav_setting_button_tooltip: &cookie_settings Cookie settings

@@ -14,18 +14,18 @@
 
 {% include multi_lng/get-page-by-lng-pair-and-lng.liquid lng_pair="id_Mr_Green_Jekyll_Theme" layout="post" lng=readme_lng -%}
 
-{%- assign website_info_text = site.data.lang[lng].auto_content.text |
+{%- assign website_info_text = site.data.owner[lng].auto_content.text |
   replace: "Jekyll", "[Jekyll](https://jekyllrb.com/)" |
   replace: "GitHub Pages", "[GitHub Pages](https://pages.github.com/)" |
   replace: site.data.conf.main.brand_replace, "[Mr. Green](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)"
 %}
 
 {%- capture website_info_text -%}
-{{ website_info_text }} [{{site.data.lang[lng].auto_content.more_info}}]({{ site.baseurl }}{{ out_lng_page.url }})
+{{ website_info_text }} [{{site.data.owner[lng].auto_content.more_info}}]({{ site.baseurl }}{{ out_lng_page.url }})
 {%- endcapture -%}
 
 {%- capture website_greeting_text -%}
-### {{ site.data.lang[lng].auto_content.greeting }}
+### {{ site.data.owner[lng].auto_content.greeting }}
 {%- endcapture -%}
 
 {%- capture page_title_text -%}
@@ -35,7 +35,7 @@
 {%- capture website_info_text_first -%}
 {{ website_greeting_text }}
 
-{{ site.data.lang[lng].auto_content.auto_generated_text }}
+{{ site.data.owner[lng].auto_content.auto_generated_text }}
 {%- endcapture -%}
 
 {%- capture website_info_text_second -%}

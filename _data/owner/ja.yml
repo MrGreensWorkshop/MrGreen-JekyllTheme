@@ -28,6 +28,19 @@ creative_commons:
   # 6. by-nc-sa  Attribution-NonCommercial-ShareAlike 4.0 International
   license_type: "by-sa"
 
+# seo meta this is needed for each language
+# If meta_description is not defined in front matter, it's created from (post / page) content,
+# if it has no content, this will be used for page description. It is also used in manifest.json
+meta_common_description: &meta_info Your Brand description.
+
+# this is just for test purpose only.
+auto_content:
+  title: Sample post (auto generated)
+  greeting: Hello!
+  text: *meta_info
+  more_info: Learn More.
+  auto_generated_text: This is an auto generated sample content.
+
 # contact options (side nav bottom and about page)
 # the order of the items will be shown as here.
 # comment to remove any contact item
