@@ -124,14 +124,10 @@ post-list:
 
 # for home layout
 home:
-  title: ようこそ
+  title: ホーム
   button_name: ホーム
   new_posts_title: 新着記事
   new_posts_show_more_button: もっと見る ...
-  # you can use $site_brand in line1 and line2 to convert your site.data.owner[lng].brand text
-  top_header_line1: "ようこそ"
-  # if commented, top header will be a single line
-  top_header_line2: "$site_brand テーマへ"
 
 # for archives layout
 archives:
@@ -143,7 +139,6 @@ archives:
 about:
   title: 私について
   button_name: 私について
-  sub_title: クールなjekyllテーマ
   email_title: メール
 
 # for links layout
@@ -164,6 +159,13 @@ projects:
 privacy-policy:
   title: &privacy_policy_title プライバシーポリシー
 
+# constants to be replaced for
+constants:
+  greetings: こんにちは
+  welcome: ようこそ
+  sample: サンプル
+
+# for cookie consent
 cookie_consent:
   privacy_policy_link_text: *privacy_policy_title
   side_nav_setting_button_tooltip: &cookie_settings クッキー設定

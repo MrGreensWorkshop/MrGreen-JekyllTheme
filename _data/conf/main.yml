@@ -48,6 +48,15 @@ language_switch_top_nav: false
 # replace text with owner[lng].brand
 brand_replace: "$site_brand"
 
+# replace text with data.lang[language].constants.greeting
+greetings_replace: "$site_greetings"
+
+# replace text with data.lang[language].constants.welcome
+welcome_replace: "$site_welcome"
+
+# replace text with data.lang[language].constants.sample
+sample_replace: "$site_sample"
+
 ###########################################################
 #                Search
 ###########################################################

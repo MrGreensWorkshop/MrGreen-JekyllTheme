@@ -124,14 +124,10 @@ post-list:
 
 # for home layout
 home:
-  title: Welcome
+  title: Home
   button_name: Home
   new_posts_title: New Articles
   new_posts_show_more_button: View More ...
-  # you can use $site_brand in line1 and line2 to convert your site.data.owner[lng].brand text
-  top_header_line1: "Welcome To"
-  # if commented, top header will be a single line
-  top_header_line2: "$site_brand Theme"
 
 # for archives layout
 archives:
@@ -143,7 +139,6 @@ archives:
 about:
   title: About
   button_name: About
-  sub_title: "Awesome jekyll theme"
   email_title: email
 
 # for links layout
@@ -164,6 +159,13 @@ projects:
 privacy-policy:
   title: &privacy_policy_title Privacy policy
 
+# constants to be replaced for
+constants:
+  greetings: Hello
+  welcome: Welcome
+  sample: Sample
+
+# for cookie consent
 cookie_consent:
   privacy_policy_link_text: *privacy_policy_title
   side_nav_setting_button_tooltip: &cookie_settings Cookie settings
