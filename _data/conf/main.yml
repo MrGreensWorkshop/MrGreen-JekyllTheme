@@ -45,7 +45,7 @@ language_switch_hover_effect: "hover-effect"
 # this enables top nav language switch
 language_switch_top_nav: false
 
-# replace text with owner.brand
+# replace text with owner[lng].brand
 brand_replace: "$site_brand"
 
 ###########################################################
