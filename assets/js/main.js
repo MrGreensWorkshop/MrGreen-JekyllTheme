@@ -25,8 +25,7 @@ layout: util/compress_js
 {%- endif %}
 
 {% for owner in site.data.owner %}
-{%- assign owner_lng = owner[1] %}
-  {% assign email_exist = owner_lng.contacts | where_exp: "item", "item.email != nil" | first -%}
+  {% assign email_exist = owner[1].contacts | where_exp: "item", "item.email != nil" | first -%}
   {% if email_exist -%}
     {% include_relative _js/default/set-email.js %}
     {% break %}
