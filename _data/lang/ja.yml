@@ -43,7 +43,7 @@ copyright:
 
 creative_commons:
   some_rights_reserved: 一部の権利は留保されています。
-  # check _data/owner.yml for license type.
+  # check _data/owner/[language].yml for license type.
   by: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。
   by-nd: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 - 改変禁止 4.0 国際 ライセンスの下に提供されています。
   by-sa: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンスの下に提供されています。

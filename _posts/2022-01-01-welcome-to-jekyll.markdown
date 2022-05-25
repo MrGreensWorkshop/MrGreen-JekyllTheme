@@ -4,7 +4,7 @@ lng_pair: id_What_is_this
 title: "Welcome to Jekyll!"
 
 # post specific
-# if not specified, .name will be used from _data/owner.yml
+# if not specified, .name will be used from _data/owner/[language].yml
 author: Jekyll
 # multiple category is not supported
 category: jekyll
@@ -21,7 +21,7 @@ date: 2022-01-01 10:04:30 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2022-01-01 10:04:30 +0900
-# check the meta_common_description in _data/lang/[language].yml
+# check the meta_common_description in _data/owner/[language].yml
 #meta_description: ""
 
 # optional

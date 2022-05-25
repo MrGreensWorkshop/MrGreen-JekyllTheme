@@ -229,14 +229,14 @@ contacts_open_in_new_tab: true
 ###########################################################
 #                Copyright text
 ###########################################################
-# this will add current year to the end of copyright_start_year which is defined in _data/owner.yml
+# this will add current year to the end of copyright_start_year which is defined in _data/owner/[language].yml
 copyright_add_end_year: false
 
 # this uses copyright.additional_text defined in _data/lang/[language].yml
 # not recommended if creative_commons is enabled.
 copyright_add_text_to_end: false
 
-# this will add creative commons license. check _data/owner.yml for license type.
+# this will add creative commons license. check _data/owner/[language].yml for license type.
 creative_commons:
   enable: true
   tooltip: true
@@ -300,7 +300,7 @@ google:
 ###########################################################
 #                Cookie consent
 ###########################################################
-# make sure google_analytics_id is set in _data/owner.yml
+# make sure google_analytics_id is set in _data/owner/[language].yml
 # make sure your environment does not match with google.analytics.ignore
 cookie_consent:
   enable: true

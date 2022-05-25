@@ -4,7 +4,7 @@ lng_pair: id_Mr_Green_Jekyll_Theme
 title: Mr. Green Jekyll Theme
 
 # post specific
-# if not specified, .name will be used from _data/owner.yml
+# if not specified, .name will be used from _data/owner/[language].yml
 author: Mr. Green's Workshop
 # multiple category is not supported
 category: jekyll
@@ -21,7 +21,7 @@ date: 2022-03-03 12:32:10 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2022-03-03 12:32:10 +0900
-# check the meta_common_description in _data/lang/[language].yml
+# check the meta_common_description in _data/owner/[language].yml
 #meta_description: ""
 
 # optional

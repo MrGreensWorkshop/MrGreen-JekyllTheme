@@ -9,9 +9,9 @@ home:
 ######################### About ###########################
 
 about:
-  # make sure email address is defined in _data/owner.yml
+  # make sure email address is defined in _data/owner/[language].yml
   show_email: false
-  # make sure contacts is defined in _data/owner.yml
+  # make sure contacts is defined in _data/owner/[language].yml
   show_contacts: true
   # to disable icon, comment below
   #sub_title_icon: "fa fa-star"
