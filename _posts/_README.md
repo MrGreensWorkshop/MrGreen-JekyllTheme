@@ -65,7 +65,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 
 #### Github pages
 
-1. Fork the repo.
+1. [Fork the repo](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/fork).
 1. Edit \_config.yml and change `url` like below and push changes.
 
    ```yaml
