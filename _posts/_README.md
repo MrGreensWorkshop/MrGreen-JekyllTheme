@@ -14,9 +14,9 @@
 ---
 
 <div align="center">
-  <img src="https://mrgreen-jekylltheme.mrgreensworkshop.com/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
+  <img src="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
   <br><br>
-  <a href="https://MrGreen-JekyllTheme.MrGreensWorkshop.com" style="font-weight: bold;" >Click here for live demo</a>
+  <a href="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com" style="font-weight: bold;" >Click here for live demo</a>
 </div>
 
 
@@ -97,7 +97,7 @@ I want to thank these projects that gave me an opportunity to build my web site.
 
 - [GitHub Pages](https://pages.github.com/) Hosted directly from your GitHub repository. Just push the changes and the site will be automatically generated.
 
-Some of the sites that I find useful while I'm working on this project. [links page](https://MrGreen-JekyllTheme.MrGreensWorkshop.com/tabs/links.html)
+Some of the sites that I find useful while I'm working on this project. [links page](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/tabs/links.html)
 
 ### [You Can Support My Work](https://github.com/MrGreensWorkshop#sponsorship)
 

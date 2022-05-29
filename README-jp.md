@@ -14,9 +14,9 @@
 ---
 
 <div align="center">
-  <img src="https://mrgreen-jekylltheme.mrgreensworkshop.com/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
+  <img src="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
   <br><br>
-  <a href="https://MrGreen-JekyllTheme.MrGreensWorkshop.com/ja" style="font-weight: bold;" >ライブデモはこちら</a>
+  <a href="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/ja" style="font-weight: bold;" >ライブデモはこちら</a>
 </div>
 
 
@@ -97,7 +97,7 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 
 - [GitHub Pages](https://pages.github.com/) は、GitHub のリポジトリから直接ホスティングされる。変更をプッシュするだけで、サイトが自動生成。
 
-このプロジェクト作成中に見つけた役立つサイトを紹介します。[リンクページへ](https://MrGreen-JekyllTheme.MrGreensWorkshop.com/ja/tabs/links.html)
+このプロジェクト作成中に見つけた役立つサイトを紹介します。[リンクページへ](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/ja/tabs/links.html)
 
 ### [You Can Support My Work](https://github.com/MrGreensWorkshop/MrGreensWorkshop/blob/main/README-jp.md#スポンサーシップ)
 
