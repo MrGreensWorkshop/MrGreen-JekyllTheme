@@ -14,9 +14,9 @@
 ---
 
 <div align="center">
-  <img src="https://mrgreen-jekylltheme.mrgreensworkshop.com/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
+  <img src="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/assets/img/posts/mock1.jpg" height="500" alt="screen_mock">
   <br><br>
-  <a href="https://MrGreen-JekyllTheme.MrGreensWorkshop.com/ja" style="font-weight: bold;" >ライブデモはこちら</a>
+  <a href="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/ja" style="font-weight: bold;" >ライブデモはこちら</a>
 </div>
 
 
@@ -24,7 +24,7 @@
 
 <!-- outline-start -->
 
-[Mr. Green](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme) は、[Jekyll](https://jekyllrb.com/) で生成された、[GitHub Pages](https://pages.github.com/) と完全に互換性のある多言語テーマです。
+[Mr. Green](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme) は、[Jekyll](https://jekyllrb-ja.github.io) で生成された、[GitHub Pages](https://pages.github.com/) と完全に互換性のある多言語テーマです。
 
 <!-- outline-end -->
 
@@ -65,7 +65,7 @@
 
 #### Github pages
 
-1. リポをフォークする。
+1. [リポをフォークする](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/fork)。
 1. \_config.yml を編集し、`url` を以下のように変え、変更をプッシュする。
 
    ```yaml
@@ -78,8 +78,8 @@
 
 #### Local build
 
-1. [Jekyll をインストール](https://jekyllrb.com/docs/installation/)する。
-1. リポをクローン、または [download](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest)し、コマンドプロンプトでフォルダに移動し、`bundle install` コマンドを実行する。
+1. [Jekyll をインストール](https://jekyllrb-ja.github.io/docs/installation/)する。
+1. リポをクローン、または [ダウンロード](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest)し、コマンドプロンプトでフォルダに移動し、`bundle install` コマンドを実行する。
 1. `bundle exec jekyll serve --watch --host 0.0.0.0 --safe`コマンドでビルドする。
     - `--host 0.0.0.0` を指定すると、同じ LAN から Web サーバーにアクセスすることができる。
     - `--safe`を指定すると、第三者のプラグインが追加されていないことが確認できる。(Github ページ開発用)
@@ -93,11 +93,11 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 
 自分のWebサイトを構築する機会を与えてくれたこれらのプロジェクトに感謝します。
 
-- [Jekyll](https://jekyllrb.com/) は、静的サイトジェネレータ。好きなマークアップ言語で書かれたテキストを取り、静的なWebサイトを作成するためのレイアウトを使用している。自身でサイトのルック＆フィール、URL、ページに表示されるデータなどを微調整することができる。ボランティアによって維持されている素晴らしいプロジェクト。
+- [Jekyll](https://jekyllrb-ja.github.io) は、静的サイトジェネレータ。好きなマークアップ言語で書かれたテキストを取り、静的なWebサイトを作成するためのレイアウトを使用している。自身でサイトのルック＆フィール、URL、ページに表示されるデータなどを微調整することができる。ボランティアによって維持されている素晴らしいプロジェクト。
 
-- [GitHub Pages](https://pages.github.com/) GitHub はリポジトリから直接ホスティングされる。変更をプッシュするだけで、サイトが自動生成。
+- [GitHub Pages](https://pages.github.com/) は、GitHub のリポジトリから直接ホスティングされる。変更をプッシュするだけで、サイトが自動生成。
 
-このプロジェクト作成中に見つけた役立つサイトを紹介します。[リンクページへ](https://MrGreen-JekyllTheme.MrGreensWorkshop.com/ja/tabs/links.html)
+このプロジェクト作成中に見つけた役立つサイトを紹介します。[リンクページへ](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/ja/tabs/links.html)
 
 ### [You Can Support My Work](https://github.com/MrGreensWorkshop/MrGreensWorkshop/blob/main/README-jp.md#スポンサーシップ)
 
