@@ -6,8 +6,8 @@
 layout: util/compress
 # https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen
 ---
-{%- assign app_name = site.data.owner.brand | append: "'s App" -%}
-{%- assign description = site.data.lang[site.data.conf.main.default_lng].meta_common_description | replace: site.data.conf.main.brand_replace, site.data.owner.brand -%}
+{%- assign app_name = site.data.owner[site.data.conf.main.default_lng].brand | append: "'s App" -%}
+{%- assign description = site.data.owner[site.data.conf.main.default_lng].meta_common_description | replace: site.data.conf.main.brand_replace, site.data.owner[site.data.conf.main.default_lng].brand -%}
 {
   "short_name": "{{ app_name }}",
   "name": "{{ app_name }}",

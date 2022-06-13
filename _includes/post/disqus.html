@@ -5,7 +5,7 @@
 {%-endcomment-%}
 
 <div id="disqus_thread">
-  {%- if site.data.owner.disqus_shortname == nil or site.data.owner.disqus_shortname == empty -%}
+  {%- if site.data.owner[lng].disqus_shortname == nil or site.data.owner[lng].disqus_shortname == empty -%}
   {%comment-%} for debug purpose {%-endcomment-%}
   <script>alert("disqus disqus_shortname is not defined. You can disable Disqus from _data/conf/posts.yml [comments.disqus.enable]");</script>
   {%- endif -%}

@@ -16,7 +16,7 @@ lng_pair: id_archives
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2022-03-03 12:32:00 +0000
-# check the meta_common_description in _data/lang/[language].yml
+# check the meta_common_description in _data/owner/[language].yml
 #meta_description: ""
 
 # optional

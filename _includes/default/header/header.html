@@ -9,13 +9,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 {% assign page_title = page.title | default: site.data.lang[lng][page.layout].title -%}
 {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
-<title>{{ site.data.owner.brand }} - {{ page_title }}</title>
+<title>{{ site.data.owner[lng].brand }} - {{ page_title }}</title>
 
 {%- if site.data.conf.main.google_font_load_in_head -%}
   {%- include default/header/google-font-load.html %}
 {%- endif %}
 
-{% if site.data.owner.google_analytics_id != empty and site.data.owner.google_analytics_id != nil and jekyll.environment != site.data.conf.main.google.analytics.ignore -%}
+{% if site.data.owner[lng].google_analytics_id != empty and site.data.owner[lng].google_analytics_id != nil and jekyll.environment != site.data.conf.main.google.analytics.ignore -%}
   <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com" crossorigin>
 {%- endif -%}
 
@@ -34,8 +34,8 @@
   <meta name="google" content="nositelinkssearchbox">
 {%- endif %}
 
-{%- if site.data.conf.main.meta.google_site_verify and site.data.owner.google_site_verification != empty and site.data.owner.google_site_verification != nil and jekyll.environment != site.data.conf.main.google.site_verification.ignore %}
-  <meta name="google-site-verification" content="{{ site.data.owner.google_site_verification }}">
+{%- if site.data.conf.main.meta.google_site_verify and site.data.owner[lng].google_site_verification != empty and site.data.owner[lng].google_site_verification != nil and jekyll.environment != site.data.conf.main.google.site_verification.ignore %}
+  <meta name="google-site-verification" content="{{ site.data.owner[lng].google_site_verification }}">
 {%- endif %}
 
 {%- if site.data.conf.main.meta.mobile_app %}

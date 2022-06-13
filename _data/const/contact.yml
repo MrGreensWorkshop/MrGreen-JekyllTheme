@@ -1,6 +1,6 @@
 # The contact account constants
 # for icons https://fontawesome.com/v4.7/icons/
-# keys need to match with accounts in _data/owner.yml file
+# keys need to match with accounts in _data/owner/[language].yml file
 
 github:
   icon: "fa fa-github"

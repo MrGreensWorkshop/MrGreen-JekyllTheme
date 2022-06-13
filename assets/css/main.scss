@@ -140,7 +140,14 @@
 {% assign pages = site.html_pages | where_exp: "item", "item.layout == 'projects'" %}
 {% if pages.size > 0 %} {% assign projects_page_exist = true %} {% endif %}
 
-{% if site.data.owner.contacts.size > 0 %}
+{% for owner in site.data.owner %}
+  {% if owner[1].contacts.size > 0 %}
+    {% assign contacts_exist = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if contacts_exist %}
   {% if about_page_exist and site.data.conf.others.about.show_contacts %}
     {% assign about_contact_enable = true %}
   {% endif %}
@@ -209,7 +216,7 @@
 {% if about_page_exist %}
   @import "about/about-style";
 
-  {% if site.data.conf.others.about.show_contacts and site.data.owner.contacts.size > 0 %}
+  {% if site.data.conf.others.about.show_contacts and contacts_exist %}
     @import "about/about-contact";
   {% endif %}
 {% endif %}

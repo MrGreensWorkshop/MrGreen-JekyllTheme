@@ -27,7 +27,6 @@ not_found:
 no_translation_tooltip: No Translation
 
 navigation:
-  brand_sub_text: Jekyll theme
   contact_header: Contact
 
 color_scheme_switch_tooltip: Color scheme
@@ -44,7 +43,7 @@ copyright:
 
 creative_commons:
   some_rights_reserved: Some rights reserved.
-  # check _data/owner.yml for license type.
+  # check _data/owner/[language].yml for license type.
   by: Except where otherwise noted, content on this web site is licensed under a Creative Commons Attribution 4.0 International License.
   by-nd: Except where otherwise noted, content on this web site is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License.
   by-sa: Except where otherwise noted, content on this web site is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
@@ -129,10 +128,6 @@ home:
   button_name: Home
   new_posts_title: New Articles
   new_posts_show_more_button: View More ...
-  # you can use $site_brand in line1 and line2 to convert your site.data.owner.brand text
-  top_header_line1: "Welcome To"
-  # if commented, top header will be a single line
-  top_header_line2: "$site_brand Theme"
 
 # for archives layout
 archives:
@@ -144,7 +139,6 @@ archives:
 about:
   title: About
   button_name: About
-  sub_title: "Awesome jekyll theme"
   email_title: email
 
 # for links layout
@@ -165,18 +159,13 @@ projects:
 privacy-policy:
   title: &privacy_policy_title Privacy policy
 
-# seo meta this is needed for each language
-# If meta_description is not defined in front matter, it's created from (post / page) content,
-# if it has no content, this will be used for page description. It is also used in manifest.json
-meta_common_description: &meta_info $site_brand is a multilingual theme generated with Jekyll and fully compatible with GitHub Pages.
+# constants to be replaced for
+constants:
+  greetings: Hello
+  welcome: Welcome
+  sample: Sample
 
-auto_content:
-  title: Sample post (auto generated)
-  greeting: Hello!
-  text: *meta_info
-  more_info: Learn More.
-  auto_generated_text: This is an auto generated sample content for display in the selected language.
-
+# for cookie consent
 cookie_consent:
   privacy_policy_link_text: *privacy_policy_title
   side_nav_setting_button_tooltip: &cookie_settings Cookie settings

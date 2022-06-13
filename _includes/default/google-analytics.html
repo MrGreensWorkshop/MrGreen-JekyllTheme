@@ -15,10 +15,10 @@
 {%- endif %}
 
 {%-comment-%} for more info https://developers.google.com/web/ilt/pwa/lab-integrating-analytics?hl=en {%-endcomment-%}
-<script defer src="https://www.googletagmanager.com/gtag/js?id={{ site.data.owner.google_analytics_id }}"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id={{ site.data.owner[lng].google_analytics_id }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '{{ site.data.owner.google_analytics_id }}');
+  gtag('config', '{{ site.data.owner[lng].google_analytics_id }}');
 </script>

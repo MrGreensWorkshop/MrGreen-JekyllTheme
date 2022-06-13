@@ -11,7 +11,7 @@
 {%- else -%}
   {%- assign meta_og_type = "website" %}
 {%- endif -%}
-<meta property="og:site_name" content="{{ site.data.owner.brand }}">
+<meta property="og:site_name" content="{{ site.data.owner[lng].brand }}">
 <meta property="og:type" content="{{ meta_og_type }}">
 <meta property="og:title" content="{{ meta_title | truncate: 50 }}">
 <meta property="og:description" content="{{ meta_desc | truncate: 150 }}">

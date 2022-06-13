@@ -13,7 +13,7 @@
   <hr>
   <h3>{{ site.data.lang[lng].navigation.contact_header }}</h3>
   <ul>
-  {%- for accounts in site.data.owner.contacts -%}
+  {%- for accounts in site.data.owner[lng].contacts -%}
     {%- assign account_var = accounts | first %}{% assign account_key = account_var[0] %}{% assign account_username = account_var[1] -%}
     {%- assign contact_const = site.data.const.contact[account_key] -%}
     <li>

@@ -137,7 +137,7 @@ pager_page_numbers_first_last_buttons: true
 comments:
   # to enable comments please set to true, comments can be disabled on any post by setting comments_disable: true
   enable: true
-  # make sure disqus_shortname is set in _data/owner.yml
+  # make sure disqus_shortname is set in _data/owner/[language].yml
   disqus:
     # to enable disqus comments please set to true
     enable: false

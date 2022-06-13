@@ -6,7 +6,7 @@
 
 {%-comment-%} out: copyright_text_out {%-endcomment-%}
 
-{%- assign copyright_year = site.data.owner.copyright_start_year -%}
+{%- assign copyright_year = site.data.owner[lng].copyright_start_year -%}
 {%- if site.data.conf.main.copyright_add_end_year and copyright_year != nil and copyright_year != empty -%}
   {%- assign copyright_year_end = site.time | date: '%Y' %}
   {%- if copyright_year != copyright_year_end -%}
@@ -14,4 +14,4 @@
   {%-endif-%}
 {%- endif -%}
 
-{%- capture copyright_text_out -%} &copy; {{ copyright_year }} {{ site.data.owner.brand }}. {%- endcapture -%}
+{%- capture copyright_text_out -%} &copy; {{ copyright_year }} {{ site.data.owner[lng].brand }}. {%- endcapture -%}

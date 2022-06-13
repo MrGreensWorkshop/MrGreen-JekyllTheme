@@ -57,7 +57,7 @@
 
   function disqusLoader() {
     var d = document, s = d.createElement('script');
-    s.src = 'https://{{ site.data.owner.disqus_shortname }}.disqus.com/embed.js';
+    s.src = 'https://{{ site.data.owner[lng].disqus_shortname }}.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
   }
@@ -170,7 +170,7 @@
 {%comment-%} add comment count {%-endcomment-%}
 {%- if post_comment_enabled or page.layout == 'post-list' -%}
   {% if page.comments_disable != true and site.data.conf.posts.comments.disqus.comment_count %}
-    <script id="dsq-count-scr" src="https://{{ site.data.owner.disqus_shortname }}.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="https://{{ site.data.owner[lng].disqus_shortname }}.disqus.com/count.js" async></script>
     {%comment-%} scroll to comments {%-endcomment-%}
     {%if post_comment_enabled -%}
       <script>

@@ -18,7 +18,7 @@
 {%- assign meta_about_image = site.data.conf.main.meta.schema_markup_about_img | absolute_url -%}
 
 {%-comment-%} meta description for site {%-endcomment-%}
-{%- assign site_default_desc = site.data.lang[lng].meta_common_description | replace: site.data.conf.main.brand_replace, site.data.owner.brand | truncate: 150 -%}
+{%- assign site_default_desc = site.data.owner[lng].meta_common_description | replace: site.data.conf.main.brand_replace, site.data.owner[lng].brand | truncate: 150 -%}
 
 {%- if page.layout == 'post' %}
   {%- include post-list/post-custom-excerpt.liquid content = page.content limit_words = 25 -%}
@@ -36,7 +36,7 @@
 {%- assign page_title = page.title | default: site.data.lang[lng][page.layout].title -%}
 {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
 {%- assign meta_title = page_title | xml_escape -%}
-{%- assign meta_author = page.author | default: site.data.owner.name -%}
+{%- assign meta_author = page.author | default: site.data.owner[lng].name -%}
 {%- assign meta_page_url = page.url | absolute_url -%}
 
 {%- assign meta_keywords = '' | split: '' -%}
