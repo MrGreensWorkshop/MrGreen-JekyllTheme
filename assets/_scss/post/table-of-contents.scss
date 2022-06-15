@@ -12,7 +12,7 @@
   /* table of contents box top */
   top: 600px;
   left: 10px;
-  width: calc(var(--side-nav-width-def) + var(--main-container-margin));
+  max-width: calc(var(--side-nav-width-def) + var(--main-container-margin));
 }
 
 #toc-container .panel.panel-default {
