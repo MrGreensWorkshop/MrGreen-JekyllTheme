@@ -47,6 +47,7 @@
   font-size: 3.5rem;
   margin-top: 0px;
   color: var(--about-header-title-color);
+  width: calc((100vw - var(--side-nav-width)) / 2);
 }
 
 /* sub-title and email font */
