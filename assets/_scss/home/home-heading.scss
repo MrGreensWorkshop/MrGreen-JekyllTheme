@@ -20,6 +20,13 @@
   display: table;
 }
 
+.home-heading > img {
+  border-radius: 10px;
+  max-width: var(--main-container-width-limit);
+  width: 100%;
+  height: auto;
+}
+
 .home-heading-message {
   font-size: 4.2rem;
   font-weight: 700;
