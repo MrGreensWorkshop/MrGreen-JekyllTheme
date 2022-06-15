@@ -12,6 +12,7 @@
   /* table of contents box top */
   top: 600px;
   left: 10px;
+  width: calc(var(--side-nav-width-def) + var(--main-container-margin));
 }
 
 #toc-container .panel.panel-default {
@@ -45,6 +46,9 @@
 
 #table-of-contents .nav > li > a {
   font-size: 1.3rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #table-of-contents .nav .nav > li > a {
