@@ -1,0 +1,19 @@
+{%- if site.data.conf.main.youtube.privacy -%}
+  {%- assign youtube_base_url = "https://www.youtube-nocookie.com" -%}
+{%- else -%}
+  {%- assign youtube_base_url = "https://www.youtube.com" -%}
+{%- endif -%}
+
+{%- if include.center == true -%}
+  {%- assign center_class = "video-centered" -%}
+{%- endif -%}
+
+{%- if include.center == nil and site.data.conf.main.youtube.default_center -%}
+  {%- assign center_class = "video-centered" -%}
+{%- endif -%}
+
+<div class="video-wrapper {{ center_class }}">
+  <div class="video-container">
+    <iframe width="560" height="315" src="{{ youtube_base_url }}/embed/{{ include.link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+  </div>
+</div>
