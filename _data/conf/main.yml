@@ -358,3 +358,14 @@ cookie_consent:
   side_nav_setting_button:
     enable: true
     tooltip: true
+
+###########################################################
+#                Youtube Videos
+###########################################################
+youtube:
+  # if it's true www.youtube-nocookie.com will be used.
+  # otherwise www.youtube.com will be used for youtube video links.
+  privacy: false
+  # if it's true, and "centered" is not provided to include parameter,
+  # video will be horizontally centered to wrapper.
+  default_center: false
