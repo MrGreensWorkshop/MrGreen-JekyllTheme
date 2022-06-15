@@ -16,16 +16,24 @@
   {%- for accounts in site.data.owner[lng].contacts -%}
     {%- assign account_var = accounts | first %}{% assign account_key = account_var[0] %}{% assign account_username = account_var[1] -%}
     {%- assign contact_const = site.data.const.contact[account_key] -%}
+    {%- assign icon_first_chr = nil -%}
+    {%- assign contact_icon_tag = nil -%}
+    {%- assign icon_first_chr = contact_const.icon | slice: 0 -%}
+    {%- if contact_const.icon contains 'http://' or contact_const.icon contains 'https://' or icon_first_chr == '/' %}
+      {%- capture contact_icon_tag -%} <img src="{{ contact_const.icon }}" /> {%- endcapture %}
+    {% else %}
+      {%- capture contact_icon_tag -%} <i class="{{ contact_const.icon }}" aria-hidden="true"></i> {%- endcapture %}
+    {% endif -%}
     <li>
     {%- if account_key == 'email' -%}
       {%- assign _email = account_username | split: '@' %}
-      <a href="javascript:void(0);" {{ effect_contacts_button }} onclick="setAddress('{{ _email[0] }}', '{{ _email[1] }}');"><i class="{{ contact_const.icon }}" aria-hidden="true"></i></a>
+      <a href="javascript:void(0);" {{ effect_contacts_button }} onclick="setAddress('{{ _email[0] }}', '{{ _email[1] }}');">{{ contact_icon_tag }}</a>
     {%- else -%}
       {%- assign tag_url = contact_const.url | append:'/' | append: account_username -%}
       {%- if site.data.conf.main.contacts_open_in_new_tab == true -%}
-      <a href="{{ tag_url }}" {{ effect_contacts_button }} target="_blank" rel="noopener noreferrer"><i class="{{ contact_const.icon }}" aria-hidden="true"></i></a>
+      <a href="{{ tag_url }}" {{ effect_contacts_button }} target="_blank" rel="noopener noreferrer">{{ contact_icon_tag }}</a>
       {%- else -%}
-      <a href="{{ tag_url }}" {{ effect_contacts_button }}><i class="{{ contact_const.icon }}" aria-hidden="true"></i></a>
+      <a href="{{ tag_url }}" {{ effect_contacts_button }}>{{ contact_icon_tag }}</a>
       {%- endif -%}
     {%- endif -%}
     </li>

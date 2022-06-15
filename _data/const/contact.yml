@@ -1,5 +1,11 @@
 # The contact account constants
-# for icons https://fontawesome.com/v4.7/icons/
+# for icons please check this page https://fontawesome.com/v4.7/icons/
+#   ex:   icon: "fa fa-github"
+# you can also add svg or png images as icons (local (starts with '/') or http:// or https://)
+#   ex:   icon: "/assets/img/default/sample.svg"
+#         icon: "https://www.example.com/sample.svg"
+#   * only black colored and transparent backgrounded svg or png images are supported.
+#   * the image should be square
 # keys need to match with accounts in _data/owner/[language].yml file
 
 github:

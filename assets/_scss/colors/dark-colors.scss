@@ -36,6 +36,14 @@ $anchor-text-color-dark: #3389de;
   --contact-icons-color: #{$button-color-dark};
   --contact-icons-hover-color: #cfcfcc;
   --contact-header-color: #{$button-color-dark};
+  > ul > li > a > img {
+    filter: invert(36%) sepia(0%) saturate(1157%) hue-rotate(184deg)
+      brightness(96%) contrast(66%);
+  }
+  > ul > li > a:hover > img {
+    filter: invert(84%) sepia(4%) saturate(114%) hue-rotate(22deg)
+      brightness(105%) contrast(80%);
+  }
 }
 // default/default
 %default-colors-dark {

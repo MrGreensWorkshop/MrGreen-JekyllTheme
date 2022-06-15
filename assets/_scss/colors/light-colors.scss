@@ -36,6 +36,13 @@ $anchor-text-color-light: #3389de;
   --contact-icons-color: #{$button-color-light};
   --contact-icons-hover-color: #303033;
   --contact-header-color: #{$button-color-light};
+  > ul > li > a > img {
+    filter: invert(70%) sepia(0%) saturate(179%) hue-rotate(158deg)
+      brightness(94%) contrast(74%);
+  }
+  > ul > li > a:hover > img {
+    filter: unset;
+  }
 }
 // default/default
 %default-colors-light {
