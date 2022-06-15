@@ -1,10 +1,12 @@
-######################### About ###########################
+######################### Home ###########################
 
 home:
   # enables new posts
   new_posts: true
   # to remove limit, please comment it
   new_posts_count_limit: 3
+  # header image using img tag with different scaling.
+  header_img_with_img_tag: false
 
 ######################### About ###########################
 
