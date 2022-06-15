@@ -60,3 +60,8 @@
 .contact-container > ul > li > a:hover {
   color: var(--contact-icons-hover-color);
 }
+
+.contact-container > ul > li > a > img {
+  width: 20px;
+  height: 20px;
+}
