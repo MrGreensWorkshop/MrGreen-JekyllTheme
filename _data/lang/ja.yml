@@ -60,6 +60,10 @@ post:
   read_time:
     unit: "分"
     text: "で読めます"
+    # c for char w for word
+    word_char: c
+    # char or words per minute
+    per_minute: 500
   pager_buttons:
     older_post: "← 古い投稿へ"
     newer_post: "新しい投稿へ →"

@@ -60,6 +60,10 @@ post:
   read_time:
     unit: " min"
     text: " read"
+    # c for char w for word
+    word_char: w
+    # char or words per minute
+    per_minute: 200
   pager_buttons:
     older_post: "← Older Post"
     newer_post: "Newer Post →"
