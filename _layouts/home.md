@@ -24,7 +24,7 @@ layout: default
       {% endif -%}
     </div>
   </div>
-  <div class="home-intro-text">
+  <div class="home-intro-text markdown-style">
     {{ content }}
   </div>
 </div>

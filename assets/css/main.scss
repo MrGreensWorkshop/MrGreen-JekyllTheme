@@ -160,7 +160,7 @@
   @import "common/post-info";
 {% endif %}
 
-{% if post_exist or projects_page_exist %}
+{% if post_exist or projects_page_exist or home_page_exist or about_page_exist %}
   @import "common/markdown-style";
 {% endif %}
 

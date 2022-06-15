@@ -75,18 +75,25 @@
   padding: var(--text-spacing);
 }
 
-/* remove last spacing */
+/* remove first and last spacing */
+.about-container .about-msg :first-child {
+  margin-top: 0;
+}
+
 .about-container .about-msg :last-child {
   margin-bottom: 0;
 }
 
 /* about text */
+/* currently handled by markdown-style use this to override */
+/*
 .about-container .about-msg > p {
   font-size: 1.6rem;
   font-weight: 300;
-  /*color: var(--about-msg-text-color);*/
+  //color: var(--about-msg-text-color);
   text-align: justify;
 }
+*/
 
 @media screen and (max-width: 500px) {
   .about-container {

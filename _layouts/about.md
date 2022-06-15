@@ -45,7 +45,7 @@ layout: default
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="about-msg">
+      <div class="about-msg markdown-style">
         {{ content }}
       </div>
     </div>
