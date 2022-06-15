@@ -12,7 +12,7 @@ source "https://rubygems.org"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # all supported plugins by GitHub Pages are included in "github-pages". (GitHub Pages doesn't support 3rd party plugins)
-gem "github-pages", "~> 223"
+gem "github-pages", "~> 226"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
