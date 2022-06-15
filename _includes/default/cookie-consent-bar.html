@@ -11,8 +11,9 @@
 {%- assign privacy_policy_link = nil -%}
 {%- if link_text != nil and link_text != empty and layout_page_obj.url != nil %}
   {%- assign privacy_policy_link = site.baseurl | append: '<a href="' | append: layout_page_obj.url | append: '">' | append: link_text | append: '</a>' -%}
+  {%- assign privacy_text = data_conf.privacy_msg | replace: site.data.conf.main.cookie_consent.privacy_link_replace, privacy_policy_link -%}
 {% endif -%}
-{%- assign info_text = info_text | replace: site.data.conf.main.cookie_consent.privacy_link_replace, privacy_policy_link -%}
+{%- assign info_text = info_text | append : privacy_text -%}
 
 <div class="consent-bar">
   <a class="close-button" href="javascript:void(0);" onclick="CookieConsent.hideConsentBar();"><i class="fa-fw fa fa-times"></i></a>

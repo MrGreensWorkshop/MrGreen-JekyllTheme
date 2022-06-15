@@ -176,7 +176,8 @@ cookie_consent:
   panel_bar:
     msg: >
       This website uses cookies to optimize site functionality.
-      It will be activated with your approval. Check $privacy_link
+      It will be activated with your approval.
+    privacy_msg: Check $privacy_link.
     buttons:
       accept: &accept_button Allow all
       settings: Customize
@@ -185,7 +186,8 @@ cookie_consent:
     title: *cookie_settings
     msg: >
       This website uses cookies to optimize site functionality.
-      It will be activated with your approval. Please click each item below for cookie policy. Check $privacy_link
+      It will be activated with your approval. Please click each item below for cookie policy.
+    privacy_msg: Check $privacy_link.
     buttons:
       accept: *accept_button
       save: Allow selection

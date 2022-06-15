@@ -176,7 +176,8 @@ cookie_consent:
   panel_bar:
     msg: >
       当Webサイトは、機能を最適化するためにクッキーを使用しています。
-      承認後に有効になります。$privacy_linkを確認する。
+      承認後に有効になります。
+    privacy_msg: $privacy_linkを確認する。
     buttons:
       accept: &accept_button 全て許可
       settings: 設定
@@ -185,7 +186,8 @@ cookie_consent:
     title: *cookie_settings
     msg: >
       当Webサイトは、機能を最適化するためにクッキーを使用しています。
-      承認後に有効になります。クッキーポリシーについては、以下の各項目をクリックしてください。$privacy_linkを確認する。
+      承認後に有効になります。クッキーポリシーについては、以下の各項目をクリックしてください。
+    privacy_msg: $privacy_linkを確認する。
     buttons:
       accept: *accept_button
       save: 選択を許可
