@@ -26,6 +26,7 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 -->
+
 **Expected behavior**
 <!-- A clear and concise description of what you expected to happen. -->
 
@@ -35,6 +36,7 @@ Steps to reproduce the behavior:
  - Browser [e.g. chrome, safari]
  - Version [e.g. 22]
 -->
+
 **Mobile devices (please complete the following information):**
 <!--
  - Device: [e.g. iPhone6]
@@ -42,5 +44,6 @@ Steps to reproduce the behavior:
  - Browser [e.g. stock browser, safari]
  - Version [e.g. 22]
 -->
+
 **Additional context**
 <!-- Add any other context about the problem here. -->
