@@ -24,9 +24,11 @@
   {% assign const_sample = const_sample | append: site.data.lang[lng].constants.sample | append: " " %}
 {% endfor -%}
 
-{%- capture website_info_text -%}
-{{ website_info_text }} [{{site.data.owner[lng].auto_content.more_info}}]({{ site.baseurl }}{{ out_lng_page.url }})
-{%- endcapture -%}
+{%- if site.data.owner[lng].auto_content.text -%}
+  {%- capture website_info_text -%}
+  {{ website_info_text }} [{{site.data.owner[lng].auto_content.more_info}}]({{ site.baseurl }}{{ out_lng_page.url }})
+  {%- endcapture -%}
+{%-endif-%}
 
 {%- capture website_greeting_text -%}
 ### {{ site.data.owner[lng].auto_content.greeting | default: site.data.lang[lng].constants.greetings }}
