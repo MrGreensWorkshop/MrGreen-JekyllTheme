@@ -47,7 +47,7 @@
 .markdown-style li p {
   font-weight: 300;
   font-size: 1.5rem;
-  line-height: 2.4rem;
+  line-height: 2.7rem;
 }
 
 /* center items */
@@ -92,6 +92,14 @@
 .markdown-style > h5,
 .markdown-style > h6 {
   color: var(--markdown-styles-header-text-color);
+}
+
+.markdown-style > h1,
+.markdown-style > h2,
+.markdown-style > h3,
+.markdown-style > h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .markdown-style .table-striped > tbody > tr:last-child {
