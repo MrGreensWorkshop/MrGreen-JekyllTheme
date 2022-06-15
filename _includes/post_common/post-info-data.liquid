@@ -10,13 +10,16 @@
 {%- assign read_time = nil -%}
 {%- assign comment_style = nil -%}
 
+{%- if site.data.lang[lng].post.read_time.word_char == "c" -%}
+  {%- assign words = include.content | strip_html | strip_newlines | size | minus: 250 -%}
+{%- else -%}
+  {%- assign words = include.content | number_of_words | minus: 250 -%}
+{%- endif -%}
+
 {%- assign post_date = include.date | date: site.data.lang[lng].date.long -%}
 {%- capture read_time -%}
-  {%- capture words -%}
-    {{ include.content | number_of_words }}
-  {%- endcapture -%}
   {%- unless words contains "-" -%}
-    {{ words | plus: 250 | divided_by: 250 | append: site.data.lang[lng].post.read_time.unit | append: site.data.lang[lng].post.read_time.text }}
+    {{ words | plus: 250 | divided_by: site.data.lang[lng].post.read_time.per_minute | append: site.data.lang[lng].post.read_time.unit | append: site.data.lang[lng].post.read_time.text }}
   {%- endunless -%}
 {% endcapture -%}
 
