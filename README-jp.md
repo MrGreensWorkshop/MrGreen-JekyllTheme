@@ -87,7 +87,7 @@
 
 ### Documentation
 
-YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https://www.youtube.com/watch?v=x9lvXBKD2Us&list=PL8XOPe9jXvWOrg6XAulRzy9MQl_-A7Yns)を確認してみてください。
+YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https://www.youtube.com/playlist?list=PL8XOPe9jXvWOrg6XAulRzy9MQl_-A7Yns)を確認してみてください。
 
 ### Credits
 

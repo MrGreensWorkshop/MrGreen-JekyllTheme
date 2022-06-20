@@ -87,7 +87,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 
 ### Documentation
 
-Check out [Mr. Green theme tutorials playlist](https://www.youtube.com/watch?v=Tz5iWWX0WD4&list=PLAymxPbYHgl-fFy5can7uZBMJtFWVcphD) on YouTube
+Check out [Mr. Green theme tutorials playlist](https://www.youtube.com/playlist?list=PLAymxPbYHgl-fFy5can7uZBMJtFWVcphD) on YouTube
 
 ### Credits
 
