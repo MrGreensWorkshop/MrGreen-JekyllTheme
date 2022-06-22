@@ -6,6 +6,8 @@ layout: xml/sitemap
 #published: false
 
 # page specific settings
+# this will add lastmod prop to url's
+add_page_lastmod_date: false
 # this will add all pages lastmod prop to current date. (if date is not defined in corresponding page)
 add_page_lastmod_current_date: false
 add_post_thumb_pics: true
