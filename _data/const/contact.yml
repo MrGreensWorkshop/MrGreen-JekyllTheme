@@ -10,16 +10,16 @@
 
 github:
   icon: "fa fa-github"
-  url: "https://www.github.com"
+  url: "https://github.com"
 email:
   icon: "fa fa-envelope-o"
   url: ""
 linkedin:
   icon: "fa fa-linkedin"
-  url: "https://www.linkedin.com"
+  url: "https://www.linkedin.com/in"
 twitter:
   icon: "fa fa-twitter"
-  url: "https://www.twitter.com"
+  url: "https://twitter.com"
 instagram:
   icon: "fa fa-instagram"
   url: "https://www.instagram.com"
