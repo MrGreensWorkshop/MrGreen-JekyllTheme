@@ -9,7 +9,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 {% assign page_title = page.title | default: site.data.lang[lng][page.layout].title -%}
 {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
-<title>{{ site.data.owner[lng].brand }} - {{ page_title }}</title>
+{%- capture page_title_tag -%} {{ site.data.owner[lng].brand }} - {{ page_title }} {%- endcapture -%}
+
+{%- if  page.layout == 'post' -%}
+<title>{{ page_title | truncate: 60 }}</title>
+{%- else -%}
+<title>{{ page_title_tag | truncate: 60 }}</title>
+{%- endif %}
 
 {%- if site.data.conf.main.google_font_load_in_head -%}
   {%- include default/header/google-font-load.html %}
