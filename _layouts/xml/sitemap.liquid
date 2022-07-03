@@ -31,7 +31,7 @@ xmlns:xhtml="http://www.w3.org/1999/xhtml"
     {%- if page.add_page_lastmod_current_date %} {%- assign site_date = site.time %} {%- endif %}
     {%- assign lastmod_date = nil %}
     {%- assign lastmod_date = _page.meta_modify_date | default: _page.date | default: site_date %}
-  {%- if lastmod_date %}
+  {%- if lastmod_date and page.add_page_lastmod_date %}
     <lastmod>{{ lastmod_date | date_to_xmlschema }}</lastmod>
   {%- endif %}
   {%- if page.changefreq %}

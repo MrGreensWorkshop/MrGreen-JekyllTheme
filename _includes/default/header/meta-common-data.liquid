@@ -42,8 +42,10 @@
 {%- assign meta_keywords = '' | split: '' -%}
 {%- assign meta_keywords = meta_keywords | push: page.category | push: page.tags | push: page.meta_keywords | where_exp: "item", "item != nil" -%}
 
-{%- assign meta_date_published = page.date | default: site.time -%}
-{%- assign meta_date_modified = page.meta_modify_date | default: meta_date_published -%}
+{%- if add_meta_date %}
+  {%- assign meta_date_published = page.date | default: site.time -%}
+  {%- assign meta_date_modified = page.meta_modify_date | default: meta_date_published -%}
 
-{%- assign meta_date_published = meta_date_published | date_to_xmlschema -%}
-{%- assign meta_date_modified = meta_date_modified | date_to_xmlschema -%}
+  {%- assign meta_date_published = meta_date_published | date_to_xmlschema -%}
+  {%- assign meta_date_modified = meta_date_modified | date_to_xmlschema -%}
+{%- endif -%}

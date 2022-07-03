@@ -251,6 +251,8 @@ creative_commons:
 meta:
   # if you enabled add_hreflang in sitemap.xml, make this false. (According to SEO pros, prevent using both. )
   hreflang: false
+  # add published date and modified date
+  add_meta_date: false
   # please note that google does not use keywords, but other search engines may.
   keywords: true
   google_site_verify: false

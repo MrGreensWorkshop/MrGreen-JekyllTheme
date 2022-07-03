@@ -214,8 +214,12 @@
   {%- if meta_image %}
     ,"primaryImageOfPage": "{{ meta_image }}"
   {%- endif %}
+  {%- if meta_date_published %}
     ,"datePublished": "{{ meta_date_published }}"
+  {%- endif %}
+  {%- if meta_date_modified %}
     ,"dateModified": "{{ meta_date_modified }}"
+  {%- endif %}
     ,"description": "{{ meta_description }}"
     ,"inLanguage": "{{ lng_code }}"
     ,"potentialAction": {
@@ -245,8 +249,12 @@
       ,"image": "{{ meta_image }}"
       ,"thumbnailUrl": "{{ meta_image }}"
     {%- endif %}
+    {%- if meta_date_published %}
       ,"datePublished": "{{ meta_date_published }}"
+    {%- endif %}
+    {%- if meta_date_modified %}
       ,"dateModified": "{{ meta_date_modified }}"
+    {%- endif %}
     {%- if meta_keywords.size > 0 %}
       ,"articleSection": ["{{ meta_keywords | join: '", "' }}"]
     {%- endif %}

@@ -24,8 +24,12 @@
 
 {%- if page.layout == 'post' %}
   <meta property="article:author" content="{{ meta_author }}">
+  {%- if meta_date_published %}
   <meta property="article:published_time" content="{{ meta_date_published }}">
+  {%- endif %}
+  {%- if meta_date_modified %}
   <meta property="article:modified_time" content="{{ meta_date_modified }}">
+  {%- endif %}
   <meta property="article:section" content="{{ page.category }}">
   {%- for tag_name in page.tags %}
   <meta property="article:tag" content="{{ tag_name }}">
