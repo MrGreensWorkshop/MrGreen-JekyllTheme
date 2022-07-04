@@ -61,13 +61,14 @@
 }
 
 /* search result date */
-#search-results > li span {
-  position: absolute;
-  right: 12px;
+#search-results > li .date {
+  float: right;
 }
 
-/* add an ellipsis if search result text is too long */
-#search-results > li :not(span) {
+/* search result title */
+#search-results > li .title {
+  float: left;
+  /* add an ellipsis if search result text is too long */
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;

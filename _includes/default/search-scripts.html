@@ -9,6 +9,18 @@
 
 {%- assign search_json_path = site.baseurl | append: layout_page_obj.url -%}
 
+{%- capture search_result_html -%}
+<li>
+  <a href="{url}">
+    <div>
+      <div class="title">{title}</div>
+      <div class="date">{date}</div>
+      <div style="clear: both;"></div>
+    </div>
+  </a>
+</li>
+{%- endcapture -%}
+
 <script>
   function loadSearch(jsonData, searchParam) {
     if (!jsonData) jsonData = '{{ search_json_path }}';
@@ -18,7 +30,7 @@
       searchInput: searchInput
       ,resultsContainer: document.getElementById('search-results')
       ,json: jsonData
-      ,searchResultTemplate: '<li><a href="{url}">{title}<span>{date}</span></a></li>'
+      ,searchResultTemplate: '{{ search_result_html | strip_newlines | split: " " | join: " " }}'
       ,noResultsText: '<li>{{ site.data.lang[lng].search.noResultText }}</li>'
       ,limit: 10
       ,fuzzy: false
