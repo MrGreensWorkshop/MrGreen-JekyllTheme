@@ -54,6 +54,10 @@
   #search-box {
     --searchbox-expand-width: calc(100vw - (var(--main-container-margin) * 2));
   }
+
+  #search-results {
+    max-width: calc(100vw - (var(--side-nav-width) + (var(--main-container-margin) * 2) + var(--search-results-margin-left)));
+  }
 {% endif %}
 
 {% if site.data.conf.main.color_scheme_dark == true and site.data.conf.main.color_scheme_switch_top_nav %}

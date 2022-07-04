@@ -6,6 +6,7 @@
 /* Search result dropdown */
 #search-results {
   @include get_scheme(searchresult-colors-);
+  --search-results-margin-left: 23px;
   display: block;
   background-color: var(--searchresult-background-color);
   list-style: none;
@@ -18,7 +19,8 @@
   border: 0;
   z-index: 999;
   width: auto;
-  margin-left: 23px;
+  max-width: calc(100vw - (var(--side-nav-width) + var(--main-container-margin) + var(--search-results-margin-left)));
+  margin-left: var(--search-results-margin-left);
   font-size: 1.4rem;
 }
 
