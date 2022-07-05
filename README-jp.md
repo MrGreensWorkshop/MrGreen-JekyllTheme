@@ -103,9 +103,9 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 
 何もないところからプロジェクトを立ち上げるのは、とても時間がかかるものです。私がこの様なプロジェクトに取り組み続け、皆さんに新しいコンテンツを提供できるよう、支援をご検討いただければ幸いです。
 
-- [Patreon](https://patreon.com/MrGreenWorkshop "パトロンになる")でパトロンになる（月々）
-- [Ko-fi](https://ko-fi.com/MrGreenWorkshop "Patreonで支援")で支援する (一回)
-- [GitHubスポンサー](https://github.com/sponsors/MrGreensWorkshop)で支援する (一回／月々)
+- [Patreon](https://patreon.com/MrGreenWorkshop "Patreonで支援")で支援する（月々）
+- [Ko-fi](https://ko-fi.com/MrGreenWorkshop "Ko-fiで支援")で支援する (一回)
+- [GitHubスポンサー](https://github.com/sponsors/MrGreensWorkshop "GitHubスポンサーになる")になる (一回／月々)
 
 ### Contribute
 
