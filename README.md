@@ -9,7 +9,7 @@
 [<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
 [<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE)
 [<img src="https://shields.io/badge/Patreon-Tip%20me-blue?logo=Patreon" alt="Tip Me via Patreon" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Tip Me via Patreon")
-[<img src="https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi" alt="Tip Me via Ko-fi" data-no-image-viewer>](https://www.ko-fi.com/MrGreensWorkshop "Tip Me via Ko-fi")
+[<img src="https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi" alt="Tip Me via Ko-fi" data-no-image-viewer>](https://ko-fi.com/MrGreensWorkshop "Tip Me via Ko-fi")
 
 ---
 
@@ -99,9 +99,13 @@ I want to thank these projects that gave me an opportunity to build my web site.
 
 Some of the sites that I find useful while I'm working on this project. [links page](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/tabs/links.html)
 
-### [You Can Support My Work](https://github.com/MrGreensWorkshop#sponsorship)
+### You Can Support My Work
 
 Creating projects starting from nothing takes a great amount of time. Much appreciated if you consider supporting me so that I can continue projects like this and creating new contents for everyone.
+
+- You can support me via [GitHub Sponsor](https://github.com/sponsors/MrGreensWorkshop) (monthly or one time)
+- You can be one of my patrons on [Patreon](https://patreon.com/MrGreensWorkshop "Be my Patron") (monthly)
+- You can tip me via [Ko-fi](https://ko-fi.com/MrGreensWorkshop "Tip Me via Ko-fi") (one time)
 
 ### Contribute
 
