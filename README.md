@@ -28,7 +28,7 @@
 
 <!-- outline-end -->
 
-I was going to make my website and thought if I did it as a template, I could share it with the open source community. That's why I decided to build it as a theme. I've worked so hard to make this possible so I'm happy if you consider [supporting me](https://github.com/MrGreensWorkshop#sponsorship). Thanks.
+I was going to make my website and thought if I did it as a template, I could share it with the open source community. That's why I decided to build it as a theme. I've worked so hard to make this possible so I'm happy if you consider [supporting me](#you-can-support-my-work). Thanks.
 
 ### Features
 
