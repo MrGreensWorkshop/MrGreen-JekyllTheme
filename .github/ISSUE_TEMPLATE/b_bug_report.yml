@@ -17,7 +17,7 @@ body:
       required: true
     - label: I have searched the existing [Discussions](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/discussions).
       required: true
-    - label: I have checked [jekyll docs](https://jekyllrb.com/docs/) and the answer is not there.
+    - label: I have checked [jekyll docs](https://jekyllrb.com/docs/) and the answer was not there.
       required: true
     - label: I have tested in one of these browsers; Safari, Chrome, Firefox. (This project hasn't been tested in other browsers.)
       required: true

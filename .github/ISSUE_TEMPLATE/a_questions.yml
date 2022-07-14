@@ -14,7 +14,7 @@ body:
       required: true
     - label: I have searched the existing [Discussions](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/discussions/).
       required: true
-    - label: I have checked [jekyll docs](https://jekyllrb.com/docs/) and the answer is not there.
+    - label: I have checked [jekyll docs](https://jekyllrb.com/docs/) and the answer was not there.
       required: true
 - type: markdown
   attributes:
