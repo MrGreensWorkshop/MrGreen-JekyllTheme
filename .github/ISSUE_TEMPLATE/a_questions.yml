@@ -20,7 +20,7 @@ body:
   attributes:
     value: |
       Checked all above but still couldn't find an answer?
-      ## [Click here to ask a question in Discussions](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/discussions/new?category=problems)
+      #### [Click here to ask a question in Discussions](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/discussions/new?category=problems)
 - type: dropdown
   id: t
   attributes:
