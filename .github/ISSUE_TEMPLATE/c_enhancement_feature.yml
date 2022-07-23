@@ -1,11 +1,11 @@
 name: Enhancement or Feature
-description: Use this with related PR
+description: Use this with related PR that you created
 title: "<title>"
 labels: enhancement
 body:
 - type: markdown
   attributes:
-    value: "## Thank you for contributing to this project!"
+    value: "### Thank you for contributing to this project!"
 - type: textarea
   attributes:
     label: Is this enhancement or feature is related to a problem?
