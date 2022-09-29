@@ -1,0 +1,71 @@
+###########################################################
+# Owner's Personal Information
+###########################################################
+# This is your brand name
+brand: "Sua Marca"
+
+# text below the brand name
+brand_sub_text: "$site_sample"
+
+# used for seo meta post author (if it's not defined in post)
+name: "Seu Nome"
+
+# home page top header texts
+home:
+  # you can also use $site_brand, $site_greetings, $site_welcome in line1 and line2 for replacing texts.
+  top_header_line1: "$site_welcome"
+  # if commented, top header will be a single line
+  top_header_line2: "$site_brand"
+
+# about page sub title
+about:
+  sub_title: "$site_sample"
+
+# if you don't want to add copyright year, comment or leave it blank.
+# the year during which the claimed copyright for the work was first asserted.
+copyright_start_year: "2022"
+
+# make sure creative_commons.enable is true in _data/conf/main.yml file
+creative_commons:
+  # choose your license from https://creativecommons.org/choose/?lang=en
+  # then check link address below Selected License and make sure it matches with the list below
+
+  # select one below
+  # 1. by        Attribution 4.0 International
+  # 2. by-nd     Attribution-NoDerivatives 4.0 International
+  # 3. by-sa     Attribution-ShareAlike 4.0 International
+  # 4. by-nc     Attribution-NonCommercial 4.0 International
+  # 5. by-nc-nd  Attribution-NonCommercial-NoDerivatives 4.0 International
+  # 6. by-nc-sa  Attribution-NonCommercial-ShareAlike 4.0 International
+  license_type: "by-sa"
+
+# seo meta this is needed for each language
+# If meta_description is not defined in front matter, it's created from (post / page) content,
+# if it has no content, this will be used for page description. It is also used in manifest.json
+meta_common_description: "Descrição Meta."
+
+# contact options (side nav bottom and about page)
+# the order of the items will be shown as here.
+# comment to remove any contact item
+contacts:
+  #- github: ""
+  #- email: ""
+  #- linkedin: ""
+  #- twitter: ""
+  #- instagram: ""
+  #- youtube: ""
+  #- facebook: ""
+# to add more, check the _data/const/contact.yml file
+#  - your_new_contact: ""
+
+# Disqus Short name, make sure comments and disqus are enabled in _data/conf/posts.yml file
+disqus_shortname: ""
+
+# if no id is provided, this feature will be disabled.
+# make sure your environment does not match with google.analytics.ignore in _data/conf/main.yml
+google_analytics_id: ""
+
+# there are different ways to verify web page. One is adding this as meta into html.
+# make sure you set meta.google_site_verify: true in _data/conf/main.yml
+# make sure your environment does not match with google.site_verification.ignore in _data/conf/main.yml
+google_site_verification: ""
