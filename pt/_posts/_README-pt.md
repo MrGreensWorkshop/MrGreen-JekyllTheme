@@ -20,7 +20,7 @@
 </div>
 
 
-### Introduction
+### Introdução
 
 <!-- outline-start -->
 
@@ -30,7 +30,7 @@
 
 Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia compartilhar com a comunidade do código aberto. Esse é o motivo que me levou a criar este tema. Eu trabalhei muito nesse projeto e eu ficaria muito feliz caso você decida [me ajudar](#ajude-a-manter-meu-trabalho). Obrigado.
 
-### Features
+### Recursos disponíveis
 
 - Website para vários idiomas.
   - Inglês (padrão), Japonês (日本語)
