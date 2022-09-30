@@ -1,0 +1,10 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.1.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%-comment-%} out: out_date {%-endcomment-%}
+
+{%- assign month_index = include.date | date: "%-m" | minus: 1 -%}
+{%- assign out_date_format = site.data.lang[lng].date.long | replace: '%b', site.data.lang[lng].date.months[month_index] -%}

@@ -38,6 +38,7 @@ layout: default
     {%- if list.type != category.type %}{% continue %}{% endif -%}
     <div class="multipurpose-container project-container" {{ first_category_id }}>
       {%-assign first_category_id=nil -%}
+      {%- include multi_lng/get-localized-long-date-format.liquid date = list.date -%}
       <div class="row">
         {% if list.img %}
           {%- assign prj_img_path = list.img -%}
@@ -54,7 +55,7 @@ layout: default
         <div class="col-md-9 project-header">
           <h1>{{ list.project_name }}</h1><h4>{{ list.project_excerpt }}</h4>
           <div class="meta-container">
-            <p class="date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;{{ list.date | date: site.data.lang[lng].date.long }}</p>
+            <p class="date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>&nbsp;{{ list.date | date: out_date_format }}</p>
             <p class="category">#{{ category.title }}</p>
           </div>
           <hr>

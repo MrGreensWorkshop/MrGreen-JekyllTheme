@@ -16,7 +16,8 @@
   {%- assign words = include.content | number_of_words | minus: 250 -%}
 {%- endif -%}
 
-{%- assign post_date = include.date | date: site.data.lang[lng].date.long -%}
+{%- include multi_lng/get-localized-long-date-format.liquid date = include.date -%}
+{%- assign post_date = include.date | date: out_date_format -%}
 {%- capture read_time -%}
   {%- unless words contains "-" -%}
     {{ words | plus: 250 | divided_by: site.data.lang[lng].post.read_time.per_minute | append: site.data.lang[lng].post.read_time.unit | append: site.data.lang[lng].post.read_time.text }}
