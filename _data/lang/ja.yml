@@ -15,10 +15,11 @@ lng:
 
 date:
   # if %b is used in the long format, it will be replaced with the corresponding item in 'months' list below.
-  long: "%Y年%b%d日"
+  long: "%Y年%m月%d日"
   day: "%d日"
   year: "%Y年"
-  months: [01月, 02月, 03月, 04月, 05月, 06月, 07月, 08月, 09月, 10月, 11月, 12月]
+  # months itself also used in Archive page.
+  months: [1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
 
 not_found:
   header: ページが見つかりませんでした。

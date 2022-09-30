@@ -18,6 +18,7 @@ date:
   long: "%b %-d, %Y"
   day: "%d"
   year: "%Y"
+  # months itself also used in Archive page.
   months: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
 
 not_found:
