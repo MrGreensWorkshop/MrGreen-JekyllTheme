@@ -14,6 +14,7 @@ lng:
     msg_site: To English home page
 
 date:
+  # if %b is used in the long format, it will be replaced with the corresponding item in 'months' list below.
   long: "%b %-d, %Y"
   day: "%d"
   year: "%Y"

@@ -22,13 +22,14 @@
   {%- assign page_title = page_tmp.title | default: site.data.lang[lng][page_tmp.layout].title -%}
   {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
   {%- if page_tmp.layout != "redirect" and page_content != empty -%}
+    {%- include multi_lng/get-localized-long-date-format.liquid date = page_date -%}
     {%- capture search_json -%}
   {
     "title"    : "{{ page_title | strip_html | split: " " | join: " " }}"
     ,"category" : "{{ page_tmp.category | downcase }}"
     ,"tags"     : "{{ page_tmp.tags | join: ', ' | downcase }}"
     ,"url"      : "{{ site.baseurl }}{{ page_tmp.url }}"
-    ,"date"     : "{{ page_date | date: site.data.lang[lng].date.long }}"
+    ,"date"     : "{{ page_date | date: out_date_format }}"
     ,"content"  : {{ page_content | jsonify }}
   },
     {%- endcapture -%}
