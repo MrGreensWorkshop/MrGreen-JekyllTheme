@@ -1,0 +1,227 @@
+lng:
+  name: Português
+  # based on ISO_639-1 https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+  code: pt
+  # specifically needed for open-graph meta og:locale. if open_graph or html_lng_with_country_code not enabled in _data/conf/main.yml, it's not necessary.
+  # For html tags, you can enable or disable using html_lng_with_country_code defined in _data/conf/main.yml
+  # based on ISO_3166-1 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+  country: BR
+  switch_title: Pt
+  offer:
+    title: Idioma
+    msg_page: Veja esta página em português.
+    # if page translation is not available, use this.
+    msg_site: Página principal
+
+date:
+  # if %b is used in the long format, it will be replaced with the corresponding item in 'months' list below.
+  long: "%-d %b, %Y"
+  day: "%d"
+  year: "%Y"
+  # months itself also used in Archive page.
+  months: [Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+
+not_found:
+  header: Página não encontrada
+  line1: A página não pode ser encontrada.
+  line2: Use o menu ou use a busca.
+
+no_translation_tooltip: Não há tradução
+
+navigation:
+  contact_header: Contato
+
+color_scheme_switch_tooltip: Escolha a cor
+
+search:
+  placeholder: Procurar
+  noResultText: Nenhum resultado encontrado.
+
+image_viewer:
+  load_error: Esta imagem não pode ser carregada.
+
+copyright:
+  additional_text: " Todos os direitos reservados."
+
+creative_commons:
+  some_rights_reserved: Direitos parcialmente reservados.
+  # check _data/owner/[language].yml for license type.
+  by: Salvo previamente expresso, o conteúdo desse site usa a licença Creative Commons Attribution 4.0 International.
+  by-nd: Salvo previamente expresso, o conteúdo desse site usa a licença Creative Commons Attribution-NoDerivatives 4.0 International.
+  by-sa: Salvo previamente expresso, o conteúdo desse site usa a licença Creative Commons Attribution-ShareAlike 4.0 International.
+  by-nc: Salvo previamente expresso, o conteúdo desse site usa a licença Creative Commons Attribution-NonCommercial 4.0 International.
+  by-nc-nd: Salvo previamente expresso, o conteúdo desse site usa a licença Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.
+  by-nc-sa: Salvo previamente expresso, o conteúdo desse site usa a licença Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
+
+# for 404 layout
+not-found:
+  title: "404"
+
+# for post layout
+post:
+  read_time:
+    unit: " min"
+    text: " leitura"
+    # c for char w for word
+    word_char: w
+    # char or words per minute
+    per_minute: 100
+  pager_buttons:
+    older_post: "← Posts mais antigos"
+    newer_post: "Posts mais recentes →"
+    first_post: Primeiro
+    last_post: Último
+  comments:
+    disqus:
+      count_title: Comentários
+      noscript: Por favor, habilite o JavaScript para ter acesso aos comentários.
+      click_to_load: "Carregar comentários"
+      consent:
+        title: Comentários (Disqus.com)
+        text: >
+          A área de comentários é hospedada por um  aplicativo desenvolvido por terceiros. Ao mostrar este conteúdo você aceita os $terms e $privacy_policy do disqus.com.
+          <br> Caso prefira sair, abra $settings_link e clique no botão "sair", em seguida feche. Retorne para esta área e carregue os comentários novamente.
+        terms_link_text: Termos de serviço
+        privacy_link_text: Política de Privacidade
+        settings_link_text: este link
+        button:
+          load_once: Mostrar somente desta vez
+          load_and_do_not_ask_again: Mostrar sempre
+  table_of_contents:
+    heading: Conteúdo
+    tooltip:
+      move: Arraste para mover
+      close: Fechar
+  share:
+    heading: Compartilhar em
+    link_copied: Link copiado!
+    tooltip:
+      # keys need to match with _data/share.yml
+      twitter: Twitter
+      facebook: Facebook
+      telegram: Telegram
+      linkedin: LinkedIn
+      email: Email
+      copy_link: Copiar link
+
+# for post-list layout
+post-list:
+  title: Blog
+  button_name: Blog
+  upside_down_tabs:
+    tab:
+      all: Tudo
+      categories: Categoria
+      tags: Marcador
+      years: Ano
+      clear: Limpar
+      close: Fechar
+      tooltip:
+        clear: Limpar
+        close: Fechar
+    msg:
+      property_list:
+        # keys need to match with /query/post-query.json
+        tags: Marcador
+        category: Categoria
+        year: Ano
+      # you can use these wildcards, {property} {value} {thumb}
+      resultFoundTitleFormat: "{property} : {thumb}"
+
+# for home layout
+home:
+  title: Bem vindo
+  button_name: Principal
+  new_posts_title: Novos artigos
+  new_posts_show_more_button: Veja mais ...
+
+# for archives layout
+archives:
+  title: Arquivo
+  button_name: Arquivo
+  page_header: Arquivo
+
+# for about layout
+about:
+  title: Sobre
+  button_name: Sobre
+  email_title: Email
+
+# for links layout
+links:
+  title: Links
+  button_name: Links
+  link_text: Web site
+  info_text: Info
+
+# for projects layout
+projects:
+  title: Projetos
+  button_name: Projetos
+  read_more_text: Leia mais
+  read_less_text: Leia menos
+
+# for privacy-policy layout
+privacy-policy:
+  title: &privacy_policy_title Política de privacidade
+
+# constants to be replaced for
+constants:
+  greetings: Olá
+  welcome: Bem vindo
+  sample: Amostra
+
+# for cookie consent
+cookie_consent:
+  privacy_policy_link_text: *privacy_policy_title
+  side_nav_setting_button_tooltip: &cookie_settings Configurações de cookies
+  panel_bar:
+    msg: >
+      Este site utiliza cookies para melhorar sua funcionalidade.
+      Cookies serão ativados somente com sua aprovação.
+    privacy_msg: Verifique a $privacy_link.
+    buttons:
+      accept: &accept_button Aceitar
+      settings: Configurações
+      deny: &deny_button Negar
+  panel_settings:
+    title: *cookie_settings
+    msg: >
+      Este site utiliza cookies para seu funcionamento.
+      Os cookies serão ativados mediante sua aprovação. Por favor, clique em cada item abaixo para ler sua política de privacidade.
+    privacy_msg: Verifique a $privacy_link.
+    buttons:
+      accept: *accept_button
+      save: Permitir
+      deny: *deny_button
+    always_active: Cookies sempre ativos
+    consent_types:
+      necessary:
+        title: Cookies necessários
+        info: >
+          Esses cookies são necessários para que o site possa funcionar e não podem ser desabilitados.
+          São habilitados quando o site altera seu layout, cor etc.
+          Estes cookies não salvam nenhuma informação pessoal.
+          $gtag_info
+      analytics:
+        title: Cookies de desempenho
+        info: $gtag_info
+      preferences:
+        title: Cookies de funcionalidade
+        info: $gtag_info
+      advertising:
+        title: Cookies de segmentação e publicidade
+        info: $gtag_info
+    gtag_info:
+      # from https://support.google.com/tagmanager/answer/10718549?hl=pt-BR#consent-types
+      ad_storage: >
+        Permite o armazenamento (como cookies) relacionado à publicidade.
+      analytics_storage: >
+        Permite o armazenamento (como cookies) relacionado a análises, por exemplo, duração da visita.
+      functionality_storage: >
+        Permite o armazenamento compatível com as funções do site ou app, por exemplo, configurações de idioma.
+      personalization_storage: >
+        Permite o armazenamento relacionado à personalização, por exemplo, recomendações de vídeos.
+      security_storage: >
+        Permite o armazenamento relacionado à segurança, por exemplo,
+        funcionalidade de autenticação, prevenção de fraudes e outras proteções de usuário.

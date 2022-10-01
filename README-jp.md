@@ -1,4 +1,4 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)]
 
 ## Mr. Green Jekyll テーマ
 
@@ -33,7 +33,7 @@
 ### Features
 
 - 多言語Webサイト
-  - 英語 (デフォルト)、日本語
+  - 英語 (デフォルト)、日本語、ブラジルポルトガル語
 - おすすめの言語提供機能
 - アイコン有効無効オプション付き自動ナビゲーションボタン追加機能
 - `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` 等々のレイアウト
@@ -110,6 +110,12 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 ### Contribute
 
 プルリクは大歓迎です。イシューとプルリクのテンプレートの手順を確認してください。
+
+### Contributors
+
+貢献していただきありがとうございます！
+
+- ブラジルポルトガル語の翻訳 [Vitor DallAcqua](https://github.com/fandangos)。
 
 ### License
 
