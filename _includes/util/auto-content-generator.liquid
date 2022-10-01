@@ -10,7 +10,7 @@
 {%- assign lng = get_lng -%}
 
 {%- assign readme_lng = lng -%}
-{%- if lng != "en" and lng != "ja"%}{%- assign readme_lng = "en" -%}{%-endif-%}
+{%- if lng != "en" and lng != "ja" and lng != "pt"%}{%- assign readme_lng = "en" -%}{%-endif-%}
 
 {% include multi_lng/get-page-by-lng-pair-and-lng.liquid lng_pair="id_Mr_Green_Jekyll_Theme" layout="post" lng=readme_lng -%}
 

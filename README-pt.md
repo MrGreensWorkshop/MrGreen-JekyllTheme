@@ -7,7 +7,7 @@
 [<img src="https://img.shields.io/github/issues/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub issues" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/issues)
 [<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub forks" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
 [<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
-[<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE)
+[<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt)
 [<img src="https://shields.io/badge/Patreon-Tip%20me-blue?logo=Patreon" alt="Gorjeta via Patreon" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Gorjeta via Patreon")
 [<img src="https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi" alt="Gorjeta via Ko-fi" data-no-image-viewer>](https://ko-fi.com/MrGreensWorkshop "Gorjeta via Ko-fi")
 
@@ -119,7 +119,7 @@ Obrigado por suas contribuições!
 
 ### Licença
 
-Como está escrito na [licença MIT](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE), você pode usar esse tema em qualquer lugar contanto que você incluaa os arquivos de licença e de direitos autorais.
+Como está escrito na [licença MIT](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt), você pode usar esse tema em qualquer lugar contanto que você incluaa os arquivos de licença e de direitos autorais.
 
 `Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com`
 
