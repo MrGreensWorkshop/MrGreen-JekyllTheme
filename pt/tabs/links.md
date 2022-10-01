@@ -50,7 +50,7 @@ page_data:
     - title: "Web Design"
       type: id_webdesign
       color: "#F4A273"
-    - title: "Programming"
+    - title: "Programação"
       type: id_programming
       color: "#62b462"
 
@@ -74,7 +74,7 @@ page_data:
     - type: id_jekyiiliquid
       title: "Liquid para Designers"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Designers"
-      info: "Liquid for Designers wiki on GitHub"
+      info: "Wiki do Liquid for Designers no GitHub"
     - type: id_jekyiiliquid
       title: "Liquid para Programadores"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers"

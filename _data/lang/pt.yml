@@ -14,9 +14,11 @@ lng:
     msg_site: Página principal
 
 date:
-  long: "%-d, %b, %Y"
+  # if %b is used in the long format, it will be replaced with the corresponding item in 'months' list below.
+  long: "%-d %b, %Y"
   day: "%d"
   year: "%Y"
+  # months itself also used in Archive page.
   months: [Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
 
 not_found:
@@ -167,7 +169,7 @@ privacy-policy:
 constants:
   greetings: Olá
   welcome: Bem vindo
-  sample: Amostra.
+  sample: Amostra
 
 # for cookie consent
 cookie_consent:
@@ -176,8 +178,8 @@ cookie_consent:
   panel_bar:
     msg: >
       Este site utiliza cookies para melhorar sua funcionalidade.
-      Cookies serão ativados somente com sua aprovação. Clique para selecionar:
-    privacy_msg: Leia $privacy_link
+      Cookies serão ativados somente com sua aprovação.
+    privacy_msg: Verifique a $privacy_link.
     buttons:
       accept: &accept_button Aceitar
       settings: Configurações
@@ -187,7 +189,7 @@ cookie_consent:
     msg: >
       Este site utiliza cookies para seu funcionamento.
       Os cookies serão ativados mediante sua aprovação. Por favor, clique em cada item abaixo para ler sua política de privacidade.
-    privacy_msg: Marcar $privacy_link
+    privacy_msg: Verifique a $privacy_link.
     buttons:
       accept: *accept_button
       save: Permitir
@@ -197,29 +199,29 @@ cookie_consent:
       necessary:
         title: Cookies necessários
         info: >
-          Alguns cookies são necessários para que o site possa funcionar e não podem ser desabilitados.
-          São habilitados quando o site altera seu layout, cor etc. 
+          Esses cookies são necessários para que o site possa funcionar e não podem ser desabilitados.
+          São habilitados quando o site altera seu layout, cor etc.
           Estes cookies não salvam nenhuma informação pessoal.
           $gtag_info
       analytics:
-        title: Cookies de performance
+        title: Cookies de desempenho
         info: $gtag_info
       preferences:
-        title: Cookies para preferência.
+        title: Cookies de funcionalidade
         info: $gtag_info
       advertising:
-        title: Cookies para propaganda.
+        title: Cookies de segmentação e publicidade
         info: $gtag_info
     gtag_info:
-      # from https://support.google.com/tagmanager/answer/10718549#consent-types
+      # from https://support.google.com/tagmanager/answer/10718549?hl=pt-BR#consent-types
       ad_storage: >
-        Salvar cookies para propagandas.
+        Permite o armazenamento (como cookies) relacionado à publicidade.
       analytics_storage: >
-        Salvar cookies para análise de permanência do usuário.
+        Permite o armazenamento (como cookies) relacionado a análises, por exemplo, duração da visita.
       functionality_storage: >
-        Salvar cookies para funcionalidade do site, como preferência de idioma.
+        Permite o armazenamento compatível com as funções do site ou app, por exemplo, configurações de idioma.
       personalization_storage: >
-        Salvar cookies para personalização do usuário como resolução de videos.
+        Permite o armazenamento relacionado à personalização, por exemplo, recomendações de vídeos.
       security_storage: >
-        Salvar cookies voltados para segurança como autenticação, prevenção de fraude
-        e demais proteções ao usuário.
+        Permite o armazenamento relacionado à segurança, por exemplo,
+        funcionalidade de autenticação, prevenção de fraudes e outras proteções de usuário.
