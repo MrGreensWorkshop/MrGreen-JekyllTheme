@@ -34,7 +34,7 @@ Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia
 
 - Website para vários idiomas.
   - Inglês (padrão), Japonês, Português do Brasil
-- Recomendação idioma
+- Recomendação de idioma
 - Auto navegação com possibilidade de habilitar e desabilitar os ícones.
 - Layout para `Principal`, `Sobre`, `Arquivos`, `Lista-de-Posts`, `Links`, `Projetos` e mais
 - Possibilidade de trocar as cores (claro e escuro)
@@ -129,7 +129,7 @@ Obrigado!
 
 ### Outras licenças
 
-Mr. Green Jekyll Tema usa as bibliotecas descritas abaixo. Sem estas bibliotecas não seria possível criar este projeto.
+O tema Mr. Green Jekyll usa as bibliotecas descritas abaixo. Sem estas bibliotecas não seria possível criar este projeto.
 
 | Library                              | file |
 | :----------------------------------- | ---- |
@@ -142,4 +142,4 @@ Mr. Green Jekyll Tema usa as bibliotecas descritas abaixo. Sem estas bibliotecas
 | [Simple-Jekyll-Search v1.9.2](https://github.com/christian-fei/Simple-Jekyll-Search/tree/v1.9.2), Copyright (c) 2015 Christian Fei. Simple-Jekyll-Search é distribuido sob os termos de licença MIT. | [simple-jekyll-search-1.9.2.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/simple-jekyll-search-1.9.2.min.js) |
 | [Compress HTML in Jekyll v3.1.0](https://github.com/penibelst/jekyll-compress-html/tree/v3.1.0), Copyright (c) 2014 Anatol Broder. Compress HTML in Jekyll é distribuido sob os termos de licença MIT. | [compress.liquid](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/_layouts/util/compress.liquid) |
 
-[Mr. Green Jekyll Tema](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+[Tema Mr. Green Jekyll](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)

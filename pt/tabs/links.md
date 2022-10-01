@@ -74,7 +74,7 @@ page_data:
     - type: id_jekyiiliquid
       title: "Liquid para Designers"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Designers"
-      info: "Wiki do Liquid for Designers no GitHub"
+      info: "Wiki do Liquid para Designers no GitHub"
     - type: id_jekyiiliquid
       title: "Liquid para Programadores"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers"
