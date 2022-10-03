@@ -7,15 +7,15 @@ domain: ""
 
 # your web site url
 # for GitHub Pages, url: "https://your_github_user_name.github.io"
-url: ""
+url: "https://tetianafomenko.github.io"
 
 # path to this site
 # if your page is located at https://your_github_user_name.github.io/blog, then set baseurl: "/blog"
-baseurl: ""
+baseurl: "/blog"
 
 # please use TZ database name column on the list table
 # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-#timezone: ""
+#timezone: "Australia/Brisbane"
 
 ###########################################################
 # Front Matter Defaults (https://jekyllrb.com/docs/configuration/front-matter-defaults/)
@@ -75,7 +75,7 @@ whitelist:
 paginate_path: "/tabs/blog/:num"
 # number of post per page
 # make sure this matches with post_query_paginator_post_per_page in _data/conf/posts.yml
-paginate: 5
+paginate: 10
 
 ###########################################################
 # jekyll-redirect-from (https://github.com/jekyll/jekyll-redirect-from)
