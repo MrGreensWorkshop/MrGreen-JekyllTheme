@@ -8,7 +8,8 @@
 [<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub forks" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)
 [<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)
 [<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt)
-[<img src="https://shields.io/badge/Patreon-Tip%20me-blue?logo=Patreon" alt="Patreonで支援" data-no-image-viewer>](https://patreon.com/MrGreenWorkshop "Patreonで支援")
+[<img src="https://shields.io/badge/Github%20Sponsors-Support%20me-blue?logo=GitHub+Sponsors" alt="GitHubでスポンサーになる" data-no-image-viewer>](https://github.com/sponsors/MrGreensWorkshop "GitHubでスポンサーになる")
+[<img src="https://shields.io/badge/Patreon-Support%20me-blue?logo=Patreon" alt="Patreonで支援" data-no-image-viewer>](https://patreon.com/MrGreenWorkshop "Patreonで支援")
 [<img src="https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi" alt="Ko-fiで支援" data-no-image-viewer>](https://ko-fi.com/MrGreenWorkshop "Ko-fiで支援")
 
 ---
@@ -105,7 +106,7 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 
 - [Patreon](https://patreon.com/MrGreenWorkshop "Patreonで支援")で支援する（月々）
 - [Ko-fi](https://ko-fi.com/MrGreenWorkshop "Ko-fiで支援")で支援する (一回)
-- [GitHubスポンサー](https://github.com/sponsors/MrGreensWorkshop "GitHubスポンサーになる")になる (一回／月々)
+- [GitHubでスポンサー](https://github.com/sponsors/MrGreensWorkshop "GitHubでスポンサーになる")になる (一回／月々)
 
 ### Contribute
 
