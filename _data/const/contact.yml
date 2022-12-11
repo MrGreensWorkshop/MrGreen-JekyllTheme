@@ -20,6 +20,10 @@ linkedin:
 twitter:
   icon: "fa fa-twitter"
   url: "https://twitter.com"
+mastodon:
+# The mastodon svg file was obtained from this link: https://github.com/mastodon/joinmastodon/blob/master/public/logos/logo-black.svg
+  icon: "/assets/img/default/mastodon.svg"
+  url: "https://mastodon.social"
 instagram:
   icon: "fa fa-instagram"
   url: "https://www.instagram.com"
