@@ -40,7 +40,8 @@
       {%- endif -%}
 
       {%- if mastodon_rel_tag_attr_value != nil or site.data.conf.main.contacts_open_in_new_tab == true -%}
-        {%- capture contact_rel_tag_attr -%} rel="{{ mastodon_rel_tag_attr_value }} {{ contact_new_tab_rel_tag_attr_value }}" {%- endcapture -%}
+        {%- capture contact_rel_tag_attr -%} {{ mastodon_rel_tag_attr_value }} {{ contact_new_tab_rel_tag_attr_value }} {%- endcapture -%}
+        {%- capture contact_rel_tag_attr -%} rel="{{ contact_rel_tag_attr | strip }}" {%- endcapture -%}
       {%- endif -%}
 
       {%- assign tag_url = contact_const.url | append:'/' | append: account_username -%}
