@@ -226,6 +226,9 @@ contacts_buttons_hover_effect: "hover-effect-big"
 # open links in new tab
 contacts_open_in_new_tab: true
 
+# link verification for mastodon (https://docs.joinmastodon.org/user/profile/#verification)
+contacts_mastodon_link_verification: false
+
 ###########################################################
 #                Copyright text
 ###########################################################
