@@ -184,8 +184,12 @@
 {% endif -%}
 
 {% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 and site.data.conf.main.language_translation_offer_box -%}
-  {%- include default/sliding-msg-box.html -%}
+  {%- assign language_translation_offer_box = true -%}
   {%- include multi_lng/lang-offer-msg-box.html -%}
+{% endif -%}
+
+{% if site.data.conf.main.cookie_consent.enable or language_translation_offer_box -%}
+  {%- include default/sliding-msg-box.html -%}
 {% endif -%}
 
 {%- comment -%} iOS Safari Web App fix for open links inside app. (prevent opening in safari) {%- endcomment -%}
