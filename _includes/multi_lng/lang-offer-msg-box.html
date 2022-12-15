@@ -44,4 +44,5 @@
   LangOfferMsgBox.supportedLngList = {{ supported_lng_list | jsonify }};
   LangOfferMsgBox.existLng = {{ lng_list | jsonify }};
   LangOfferMsgBox.disableExtTranslationOffer = {{ site.data.conf.main.language_translation_offer_disable_ext_translation | default: 'false' }};
+  LangOfferMsgBox.slideType = '{{ site.data.conf.main.language_translation_offer_slide }}';
 </script>

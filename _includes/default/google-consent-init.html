@@ -9,6 +9,7 @@
 
 <script>
   CookieConsent.consentSettingHtml = {{ consent_setting_html | split: " " | join: " " | jsonify }};
+  CookieConsent.consentSettingSlideType = '{{ site.data.conf.main.cookie_consent.setting_box_slide }}';
   CookieConsent.consentBarHtml = {{ consent_bar_html | split: " " | join: " " | jsonify }};
   CookieConsent.consent_items = JSON.parse('{{ site.data.conf.main.cookie_consent.groups | jsonify }}');
   CookieConsent.hideConsentBarWithSaveButton = {{ site.data.conf.main.cookie_consent.hide_consent_bar_with_save_button }};
