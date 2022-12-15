@@ -17,6 +17,7 @@
     , consentBarHtml: ""
     , consentSettingHtml: ""
     , hideConsentBarWithSaveButton: false
+    , consentSettingSlideType: ""
     , gtag: function () { }
     , getConsentSettings: getConsentSettings
     , hideConsentBar: hideConsentBar
@@ -179,7 +180,7 @@
     document.body.appendChild(barHolderDiv);
 
     /* init consent settings */
-    SlidingMsgBox.init(slidingBoxId, globals.consentSettingHtml, hideSettings);
+    SlidingMsgBox.init(slidingBoxId, globals.consentSettingHtml, hideSettings, globals.consentSettingSlideType);
 
     showConsentBar();
   }

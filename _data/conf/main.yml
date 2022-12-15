@@ -356,6 +356,10 @@ cookie_consent:
     accept: [2, btn-priority]
     save: [3]
     deny: [1, btn-left]
+  # select one below
+  # 1. slideBoxTopToDown
+  # 2. slideBoxBottomToUp
+  setting_box_slide: slideBoxTopToDown
   # replace text with related cookie_consent.panel_settings.gtag_info item
   gtag_info_replace: "$gtag_info"
   privacy_link_replace: "$privacy_link"

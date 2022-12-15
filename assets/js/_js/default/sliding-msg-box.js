@@ -17,6 +17,7 @@
     , init: init
     , setMsgHtml: setMsgHtml
     , setCloseCallBack: setCloseCallBack
+    , slideTypes: { TopToDown: "slideBoxTopToDown", BottomToUp: "slideBoxBottomToUp" }
   };
 
   function getMsgBoxSelector(id) {
@@ -27,18 +28,20 @@
     return document.querySelector(getMsgBoxSelector(id));
   }
 
-  function init(id, msgHtml, closeCallBack) {
+  function init(id, msgHtml, closeCallBack, slideType) {
     /* remove old msg box */
     let holderElement = document.getElementById(id);
     if (holderElement) holderElement.remove();
 
     setBoxHtml(id);
-    setMsgHtml(id, msgHtml);
+    setMsgHtml(id, msgHtml, slideType);
     setCloseCallBack(id, closeCallBack);
   }
 
-  function setMsgHtml(id, msgHtml) {
+  function setMsgHtml(id, msgHtml, slideType) {
     let msgBoxElement = getMsgBoxElement(id);
+    /* set slide type */
+    msgBoxElement.classList.toggle(slideType);
     /* remove old msg */
     let oldMsgElement = msgBoxElement.getElementsByClassName(globals.msgBoxMsgClass)[0];
     if (oldMsgElement) oldMsgElement.remove();
