@@ -33,13 +33,9 @@ layout: util/compress_js
 {%- endfor %}
 
 {% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 and site.data.conf.main.language_translation_offer_box -%}
-  {% assign language_translation_offer_box = true %}
   {% include_relative _js/default/check-storage-availability.js %}
-  {% include_relative _js/default/lang-offer-msg-box.js %}
-{%- endif %}
-
-{% if site.data.conf.main.cookie_consent.enable == true or language_translation_offer_box == true %}
   {% include_relative _js/default/sliding-msg-box.js %}
+  {% include_relative _js/default/lang-offer-msg-box.js %}
 {%- endif %}
 
 {% if site.data.conf.main.cookie_consent.enable == true %}
