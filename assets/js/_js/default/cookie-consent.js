@@ -30,7 +30,7 @@
   const footerHeight = '--footer-height';
   const footerSelector = '.footer-container';
   const storageKey = "cookieConsentDone";
-  const slidingBoxId = "consent-settings";
+  const slidingBoxId = "cookie-consent-id";
   const cookieNamePrefix = "cookieConsent";
   let settingsVisible = false;
 
