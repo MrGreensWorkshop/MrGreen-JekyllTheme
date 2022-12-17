@@ -13,8 +13,9 @@
     , disableExtTranslationOffer: false
     , saveAndClose: saveAndClose
     , storageKey: "doNotOfferLanguages"
-    , slidingBoxId: "lang-offer"
+    , slidingBoxId: "lang-offer-id"
     , slideType: ""
+    , styleClass: "lang-offer"
   };
 
   function saveAndClose() {
@@ -91,6 +92,7 @@
           if (i != userLngMatchList.length - 1) msgHtml += '<br><br>';
         };
 
+        msgHtml = '<div class="' + globals.styleClass + '">' + msgHtml + '</div>';
         SlidingMsgBox.init(globals.slidingBoxId, msgHtml, saveAndClose, globals.slideType);
         SlidingMsgBox.show(globals.slidingBoxId);
       }

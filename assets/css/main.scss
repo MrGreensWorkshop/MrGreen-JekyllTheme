@@ -53,6 +53,9 @@
 
 {% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 %}
   @import "default/nav/lang-switch";
+  {% if site.data.conf.main.language_translation_offer_box -%}
+    @import "default/lang-offer";
+  {% endif %}
 {% endif %}
 
 {% if site.data.conf.main.scroll_back_to_top_button == true %}

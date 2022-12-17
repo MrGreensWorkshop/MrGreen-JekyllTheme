@@ -4,10 +4,6 @@
 */
 
 /* consent bar */
-#consent-settings {
-  @include get_scheme(consent-settings-colors-);
-}
-
 .consent-bar {
   @include get_scheme(consent-bar-colors-);
   --consent-bar-left-right-margin: calc(var(--main-container-margin) - 10px);
@@ -34,48 +30,61 @@
 }
 
 /* consent settings */
-#consent-settings table {
+.consent-settings {
+  @include get_scheme(consent-settings-colors-);
+  max-width: 450px;
+  min-width: 350px;
+  white-space: nowrap;
+}
+
+.consent-settings > h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--consent-settings-header-color);
+}
+
+.consent-settings table {
   border-collapse: collapse;
   width: 100%;
 }
 
-#consent-settings td {
+.consent-settings td {
   padding: 8px;
 }
 
-#consent-settings td:first-child {
+.consent-settings td:first-child {
   text-align: left;
   width: 350px;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-#consent-settings td:first-child > i {
+.consent-settings td:first-child > i {
   cursor: pointer;
   padding-right: 10px;
 }
 
-#consent-settings td:first-child > p {
+.consent-settings td:first-child > p {
   font-weight: 500;
   display: inline;
   margin-bottom: 0;
 }
 
-#consent-settings td:last-child {
+.consent-settings td:last-child {
   text-align: right;
 }
 
-#consent-settings .info-text {
+.consent-settings .info-text {
   white-space: initial;
   /*text-align: justify;*/
   text-justify: inter-word;
 }
 
-#consent-settings .info {
+.consent-settings .info {
   display: none;
 }
 
-#consent-settings .info p {
+.consent-settings .info p {
   padding-left: 30px;
   padding-right: 20px;
   padding-top: 0px;
@@ -84,22 +93,34 @@
   text-justify: inter-word;
 }
 
-#consent-settings .active_text {
+.consent-settings .active_text {
   color: var(--consent-settings-active-text-color);
   font-weight: 400;
 }
 
-#consent-settings .button-holder {
+.consent-settings .button-holder {
   text-align: right;
 }
 
 .consent-bar > .btn-base,
-#consent-settings .button-holder > .btn-base {
+.consent-settings .button-holder > .btn-base {
   position: relative;
   margin-left: 10px;
 }
 
 .consent-bar > .btn-left,
-#consent-settings .button-holder > .btn-left {
+.consent-settings .button-holder > .btn-left {
   float: left;
+}
+
+@media (max-width: 500px) {
+  .consent-settings {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .consent-settings {
+    min-width: unset;
+  }
 }
