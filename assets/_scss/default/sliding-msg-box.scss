@@ -5,13 +5,14 @@
 
 .slideBox {
   @include get_scheme(sliding-msg-box-colors-);
+  --sliding-msg-box-padding: clamp(15px, calc(var(--main-container-margin)), 50px);
 }
 
 .slideBox {
   display: none;
   position: fixed;
   z-index: 1001;
-  padding: 25px 40px;
+  padding: calc(0.65 * var(--sliding-msg-box-padding)) var(--sliding-msg-box-padding);
   background: var(--sliding-msg-box-background-color);
   border: 1px solid var(--sliding-msg-box-border-color);
   box-shadow: 0 5px 50px var(--sliding-msg-box-header-shadow-color);
@@ -31,12 +32,12 @@
 }
 
 .slideBoxEnd {
-  transform: translate(calc(-50% + var(--side-nav-width)),-50%);
+  transform: translate(calc(-50% + var(--side-nav-width)), -50%);
   top: 50%;
 }
 
 .slideBox > .close-button {
   position: absolute;
-  top: 18px;
-  right: 18px;
+  top: calc(0.4 * var(--sliding-msg-box-padding));
+  right: calc(0.47 * var(--sliding-msg-box-padding));
 }
