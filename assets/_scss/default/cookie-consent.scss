@@ -32,8 +32,9 @@
 /* consent settings */
 .consent-settings {
   @include get_scheme(consent-settings-colors-);
-  max-width: 450px;
-  min-width: 350px;
+  width: 50vw;
+  max-width: 500px;
+  min-width: 400px;
   white-space: nowrap;
 }
 
@@ -54,7 +55,6 @@
 
 .consent-settings td:first-child {
   text-align: left;
-  width: 350px;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -115,12 +115,17 @@
 
 @media (max-width: 500px) {
   .consent-settings {
-    min-width: 300px;
+    min-width: unset;
+    max-width: 360px;
+    width: 86vw;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 350px) {
   .consent-settings {
-    min-width: unset;
+    width: 90vw;
+  }
+  .consent-settings td {
+    padding: 5px;
   }
 }
