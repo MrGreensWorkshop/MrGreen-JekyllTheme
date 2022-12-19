@@ -230,6 +230,18 @@ contacts_open_in_new_tab: true
 contacts_mastodon_link_verification: false
 
 ###########################################################
+#                Contact form
+###########################################################
+# this will add contact form feature.
+# make sure google_forms_contact_form_url is set in _data/owner/[language].yml
+contact_form:
+  enable: false
+  # select one below
+  # 1. slideBoxTopToDown
+  # 2. slideBoxBottomToUp
+  slideType: slideBoxBottomToUp
+
+###########################################################
 #                Copyright text
 ###########################################################
 # this will add current year to the end of copyright_start_year which is defined in _data/owner/[language].yml

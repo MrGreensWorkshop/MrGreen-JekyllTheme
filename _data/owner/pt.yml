@@ -70,3 +70,12 @@ google_analytics_id: ""
 # make sure you set meta.google_site_verify: true in _data/conf/main.yml
 # make sure your environment does not match with google.site_verification.ignore in _data/conf/main.yml
 google_site_verification: ""
+
+# make sure you set contact_form.enable: true in _data/conf/main.yml
+# - Create a form in Google Forms. You can use the template named "Contact Information".
+# - Customize the form colors and response validation according to your needs.
+# - To disable forced Google sign-in, go to "Settings > Response" and switch off the "Limit to 1 response".
+# - Click the "Send" button at the top right.
+# - Click the link icon from "Send via" list and copy the link.
+# - Then paste the link between double quotes.
+google_forms_contact_form_url: ""

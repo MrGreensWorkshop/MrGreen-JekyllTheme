@@ -56,6 +56,7 @@ I was going to make my website and thought if I did it as a template, I could sh
   - [Twitter](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary)
 - Analytics (Google Analytics)
 - Cookie consent feature
+- Contact form feature (Google Forms)
 - Site Search feature
 - Code Compression for small footprint (`HTML` `JS` `SCSS`)
 - Mobile App support

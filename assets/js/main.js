@@ -38,7 +38,14 @@ layout: util/compress_js
   {% include_relative _js/default/lang-offer-msg-box.js %}
 {%- endif %}
 
-{% if site.data.conf.main.cookie_consent.enable == true or language_translation_offer_box == true %}
+{% if site.data.conf.main.contact_form.enable == true %}
+  {% include_relative _js/contact-form/google-contact-form-iframe.js %}
+{% endif %}
+
+{% if site.data.conf.main.cookie_consent.enable == true
+  or language_translation_offer_box == true
+  or site.data.conf.main.contact_form.enable == true
+%}
   {% include_relative _js/default/sliding-msg-box.js %}
 {%- endif %}
 

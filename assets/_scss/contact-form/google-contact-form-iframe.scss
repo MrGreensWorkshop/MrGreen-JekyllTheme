@@ -1,0 +1,32 @@
+/* Mr. Green Jekyll Theme - v1.1.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+ * Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+ * Licensed under MIT
+*/
+
+.contact-form-wrapper {
+  width: 70vw;
+  height: 82vh;
+  max-width: 650px;
+}
+
+.contact-form-wrapper > iframe {
+  display: block;
+  width: calc(100% + calc(2 * var(--main-container-margin)));
+  height: 100%;
+  border: 0;
+  margin-left: calc(-1 * var(--main-container-margin));
+}
+
+@media (max-width: 500px) {
+  .contact-form-wrapper {
+    min-width: unset;
+    max-width: 360px;
+    width: 86vw;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-form-wrapper {
+    width: 90vw;
+  }
+}
