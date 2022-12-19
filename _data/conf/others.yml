@@ -19,6 +19,8 @@ about:
   #sub_title_icon: "fa fa-star"
   # to disable icon, comment below
   email_icon: "fa fa-envelope-o"
+  # to enable contact button, set to true
+  show_contact_form_button: true
 
 ######################### Links ###########################
 

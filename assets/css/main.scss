@@ -82,9 +82,9 @@
   {% assign comment_disqus_enabled = true %}
 {% endif %}
 
-{% if
-  cookie_consent_box_enabled == true or
-  comment_disqus_enabled == true
+{% if cookie_consent_box_enabled == true
+  or comment_disqus_enabled == true
+  or site.data.conf.main.contact_form.enable == true
 %}
   @import "common/button";
 {% endif %}
@@ -159,6 +159,10 @@
   {% endif %}
 {% endif %}
 
+{% if site.data.conf.main.contact_form.enable == true %}
+  @import "contact-form/google-contact-form-iframe";
+{% endif %}
+
 {% if post_list_page_exist or post_exist %}
   @import "common/post-info";
 {% endif %}
@@ -187,7 +191,10 @@
   {% assign language_translation_offer_box_enabled = true %}
 {% endif %}
 
-{% if language_translation_offer_box_enabled == true or cookie_consent_box_enabled == true %}
+{% if language_translation_offer_box_enabled == true
+  or cookie_consent_box_enabled == true
+  or site.data.conf.main.contact_form.enable == true
+%}
   @import "default/sliding-msg-box";
 {% endif %}
 
@@ -199,11 +206,12 @@
   {% assign post_query_tabs_exist = true %}
 {% endif %}
 
-{% if
-  toc_exist == true or
-  post_query_tabs_exist == true or
-  language_translation_offer_box_enabled == true or
-  cookie_consent_box_enabled == true %}
+{% if toc_exist == true
+  or post_query_tabs_exist == true
+  or language_translation_offer_box_enabled == true
+  or cookie_consent_box_enabled == true
+  or site.data.conf.main.contact_form.enable == true
+%}
   @import "common/close-button";
 {% endif %}
 

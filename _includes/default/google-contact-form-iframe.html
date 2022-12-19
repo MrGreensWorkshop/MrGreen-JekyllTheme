@@ -1,0 +1,27 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme - v1.1.0 (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{% if site.data.owner[lng].google_forms_contact_form_url != empty -%}
+  {%- assign contact_form_url_split = site.data.owner[lng].google_forms_contact_form_url | split: '/viewform' -%}
+  {%- capture contact_form_url -%} {{ contact_form_url_split[0] }}/viewform?embedded=true&hl={{ lng }} {%- endcapture -%}
+{%- else %}
+  {%- capture contact_form_url -%}
+    javascript:\'
+    <!DOCTYPE html>
+      <style>h3{text-align: center;}</style>
+      <body>
+        <h3>google_forms_contact_form_url is not set in _data/lang/[language].yml</h3>
+      </body>
+    </html>
+    \'
+  {%- endcapture -%}
+{%- endif %}
+
+<script>
+  ContactForm.formURL = '{{ contact_form_url | split: " " | join: " " }}';
+  ContactForm.formLoadingText = '{{ site.data.lang[lng].contact_form.formLoadingText }}';
+  ContactForm.slideType = '{{ site.data.conf.main.contact_form.slideType }}';
+</script>

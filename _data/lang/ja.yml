@@ -171,6 +171,11 @@ constants:
   welcome: ようこそ
   sample: サンプル
 
+# for contact form
+contact_form:
+  button_name: お問い合わせフォーム
+  formLoadingText: お問い合わせフォームの読み込み中…
+
 # for cookie consent
 cookie_consent:
   privacy_policy_link_text: *privacy_policy_title

@@ -56,6 +56,7 @@
   - [Twitter](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary)
 - アナリティクス (Google アナリティクス)
 - クッキー使用同意機能
+- お問い合わせフォーム機能 (Google フォーム)
 - サイト内検索機能
 - コード圧縮によるフットプリントの縮小 (`HTML` `JS` `SCSS`)
 - モバイルアプリサポート

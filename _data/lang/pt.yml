@@ -171,6 +171,11 @@ constants:
   welcome: Bem vindo
   sample: Amostra
 
+# for contact form
+contact_form:
+  button_name: Formulário de Contato
+  formLoadingText: Carregando o Formulário de Contato...
+
 # for cookie consent
 cookie_consent:
   privacy_policy_link_text: *privacy_policy_title

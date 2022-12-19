@@ -188,7 +188,14 @@
   {%- include multi_lng/lang-offer-msg-box.html -%}
 {% endif -%}
 
-{% if site.data.conf.main.cookie_consent.enable or language_translation_offer_box -%}
+{% if site.data.conf.main.contact_form.enable -%}
+  {%- include default/google-contact-form-iframe.html -%}
+{% endif -%}
+
+{% if site.data.conf.main.cookie_consent.enable
+  or language_translation_offer_box
+  or site.data.conf.main.contact_form.enable
+-%}
   {%- include default/sliding-msg-box.html -%}
 {% endif -%}
 
