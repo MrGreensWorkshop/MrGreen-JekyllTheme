@@ -56,7 +56,7 @@ Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia
   - [Twitter](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary)
 - Analytics (Google Analytics)
 - Consentimento para usar cookies
-- Recurso de formulário de contato (Formulários Google)
+- Formulário de contato (Formulários do Google)
 - Buscador no site
 - Compressão de código (`HTML` `JS` `SCSS`)
 - Suporte a dispositivos móveis
