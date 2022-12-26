@@ -1,0 +1,43 @@
+name: test
+
+# on a push or pull request is made on the main branch
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '.github/**'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.gitignore'
+      - 'LICENSE.txt'
+    branches:
+      - main
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '.github/**'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.gitignore'
+      - 'LICENSE.txt'
+    branches:
+      - main
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+      BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: install ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - run: |
+          JEKYLL_ENV=production bundle exec jekyll build --safe
+          echo "Completed."

@@ -149,8 +149,8 @@ if [[ ${#contributorList[@]} > 0 ]];then
   #echo "after: $contributorsStr"
   # remove last comma from contributors
   contributorsStr=`echo "${contributorsStr}" | sed 's/\(.*\),/\1 /'` || exit 1
-  CONTRIBUTORS_note=`printf "$CONTRIBUTORS_FORMAT" "${contributorsStr}"` || exit 1
-  relese_note+="${CONTRIBUTORS_note}"
+  contributorsNote=`printf "$CONTRIBUTORS_FORMAT" "${contributorsStr}"` || exit 1
+  relese_note+="${contributorsNote}"
 fi
 
 #echo -e "${relese_note}"
