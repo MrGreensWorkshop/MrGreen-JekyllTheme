@@ -1,0 +1,35 @@
+name: Create release from issues linked to PRs
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Create release from issues linked to PRs
+        if: ${{ github.repository_owner == 'MrGreensWorkshop' && startsWith(github.ref, 'refs/tags/v') }}
+        run: .github/scripts/create-release-note.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_REF: ${{ github.event.base_ref }}
+          RELEASE_TITLE_FORMAT: "Version %s"
+          FEATURES_FORMAT: "### ⭐ New Features\r\n%s"
+          BUGS_FORMAT: "\r\n### 🐛 Bug fixes\r\n%s"
+          OTHERS_FORMAT: "\r\n### 🔨 Other issues\r\n%s"
+          CONTRIBUTORS_FORMAT: "\r\n### ❤️ Contributors\r\nThank you for taking the time to contribute!\r\n%s"
+          BUG_LINE_FORMAT: "\\055 %s #%d\r\n"
+          FEATURE_LINE_FORMAT: "\\055 %s #%d\r\n"
+          OTHERS_LINE_FORMAT: "\\055 %s #%d\r\n"
+          CONTRIBUTORS_LINE_FORMAT: "@%s, "
+          ENABLE_OTHERS: true
+          ENABLE_CONTRIBUTORS: true
+          RELEASE_DRAFT_FLG: false
+          RELEASE_PRE_RELEASE_FLG: false
+          RELEASE_GENERATE_RELEASE_NOTES_FLG: false
