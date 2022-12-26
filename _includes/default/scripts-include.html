@@ -188,7 +188,7 @@
   {%- include multi_lng/lang-offer-msg-box.html -%}
 {% endif -%}
 
-{% if site.data.conf.main.contact_form.enable -%}
+{% if site.data.conf.main.contact_form.enable and page.layout == 'about' -%}
   {%- include default/google-contact-form-iframe.html -%}
 {% endif -%}
 
