@@ -61,12 +61,20 @@ for prNo in "${pullRequestList[@]}"; do
   #echo "PR no: ${prNo}"
   # get PR
   curlRespPr=$(githubApiRequest "pulls/${prNo}")
+  if [[ "$?" != 0 ]] ; then
+    echo "PR ${prNo} was not found."
+    exit 1
+  fi
   # get PR author
   prAuthor=`echo ${curlRespPr} | jq '.user.login' | sed 's/\"//g'` || exit 1
   #echo "PR author: ${prAuthor}"
   issueNo=`echo ${curlRespPr} | jq '.body' | grep -o -E '[#]+[0-9]+' | sed 's/[#]//g'` || exit 1
   # get issue
   curlRetIssue=$(githubApiRequest "issues/${issueNo}")
+  if [[ "$?" != 0 ]] ; then
+    echo "Issue ${issueNo} was not found."
+    exit 1
+  fi
   # get issue title
   issueTitle=`echo ${curlRetIssue} | jq '.title' | sed 's/\"//g'` || exit 1
   # get issue labels
@@ -74,6 +82,11 @@ for prNo in "${pullRequestList[@]}"; do
   issueLabelList=($issueLabels)
 
   #echo "PR: ${prNo} is related to issue: ${issueNo} Issue title: ${issueTitle} Issue labels: ${#issueLabelList[@]} ${issueLabels}"
+
+  if [[ ${#issueLabelList[@]} = 0 ]];then
+    echo "Issue ${issueNo} has no label."
+    exit 1
+  fi
 
   # add contributor even labels is matched or not
   contributors+=$(addContributor "${prAuthor}")
