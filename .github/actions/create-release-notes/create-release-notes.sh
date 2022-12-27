@@ -63,6 +63,8 @@ for prNo in "${pullRequestList[@]}"; do
   fi
   # get PR author
   prAuthor=`echo ${curlRespPr} | jq '.user.login' | sed 's/\"//g'` || exit 1
+  # add contributor even labels is matched or not, or issue is duplicated or not
+  contributors+=$(addContributor "${prAuthor}")
   #echo "PR author: ${prAuthor}"
   tmpIssueNo=`echo ${curlRespPr} | jq '.body' | grep -o -E '[#]+[0-9]+' | sed 's/[#]//g'` || exit 1
 
@@ -96,9 +98,6 @@ for prNo in "${pullRequestList[@]}"; do
       echo "Issue ${issueNo} has no label."
       exit 1
     fi
-
-    # add contributor even labels is matched or not
-    contributors+=$(addContributor "${prAuthor}")
 
     if [[ ${#issueLabelList[@]} > 0 ]];then
       # check the issue labels
