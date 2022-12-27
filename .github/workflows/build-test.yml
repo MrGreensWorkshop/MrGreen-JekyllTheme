@@ -30,7 +30,7 @@ jobs:
       BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
     steps:
       - name: checkout
-        if: ${{ github.repository_owner == 'MrGreensWorkshop' }}
+        if: ${{ github.repository == 'MrGreensWorkshop/MrGreen-JekyllTheme' }}
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
