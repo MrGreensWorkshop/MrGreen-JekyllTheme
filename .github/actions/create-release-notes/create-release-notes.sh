@@ -4,10 +4,10 @@
 # Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
 # Licensed under MIT
 
-source ${GITHUB_ACTION_PATH}/githubApiCalls.sh
+source ${GITHUB_ACTION_PATH}/../common/githubApiCalls.sh
 
 # check the branch name
-if [[ -z "${RELEASE_BRANCH}" ]];then
+if [[ -z "${RELEASE_BRANCH}" ]]; then
   echo "The RELEASE_BRANCH is not found. (environment variable)"
   exit 1
 fi
@@ -23,9 +23,9 @@ checkIfvalueIsInArray () {
 }
 
 addContributor () {
-  if [[ ${ENABLE_CONTRIBUTORS} = true ]];then
+  if [[ ${ENABLE_CONTRIBUTORS} = true ]]; then
     # get github owner by removing after "/" and only add users other than github owner
-    if [[ "${GITHUB_REPOSITORY%/*}" != "${1}" ]];then
+    if [[ "${GITHUB_REPOSITORY%/*}" != "${1}" ]]; then
       local tmpItem=`printf "$CONTRIBUTOR_LINE_FORMAT" "$1"`
       echo ${tmpItem}
     fi
@@ -44,7 +44,7 @@ gitLogResp=`git log --pretty=format:"%s" ${previous_tag}..${current_tag} --rever
 pullRequestList=( $gitLogResp )
 
 # if no pull request then exit
-if [[ ${#pullRequestList[@]} = 0 ]];then
+if [[ ${#pullRequestList[@]} = 0 ]]; then
   echo "There is no pull request"
   exit 1
 fi
@@ -57,7 +57,7 @@ for prNo in "${pullRequestList[@]}"; do
   #echo "PR no: ${prNo}"
   # get PR
   curlRespPr=$(githubApiRequest "pulls/${prNo}")
-  if [[ "$?" != 0 ]] ; then
+  if [[ "$?" != 0 ]]; then
     echo "PR ${prNo} was not found."
     exit 1
   fi
@@ -82,7 +82,7 @@ for prNo in "${pullRequestList[@]}"; do
 
     # get issue
     curlRetIssue=$(githubApiRequest "issues/${issueNo}")
-    if [[ "$?" != 0 ]] ; then
+    if [[ "$?" != 0 ]]; then
       echo "Issue ${issueNo} was not found."
       exit 1
     fi
@@ -94,12 +94,12 @@ for prNo in "${pullRequestList[@]}"; do
 
     #echo "PR: ${prNo} is related to issue: ${issueNo} Issue title: ${issueTitle} Issue labels: ${#issueLabelList[@]} ${issueLabels}"
 
-    if [[ ${#issueLabelList[@]} = 0 ]];then
+    if [[ ${#issueLabelList[@]} = 0 ]]; then
       echo "Issue ${issueNo} has no label."
       exit 1
     fi
 
-    if [[ ${#issueLabelList[@]} > 0 ]];then
+    if [[ ${#issueLabelList[@]} > 0 ]]; then
       # check the issue labels
       if checkIfvalueIsInArray issueLabelList "${FEATURE_LABEL}";then
         tmpItem=`printf "$FEATURE_LINE_FORMAT" "$issueTitle" "$issueNo"` || exit 1
@@ -120,7 +120,7 @@ for prNo in "${pullRequestList[@]}"; do
     fi
 
     # issues with not label or labled other than bug or enhancement
-    if [[ ${ENABLE_OTHERS} = true ]];then
+    if [[ ${ENABLE_OTHERS} = true ]]; then
       tmpItem=`printf "$OTHER_LINE_FORMAT" "$issueTitle" "$issueNo"` || exit 1
       #echo "${tmpItem}"
       otherIssues+="${tmpItem}"
@@ -137,23 +137,23 @@ bugIssueList=($bugIssues)
 otherIssueList=($otherIssues)
 contributorList=($contributors)
 
-if [[ ${#featureIssueList[@]} > 0 ]];then
+if [[ ${#featureIssueList[@]} > 0 ]]; then
   featureIssues_note=`printf "$FEATURES_FORMAT" "${featureIssues}"` || exit 1
   relese_note+="${featureIssues_note}"
 fi
 
-if [[ ${#bugIssueList[@]} > 0 ]];then
+if [[ ${#bugIssueList[@]} > 0 ]]; then
   bugIssues_note=`printf "$BUGS_FORMAT" "${bugIssues}"` || exit 1
   relese_note+="${bugIssues_note}"
 fi
 
-if [[ ${#otherIssueList[@]} > 0 ]];then
+if [[ ${#otherIssueList[@]} > 0 ]]; then
   otherIssues_note=`printf "$OTHERS_FORMAT" "${otherIssues}"` || exit 1
   relese_note+="${otherIssues_note}"
 fi
 
 # add only if the number of x is more than one.
-if [[ ${#contributorList[@]} > 0 ]];then
+if [[ ${#contributorList[@]} > 0 ]]; then
   # remove duplicates
   contributorsStr=`echo "$contributors" | tr ' ' '\n' | sort | uniq | tr '\n' ' ' | sed 's/^[ ]*//'` || exit 1
   #echo "after: $contributorsStr"
@@ -171,6 +171,11 @@ strippedTag=`echo "${current_tag}" | sed 's/[v]//g'` || exit 1
 releaseNoteTitle=`printf "$RELEASE_TITLE_FORMAT" "$strippedTag"` || exit 1
 # create a release
 curlRet=$(githubApiRequestCreateRelease "${current_tag}" "${RELEASE_BRANCH}" "${releaseNoteTitle}" "${relese_note}" "${RELEASE_DRAFT_FLG}" "${RELEASE_PRE_RELEASE_FLG}" "${RELEASE_GENERATE_RELEASE_NOTES_FLG}")
+if [[ "$?" != 0 ]]; then
+  echo "Creating release note is failed."
+  echo ${curlRet}
+  exit 1
+fi
 #echo ${curlRet}
 
 echo "Complete"

@@ -1,4 +1,4 @@
-name: test
+name: MrGreen-JekyllTheme jekyll build test
 
 # on a push or pull request is made on the main branch
 on:
@@ -29,16 +29,18 @@ jobs:
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
     steps:
-      - name: checkout
+      - name: Checkout
         if: ${{ github.repository == 'MrGreensWorkshop/MrGreen-JekyllTheme' }}
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: install ruby
+      - name: Install ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - run: |
+      - name: Build test
+        run: |
           JEKYLL_ENV=production bundle exec jekyll build --safe
           echo "Completed."
+        shell: bash
