@@ -1,0 +1,57 @@
+name: Github pages version updater
+
+# on a push or pull request is made on the main branch
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '.github/**'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.gitignore'
+      - 'LICENSE.txt'
+    branches:
+      - main
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '.github/**'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.gitignore'
+      - 'LICENSE.txt'
+    branches:
+      - main
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+      BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
+    steps:
+      - name: checkout
+        if: ${{ github.repository == 'MrGreensWorkshop/MrGreen-JekyllTheme' }}
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: install ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: update checker
+        id: update-checker
+        run: |
+          .github/workflows/github-pages-version-updater.sh
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTIONS_BOT_USER_NAME: "github-actions[bot]"
+          GITHUB_ACTIONS_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+          PR_BRANCH: "update_github_pages_gem_version"
+          TARGET_BRANCH: "main"
+          PR_MESSAGE: "github-pages gem version is updated"
+          PR_TEMPLATE: "#### About pull request\r\n - To get more insight, please check the related issue #%d.\r\n\r\n#### What's changed to accomplish [problem / feature] described in issue\r\n - %s \r\n\r\nThis PR is generated automatically."
+          ISSUE_TEMPLATE_OK: "#### Bump Up github-pages version on Gemfile.\r\n\r\nThis issue is generated automatically."
+          ISSUE_TEMPLATE_NG: "#### After bumping up github-pages version, build has failed.\r\n\r\nThis issue is generated automatically.\r\n\r\n%s"
+

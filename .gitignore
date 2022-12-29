@@ -16,3 +16,6 @@ Thumbs.db
 
 # diff files
 *.bak
+
+# updating Gemfile automatically using github actions
+vendor
