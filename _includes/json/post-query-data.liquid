@@ -24,7 +24,7 @@
     ,"read_time": "{{ read_time }}"
     ,"date"     : "{{ post_date }}"
     ,"year"     : "{{ post.date | date: "%Y" }}"
-    {% if site.data.conf.posts.comments.enable and site.data.conf.posts.comments.disqus.enable and site.data.conf.posts.comments.disqus.comment_count -%}
+    {% if site.data.conf.posts.comments.engine == "disqus" and site.data.conf.posts.comments.disqus.comment_count -%}
     ,"comment_style": "{{ comment_style }}"
     {% endif -%}
   },

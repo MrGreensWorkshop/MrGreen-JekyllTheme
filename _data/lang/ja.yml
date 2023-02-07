@@ -72,9 +72,9 @@ post:
     first_post: 最初
     last_post: 最後
   comments:
+    noscript: コメントを表示するには、JavaScriptを有効にしてください。
     disqus:
       count_title: コメント
-      noscript: コメントを表示するには、JavaScriptを有効にしてください。
       click_to_load: "コメントを表示する"
       consent:
         title: コメント (Disqus.com)

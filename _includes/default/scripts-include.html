@@ -166,24 +166,36 @@
 {% endif -%}
 
 {%comment-%} add disqus comment feature {%-endcomment-%}
-{%- if
-  site.data.conf.posts.comments.enable and
-  site.data.conf.posts.comments.disqus.enable and
-  site.data.owner[lng].disqus_shortname != nil and
-  site.data.owner[lng].disqus_shortname != empty
+{%- if site.data.conf.posts.comments.engine == "disqus"
+  and site.data.owner[lng].comments.disqus.shortname != nil
+  and site.data.owner[lng].comments.disqus.shortname != empty
 -%}
   {%- include default/disqus-scripts.html -%}
+{% endif -%}
+
+{%comment-%} add giscus comment feature {%-endcomment-%}
+{%- if site.data.conf.posts.comments.engine == "giscus"
+  and site.data.owner[lng].comments.giscus.repo != nil and site.data.owner[lng].comments.giscus.repo != empty
+  and site.data.owner[lng].comments.giscus.repo-id != nil and site.data.owner[lng].comments.giscus.repo-id != empty
+  and site.data.owner[lng].comments.giscus.category != nil and site.data.owner[lng].comments.giscus.category != empty
+  and site.data.owner[lng].comments.giscus.category-id != nil and site.data.owner[lng].comments.giscus.category-id != empty
+-%}
+  {%- include default/giscus-scripts.html -%}
 {% endif -%}
 
 {% if site.data.conf.main.cookie_consent.enable -%}
   {%- include default/google-consent-init.html -%}
 {% endif -%}
 
-{% if site.data.owner[lng].google_analytics_id != empty and site.data.owner[lng].google_analytics_id != nil and jekyll.environment != site.data.conf.main.google.analytics.ignore -%}
+{% if site.data.owner[lng].google_analytics_id != empty and site.data.owner[lng].google_analytics_id != nil
+  and jekyll.environment != site.data.conf.main.google.analytics.ignore
+-%}
   {%- include default/google-analytics.html -%}
 {% endif -%}
 
-{% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 and site.data.conf.main.language_translation_offer_box -%}
+{% if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1
+  and site.data.conf.main.language_translation_offer_box
+-%}
   {%- assign language_translation_offer_box = true -%}
   {%- include multi_lng/lang-offer-msg-box.html -%}
 {% endif -%}

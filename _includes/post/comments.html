@@ -1,0 +1,33 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+<div id="comment_thread">
+{%- case site.data.conf.posts.comments.engine %}
+  {%- when "disqus" %}
+    <div id="disqus_thread">
+      {%- if site.data.owner[lng].comments.disqus.shortname == nil or site.data.owner[lng].comments.disqus.shortname == empty -%}
+      {%comment-%} for debug purpose {%-endcomment-%}
+      <script>alert('comments.disqus.shortname is not defined.\nYou can disable comments from _data/conf/posts.yml [comments.engine: ""]');</script>
+      {%- endif -%}
+    </div>
+  {%- when "giscus" %}
+    <div id="giscus_thread">
+      {%- if site.data.owner[lng].comments.giscus.repo == nil or site.data.owner[lng].comments.giscus.repo == empty
+          or site.data.owner[lng].comments.giscus.repo-id == nil or site.data.owner[lng].comments.giscus.repo-id == empty
+          or site.data.owner[lng].comments.giscus.category == nil or site.data.owner[lng].comments.giscus.category == empty
+          or site.data.owner[lng].comments.giscus.category-id == nil or site.data.owner[lng].comments.giscus.category-id == empty
+      -%}
+      {%comment-%} for debug purpose {%-endcomment-%}
+      <script>alert('comments.giscus.[repo, repo-id, category, category-id] one or all of these are not defined.\nYou can disable comments from _data/conf/posts.yml [comments.engine: ""]');</script>
+      {%- endif -%}
+    </div>
+{% endcase -%}
+</div>
+
+{%comment-%} no script message {%-endcomment-%}
+<noscript>
+  {{ site.data.lang[lng].post.comments.noscript }}
+</noscript>

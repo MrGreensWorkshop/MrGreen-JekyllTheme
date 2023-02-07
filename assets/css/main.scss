@@ -78,12 +78,8 @@
   {% endif %}
 {% endif %}
 
-{% if site.data.conf.posts.comments.enable and site.data.conf.posts.comments.disqus.enable %}
-  {% assign comment_disqus_enabled = true %}
-{% endif %}
-
 {% if cookie_consent_box_enabled == true
-  or comment_disqus_enabled == true
+  or site.data.conf.posts.comments.engine == "disqus"
   or site.data.conf.main.contact_form.enable == true
 %}
   @import "common/button";
@@ -241,8 +237,10 @@
     @import "post/table-of-contents";
   {% endif %}
 
-  {% if comment_disqus_enabled == true %}
-    #disqus_thread {
+  {% if site.data.conf.posts.comments.engine != empty
+    and site.data.conf.posts.comments.engine != nil
+  %}
+    #comment_thread {
       margin-top: 30px;
       margin-bottom: 30px;
       /*min-height: 100px;*/
