@@ -47,6 +47,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 - Post Share Options
 - Post-listing by Category or Tags
 - Comments for posts
+  - [Giscus](https://giscus.app)
   - [Disqus](https://disqus.com)
 - Selectable numbered pagination or scroll to load type
 - Sitemap feature

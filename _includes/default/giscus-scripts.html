@@ -1,0 +1,125 @@
+{%-comment-%}
+  Mr. Green Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+  Licensed under MIT
+{%-endcomment-%}
+
+{%- assign post_comment_enabled = false -%}
+{%if page.layout == 'post' and page.comments_disable != true -%}
+  {%- assign post_comment_enabled = true -%}
+{% endif -%}
+
+{%- if post_comment_enabled -%}
+  {%- include multi_lng/get-lng-code.liquid lng = lng country = false -%}
+  <script>
+  let giscusAttributes = {
+    "src": "https://giscus.app/client.js",
+    "data-repo": "{{ site.data.owner[lng].comments.giscus.repo }}",
+    "data-repo-id": "{{ site.data.owner[lng].comments.giscus.repo-id }}",
+    "data-category": "{{ site.data.owner[lng].comments.giscus.category }}",
+    "data-category-id": "{{ site.data.owner[lng].comments.giscus.category-id }}",
+    "data-mapping": "{{ site.data.conf.posts.comments.giscus.mapping }}",
+    "data-strict": "{{ site.data.conf.posts.comments.giscus.strict }}",
+    "data-reactions-enabled": "{{ site.data.conf.posts.comments.giscus.reaction-enabled }}",
+    "data-emit-metadata": "{{ site.data.conf.posts.comments.giscus.emit-metadata }}",
+    "data-input-position": "{{ site.data.conf.posts.comments.giscus.input-position }}",
+  {%- if site.data.conf.main.color_scheme_dark == true %}
+    "data-theme": giscusGetColorTheme(),
+  {%- else %}
+    "data-theme": "{{ site.data.conf.posts.comments.giscus.theme-light }}",
+  {%- endif %}
+    "data-lang": "{{ lng_code }}",
+  {%- if site.data.conf.posts.comments.giscus.loading != nil
+      and site.data.conf.posts.comments.giscus.loading != empty
+  %}
+    "data-loading": "{{ site.data.conf.posts.comments.giscus.loading }}",
+  {%- endif %}
+    "crossorigin": "{{ site.data.conf.posts.comments.giscus.crossorigin }}",
+    "async": ""
+  };
+
+  function engineLoader() {
+    let giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+    document.getElementById("giscus_thread").appendChild(giscusScript);
+  }
+
+  /* set giscus theme, when data-color-scheme changes. (dark, light) */
+  {%- if site.data.conf.main.color_scheme_dark == true %}
+  function giscusGetColorTheme() {
+    let theme = "{{ site.data.conf.posts.comments.giscus.theme-light }}";
+    if (document.body.dataset.colorScheme == "light") {
+      theme = "{{ site.data.conf.posts.comments.giscus.theme-light }}";
+    } else if (document.body.dataset.colorScheme == "dark") {
+      theme = "{{ site.data.conf.posts.comments.giscus.theme-dark }}";
+    }
+    return theme;
+  }
+
+  function giscusSetColorScheme() {
+    function giscusSetConfig(config) {
+      const giscusIframe = document.querySelector('iframe.giscus-frame');
+      if (!giscusIframe) return;
+      giscusIframe.contentWindow.postMessage({ giscus: config }, 'https://giscus.app');
+    }
+    giscusSetConfig({
+      setConfig: {
+        theme: giscusGetColorTheme()
+      }
+    });
+  }
+  const color_scheme_observer = new MutationObserver(giscusSetColorScheme);
+  color_scheme_observer.observe(document.body, {attributeFilter: ["data-color-scheme"]});
+  {%- endif %}
+
+  /* load when slide to the end of page */
+  {%- if site.data.conf.posts.comments.giscus.load_mode == 'scroll_to_load' %}
+  let isMobile = false;
+  function page_bottom_Check(event) {
+    let wind = event.target.scrollingElement;
+    let showBeforeEndOffset = 50;
+    if (isMobile) {
+      /* mobile fix */
+      showBeforeEndOffset += 56;
+    }
+    if (wind.offsetHeight + wind.scrollTop >= wind.scrollHeight - commentPageOffset - showBeforeEndOffset) {
+      engineLoader();
+      document.removeEventListener('scroll', page_bottom_Check);
+      slideToComments();
+    }
+  }
+
+  const commentPageOffset = document.querySelector('#comment_thread').clientHeight;
+  document.addEventListener('scroll', page_bottom_Check);
+
+  window.addEventListener("load", function() {
+    isMobile = navigator.userAgent.toLowerCase().match(/mobile/i);
+    let checkScroll = true;
+    if (isMobile) {
+      /* mobile fix */
+      clientHeight = document.documentElement.clientHeight + 56;
+    } else {
+      clientHeight = document.documentElement.clientHeight;
+    }
+
+    const scroll_enabled = document.documentElement.scrollHeight > clientHeight;
+    if (checkScroll == true && scroll_enabled == false) {
+      /* if no scroll bar, load at startup */
+      document.removeEventListener('scroll', page_bottom_Check);
+      engineLoader();
+      slideToComments();
+    }
+  });
+  {% endif -%}
+
+  {%- if site.data.conf.posts.comments.giscus.load_mode != 'scroll_to_load' %}
+  engineLoader();
+  {%- else %}
+  /* scroll to page bottom to see comments. */
+  function slideToComments() {
+    document.getElementById('comment_thread').style.minHeight = '324px';
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+  {% endif -%}
+  </script>
+{%- endif %}

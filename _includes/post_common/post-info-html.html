@@ -14,10 +14,10 @@
     &nbsp;&nbsp;&nbsp;<span><i class="fa fa-clock-o"></i>&nbsp;{{include.read_time}}</span>
   </small>
   {%comment-%} comment count  {%-endcomment-%}
-  {%- if site.data.conf.posts.comments.enable and site.data.conf.posts.comments.disqus.enable and site.data.conf.posts.comments.disqus.comment_count %}
+  {%- if site.data.conf.posts.comments.engine == "disqus" and site.data.conf.posts.comments.disqus.comment_count %}
   <small class="meta-link" {{include.comment_style}}>
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-comments-o"></i>&nbsp;<a href="{{include.url}}#disqus_thread">-</a>
-    <a href="javascript:void(0);" onclick="window.location.href='{{include.url}}#disqus_thread'">{{ site.data.lang[lng].post.comments.disqus.count_title }}</a>
+    &nbsp;&nbsp;&nbsp;<i class="fa fa-comments-o"></i>&nbsp;<a href="{{include.url}}#comment_thread">-</a>
+    <a href="javascript:void(0);" onclick="window.location.href='{{include.url}}#comment_thread'">{{ site.data.lang[lng].post.comments.disqus.count_title }}</a>
   </small>
   {% endif -%}
 </div>

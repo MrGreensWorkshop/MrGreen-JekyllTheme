@@ -135,12 +135,14 @@ pager_page_numbers_first_last_buttons: true
 #                Comments
 ###########################################################
 comments:
-  # to enable comments please set to true, comments can be disabled on any post by setting comments_disable: true
-  enable: true
-  # make sure disqus_shortname is set in _data/owner/[language].yml
+  # to enable comments, please select one of the engine below. Set engine: "" to turn it off.
+  # comments can be disabled on any post by setting comments_disable: true
+  # 1. "disqus"
+  # 2. "giscus"
+  # 3. ""
+  engine: ""
+  # make sure comments.disqus.shortname is set in _data/owner/[language].yml
   disqus:
-    # to enable disqus comments please set to true
-    enable: false
     # login your disqus account, navigate to admin > settings > Community > Comment Count Link
     # set Zero comments: 0, One comment: 1, Multiple comments: {num} and save it.
     comment_count: true
@@ -160,3 +162,30 @@ comments:
       terms_replace: $terms
       privacy_replace: $privacy_policy
       settings_replace: $settings_link
+  # make sure all items in comments.giscus are set in _data/owner/[language].yml
+  giscus:
+    # for options, please check this page https://giscus.app/
+    # mapping options: pathname, url, title, og:title, specific, number
+    mapping: pathname
+    # strict options: 0, 1
+    strict: 1
+    # reaction-enabled options: 0, 1
+    reaction-enabled: 1
+    # emit-metadata options: 0, 1
+    emit-metadata: 0
+    # input-position options: top, bottom
+    input-position: bottom
+    # theme-light options:
+    # light, light_high_contrast, light_protanopia, light_tritanopia, preferred_color_scheme
+    theme-light: light_protanopia
+    # theme-dark options:
+    # dark, dark_high_contrast, dark_protanopia, dark_tritanopia, dark_dimmed, transparent_dark
+    theme-dark: dark_protanopia
+    # set loading: "" to turn it off.
+    # loading options: "", lazy
+    loading: lazy
+    crossorigin: anonymous
+    # select one below
+    # 1. scroll_to_load
+    # 2. "" (load with page load (slows page load))
+    load_mode: scroll_to_load

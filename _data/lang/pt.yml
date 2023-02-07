@@ -72,9 +72,9 @@ post:
     first_post: Primeiro
     last_post: Último
   comments:
+    noscript: Por favor, habilite o JavaScript para ter acesso aos comentários.
     disqus:
       count_title: Comentários
-      noscript: Por favor, habilite o JavaScript para ter acesso aos comentários.
       click_to_load: "Carregar comentários"
       consent:
         title: Comentários (Disqus.com)

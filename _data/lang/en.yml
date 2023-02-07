@@ -72,9 +72,9 @@ post:
     first_post: First
     last_post: Last
   comments:
+    noscript: Please enable JavaScript to view the Comments.
     disqus:
       count_title: Comments
-      noscript: Please enable JavaScript to view the Comments.
       click_to_load: "Load Comments"
       consent:
         title: Comments (Disqus.com)
