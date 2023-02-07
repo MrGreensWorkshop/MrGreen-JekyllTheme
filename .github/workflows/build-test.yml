@@ -25,12 +25,12 @@ on:
 
 jobs:
   build-test:
+    if: ${{ github.repository == 'MrGreensWorkshop/MrGreen-JekyllTheme' }}
     runs-on: ubuntu-latest
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
     steps:
       - name: Checkout
-        if: ${{ github.repository == 'MrGreensWorkshop/MrGreen-JekyllTheme' }}
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
