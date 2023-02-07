@@ -47,6 +47,7 @@ Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia
 - Opção de compartilhar posts.
 - Os posts podem ser listados por categoria ou marcadores.
 - Comentários em posts
+  - [Giscus](https://giscus.app)
   - [Disqus](https://disqus.com)
 - Seleção de diferentes paginações e modos de carregar conteúdo
 - Mapa do site
