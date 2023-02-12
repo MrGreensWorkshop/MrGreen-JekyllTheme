@@ -26,7 +26,7 @@ about:
 
 links:
   # to use row as a thumb to open the links, set to true, or to use a href links to open links, set to false.
-  # if you set to false, it also disables the hover background color change.
+  # if you set to false,tit also disables the hover background color change.
   use_rows_as_link: true
 
 ######################### Projects ###########################
