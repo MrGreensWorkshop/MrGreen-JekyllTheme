@@ -4,6 +4,7 @@
 # Licensed under MIT
 
 layout: default
+
 # Links page
 ---
 {%- include multi_lng/get-lng-by-url.liquid -%}
