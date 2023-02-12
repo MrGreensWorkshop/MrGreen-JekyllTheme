@@ -21,9 +21,13 @@
   --main-container-padding-bottom: calc(var(--main-container-margin) / 2);
   --main-container-width-limit: 800px;
   --main-container-max-width: calc(var(--main-container-width-limit) + (var(--main-container-margin) * 2));
+
+  /*Table of container*/
+
   /* space between containers */
   --multipurpose-container-margin-bottom: 20px;
   --footer-height: 27px;
+  
 }
 
 {% if site.data.conf.main.google_font_load_in_head == nil or site.data.conf.main.google_font_load_in_head == false %}

@@ -9,6 +9,9 @@ layout: default
 {%- assign lng = get_lng -%}
 {%- include post_common/post-main.html post = page -%}
 
+<div class="toc-sidebar">
+</div>
+
 {%-comment-%} Pagination {%-endcomment-%}
 {% if site.posts.size > 1 -%}
   {% include multi_lng/get-pages-by-lng.liquid pages = site.posts -%}

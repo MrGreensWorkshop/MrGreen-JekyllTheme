@@ -85,17 +85,17 @@ layout: util/compress_js
 {% endif %}
 
 {%- if post_exist -%}
-  {%- if site.data.conf.posts.share_buttons == true -%}
-    {% include_relative _js/post/copy-to-clipboard.js %}
-  {%- endif %}
+  // {%- if site.data.conf.posts.share_buttons == true -%}
+  //   {% include_relative _js/post/copy-to-clipboard.js %}
+  // {%- endif %}
 
-  {%- if site.data.conf.posts.post_table_of_contents == true -%}
-    {% include_relative _js/post/movable-panels.js %}
-  {%- endif %}
+  // {%- if site.data.conf.posts.post_table_of_contents == true -%}
+  //   {% include_relative _js/post/movable-panels.js %}
+  // {%- endif %}
 
-  {%- if site.data.conf.posts.post_table_of_contents == true -%}
-    {% include_relative _js/post/table-of-contents-init.js %}
-  {%- endif %}
+  // {%- if site.data.conf.posts.post_table_of_contents == true -%}
+  //   {% include_relative _js/post/table-of-contents-init.js %}
+  // {%- endif %}
 {%- endif %}
 
 {%- if post_exist or post_list_page_exist %}

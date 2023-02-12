@@ -29,7 +29,7 @@
         });
 
         /* set toc box top position below the toc-view-top */
-        let tocViewId = $("#toc-view-top");
+        let tocViewId = $("#toc-sidebar");
         if (tocViewId.length > 0) {
           /* get tocViewId bottom position */
           let tocViewIdBottom = (tocViewId.offset().top - $(window).scrollTop()) + tocViewId.outerHeight();

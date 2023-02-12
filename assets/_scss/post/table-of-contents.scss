@@ -3,15 +3,21 @@
  * Licensed under MIT
 */
 
+#toc-sidebar{
+  height: 100%;
+  z-index: 1000;
+  
+}
+
 #toc-container {
   @include get_scheme(bootstrap-dark-panel-colors-);
   @include get_scheme(table-of-contents-colors-);
-  height: auto;
+  height: 100%;
   position: fixed;
   z-index: 1002;
   /* table of contents box top */
-  top: 600px;
-  left: 10px;
+  top: 10px;
+  left: 1200px;
   max-width: calc(var(--side-nav-width-def) + var(--main-container-margin));
 }
 
