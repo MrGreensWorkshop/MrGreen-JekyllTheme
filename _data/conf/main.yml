@@ -22,7 +22,7 @@ default_lng: ja
 # single language disables language switch
 # language order is linked to array order
 # language_switch_lang_list: [en, ja, pt]
-language_switch_lang_list: [en, ja, pt]
+language_switch_lang_list: [ja, en, pt]
 
 # if the opened page is not in the user's language list,
 # suggest language(s) matching with the one(s) in browser language list and user language list.
