@@ -11,7 +11,7 @@ category: windows
 # multiple tag entries are possible
 tags: [windows, bat, cmd]
 # thumbnail image for post
-img: ":post_pic1.jpg"
+img: ":CMD_logo.png"
 # disable comments on this page
 #comments_disable: true
 
@@ -44,6 +44,7 @@ date: 2023-02-12 08:11:06 +0900
 [Windows のコマンド](https://learn.microsoft.com/ja-jp/windows-server/administration/windows-commands/windows-commands)
 
 # 基本的な操作
+
 | コマンド | 用途                           | 詳細                |
 | -------- | ------------------------------ | ------------------- |
 | cd       | ディレクトリの移動             | [詳細をみる](#cd)   |
@@ -55,6 +56,7 @@ date: 2023-02-12 08:11:06 +0900
 <br><br>
 
 # ファイル操作関連
+
 | コマンド | 用途                                         | 詳細                  |
 | -------- | -------------------------------------------- | --------------------- |
 | コマンド | オプション                                   |                       |
@@ -70,6 +72,7 @@ date: 2023-02-12 08:11:06 +0900
 <br><br>
 
 # ネットワーク系
+
 | コマンド | 用途                                                 | 詳細                    |
 | -------- | ---------------------------------------------------- | ----------------------- |
 | ipconfig | PCのIPアドレス等の情報を確認する                     | [詳細をみる](#ipconfig) |

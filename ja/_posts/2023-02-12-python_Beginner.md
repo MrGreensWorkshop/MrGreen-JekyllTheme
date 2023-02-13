@@ -11,7 +11,7 @@ category: Python
 # multiple tag entries are possible
 tags: [Python, Programming]
 # thumbnail image for post
-img: ":post_pic1.jpg"
+img: ":Python_logo.png"
 # disable comments on this page
 #comments_disable: true
 

@@ -11,7 +11,7 @@ category: AirFlow
 # multiple tag entries are possible
 tags: [AirFlow, Docker, Python]
 # thumbnail image for post
-img: ":post_pic1.jpg"
+img: ":AirFlow_logo.png"
 # disable comments on this page
 #comments_disable: true
 
