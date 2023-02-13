@@ -16,11 +16,12 @@ google_font_precon_url: https://fonts.gstatic.com
 #               Language
 ###########################################################
 # need to match filename in _data/lang/[language].yml
-default_lng: en
+default_lng: jp
 
 # to prevent adding languages with no folder
 # single language disables language switch
 # language order is linked to array order
+# language_switch_lang_list: [en, ja, pt]
 language_switch_lang_list: [en, ja, pt]
 
 # if the opened page is not in the user's language list,
@@ -209,7 +210,7 @@ top_nav_brand_text_enable: true
 
 # set profile image
 # comment to disable the profile image
-side_nav_profile_img_path: /assets/img/home/home-heading.jpg
+side_nav_profile_img_path: /assets/img/home/profile_img.jpg
 
 # this adds hover effect to bottom buttons
 side_nav_bottom_buttons_hover_effect: "hover-effect"
