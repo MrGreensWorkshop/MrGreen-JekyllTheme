@@ -16,12 +16,12 @@ google_font_precon_url: https://fonts.gstatic.com
 #               Language
 ###########################################################
 # need to match filename in _data/lang/[language].yml
-default_lng: en
+default_lng: ja
 
 # to prevent adding languages with no folder
 # single language disables language switch
 # language order is linked to array order
-language_switch_lang_list: [en, ja]
+language_switch_lang_list: [ja]
 
 
 # if the opened page is not in the user's language list,

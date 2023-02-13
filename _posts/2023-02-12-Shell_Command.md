@@ -1,22 +1,22 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Examples
-title: Examples
+title: Shellでよく使うコマンド一覧
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Mr. Green's Workshop
 # multiple category is not supported
-category: jekyll
+category: Linux
 # multiple tag entries are possible
-tags: [jekyll, sample, example post]
+tags: [unix, shell, bash]
 # thumbnail image for post
-img: ":post_pic1.jpg"
+img: ":BASH_logo.png"
 # disable comments on this page
 #comments_disable: true
 
 # publish date
-date: 2022-02-10 08:11:06 +0900
+date: 2023-02-12 08:11:06 +0900
 
 # seo
 # if not specified, date will be used.
@@ -40,6 +40,7 @@ date: 2022-02-10 08:11:06 +0900
 ---
 
 # 基本的な操作
+
 | コマンド | 用途                           | 詳細                 |
 | -------- | ------------------------------ | -------------------- |
 | cd       | ディレクトリの移動             | [詳細をみる](#cd)    |
@@ -51,6 +52,7 @@ date: 2022-02-10 08:11:06 +0900
 <br><br>
 
 # ファイル操作関連
+
 | コマンド | 用途                                                   | 詳細                  |
 | -------- | ------------------------------------------------------ | --------------------- |
 | コマンド | オプション                                             |                       |

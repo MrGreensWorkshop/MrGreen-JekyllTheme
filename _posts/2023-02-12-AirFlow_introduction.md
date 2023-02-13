@@ -1,22 +1,22 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Examples
-title: Examples
+title: AirFlowについて
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Mr. Green's Workshop
 # multiple category is not supported
-category: jekyll
+category: AirFlow
 # multiple tag entries are possible
-tags: [jekyll, sample, example post]
+tags: [AirFlow, Python]
 # thumbnail image for post
-img: ":post_pic1.jpg"
+img: ":AirFlow_logo.png"
 # disable comments on this page
 #comments_disable: true
 
 # publish date
-date: 2022-02-10 08:11:06 +0900
+date: 2023-02-12 08:11:06 +0900
 
 # seo
 # if not specified, date will be used.

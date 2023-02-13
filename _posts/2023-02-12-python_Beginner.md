@@ -1,22 +1,22 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Examples
-title: Examples
+title: Python入門
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
-author: Mr. Green's Workshop
+# author: Mr. Green's Workshop
 # multiple category is not supported
-category: jekyll
+category: Python
 # multiple tag entries are possible
-tags: [jekyll, sample, example post]
+tags: [Python, Programming]
 # thumbnail image for post
-img: ":post_pic1.jpg"
+img: ":Python_logo.png"
 # disable comments on this page
 #comments_disable: true
 
 # publish date
-date: 2022-02-10 08:11:06 +0900
+date: 2023-02-12 08:11:06 +0900
 
 # seo
 # if not specified, date will be used.
