@@ -30,7 +30,7 @@ layout: default
         {{ site.data.owner[lng].home.top_header_line2
           | replace: site.data.conf.main.brand_replace, site.data.owner[lng].brand
           | replace: site.data.conf.main.greetings_replace, site.data.lang[lng].constants.greetings
-          | replace: site.data.conf.main.welcome_replace, site.data.lang[lng].constants.welcome }}
+          | replace: site.data.conf.main.welcome_replace, site.data.lang[lng].constants.welcome }}へ
       {% endif -%}
     </div>
   </div>
