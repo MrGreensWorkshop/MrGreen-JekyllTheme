@@ -218,7 +218,7 @@ $anchor-text-color-dark: #3389de;
 // layout: home
 // home/home-heading
 %home-heading-colors-dark {
-  --home-heading-message-color: #fff;
+  --home-heading-message-color: rgb(0, 0, 0);
   --home-intro-text-header-color: #{$header-color-dark};
   --home-heading-shadow-color: #888b8b55;
 }
