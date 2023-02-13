@@ -167,9 +167,9 @@ privacy-policy:
 
 # constants to be replaced for
 constants:
-  greetings: こんにちは
-  welcome: ようこそ
-  sample: サンプル
+  greetings: 未経験からでもITエンジニア
+  welcome:
+  sample: テスト
 
 # for contact form
 contact_form:
