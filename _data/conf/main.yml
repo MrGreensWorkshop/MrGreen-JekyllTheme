@@ -16,7 +16,7 @@ google_font_precon_url: https://fonts.gstatic.com
 #               Language
 ###########################################################
 # need to match filename in _data/lang/[language].yml
-default_lng: en
+default_lng: pa
 
 # to prevent adding languages with no folder
 # single language disables language switch
