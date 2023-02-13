@@ -25,16 +25,17 @@
   max-width: var(--main-container-width-limit);
   width: 100%;
   height: auto;
+  margin : 0 auto
 }
 
 .home-heading-message {
   font-size: 4.2rem;
   font-weight: 700;
   color: var(--home-heading-message-color);
-  text-align: right;
+  text-align: left;
   /* for centering home-heading-message */
-  display: flex;;
-  vertical-align: middle;
+  display: table-cell;
+  vertical-align: top;
 }
 
 .home-intro-text {
