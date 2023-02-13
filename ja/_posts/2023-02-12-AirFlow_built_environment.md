@@ -7,16 +7,16 @@ title: AirFlow学習環境構築
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Mr. Green's Workshop
 # multiple category is not supported
-category: jekyll
+category: AirFlow
 # multiple tag entries are possible
-tags: [jekyll, sample, example post]
+tags: [AirFlow, Docker, Python]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 #comments_disable: true
 
 # publish date
-date: 2022-02-10 08:11:06 +0900
+date: 2023-02-12 08:11:06 +0900
 
 # seo
 # if not specified, date will be used.

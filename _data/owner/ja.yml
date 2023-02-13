@@ -2,13 +2,13 @@
 # Owner's Personal Information
 ###########################################################
 # This is your brand name
-brand: "サイト名"
+brand: "ONE-PAGE"
 
 # text below the brand name
 brand_sub_text: "$site_sample"
 
 # used for seo meta post author (if it's not defined in post)
-name: "作者名"
+name: "TSUBAKI-MORIMOTO"
 
 # home page top header texts
 home:
