@@ -11,7 +11,7 @@ category: Linux
 # multiple tag entries are possible
 tags: [unix, shell, bash]
 # thumbnail image for post
-img: ":post_pic1.jpg"
+img: ":BASH_logo.png"
 # disable comments on this page
 #comments_disable: true
 
