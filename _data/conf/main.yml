@@ -21,7 +21,7 @@ default_lng: ja
 # to prevent adding languages with no folder
 # single language disables language switch
 # language order is linked to array order
-language_switch_lang_list: [ja]
+language_switch_lang_list: [ja, en]
 
 
 # if the opened page is not in the user's language list,
