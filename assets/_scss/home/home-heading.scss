@@ -31,9 +31,9 @@
   font-size: 4.2rem;
   font-weight: 700;
   color: var(--home-heading-message-color);
-  text-align: center;
+  text-align: right;
   /* for centering home-heading-message */
-  display: table-cell;
+  display: flex;;
   vertical-align: middle;
 }
 
