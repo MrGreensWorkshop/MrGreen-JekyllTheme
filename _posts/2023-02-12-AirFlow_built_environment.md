@@ -38,8 +38,10 @@ meta_description: "AirFlow,Python"
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
-
+<!-- outline-start -->
 本編ではローカル環境に AirFlow の実行環境の構築について解説していく。
+<!-- outline-end -->
+
 
 # 学習環境構築
 

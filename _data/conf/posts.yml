@@ -17,7 +17,7 @@ post_table_of_contents_tooltip: true
 # this is for thumbnails post excerpts. Please check the posts.
 # to use part of post as excerpts, please add these start and end.
 excerpt_end_separator: <!-- outline-end -->
-excerpt_start_separator: 1
+excerpt_start_separator: <!-- outline-start -->
 
 ###########################################################
 #                Thumbnail Post

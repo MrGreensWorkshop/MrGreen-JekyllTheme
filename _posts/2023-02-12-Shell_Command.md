@@ -38,7 +38,9 @@ date: 2023-02-12 08:11:06 +0900
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
-
+<!-- outline-start -->
+ここではよく使われるコマンドのみを列挙する。<br>
+<!-- outline-end -->
 # 基本的な操作
 
 | コマンド | 用途                           | 詳細                 |

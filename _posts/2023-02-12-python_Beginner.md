@@ -38,14 +38,14 @@ date: 2023-02-12 08:11:06 +0900
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
-
+<!-- outline-start -->
 本書はプログラミング未経験の物がまず学習する点に関して集約して記述する。
 本格的に学習を開始する場合、以下を学習の後、参考書を読むことで理解速度が早まるとと思う。
 
 ここでは個々の標準メゾット(関数)については説明しないため標準のメゾット(関数)について不明な場合は、別途検索し学習することを進めます。
 
 python のインストール方法は以下のリンクを引用
-
+<!-- outline-end -->
 [Python インストール Windows10(64bit)編](https://qiita.com/ssbb/items/b55ca899e0d5ce6ce963)
 
 # 目次
