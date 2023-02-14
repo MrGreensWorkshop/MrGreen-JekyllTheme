@@ -14,7 +14,7 @@ layout: default
       <img src="{{ page.img }}" alt="">
     </div>
     <div class="col-md-9 about-header">
-      <h1 translate="no">{{ site.data.owner[lng].brand }}</h1>
+      <h1 translate="no">{{ site.data.owner[lng].name }}</h1>
       <div class="meta-container">
         {%- assign about_title = site.data.owner[lng].about.sub_title | replace: site.data.conf.main.sample_replace, site.data.lang[lng].constants.sample -%}
         {%- if site.data.owner[lng].about.sub_title %}
