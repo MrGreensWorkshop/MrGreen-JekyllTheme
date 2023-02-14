@@ -78,7 +78,7 @@ margin: 0 0 0 1.3em;
 <div class="flex">
 <!--プロフィール写真をUPする　サイズは50x50px-->
 
-![](assets/../../assets/img/about/about.jpg)
+![](/assets/img/about/about.jpg)
 
 <div margin: 2px 1em 0 auto; class="profile">
 <!-- 自己紹介テンプレート-->
