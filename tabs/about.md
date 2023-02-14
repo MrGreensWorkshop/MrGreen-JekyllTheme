@@ -79,18 +79,19 @@ margin: 0 0 0 1.3em;
 <!--プロフィール写真をUPする　サイズは50x50px-->
 
 <!--![](/assets/img/about/about.jpg)-->
+<img src="/assets/img/about/about.jpg" alt="プロフィール">
 
 <div class="profile">
 <!-- 自己紹介テンプレート-->
 
-#### Nname:
-## TSUBAKI-MORIMOTO
-#### birth:
-### 1990-12-07
-#### Birthplace:
-### Togane City Chiba Japan
-#### title:
-### SES Engineer
+<h4> Nname:</h4>
+<h2> TSUBAKI-MORIMOTO
+<h4> birth:
+<h3> 1990-12-07
+<h4> Birthplace:
+<h3> Togane City Chiba Japan
+<h4> title:
+<h3> SES Engineer
 
 </div>
 </div>
