@@ -39,8 +39,8 @@ date: 2023-02-12 08:11:06 +0900
 #published: false
 ---
 
-ここではよく使われるコマンドのみを列挙する。
-詳しい情報や、その他の情報は公式のリファレンスを参照 <br>
+ここではよく使われるコマンドのみを列挙する。<br>
+詳しい情報や、その他の情報は公式のリファレンスを参照<br>
 [Windows のコマンド](https://learn.microsoft.com/ja-jp/windows-server/administration/windows-commands/windows-commands)
 
 # 基本的な操作
