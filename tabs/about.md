@@ -4,7 +4,7 @@ layout: about
 lng_pair: id_about
 
 # image for page specific usage
-img: ":about.jpg"
+img: ":about_top.jpg"
 # publish date (used for seo)
 # if not specified, site.time will be used.
 #date: 2022-03-03 12:32:00 +0000
@@ -60,16 +60,16 @@ img: ":about.jpg"
 .profile{
 margin: 0 0 0 1em;
 }
-.profile>h2{
+.profile>h3{
 margin: 0 0 0 1em;
 }
-.profile>h3{
+.profile>h4{
 margin: 0 0 0 1.3em;
 }
 
 </style>
 
-# Site Owner
+<h1>Site Owner</h1>
   <!-- 自己紹介テンプレート
   ### Name:
   ## ユーザー名
@@ -84,14 +84,14 @@ margin: 0 0 0 1.3em;
 <div class="profile">
 <!-- 自己紹介テンプレート-->
 
-<h4> Nname:</h4>
-<h2> TSUBAKI-MORIMOTO</h2>
-<h4> birth:</h4>
-<h3> 1990-12-07</h3>
-<h4> Birthplace:</h4>
-<h3> Togane City Chiba Japan</h3>
-<h4> title:</h4>
-<h3> SES Engineer</h3>
+<h6> Nname:</h6>
+<h3> TSUBAKI-MORIMOTO</h3>
+<h6> birth:</h6>
+<h4> 1990-12-07</h4>
+<h6> Birthplace:</h6>
+<h4> Togane City Chiba Japan</h4>
+<h6> title:</h6>
+<h4> SES Engineer</h4>
 
 </div>
 </div>
