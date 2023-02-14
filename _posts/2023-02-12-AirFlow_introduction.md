@@ -39,15 +39,14 @@ meta_description: "AirFlow,Python"
 #published: false
 ---
 
-Airflowとは、2014年にAirbnb社が開発したオープンソースであり、2016年より Apache財団となる。開発言語は Pythonで、ワークフローエンジンに該当する。
+<!-- outline-start -->
+Airflowとは、2014年にAirbnb社が開発したオープンソースであり、2016年より Apache財団となる。開発言語は Pythonで、ワークフローエンジンに該当するワークフロー管理ツールです。類似のもので言うとdigdagやargoなどが該当します。
 
-Home
-https://airflow.apache.org
-
-ワークフロー管理ツールです。類似のもので言うとdigdagやargoなどが該当します。
 Airflowは、予め決められた順序を基に、処理を実行するワークフローをプログラムで作成する。また、スケジュールや監視を行う事が可能。
 ワークフローはタスクの有向非巡回グラフ（DAG）を作成する事により、タスクを実行する。
 具体的にはpythonでファイルを実装して処理順番を指定していきます。
+<!-- outline-end -->
+[AirFlow公式ページ](https://airflow.apache.org)
 
 # DAGとは
 DAGとは、Directed acyclic graphの略であって、有向非巡回グラフを指します。方向性があり後戻りをしない特徴があるので、複数に分岐した後で元に戻らなければ良いという特徴があります。<br>
