@@ -39,7 +39,7 @@ meta_description: "AirFlow,Python"
 #published: false
 ---
 <!-- outline-start -->
-本編ではローカル環境に AirFlow の実行環境の構築について解説していく。
+本編ではローカル環境に AirFlow の実行環境の構築について解説。
 <!-- outline-end -->
 
 
