@@ -80,7 +80,7 @@ margin: 0 0 0 1.3em;
 
 <!--![](/assets/img/about/about.jpg)-->
 
-<div margin: 2px 1em 0 auto; class="profile">
+<div class="profile">
 <!-- 自己紹介テンプレート-->
 
 #### Nname:
