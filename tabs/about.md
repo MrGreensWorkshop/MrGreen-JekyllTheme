@@ -39,7 +39,31 @@ img: ":about.jpg"
 
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
+{%- comment -%}
 {%- include util/auto-content-generator.liquid -%}
 {{ website_info_text_first }}
 テスト文章
 {{ website_info_text_second }}
+{%- endcomment -%}
+
+
+
+# サイトオーナー
+
+
+## TSUBAKI-MORIMOTO
+<style>
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.flex>p{
+    width: 49%;
+}
+</style>
+<div class="flex">
+  <p><img src=""  width="10%" alt="profile_img"></p>
+  <p>
+
+  # TSUBAKI-MORIMOTO
+   </p>
