@@ -94,7 +94,7 @@ image_viewer: true
 # this enables image viewer for all posts
 # even if you disable for all posts, you can still turn on individually by adding "image_viewer_on: true" on header of any page.
 image_viewer_posts: true
-
+image_viewer_on: true
 # css class at a mouse hover
 image_viewer_hover_cursor: mfp-zoom
 

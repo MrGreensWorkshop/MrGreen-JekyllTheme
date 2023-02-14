@@ -23,7 +23,7 @@ about:
 
 # if you don't want to add copyright year, comment or leave it blank.
 # the year during which the claimed copyright for the work was first asserted.
-copyright_start_year: "2022"
+copyright_start_year: "2023"
 
 # make sure creative_commons.enable is true in _data/conf/main.yml file
 creative_commons:
@@ -42,7 +42,7 @@ creative_commons:
 # seo meta this is needed for each language
 # If meta_description is not defined in front matter, it's created from (post / page) content,
 # if it has no content, this will be used for page description. It is also used in manifest.json
-meta_common_description: "メタディスクリプション"
+meta_common_description: "SES"
 
 # contact options (side nav bottom and about page)
 # the order of the items will be shown as here.

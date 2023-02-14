@@ -21,7 +21,7 @@
 %}
 
 {%- for index in (1..5) %}
-  {% assign const_sample = const_sample | append: site.data.lang[lng].constants.sample | append: " " %}
+  {% assign const_sample = const_sample | append: site.data.owner[lng].name | append: " " %}
 {% endfor -%}
 
 {%- if site.data.owner[lng].auto_content.text -%}

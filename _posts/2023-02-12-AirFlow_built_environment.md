@@ -20,9 +20,9 @@ date: 2023-02-12 08:11:06 +0900
 
 # seo
 # if not specified, date will be used.
-#meta_modify_date: 2022-02-10 08:11:06 +0900
+meta_modify_date: 2023-01-01 00:00:00 +0900
 # check the meta_common_description in _data/owner/[language].yml
-#meta_description: ""
+meta_description: "AirFlow,Python"
 
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
