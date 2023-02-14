@@ -36,7 +36,7 @@ img: ":about.jpg"
 #published: false
 ---
 
-
+<!--
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
 {%- comment -%}
@@ -45,25 +45,77 @@ img: ":about.jpg"
 テスト文章
 {{ website_info_text_second }}
 {%- endcomment -%}
+-->
 
 
-
-# サイトオーナー
-
-
-## TSUBAKI-MORIMOTO
+<!--プロフィールレイアウト-->
 <style>
 .flex{
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
 }
 .flex>p{
-    width: 49%;
+    width: 45%;
 }
-</style>
-<div class="flex">
-  <p><img src=""  width="10%" alt="profile_img"></p>
-  <p>
+.profile{
+margin: 0 0 0 1em;
+}
+.profile>h2{
+margin: 0 0 0 1em;
+}
+.profile>h3{
+margin: 0 0 0 1.3em;
+}
 
-  # TSUBAKI-MORIMOTO
-   </p>
+</style>
+
+# Site Owner
+  <!-- 自己紹介テンプレート
+  ### Name:
+  ## ユーザー名
+  -->
+
+<div class="flex">
+<!--プロフィール写真をUPする　サイズは50x50px-->
+
+  ![](assets/../../assets/img/about/about.jpg)
+
+  <div margin: 2px 1em 0 auto; class="profile">
+  <!-- 自己紹介テンプレート-->
+
+  #### Nname:
+  ## TSUBAKI-MORIMOTO
+  #### birth:
+  ### 1990-12-07
+  #### Birthplace:
+  ### Togane City Chiba Japan
+  #### title:
+  ### SES Engineer
+
+  </div>
+  </div>
+
+<!-- 自己紹介テンプレート Memberが追加されたらコメントアウトの中を追加
+# Site Member
+
+  ### Name:
+  ## ユーザー名
+
+
+<div class="flex">
+  ![](assets/../../assets/img/about/about.jpg)
+
+  <div margin: 2px 1em 0 auto; class="profile">
+
+  #### Nname:
+  ## TSUBAKI-MORIMOTO
+  #### birth:
+  ### 1990-12-07
+  #### Birthplace:
+  ### Togane City Chiba Japan
+  #### title:
+  ### SES Engineer
+
+  </div>
+  </div>
+  -->
