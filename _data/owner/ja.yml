@@ -42,16 +42,16 @@ creative_commons:
 # seo meta this is needed for each language
 # If meta_description is not defined in front matter, it's created from (post / page) content,
 # if it has no content, this will be used for page description. It is also used in manifest.json
-meta_common_description: "SES"
+meta_common_description: "SESエンジニアの技術備忘録。未経験からITを学べる実践に特化した技術ブログ"
 
 # contact options (side nav bottom and about page)
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
-  #- github: ""
+  - github: "TSUBAKI-MORIMOTO"
   #- email: ""
   #- linkedin: ""
-  #- twitter: ""
+  - twitter: "TSUBAKI_P_ofl"
   #- mastodon: ""
   #- instagram: ""
   #- youtube: ""
@@ -63,7 +63,7 @@ contacts:
 comments:
   # Create a Disqus account and fill out the items below.
   disqus:
-    shortname: ""
+    shortname: "tsubakimorimoto"
   # To use Giscus, go to https://giscus.app and look for the "Configuration".
   # - Enter your repository name, and it will create the following settings for you under "Enable giscus".
   # - Get the corresponding items and fill in the items below.
@@ -76,7 +76,7 @@ comments:
 
 # if no id is provided, this feature will be disabled.
 # make sure your environment does not match with google.analytics.ignore in _data/conf/main.yml
-google_analytics_id: ""
+google_analytics_id: "G-KK65XDNZXB"
 
 # there are different ways to verify web page. One is adding this as meta into html.
 # make sure you set meta.google_site_verify: true in _data/conf/main.yml
