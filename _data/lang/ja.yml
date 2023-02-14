@@ -169,7 +169,7 @@ privacy-policy:
 constants:
   greetings: 未経験からでもITエンジニア
   welcome:
-  sample: テスト
+  sample:
 
 # for contact form
 contact_form:
