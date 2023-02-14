@@ -28,15 +28,6 @@ layout: util/compress
 <!DOCTYPE html>
 <html lang="{{ lng_code }}">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KK65XDNZXB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-KK65XDNZXB');
-    </script>
-
     {% include default/header/header.html %}
     {% include default/css-include.html %}
   </head>
