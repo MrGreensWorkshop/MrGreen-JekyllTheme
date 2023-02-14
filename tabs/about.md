@@ -85,13 +85,13 @@ margin: 0 0 0 1.3em;
 <!-- 自己紹介テンプレート-->
 
 <h4> Nname:</h4>
-<h2> TSUBAKI-MORIMOTO
-<h4> birth:
-<h3> 1990-12-07
-<h4> Birthplace:
-<h3> Togane City Chiba Japan
-<h4> title:
-<h3> SES Engineer
+<h2> TSUBAKI-MORIMOTO</h2>
+<h4> birth:</h4>
+<h3> 1990-12-07</h3>
+<h4> Birthplace:</h4>
+<h3> Togane City Chiba Japan</h3>
+<h4> title:</h4>
+<h3> SES Engineer</h3>
 
 </div>
 </div>
