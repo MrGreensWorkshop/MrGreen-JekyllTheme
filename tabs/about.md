@@ -78,22 +78,22 @@ margin: 0 0 0 1.3em;
 <div class="flex">
 <!--プロフィール写真をUPする　サイズは50x50px-->
 
-  ![](assets/../../assets/img/about/about.jpg)
+![](assets/../../assets/img/about/about.jpg)
 
-  <div margin: 2px 1em 0 auto; class="profile">
-  <!-- 自己紹介テンプレート-->
+<div margin: 2px 1em 0 auto; class="profile">
+<!-- 自己紹介テンプレート-->
 
-  #### Nname:
-  ## TSUBAKI-MORIMOTO
-  #### birth:
-  ### 1990-12-07
-  #### Birthplace:
-  ### Togane City Chiba Japan
-  #### title:
-  ### SES Engineer
+#### Nname:
+## TSUBAKI-MORIMOTO
+#### birth:
+### 1990-12-07
+#### Birthplace:
+### Togane City Chiba Japan
+#### title:
+### SES Engineer
 
-  </div>
-  </div>
+</div>
+</div>
 
 <!-- 自己紹介テンプレート Memberが追加されたらコメントアウトの中を追加
 # Site Member
