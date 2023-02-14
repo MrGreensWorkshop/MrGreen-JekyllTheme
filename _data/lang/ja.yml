@@ -143,8 +143,8 @@ archives:
 
 # for about layout
 about:
-  title: 私について
-  button_name: 私について
+  title: 私達について
+  button_name: 私達について
   email_title: メール
 
 # for links layout

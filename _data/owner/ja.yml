@@ -8,7 +8,7 @@ brand: "ONE-PAGE"
 brand_sub_text: "SESのIT備忘録"
 
 # used for seo meta post author (if it's not defined in post)
-name: "TSUBAKI-MORIMOTO"
+name: ["TSUBAKI-MORIMOTO",TSUBAKI-MORIMOTO]
 
 # home page top header texts
 home:
