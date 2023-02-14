@@ -54,7 +54,7 @@ img: ":about.jpg"
     display: flex;
     justify-content: start;
 }
-.flex>p{
+.flex>img{
     width: 45%;
 }
 .profile{
