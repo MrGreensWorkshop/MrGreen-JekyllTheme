@@ -22,7 +22,7 @@ date: 2023-02-12 08:11:06 +0900
 # if not specified, date will be used.
 #meta_modify_date: 2022-02-10 08:11:06 +0900
 # check the meta_common_description in _data/owner/[language].yml
-#meta_description: ""
+meta_description: "Pythonというプログラミング言語を使用してプログラミング未経験の方がまず学習する点に関して集約して解説していこうと思う。"
 
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
@@ -39,8 +39,7 @@ date: 2023-02-12 08:11:06 +0900
 #published: false
 ---
 <!-- outline-start -->
-本書はプログラミング未経験の物がまず学習する点に関して集約して記述する。
-本格的に学習を開始する場合、以下を学習の後、参考書を読むことで理解速度が早まるとと思う。
+Pythonというプログラミング言語を使用してプログラミング未経験の方がまず学習する点に関して集約して解説していこうと思う。本格的に学習を開始する場合、以下を学習の後、参考書を読むことで理解速度が早まるとと思うので参考になれば幸いです。
 
 ここでは個々の標準メゾット(関数)については説明しないため標準のメゾット(関数)について不明な場合は、別途検索し学習することを進めます。
 

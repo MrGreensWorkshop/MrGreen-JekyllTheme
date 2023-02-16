@@ -22,7 +22,7 @@ date: 2023-02-17 00:00:00 +0900
 # if not specified, date will be used.
 #meta_modify_date: 2022-02-10 08:11:06 +0900
 # check the meta_common_description in _data/owner/[language].yml
-meta_description: "AirFlow,Python"
+meta_description: "AirFlow での DAG の作成時に定義するパラメータについて解説していこうと思う。DAG は Python で AirFlow ライブラリーを使用することで簡単に DAG を記述することができる。"
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
 # image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.

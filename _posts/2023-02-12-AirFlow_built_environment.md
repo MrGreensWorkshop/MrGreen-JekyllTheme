@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Examples
-title: AirFlow学習環境構築
+title: DockerでAirFlow学習環境構築
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -22,7 +22,7 @@ date: 2023-02-12 08:11:06 +0900
 # if not specified, date will be used.
 meta_modify_date: 2023-01-01 00:00:00 +0900
 # check the meta_common_description in _data/owner/[language].yml
-meta_description: "AirFlow,Python"
+meta_description: " DockerでAirFlow学習環境をローカル構築構築する方法を解説。"
 
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
@@ -39,7 +39,7 @@ meta_description: "AirFlow,Python"
 #published: false
 ---
 <!-- outline-start -->
-本編ではローカル環境に AirFlow の実行環境の構築について解説。
+ DockerでAirFlow学習環境をローカル構築構築する方法を解説。
 <!-- outline-end -->
 
 

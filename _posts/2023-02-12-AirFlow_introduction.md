@@ -22,7 +22,7 @@ date: 2023-02-12 08:11:06 +0900
 # if not specified, date will be used.
 #meta_modify_date: 2022-02-10 08:11:06 +0900
 # check the meta_common_description in _data/owner/[language].yml
-meta_description: "AirFlow,Python"
+meta_description: "Airflowは、予め決められた順序を基に、処理を実行するワークフローをPythonプログラムで作成する。また、スケジュールや監視を行う事が可能。"
 
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
@@ -39,10 +39,11 @@ meta_description: "AirFlow,Python"
 #published: false
 ---
 
-<!-- outline-start -->
+
 Airflowとは、2014年にAirbnb社が開発したオープンソースであり、2016年より Apache財団となる。開発言語は Pythonで、ワークフローエンジンに該当するワークフロー管理ツールです。類似のもので言うとdigdagやargoなどが該当します。
+<!-- outline-start -->
+Airflowは、予め決められた順序を基に、処理を実行するワークフローをPythonプログラムで作成する。また、スケジュールや監視を行う事が可能。
 <!-- outline-end -->
-Airflowは、予め決められた順序を基に、処理を実行するワークフローをプログラムで作成する。また、スケジュールや監視を行う事が可能。
 ワークフローはタスクの有向非巡回グラフ（DAG）を作成する事により、タスクを実行する。
 具体的にはpythonでファイルを実装して処理順番を指定していきます。
 

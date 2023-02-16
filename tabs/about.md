@@ -62,9 +62,7 @@ margin: 0 0 0 1em;
 .profile>h5{
 margin: 0 0 0 1em;
 }
-.profile>h5{
-margin: 0 0 0 1.3em;
-}
+
 
 </style>
 

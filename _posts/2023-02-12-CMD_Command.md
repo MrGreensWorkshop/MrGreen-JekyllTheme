@@ -22,7 +22,7 @@ date: 2023-02-12 08:11:06 +0900
 # if not specified, date will be used.
 #meta_modify_date: 2022-02-10 08:11:06 +0900
 # check the meta_common_description in _data/owner/[language].yml
-#meta_description: ""
+meta_description: "windowsのコマンドプロンプト(CMD)でSES現場でも使われるコマンドを紹介していこうと思う.batを作るときにも使えるものもあるので参考になれば幸いです。"
 
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
@@ -39,8 +39,10 @@ date: 2023-02-12 08:11:06 +0900
 #published: false
 ---
 <!-- outline-start -->
-ここではよく使われるコマンドのみを列挙する。<br>
-詳しい情報や、その他の情報は公式のリファレンスを参照<br>
+windowsのコマンドプロンプト(CMD)でSES現場でも使われるコマンドを紹介していこうと思う
+.batを作るときにも使えるものもあるので参考になれば幸いです。
+<br>
+さらに詳しい情報や、その他の情報は公式のリファレンスを参照<br>
 <!-- outline-end -->
 [Windows のコマンド](https://learn.microsoft.com/ja-jp/windows-server/administration/windows-commands/windows-commands)
 
