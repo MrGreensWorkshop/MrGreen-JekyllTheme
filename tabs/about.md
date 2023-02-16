@@ -59,10 +59,10 @@ img: ":about_top.jpg"
 .profile{
 margin: 0 0 0 1em;
 }
-.profile>h3{
+.profile>h5{
 margin: 0 0 0 1em;
 }
-.profile>h4{
+.profile>h5{
 margin: 0 0 0 1.3em;
 }
 
@@ -83,14 +83,14 @@ margin: 0 0 0 1.3em;
 <div class="profile">
 <!-- 自己紹介テンプレート-->
 
-<h6> 名前:</h6>
-<h3> TSUBAKI-MORIMOTO</h3>
-<h6> 生年月日:</h6>
-<h4> 1990-12-07</h4>
-<h6> 出身:</h6>
-<h4> 千葉県東金市出身</h4>
-<h6> 職業:</h6>
-<h4> SESエンジニア</h4>
+<p> 名前:</p>
+<h5> TSUBAKI-MORIMOTO</h5>
+<p> 生年月日:</p>
+<h5> 1990-12-07</h5>
+<p> 出身:</p>
+<h5> 千葉県東金市出身</h5>
+<p> 職業:</p>
+<h5> SESエンジニア</h5>
 
 </div>
 </div>
@@ -104,14 +104,14 @@ margin: 0 0 0 1.3em;
 
 <div class="profile">
 
-<h6> Nname:</h6>
-<h3> TSUBAKI-MORIMOTO</h3>
-<h6> birth:</h6>
-<h4> 1990-12-07</h4>
-<h6> Birthplace:</h6>
-<h4> Togane City Chiba Japan</h4>
-<h6> title:</h6>
-<h4> SES Engineer</h4>
+<p> Nname:</p>
+<h5> TSUBAKI-MORIMOTO</h5>
+<p> birth:</p>
+<h5> 1990-12-07</h5>
+<p> Birthplace:</p>
+<h5> Togane City Chiba Japan</h5>
+<p> title:</p>
+<h5> SES Engineer</h5>
 
 </div>
 </div>
