@@ -19,19 +19,6 @@ class Person_Class:
     '''
 
     def __init__(self, p_name, p_birth, p_address):  # コンストラクタ
-        '''
-        パーソンクラスのコンストラクタ
-          member_variable
-          ---------
-          p_name: str
-              氏名
-          p_age: int
-              年齢
-          p_birth: str
-              生年月日
-          p_address: str
-              住所
-        '''
 
         self.p_name: str = p_name
         self.p_birth: str = p_birth

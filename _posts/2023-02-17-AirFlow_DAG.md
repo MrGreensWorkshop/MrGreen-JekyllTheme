@@ -44,7 +44,7 @@ AirFlow での DAG の作成時に定義するパラメータについて解説�
 DAG は Python で AirFlow ライブラリーを使用することで簡単に DAG を記述することができる。
 以下のサンプルコードでは AirFlow の'DAG'クラスを import して使用し、DAG クラスのインスタンス生成時にパラメーターを定義して DAG を生成する。
 
-尚、本記述は AirFlow は AWS でにある MWAA で実装されている `Ver.2.0.2` を想定する。
+尚、本記述は AirFlow は AWS にある MWAA で実装されている `Ver.2.0.2` を想定する。
 
 > DAG のパラメータは AirFlow のバージョンによって若干異なるので詳細は公式ページの確認をおすすめします。
 > [公式ページ](https://airflow.apache.org/docs/apache-airflow/2.0.2/_api/airflow/models/dag/index.html?highlight=dag#module-airflow.models.dag)
@@ -333,3 +333,17 @@ DAG(dag_id='my-dag',
 #### 定義推奨
 
 AirFlow の UI 上で DAGS をフィルタリングするのに役立つタグのリスト。
+
+
+## DAGサンプル
+
+DAGのSampleファイルのリンクをここに置いておきます。
+AirFlowのDAGフォルダーに置くことでDAG取り込まれUI画面で見ることができるようになります。
+
+[サンプルファイル](/assets/Sample_code/Python/A_simple_tutorial_DAG.py)
+
+
+## 参照
+AirFlowの環境構築に関してはこちらを参照してみてください。
+- [AirFlowをローカルで構築する方法](/_posts/2023-02-12-AirFlow_built_environment.md)
+- [AirFlowの概要について](/_posts/2023-02-12-AirFlow_introduction.md)

@@ -22,8 +22,7 @@ date: 2023-02-12 08:11:06 +0900
 # if not specified, date will be used.
 meta_modify_date: 2023-01-01 00:00:00 +0900
 # check the meta_common_description in _data/owner/[language].yml
-meta_description: " DockerでAirFlow学習環境をローカル構築構築する方法を解説。"
-
+meta_description: "Docker で AirFlow 学習環境をローカル構築構築する方法を解説。前提環境 OS:windowsミドルウェア:Docker"
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
 # image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
@@ -38,10 +37,17 @@ meta_description: " DockerでAirFlow学習環境をローカル構築構築す�
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
-<!-- outline-start -->
- DockerでAirFlow学習環境をローカル構築構築する方法を解説。
-<!-- outline-end -->
 
+<!-- outline-start -->
+
+Docker で AirFlow 学習環境をローカル構築構築する方法を解説。
+
+# 前提環境
+
+OS:windows
+ミドルウェア:Docker
+
+<!-- outline-end -->
 
 # 学習環境構築
 
@@ -57,125 +63,133 @@ meta_description: " DockerでAirFlow学習環境をローカル構築構築す�
    <br>![](/assets/img/posts/docker_mkdir.png)
 4. Docker 実行の yaml ファイルを作成する。
 
-    docker-compose.yaml
+   docker-compose.yaml
 
-    ```yaml
-    version: "3"
-    services:
-      web:
-        image: apache/airflow:2.0.2
-        container_name: airflow
-        ports:
-          - 8080:8080
-        volumes:
-          - ./opt/airflow:/opt/airflow
-        command: db init # Use fist time only
-        # command: webserver # Using with docker-compose up after exec `db init`
-        # command: >
-        # bash -c "airflow webserver -p 8080 -D && airflow scheduler -D"
-    ```
+   ```yaml
+   version: "3"
+   services:
+     web:
+       image: apache/airflow:2.0.2
+       container_name: airflow
+       ports:
+         - 8080:8080
+       volumes:
+         - ./opt/airflow:/opt/airflow
+       command: db init # Use fist time only
+       # command: webserver # Using with docker-compose up after exec `db init`
+       # command: >
+       # bash -c "airflow webserver -p 8080 -D && airflow scheduler -D"
+   ```
 
 5. PowerShell を起動して先ほど作成した docker の実行環境へ移動する。
 
-    ![](/assets/img/posts/docker_PowerShell_cd.png)
+   ![](/assets/img/posts/docker_PowerShell_cd.png)
 
 6. 以下のコマンドで Docker コンテナーを起動して AirFlow 用の DB を初期化する。
-    <br>最初に作成した yaml ファイルの最後に`command: db init`とあるが
-    これは AirFlow のイメージを使用してデフォルトで設定されている SqlLite を初期化している。
+   <br>最初に作成した yaml ファイルの最後に`command: db init`とあるが
+   これは AirFlow のイメージを使用してデフォルトで設定されている SqlLite を初期化している。
 
-    ```docker
-    docker-compose up
-    ```
+   ```docker
+   docker-compose up
+   ```
 
-    実行すると以下のような結果が返ってくる。
+   実行すると以下のような結果が返ってくる。
 
-    ```
-    Creating network "docker-airflow_default" with the default driver
-    Creating airflow ... done
-    Attaching to airflow
-    airflow | DB: sqlite:////opt/airflow/airflow.db
-    airflow | [2021-01-03 13:54:08,533] {db.py:678} INFO - Creating tables
-    airflow | INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
-    airflow | INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
-    airflow | INFO  [alembic.runtime.migration] Running upgrade  -> e3a246e0dc1, current schema
-    airflow | INFO  [alembic.runtime.migration] Running upgrade e3a246e0dc1 -> 15037123a2f, create is_encrypted
-    ...(中略)...
-    airflow | [2021-01-03 13:54:15,779] {manager.py:727} WARNING - No user yet created, use flask fab command to do it.
-    airflow | [2021-01-03 13:54:25,468] {migration.py:517} INFO - Running upgrade 2c6edca13270 -> 61ec73d9401f, Add description field to connection
-    airflow | [2021-01-03 13:54:25,497] {migration.py:517} INFO - Running upgrade 61ec73d9401f -> 64a7d6477aae, fix description field in connection to be text
-    airflow | [2021-01-03 13:54:25,512] {migration.py:517} INFO - Running upgrade 64a7d6477aae -> e959f08ac86c, Change field in DagCode to MEDIUMTEXT for MySql
-    airflow | [2021-01-03 13:54:26,502] {dagbag.py:440} INFO - Filling up the DagBag from /opt/airflow/dags
-    airflow | Initialization done
-    airflow exited with code 0
-    ```
+   ```
+   Creating network "docker-airflow_default" with the default driver
+   Creating airflow ... done
+   Attaching to airflow
+   airflow | DB: sqlite:////opt/airflow/airflow.db
+   airflow | [2021-01-03 13:54:08,533] {db.py:678} INFO - Creating tables
+   airflow | INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+   airflow | INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+   airflow | INFO  [alembic.runtime.migration] Running upgrade  -> e3a246e0dc1, current schema
+   airflow | INFO  [alembic.runtime.migration] Running upgrade e3a246e0dc1 -> 15037123a2f, create is_encrypted
+   ...(中略)...
+   airflow | [2021-01-03 13:54:15,779] {manager.py:727} WARNING - No user yet created, use flask fab command to do it.
+   airflow | [2021-01-03 13:54:25,468] {migration.py:517} INFO - Running upgrade 2c6edca13270 -> 61ec73d9401f, Add description field to connection
+   airflow | [2021-01-03 13:54:25,497] {migration.py:517} INFO - Running upgrade 61ec73d9401f -> 64a7d6477aae, fix description field in connection to be text
+   airflow | [2021-01-03 13:54:25,512] {migration.py:517} INFO - Running upgrade 64a7d6477aae -> e959f08ac86c, Change field in DagCode to MEDIUMTEXT for MySql
+   airflow | [2021-01-03 13:54:26,502] {dagbag.py:440} INFO - Filling up the DagBag from /opt/airflow/dags
+   airflow | Initialization done
+   airflow exited with code 0
+   ```
 
-    `Initialization done`が表示されていれば OK
-    初期化処理なので初期化完了後は Docker コンテナーは自動で停止します。
+   `Initialization done`が表示されていれば OK
+   初期化処理なので初期化完了後は Docker コンテナーは自動で停止します。
 
 7. yaml ファイルを更新する。
-    <br>最初に作成した yaml ファイルの`command: db init` をコメントアウト<br>代わりに `command: webserver` をアンコメントする。
-    ```yaml
-    version: "3"
-    services:
-      web:
-        image: apache/airflow:2.0.2
-        container_name: airflow
-        ports:
-          - 8080:8080
-        volumes:
-          - ./opt/airflow:/opt/airflow
-        # command: db init # Use fist time only
-        command: webserver # Using with docker-compose up after exec `db init`
-        # command: >
-        # bash -c "airflow webserver -p 8080 -D && airflow scheduler -D"
-    ```
+   <br>最初に作成した yaml ファイルの`command: db init` をコメントアウト<br>代わりに `command: webserver` をアンコメントする。
+
+   ```yaml
+   version: "3"
+   services:
+     web:
+       image: apache/airflow:2.0.2
+       container_name: airflow
+       ports:
+         - 8080:8080
+       volumes:
+         - ./opt/airflow:/opt/airflow
+       # command: db init # Use fist time only
+       command: webserver # Using with docker-compose up after exec `db init`
+       # command: >
+       # bash -c "airflow webserver -p 8080 -D && airflow scheduler -D"
+   ```
 
 8. Apache Airflow の起動する
-    <br>yamlの更新が終わったらDocker コンテナーを再起動します。
-    <br>'-d'デタッチド・モードで起動しているので注意。
-    ```docker
-    docker-compose up -d
-    ```
+   <br>yaml の更新が終わったら Docker コンテナーを再起動します。
+   <br>'-d'デタッチド・モードで起動しているので注意。
 
-9.  起動確認
-    <br>docerが無事起動できているか確認する。
-    ```
-    docker-compose ps
-    ```
-    正常に起動していれば、State が Up になっているはず。
+   ```docker
+   docker-compose up -d
+   ```
 
-    ```
-    NAME                IMAGE                  COMMAND                  SERVICE             CREATED             STATUS              PORTS
-    airflow             apache/airflow:2.0.2   "/usr/bin/dumb-init …"   web                 4 seconds ago       Up 3 seconds        0.0.0.0:8080->8080/tcp
-    ```
-    コンテナーが起動していることを確認したら、Web ブラウザで http://localhost:8080 にアクセスし、Apache Airflow のログイン画面が表示されることを確認します。
-    ![](/assets/img/posts/docker_AirFlow_login.png)<br>
-    今の状態だとログインユーザーを作成していないのでログインできない
+9. 起動確認
+   <br>docer が無事起動できているか確認する。
 
+   ```
+   docker-compose ps
+   ```
+
+   正常に起動していれば、State が Up になっているはず。
+
+   ```
+   NAME                IMAGE                  COMMAND                  SERVICE             CREATED             STATUS              PORTS
+   airflow             apache/airflow:2.0.2   "/usr/bin/dumb-init …"   web                 4 seconds ago       Up 3 seconds        0.0.0.0:8080->8080/tcp
+   ```
+
+   コンテナーが起動していることを確認したら、Web ブラウザで http://localhost:8080 にアクセスし、Apache Airflow のログイン画面が表示されることを確認します。
+   ![](/assets/img/posts/docker_AirFlow_login.png)<br>
+   今の状態だとログインユーザーを作成していないのでログインできない
 
 10. 管理者アカウントの作成
     <br>Airflow の管理者アカウントは、Airflow の CLI (コマンドラインインタフェース) から作成することができるようになっています。
     <br>そのため、起動した Docker コンテナー内で Airflow の CLI を実行し、ユーザーを作成します。
 
-    PowerShellでDocker コンテナーの ID を確認
-    ``` bash
+    PowerShell で Docker コンテナーの ID を確認
+
+    ```bash
     docker ps
     ```
 
     実行結果例
+
     ```
     CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS         PORTS                    NAMES
     6e4d2cd8fe02   apache/airflow:2.0.2   "/usr/bin/dumb-init …"   7 minutes ago   Up 7 minutes   0.0.0.0:8080->8080/tcp   airflow
     ```
+
     上の例では、`6e4d2cd8fe02` がコンテナーの ID なので、この ID 使用して Airflow のコンテナーの Bash セッションを開始する。
 
-    ``` bash
+    ```bash
     docker exec -it 6e4d2cd8fe02 bash
     ```
+
     Bash セッションを開始したら、以下の CLI コマンドを実行し、新規にユーザーを作成する。
     <br>ID や 名前、E-mail の情報は、任意で書き換えてください。
 
-    ``` bash
+    ```bash
     airflow users create \
     --username tsubaki \
     --firstname morimoto \
@@ -188,45 +202,51 @@ meta_description: " DockerでAirFlow学習環境をローカル構築構築す�
     任意のパスワードを設定します。
     入力が問題なければ、以下のような結果が返ってくればユーザー作成は完了。
 
-    ``` bash
+    ```bash
     Password:
     Repeat for confirmation:
     Admin user tsubaki created
     ```
 
-11. AirFlowにログイン
-    <br>再度http://localhost:8080へアクセスし、作成したユーザーでログインする。
+11. AirFlow にログイン
+    <br>再度 http://localhost:8080 へアクセスし、作成したユーザーでログインする。
     ![](/assets/img/posts/docker_AirFlow_login2.png)
     ただし、Airflow の Web サーバーは起動しますが、DAG ファイルを認識しタスクを実行するスケジューラーは起動していない。
 
-12. スケジューラーも起動するようにyamlを更新する。
-    ```yaml
-      version: '3'
+12. スケジューラーも起動するように yaml を更新する。
 
-      services:
-      web:
-      image: apache/airflow:2.0.0
-      container_name: airflow
-      ports:
-        - 8080:8080
-      volumes:
-        - ./opt/airflow:/opt/airflow
-      # command: db init # Use fist time only
-      # command: webserver # Using with docker-compose up after exec `db init`
-      command: >
-        bash -c "airflow webserver -p 8080 -D && airflow scheduler -D"
+    ```yaml
+    version: "3"
+
+    services:
+    web:
+    image: apache/airflow:2.0.0
+    container_name: airflow
+    ports:
+      - 8080:8080
+    volumes:
+      - ./opt/airflow:/opt/airflow
+    # command: db init # Use fist time only
+    # command: webserver # Using with docker-compose up after exec `db init`
+    command: >
+      bash -c "airflow webserver -p 8080 -D && airflow scheduler -D"
     ```
 
-13. 一度コンテナを再起動してAirFlowにログイン
+13. 一度コンテナを再起動して AirFlow にログイン
     <br>まず、以下コマンドでコンテナを停止
+
     ```
     docker-compose down
     ```
+
     そうしたら再度コンテナを起動
+
     ```
     docker-compose up -d
     ```
-    起動できているかを以下コマンドで確認して起動できていれば再度Web ブラウザで http://localhost:8080 にアクセスしログイン
+
+    起動できているかを以下コマンドで確認して起動できていれば再度 Web ブラウザで http://localhost:8080 にアクセスしログイン
+
     ```
     docker-compose ps
     ```
@@ -244,13 +264,19 @@ meta_description: " DockerでAirFlow学習環境をローカル構築構築す�
     plugins_folder       | /opt/airflow/plugins
     base_log_folder      | /opt/airflow/logs
     ```
+
     ![](/assets/img/posts/docker_mkdir_dags.png)
 
-
 # トラブルシューティング
-コンテナを立ち上げてもAirFlowの画面が起動しない場合、以下の手順を試す。
+
+コンテナを立ち上げても AirFlow の画面が起動しない場合、以下の手順を試す。
 
 1. docker-compose down でコンテナを削除
-2. .\opt\airflow配下の`airflow-webserver.err`・`airflow-webserver.log`・`airflow-webserver.out`・`airflow-webserver-monitor.pid`を削除
+2. .\opt\airflow 配下の`airflow-webserver.err`・`airflow-webserver.log`・`airflow-webserver.out`・`airflow-webserver-monitor.pid`を削除
 3. `docker-compose up -d`でコンテナを再作成
-4. AirFlowの画面が起動するか確認する。
+4. AirFlow の画面が起動するか確認する。
+
+
+## 参考
+- [AirFlowの概要について](/_posts/2023-02-12-AirFlow_introduction.md)
+- [AirFlowをローカルで構築する方法](/_posts/2023-02-12
