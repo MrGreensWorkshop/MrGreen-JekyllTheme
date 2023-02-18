@@ -124,5 +124,5 @@ exclude: ["Gemfile*", "vendor", ".github", ".vscode", "README*", "LICENSE", "doc
 ###########################################################
 # gems_config
 ###########################################################
-gems:
+plugins:
   - jekyll-sitemap
