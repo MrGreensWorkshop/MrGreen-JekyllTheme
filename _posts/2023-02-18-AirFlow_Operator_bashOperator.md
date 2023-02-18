@@ -115,9 +115,11 @@ run_this >> run_this_last
 ```
 
 このように DAG を定義して AirFlow を起動すると以下のように AirFlow の UI 画面で、DAG がインポートされる。
+
 ![AirFlow_UI画面](/assets/img/posts/2023-02-18-AirFlow_Operator_bashOperato_dug_ui.png)
 
 AirFlow からインポートされた DAG のコードも確認することができる。
+
 ![AirFlow_UI画面2](/assets/img/posts/2023-02-18-AirFlow_Operator_bashOperato_dug_ui_2.png)
 
 ## 最後に
