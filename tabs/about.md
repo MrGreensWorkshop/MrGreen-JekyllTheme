@@ -54,7 +54,7 @@ img: ":about_top.jpg"
     justify-content: start;
 }
 .flex>img{
-    width: 30%;
+    width: 40%;
 }
 .profile{
 margin: 0 0 0 1em;
