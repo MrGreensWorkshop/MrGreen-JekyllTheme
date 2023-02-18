@@ -61,11 +61,13 @@ kramdown:
 # Plugins (Plugins supported by GitHub Pages https://pages.github.com/versions/)
 ###########################################################
 plugins:
+  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-redirect-from
 
 # since GitHub Pages runs jekyll with "--safe" flag, we need to add supported plugins in here. (only github supported plugins are allowed)
 whitelist:
+  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-redirect-from
 
@@ -120,9 +122,3 @@ sass:
 # Exclude these files or folders from production site
 ###########################################################
 exclude: ["Gemfile*", "vendor", ".github", ".vscode", "README*", "LICENSE", "docs"]
-
-###########################################################
-# gems_config
-###########################################################
-plugins:
-  - jekyll-sitemap
