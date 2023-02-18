@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Examples
-title:AirflowでDAG間の依存関係を定義する
+title: AirflowでDAG間の依存関係を定義する
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
