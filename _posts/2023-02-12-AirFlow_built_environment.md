@@ -22,7 +22,7 @@ date: 2023-02-12 08:11:06 +0900
 # if not specified, date will be used.
 meta_modify_date: 2023-01-01 00:00:00 +0900
 # check the meta_common_description in _data/owner/[language].yml
-meta_description: "Docker で AirFlow 学習環境をローカル構築構築する方法を解説。前提環境 OS:windowsミドルウェア:Docker"
+meta_description: "Docker で AirFlow 学習環境をローカル構築構築する方法を解説。AirFlowをインストールして使用したい方は必見。前提環境 OS:windowsミドルウェア:Docker"
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
 # image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
@@ -41,6 +41,8 @@ meta_description: "Docker で AirFlow 学習環境をローカル構築構築す
 <!-- outline-start -->
 
 Docker で AirFlow 学習環境をローカル構築構築する方法を解説。
+まず、AirFlowを自身の環境で使用するためには`python`と`Docker`が
+必要なのでそれらのインストールからそれぞれ説明していきます。
 
 # 前提環境
 

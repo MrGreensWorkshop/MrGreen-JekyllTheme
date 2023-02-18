@@ -19,7 +19,7 @@ img: ":home-heading.jpg"
 # if not specified, date will be used.
 #meta_modify_date: 2022-03-03 12:32:00 +0000
 # check the meta_common_description in _data/owner/[language].yml
-#meta_description: ""
+meta_description: "SESの技術備忘録。ITの現場で使える知識や技術を備忘録形式でブログで発信。未経験、初心者でもエンジニアを目指して勉強している方を応援します。python/C#/VBA/VB.net/maui/java/RedShift/SQL/Bigqueryなど様々な情報を発信"
 
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).

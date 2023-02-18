@@ -64,7 +64,7 @@ args = {
 
 with DAG(
     dag_id='example_DAG',
-    description=none,
+    description='DAGのサンプル',
     schedule_interval='0 0 * * *',
     start_date=datetime(2023, 2, 15, 0, 0, tzinfo=None),
     end_date=datetime(2025, 2, 15, 0, 0, tzinfo=None),

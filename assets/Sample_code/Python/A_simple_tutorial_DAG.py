@@ -18,12 +18,11 @@
 
 """Example DAG demonstrating the usage of the BashOperator."""
 
-from datetime import timedelta,datetime
+from datetime import timedelta, datetime
 
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 from airflow.operators.dummy import DummyOperator
-from airflow.utils.dates import days_ago
 
 args = {
     'owner': 'airflow',
