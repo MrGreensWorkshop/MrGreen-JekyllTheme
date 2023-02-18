@@ -54,10 +54,12 @@ AirFlow の DAG の中複数の Task を定義して処理を組み込むこと�
 
 まず DAG を作成するには任意の名前で`python`ファイルを作成する。
 DAG ファイルは AirFlow の DAG フォルダーに配置する。
+
 ![AirFlow_DAGの置き場所](/assets/img/posts/2023-02-18-AirFlow_Operator_bashOperator.png)
 
-## DAGの定義
-DAGファイルを作成したら、ソースコードを記述していく、まずはimportブロックを記述して最低限の`import`の宣言を行う。
+## DAG の定義
+
+DAG ファイルを作成したら、ソースコードを記述していく、まずは import ブロックを記述して最低限の`import`の宣言を行う。
 
 ```py
 from airflow import DAG
@@ -66,8 +68,8 @@ from airflow.operators.dummy import DummyOperator
 from datetime import timedelta, datetime
 ```
 
-その後DAGの各パラメータの定義を行う。今回は`run_this`と`run_this_last`のTaskを定義して
-`>>`	ビットシフト演算子で依存関係を定義する。
+その後 DAG の各パラメータの定義を行う。今回は`run_this`と`run_this_last`の Task を定義して
+`>>` ビットシフト演算子で依存関係を定義する。
 
 ```py
 # args Operatorで使用するパラメーターのデフォルト値を定義する
@@ -90,9 +92,9 @@ dag = DAG(
 )
 ```
 
-## Taskの定義
+## Task の定義
 
-DAGの定義が終われば次にTaskの定義をしていく。今回は`BashOperator`と`DummyOperator`を使用してTaskを定義する。
+DAG の定義が終われば次に Task の定義をしていく。今回は`BashOperator`と`DummyOperator`を使用して Task を定義する。
 
 ```py
 with dag(
@@ -111,19 +113,24 @@ with dag(
 # Task_IDの依存関係を`>>`で定義
 run_this >> run_this_last
 ```
-このようにDAGを定義してAirFlowを起動すると以下のようにAirFlowのUI画面で、DAGがインポートされる。
+
+このように DAG を定義して AirFlow を起動すると以下のように AirFlow の UI 画面で、DAG がインポートされる。
 ![AirFlow_UI画面](/assets/img/posts/2023-02-18-AirFlow_Operator_bashOperato_dug_ui.png)
 
-AirFlowからインポートされたDAGのコードも確認することができる。
+AirFlow からインポートされた DAG のコードも確認することができる。
 ![AirFlow_UI画面2](/assets/img/posts/2023-02-18-AirFlow_Operator_bashOperato_dug_ui_2.png)
 
 ## 最後に
-今回は基本的なDAGの作成方法について解説してきたが、次回はTask定義で使用している。Operatorについて解説していく。
+
+今回は基本的な DAG の作成方法について解説してきたが、次回は Task 定義で使用している。Operator について解説していく。
 
 ## 参照
-DAG定義のパラメーターについてや概要はこちらから
-- [AirFlowのDAGパラメータ解説](/_posts/2023-02-17-AirFlow_DAG.md)
-- [AirFlowの概要について](/_posts/2023-02-12-AirFlow_introduction.md)
 
-AirFlowの環境構築方法（インストール方法）はこちらから
-- [AirFlowの概要について](/_posts/2023-02-12-AirFlow_introduction.md)
+DAG 定義のパラメーターについてや概要はこちらから
+
+- [AirFlow の DAG パラメータ解説](/_posts/2023-02-17-AirFlow_DAG.md)
+- [AirFlow の概要について](/_posts/2023-02-12-AirFlow_introduction.md)
+
+AirFlow の環境構築方法（インストール方法）はこちらから
+
+- [AirFlow の概要について](/_posts/2023-02-12-AirFlow_introduction.md)
