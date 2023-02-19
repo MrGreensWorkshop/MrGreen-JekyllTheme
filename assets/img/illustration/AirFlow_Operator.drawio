@@ -1,0 +1,94 @@
+<mxfile host="65bd71144e">
+    <diagram id="gbx13SHVuhcVernPkQtm" name="ページ1">
+        <mxGraphModel dx="1080" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="79" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="120" width="920" height="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="BashOperator" style="rounded=1;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="450" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=21;strokeWidth=5;" parent="1" source="84" target="56" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="359.9999999999998" y="220" as="sourcePoint"/>
+                        <mxPoint x="199.99999999999977" y="448.939393939394" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="494" y="370"/>
+                            <mxPoint x="210" y="370"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="88" value="継承" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" vertex="1" connectable="0" parent="74">
+                    <mxGeometry x="0.1634" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-101" y="31" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="76" value="PostgreOperator" style="rounded=1;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="450" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="AirflowのOperator" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=27;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="140" width="300" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="PythonOperator" style="rounded=1;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="450" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="etc..." style="rounded=1;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="450" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="BaseOperator" style="rounded=1;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="220" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=21;strokeWidth=5;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="84" target="81">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="479.9999999999998" y="270" as="sourcePoint"/>
+                        <mxPoint x="220.00000000000023" y="460" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="494" y="370"/>
+                            <mxPoint x="400" y="370"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="89" value="継承" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" vertex="1" connectable="0" parent="85">
+                    <mxGeometry x="0.5322" y="-1" relative="1" as="geometry">
+                        <mxPoint x="1" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="86" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=21;strokeWidth=5;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="84" target="76">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="479.9999999999998" y="270" as="sourcePoint"/>
+                        <mxPoint x="409.9999999999998" y="460" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="494" y="370"/>
+                            <mxPoint x="590" y="370"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="90" value="継承" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" vertex="1" connectable="0" parent="86">
+                    <mxGeometry x="0.5734" y="-2" relative="1" as="geometry">
+                        <mxPoint x="2" y="3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="87" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=21;strokeWidth=5;" edge="1" parent="1" source="84" target="83">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="479.9999999999998" y="270" as="sourcePoint"/>
+                        <mxPoint x="599.9999999999998" y="460" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="494" y="370"/>
+                            <mxPoint x="770" y="370"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="91" value="継承" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" vertex="1" connectable="0" parent="87">
+                    <mxGeometry x="0.7275" y="1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="8" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="93" value="基本的に様々なOperatorは&lt;span style=&quot;font-size: 17px; text-align: center;&quot;&gt;BaseOperatorを継承している。&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="1">
+                    <mxGeometry x="610" y="260" width="280" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
