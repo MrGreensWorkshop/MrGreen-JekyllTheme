@@ -237,25 +237,49 @@ Task がアタッチされている DAG への参照
 例) `sla = timedelta(minutes=60)`
 
 
-execution_timeout (timedelta | None) – max time allowed for the execution of this task instance, if it goes beyond it will raise and fail.
+## execution_timeout (timedelta | None)
+### 定義任意 
+Taskのタイムアウト時間を定義する。タイムアウトするとTaskは失敗となる。
+基本的にはDAG側でタイムアウトを定義するのが一般的ではあるが、個別にタイムアウトを設定したい場合はここで定義するとよい。
 
-on_failure_callback (TaskStateChangeCallback | None) – a function to be called when a task instance of this task fails. a context dictionary is passed as a single parameter to this function. Context contains references to related objects to the task instance and is documented under the macros section of the API.
+## on_failure_callback (TaskStateChangeCallback | None)
+### 定義任意
+Taskが失敗したときに呼び出される関数名を定義することができる。
+コンテキスト ディクショナリが単一のパラメータとしてこの関数に渡されます。 コンテキストには、タスクインスタンスに関連するオブジェクトへの参照が含まれており、API の`macros section`に記載されています。
+使用例でいういうと、error内容をbashのlogに出力させたり。webhookを利用して、外部サービスへ情報を連携したりが可能である。
+執者は後者でSlackへアラートを飛ばすといったことを行ったことがある。
+Slackへアラートを飛ばす方法については別の機会に解説したいと思う。
 
-on_execute_callback (TaskStateChangeCallback | None) – much like the except that it is executed right before the task is executed.on_failure_callback
+## on_execute_callback (TaskStateChangeCallback | None)
+### 定義任意
+Taskが実行されるときに呼び出される関数名を定義することができる。
+`on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーターとして渡される。
 
-on_retry_callback (TaskStateChangeCallback | None) – much like the except that it is executed when retries occur.on_failure_callback
+## on_retry_callback (TaskStateChangeCallback | None)
+### 定義任意
+Taskが再実行されるときに呼び出される関数名を定義することができる。
+`on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーターとして渡される。
 
-on_success_callback (TaskStateChangeCallback | None) – much like the except that it is executed when the task succeeds.on_failure_callback
 
-pre_execute (TaskPreExecuteHook | None) –
+## on_success_callback (TaskStateChangeCallback | None)
+### 定義任意
+Taskが成功ときに呼び出される関数名を定義することができる。
+`on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーターとして渡される。
 
-a function to be called immediately before task execution, receiving a context dictionary; raising an exception will prevent the task from being executed.
+## pre_execute (TaskPreExecuteHook | None) –
+### 定義不要
+Taskを実行する直前に呼び出される関数名を定義することができる。
+`on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーターとして渡される。
+この関数で例外を発生させると、Taskの実行をす防ぐことができるのでチェック用の関数を組み込んだりすることも可能。
+※実験的な昨日パラメータなので使用は避けたほうがよい。
 
-This is an experimental feature.
+## post_execute (TaskPostExecuteHook | None) 
+### 定義不要
+Taskを実行直後に呼び出される関数名を定義することができる。
+`on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーター（実行結果含む）として渡される。
+, receiving a context dictionary and task result; raising an exception will prevent the task from succeeding.
 
-post_execute (TaskPostExecuteHook | None) –
-
-a function to be called immediately after task execution, receiving a context dictionary and task result; raising an exception will prevent the task from succeeding.
+※実験的な昨日パラメータなので使用は避けたほうがよい。
 
 This is an experimental feature.
 
