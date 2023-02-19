@@ -1,4 +1,4 @@
-[English] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)]
+[English] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)]
 
 ## Mr. Green Jekyll Theme
 
@@ -34,7 +34,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 ### Features
 
 - Multilingual web site
-  - English (default), Japanese, Brazilian Portuguese
+  - English (default), Japanese, Brazilian Portuguese, Korean
 - Recommended language offer feature
 - Auto Navigation Button adder with icon enable disable options
 - Layouts for `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` and more

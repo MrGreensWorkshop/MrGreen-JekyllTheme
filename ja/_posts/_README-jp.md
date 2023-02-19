@@ -1,4 +1,4 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)]
 
 ## Mr. Green Jekyll テーマ
 
@@ -34,7 +34,7 @@
 ### Features
 
 - 多言語Webサイト
-  - 英語 (デフォルト)、日本語、ブラジルポルトガル語
+  - 英語 (デフォルト)、日本語、ブラジルポルトガル語、韓国語
 - おすすめの言語提供機能
 - アイコン有効無効オプション付き自動ナビゲーションボタン追加機能
 - `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` 等々のレイアウト

@@ -1,4 +1,4 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [Português do Brasil]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [Português do Brasil] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)]
 
 ## Tema Mr. Green Jekyll
 
@@ -34,7 +34,7 @@ Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia
 ### Recursos disponíveis
 
 - Website para vários idiomas.
-  - Inglês (padrão), Japonês, Português do Brasil
+  - Inglês (padrão), Japonês, Português do Brasil, Coreano
 - Recomendação de idioma
 - Auto navegação com possibilidade de habilitar e desabilitar os ícones.
 - Layout para `Principal`, `Sobre`, `Arquivos`, `Lista-de-Posts`, `Links`, `Projetos` e mais
