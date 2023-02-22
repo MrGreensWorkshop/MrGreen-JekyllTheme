@@ -9,7 +9,7 @@ author: Mr. Green's Workshop
 # multiple category is not supported
 category: windows
 # multiple tag entries are possible
-tags: [windows, bat, cmd]
+tags: [windows, bat, cmd, 入門]
 # thumbnail image for post
 img: ":CMD_logo.png"
 # disable comments on this page

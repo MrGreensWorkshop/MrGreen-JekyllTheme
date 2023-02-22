@@ -9,9 +9,9 @@ author: Mr. Green's Workshop
 # multiple category is not supported
 category: Linux
 # multiple tag entries are possible
-tags: [unix, shell, bash]
+tags: [unix, shell, bash, 入門]
 # thumbnail image for post
-img: ":BASH_logo.png"
+img: ":Bash_logo.png"
 # disable comments on this page
 #comments_disable: true
 

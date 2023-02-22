@@ -211,24 +211,31 @@ Task がアタッチされている DAG への参照
 オプションは、文字列として設定するか、静的クラス `airflow.utils.WeightRule` で定義された定数を使用して設定できます。
 
 ## queue (str)
+
 ### 定義不要
+
 このジョブを実行するとき、どのキューをターゲットにするか定義できる。
 このパラーメーターについては公式でも詳しく解説していおらず、後日調査をしておこうと思う。
 
 ## pool (str | None)
+
 ### 定義不要
+
 このタスクが実行される`slot pool `を指定できる。
 `slot pool `は、特定のタスクの同時実行を制限する方法です。
 このパラーメーターについては公式でも詳しく解説していおらず、後日調査をしておこうと思う。
 
 ## pool_slots (int) –
+
 ### 定義不要
 
 このタスクが使用する`pool slots`の数 (>= 1) 1 未満の値は使用できません。
 このパラーメーターについては公式でも詳しく解説していおらず、後日調査をしておこうと思う。
 
 ## sla (timedelta | None)
+
 ### 定義不要
+
 ジョブが成功すると予想される時間を設定します。
 これは、期間が終了した後の `timedelta` を表すことに注意してください。
 たとえば、SLA を 1 時間に設定した場合、2016-01-01 00:00 のインスタンスがまだ成功していない場合、
@@ -236,88 +243,221 @@ Task がアタッチされている DAG への参照
 スケジューラは、SLA のあるジョブに特別な注意を払い、SLA ミスのアラート メールを送信します。 SLA ミスも、後で参照できるようにデータベースに記録されます。 同じ SLA 時間を共有するすべてのタスクが 1 つのメールにまとめられ、その時間の直後に送信されます。 SLA 通知は、タスク インスタンスごとに 1 回だけ送信されます。
 例) `sla = timedelta(minutes=60)`
 
-
 ## execution_timeout (timedelta | None)
-### 定義任意 
-Taskのタイムアウト時間を定義する。タイムアウトするとTaskは失敗となる。
-基本的にはDAG側でタイムアウトを定義するのが一般的ではあるが、個別にタイムアウトを設定したい場合はここで定義するとよい。
+
+### 定義任意
+
+Task のタイムアウト時間を定義する。タイムアウトすると Task は失敗となる。
+基本的には DAG 側でタイムアウトを定義するのが一般的ではあるが、個別にタイムアウトを設定したい場合はここで定義するとよい。
 
 ## on_failure_callback (TaskStateChangeCallback | None)
+
 ### 定義任意
-Taskが失敗したときに呼び出される関数名を定義することができる。
+
+Task が失敗したときに呼び出される関数名を定義することができる。
 コンテキスト ディクショナリが単一のパラメータとしてこの関数に渡されます。 コンテキストには、タスクインスタンスに関連するオブジェクトへの参照が含まれており、API の`macros section`に記載されています。
-使用例でいういうと、error内容をbashのlogに出力させたり。webhookを利用して、外部サービスへ情報を連携したりが可能である。
-執者は後者でSlackへアラートを飛ばすといったことを行ったことがある。
-Slackへアラートを飛ばす方法については別の機会に解説したいと思う。
+使用例でいういうと、error 内容を bash の log に出力させたり。webhook を利用して、外部サービスへ情報を連携したりが可能である。
+執者は後者で Slack へアラートを飛ばすといったことを行ったことがある。
+Slack へアラートを飛ばす方法については別の機会に解説したいと思う。
 
 ## on_execute_callback (TaskStateChangeCallback | None)
+
 ### 定義任意
-Taskが実行されるときに呼び出される関数名を定義することができる。
+
+Task が実行されるときに呼び出される関数名を定義することができる。
 `on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーターとして渡される。
 
 ## on_retry_callback (TaskStateChangeCallback | None)
+
 ### 定義任意
-Taskが再実行されるときに呼び出される関数名を定義することができる。
+
+Task が再実行されるときに呼び出される関数名を定義することができる。
 `on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーターとして渡される。
 
-
 ## on_success_callback (TaskStateChangeCallback | None)
+
 ### 定義任意
-Taskが成功ときに呼び出される関数名を定義することができる。
+
+Task が成功ときに呼び出される関数名を定義することができる。
 `on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーターとして渡される。
 
 ## pre_execute (TaskPreExecuteHook | None) –
+
 ### 定義不要
-Taskを実行する直前に呼び出される関数名を定義することができる。
+
+Task の実行直前に呼び出される関数名を定義することができる。
 `on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーターとして渡される。
-この関数で例外を発生させると、Taskの実行をす防ぐことができるのでチェック用の関数を組み込んだりすることも可能。
+この関数で例外を発生させると、Task の実行をす防ぐことができるのでチェック用の関数を組み込んだりすることも可能。
 ※実験的な昨日パラメータなので使用は避けたほうがよい。
 
-## post_execute (TaskPostExecuteHook | None) 
+## post_execute (TaskPostExecuteHook | None)
+
 ### 定義不要
-Taskを実行直後に呼び出される関数名を定義することができる。
+
+Task の実行直後に呼び出される関数名を定義することができる。
 `on_failure_callback`と同様にコンテキスト ディクショナリーが単一のパラメーター（実行結果含む）として渡される。
 , receiving a context dictionary and task result; raising an exception will prevent the task from succeeding.
 
 ※実験的な昨日パラメータなので使用は避けたほうがよい。
 
-This is an experimental feature.
+## trigger_rule (str)
 
-trigger_rule (str) – defines the rule by which dependencies are applied for the task to get triggered. Options are: default is . Options can be set as string or using the constants defined in the static class { all_success | all_failed | all_done | all_skipped | one_success | one_done | one_failed | none_failed | none_failed_min_one_success | none_skipped | always}all_successairflow.utils.TriggerRule
+### 定義任意
 
-resources (dict[str, Any] | None) – A map of resource parameter names (the argument names of the Resources constructor) to their values.
+タスクがトリガーされるように依存関係を適用するルールを定義することができる。
+つまり、前の Task がどの状態の時 Task が実行できるか定義することができる。
+デフォルトは`all_success`
+オプションは次のとおりです。オプションは、文字列として設定するか、静的クラスで定義された定数を使用して設定できます。
+` { all_success | all_failed | all_done | all_skipped | one_success | one_done | one_failed | none_failed | none_failed_min_one_success | none_skipped | always}`
+静的クラス:`all_successairflow.utils.TriggerRule`
 
-run_as_user (str | None) – unix username to impersonate while running the task
+## resources (dict[str, Any] | None)
 
-max_active_tis_per_dag (int | None) – When set, a task will be able to limit the concurrent runs across execution_dates.
+### 定義不要
 
-executor_config (dict | None) –
+リソース パラメーター名 (リソース コンストラクターの引数名) からそれらの値へのマップ。
+このパラーメーターについては公式でも詳しく解説していおらず、後日調査をしておこうと思う。
 
-Additional task-level configuration parameters that are interpreted by a specific executor. Parameters are namespaced by the name of executor.
+## run_as_user (str | None)
 
-Example: to run this task in a specific docker container through the KubernetesExecutor
+### 定義不要
 
+タスクの実行する UNIX ユーザー名を定義する。
+このパラーメーターについては公式でも詳しく解説していおらず、後日調査をしておこうと思う。
+
+## max_active_tis_per_dag (int | None)
+
+### 定義不要
+
+設定すると、タスクは実行日全体での同時実行を制限できます。
+
+## executor_config (dict | None) –
+
+### 基本定義不要
+
+特定の executor によって解釈される追加のタスク レベルの構成パラメーター。 パラメーターは、 executor の名前によって amespaced が付けられます。 別の Docer コンテナでタスクを実行させることで、AirFlow のリソース問題を解決したりする方法にも使える。
+
+例: KubernetesExecutor を介して特定の Docker コンテナーでこのタスクを実行する。
+
+```py
 MyOperator(...,
 executor_config={
 "KubernetesExecutor":
 {"image": "myCustomDockerImage"}
 }
 )
-do_xcom_push (bool) – if True, an XCom is pushed containing the Operator’s result
+```
 
-task_group (TaskGroup | None) – The TaskGroup to which the task should belong. This is typically provided when not using a TaskGroup as a context manager.
+## do_xcom_push (bool)
 
-doc (str | None) – Add documentation or notes to your Task objects that is visible in Task Instance details View in the Webserver
+### 定義不要
 
-doc_md (str | None) – Add documentation (in Markdown format) or notes to your Task objects that is visible in Task Instance details View in the Webserver
+True の場合、演算子の結果を含む XCom(クロスコミュニケーション) がプッシュされます。
+`XComs`については使用頻度はほぼないのでここでは解説せず公式のページを参考リンクを貼り付けておく。
+[XComs について](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/xcoms.html#xcoms)
 
-doc_rst (str | None) – Add documentation (in RST format) or notes to your Task objects that is visible in Task Instance details View in the Webserver
+## task_group (TaskGroup | None)
 
-doc_json (str | None) – Add documentation (in JSON format) or notes to your Task objects that is visible in Task Instance details View in the Webserver
+### 定義任意
 
-doc_yaml (str | None) – Add documentation (in YAML format) or notes to your Task objects that is visible in Task Instance details View in the Webserver
+タスクが属する `TaskGroup`を定義できる。
+`task_group`は複数のタスクをグループに纏めることで保守性を高める機能です。
+これは通常、TaskGroup をコンテキスト マネージャーとして使用しない場合に提供されます。
+
+## doc(str | None)
+
+### 定義任意
+
+タスク インスタンスの詳細ビューに表示されるドキュメントまたはメモをタスク オブジェクトに追加します。
+処理の概要など書いておくと保守性が向上するのでできる限り記述をお勧めしたい。
+
+## doc_md (str | None)
+
+### 定義任意
+
+タスク インスタンスの詳細ビューに表示されるドキュメント(Markdown format)またはメモをタスク オブジェクトに追加します。
+処理の概要など書いておくと保守性が向上するのでできる限り記述をお勧めしたい。
+`Markdown` でかけるので纏めやすいと思う。
+
+## doc_rst (str | None)
+
+### 定義任意
+
+タスク インスタンスの詳細ビューに表示されるドキュメント(RST format)またはメモをタスク オブジェクトに追加します。
+処理の概要など書いておくと保守性が向上するのでできる限り記述をお勧めしたい。
+RST とは ReStructuredText 　の略称
+
+## doc_json (str | None)
+
+### 定義任意
+
+タスク インスタンスの詳細ビューに表示されるドキュメント(json format)またはメモをタスク オブジェクトに追加します。
+処理の概要など書いておくと保守性が向上するのでできる限り記述をお勧めしたい。
+
+## doc_yaml (str | None)
+
+### 定義任意
+
+タスク インスタンスの詳細ビューに表示されるドキュメント(yaml format)またはメモをタスク オブジェクトに追加します。
+処理の概要など書いておくと保守性が向上するのでできる限り記述をお勧めしたい。
 
 # BaseOperator の関数
+
+## airflow.models.baseoperator.chain(\*tasks)
+
+よく DAG 内の依存関係は`>>`シフトビットで定義しているケースが多いが
+公式の BaseOperator では関数が用意されている。
+シフトビットでは制約が多い箇所も関数だと解決できるので本来はこちらを
+使った方が良いと思う。
+
+### chain(task)
+
+`chain`を使用した依存関係の書き方
+
+```py
+chain(t1, [t2, t3], [t4, t5], t6)
+```
+
+上記の依存定義のイメージ
+
+```
+  / -> x2 -> x4 \
+x1               -> x6
+  \ -> x3 -> x5 /
+```
+
+### set_downstream
+
+`set_downstream` を使用した依存関係の書き方
+執者はこの記述方法が好みである。
+理由としては、この記載方法だと応用することで動的に依存関係の定義を構成することができるからである。
+
+```py
+x1 = x1()
+x2 = x2()
+x3 = x3()
+x4 = x4()
+x5 = x5()
+x6 = x6()
+x1.set_downstream(x2)
+x1.set_downstream(x3)
+x2.set_downstream(x4)
+x3.set_downstream(x5)
+x4.set_downstream(x6)
+x5.set_downstream(x6)
+```
+
+上記の依存定義のイメージ
+
+```
+  / -> x2 -> x4 \
+x1               -> x6
+  \ -> x3 -> x5 /
+```
+
+### その他
+
+その他の依存関係の定義方法は少々特殊なのでここでは割愛したい思う。
 
 # 終わりに
 
