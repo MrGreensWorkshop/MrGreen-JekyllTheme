@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Examples
-title: SQL Fiddleをしようして環境構築せずにSQLを学習する。
+title: SQL Fiddleを使用して環境構築せずにSQLを学習する。
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
