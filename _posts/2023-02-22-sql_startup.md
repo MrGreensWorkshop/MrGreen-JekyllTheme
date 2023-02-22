@@ -11,7 +11,7 @@ category: sql
 # multiple tag entries are possible
 tags: [sql, DB, 入門]
 # thumbnail image for post
-img: ":sql_logo.png"
+img: ":c.png"
 # disable comments on this page
 #comments_disable: true
 
