@@ -9,7 +9,7 @@ author: Mr. Green's Workshop
 # multiple category is not supported
 category: AirFlow
 # multiple tag entries are possible
-tags: [AirFlow, Python]
+tags: [AirFlow, Python, 入門]
 # thumbnail image for post
 img: ":AirFlow_logo.png"
 # disable comments on this page

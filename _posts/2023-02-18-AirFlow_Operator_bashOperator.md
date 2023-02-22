@@ -22,7 +22,7 @@ date: 2023-02-18 00:00:00 +0900
 # if not specified, date will be used.
 #meta_modify_date: 2022-02-10 08:11:06 +0900
 # check the meta_common_description in _data/owner/[language].yml
-meta_description: "AirFlowのDAGの中複数のTaskを定義して処理を組み込むことができる。タスクを定義するにはAirFlowのオペレータを
+meta_description: "AirFlowはDAGの中に複数のTaskを定義して処理を組み込むことができる。タスクを定義するにはAirFlowのオペレータを
 使用することで簡単に定義することができる。"
 # optional
 # please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
@@ -41,7 +41,7 @@ meta_description: "AirFlowのDAGの中複数のTaskを定義して処理を組�
 
 <!-- outline-start -->
 
-AirFlow の DAG の中複数の Task を定義して処理を組み込むことができる。タスクを定義するには AirFlow のオペレータを
+AirFlow は DAG の中に複数の Task を定義して処理を組み込むことができる。タスクを定義するには AirFlow のオペレータを
 使用することで簡単に定義することができる。ここでは`BashOperator`と`DummyOperator`を利用して DAG を作成する手順を解説していく。
 尚、本記述は AirFlow は AWS にある MWAA で実装されている `Ver.2.0.2` を想定する。
 

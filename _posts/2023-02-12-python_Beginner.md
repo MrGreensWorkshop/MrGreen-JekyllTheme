@@ -9,7 +9,7 @@ title: Python入門
 # multiple category is not supported
 category: Python
 # multiple tag entries are possible
-tags: [Python, Programming]
+tags: [Python, Programming, 入門]
 # thumbnail image for post
 img: ":Python_logo.png"
 # disable comments on this page
