@@ -189,5 +189,5 @@ Tree ビューで実際の Tree 構造と Sample のソースコードを確認�
 
 ## 参考
 DAGについてはこちらもお勧め。
-- [AirFlowのDAGパラメータ解説](/_posts/2023-02-17-AirFlow_DAG.md)
-- [AirFlowの概要について](/_posts/2023-02-12-AirFlow_introduction.md)
+- [AirFlowのDAGパラメータ解説](/posts/2023-02-17-AirFlow_DAG)
+- [AirFlowの概要について](/posts/2023-02-12-AirFlow_introduction)

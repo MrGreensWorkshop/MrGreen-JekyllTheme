@@ -280,5 +280,5 @@ OS:windows
 
 
 ## 参考
-- [AirFlowの概要について](/_posts/2023-02-12-AirFlow_introduction.md)
-- [AirFlowをローカルで構築する方法](/_posts/2023-02-12
+- [AirFlowの概要について](/posts/2023-02-12-AirFlow_introduction)
+- [AirFlowをローカルで構築する方法](/posts/2023-02-12-AirFlow_built_environment)

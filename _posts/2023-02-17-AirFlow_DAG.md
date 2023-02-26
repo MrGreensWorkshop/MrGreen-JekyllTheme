@@ -345,5 +345,5 @@ AirFlowのDAGフォルダーに置くことでDAG取り込まれUI画面で見�
 
 ## 参照
 AirFlowの環境構築に関してはこちらを参照してみてください。
-- [AirFlowをローカルで構築する方法](/_posts/2023-02-12-AirFlow_built_environment.md)
-- [AirFlowの概要について](/_posts/2023-02-12-AirFlow_introduction.md)
+- [AirFlowをローカルで構築する方法](/posts/2023-02-12-AirFlow_built_environment)
+- [AirFlowの概要について](/posts/2023-02-12-AirFlow_introduction)

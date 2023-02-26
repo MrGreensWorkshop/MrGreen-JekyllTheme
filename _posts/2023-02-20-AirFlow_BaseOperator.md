@@ -24,10 +24,10 @@ date: 2023-02-20 00:00:00 +0900
 # check the meta_common_description in _data/owner/[language].yml
 meta_description: "Airflowで様々なオペレーターを使いこなすためには、ほぼすべてのオペレーターで継承しているBaseOperatorについて理解する必要がある。"
 # optional
-# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (posts/ or [language]/_posts folders).
 # image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
 #image_viewer_on: true
-# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (posts/ or [language]/_posts folders).
 # image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
 #image_lazy_loader_on: true
 # exclude from on site search
@@ -467,14 +467,14 @@ x1               -> x6
 
 DAG 定義のパラメーターについてや概要はこちらから
 
-- [AirFlow の DAG パラメータ解説](/_posts/2023-02-17-AirFlow_DAG.md)
-- [AirFlow の概要について](/_posts/2023-02-12-AirFlow_introduction.md)
-- [AirFlow の DAG の基本的な作成方法](/_posts/2023-02-18-AirFlow_Operator_bashOperator.md)
-- [Airflow で DAG 間の依存関係を定義する](/_posts/2023-02-19-AirFlow_Operator_external_task_sensor.md)
+- [AirFlow の DAG パラメータ解説](/posts/2023-02-17-AirFlow_DAG)
+- [AirFlow の概要について](/posts/2023-02-12-AirFlow_introduction)
+- [AirFlow の DAG の基本的な作成方法](/posts/2023-02-18-AirFlow_Operator_bashOperator)
+- [Airflow で DAG 間の依存関係を定義する](/posts/2023-02-19-AirFlow_Operator_external_task_sensor)
 
 AirFlow の環境構築方法（インストール方法）はこちらから
 
-- [AirFlow の概要について](/_posts/2023-02-12-AirFlow_introduction.md)
+- [AirFlow の概要について](/posts/2023-02-12-AirFlow_introduction)
 
 # 参照
 

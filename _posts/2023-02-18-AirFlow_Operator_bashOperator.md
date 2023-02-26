@@ -130,9 +130,9 @@ AirFlow からインポートされた DAG のコードも確認することが�
 
 DAG 定義のパラメーターについてや概要はこちらから
 
-- [AirFlow の DAG パラメータ解説](/_posts/2023-02-17-AirFlow_DAG.md)
-- [AirFlow の概要について](/_posts/2023-02-12-AirFlow_introduction.md)
+- [AirFlow の DAG パラメータ解説](/posts/2023-02-17-AirFlow_DAG)
+- [AirFlow の概要について](/posts/2023-02-12-AirFlow_introduction)
 
 AirFlow の環境構築方法（インストール方法）はこちらから
 
-- [AirFlow の概要について](/_posts/2023-02-12-AirFlow_introduction.md)
+- [AirFlow の概要について](/posts/2023-02-12-AirFlow_introduction)

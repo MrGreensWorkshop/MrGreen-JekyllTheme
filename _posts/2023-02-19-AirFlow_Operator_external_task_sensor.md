@@ -142,13 +142,13 @@ check_existence (bool) -- 外部タスクが存在するかどうかを確認す
 # 関連記事
 DAG 定義のパラメーターについてや概要はこちらから
 
-- [AirFlow の DAG パラメータ解説](/_posts/2023-02-17-AirFlow_DAG.md)
-- [AirFlow の概要について](/_posts/2023-02-12-AirFlow_introduction.md)
-- [AirFlowのDAGの基本的な作成方法](/_posts/2023-02-18-AirFlow_Operator_bashOperator.md)
+- [AirFlow の DAG パラメータ解説](/posts/2023-02-17-AirFlow_DAG)
+- [AirFlow の概要について](/posts/2023-02-12-AirFlow_introduction)
+- [AirFlowのDAGの基本的な作成方法](/posts/2023-02-18-AirFlow_Operator_bashOperator)
 
 AirFlow の環境構築方法（インストール方法）はこちらから
 
-- [AirFlow の概要について](/_posts/2023-02-12-AirFlow_introduction.md)
+- [AirFlow の概要について](/posts/2023-02-12-AirFlow_introduction)
 
 
 # 参照
