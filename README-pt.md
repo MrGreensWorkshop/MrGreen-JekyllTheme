@@ -1,4 +1,4 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [Português do Brasil]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [Português do Brasil] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)]
 
 ## Tema Mr. Green Jekyll
 
@@ -34,7 +34,7 @@ Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia
 ### Recursos disponíveis
 
 - Website para vários idiomas.
-  - Inglês (padrão), Japonês, Português do Brasil
+  - Inglês (padrão), Japonês, Português do Brasil, Francês
 - Recomendação de idioma
 - Auto navegação com possibilidade de habilitar e desabilitar os ícones.
 - Layout para `Principal`, `Sobre`, `Arquivos`, `Lista-de-Posts`, `Links`, `Projetos` e mais
@@ -66,7 +66,7 @@ Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia
 
 ### Instalação
 
-#### Github pages
+#### GitHub pages
 
 1. [Faça um fork do repositório](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/fork).
 1. Edite \_config.yml e o link do `url` e suba suas alterações.
