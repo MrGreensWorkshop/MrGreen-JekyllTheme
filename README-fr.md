@@ -29,27 +29,27 @@
 
 <!-- outline-end -->
 
-J'allais créer mon site Web et je pensais que si je le faisais comme modèle, je pourrais le partager avec la communauté open source. C'est pourquoi j'ai décidé de le construire comme thème. J'ai travaillé si dur pour rendre cela possible, alors s'il vous plaît, pensez à [soutenir mon travail](#vous-pouvez-soutenir-mon-travail). Merci.
+J'allais créer mon site Web et j'ai pensé que si je le faisais en tant que gabarit, je pourrais le partager avec la communauté open source. C'est pourquoi j'ai décidé de le construire comme thème. J'ai travaillé si dur pour rendre cela possible, alors s'il vous plaît, pensez à [soutenir mon travail](#vous-pouvez-soutenir-mon-travail). Merci.
 
 ### Caractéristiques
 
 - Site Internet multilingue
   - Anglais (par défaut), japonais, portugais brésilien, français
-- Fonction d'offre de langue recommandée
-- Additionneur de bouton de navigation automatique avec icône activer désactiver les options
+- Fonction de suggestion de langue
+- Ajout de boutons de navigation automatique avec icône, options d'activation et de désactivation
 - Mises en page pour `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` et plus
 - Options de changement de schéma de couleurs (lumière sombre)
-- Additif d'option de contact automatique
-- Référentiel d'image automatique (inutile d'ajouter un chemin complet pour les images. Ajoutez`:` le simplement devant.)
-- Chargeur paresseux d'images, visionneuse d'images
+- Ajout d'option de contact automatique
+- Référentiel d'image automatique (inutile d'ajouter un chemin complet pour les images. Ajoutez simplement `:` devant.)
+- Chargement différé d'images, visionneuse d'images
 - Cool Footer avec licence Creative Commons
-- Boîte modale de table des matières mobile pour les messages
+- Boîte modale de table des matières mobile pour les publications
 - Options de partage de publication
-- Post-listing par catégorie ou tags
-- Commentaires pour les messages
+- Liste des publications par catégorie ou étiquettes
+- Commentaires pour les publications
   - [Giscus](https://giscus.app)
   - [Disqus](https://disqus.com)
-- Pagination numérotée sélectionnable ou défilement pour charger le type
+- Sélection entre une pagination numérotée ou un chargement via défilement
 - Fonctionnalité de plan de site
 - Optimisation des moteurs de recherche (SEO)
   - [Schema Markup](https://schema.org)
@@ -58,8 +58,8 @@ J'allais créer mon site Web et je pensais que si je le faisais comme modèle, j
 - Analytique (Google Analytics)
 - Fonctionnalité de consentement aux cookies
 - Fonctionnalité de formulaire de contact (Google Forms)
-- Fonction de recherche de sites
-- Code Compression pour faible encombrement (`HTML` `JS` `SCSS`)
+- Fonction de recherche sur le site
+- Compression de code pour faible encombrement (`HTML` `JS` `SCSS`)
 - Prise en charge des applications mobiles
 - Compatible avec les appareils mobiles (testé sur Android et IOS)
 - Structure de dossiers bien organisée pour les développeurs (testé sur Chrome, Safari, FireFox)
@@ -68,7 +68,7 @@ J'allais créer mon site Web et je pensais que si je le faisais comme modèle, j
 
 #### Pages GitHub
 
-1. [Fourchez le dépôt](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/fork).
+1. [Dupliquer le dépôt](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/fork).
 1. Modifiez \_config.yml et modifiez `url` comme ci-dessous et appuyez sur les modifications.
 
    ```yaml
@@ -76,17 +76,17 @@ J'allais créer mon site Web et je pensais que si je le faisais comme modèle, j
    ```
 
 1. Renommez le nom du dépôt en `your_github_user_name.github.io`.
-1. Vérifiez `Actions` l'onglet État du déploiement sur le référentiel.
+1. Vérifiez l'état du déploiement dans l'onglet `Actions` de votre dépot.
 1. Lorsqu'il passe au vert, votre site est opérationnel à `https://your_github_user_name.github.io`.
 
 #### Construction locale
 
 1. [Installez Jekyll](https://jekyllrb.com/docs/installation/) sur votre système d'exploitation.
-1. Clonez ou [téléchargez](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest) le référentiel, dans l'invite de commande, accédez à la `bundle install` commande d'exécution du dossier
-1. Construire à l'aide `bundle exec jekyll serve --watch --host 0.0.0.0 --safe` de la commande,
-    - avec `--host 0.0.0.0` le paramètre, vous pouvez accéder au serveur Web à partir du même réseau local.
-    - avec `--safe` le paramètre, vous pouvez vous assurer qu'aucun plugin tiers n'a été ajouté. (pour le développement de pages GitHub)
-1. Votre page sera opérationnelle à l' `0.0.0.0:4000/` adresse.
+1. Clonez ou [téléchargez](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest) le dépot, accédez à votre répertoire dans l'invite de commande puis exécuter la commande `bundle install`.
+1. Construire votre site à l'aide de la commande `bundle exec jekyll serve --watch --host 0.0.0.0 --safe`,
+    - avec le paramètre `--host 0.0.0.0`, vous pouvez accéder au serveur Web à partir de votre réseau local.
+    - avec le paramètre`--safe`, vous pouvez vous assurer qu'aucun plugin tiers n'a été ajouté. (pour le développement de pages GitHub)
+1. Votre page sera opérationnelle à l'adresse `0.0.0.0:4000/`.
 
 ### Documentation
 
@@ -104,7 +104,7 @@ Certains des sites que je trouve utiles pendant que je travaille sur ce projet. 
 
 ### Vous pouvez soutenir mon travail
 
-Créer des projets à partir de rien prend beaucoup de temps. Très apprécié si vous envisagez de me soutenir afin que je puisse continuer des projets comme celui-ci et créer de nouveaux contenus pour tout le monde.
+Créer des projets à partir de rien prend beaucoup de temps. Je serais reconnaissant que vous envisagiez me soutenir afin que je puisse continuer des projets comme celui-ci et  que je puisse créer de nouveaux contenus pour tout le monde.
 
 - Vous pouvez être l'un de mes [sponsors GitHub](https://github.com/sponsors/MrGreensWorkshop "Soutenez-moi sur GitHub Sponsors") (mensuel ou ponctuel)
 - Vous pouvez être l'un de mes [Patreons](https://patreon.com/MrGreensWorkshop "Soyez un de mes patreons") (mensuel)
@@ -112,7 +112,7 @@ Créer des projets à partir de rien prend beaucoup de temps. Très apprécié s
 
 ### Contribuer
 
-Les demandes d'extraction sont les bienvenues. Veuillez vérifier les instructions dans les modèles de problèmes et de demande d'extraction.
+Les demandes de tirage (pull requests) sont les bienvenues. Veuillez vérifier les instructions dans les modèles de problèmes et de demande de tirage.
 
 ### Contributeurs
 
@@ -127,7 +127,7 @@ Comme il est indiqué dans la [licence MIT](https://github.com/MrGreensWorkshop/
 
 `Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com`
 
-Veuillez ajouter un lien vers ma page ou laisser le lien "Pwrd by Mr. Green" dans le pied de page afin que je puisse obtenir un crédit pour mon travail.
+Veuillez ajouter un lien vers ma page ou laisser le lien "Pwrd by Mr. Green" dans le pied de page afin que je puisse obtenir du crédit pour mon travail.
 
 Merci!
 
@@ -135,8 +135,8 @@ Merci!
 
 Thème de Mr. Green Jekyll intègre les bibliothèques écrites ci-dessous. Sans ces bibliothèques, je ne pourrais pas rendre ce projet possible.
 
-| Library                              | file |
-| :----------------------------------- | ---- |
+| Bibliothèque                         | fichier |
+| :----------------------------------- | ------- |
 | [jQuery v3.6.0](https://github.com/jquery/jquery/tree/3.6.0), Copyright [OpenJS Foundation](https://openjsf.org) et autres contributeurs. jQuery est distribué sous les termes de la licence MIT. | [jquery-3.6.0.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/jquery-3.6.0.min.js) |
 | [Bootstrap v3.3.7](https://github.com/twbs/bootstrap/tree/v3.3.7), Copyright (c) 2011-2016 Twitter, Inc. Bootstrap est distribué selon les termes de la licence MIT. | [bootstrap.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap.min.js), [bootstrap.min.css](assets/css/bootstrap.min.css) |
 | [Bootstrap Table of Contents v0.4.1](https://github.com/afeld/bootstrap-toc/tree/v0.4.1), Copyright (c) 2015 Aidan Feldman Aidan Feldman. La table des matières Bootstrap est distribuée selon les termes de la licence MIT. | [bootstrap-toc.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap-toc.min.js), [bootstrap-toc.min.css](assets/css/bootstrap-toc.min.css) |
