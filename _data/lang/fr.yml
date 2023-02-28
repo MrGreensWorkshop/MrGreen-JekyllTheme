@@ -1,5 +1,6 @@
 # Mr. Green Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
 # Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+# Copyright (c) 2023 Jean-Philippe Morissette https://github.com/JPMorissette
 # Licensed under MIT
 
 lng:
@@ -73,7 +74,7 @@ post:
   pager_buttons:
     older_post: "← Article plus ancien"
     newer_post: "Article plus récent →"
-    first_post: "D'abord"
+    first_post: "Début"
     last_post: "Dernier"
   comments:
     noscript: Veuillez activer JavaScript pour afficher les commentaires.
@@ -90,7 +91,7 @@ post:
         settings_link_text: ce lien
         button:
           load_once: Afficher uniquement cette fois
-          load_and_do_not_ask_again: Montre toujours
+          load_and_do_not_ask_again: Toujours montrer
   table_of_contents:
     heading: Contenu
     tooltip:
@@ -126,7 +127,7 @@ post-list:
     msg:
       property_list:
         # keys need to match with /query/post-query.json
-        tags: Étiqueter
+        tags: Étiquette
         category: Catégorie
         year: Année
       # you can use these wildcards, {property} {value} {thumb}
@@ -135,7 +136,7 @@ post-list:
 # for home layout
 home:
   title: Bienvenue
-  button_name: Maison
+  button_name: Accueil
   new_posts_title: Nouveaux articles
   new_posts_show_more_button: Voir plus ...
 
@@ -163,7 +164,7 @@ projects:
   title: Projets
   button_name: Projets
   read_more_text: En savoir plus
-  read_less_text: Lire moins
+  read_less_text: Réduire
 
 # for privacy-policy layout
 privacy-policy:
@@ -172,7 +173,7 @@ privacy-policy:
 # constants to be replaced for
 constants:
   greetings: Bonjour
-  welcome: Bienvenu
+  welcome: Bienvenue
   sample: Goûter
 
 # for contact form
@@ -187,17 +188,17 @@ cookie_consent:
   panel_bar:
     msg: >
       Ce site Web utilise des cookies pour optimiser les fonctionnalités du site.
-      Il sera activé avec votre accord.
+      Ils seront activés avec votre accord.
     privacy_msg: Vérifiez la $privacy_link.
     buttons:
-      accept: &accept_button Autorise tout
+      accept: &accept_button Autoriser tout
       settings: Personnaliser
       deny: &deny_button Refuser
   panel_settings:
     title: *cookie_settings
     msg: >
       Ce site Web utilise des cookies pour optimiser les fonctionnalités du site.
-      Il sera activé avec votre accord. Veuillez cliquer sur chaque élément ci-dessous pour la politique en matière de cookies.
+      Ils seront activés avec votre accord. Veuillez cliquer sur chaque élément ci-dessous pour la politique en matière de cookies.
     privacy_msg: Vérifiez la $privacy_link.
     buttons:
       accept: *accept_button

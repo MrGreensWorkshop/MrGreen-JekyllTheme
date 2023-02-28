@@ -119,6 +119,7 @@ Pull Requests são muito bem vindos. Por favor, veja as instruções em Problema
 Obrigado por suas contribuições!
 
 - Tradução para o português brasileiro por [Vitor DallAcqua](https://github.com/fandangos).
+- Correções de tradução francesa por [Jean-Philippe Morissette](https://github.com/JPMorissette).
 
 ### Licença
 

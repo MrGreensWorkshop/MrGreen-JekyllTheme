@@ -119,6 +119,7 @@ Pull Requests are welcome. Please check the instructions in the Issues and Pull 
 Thank you for your contributions!
 
 - Brazilian Portuguese translation by [Vitor DallAcqua](https://github.com/fandangos).
+- French translation corrections by [Jean-Philippe Morissette](https://github.com/JPMorissette).
 
 ### License
 

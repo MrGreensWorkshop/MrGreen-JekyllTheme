@@ -72,11 +72,11 @@ page_data:
     - type: id_jekyiiliquid
       title: "Aide-mémoire Jekyll"
       url: "https://cloudcannon.com/community/jekyll-cheat-sheet/"
-      info: "Il y a tellement de variables et de filtres Jekyll à retenir et il peut être difficile de tout garder en tête. Cette feuille de triche sert de référence rapide de tout ce que Jekyll peut faire."
+      info: "Il y a tellement de variables et de filtres Jekyll à retenir qu'il peut être difficile de tout garder en tête. Cette feuille aide-mémoire sert de référence rapide de tout ce que Jekyll peut faire."
     - type: id_jekyiiliquid
       title: "Liquid pour les designers"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Designers"
-      info: "Wiki Liquid for Designers sur GitHub."
+      info: "Wiki Liquid pour les Designers sur GitHub."
     - type: id_jekyiiliquid
       title: "Liquid pour programmeurs"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers"
@@ -84,7 +84,7 @@ page_data:
     - type: id_jekyiiliquid
       title: "Référence liquid"
       url: "https://shopify.dev/api/liquid/"
-      info: "Liquid est un langage de modèle créé par Shopify et écrit en Ruby. Il est maintenant disponible en tant que projet open source sur GitHub."
+      info: "Liquid est un langage de gabarit créé par Shopify et écrit en Ruby. Il est maintenant disponible en tant que projet open source sur GitHub."
 
     # webdesign
     - type: id_webdesign

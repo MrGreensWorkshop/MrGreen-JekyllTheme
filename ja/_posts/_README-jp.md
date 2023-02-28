@@ -119,6 +119,7 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 貢献していただきありがとうございます！
 
 - ブラジルポルトガル語の翻訳 [Vitor DallAcqua](https://github.com/fandangos)。
+- フランス語の翻訳修正 [Jean-Philippe Morissette](https://github.com/JPMorissette)。
 
 ### License
 
