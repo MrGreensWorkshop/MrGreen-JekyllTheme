@@ -99,7 +99,7 @@ post:
       close: Fermer
   share:
     heading: Partager sur
-    link_copied: Lien copié !
+    link_copied: Lien copié !
     tooltip:
       # keys need to match with _data/share.yml
       twitter: Twitter
