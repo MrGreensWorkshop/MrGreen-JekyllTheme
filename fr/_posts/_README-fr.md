@@ -119,6 +119,7 @@ Les demandes d'extraction sont les bienvenues. Veuillez vérifier les instructio
 Merci pour vos contributions!
 
 - Traduction portugaise brésilienne par [Vitor DallAcqua](https://github.com/fandangos).
+- Corrections de la traduction française par [Jean-Philippe Morissette](https://github.com/JPMorissette).
 
 ### Licence
 

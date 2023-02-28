@@ -119,10 +119,10 @@ post-list:
       categories: Catégories
       tags: Mots clés
       years: Années
-      clear: Claire
+      clear: Retirer
       close: Fermer
       tooltip:
-        clear: Claire
+        clear: Retirer
         close: Fermer
     msg:
       property_list:
