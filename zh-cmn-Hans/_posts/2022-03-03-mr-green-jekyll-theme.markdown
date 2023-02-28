@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Mr_Green_Jekyll_Theme
-title: "Mr. Green Jekyll テーマ"
+title: "Mr. Green Jekyll 主题"
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
