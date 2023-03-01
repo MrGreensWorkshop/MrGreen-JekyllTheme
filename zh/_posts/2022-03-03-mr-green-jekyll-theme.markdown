@@ -39,6 +39,6 @@ date: 2022-03-03 12:32:10 +0900
 #published: false
 ---
 
-{%- capture readme_file -%}{%- include_relative _README-zh-cmn-Hans.md -%}{%- endcapture -%}
+{%- capture readme_file -%}{%- include_relative _README-zh.md -%}{%- endcapture -%}
 {%- assign tmp_content = readme_file | split: "<!-- readme -->" -%}
 {{tmp_content[1]}}
