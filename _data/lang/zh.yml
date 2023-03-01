@@ -1,12 +1,12 @@
 lng:
   name: 简体中文
   # based on ISO_639-1 https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-  code: zh-cmn-Hans
+  code: zh
   # specifically needed for open-graph meta og:locale. if open_graph or html_lng_with_country_code not enabled in _data/conf/main.yml, it's not necessary.
   # For html tags, you can enable or disable using html_lng_with_country_code defined in _data/conf/main.yml
   # based on ISO_3166-1 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-  country: China
-  switch_title: zh-cmn-Hans
+  country: CN
+  switch_title: Cn
   offer:
     title: 语言
     msg_page: 显示简体中文页面
