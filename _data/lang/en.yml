@@ -15,7 +15,7 @@ lng:
     title: Language
     msg_page: View this page in English.
     # if page translation is not available, use this.
-    msg_site: To English home page
+    msg_site: To home
 
 date:
   # if %b is used in the long format, it will be replaced with the corresponding item in 'months' list below.
@@ -39,7 +39,7 @@ color_scheme_switch_tooltip: Color scheme
 
 search:
   placeholder: Search
-  noResultText: No results found.
+  noResultText: No results were found.
 
 image_viewer:
   load_error: The image could not be loaded.
@@ -79,7 +79,7 @@ post:
     noscript: Please enable JavaScript to view the Comments.
     disqus:
       count_title: Comments
-      click_to_load: "Load Comments"
+      click_to_load: "Load comments"
       consent:
         title: Comments (Disqus.com)
         text: >
