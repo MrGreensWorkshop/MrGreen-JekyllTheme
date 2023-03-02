@@ -34,7 +34,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 ### Features
 
 - Multilingual web site
-  - English (default), Japanese, Brazilian Portuguese
+  - English (default), Japanese, Brazilian Portuguese, Chinese
 - Recommended language offer feature
 - Auto Navigation Button adder with icon enable disable options
 - Layouts for `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` and more
@@ -119,6 +119,7 @@ Pull Requests are welcome. Please check the instructions in the Issues and Pull 
 Thank you for your contributions!
 
 - Brazilian Portuguese translation by [Vitor DallAcqua](https://github.com/fandangos).
+- Chinese translation by [fairycn](https://github.com/fairycn).
 
 ### License
 

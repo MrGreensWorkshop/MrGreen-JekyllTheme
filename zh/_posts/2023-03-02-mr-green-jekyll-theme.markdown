@@ -16,11 +16,11 @@ img: ":mock1.jpg"
 #comments_disable: true
 
 # publish date
-date: 2022-03-03 12:32:10 +0900
+date: 2023-03-02 08:32:10 +0900
 
 # seo
 # if not specified, date will be used.
-#meta_modify_date: 2022-03-03 12:32:10 +0900
+#meta_modify_date: 2023-03-02 08:32:10 +0900
 # check the meta_common_description in _data/owner/[language].yml
 #meta_description: ""
 
