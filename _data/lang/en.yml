@@ -1,3 +1,7 @@
+# Mr. Green Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+# Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+# Licensed under MIT
+
 lng:
   name: English
   # based on ISO_639-1 https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
@@ -209,7 +213,7 @@ cookie_consent:
           These cookies do not store any personally identifiable information.
           $gtag_info
       analytics:
-        title: Performance cookies #Performance and analytics cookies
+        title: Performance cookies
         info: $gtag_info
       preferences:
         title: Functionality cookies
