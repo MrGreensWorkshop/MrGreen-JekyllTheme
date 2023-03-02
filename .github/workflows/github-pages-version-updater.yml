@@ -1,4 +1,4 @@
-name: Github pages version updater
+name: GitHub pages version updater
 
 # on a push or pull request is made on the main branch
 on:
