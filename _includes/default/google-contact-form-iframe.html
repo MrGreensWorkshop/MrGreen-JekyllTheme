@@ -22,6 +22,6 @@
 
 <script>
   ContactForm.formURL = '{{ contact_form_url | split: " " | join: " " }}';
-  ContactForm.formLoadingText = '{{ site.data.lang[lng].contact_form.formLoadingText }}';
+  ContactForm.formLoadingText = "{{ site.data.lang[lng].contact_form.formLoadingText }}";
   ContactForm.slideType = '{{ site.data.conf.main.contact_form.slideType }}';
 </script>

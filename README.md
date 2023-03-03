@@ -9,7 +9,7 @@
 [<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
 [<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt)
 [<img src="https://shields.io/badge/Github%20Sponsors-Support%20me-blue?logo=GitHub+Sponsors" alt="Support me on GitHub Sponsors" data-no-image-viewer>](https://github.com/sponsors/MrGreensWorkshop "Support me on GitHub Sponsors")
-[<img src="https://shields.io/badge/Patreon-Support%20me-blue?logo=Patreon" alt="Be my Patron" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Support me on Patreon")
+[<img src="https://shields.io/badge/Patreon-Support%20me-blue?logo=Patreon" alt="Be my Patron" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Be my Patron")
 [<img src="https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi" alt="Tip me via Ko-fi" data-no-image-viewer>](https://ko-fi.com/MrGreensWorkshop "Tip me via Ko-fi")
 
 ---
