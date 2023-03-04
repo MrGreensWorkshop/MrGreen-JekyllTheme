@@ -202,3 +202,4 @@ where age = 20;
 まずは、取っ掛かりとして参考になれば。
 
 # 関連記事
+- [SQL Select文の基本](/posts/2023-03-04-sql_select)
