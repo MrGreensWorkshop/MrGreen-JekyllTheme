@@ -1,0 +1,13 @@
+language:
+- [HTML]
+- [SCSS]
+- [JavaScript]
+- [Liquid]
+- [Ruby]
+python:
+  - "3.7-dev"
+# command to install dependecies
+  - pip install -r requirement.txt
+# command to run tests
+script:
+  - pytest
