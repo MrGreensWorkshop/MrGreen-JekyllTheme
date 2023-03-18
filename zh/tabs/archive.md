@@ -1,10 +1,8 @@
 ---
-layout: privacy-policy
+layout: archives
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_privacy_policy
+lng_pair: id_archives
 
-# image for page specific usage
-#img: ":image.jpg"
 # publish date (used for seo)
 # if not specified, site.time will be used.
 #date: 2022-03-03 12:32:00 +0000
@@ -29,18 +27,9 @@ lng_pair: id_privacy_policy
 # image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
 #image_lazy_loader_on: true
 # exclude from on site search
-on_site_search_exclude: true
+#on_site_search_exclude: true
 # exclude from search engines
-search_engine_exclude: true
+#search_engine_exclude: true
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
-
-{%- comment -%} Please delete below and place your page content here {%- endcomment -%}
-
-{%- include util/auto-content-generator.liquid -%}
-{{ page_title_text }}
-
-{{ website_info_text }}
-
-{{ website_info_text_second }}
