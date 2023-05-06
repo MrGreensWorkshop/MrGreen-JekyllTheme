@@ -42,7 +42,7 @@ lng_pair: id_links
 page_data:
   main:
     header: "링크"
-    info: "귀하의 링크 페이지 설명."
+    info: "링크 페이지 설명."
 
   # To change order of the Categories, simply change order. (you don't need to change list order.)
   category:
@@ -52,7 +52,7 @@ page_data:
     - title: "웹 디자인"
       type: id_webdesign
       color: "#F4A273"
-    - title: "프로그램 작성"
+    - title: "프로그래밍"
       type: id_programming
       color: "#62b462"
 
@@ -72,7 +72,7 @@ page_data:
     - type: id_jekyiiliquid
       title: "Jekyll 치트 시트"
       url: "https://cloudcannon.com/community/jekyll-cheat-sheet/"
-      info: "기억해야 할 Jekyll 변수와 필터가 너무 많아서 머릿속에 모두 담아두기가 까다로울 수 있습니다. 이 치트 시트는 Jekyll이 할 수 있는 모든 것에 대한 빠른 참조 역할을 합니다."
+      info: "Jekyll의 변수와 필터가 너무 많아 머릿속에 모두 담아두기가 까다로울 수 있습니다. 이 치트 시트는 Jekyll이 할 수 있는 모든 것을 빠르게 참조할 수 있습니다."
     - type: id_jekyiiliquid
       title: "디자이너를 위한 Liquid"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Designers"
@@ -90,5 +90,5 @@ page_data:
     - type: id_webdesign
       title: "W3Schools"
       url: "https://www.w3schools.com/"
-      info: "W3Schools는 웹의 모든 주요 언어로 된 무료 온라인 자습서, 참조 및 연습을 제공합니다. HTML, CSS, JavaScript, Python, SQL, Java 등과 같은 인기 있는 주제를 다룹니다."
+      info: "W3Schools는 웹의 모든 주요 언어로 된 무료 온라인 자습서, 레퍼런스 및 연습문제를 제공합니다. HTML, CSS, JavaScript, Python, SQL, Java 등과 같은 인기 있는 주제를 다룹니다."
 ---
