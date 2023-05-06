@@ -12,10 +12,10 @@ page_data:
     back_color: "lightblue"
 
   category:
-    - title: "예"
+    - title: "예시"
       type: id_example
       color: "gray"
-    - title: "그림"
+    - title: "사진"
       type: id_picture
       color: "#62b462"
     - title: "명언"
@@ -26,7 +26,7 @@ page_data:
     # example
     - type: id_example
       project_name: "예제 프로젝트"
-      project_excerpt: "예"
+      project_excerpt: "예시"
       img: ":project1_thumb.jpg"
       img_title: "img title1"
       date: "2021-03-13"
@@ -174,7 +174,7 @@ page_data:
     # picture
     - type: id_picture
       project_name: "예제 프로젝트"
-      project_excerpt: "그림"
+      project_excerpt: "사진"
       img: ":project2_thumb.jpg"
       img_title: "img title2"
       date: "2021-04-23"

@@ -13,7 +13,7 @@ lng:
   switch_title: Ko
   offer:
     title: 언어
-    msg_page: 이 페이지를 한국어로 보세요.
+    msg_page: 이 페이지를 한국어로 표시합니다.
     # if page translation is not available, use this.
     msg_site: 한국어 홈페이지로
 
@@ -28,12 +28,12 @@ date:
 not_found:
   header: 페이지를 찾을 수 없습니다
   line1: 요청하신 페이지를 찾을 수 없습니다.
-  line2: 가능한 경우 메뉴 또는 사이트 검색을 시도하십시오.
+  line2: 메뉴 또는 검색이 가능한 경우 사이트 검색을 시도해 보십시오.
 
 no_translation_tooltip: 번역 없음
 
 navigation:
-  contact_header: 연락하다
+  contact_header: 연락처
 
 color_scheme_switch_tooltip: 색 구성표
 
@@ -45,17 +45,17 @@ image_viewer:
   load_error: 이미지를 로드할 수 없습니다.
 
 copyright:
-  additional_text: " 판권 소유."
+  additional_text: " 저작권으로 보호받고 있습니다."
 
 creative_commons:
   some_rights_reserved: 일부 권리 보유.
   # check _data/owner/[language].yml for license type.
-  by: 달리 명시되지 않는 한 이 웹 사이트의 콘텐츠는 Creative Commons Attribution 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
-  by-nd: 달리 명시되지 않는 한 이 웹 사이트의 콘텐츠는 Creative Commons Attribution-NoDerivatives 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
-  by-sa: 달리 명시되지 않는 한 이 웹 사이트의 콘텐츠는 Creative Commons Attribution-ShareAlike 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
-  by-nc: 달리 명시되지 않는 한 이 웹 사이트의 콘텐츠는 Creative Commons Attribution-NonCommercial 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
-  by-nc-nd: 달리 명시되지 않는 한 이 웹 사이트의 콘텐츠는 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
-  by-nc-sa: 달리 명시되지 않는 한 이 웹 사이트의 콘텐츠는 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
+  by: 특별한 표시가 없는 한 이 웹사이트의 콘텐츠는 Creative Commons Attribution 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
+  by-nd: 특별한 표시가 없는 한 이 웹사이트의 콘텐츠는 Creative Commons Attribution-NoDerivatives 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
+  by-sa: 특별한 표시가 없는 한 이 웹사이트의 콘텐츠는 Creative Commons Attribution-ShareAlike 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
+  by-nc: 특별한 표시가 없는 한 이 웹사이트의 콘텐츠는 Creative Commons Attribution-NonCommercial 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
+  by-nc-nd: 특별한 표시가 없는 한 이 웹사이트의 콘텐츠는 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
+  by-nc-sa: 특별한 표시가 없는 한 이 웹사이트의 콘텐츠는 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International 라이선스에 따라 라이선스가 부여됩니다.
 
 # for 404 layout
 not-found:
@@ -64,7 +64,7 @@ not-found:
 # for post layout
 post:
   read_time:
-    unit: "분"
+    unit: "분 전"
     text: " 읽음"
     # c for char w for word
     word_char: c
@@ -72,27 +72,27 @@ post:
     per_minute: 500
   pager_buttons:
     older_post: "← 오래된 게시물"
-    newer_post: "최신 게시물 →"
+    newer_post: "새로운 게시물 →"
     first_post: 처음
     last_post: 마지막
   comments:
     noscript: 댓글을 보려면 JavaScript를 활성화하십시오.
     disqus:
-      count_title: 댓글을
+      count_title: 댓글
       click_to_load: "댓글 불러오기"
       consent:
-        title: 댓글을 (Disqus.com)
+        title: 댓글 (Disqus.com)
         text: >
           댓글 기능은 타사에서 호스팅합니다. 외부 콘텐츠를 표시하면 disqus.com의 $terms 및 $privacy_policy에 동의하는 것입니다.
-          <br>타겟 광고를 거부하려면 $settings_link를 열고 "옵트아웃" 버튼을 클릭한 후 닫으십시오. 여기로 돌아와 댓글을 로드하세요.
+          <br>타겟 광고를 거부하려면 $settings_link를 열고 "opt-out" 버튼을 클릭한 후 닫으십시오. 여기로 돌아와 댓글을 로드하세요.
         terms_link_text: 서비스 약관
         privacy_link_text: 개인 정보 정책
-        settings_link_text: 이 링크
+        settings_link_text: 현재 링크
         button:
-          load_once: 이번만 보여줘
-          load_and_do_not_ask_again: 항상 표시
+          load_once: 한번만 보이기
+          load_and_do_not_ask_again: 항상 보이기
   table_of_contents:
-    heading: 내용물
+    heading: 표시 하기
     tooltip:
       move: 드래그하여 이동
       close: 닫다
@@ -117,26 +117,26 @@ post-list:
       all: 모두
       categories: 카테고리
       tags: 태그
-      years: 연령
-      clear: 분명한
-      close: 닫다
+      years: 연도
+      clear: 지우기
+      close: 닫기
       tooltip:
-        clear: 분명한
-        close: 닫다
+        clear: 지우기
+        close: 닫기
     msg:
       property_list:
         # keys need to match with /query/post-query.json
-        tags: 꼬리표
-        category: 범주
-        year: 년도
+        tags: 태그
+        category: 분류
+        year: 연도
       # you can use these wildcards, {property} {value} {thumb}
       resultFoundTitleFormat: "{property} : {thumb}"
 
 # for home layout
 home:
-  title: 환영
+  title: 환영합니다
   button_name: 홈
-  new_posts_title: 새로운 기사
+  new_posts_title: 새로운 포스트
   new_posts_show_more_button: 더보기 ...
 
 # for archives layout
@@ -147,8 +147,8 @@ archives:
 
 # for about layout
 about:
-  title: 에 대한
-  button_name: 에 대한
+  title: 나의 소개
+  button_name: 나의 소개
   email_title: 이메일
 
 # for links layout
@@ -156,7 +156,7 @@ links:
   title: 링크
   button_name: 링크
   link_text: 웹사이트
-  info_text: 정보
+  info_text: 설명
 
 # for projects layout
 projects:
@@ -172,7 +172,7 @@ privacy-policy:
 # constants to be replaced for
 constants:
   greetings: 안녕하세요
-  welcome: 환영
+  welcome: 환영합니다
   sample: 견본
 
 # for contact form
@@ -186,18 +186,18 @@ cookie_consent:
   side_nav_setting_button_tooltip: &cookie_settings 쿠키 설정
   panel_bar:
     msg: >
-      이 웹사이트는 쿠키를 사용하여 사이트 기능을 최적화합니다.
-      귀하의 승인으로 활성화됩니다.
+      이 웹사이트는 쿠키를 사용하여 최적화 하고 있습니다.
+      승인 후에 활성화됩니다.
     privacy_msg: $privacy_link를 확인하십시오.
     buttons:
       accept: &accept_button 모두 허용
-      settings: 커스터마이징
-      deny: &deny_button 부인하다
+      settings: 맞춤 설정
+      deny: &deny_button 거부
   panel_settings:
     title: *cookie_settings
     msg: >
-      이 웹사이트는 쿠키를 사용하여 사이트 기능을 최적화합니다.
-      귀하의 승인으로 활성화됩니다. 쿠키 정책을 보려면 아래 각 항목을 클릭하십시오.
+      이 웹사이트는 쿠키를 사용하여 최적화 하고 있습니다.
+      승인 후에 활성화됩니다. 쿠키에 대한 정책을 보려면 아래 각 항목을 클릭하십시오.
     privacy_msg: $privacy_link를 확인하십시오.
     buttons:
       accept: *accept_button
@@ -206,17 +206,17 @@ cookie_consent:
     always_active: 항상 활성
     consent_types:
       necessary:
-        title: 꼭 필요한 쿠키
+        title: 필수 쿠키
         info: >
           이 쿠키는 웹사이트 기능에 필수적이며 비활성화할 수 없습니다.
           색 구성표 등과 같은 사이트 기능이 변경될 때 일반적으로 설정됩니다.
           이 쿠키는 개인 식별 정보를 저장하지 않습니다.
           $gtag_info
       analytics:
-        title: 성능 쿠키
+        title: 성능관련 쿠키
         info: $gtag_info
       preferences:
-        title: 기능 쿠키
+        title: 기능관련 쿠키
         info: $gtag_info
       advertising:
         title: 타겟팅 및 광고 쿠키
