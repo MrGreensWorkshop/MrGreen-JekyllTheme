@@ -7,7 +7,7 @@ domain: ""
 
 # your web site url
 # for GitHub Pages, url: "https://your_github_user_name.github.io"
-url: ""
+url: "https://yeonuk44.github.io"
 
 # path to this site
 # if your page is located at https://your_github_user_name.github.io/blog, then set baseurl: "/blog"
@@ -119,4 +119,14 @@ sass:
 ###########################################################
 # Exclude these files or folders from production site
 ###########################################################
-exclude: ["Gemfile*", "vendor", ".github", ".vscode", "README*", "CODE_OF_CONDUCT.md", "LICENSE", "docs"]
+exclude:
+  [
+    "Gemfile*",
+    "vendor",
+    ".github",
+    ".vscode",
+    "README*",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE",
+    "docs",
+  ]
