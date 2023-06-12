@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+# gem "liquid", "> 4.0.3"
+
 # if you are using other than GitHub Pages,
 #gem "jekyll", "~> 3.9.0", group: :jekyll_plugins
 
