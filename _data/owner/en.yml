@@ -8,7 +8,7 @@ brand: "Yeonuk"
 brand_sub_text: "$site_sample"
 
 # used for seo meta post author (if it's not defined in post)
-name: "Yeonuk"
+name: "yeonuk"
 
 # home page top header texts
 home:
@@ -48,7 +48,7 @@ meta_common_description: "Your meta description."
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
-  #- github: ""
+  - github: "yeonuk44"
   #- email: ""
   #- linkedin: ""
   #- twitter: ""
