@@ -15,6 +15,7 @@
 - Magnific Popup
 - Simple-Jekyll-Search
 - Compress HTML in Jekyll
+- Guard
 
 ## Setup to run
 
