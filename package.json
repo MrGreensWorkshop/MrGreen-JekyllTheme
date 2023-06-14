@@ -1,6 +1,6 @@
 {
   "scripts": {
     "build": "bundle exec jekyll build",
-    "dev": "bundle exec jekyll serve --watch --host 0.0.0.0 --safe"
+    "dev": "concurrently \"bundle exec guard\" \"bundle exec jekyll serve --watch --host 0.0.0.0 --safe\""
   }
 }
