@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_CORS_3
-title: About CORS(3)
+lng_pair: id_About_useInfiniteQuery
+title: About useInfiniteQuery
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -9,14 +9,14 @@ author: Yeonuk
 # multiple category is not supported
 category: React
 # multiple tag entries are possible
-tags: [Browser policy]
+tags: [React Query, Hook]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-06-14 07:00:00 +0900
+date: 2023-06-15 09:30:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -40,25 +40,24 @@ date: 2023-06-14 07:00:00 +0900
 
 <!-- outline-start -->
 
-### Cross-Origin Resource Sharing(이하 CORS)에 대한 글입니다.
+### useInfiniteQuery(무한 스크롤)에 대한 글입니다.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### 출처 비교 과정
+#### 무한 스크롤이란 무엇인가
 
-어디서 어떻게 요청을 하고 응답을 하고 비교하는지 이어서 디테일하게 알아보겠습니다.
-문자와 그림을 통해 설명 해보겠습니다.
+사용자가 페이지 하단에 도달했을 때, 콘텐츠가 계속 로드되는 사용자 경험 방식입니다.
 
-##### 문자
+##### 사용처
 
-1. 클라이언트(사용자 또는 기기)에서 브라우저로 요청을 보냅니다. 이 요청은 클라이언트 측에서 JavaScript 코드나 HTML form 등을 통해 생성될 수 있습니다.
-2. 브라우저는 클라이언트의 요청을 받아서 해당 요청을 기반으로 웹 서버로 요청을 보냅니다. 이 요청은 HTTP 프로토콜을 사용하여 웹 서버에 전송됩니다.
-3. 웹 서버는 받은 요청을 처리하고, 클라이언트에게 응답을 생성합니다. 응답은 HTTP 프로토콜을 따르는 형식으로 구성되며, 데이터 또는 상태 코드 등이 포함될 수 있습니다.
-4. 브라우저는 웹 서버로부터 받은 응답을 받아들입니다.
-5. 브라우저는 응답의 출처(origin)와 현재 페이지의 출처를 비교합니다. 만약 출처가 동일한 경우, 브라우저는 응답을 표시합니다. 이는 웹 페이지의 내용, 이미지, 스크립트 등을 표시하는 것을 의미할 수 있습니다.
+주로 pagination에서 사용됩니다. 사용자의 클릭을 최소화하면서 한 번에 많은 양의 데이터를 보여주고 싶을 때, 사용하기 때문입니다.
 
-##### 그림
+- 행위에 대해 표현하는 방식이라 생각하면 쉽습니다. 일정 수의 아이템을 불러오고 버튼을 누르면 데이터 세트을 불러옵니다. 이때, 데이터가 다 불러와지면 무한 스크롤은 멈춰야 합니다. 이처럼 무한 스크롤은 옵션에 대해 사용자가 바라는 개인화가 가능합니다.
 
-![CORS Structure](:post_cors_3_pic.jpg)
+##### 사용법
+
+1. useInfiniteQuery의 속성에 queryFunction과 queryParams를 삽입합니다.
+2. queryFunction에는 무한스크롤 대상 API. 즉, 불러오고자 하는 데이터 세트를 입력합니다.
+3. queryParams에는 정해진 데이터 row 수만큼 저장시킬 변수를 입력합니다.
