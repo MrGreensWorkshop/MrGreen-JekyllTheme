@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_useInfiniteQuery
-title: About useInfiniteQuery
+lng_pair: id_About_a_tag
+title: About most common way to download files using JS in a web browser using the <a> tag
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -9,14 +9,14 @@ author: Yeonuk
 # multiple category is not supported
 category: React
 # multiple tag entries are possible
-tags: [React Query, Hook]
+tags: [JS]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-06-15 09:00:00 +0900
+date: 2023-06-16 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -40,24 +40,25 @@ date: 2023-06-15 09:00:00 +0900
 
 <!-- outline-start -->
 
-### useInfiniteQuery(무한 스크롤)에 대한 글입니다.
+### 웹 브라우저에서 JS를 사용하여 파일을 다운로드하는 가장 일반적인 방법이 <a>태그를 사용하는 것인가에 대한 글입니다.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### 무한 스크롤이란 무엇인가
+#### <a> 태그는 무엇인가에 대해 자세히 알아보았습니다.
 
-사용자가 페이지 하단에 도달했을 때, 콘텐츠가 계속 로드되는 사용자 경험 방식입니다.
+당연히 다들 어떻게 쓰는지는 알겠지만 디테일한 사항을 더 알아보았습니다.
+HTML의 <a> 태그는 웹에서 하이퍼링크를 생성하는 데 사용됩니다. 이 태그는 다양한 속성을 가지고 있으며, 이 중 href 속성은 링크의 목적지를 지정하고, download 속성은 목적지의 URL이 참조하는 리소스를 다운로드하도록 브라우저에 지시하는 역할을 합니다.
 
-##### 사용처
+##### JavaScript에서 파일 다운로드를 처리하는 가장 일반적인 방법은 무엇인가
 
-주로 pagination에서 사용됩니다. 사용자의 클릭을 최소화하면서 한 번에 많은 양의 데이터를 보여주고 싶을 때, 사용하기 때문입니다.
+일반적인 방법은 <a> 태그를 동적으로 생성하고 프로그래밍 방식으로 클릭하는 것입니다.
+왜 <a>를 사용하면 효과적일까요?
 
-- 행위에 대해 표현하는 방식이라 생각하면 쉽습니다. 일정 수의 아이템을 불러오고 버튼을 누르면 데이터 세트을 불러옵니다. 이때, 데이터가 다 불러와지면 무한 스크롤은 멈춰야 합니다. 이처럼 무한 스크롤은 옵션에 대해 사용자가 바라는 개인화가 가능합니다.
+1. 브라우저 호환성: <a> 태그는 모든 웹 브라우저에서 지원되며, download 속성 역시 대부분의 현대 브라우저에서 지원됩니다. 따라서 이 방법은 브라우저 호환성 측면에서 안정적입니다.
+2. 사용자 경험: <a> 태그를 사용하면 브라우저의 기본 다운로드 매니저를 사용하여 파일을 다운로드하게 됩니다. 이는 사용자에게 익숙한 경험을 제공하며, 다운로드의 진행 상황을 확인하거나 다운로드를 중지하고 재개하는 등의 작업을 수행할 수 있습니다.
+3. 보안: <a> 태그를 사용하면 브라우저의 보안 모델 내에서 동작하므로, 스크립트가 사용자의 파일 시스템에 직접 접근하는 것을 방지하고 사용자의 보안을 유지할 수 있습니다.
+4. 간결성: <a> 태그를 사용하면 몇 줄의 코드로 간단하게 파일 다운로드를 구현할 수 있습니다.
 
-##### 사용법
-
-1. useInfiniteQuery의 속성에 queryFunction과 queryParams를 삽입합니다.
-2. queryFunction에는 무한스크롤 대상 API. 즉, 불러오고자 하는 데이터 세트를 입력합니다.
-3. queryParams에는 정해진 데이터 row 수만큼 저장시킬 변수를 입력합니다.
+위와 같은 이유로 JavaScript에서 파일을 다운로드하는 가장 일반적인 방법은 <a> 태그를 사용하는 것이라고 할 수 있습니다.
