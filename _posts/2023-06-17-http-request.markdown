@@ -1,22 +1,22 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Context_Provider
-title: About Context Provider
+lng_pair: id_About_http_request
+title: About http request
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: React
+category: CRUD
 # multiple tag entries are possible
-tags: [Js, React]
+tags: [JS]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-06-11 07:00:00 +0900
+date: 2023-06-17 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -40,15 +40,21 @@ date: 2023-06-11 07:00:00 +0900
 
 <!-- outline-start -->
 
-### Context Provider에 대한 글입니다.
+### HTTP 요청에 대한 글입니다.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-**Provider**는 정의한 context를 하위 컴포넌트에게 전달하는 역할을 합니다.
-중첩하여 사용할 수 있고, 중첩할 경우 하위 provider 값이 우선시 됩니다.
-provider의 value state가 변화할 때마다 components는 전부 rerender가 됩니다.
+#### HTTP 요청에 대하여
 
-- Context란 무엇인가
-  - 어떤 객체를 핸들링하기 위한 접근 수단
+HTTP 요청은 HyperText Transfer Protocol 의 약어로
+
+HTTP는 웹 서버 및 웹 브라우저 상호 간의 데이터 전송을 위한 응용계층 프로토콜입니다.
+
+##### HTTP와 HTTPS의 차이는 무엇일까?
+
+HTTPS는 SSL(Secure Socket Layer) 인증서를 사용하는 HTTP입니다.
+
+SSL 인증서는 일반 HTTP 요청 및 응답을 암호화합니다. 서버와 주고받는 데이터가 암호화됩니다.
+HTTPS는 HTTP보다 안전한 프로토콜이라 할 수 있습니다.

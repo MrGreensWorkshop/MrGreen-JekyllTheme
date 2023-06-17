@@ -7,7 +7,7 @@ title: About most common way to download files using JS in a web browser using t
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: React
+category: FE
 # multiple tag entries are possible
 tags: [JS]
 # thumbnail image for post

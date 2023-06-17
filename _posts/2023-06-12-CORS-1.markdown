@@ -7,7 +7,7 @@ title: About CORS(1)
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: React
+category: CORS
 # multiple tag entries are possible
 tags: [Browser policy]
 # thumbnail image for post
@@ -16,7 +16,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-06-12 07:00:00 +0900
+date: 2023-06-12 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
