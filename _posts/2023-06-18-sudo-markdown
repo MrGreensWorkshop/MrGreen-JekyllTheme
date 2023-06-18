@@ -1,22 +1,22 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_http_request
-title: About http request
+lng_pair: id_About_sudo
+title: About sudo(1)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: CRUD
+category: OS
 # multiple tag entries are possible
-tags: [JS]
+tags: [sudo, command]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-06-17 09:00:00 +0900
+date: 2023-06-18 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -40,21 +40,21 @@ date: 2023-06-17 09:00:00 +0900
 
 <!-- outline-start -->
 
-### HTTP 요청에 대한 글입니다.
+### sudo 명령어에 대한 글입니다.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### HTTP 요청에 대하여
+#### sudo 란?
 
-HTTP 요청은 HyperText Transfer Protocol 의 약어로
+Superuser Do(이하 sudo)는 \*유닉스 계열 OS에서 관리자 권한으로 실행할 수 있게 하는 명령어 입니다.
+개인적으로 sudo는 "Superuser Do"보다 "Shut Up and Do" 라는 해석이 저는 더 받아들이기 쉽더라고용...ㅋㅋㅋ
 
-HTTP는 웹 서버 및 웹 브라우저 상호 간의 데이터 전송을 위한 응용계층 프로토콜입니다.
+##### 관리자 권한으로 실행해야 수행되는 명령들이 있습니다. 사용자가 곧 관리자라고 생각하면 될 것인데 왜 명령이 필요할까요?
 
-##### HTTP와 HTTPS의 차이는 무엇일까?
+바로 빌려주는게 더 안전하기 때문입니다. root로 로그인하는 사용자의 권한 유지 시간이 짧을 수록 안전하고 좋습니다.
 
-HTTPS는 SSL(Secure Socket Layer) 인증서를 사용하는 HTTP입니다.
+##### 다른 운영체제에서는 쓸 수 없을까요?
 
-SSL 인증서는 일반 HTTP 요청 및 응답을 암호화합니다. 서버와 주고받는 데이터가 암호화됩니다.
-HTTPS는 HTTP보다 안전한 프로토콜이라 할 수 있습니다.
+현재는 유닉스 기반 운영체제만이 sudo를 사용할 수 있는 것은 아닙니다.Windows와 MacOS에서도 사용할 수 있습니다. 왜 Window와 MacOS에서도 sudo를 통해 제어할 수 있는지도 궁금하여 sudo에 대하여 2편에서 마저 작성해보도록 하겠습니다.
