@@ -1,6 +1,6 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_sudo
+lng_pair: id_About_sudo_1
 title: About sudo(1)
 
 # post specific
