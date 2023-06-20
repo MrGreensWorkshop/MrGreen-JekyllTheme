@@ -1,0 +1,73 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_react_hooks_1
+title: About react hooks(1)
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: REACT
+# multiple tag entries are possible
+tags: [React Hooks]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-06-20 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### sudo 명령어에 대한 글입니다.
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+#### sudo 명령어는 Window와 MacOS에서도 제어할 수 있을까요?
+
+이전 sudo에 대하여 1편에서 다뤘듯 sudo는 유닉스 기반 운영체제입니다. 다른 OS에서도 왜 제어할 수 있을지 알아보겠습니다.
+
+##### Windows부터 알아보겠습니다.
+
+**일반적으로 Windows 운영체제에서 sudo 명령어를 기본적으로 지원하지 않습니다.**
+그러나 Windows 10에서는 Windows Subsystem for Linux (이하 WSL)라는 기능을 제공하고 있습니다. WSL은 리눅스 운영체제를 Windows 내에서 실행할 수 있게 해주는 기능으로, 이를 통해 사용자는 bash shell(우리가 흔히 부르는 Terminal)을 통해 리눅스 명령어를 실행할 수 있습니다. 따라서 WSL이 설치된 Windows 환경에서는 sudo 명령어를 사용할 수 있습니다.(**애뮬레이션**을 생각하시면 이해에 도움이 될 것이라 생각됩니다.)
+
+##### 다음은 MacOS입니다.
+
+MacOS의 경우 Berkeley Software Distribution(이하 BSD)를 기반으로 만들어져 있습니다. 그렇습니다. MacOS의 경우 유닉스 계열 운영체제에 속한 BSD를 기반으로 만들었기에 당연하게 유닉스 스타일의 명령어인 sudo를 사용할 수 있습니다.
+
+##### 여담
+
+###### MacOS가 BSD로 만들어진 이유가 궁금해 알아보았습니다.
+
+1. 오픈소스: 새로운 운영 체제를 개발하는 데 있어 기존의 코드를 수정하거나 추가하는 등 작업이 자유롭습니다.
+2. 성숙된 기술력: BSD는 수십 년에 걸쳐 검증되고 개선된 운영체제로, 안정성, 보안성, 성능 면에서 높은 평가를 받았습니다.
+3. POSIX 호환성: 운영 체제간의 호환성을 보장하는 일련의 표준으로 다양한 소프트웨어가 MacOS에서 실행되게 해줍니다.
+4. 커뮤니티: 오픈 소스 프로젝트로 활발한 커뮤니티가 있어, 새로운 OS 제작에 많은 도움을 받을 수 있습니다.
+
+##### 참고
+
+**애뮬레이션**: 하드웨어나 소프트웨어를 모방하여 다른 환경에서 동작하도록 하는 기술을 말합니다. 에뮬레이션은 다른 운영 체제, 장치 또는 소프트웨어와의 호환성을 제공하거나, 시스템의 동작을 테스트하거나, 예전에 사용되던 기술을 현대적인 환경에서 재현하는 등 다양한 목적으로 사용됩니다.
