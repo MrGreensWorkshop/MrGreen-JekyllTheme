@@ -1,22 +1,22 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Package Manager
-title: About package manager
+lng_pair: id_About_Image_Compression_1
+title: About image compression(1)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: Package Manager
+category: Image Compression
 # multiple tag entries are possible
-tags: [yarn, npm]
+tags: [image compression]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-06-21 09:00:00 +0900
+date: 2023-06-22 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -40,7 +40,7 @@ date: 2023-06-21 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Package Manager에 대한 글입니다.(w. npm & yarn)
+### Image Compression에 대한 글입니다.
 
 {:data-align="center"}
 
@@ -48,26 +48,21 @@ date: 2023-06-21 09:00:00 +0900
 
 #### Package Manager
 
-우리는 프로젝트를 진행하며 패키지 관리자를 통해 애플리케이션을 개발하고 배포합니다.
-그러나 프로젝트에 따라 npm 혹은 yarn을 채택하는데 문득 명확한 차이점이 뭘까 궁금해져 알아보았습니다.
+예를들어 서비스에 사용된 이미지와 앞으로 업로드될 이미지에 대해 압축을 본 서비스에 적용한다고 가정해보겠습니다.
 
-##### NPM(Node Package Manager) 이란?
+##### 이상적인 설계란?
 
-**npm은 Node.js 생태계의 공식 패키지 관리자입니다.**
+제가 생각하는 이상적인 설계란 다음과 같습니다.
 
-- Node.js 애플리케이션을 개발하고 배포하는 데 주로 사용됩니다.
-- JavaScript 프로젝트에서 의존성 관리, 패키지 설치, 스크립트 실행 등 다양한 작업을 처리할 수 있습니다.
-- Node.js를 설치할 때 함께 제공되는 기본 패키지 관리자입니다.
+1. 내가 사용하는 프로젝트 구조 파악
+2. 관련 라이브러리 선행 조사
+3. 프로젝트에 맞는 라이브러리 선별
+4. 라이브러리 테스트 후, 각각 최대 용량 몇까지 요구 사항인 20MB로 줄일 수 있는지 조사
+5. 현재 아들러 제품에 만들어진 아톰 속 이미지의 평균 용량 체크
+6. 적용 가능한 라이브러리 선별 후, 테스트
+7. 기존 업로드된 이미지 압축
+8. 앞으로 업로드될 이미지에 대해 압축
 
-##### Yarn 이란?
-
-**yarn은 Facebook에서 개발한 패키지 관리자입니다.**
-
-- npm에 비해 빠른 패키지 설치 및 의존성 해결 속도를 제공합니다.
-- 패키지 설치 과정에서 캐싱 기능을 사용하여 중복 다운로드를 최소화하고, 보다 일관된 의존성 해결 방식을 사용합니다.
-- 멀티 프로젝트 레포지토리에서 의존성을 효율적으로 관리할 수 있는 기능을 제공합니다.
-
-##### 나의 결론
-
-npm은 JavaScript 프로젝트의 기본적인 패키지 관리를 위해 사용되며, yarn은 npm보다 더 빠른 의존성 관리와 패키지 설치를 원하는 개발자들에게 선호될 수 있습니다.
-기본이 되는 것을 사용할지, 기능적인 측면에서 접근할지 결정 후, 프로젝트 도입에 적용하면 좋을 것으로 생각됩니다.
+**이미지 압축은 어디서 진행되는게 좋은가?**
+실제로 적용해보기 전에 일반적으로 이미지 압축을 어느 파트(클라이언트 혹은 서버)에서 수행하는게 좋을지 고민되어 알아보았습니다.
+자세한 사항은 2편에서 다루도록 하겠습니다.
