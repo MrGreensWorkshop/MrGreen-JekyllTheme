@@ -7,16 +7,16 @@ title: About parameter & argument
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: Edge function
+category: Concept
 # multiple tag entries are possible
-tags: [edge function]
+tags: [parameter, argument]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-06-24 09:00:00 +0900
+date: 2023-06-25 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -40,37 +40,24 @@ date: 2023-06-24 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Edge function에 대한 글입니다.
+### 파라미터와 인자에 대한 글입니다.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### Edge function이란?
+개발자로 업무에 임하게 되면 파라미터와 인자에 대해 수없이 많은 글과 얘기를 하게 됩니다.
 
-Edge function은 클라우드 환경에서 실행되는 서버리스 컴퓨팅 기능입니다. 일반적으로 웹 애플리케이션 또는 API와 같은 클라우드 서비스의 일부로 사용됩니다.
+파라미터와 인자는 그만큼 많이 쓰이지만 저 같은 경우 같은 의미로 사용하기도 했는데요.
+정확한 의미를 알고보니 구분되는 용어였습니다.
 
-제 회사에서 사용하고 있는 Vercel과 NextJS를 중심으로 설명하겠습니다.
+#### 파라미터(Parameters)란 무엇인가?
 
-##### Vercel
+파라미터는 함수나 메서드의 정의 부분에서 사용되는 변수를 가리킵니다.
+함수나 메서드를 정의할 때 파라미터를 선언하고, 해당 파라미터는 함수나 메서드 내에서 사용되는 값들을 받아들이는 역할을 합니다.
+**즉, 파라미터는 함수나 메서드의 입력으로 사용되며, 함수가 호출될 때 값을 전달받을 수 있습니다.**
 
-###### Vercel 이란?
+#### 그렇다면 인자(Arguments)란 무엇일까요?
 
-Vercel은 정적 웹사이트 및 싱글 페이지 애플리케이션(SPA)을 위한 서버리스 플랫폼입니다. Vercel의 애즈펑션(AS Function)은 이 플랫폼에서 제공하는 서버리스 함수(Serverless Functions)의 한 형태입니다.
-
-###### Vercel Edge function
-
-클라우드 환경에서 실행되는 작은 코드 조각으로, 특정 HTTP 요청에 대한 응답을 생성하고 처리하는 데 사용됩니다. 이는 서버리스 아키텍처의 핵심 개념 중 하나인 함수 계산(Function-as-a-Service, FaaS)의 구현 방식입니다.
-
-Vercel의 다른 기능과 통합하여 사용할 수 있으며, 정적 웹사이트와 함께 호스팅되는 애플리케이션의 전체 기능을 개발하고 배포하는 데 사용될 수 있습니다.
-
-##### NextJS
-
-###### NextJS 이란?
-
-React 기반의 프레임워크로서, SSR(Server-Side Rendering), 정적 사이트 생성(Static Site Generation), 클라이언트 사이드 라우팅 등을 지원합니다. Next.js에서 애즈펑션은 서버리스 함수를 사용하여 백엔드 로직을 구현하고 실행할 수 있는 기능입니다.
-
-###### NextJS Edge function
-
-API 라우트를 생성하는 방식으로 구현됩니다. .js 또는 .ts 확장자를 가진 파일을 생성하고, 해당 파일 내에서 API 엔드포인트의 로직을 작성합니다. 이 파일은 Next.js 애플리케이션과 함께 빌드되며, 생성된 API 엔드포인트는 클라이언트나 다른 부분에서 호출할 수 있습니다.
-더하여 Next.js 애플리케이션 내에서 백엔드 로직을 구현하고, 데이터베이스와의 상호 작용, 외부 API 호출, 인증 및 인가, 파일 업로드 등의 작업을 수행할 수 있습니다. 이를 통해 Next.js 애플리케이션은 클라이언트와 서버 사이의 완전한 통합을 제공하며, 다양한 종류의 데이터 요청을 처리할 수 있습니다.
+인자는 함수를 호출할 때 전달되는 값들을 가리킵니다. 함수를 호출할 때 인자는 함수에 전달되어 파라미터에 할당됩니다.
+**즉, 인자는 함수나 메서드를 호출할 때 함수의 기대되는 파라미터의 값을 전달하는 방법입니다.**
