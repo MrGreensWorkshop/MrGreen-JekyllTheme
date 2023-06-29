@@ -1,0 +1,77 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Fast_API
+title: About Fast API
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Server
+# multiple tag entries are possible
+tags: [server, api]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-06-28 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### Fast API란 무엇인가
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+이번엔 Python 기반 웹 API 개발에 사용되는 프레임 워크인 Fast API에 대해 알아보도록 하겠습니다.
+
+알아보기 전에 Python으로 서버를 개발하는 것이 일반적인지 궁금하여 알아보았습니다. 제가 아는 서버 개발자들은 Java를 기반으로 하는 Spring을 주로 사용했기 때문입니다.
+
+#### 웹 개발에 가장 많이 사용되는 상위 5개 언어
+
+2021년 Stack Overflow의 개발자 설문조사 결과를 기준으로, 그에 따른 점유율
+
+1. JavaScript: 67.8%
+2. HTML/CSS: 63.1%
+3. SQL: 56.5%
+4. Python: 50.7%
+5. Java: 39.7%
+
+위 순위와 점유율은 개발자들이 웹 개발에 가장 많이 사용하는 언어를 기준으로 한 것입니다. 주의할 점은 각 언어의 점유율은 합이 100%가 아니며, 여러 언어를 혼합해서 사용하는 경우가 많기 때문에 겹치는 부분이 있을 수 있습니다.
+
+이처럼 Python으로 웹 개발을 하는 사람은 Java 사용자보다 많음을 단편적으로 알 수 있었습니다!
+
+그럼 이제 많은 사람이 Python을 사용하는 것을 알았으니 이를 기반으로 하는 **웹 프레임워크 Fast API**에 대해 알아보도록 하겠습니다.
+
+#### Fast API 개념
+
+FastAPI는 현대적인 Python 웹 개발을 위해 설계되었으며, 타입 힌트(Type Hints)와 같은 Python 3.6 이상의 기능을 활용하여 효율적인 개발을 할 수 있습니다.
+타입 힌트를 사용하면 개발자는 코드를 더 명확하게 작성할 수 있고, IDE의 자동완성 기능을 활용하여 더 빠르게 개발할 수 있습니다.
+
+#### 특징
+
+FastAPI는 Python 기반의 웹 프레임워크로, 빠른 속도와 간편한 개발 경험을 제공하는 것이 특징입니다.
+또한, FastAPI는 Swagger와 같은 API 문서 자동 생성 기능을 제공하여 API의 사용 방법과 데이터 모델을 쉽게 확인할 수 있고, Pydantic 라이브러리를 사용하여 데이터 유효성 검사와 직렬화 등의 작업을 편리하게 처리할 수 있습니다.
