@@ -15,7 +15,8 @@ source "https://rubygems.org"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # all supported plugins by GitHub Pages are included in "github-pages". (GitHub Pages doesn't support 3rd party plugins)
 
-gem "github-pages", "~> 227"
+# gem "github-pages", "~> 227"
+gem 'github-pages', group: :jekyll_plugins
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
