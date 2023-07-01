@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_db_separation
-title: About db separation
+title: About db separation(1)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
