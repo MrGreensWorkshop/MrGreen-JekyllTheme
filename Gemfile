@@ -31,4 +31,7 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 # HTTP server for local tests
 gem "webrick", "~> 1.7"
 
-
+# Detects changes in the file system and runs a build script to reflect the changes. like dynamic application, React
+# TODO: because of build is slow, I want to use guard-jekyll-plus
+# gem 'guard-jekyll-plus'
+# gem 'guard'
