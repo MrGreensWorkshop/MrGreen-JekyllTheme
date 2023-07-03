@@ -1,0 +1,64 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Parser
+title: About parser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Module
+# multiple tag entries are possible
+tags: [module, software]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-03 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### Parser란?
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+이번에 게시물 생성 시간에 따른 텍스트 노출 기능을 구현하던 중(정확히는 수정된 게시물에 대해서 생성 시간 옆에 트리거 텍스트를 구현하는 일이였습니다)
+Parser라는 함수를 다루게 되어 알아보고, 알게된 정보를 공유하고자 합니다.
+
+#### 개념
+
+Parser는 주어진 입력 데이터를 분석하여 의미 있는 구성 요소로 분리하는 소프트웨어 도구나 모듈을 말합니다.
+Parser는 일련의 문자열 또는 토큰을 입력으로 받아 문법 규칙에 따라 분석하고, 그 결과를 트리 또는 추상 구문 표현으로 변환합니다.
+
+#### 주 사용처
+
+컴파일러, 인터프리터, 데이터베이스 쿼리 처리기, 마크업 언어 처리기 등과 같은 프로그램에서 사용됩니다.
+이러한 프로그램은 특정 문법 규칙에 따라 입력을 분석하고, 그에 맞게 토큰화하거나 구문 트리를 생성하여 의미를 해석하거나 실행합니다.
+
+#### 결론
+
+프로그램은 입력 데이터를 효과적으로 처리하고, 데이터의 의미를 이해하거나 실행할 수 있습니다.
