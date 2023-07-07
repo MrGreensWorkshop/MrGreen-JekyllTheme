@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Design-Pattern
-title: About Design Pattern
+lng_pair: id_About_Design-Pattern-Creational-1
+title: About Design Pattern Creational(1)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -9,7 +9,7 @@ author: Yeonuk
 # multiple category is not supported
 category: Architecture
 # multiple tag entries are possible
-tags: [architecture]
+tags: [architecture, software]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
