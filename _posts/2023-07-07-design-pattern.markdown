@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Design-Pattern
-title: About Design Pattern
+lng_pair: id_About_Design-Pattern-Creational-1
+title: About Design Pattern Creational(1)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -46,8 +46,7 @@ date: 2023-07-07 09:00:00 +0900
 
 <!-- outline-end -->
 
-이번에 회사에서 업무 처리 방침 과정을 개편하며 1주일간 학습 기간을 받게 되었습니다.
-이에 따라 팀장님의 추천대로 디자인 패턴에 대한 학습을 선행적으로 수행할 예정입니다.
+이번에 개발팀에서 서브 모듈을 개발하고 프로젝트에 적용하신 분이 있는데 서브 모듈이 정확히 어떤 개념인지 알고 넘어가고자 확인 후 정리한 글입니다.
 
 #### 서브모듈이란?
 
