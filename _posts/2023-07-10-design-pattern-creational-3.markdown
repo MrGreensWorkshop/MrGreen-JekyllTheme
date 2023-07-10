@@ -51,56 +51,66 @@ date: 2023-07-10 09:00:00 +0900
 
 이번 글에선 생성 패턴 중 추상 팩토리(Abstract Factory) 패턴에 대해 학습하도록 하겠습니다.
 
-#### 팩토리(Factory) 패턴이란?
+#### 추상 팩토리(Abstract Factory) 패턴이란?
 
-객체 생성을 담당하는 별도의 팩토리 클래스를 도입하여 객체 생성 과정을 캡슐화하고 유연성을 제공하는 기법입니다.
+이를 설명하기에 앞서 팩토리 패턴의 개념을 알고 넘어가야 하는데요. 팩토리 패턴에서는 하나의 하나의 팩토리 클래스가 인자 값에 따라 조건문을 사용해 다양한 서브 클래스를 리턴하는 형식이였습니다.
 
-#### 캡슐화란?
-
-객체 내부 구현을 외부로부터 숨겨 오로지 외부에서 제공되는 인터페이스를 통해 객체와 상호작용할 수 있도록 합니다. 이를 통해 객체의 상태와 동작을 보호하고, 외부에서의 잘못된 접근에 대해 객체를 보호할 수 있습니다. 객체는 오직 메서드를 통해 데이터를 조작하고 상태를 변경할 수 있습니다.
+추상 팩토리 패턴에서는 팩토리 클래스에서 서브 클래스를 생성하는 데에 있어 조건문을 제외합니다.
 
 TS(Type Script)로 팩토리 패턴을 적용하는 예시를 보여드릴까합니다.
 
 #### 예시
 
 ```javascript
-// 인터페이스: 생성될 객체들이 구현해야 하는 메서드를 정의합니다.
-interface Product {
-  operation(): void;
+// 추상 팩토리 인터페이스
+interface AbstractFactory {
+  createProduct(): Product;
 }
 
-// 구체적인 객체 클래스: 인터페이스를 구현한 구체적인 객체들입니다.
-class ConcreteProductA implements Product {
-  operation(): void {
-    console.log("ConcreteProductA operation");
+// WindowsFactory 클래스
+export class WindowsFactory implements AbstractFactory {
+  createProduct(): Product {
+    return new WindowsProduct();
   }
 }
 
-class ConcreteProductB implements Product {
-  operation(): void {
-    console.log("ConcreteProductB operation");
+// MacFactory 클래스
+export class MacFactory implements AbstractFactory {
+  createProduct(): Product {
+    return new MacButton();
   }
 }
 
-// 팩토리 클래스: 객체를 생성하고 반환하는 역할을 합니다.
-class Factory {
-  createProduct(type: string): Product {
-    if (type === "A") {
-      return new ConcreteProductA();
-    } else if (type === "B") {
-      return new ConcreteProductB();
-    } else {
-      throw new Error("Invalid product type");
-    }
+// 추상 제품 클래스
+abstract class Product {
+  abstract operation(): string;
+}
+
+// WindowsFactory의 제품 클래스
+class WindowsProduct extends Product {
+  operation(): string {
+    return "Rendering a Windows Product";
+  }
+}
+
+// MacFactory의 제품 클래스
+class MacButton extends Product {
+  operation(): string {
+    return "Rendering a Mac Product ";
   }
 }
 
 // 클라이언트 코드
-const factory = new Factory();
+function createUI(factory: AbstractFactory) {
+  const button = factory.createProduct();
 
-const productA = factory.createProduct("A");
-productA.operation(); // Output: ConcreteProductA operation
+  button.operation();
+}
 
-const productB = factory.createProduct("B");
-productB.operation(); // Output: ConcreteProductB operation
+// 사용 예시
+const windowsFactory = new WindowsFactory();
+createUI(windowsFactory);
+
+const macFactory = new MacFactory();
+createUI(macFactory);
 ```
