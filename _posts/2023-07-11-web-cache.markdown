@@ -40,77 +40,47 @@ date: 2023-07-11 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 디자인 패턴, 생성 패턴(3)
+### Web Cache에 대하여
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-지난 글에선 팩토리 패턴에 대해서 알아보았습니다.
-이번에도 한 줄로 설명하자면 객체 생성을 담당하는 별도의 팩토리 클래스를 도입해, 객체 생성 과정을 캡슐화하고 유연성을 제공하는 기법이였습니다.
+FrontEnd 파트 쪽 일을 하게 되면 Web Cache에 대하여 비교적 자주 접할 수 있습니다.
+이번 시간에 알아보도록 하겠습니다.
 
-이번 글에선 생성 패턴 중 추상 팩토리(Abstract Factory) 패턴에 대해 학습하도록 하겠습니다.
+#### 웹 캐시란 무엇인가
 
-#### 추상 팩토리(Abstract Factory) 패턴이란?
+인터넷에서 웹 페이지나 파일을 임시로 저장하는 시스템입니다.
+웹 캐시는 사용자가 웹 페이지에 접속할 때 해당 페이지의 복사본을 저장하고, 이후에 같은 페이지에 접속할 때 웹 서버에 직접 요청하는 대신에 캐시에서 페이지를 가져옵니다.
+이를 통해 사용자의 경험을 향상시키고 네트워크 트래픽을 줄이는 데 도움을 줍니다.
 
-이를 설명하기에 앞서 팩토리 패턴의 개념을 알고 넘어가야 하는데요. 팩토리 패턴에서는 하나의 하나의 팩토리 클래스가 인자 값에 따라 조건문을 사용해 다양한 서브 클래스를 리턴하는 형식이였습니다.
+그럼 궁금해집니다. 사용자가 웹페이지에 접속할 때 해당 페이지의 복사본을 저장한다면 어디에 저장할까요?
 
-추상 팩토리 패턴에서는 팩토리 클래스에서 서브 클래스를 생성하는 데에 있어 조건문을 제외합니다.
+#### 웹 캐시는 어디에 저장되는가
 
-TS(Type Script)로 팩토리 패턴을 적용하는 예시를 보여드릴까합니다.
+우선 웹 캐시는 다양한 형태로 구현될 수 있습니다.
+주요한 형태로는 사용자의 웹 브라우저 내부에 있는 개인 캐시(Private Cache), 중개 서버에 위치한 공용 캐시(Shared Cache), 그리고 콘텐츠 전송 네트워크(CDN)의 캐시 등이 있습니다.
 
-#### 예시
+몇 개는 알겠는데 중개 서버에 위치한 공용 캐시(Shared Cache)는 무엇일까요? 간단히 알아보았습니다.
 
-```javascript
-// 추상 팩토리 인터페이스
-interface AbstractFactory {
-  createProduct(): Product;
-}
+#### 중개 서버에 위치한 공용 캐시(Shared Cache)란
 
-// WindowsFactory 클래스
-export class WindowsFactory implements AbstractFactory {
-  createProduct(): Product {
-    return new WindowsProduct();
-  }
-}
+여러 사용자 또는 클라이언트가 공유하는 캐시 시스템입니다.
+이러한 캐시는 중개 서버(또는 프록시 서버)에 설치되어 있으며, 이 서버는 사용자의 요청을 받아들이고 해당 요청에 대한 응답을 반환합니다.
+그러나 요청된 리소스의 복사본이 캐시에 이미 저장되어 있는 경우, 중개 서버는 웹 서버에 직접 요청하지 않고 캐시에서 해당 리소스를 가져와 클라이언트에게 제공합니다.
 
-// MacFactory 클래스
-export class MacFactory implements AbstractFactory {
-  createProduct(): Product {
-    return new MacButton();
-  }
-}
+#### 공용 캐시 장점
 
-// 추상 제품 클래스
-abstract class Product {
-  abstract operation(): string;
-}
+공용 캐시는 네트워크 트래픽을 줄이고 웹 서버의 부하를 경감시키는 데 도움을 줍니다.
+여러 사용자가 동일한 리소스에 접근하는 경우, 중개 서버의 공용 캐시는 처음 요청된 리소스의 복사본을 저장하여 이후 동일한 리소스에 대한 요청에 대해 빠른 응답을 제공합니다.
+이를 통해 네트워크 대역폭을 절약하고 전체적인 웹 성능을 향상시킬 수 있습니다.
 
-// WindowsFactory의 제품 클래스
-class WindowsProduct extends Product {
-  operation(): string {
-    return "Rendering a Windows Product";
-  }
-}
+다시 돌아와 웹 캐시의 이점에 대해 알아보겠습니다.
 
-// MacFactory의 제품 클래스
-class MacButton extends Product {
-  operation(): string {
-    return "Rendering a Mac Product ";
-  }
-}
+#### 웹 캐시 장점
 
-// 클라이언트 코드
-function createUI(factory: AbstractFactory) {
-  const button = factory.createProduct();
-
-  button.operation();
-}
-
-// 사용 예시
-const windowsFactory = new WindowsFactory();
-createUI(windowsFactory);
-
-const macFactory = new MacFactory();
-createUI(macFactory);
-```
+- 대역폭 절약: 웹 캐시는 이미 다운로드된 리소스를 재사용하므로 네트워크 대역폭을 절약합니다.
+- 응답 시간 개선: 웹 캐시는 웹 페이지의 복사본을 로컬에 저장하므로 웹 서버에 대한 요청이 줄어들어 응답 시간이 단축될 수 있습니다.
+- 트래픽 감소: 웹 캐시는 중개 서버에서 웹 페이지의 복사본을 제공하므로 웹 서버의 부하를 줄이고 전체 트래픽을 감소시킵니다.
+- 사용자 경험 향상: 웹 캐시는 웹 페이지를 로컬에서 제공하므로 더 빠른 페이지 로딩과 더 부드러운 사용자 경험을 제공할 수 있습니다.
