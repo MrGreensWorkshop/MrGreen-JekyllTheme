@@ -1,0 +1,58 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_ES(ECMAScript)
+title: About ES(ECMAScript)
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Javascript
+# multiple tag entries are possible
+tags: [javascript]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-13 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### ES(ECMAScript)에 대하여
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+개발을 하며 ES에 대해서는 들어봤어도 ECMAScript에 대해서는 다소 생소한 개념이여서 알아보았습니다.
+
+#### ECMA(European Computer Manufacturers Association)이란?
+
+ES는 ECMAScript의 줄임말입니다. 정보 통신 시스템을 위한 국제 표준화 기구입니다. 간단히 말하면 스크립트 언어 규격을 뜻합니다.
+ECMA 규격에는 JS 뿐만 아니라 파일 시스템, 아스키 코드, C언어들, JSON 등 많은 것들을 포함하고 있습니다.
+
+#### ECMAScript와 JS의 관계
+
+현재 대부분의 브라우저는 ES5를 지원하고 있습니다. 2015년 버전인 ES6까지도 상당수 지원하고 있습니다. ES6의 익숙한 문법으로는 화살표 함수와 let, const 변수 사용 등이 있습니다.
+JS는 ECMAScript의 표준 사양을 준수하는 스크립트 언어입니다.
