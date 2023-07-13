@@ -1,0 +1,77 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_ES(ECMAScript)
+title: About ES(ECMAScript)
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Architecture
+# multiple tag entries are possible
+tags: [architecture]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-13 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### DNS에 대하여
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+개발을 하다보면 DNS라는 개념이 자주 나옵니다.
+어떤 의미인지 짐작은 되지만 어떤 약어이고, 어떤 의미를 내포하는지 정확하게 알아봅시다!
+
+#### 개념
+
+DNS는 Domain Name System의 약자로, 인터넷에서 사용되는 도메인 이름을 IP 주소로 변환하는 시스템입니다.
+인터넷에 연결된 장치들은 IP 주소를 사용하여 서로 통신합니다. 하지만 사람들이 일련의 숫자로 된 IP 주소를 기억하기는 어렵기 때문에, 도메인 이름이라는 의미있는 문자열로 웹사이트나 네트워크 서비스를 식별합니다.
+
+#### 예시
+
+사용자가 도메인 이름을 입력하면 해당 도메인 이름을 해당하는 IP 주소로 변환하여 컴퓨터와 네트워크 간의 통신을 가능하게 합니다.
+예를 들어, 사용자가 "www.example.com"을 웹 브라우저에 입력하면, DNS는 해당 도메인 이름을 IP 주소로 변환하여 요청을 전송합니다.
+그러면 서버는 해당 IP 주소로부터 요청을 받아들이고, 사용자의 브라우저에 웹 페이지를 전송하여 표시합니다.
+
+#### 역할
+
+DNS는 도메인 이름에 연결된 이메일 서버, FTP 서버, VoIP 서버 등과 같은 다양한 네트워크 서비스의 위치도 알려줍니다.
+DNS는 전 세계적으로 분산된 DNS 서버 네트워크로 구성되어 있으며, 도메인 이름과 IP 주소의 매핑 정보를 관리하고 전달하는 역할을 담당합니다.
+
+FTP, VoIP등 다소 생소할 수 있는 개념도 나왔는데 함께 알아보곘습니다.
+
+#### FTP란?
+
+FTP는 "File Transfer Protocol"의 약어로, 컴퓨터 네트워크를 통해 파일을 전송하기 위해 사용되는 프로토콜입니다.
+FTP는 클라이언트와 서버 간의 파일 전송을 지원하며, 일반적으로 웹 개발자, 시스템 관리자 등이 파일 업로드, 다운로드, 삭제, 이동 등의 작업을 수행하는 데에 이용됩니다.
+
+#### VoIP란?
+
+VoIP는 "Voice over Internet Protocol"의 약어로, 인터넷 프로토콜을 통해 음성 통화를 전송하는 기술을 말합니다.
+기존의 전화 통신 방식과 달리 전화 통화를 아날로그 신호로 전달하는 것이 아니라 디지털 데이터 패킷으로 변환하여 인터넷을 통해 전송합니다.
