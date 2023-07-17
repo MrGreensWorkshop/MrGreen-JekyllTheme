@@ -1,0 +1,81 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Bundler(2)
+title: About Bundler(2)
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Network
+# multiple tag entries are possible
+tags: [network, javascript]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-17 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### Bundler에 대하여(2)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+이전 글에서 번들러에 대한 개념과 역할에 대해 알아보았습니다.
+이어서 JS의 주요 모듈 번들러인 Webpack과 함께 자주 쓰이는 babel에 대해 알아보겠습니다.
+
+Webpack과 Babel은 웹 개발에서 함께 사용되는 도구로, 각자의 역할과 기능이 있습니다.
+먼저 Webpack부터 알아보겠습니다.
+
+#### Webpack이란 무엇인가
+
+Webpack은 모듈 번들러로, 여러 개의 모듈 및 리소스 파일을 하나의 번들로 묶어서 처리하는 역할을 합니다.
+웹 애플리케이션 개발에서 자바스크립트, CSS, 이미지 등 다양한 종류의 모듈을 처리할 수 있습니다. 모듈 간의 의존성을 파악하고 필요한 모듈을 로드하여 번들로 묶어줍니다.
+개발 환경과 프로덕션 환경에서 다양한 설정을 지원하여 개발과 배포 과정을 간소화하고 최적화할 수 있습니다.
+
+다음은 Babel을 알아보겠습니다.
+
+#### Babel이란 무엇인가
+
+자바스크립트의 트랜스파일러로, ES6 이상의 문법을 이전 버전의 JavaScript로 변환하는 역할을 합니다.
+최신 자바스크립트 문법을 사용하여 코드를 작성할 수 있게 해줍니다.
+새로운 문법을 이전 버전과 호환되는 코드로 변환하여 오래된 브라우저에서도 실행할 수 있게 합니다.
+플러그인과 프리셋을 사용하여 다양한 변환 규칙을 적용할 수 있습니다.
+
+Webpack과 Babel의 개념과 역할을 알았습니다. 그럼 이제 왜 함께 사용하는지도 궁금해집니다.
+
+#### 왜 Webpack과 Babel을 함께 사용하는가
+
+1. 모듈 번들링과 트랜스파일링: Webpack은 모듈 번들링을 수행하고, Babel은 ES6+ 코드를 이전 버전의 JavaScript로 변환합니다. 이 두 도구를 함께 사용하면 모듈화된 자바스크립트 코드를 번들로 묶고, 최신 문법을 지원하지 않는 환경에서도 실행 가능한 코드로 변환할 수 있습니다.
+2. 확장성과 커스터마이징: Webpack과 Babel은 각각 플러그인과 로더, 그리고 프리셋을 통해 확장성과 커스터마이징을 지원합니다. Webpack의 로더를 사용하여 Babel을 연동하면, Babel을 통해 ES6+ 코드를 변환할 수 있습니다. 이를 통해 더 많은 변환 작업을 수행하거나 다른 도구와의 통합도 가능해집니다.
+3. 개발 생산성과 성능 최적화: Webpack은 개발 서버, HMR(Hot Module Replacement) 등의 기능을 제공하여 개발 과정을 간소화하고 빠른 반응 속도를 제공합니다. Babel은 코드 변환을 통해 개발자가 최신 문법을 사용하여 개발할 수 있게 해줍니다. 이는 개발 생산성과 애플리케이션 성능 향상에 도움을 줄 수 있습니다.
+
+#### 결론
+
+즉, Webpack과 Babel은 모듈 번들링과 트랜스파일링을 위해 함께 사용되는 도구입니다.
+Webpack은 모듈의 로드 및 번들링을 관리하고, Babel은 최신 자바스크립트 문법을 이전 버전으로 변환합니다.
+이를 통해 모듈화된 코드를 효율적으로 관리하고, 호환성 있는 코드를 생성할 수 있습니다.
