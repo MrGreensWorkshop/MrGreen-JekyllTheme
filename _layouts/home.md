@@ -36,8 +36,7 @@ layout: default
     </div>
   </div>
   <div class="home-intro-text markdown-style">
-    <!-- {{ content }} -->
-    <p>알게된 것을 기록하는 블로그입니다.</p>
+    {{ content }}
   </div>
 </div>
 
