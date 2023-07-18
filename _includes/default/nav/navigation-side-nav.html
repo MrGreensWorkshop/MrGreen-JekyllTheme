@@ -1,50 +1,59 @@
-{%-comment-%}
-  Mr. Green Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
-  Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
-  Licensed under MIT
+{%-comment-%} Mr. Green Jekyll Theme
+(https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme) Copyright (c) 2022 Mr.
+Green's Workshop https://www.MrGreensWorkshop.com Licensed under MIT
 {%-endcomment-%}
 
 <nav id="side-nav-container">
   <div class="side-nav">
     <div class="side-nav-brand">
-      {% include multi_lng/get-page-by-layout.liquid layout = 'home' -%}
-      {% if site.data.conf.main.side_nav_profile_img_path -%}
-        <img src="{{ site.baseurl }}{{ site.data.conf.main.side_nav_profile_img_path }}" alt="">
+      {% include multi_lng/get-page-by-layout.liquid layout = 'home' -%} {% if
+      site.data.conf.main.side_nav_profile_img_path -%}
+      <img
+        src="{{ site.baseurl }}{{ site.data.conf.main.side_nav_profile_img_path }}"
+        alt=""
+      />
       {% endif -%}
       <div class="brand-holder">
         {% if site.data.conf.main.side_nav_brand_text_enable -%}
-          <a href="{{ site.baseurl }}{{ layout_page_obj.url }}" translate="no">{{ site.data.owner[lng].brand }}</a>
+        <a href="{{ site.baseurl }}{{ layout_page_obj.url }}" translate="no"
+          >{{ site.data.owner[lng].brand }}</a
+        >
         {% endif -%}
       </div>
-      <p>&nbsp;{{ site.data.owner[lng].brand_sub_text | replace: site.data.conf.main.sample_replace, site.data.lang[lng].constants.sample }}</p>
-      <br>
-      {%- if site.data.lang.size > 1 and site.data.conf.main.language_switch_lang_list.size > 1 %}
-        {% include default/nav/lang-switch.html -%}
-      {% endif %}
+      <p>
+        &nbsp;{{ site.data.owner[lng].brand_sub_text | replace:
+        site.data.conf.main.sample_replace, site.data.lang[lng].constants.sample
+        }}
+      </p>
+      <br />
+      {%- if site.data.lang.size > 1 and
+      site.data.conf.main.language_switch_lang_list.size > 1 %} {% include
+      default/nav/lang-switch.html -%} {% endif %}
     </div>
-    <br>
-    {% if site.data.conf.main.side_nav_toggle_button_no_top_nav_buttons and site.data.conf.main.side_nav_toggle_close_button -%}
-      <a href="javascript:void(0);" class="side-nav-close">
-        <i class="fa fa-angle-double-left fa-2x" aria-hidden="true"></i>
-      </a>
+    <br />
+    {% if site.data.conf.main.side_nav_toggle_button_no_top_nav_buttons and
+    site.data.conf.main.side_nav_toggle_close_button -%}
+    <a href="javascript:void(0);" class="side-nav-close">
+      <i class="fa fa-angle-double-left fa-2x" aria-hidden="true"></i>
+    </a>
     {% endif -%}
-    <hr>
-    <br>
+    <hr />
+    <br />
     <div class="side-nav-buttons">
       <ul class="nav nav-pills nav-stacked">
-        {% include default/nav/navigation-buttons.html effect = site.data.conf.main.side_nav_buttons_hover_effect -%}
+        {% include default/nav/navigation-buttons.html effect =
+        site.data.conf.main.side_nav_buttons_hover_effect -%}
       </ul>
     </div>
-    <br>
-    <br>
-    {%- if site.data.conf.main.contacts and site.data.owner[lng].contacts.size > 0 -%}
-      {% include default/nav/contact-links.html -%}
-    {% endif %}
-    <hr id="toc-view-top">
+    <br />
+    <br />
+    {%- if site.data.conf.main.contacts and site.data.owner[lng].contacts.size >
+    0 -%} {% include default/nav/contact-links.html -%} {% endif %}
+    <hr id="toc-view-top" />
     <div class="side-nav-footer" translate="no">
-      {%- if site.data.conf.main.side_nav_footer %}
-        {%- include default/copyright-text.liquid %}
-        <p>{{ copyright_text_out }}</p>
+      {%- if site.data.conf.main.side_nav_footer %} {%- include
+      default/copyright-text.liquid %}
+      <p>{{ copyright_text_out }}</p>
       {% endif -%}
     </div>
   </div>
