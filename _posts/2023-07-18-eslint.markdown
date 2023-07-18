@@ -1,21 +1,21 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Data_Buffer
-title: About Data Buffer
+lng_pair: id_About_ES_Lint
+title: About ESLint
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: Structure
+category: Formatting
 # multiple tag entries are possible
-tags: [structure, module]
+tags: [formatting, plugin]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-07-17 09:00:00 +0900
+date: 2023-07-18 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -39,38 +39,42 @@ date: 2023-07-17 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 버퍼에 대하여
+### ESLint 대하여
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-어느 날, 개발 동료에게 버퍼가 뭐냐는 질문을 받았습니다.
-어디서 많이 들어본 단어임에도 제대로 알지 못하고 있었다는 것을 느끼고 학습 후, 글을 작성했습니다.
+이번에 저희 회사에선 프로젝트에 Eslint 관련 규칙을 강하게 잡는 것을 목표로 eslintrc.json 파일의 설정을 수정하고 관련하여 코드 포맷팅을 진행하고 있습니다.
 
-우선 버퍼란 무엇일까요?
+포맷팅을 하는 과정에서 알게된 바가 있어 이를 여러분과 공유하고 알아보도록 하겠습니다.
+우선 저희 팀의 프로젝트에 대한 설명이 필요합니다. 저희 프로젝트에는 원래 약한 단계의 eslint 설정이 되어있었고, 이에 따라 프로젝트의 의존성에 eslint가 이미 설치되어 있었습니다.
 
-#### 버퍼란?
+이슈는 여기서부터 출발합니다.
 
-컴퓨터 과학에서 사용되는 용어로 , 데이터를 임시로 저장하는 메모리 영역을 가리킵니다. 버퍼는 데이터를 한 곳에서 다른 곳으로 전송하는 동안 임시로 저장하는 역할을 합니다.
+#### 이슈
 
-그럼 갑자기 궁금해지는게 있습니다. 우리가 일상 속에서 영상을 보다가 기다리는 상황에 자주 사용하는 버퍼링은 무엇을 의미하는 걸까요?
+포맷팅을 할 때, 변경될 eslintrc.json 과 package.json 파일이 제공되었습니다.
+저 같은 경우 eslint는 이미 설치되어 있으니 설정 파일만 변경하고 lint 명령어를 통해 포맷팅 수행을 하면 된다고 생각했습니다.
+그러나 package.json 파일에는 "@typescript-eslint/eslint-plugin" 이런 의존성 코드들이 존재했습니다.
+따라서 저의 생각은 "이미 eslint가 설치되어 있는데 의존성을 별도로 설치해야 할까?" 라는 생각을 했습니다.
 
-#### 버퍼링이란?
+그래서 알고 있지만 확실히 하기 위해 학습을 해봤습니다.
 
-데이터를 임시로 저장하는 버퍼를 사용하는 과정이나 기술을 가리킵니다.
-버퍼링은 데이터의 흐름을 조절하고, 데이터 송수신 간의 속도 차이나 지연을 완화하기 위해 버퍼를 활용합니다.
+#### ESLint란?
 
-그럼 다시 돌아와 버퍼의 사용법에 대하여 알아보겠습니다.
+ESLint는 자체적으로 코드 스타일 규칙, 일반적인 JavaScript 규칙, ECMAScript 버전별 규칙 등을 제공합니다.
+그러나 몇 가지 특정한 케이스나 프레임워크에 대한 규칙은 ESLint의 기본 제공 규칙에 포함되어 있지 않을 수 있습니다.
+이러한 경우 해당 프레임워크나 라이브러리에 대한 ESLint 플러그인을 설치하여 추가적인 규칙을 활성화할 수 있습니다.
 
-#### 버퍼의 사용법
+eslint에 대해 알았습니다. 그럼 왜 별도의 eslint 관련 플러그인을 의존성으로 설치하는 것일까요?
 
-파일을 읽을 때, 운영 체제는 일정량의 데이터를 한 번에 읽어서 버퍼에 저장합니다. 이후 프로그램은 버퍼에서 데이터를 읽어들입니다.
+#### 왜 별도로 eslint 플러그인을 설치하는가
 
-#### 버퍼 사용의 이점
-
-파일을 조금씩 여러 번 읽는 것보다 효율적이고 빠른 속도를 제공합니다. 데이터를 한 번에 저장하거나 전송할 수 있기 때문입니다.
+1. 프레임워크/라이브러리 특정 규칙: 특정 프레임워크나 라이브러리는 고유한 규칙을 가질 수 있습니다. 예를 들어, React 애플리케이션에는 JSX 문법, React 훅 사용 규칙 등이 있을 수 있습니다. React 관련 ESLint 플러그인인 eslint-plugin-react를 설치하면 이러한 React 관련 규칙을 활성화할 수 있습니다.
+2. 커뮤니티 기여: 특정 프로젝트나 커뮤니티에서 개발한 사용자 정의 규칙이나 플러그인을 사용하고 싶을 수 있습니다. 이러한 플러그인을 설치하여 커뮤니티에서 제공하는 추가 규칙을 활용할 수 있습니다. 예를 들어, TypeScript 관련 ESLint 규칙을 제공하는 @typescript-eslint/eslint-plugin 플러그인을 설치할 수 있습니다.
+3. 프로젝트 요구 사항: 특정 프로젝트나 팀은 고유한 규칙을 정의하여 일관된 코드 스타일과 품질을 유지하고 싶을 수 있습니다. 이 경우에는 팀이나 프로젝트에 맞는 사용자 정의 규칙을 정의하고 관리하기 위해 해당 규칙을 활성화하는 플러그인을 설치할 수 있습니다.
 
 #### 결론
 
-버퍼는 데이터의 일시적인 저장과 처리 속도의 조절을 통해 시스템 성능을 향상시키는 데 사용되는 하나의 개념적인 용어이다.
+ESLint 플러그인은 추가적인 규칙, 설정, 확장 프로그램을 제공하여 개발자가 ESLint를 특정 프레임워크, 라이브러리, 프로젝트 요구 사항에 맞게 유연하게 확장하고 적용할 수 있도록 도와줍니다.
