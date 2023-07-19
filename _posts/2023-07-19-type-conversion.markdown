@@ -1,21 +1,21 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_ES_Lint
-title: About ESLint
+lng_pair: id_About_Type_Conversion
+title: About Type Conversion
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
 category: Formatting
 # multiple tag entries are possible
-tags: [formatting, plugin]
+tags: [formatting]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-07-18 09:00:00 +0900
+date: 2023-07-19 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -39,42 +39,52 @@ date: 2023-07-18 09:00:00 +0900
 
 <!-- outline-start -->
 
-### ESLint 대하여
+### 형변환에 대하여
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-이번에 저희 회사에선 프로젝트에 Eslint 관련 규칙을 강하게 잡는 것을 목표로 eslintrc.json 파일의 설정을 수정하고 관련하여 코드 포맷팅을 진행하고 있습니다.
+저희 회사에서 이번에 eslint의 조건을 강하게 줘서 코드 포맷팅을 해줘야 하는 상황이 왔는데요.
+그 중 "Redundant double negation.eslintno-extra-boolean-cast" 문장을 가장 많이 마주했습니다.
 
-포맷팅을 하는 과정에서 알게된 바가 있어 이를 여러분과 공유하고 알아보도록 하겠습니다.
-우선 저희 팀의 프로젝트에 대한 설명이 필요합니다. 저희 프로젝트에는 원래 약한 단계의 eslint 설정이 되어있었고, 이에 따라 프로젝트의 의존성에 eslint가 이미 설치되어 있었습니다.
+저 에러는 무엇이고, 왜 뜨는 것이고 해결책은 무엇인지 알아보겠습니다.
 
-이슈는 여기서부터 출발합니다.
+#### "Redundant double negation.eslintno-extra-boolean-cast" 에러는 무엇인가?
 
-#### 이슈
+eslint 사용 시, 보일 수 있는 "Redundant double negation.eslintno-extra-boolean-cast" 는 흔히
+"no-extra-boolean-cast"라는 규칙으로 알려져 있습니다. 이 규칙은 불필요한 두 번의 부정 연산을 감지하고 경고를 표시합니다.
 
-포맷팅을 할 때, 변경될 eslintrc.json 과 package.json 파일이 제공되었습니다.
-저 같은 경우 eslint는 이미 설치되어 있으니 설정 파일만 변경하고 lint 명령어를 통해 포맷팅 수행을 하면 된다고 생각했습니다.
-그러나 package.json 파일에는 "@typescript-eslint/eslint-plugin" 이런 의존성 코드들이 존재했습니다.
-따라서 저의 생각은 "이미 eslint가 설치되어 있는데 의존성을 별도로 설치해야 할까?" 라는 생각을 했습니다.
+```javascript
+if (!!value) {
+  // ...
+}
+```
 
-그래서 알고 있지만 확실히 하기 위해 학습을 해봤습니다.
+이런 코드에서 볼 수 있는 문구입니다.
+어떤 문구인지는 알았습니다.
 
-#### ESLint란?
+#### 왜 뜨는 걸까요?
 
-ESLint는 자체적으로 코드 스타일 규칙, 일반적인 JavaScript 규칙, ECMAScript 버전별 규칙 등을 제공합니다.
-그러나 몇 가지 특정한 케이스나 프레임워크에 대한 규칙은 ESLint의 기본 제공 규칙에 포함되어 있지 않을 수 있습니다.
-이러한 경우 해당 프레임워크나 라이브러리에 대한 ESLint 플러그인을 설치하여 추가적인 규칙을 활성화할 수 있습니다.
+위의 예제에서 볼 수 있듯 '!!value"는 불리언 값 'value'를 강제로 부정 연산한 후, 다시 부정 연산을 수행하는 것으로 2번 반복합니다.
+이는 형변환의 형태로 사용되고 우리에게 이해되지만 eslint가 권장하는 포맷 형식에는 불필요하며, 코드를 더 복잡하게 만들고 가독성을 낮춘다고 판단합니다.
 
-eslint에 대해 알았습니다. 그럼 왜 별도의 eslint 관련 플러그인을 의존성으로 설치하는 것일까요?
+이제 왜 저런 문구가 뜨는지 알았습니다. 그렇다면 어떻게 해결할 수 있을지 알아보겠습니다.
 
-#### 왜 별도로 eslint 플러그인을 설치하는가
+#### 해결책
 
-1. 프레임워크/라이브러리 특정 규칙: 특정 프레임워크나 라이브러리는 고유한 규칙을 가질 수 있습니다. 예를 들어, React 애플리케이션에는 JSX 문법, React 훅 사용 규칙 등이 있을 수 있습니다. React 관련 ESLint 플러그인인 eslint-plugin-react를 설치하면 이러한 React 관련 규칙을 활성화할 수 있습니다.
-2. 커뮤니티 기여: 특정 프로젝트나 커뮤니티에서 개발한 사용자 정의 규칙이나 플러그인을 사용하고 싶을 수 있습니다. 이러한 플러그인을 설치하여 커뮤니티에서 제공하는 추가 규칙을 활용할 수 있습니다. 예를 들어, TypeScript 관련 ESLint 규칙을 제공하는 @typescript-eslint/eslint-plugin 플러그인을 설치할 수 있습니다.
-3. 프로젝트 요구 사항: 특정 프로젝트나 팀은 고유한 규칙을 정의하여 일관된 코드 스타일과 품질을 유지하고 싶을 수 있습니다. 이 경우에는 팀이나 프로젝트에 맞는 사용자 정의 규칙을 정의하고 관리하기 위해 해당 규칙을 활성화하는 플러그인을 설치할 수 있습니다.
+위의 문구는 설명한대로 불필요하기 때문에 eslint에서는 제거하도록 권장합니다.
+아래와 같이 말이죠.
 
-#### 결론
+```javascript
+if (value) {
+  // ...
+}
+```
 
-ESLint 플러그인은 추가적인 규칙, 설정, 확장 프로그램을 제공하여 개발자가 ESLint를 특정 프레임워크, 라이브러리, 프로젝트 요구 사항에 맞게 유연하게 확장하고 적용할 수 있도록 도와줍니다.
+위의 수정된 코드는 'value'를 그대로 사용하여 조건을 평가합니다. 따라서 불필요한 부정 연산을 제거하고 코드를 더 간결하게 만듭니다.
+
+#### 참고
+
+eslint를 사용하여 코드를 정적으로 분석할 때, "Redundant double negation" 규칙이 적용되어 이와 유사한 불필요한 부정 연산을 감지할 수 있습니다.
+이 규칙을 적용하면 코드의 가독성을 높이고, 잠재적인 버그를 방지할 수 있습니다.
