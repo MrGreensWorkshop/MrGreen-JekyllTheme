@@ -2,10 +2,13 @@
 # Owner's Personal Information
 ###########################################################
 # This is your brand name
-brand: "Yeonuk의 개발 블로그"
+brand: "Chamber Dev 💻"
 
 # text below the brand name
-brand_sub_text: "오늘도 고생하셨습니다🙏"
+brand_sub_text_0: "Kim, yeon-uk"
+brand_sub_text_1: "Developer"
+brand_sub_text_2: "Adler development team member"
+brand_sub_text_3: "Less is More"
 
 # used for seo meta post author (if it's not defined in post)
 name: "yeonuk"

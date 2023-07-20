@@ -2,10 +2,13 @@
 # Owner's Personal Information
 ###########################################################
 # This is your brand name
-brand: "Yeonuk's tech blog"
+brand: "Chamber Dev 💻"
 
 # text below the brand name
-brand_sub_text: "Great job today🙏"
+brand_sub_text_0: "Kim, yeon-uk"
+brand_sub_text_1: "Developer"
+brand_sub_text_2: "Adler development team member"
+brand_sub_text_3: "Less is More"
 
 # used for seo meta post author (if it's not defined in post)
 name: "yeonuk"
@@ -19,7 +22,7 @@ home:
 
 # about page sub title
 about:
-  sub_title: "오늘도 고생하셨습니다🙏"
+  sub_title: "development"
 
 # if you don't want to add copyright year, comment or leave it blank.
 # the year during which the claimed copyright for the work was first asserted.

@@ -20,8 +20,30 @@ Green's Workshop https://www.MrGreensWorkshop.com Licensed under MIT
         >
         {% endif -%}
       </div>
+      <!-- 브랜드 설명란 1행: 이름 -->
+      <!-- <p>
+        &nbsp;{{ site.data.owner[lng].brand_sub_text_0 | replace:
+        site.data.conf.main.sample_replace, site.data.lang[lng].constants.sample
+        }}
+      </p>
+      <br /> -->
+
+      <!-- 브랜드 설명란 2행: 직업 -->
+      <strong>
+        &nbsp;{{ site.data.owner[lng].brand_sub_text_1 | replace:
+        site.data.conf.main.sample_replace, site.data.lang[lng].constants.sample
+        }}
+      </strong>
+      <br />
+      <!-- 브랜드 설명란 3행: 경력 -->
+      <!-- <p>
+        &nbsp;{{ site.data.owner[lng].brand_sub_text_2 | replace:
+        site.data.conf.main.sample_replace, site.data.lang[lng].constants.sample
+        }}
+      </p> -->
+      <!-- 브랜드 설명란 4행: 가치관 -->
       <p>
-        &nbsp;{{ site.data.owner[lng].brand_sub_text | replace:
+        &nbsp;{{ site.data.owner[lng].brand_sub_text_3 | replace:
         site.data.conf.main.sample_replace, site.data.lang[lng].constants.sample
         }}
       </p>
