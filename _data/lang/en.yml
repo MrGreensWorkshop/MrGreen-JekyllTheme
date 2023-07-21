@@ -171,9 +171,10 @@ privacy-policy:
 
 # constants to be replaced for
 constants:
-  greetings: Hello
-  welcome: Welcome
-  sample: Sample
+  greetings: Cheers to your day, no matter what time of day or night it is!
+  greetingMessage: I hope it helps you like a camellia in winter.
+  welcome: Welcome!
+  sample: sample
 
 # for contact form
 contact_form:

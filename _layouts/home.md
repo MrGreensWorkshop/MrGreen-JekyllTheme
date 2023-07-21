@@ -36,7 +36,8 @@ layout: default
     </div>
   </div>
   <div class="home-intro-text markdown-style">
-    {{ content }}
+    <h5> {{site.data.lang[lng].constants.greetings}}</h6>
+    <p> {{site.data.lang[lng].constants.greetingMessage}}</p>
   </div>
 </div>
 
