@@ -171,7 +171,8 @@ privacy-policy:
 
 # constants to be replaced for
 constants:
-  greetings: 안녕
+  greetings: 지금이 낮이든 밤이든 상관없이 당신의 하루를 응원합니다!
+  greetingMessage: 이 글들이 겨울의 동백처럼 도움이 되길 바랍니다🙏🏻
   welcome: 환영합니다.
   sample: 샘플
 
