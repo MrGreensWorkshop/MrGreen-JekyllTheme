@@ -5,228 +5,144 @@
 page_data:
   main:
     header: "Projects"
-    info: "Your Project page description."
+    info: "A place to organize and document your work."
     text_color: "white"
     # if you don't want to use background image, comment it. back_color will be activated.
-    img: ":projects-heading.jpg"
+    img: ":home-gyeongju-uon-stay.jpg"
     back_color: "lightblue"
 
   category:
-    - title: "Example"
-      type: id_example
+    - title: "Hackathon"
+      type: id_hackathon
       color: "gray"
-    - title: "Picture"
-      type: id_picture
-      color: "#62b462"
-    - title: "Quote"
-      type: id_quote
-      color: "#2FD0ED"
 
   list:
-    # example
-    - type: id_example
-      project_name: "Example Project"
-      project_excerpt: "Examples"
-      img: ":project1_thumb.jpg"
+    - type: id_hackathon
+      project_name: "BlockChain based Treasure Hunt Game"
+      project_excerpt: ":Founders-Samsung Hackathon:"
+      img: ":samsung_founders.jpg"
       img_title: "img title1"
-      date: "2021-03-13"
+      date: "2020-02-19"
       post: |
-        # Examples
+        ## Summary
 
-        This is an example page to display markdown related styles for Mr. Green Jekyll Theme.
 
-        ### Headings (centered)
-        {:data-align="center"}
+        ## How to use
 
-        # Heading 1
+        just **git clone** or **download zip file** and import project at Android Studio
 
-        ## Heading 2
-
-        ### Heading 3
-
-        #### Heading 4
-
-        ##### Heading 5
-
-        ###### Heading 6
-
-        ***
-
-        ### Paragraphs
-
-        #### Paragraph
-
-        **William Shakespeare**, Let me not to the marriage of true minds
-        Admit impediments. Love is not love
-        Which alters when it alteration finds,
-        Or bends with the remover to remove.
-        O no, it is an ever-fixed mark
-        That looks on tempests and is never shaken;
-        It is the star to every wand'ring barque,
-        Whose worth's unknown, although his height be taken.
-        Love's not Time's fool, though rosy lips and cheeks
-        Within his bending sickle's compass come;
-        Love alters not with his brief hours and weeks,
-        But bears it out even to the edge of doom.
-        If this be error and upon me proved,
-        I never writ, nor no man ever loved.
-
-        #### Texts
-
-        Quoted text `Hello world`
-
-        Bold text **Hello world**
-
-        Italic text _Hello world_
-
-        kbd text <kbd>Hello world</kbd>
-
-        #### Blockquote
-
-        > **William Shakespeare**, Let me not to the marriage of true minds
-        Admit impediments. Love is not love
-        Which alters when it alteration finds,
-        Or bends with the remover to remove.
-        O no, it is an ever-fixed mark
-        That looks on tempests and is never shaken;
-        It is the star to every wand'ring barque,
-        Whose worth's unknown, although his height be taken.
-        Love's not Time's fool, though rosy lips and cheeks
-        Within his bending sickle's compass come;
-        Love alters not with his brief hours and weeks,
-        But bears it out even to the edge of doom.
-        If this be error and upon me proved,
-        I never writ, nor no man ever loved.
-
-        ### Link
-
-        This is [Mr. Green Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme), a simple theme built for [Jekyll](https://jekyllrb.com/).
-
-        ### Picture
-
-        ![such a lovely place](:projects-heading.jpg)
-
-        ### Picture (centered)
-
-        ![such a lovely place](:project1_thumb.jpg){:data-align="center"}
-
-        ### Lists
-
-        - Apple
-        - Banana
-        - Orange
-
-        1. Fruits
-            1. Apples
-                - Granny Smith
-                - Mutsu
-            1. Bananas
-                - Cavendish
-                - Red
-        1. Vegetables
-
-        ***
-
-        ### Tables
-
-        #### Small Table (centered)
-
-        | Fruits(not aligned) | Alignment (centered) | num (right align) |
-        | ------------------- | :------------------: | ----------------: |
-        | Apple               |       centered       |              9999 |
-        | Banana              |  centered long text  |               999 |
-        | Orange              |       centered       |                99 |
-        | Lemon               |       centered       |                 9 |
-        {:data-align="center"}
-
-        #### Wide Table (centered)
-
-        scroll enabled when page is narrow
-
-        | Fruits | num (left align) | num (right align) | num  | num  | num  |
-        | ------ | :--------------- | ----------------: | ---- | ---- | ---- |
-        | Apple  | 1111             |              1111 | 2222 | 3333 | 4444 |
-        | Banana | 111              |               111 | 222  | 333  | 444  |
-        | Orange | 11               |                11 | 22   | 33   | 44   |
-        | Lemon  | 1                |                 1 | 2    | 3    | 4    |
-        {:data-align="center"}
-
-        #### Wider Table
-
-        scroll enabled when page is narrow
-
-        | Fruits | num (left align) | num (right align) | num  | num  | num  | num  | num  | num  |
-        | ------ | :--------------- | ----------------: | ---- | ---- | ---- | ---- | ---- | ---- |
-        | Apple  | 1111             |              1111 | 2222 | 3333 | 4444 | 5555 | 6666 | 7777 |
-        | Banana | 111              |               111 | 222  | 333  | 444  | 555  | 666  | 777  |
-        | Orange | 11               |                11 | 22   | 33   | 44   | 55   | 66   | 77   |
-        | Lemon  | 1                |                 1 | 2    | 3    | 4    | 5    | 6    | 7    |
-
-        ### Code
-
-        #### Quote
-
-        ```python
-        for i in range(5, 10):
-          print(i)
+        ```latex
+          *Requremnts*
+          - andrioid developer mode
+          - ASTC usable android device
+          - device must be connected when Install_bomul-Android-Shipping-armv7-es2.bat is excuting
         ```
 
-    # picture
-    - type: id_picture
-      project_name: "Example Project"
-      project_excerpt: "Picture"
-      img: ":project2_thumb.jpg"
-      img_title: "img title2"
-      date: "2021-04-23"
-      post: |
-        # Title
-        This is project content.
 
-        ![Image](:project2_thumb.jpg)
 
-    # quote
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "William Shakespeare"
-      #img: ":project1_thumb.jpg"
-      #img_title: "img title3"
-      date: "2021-05-27"
-      post: |
-        Let me not to the marriage of true minds
-        Admit impediments. Love is not love
-        Which alters when it alteration finds,
-        Or bends with the remover to remove.
-        O no, it is an ever-fixed mark
-        That looks on tempests and is never shaken;
-        It is the star to every wand'ring barque,
-        Whose worth's unknown, although his height be taken.
-        Love's not Time's fool, though rosy lips and cheeks
-        Within his bending sickle's compass come;
-        Love alters not with his brief hours and weeks,
-        But bears it out even to the edge of doom.
-        If this be error and upon me proved,
-        I never writ, nor no man ever loved.
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "Albert Einstein"
-      img: ":project2_thumb.jpg"
-      img_title: "img title4"
-      date: "2021-06-08"
-      post: |
-        Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "Mae West"
-      img: ":project1_thumb.jpg"
-      img_title: "img title5"
-      date: "2021-08-20"
-      post: |
-        You only live once, but if you do it right, once is enough.
-    - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "Mahatma Gandhi "
-      img: ":project2_thumb.jpg"
-      img_title: "img title6"
-      date: "2021-12-20"
-      post: |
-        Be the change that you wish to see in the world.
+        ## Tech Stack
+
+        - JAVA
+        - Android Studio
+
+        ## Tech Demo Video
+        [youtube link](https://youtu.be/tjttqUkZST8)
+
+
+        ## Role 
+
+        - Yeonwook Kim[PL] : DApp developer : [GitHub](https://github.com/yeonuk44)
+        - Song, Minjae : Demo game engineer : [GitHub](https://github.com/hsu-201458085)
+        - Yoo, Youwon : General designer : [GitHub](https://github.com/AshleyRyu)
+        - Cho, Eunhee : Architecture planner 
+        - Dongkyu Oh : Business planner 
+
+
+
+        ## Planning team to do list
+
+        - [x] Business plan
+        - [x] PPT
+        - [x] BM design
+        - [x] Financial Statement
+        - [x] Logo design
+        - [x] Video editing
+        - [x] Team logo design
+
+        ## Business Plan
+
+        ### 1. Problem & Solution
+
+        It has been about 4 years since the technology called 'blockchain' has emerged as an issue, but the public still only knows the concept of blockchain, not what it is, where it is used, or what can be done with it. Blockchain-related startups as well as large enterprises are actively entering the industry. Despite this multifaceted effort, blockchain is still unfamiliar. 
+        The team focused on this phenomenon and attributed it to the lack of user-friendly channels and lightweight content. Games were deemed to be the best content to promote accessibility. Blockchain technology is expected to increase the transparency of the reward system and shorten the initial trust-building period. The utilization of SDKs is expected to resolve user usage constraints such as wallet and key management.
+        Looking at the current situation, Samsung has created 'Samsung Blockchain Wallet' to foster the blockchain industry and has released various DApps on it. We found that many game DApps are in service to commercialize blockchain technology, but most of them are not performing well. In particular, none of them have been passed by the Game Content Management Committee, and the relevant laws and regulations are vague. In addition to external factors, the content itself is not appealing to users. The team analyzed these reasons and designed this service with various improvements.
+
+        ### 2. Introduction of Idea
+        1) How to play
+        Getcha Crayon is inspired by the 'treasure hunting' game that we used to play during childhood picnics. However, we want to utilize virtual space instead of physical space and provide treasures in the form of gift icons. After accessing the service, users can create a room of their choice (chicken room, coffee room, etc.) or enter an already created room. Before the game starts, users pay the same amount of coins as a participation fee and proceed with the game. The location of the treasure is randomized on the map, and the first user to find it will receive all the coins deposited in the room before the game starts in the form of a gift icon.
+        2) Strengths and Differentiation
+        Existing blockchain games have the problem of having to go through various processes to deposit and distribute coins. However, this game compresses these complex processes into a single process by utilizing the SDK, so there is no need to create a separate platform for this. In other words, it can be said that the user-friendly process simplification is an advantage. Furthermore, the service is easily accessible to anyone with a Samsung smartphone released after the Galaxy S10, so all you need is to have the device in your possession. Currently, most blockchain games do not have high graphics, but Getcha Crayon is 3D, which makes the game more lively. At the same time, the reward system is transparent due to the use of blockchain technology, which builds trust among users and reduces additional marketing costs. 
+
+        ### 3. Customer and Market Analysis
+        1) Target Market: (Initial: 8,000 users / Mid-term (3 years): 18,500)
+        TAM - Gifticon users (about 17 million people)_Source platum
+        SAM - DApp users: about 1.5 million (worldwide)_Source: KOTRA,
+        Domestic users are estimated to be about 10% of these_Source: Ministry of Science and ICT. (2018). Guide to National R&D Project Information
+        SOM - Game DApp users: About 750,000 (worldwide), domestic users are estimated to be about 10% of them.
+        2) Blockchain game DAPP market attractiveness: 2.5 stars
+        a) Barriers to entry: High in terms of utilizing blockchain technology, but online game companies will have their own advantages when entering the market (Threat: Middle / Importance: 25%)
+        b) Competition: Most of the top-ranked games in the DAPP market are games, but there are differences in the form of rewards (gift icons) and game quality (3D). (Threat: Middle / Importance: 25%)
+        c) Buyer bargaining power: Users of the game play according to the smart contract set on the blockchain program, so bargaining power is weak (Threat: Low / Importance: 10%)
+        d) Threat of substitutes: All time-killing media and SNS such as existing mobile and online games, YouTube, and real-time TV apps are applicable (Threat: Middle / Importance: 25%)
+        e) Bargaining power of suppliers: Game creators cannot be manipulated on the blockchain, but they should consider using a DB that provides and processes high-end games. (Threat: Low / Importance: 15%)
+
+        ### 4. Business Model - (The team aims for a B2C business model, and the following are listed in order of priority.)
+        1) If we can secure a partnership with a gifting company and get a discounted price from the regular price, we will utilize this part as operating funds.
+        2) Selling in-game character items: skins, accessories, characters, etc. without affecting the game itself (we expect that users will want to differentiate their characters as the number of users grows).
+        3) Advertising income through reward product headquarters or banner operations
+        4) Receiving a certain % fee when entering the game → preferably in the form of interest pile distribution utilizing deposits such as pooled funds
+
+        ### 5. Financial Plan
+        1) Revenue structure 
+        * Number of DApp users: 13,500 users (using the median of 8,500 users in the initial period / 18,500 users in the mid-term)
+        S10 users: 1,700,000 / Estimated post-S20 users (within 3 years): 2,000,000
+        Probability of using KEYSTORE: 5% / Probability of using Getcha Crayon: 10
+        * Average daily transaction amount: 27 million won - 2 (average number of plays by users per day) * 2,000 (average payment per play) * 13,500 (estimated DAPP users) * 0.5 (actual play rate among users)
+        * BEP: 15,000 users (estimated 2.5 years after service start) - Revenue function: y = 2347.5x / Cost function: y = 27000 + 468x [y: amount of money (million won) / x: number of users (1,000)]
+        * Estimated annual revenue: 23,475 million won
+        a) IP business (in-game character items & goods sales): KRW 3,645 million
+        - 270,000 (IP revenue per user per year) * 0.01 (market share estimate compared to industry leader) * 13,500 (DAPP user estimate)
+        b) Discount for corporate gifting: KRW 19,440,000
+        0.03 (SENDBEE - discount up to 15%) * 27,000,000 (average daily transaction amount) * 20 (monthly conversion) * 12 (annual conversion)
+        c) Advertising income through reward product headquarters or banner operation: 3.9 million won
+        400(Banner impression unit price - CPM) * 0.001(CPM converted to 1 unit) * 3(Number of operating banners) * 2(Number of impressions per user) * 6,750(Average daily users) * 20(Monthly conversion) * 12(Annual conversion)
+        2) Funding plan
+        Development cost: Short-term (1~3 months) game developer, UI&UX designer consulting cost
+        ✔ Equipment: 1 IMAC (2,500,000)*5, desk and picks (7,500,000)
+        Labor: 3,000,000 (average annual salary for a venture) * 5 (number of employees)
+        Server operating costs: 13,500 (expected dapp users)*20 (monthly server operating costs per person)*12 (converted to a yearly basis)
+        Advertising cost: For initial promotion, target online channels expected to be utilized by the target audience (webtoon, SNS, YouTube, etc.)
+        3) Initial Funding Plan
+        Startup Zone: 2 years of basic tenancy + up to 1 year extension upon passing the extension review
+        Youth Employment Incentive: A program that supports labor costs for promising growth industries, venture companies, etc. without limiting the number of employees.
+
+        ### 6. Future plans
+        Currently, the service only has one game. However, we plan to develop the service as the number of users increases and usage increases. First of all, we will activate the IP Business to earn revenue by expanding in-game commerce and selling merchandise. In addition, we will add various games, not just treasure hunting games, to increase user choice. This will allow the service to scale, generating additional revenue and increasing user satisfaction. 
+
+
+        ## Unreal Project (bomul) -- Update 20/02/12
+        - bomul folder
+        - This is a game program based on Unreal Engine4.  
+        - It is too large (about 6GB), so I reduced it to .gitignore txt and commit it.
+        - https://drive.google.com/drive/folders/1fTMB3LtBQH14AewwqbWYEE57RGISkAMI?usp=sharing 
+            -> Google Drive full location, all files I couldn't upload are shared. 
+        - The way to pull is that I will compress the entire folder to google drive and upload it later. 
+            and then pull it into that folder, it will be automatically merged and updated to the latest version. 
+            and it will be updated to the latest version. 
+        - To download the game in APK format, run the command 
+            Install_bomul-Android-Shipping-armv7-es2.bat and it will automatically download to your phone.
+            ### ..download requirements ...
+                  - Smartphone in developer mode + USB debugging allowed 
+                  - Latest Android environment (ASTC platform format, so older phones won't work)
+                  - Phone must be connected when running Install_bomul-Android-Shipping-armv7-es2.bat 
+                    If there is no connection, nothing will run
