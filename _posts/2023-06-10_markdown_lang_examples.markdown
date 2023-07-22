@@ -1,23 +1,22 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_Examples
-title: Examples
+lng_pair: id_Markdown_Lang_Examples
+title: About Markdown lang Examples
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
-author: Mr. Green's Workshop
+author: Yeonuk
 # multiple category is not supported
-category: jekyll
+category: markdown
 # multiple tag entries are possible
-tags: [jekyll, sample, example post]
+tags: [Markdown]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 #comments_disable: true
 
 # publish date
-date: 2022-02-10 08:11:06 +0900
-
+date: 2022-06-10 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2022-02-10 08:11:06 +0900
@@ -41,11 +40,14 @@ date: 2022-02-10 08:11:06 +0900
 
 <!-- outline-start -->
 
-This is an example page to display markdown related styles for Mr. Green Jekyll Theme.
+## Markdown 언어에 대한 예제 모음 글입니다.
+
+### 예제
 
 <!-- outline-end -->
 
 ### Headings (centered)
+
 {:data-align="center"}
 
 # Heading 1
@@ -60,7 +62,7 @@ This is an example page to display markdown related styles for Mr. Green Jekyll 
 
 ###### Heading 6
 
-***
+---
 
 ### Paragraphs
 
@@ -137,7 +139,7 @@ This is [Mr. Green Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-Jek
       - Red
 1. Vegetables
 
-***
+---
 
 ### Tables
 
@@ -149,6 +151,7 @@ This is [Mr. Green Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-Jek
 | Banana              |  centered long text  |               999 |
 | Orange              |       centered       |                99 |
 | Lemon               |       centered       |                 9 |
+
 {:data-align="center"}
 
 #### Wide Table (centered)
@@ -161,6 +164,7 @@ scroll enabled when page is narrow
 | Banana | 111              |               111 | 222  | 333  | 444  |
 | Orange | 11               |                11 | 22   | 33   | 44   |
 | Lemon  | 1                |                 1 | 2    | 3    | 4    |
+
 {:data-align="center"}
 
 #### Wider Table
@@ -180,7 +184,7 @@ scroll enabled when page is narrow
 
 {% highlight python %}
 for i in range(5, 10):
-  print(i)
+print(i)
 {% endhighlight %}
 
 #### Quote
