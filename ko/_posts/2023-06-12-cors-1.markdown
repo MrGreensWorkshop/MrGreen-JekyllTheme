@@ -1,0 +1,67 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_CORS_1
+title: About CORS(1)
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: CORS
+# multiple tag entries are possible
+tags: [Browser policy]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-06-12 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### Cross-Origin Resource Sharing(이하 CORS)에 대한 글입니다.
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+#### CORS 기본 동작 순서
+
+1. 클라이언트에서 HTTP 요청 헤더에 Origin을 담아 전달(여기서 Origin은 protocol, host, port로 구성되어 있습니다. 요청을 보내는 도메인을 표시합니다.)
+2. 서버는 응답헤더에 Access-Control-Allow-Origin을 담아 클라이언트로 전달합니다.
+   - 이 때, 값으로 '이 리소스를 접근하는 것이 허용된 출처 origin'임을 내려보냅니다.
+3. 서버에서 응답을 받은 브라우저가 클라이언트와 서버의 origin을 비교합니다.
+   - 유효하지 않다면 응답을 사용하지 않고 버립니다.**(CORS 에러 발생)**
+
+##### 상황 가정
+
+Open API 등 외부 URL에서 데이터를 불러올 필요가 있을 때
+
+##### 해법
+
+BE에서 서버간 통신으로 정보를 받아와 우리 서비스에 맞는 API로 재작성해서 FE로 보내야 한다. FE는 데이터를 노출한다.
+
+##### CORS가 왜 필요할까?
+
+2편에서 마저 다루도록 하겠습니다. **[링크](https://yeonuk44.github.io/posts/2023-06-13-CORS-2)**

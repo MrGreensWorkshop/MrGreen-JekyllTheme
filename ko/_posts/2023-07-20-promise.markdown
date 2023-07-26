@@ -1,0 +1,108 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Promise
+title: About Promise
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: ES6
+# multiple tag entries are possible
+tags: [es6, javascript]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-20 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### Promise에 대하여
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+이번에 코드 리팩토링을 진행하며 Promise 객체에 대해 알아볼 수 있는 시간이 생겼습니다.
+그 중에서도 특히 then이라는 메서드가 좋았는데 그 경험을 공유하고자 합니다.
+
+우리는 종종 Promise객체에 executor 비동기 함수를 정의하여 사용할 때가 있습니다. 동기 속에서 비동기적 수행이 필요할 때가 있기 때문입니다.
+
+그러나 ESLint에서 추천한대로 설정을 지정한다면 문법상 오류를 확인할 수 있습니다.
+ESLint 규칙인 no-async-promise-executor에 따라 Promise executor 함수는 비동기 함수(async 함수)로 정의하지 않아야 하기 때문입니다.
+
+그렇다면 왜 Promise executor 함수에 async 키워드를 사용해서는 안될까요?
+
+#### 왜 안될까?
+
+안타깝게도 Promise executor 함수 내에서 await 키워드를 사용하는 것은 유효하지 않습니다. 왜냐하면 Promise executor 함수는 동기적인 동작을 수행해야 하며, await 키워드는 비동기 함수 내에서만 사용할 수 있기 때문입니다.
+즉, async 키워드를 사용하면 암묵적으로 Promise를 반환하는 비동기 함수가 되어 예기치 않은 동작을 초래할 수 있기 때문입니다.
+
+그렇다면 우리가 원하는 동작대로 동기적 수행을 하는 Promise 객체 안에서 비동기적 수행을 하는 함수를 사용하는 방법은 없을까요??
+
+결론부터 말씀드리자면 있습니다!
+바로 **Promise 객체에서 'then' 메서드를 사용하는 방법입니다.**
+
+#### then 메서드는 무엇일까?
+
+then 메서드는 Promise 객체에서 사용되는 메서드 중 하나로, Promise가 성공적으로 이행될 경우 실행할 콜백 함수를 등록하는 데 사용됩니다.
+Promise가 이행될 때 해당 콜백 함수가 실행됩니다.
+
+#### then 메서드 사용 예시
+
+```javascript
+promise.then(onFulfilled, onRejected);
+```
+
+여기서 promise은 Promise 객체이고, onFulfilled는 Promise가 성공적으로 이행될 때 실행할 콜백 함수를 나타내는 함수입니다. onRejected는 Promise가 거부될 때 실행할 콜백 함수를 나타내는 함수입니다.
+
+#### 추가 예시
+
+```javascript
+fetch("https://api.example.com/data")
+  .then((response) => response.json()) // 첫 번째 비동기 작업 처리
+  .then((data) => {
+    // 이전 작업의 결과(data)를 기반으로 추가 작업 수행
+    console.log(data);
+    return someAsyncFunction(data);
+  })
+  .then((result) => {
+    // 이전 작업의 결과(result)를 기반으로 추가 작업 수행
+    console.log(result);
+  })
+  .catch((error) => {
+    // 에러 처리
+    console.error(error);
+  });
+```
+
+위의 예제에서 fetch 함수는 비동기적으로 데이터를 가져오는 Promise를 반환합니다. 첫 번째 then 메서드에서는 서버 응답을 JSON으로 변환합니다. 그리고 다음 then 메서드에서는 변환된 데이터를 기반으로 추가 작업을 수행합니다. 마지막으로 catch 메서드에서는 예외가 발생한 경우 에러를 처리합니다.
+
+then 메서드를 사용하여 비동기 작업을 순차적으로 연결하고 결과를 처리할 수 있습니다.
+
+#### 참고
+
+- then 메서드는 체인 형태로 사용될 수도 있습니다. 즉, then 메서드를 연속적으로 호출하여 여러 개의 비동기 작업을 순차적으로 처리할 수 있습니다. 체인 형태로 사용할 경우, 각 then 메서드에서 반환된 Promise 객체를 통해 다음 then 메서드에 결과를 전달할 수 있습니다.
+- Promise 객체 자체는 비동기적인 특성을 가지되, 글에서 나오는 Promise executor 함수는 동기적으로 동작됩니다.
