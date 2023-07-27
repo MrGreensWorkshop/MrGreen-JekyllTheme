@@ -1,7 +1,8 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Design-Pattern-Creational-1
-title: About Design Pattern Creational(1)
+title: 디자인 패턴, 생성 패턴에 대하여(1)
+# title: About Design Pattern Creational(1)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml

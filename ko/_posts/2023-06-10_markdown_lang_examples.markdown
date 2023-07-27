@@ -1,15 +1,14 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Markdown_Lang_Examples
-title: About Markdown lang Examples
-
+title: Markdown lang 예제
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: markdown
+category: Markdown
 # multiple tag entries are possible
-tags: [Markdown]
+tags: [markdown]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page

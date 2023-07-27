@@ -1,15 +1,15 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_useInfiniteQuery
-title: About useInfiniteQuery
+title: useInfiniteQuery에 대하여
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: React
+category: Module
 # multiple tag entries are possible
-tags: [React Query, Hook]
+tags: [module, react query, hooks]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page

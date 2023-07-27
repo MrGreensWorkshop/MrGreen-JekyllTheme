@@ -1,7 +1,8 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_NodeJS
-title: About nodeJS
+title: Node.js에 대하여
+# title: About nodeJS
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml

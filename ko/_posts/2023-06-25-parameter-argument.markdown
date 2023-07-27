@@ -1,15 +1,15 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Parameter-Argument
-title: About parameter & argument
+title: 매개변수와 인자에 대하여
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: Concept
+category: Development
 # multiple tag entries are possible
-tags: [parameter, argument]
+tags: [development, parameter, argument]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page

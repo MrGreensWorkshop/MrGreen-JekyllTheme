@@ -1,7 +1,9 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Type_Conversion
-title: About Type Conversion
+title: 형 변환(Type Conversion)에 대하여
+# title: About Type Conversion
+
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk

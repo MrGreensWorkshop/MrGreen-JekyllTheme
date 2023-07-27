@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_CORS_2
-title: About CORS(2)
+title: CORS에 대하여(2)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -9,7 +9,7 @@ author: Yeonuk
 # multiple category is not supported
 category: CORS
 # multiple tag entries are possible
-tags: [Browser policy]
+tags: [cors, browser policy]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page

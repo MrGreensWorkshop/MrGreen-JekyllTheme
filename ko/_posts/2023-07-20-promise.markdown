@@ -1,7 +1,9 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Promise
-title: About Promise
+title: Promise에 대하여
+# title: About Promise
+
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
@@ -39,7 +41,7 @@ date: 2023-07-20 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Promise에 대하여
+### 프로미스에 대하여
 
 {:data-align="center"}
 

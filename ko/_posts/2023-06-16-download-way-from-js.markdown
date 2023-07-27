@@ -1,15 +1,15 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_a_tag
-title: About most common way to download files using JS in a web browser using the a tag
+title: 웹 브라우저에서 a 태그를 사용하여 JS를 사용하여 파일을 다운로드하는 가장 일반적인 방법에 대하여
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: FE
+category: Development
 # multiple tag entries are possible
-tags: [JS]
+tags: [developent, fe, react]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page

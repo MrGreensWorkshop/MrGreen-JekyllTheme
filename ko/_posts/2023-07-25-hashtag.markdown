@@ -1,14 +1,16 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Implementing_hashtag_function
-title: About Implementing hashtag function
+title: 해시태그(hashtag) 기능 구현에 대하여
+# title: About Implementing hashtag function
+
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: FE
+category: Development
 # multiple tag entries are possible
-tags: [frontend, javascript, typescript]
+tags: [development, javascript, typescript]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
