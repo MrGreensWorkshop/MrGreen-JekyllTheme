@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_Markdown_Lang_Examples
-title: Markdown lang 예제
+title: About markdown lang examples
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
@@ -39,7 +39,7 @@ date: 2022-06-10 09:00:00 +0900
 
 <!-- outline-start -->
 
-## Markdown 언어에 대한 예제 모음 글입니다.
+## A collection of examples for the Markdown language.
 
 ### 예제
 

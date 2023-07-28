@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_http_request
-title: HTTP Request에 대하여
+title: About HTTP Request
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,21 +40,21 @@ date: 2023-06-17 09:00:00 +0900
 
 <!-- outline-start -->
 
-### HTTP 요청에 대한 글입니다.
+### This is an article about HTTP requests.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### HTTP 요청에 대하여
+#### About HTTP Requests
 
-HTTP 요청은 HyperText Transfer Protocol 의 약어로
+HTTP request stands for HyperText Transfer Protocol.
 
-HTTP는 웹 서버 및 웹 브라우저 상호 간의 데이터 전송을 위한 응용계층 프로토콜입니다.
+HTTP is an application layer protocol for transferring data between web servers and web browsers.
 
-##### HTTP와 HTTPS의 차이는 무엇일까?
+##### What is the difference between HTTP and HTTPS?
 
-HTTPS는 SSL(Secure Socket Layer) 인증서를 사용하는 HTTP입니다.
+HTTPS is HTTP using a Secure Socket Layer (SSL) certificate.
 
-SSL 인증서는 일반 HTTP 요청 및 응답을 암호화합니다. 서버와 주고받는 데이터가 암호화됩니다.
-HTTPS는 HTTP보다 안전한 프로토콜이라 할 수 있습니다.
+SSL certificates encrypt regular HTTP requests and responses. The data you send to and from the server is encrypted.
+HTTPS is a more secure protocol than HTTP.

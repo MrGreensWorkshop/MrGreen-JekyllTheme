@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_react_hooks
-title: React hooks에 대하여
+title: About React hooks
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,31 +40,31 @@ date: 2023-06-20 09:00:00 +0900
 
 <!-- outline-start -->
 
-### React-Hooks에 대한 글입니다.
+### This is a post about React-Hooks.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### React-Hooks에 대하여 1편입니다.
+#### This is the first installment of React-Hooks.
 
-useState()나 useEffect()처럼 많이 쓰지 않지만 유용한 hooks가 있습니다.
-바로 useRef()입니다. 오늘은 이 녀석을 알아보겠습니다.
+There is a hook that we don't use as much as useState() or useEffect(), but it is useful.
+It's called useRef(). Today we're going to take a look at this guy.
 
-##### React 기본 원리부터 알아보겠습니다.
+##### Let's start with the basics of React.
 
-**기본적으로 내부 상태(state)가 변할 때 마다 다시 렌더링이 됩니다.**
-조금 찝찝하지 않나요? 함수가 호출될 때마다 화면이 갱신된다면 함수 내부의 변수들이 기존에 저장하는 값도 같이 초기화되는 점이...
-독자님들도 쓰임에 따라 다시 렌더링되더라도 기존에 참고하고 있던 컴포넌트 함수 내의 값이 그대로 보존되는 것을 의도하고 싶을 때도 있기 때문에 찝찝하지 않았을까 싶습니다.
+**Basically, every time our internal state changes, we'll re-render**.
+Sounds a little creepy, doesn't it? If the screen is updated every time the function is called, the variables inside the function will be initialized with the values they already have...
+I wonder if readers would also find this annoying because they might want to preserve the values in the component function they were referring to even if it is re-rendered depending on the usage.
 
-##### React에서는 어떤 Hook으로 문제를 해결할까요?
+##### What hooks do we use in React to solve this problem?
 
-**useRef 훅을 사용해 문제를 해결합니다.**
-useRef 함수는 인자로 넘어온 초기값을 속성에 할당하여 값을 변경해도 컴포넌트가 다시 렌더링되지 않게 합니다. 즉, 컴포넌트가 다시 렌더링될 때도 속성값을 잃지 않습니다.
+**We use the useRef hook to solve the problem.**
+The useRef function assigns an initial value passed as an argument to a property so that changing the value doesn't cause the component to re-render, meaning that the property doesn't lose its value when the component re-renders.
 
-렌더링을 발생시키지 말아야 하는 값을 다룰 때 정말 편리하게 사용할 수 있습니다.
+This can be really handy when dealing with values that shouldn't cause rendering.
 
-##### 예제
+##### Example
 
 ```javascript
 const nameInput = useRef();
@@ -75,18 +75,18 @@ const onClick = () => {
 
 return(
     <input ref={nameInput} />
-    <button onClick={onClick}>클릭</button>
+    <button onClick={onClick}>Click</button>
 )
 ```
 
-###### 결과
+###### Result
 
-인풋에 값을 입력한 다음 클릭 버튼을 눌러도 포커스를 잃지 않고, 인풋박스에 포커스가 잡힙니다.
+After entering a value in the input and then pressing the click button, the input box does not lose focus.
 
-##### 내용 및 예제 코드 핵심 요약
+##### Contents and Example Code Key Takeaways
 
-- javascript에서 특정 Dom을 선택하는 역할을 한다. (getElementById, querySelector 등)
-- 특정 DOM에 접근할 때 사용한다.
-- 외부 라이브러리 사용할때 유용하다.
-- 원하는 위치에 ref={} 의 형태로 작성하면 된다.
-- 포커스를 잡으려면 nameInput.current.focus() 형태로 작성하면 된다.
+- Serves to select a specific DOM in javascript (getElementById, querySelector, etc.)
+- Used to access a specific DOM.
+- Useful when using external libraries.
+- You can write it in the form of ref={} wherever you want.
+- To get the focus, you can write nameInput.current.focus().

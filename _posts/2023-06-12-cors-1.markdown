@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_CORS_1
-title: CORS에 대하여(1)
+title: About CORS(1)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,28 +40,28 @@ date: 2023-06-12 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Cross-Origin Resource Sharing(이하 CORS)에 대한 글입니다.
+### This is an article about Cross-Origin Resource Sharing (CORS).
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### CORS 기본 동작 순서
+#### CORS Basic Sequence of Events
 
-1. 클라이언트에서 HTTP 요청 헤더에 Origin을 담아 전달(여기서 Origin은 protocol, host, port로 구성되어 있습니다. 요청을 보내는 도메인을 표시합니다.)
-2. 서버는 응답헤더에 Access-Control-Allow-Origin을 담아 클라이언트로 전달합니다.
-   - 이 때, 값으로 '이 리소스를 접근하는 것이 허용된 출처 origin'임을 내려보냅니다.
-3. 서버에서 응답을 받은 브라우저가 클라이언트와 서버의 origin을 비교합니다.
-   - 유효하지 않다면 응답을 사용하지 않고 버립니다.**(CORS 에러 발생)**
+1. the client passes the Origin in the HTTP request header (where Origin consists of protocol, host, and port, indicating the domain from which the request is being sent).
+2. The server sends Access-Control-Allow-Origin in the response header to the client.
+   - It sends down the value 'origin allowed to access this resource'.
+3. When the browser receives the response from the server, it compares the client and server origin.
+   - If they are invalid, it discards the response without using it **(raising a CORS error)**
 
-##### 상황 가정
+##### Assuming the situation
 
-Open API 등 외부 URL에서 데이터를 불러올 필요가 있을 때
+You need to fetch data from an external URL, such as an Open API.
 
-##### 해법
+##### Solution
 
-BE에서 서버간 통신으로 정보를 받아와 우리 서비스에 맞는 API로 재작성해서 FE로 보내야 한다. FE는 데이터를 노출한다.
+We need to get the information from BE via server-to-server communication, rewrite it into an API for our service, and send it to FE. FE exposes the data.
 
-##### CORS가 왜 필요할까?
+##### Why do we need CORS?
 
-2편에서 마저 다루도록 하겠습니다. **[링크](https://yeonuk44.github.io/posts/2023-06-13-CORS-2)**
+We'll cover that in part 2. **[Link](https://yeonuk44.github.io/posts/2023-06-13-CORS-2)**
