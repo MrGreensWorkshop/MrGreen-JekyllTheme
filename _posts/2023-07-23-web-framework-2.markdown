@@ -1,7 +1,8 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Web_Framework_2
-title: About web framework(2)
+title: Web framework에 대하여(2)
+
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk

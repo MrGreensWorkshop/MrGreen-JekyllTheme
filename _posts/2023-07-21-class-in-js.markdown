@@ -1,7 +1,9 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Using_Class_in_JS
-title: About using class in JS
+title: JS에서 class를 사용하는 것에 대하여
+# title: About using class in JS
+
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk

@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_CORS_1
-title: About CORS(1)
+lng_pair: id_About_CORS_3
+title: About CORS(3)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -9,14 +9,14 @@ author: Yeonuk
 # multiple category is not supported
 category: CORS
 # multiple tag entries are possible
-tags: [Browser policy]
+tags: [cors, browser policy]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-06-12 09:00:00 +0900
+date: 2023-06-14 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -40,28 +40,25 @@ date: 2023-06-12 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Cross-Origin Resource Sharing(이하 CORS)에 대한 글입니다.
+### This is an article about Cross-Origin Resource Sharing (CORS).
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### CORS 기본 동작 순서
+#### The provenance comparison process
 
-1. 클라이언트에서 HTTP 요청 헤더에 Origin을 담아 전달(여기서 Origin은 protocol, host, port로 구성되어 있습니다. 요청을 보내는 도메인을 표시합니다.)
-2. 서버는 응답헤더에 Access-Control-Allow-Origin을 담아 클라이언트로 전달합니다.
-   - 이 때, 값으로 '이 리소스를 접근하는 것이 허용된 출처 origin'임을 내려보냅니다.
-3. 서버에서 응답을 받은 브라우저가 클라이언트와 서버의 origin을 비교합니다.
-   - 유효하지 않다면 응답을 사용하지 않고 버립니다.**(CORS 에러 발생)**
+Let's continue with the details of where and how requests are made, responses are received, and comparisons are made.
+Let's explain it through characters and pictures.
 
-##### 상황 가정
+##### Characters
 
-Open API 등 외부 URL에서 데이터를 불러올 필요가 있을 때
+1. The client (user or device) sends a request to the browser. This request can be generated on the client side via JavaScript code, HTML form, etc.
+2. The browser takes the request from the client and sends a request to the web server based on that request. This request is sent to the web server using the HTTP protocol.
+3. The web server processes the request it receives and generates a response to the client. The response is organized in a format that follows the HTTP protocol and can include data or status codes.
+4. The browser accepts the response from the web server.
+5. The browser compares the origin of the response with the origin of the current page. If the origin is the same, the browser displays the response. This can mean displaying the content of the web page, images, scripts, etc.
 
-##### 해법
+##### Illustration
 
-BE에서 서버간 통신으로 정보를 받아와 우리 서비스에 맞는 API로 재작성해서 FE로 보내야 한다. FE는 데이터를 노출한다.
-
-##### CORS가 왜 필요할까?
-
-2편에서 마저 다루도록 하겠습니다. **[링크](https://yeonuk44.github.io/posts/2023-06-13-CORS-2)**
+![CORS Structure](:post_cors_3_pic.jpg)

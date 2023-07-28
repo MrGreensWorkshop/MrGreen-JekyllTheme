@@ -7,9 +7,9 @@ title: About Context Provider
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: REACT
+category: React
 # multiple tag entries are possible
-tags: [Js, React]
+tags: [react, js]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
@@ -40,15 +40,16 @@ date: 2023-06-11 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Context Provider에 대한 글입니다.
+### This is a post about Context Provider.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-**Provider**는 정의한 context를 하위 컴포넌트에게 전달하는 역할을 합니다.
-중첩하여 사용할 수 있고, 중첩할 경우 하위 provider 값이 우선시 됩니다.
-provider의 value state가 변화할 때마다 components는 전부 rerender가 됩니다.
+A **Provider** is responsible for passing the context you define to child components.
+It can be nested, and when nested, the child provider value takes precedence.
+Whenever the value state of the provider changes, the components will all rerender.
 
-- Context란 무엇인가
-  - 어떤 객체를 핸들링하기 위한 접근 수단
+#### What is Context
+
+A means of access to handle some object

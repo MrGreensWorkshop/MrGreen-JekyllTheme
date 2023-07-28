@@ -9,7 +9,7 @@ author: Yeonuk
 # multiple category is not supported
 category: OS
 # multiple tag entries are possible
-tags: [sudo, command]
+tags: [os, sudo]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
@@ -40,21 +40,21 @@ date: 2023-06-18 09:00:00 +0900
 
 <!-- outline-start -->
 
-### sudo 명령어에 대한 글입니다.
+### This is an article about the sudo command.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### sudo 란?
+#### What is sudo?
 
-Superuser Do(이하 sudo)는 \*유닉스 계열 OS에서 관리자 권한으로 실행할 수 있게 하는 명령어 입니다.
-개인적으로 sudo는 "Superuser Do"보다 "Shut Up and Do" 라는 해석이 저는 더 받아들이기 쉽더라고용...ㅋㅋㅋ
+Superuser Do (abbreviated as sudo) is a command that allows you to run as an administrator on a **Unix-like OS.**
+Personally, I find the interpretation of sudo as "Shut Up and Do" easier to accept than "Superuser Do"...lol.
 
-##### 관리자 권한으로 실행해야 수행되는 명령들이 있습니다. 사용자가 곧 관리자라고 생각하면 될 것인데 왜 명령이 필요할까요?
+##### There are commands that need to be run as administrator to perform. Why do we need commands when we can assume that the user is the administrator?
 
-바로 빌려주는게 더 안전하기 때문입니다. root로 로그인하는 사용자의 권한 유지 시간이 짧을 수록 안전하고 좋습니다.
+Because it's safer to give them away right away. The less time a user logging in as root has to hold onto privileges, the better.
 
-##### 다른 운영체제에서는 쓸 수 없을까요?
+##### Can't I use it on other operating systems?
 
-현재는 유닉스 기반 운영체제만이 sudo를 사용할 수 있는 것은 아닙니다.Windows와 MacOS에서도 사용할 수 있습니다. 왜 Window와 MacOS에서도 sudo를 통해 제어할 수 있는지도 궁금하여 sudo에 대하여 2편에서 마저 작성해보도록 하겠습니다.
+Unix-based operating systems aren't the only ones that can use sudo at the moment - it's also available on Windows and MacOS. I'll be writing about sudo in part 2, as I'm curious as to why Windows and MacOS can also be controlled via sudo.

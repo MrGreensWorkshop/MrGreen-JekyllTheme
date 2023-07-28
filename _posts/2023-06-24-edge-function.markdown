@@ -1,15 +1,15 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Edge-Function
-title: About edge function
+title: Edge function에 대하여
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: Edge function
+category: Module
 # multiple tag entries are possible
-tags: [edge function]
+tags: [module]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page

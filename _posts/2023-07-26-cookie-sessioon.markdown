@@ -1,7 +1,9 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Cookie_Session
-title: About cookie and session
+title: 쿠키(cookie)와 세션(session)에 대하여
+# title: About cookie and session
+
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk

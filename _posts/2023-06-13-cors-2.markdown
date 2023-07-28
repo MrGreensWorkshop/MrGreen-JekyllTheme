@@ -1,0 +1,78 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_CORS_2
+title: About CORS(2)
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: CORS
+# multiple tag entries are possible
+tags: [cors, browser policy]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-06-13 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### This is an article about Cross-Origin Resource Sharing (CORS).
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+#### CORS Basic Sequence of Events
+
+Developers often encounter the Cross-Origin Resource Sharing (CORS) error when dealing with APIs (especially FE developers!).
+
+---.
+
+##### Why does the browser, which sits between the client and the server, have a policy like CORS?
+
+**Because they can be exploited because they go straight through the webserver to make the request.**
+To understand this, we need to be aware of the Same-Origin Policy (SOP).
+
+- An SOP is a security mechanism that restricts scripts running in a web browser from interacting with resources loaded from a different source (origin).
+- Making exceptions to the SOP is CORS! It allows cross-origin resources to be allowed within the scope of the policy, or allows the SOP to be bypassed by setting certain headers on the server side.
+
+##### Here's an example: It makes me wonder. How can this be exploited if it goes through a webserver?
+
+Let's take a look at the specific ways that making requests through the web server can be exploited.
+
+1. XSS attacks: XSS is an attack in which a malicious user injects a malicious script into a web page to be executed in another user's browser. If you have access to resources on another domain, a web page with malicious scripts can steal or manipulate information by accessing resources on another domain.
+2. CSRF attacks: CSRF is an attack in which an authenticated user sends a request to a specific website against their will, based on the intentions of an attacker. If the resources of another domain are accessible, the malicious website can use the user's credentials to send forged requests to services in the other domain.
+   This is why SOPs were introduced to prevent such attacks, and CORS was created to securely control communication between sources.
+
+##### You can read more about CORS here: ##### Which begs the question: do policies like CORS exist for server-to-server communication?
+
+The short answer is: **No**.
+That's because server-to-server communication happens directly, with no **intermediary** like a webserver. Servers operate in a trusted environment. This is because they verify each other's identities and encrypt the data they communicate to ensure the confidentiality and integrity of the data.
+
+##### I'm curious to know the details of the provenance comparison process.
+
+We'll cover it in part 3. **[Link](https://yeonuk44.github.io/posts/2023-06-14-CORS-3)**
