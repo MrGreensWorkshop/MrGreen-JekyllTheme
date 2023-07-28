@@ -1,0 +1,100 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_TS_TSX
+title: TS와 TSX에 대하여
+# title: About TS and TSX
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Typescript
+# multiple tag entries are possible
+tags: [typescript, javascript]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-11 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### ts와 tsx의 차이에 대하여
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+개발을 하다가 저희 프로젝트는 타입스크립트로 구성되기에 ts 확장자를 사용하는데 tsx 확장자도 눈에 들어오기 시작했습니다.
+모르는채로 넘어갈 수 없기에 확인 후 글을 정리합니다.
+
+#### ts 확장자란?
+
+.ts 확장자는 TypeScript 파일을 나타냅니다.
+TypeScript는 JavaScript에 정적 타입 체크 기능을 추가한 언어로, JavaScript와 거의 동일한 문법을 사용하며 타입 시스템을 지원합니다.
+
+.ts 확장자를 사용하는 파일은 타입스크립트 코드로 인식됩니다.
+
+#### tsx 확장자란?
+
+.tsx 확장자는 TypeScript로 작성된 파일 중 리액트 컴포넌트를 정의하는 파일을 나타냅니다. 리액트는 UI를 구성하기 위한 JavaScript 라이브러리이며, JSX라는 문법을 사용하여 컴포넌트를 작성합니다.
+.tsx 확장자를 사용하는 파일은 JSX 문법을 포함한 타입스크립트 코드로 인식됩니다.
+
+그렇다면 JSX는 무엇일까요?
+
+#### JSX란?
+
+리액트(React)에서 사용되는 JavaScript의 확장 문법입니다.
+JSX는 XML과 유사한 구문을 사용하여 JavaScript 코드 안에 UI 컴포넌트를 작성할 수 있도록 도와줍니다.
+
+JSX를 사용하여 간단한 "Hello, World!" 메시지를 표시하는 리액트 컴포넌트의 예시를 보여드리겠습니다.
+
+#### JSX 사용 예시
+
+```javascript
+import React from "react";
+
+function HelloWorld() {
+  return <div>Hello, World!</div>;
+}
+
+export default HelloWorld;
+```
+
+"div" 태그는 리액트 컴포넌트의 출력을 나타내는 HTML 요소입니다.
+JSX 문법을 사용하여 이러한 태그를 작성하고, JavaScript 코드 안에서 리액트 컴포넌트를 정의할 수 있습니다.
+
+##### JSX에 대한 오해
+
+그럼 HTML 요소가 포함되면 무조건 .jsx 확장자를 사용해야 하는가라는 의문이 저는 먼저 들었습니다.
+확인 결과 확장자를 .jsx로 사용하는 것은 필수적인 것은 아니였습니다.
+JSX 문법을 사용하는 파일의 확장자를 .js로 지정하여도 동작은 합니다. 다만, .jsx 확장자를 사용함으로써 개발자와 도구가 파일이 JSX를 포함하고 있음을 명확히 알 수 있으므로 가독성과 유지 보수성을 높일 수 있습니다.
+
+두 확장자의 개념에 대해서는 이제 알았습니다. 그럼 상황에 맞는 확장자를 선택하기 위해서는 어떻게 판단할까요?
+
+##### 상황에 맞는 사용 방법
+
+기본적으로 .tsx 확장자를 사용하는 파일은 타입스크립트의 타입 체크를 수행하면서 리액트 컴포넌트를 작성합니다.
+또한 .ts 확장자를 사용하는 파일은 타입스크립트 타입 체크를 수행하면서 일반적인 JavaScript 코드를 작성합니다.
