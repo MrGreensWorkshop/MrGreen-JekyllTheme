@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Browser
-title: 브라우저(Browser)에 대하여
+title: About browser
 # title: About browser
 
 # post specific
@@ -41,38 +41,38 @@ date: 2023-07-27 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 브라우저에 대하여
+### About Browsers
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-늘 사용하는 브라우저에 대해 궁금해본 적이 있나요?
-저는 제가 개발한 코드나 프로젝트가 브라우저에 무슨 원리로 렌더링되는가? 보다 내 코드의 life cycle등의 코드 실행 순서에 더 비중을 주는 편이였습니다.
-문득 브라우저에 대한 호기심이 생겼고, 이번 기회에 브라우저의 이해를 높이고자 합니다.
+Have you ever wondered about your favorite browser?
+I've always been more concerned with the order of code execution, such as the life cycle of my code, than how my code or project is rendered in the browser.
+I've suddenly become curious about browsers, and I'd like to take this opportunity to better understand them.
 
-우선 사용자가 url에 접근하는 시점부터, 브라우저 영역 안에 웹 콘텐츠들이 보여지기까지 어떤 일이 일어나는지 알아보고자 합니다.
+First, I want to understand what happens from the time a user approaches a URL to the time web content is displayed inside the browser area.
 
-#### 브라우저를 구성하는 것은 무엇일까요?
+#### What makes up a browser?
 
-**바로 '엔진'입니다. **
-브라우저는 사실 여러 엔진으로 구성되어 있습니다.
-하나의 예시로 Chrome 브라우저를 살펴보면 브라우저 엔진은 Chromium, 렌더링(레이아웃) 엔진은 Blink, JS 런타임(JS엔진)은 V8이라 불립니다.
+**It's the "engine. **
+A browser is actually made up of multiple engines.
+If we look at the Chrome browser as an example, the browser engine is called Chromium, the rendering (layout) engine is called Blink, and the JS runtime (JS engine) is called V8.
 
-#### 브라우저 엔진이란?
+#### What is a browser engine?
 
-브라우저 엔진은 사용자가 어떤 액션을 하는 것부터, 화면에 결과물을 그래픽으로 보여주기까지의 과정에 관여합니다.
-웹이 점점 발전함에 따라 엔진은 고도화 되었고, 화면에 결과물을 보여주는 렌더링 엔진과 JS 구문을 분석하는 JS 런타임 엔진이 별도로 분리 되었습니다.
+The browser engine is involved in the process from the user performing an action to the graphical representation of the result on the screen.
+As the web has evolved, the engine has become more sophisticated, and the rendering engine, which displays the results on the screen, and the JS runtime engine, which parses the JS syntax, have been separated.
 
-#### 렌더링 엔진이란?
+#### What is a rendering engine?
 
-렌더링 엔진은 사용자가 요청한 HTML 문서와 CSS를 파싱하여 화면에 그리는 역할을 수행합니다.
-브라우저 엔진과 렌더링 엔진의 분류를 명확하게 하지 않는 경우가 많은데 JS 엔진이 브라우저 없이 독립적으로 실행될 수 있는 반면, 렌더링 엔진은 그렇지 않기 때문입니다.
+The rendering engine is responsible for parsing the HTML document and CSS requested by the user and drawing it on the screen.
+The distinction between a browser engine and a rendering engine is often unclear because a JS engine can run independently without a browser, whereas a rendering engine cannot.
 
-#### 렌더링 엔진 동작 과정
+#### How a rendering engine works
 
-렌더링 엔진은 네트워크 계층으로부터 문서를 전송받습니다.
+The rendering engine receives documents from the network layer.
 
-1. HTML 파싱: 엔진은 이 태그들을 파싱하여 DOM(Document Object Model) node로 변환합니다. node들이 계층 구조로 구성되어 DOM tree로 구축됩니다.
-2. CSS 파싱: HTML 파싱이 이루어진 이후, CSS를 파싱하여 CSSOM을 생성합니다.
-3. 어테치먼트(렌더트리 생성): 앞서 생성된 DOM tree와 CSSOM을 결합하여, 색상 및 면적 등의 시각적 정보를 담은 Reder tree를 구축할 수 있습니다. 이 과정에서 화면에 표시되지 않는 DOM node는 제외됩니다.
+1. HTML parsing: The engine parses these tags and translates them into Document Object Model (DOM) nodes, which are organized in a hierarchical structure to build a DOM tree.
+2. CSS parsing: After the HTML is parsed, the CSS is parsed to generate the CSSOM.
+3. Attachments (Render tree generation): By combining the DOM tree and CSSOM, you can build a Reder tree that contains visual information such as color and area. This process excludes DOM nodes that are not visible on the screen.

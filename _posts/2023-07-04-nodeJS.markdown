@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_NodeJS
-title: Node.js에 대하여
+title: About node.js
 # title: About nodeJS
 
 # post specific
@@ -41,30 +41,30 @@ date: 2023-07-04 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Node JS에 대하여
+### About Node JS
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-오늘은 개발자가 많이 쓰지만 **왜** 쓰는지는 모르는 Node.js에 대하여 알아보겠습니다.
+Today we're going to learn about Node.js, a language that developers use a lot but don't know **Why**.
 
-#### 개념
+#### Concept
 
-Node.js는 JavaScript 런타임 환경으로서, 웹 서버를 개발하기 위해 사용되는 도구 중 하나입니다.
+Node.js is a JavaScript runtime environment, one of the tools used to develop web servers.
 
-#### 장점
+#### Advantages
 
-비동기 이벤트 기반 아키텍처를 가지고 있어, 높은 처리량과 확장성을 제공하며, 실시간 웹 애플리케이션을 구축하는 데 적합합니다.
+It has an asynchronous, event-driven architecture, providing high throughput and scalability, and is ideal for building real-time web applications.
 
-#### 활용
+#### Utilization
 
-Node.js는 내장된 HTTP 모듈을 통해 웹 서버를 만들 수 있습니다. 개발자는 HTTP 모듈을 사용하여 HTTP 요청을 수신하고, 응답을 생성하여 클라이언트에게 보낼 수 있습니다. 이를 통해 Node.js는 웹 서버로서 동작할 수 있으며, 클라이언트 요청에 대한 응답을 처리하는 서버 애플리케이션을 개발할 수 있습니다.
+Node.js can create web servers through its built-in HTTP module. Developers can use the HTTP module to receive HTTP requests, generate responses, and send them to clients. This allows Node.js to act as a web server, and you can develop server applications that handle responses to client requests.
 
-#### 생태계
+#### Ecosystem
 
-Express, Koa, Hapi 등과 같은 웹 프레임워크를 포함하고 있습니다. 이러한 프레임워크는 웹 서버 개발을 더욱 간편하고 효율적으로 만들어줍니다. 웹 서버 뿐만 아니라 Node.js를 사용하여 웹 애플리케이션의 다른 부분인 API 서버, 실시간 통신, 마이크로서비스 등을 개발할 수도 있습니다.
+Node.js includes web frameworks such as Express, Koa, Hapi, and others. These frameworks make web server development easier and more efficient. In addition to web servers, you can also use Node.js to develop other parts of web applications: API servers, real-time communication, microservices, etc.
 
-#### 정리
+#### Summary
 
-Node.js는 자바스크립트를 사용하여 웹 서버를 구축하는 데 많이 활용되는 도구입니다.
+Node.js is a popular tool for building web servers using JavaScript.

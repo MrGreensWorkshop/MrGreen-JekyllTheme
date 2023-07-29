@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_TS_TSX
-title: TS와 TSX에 대하여
+title: About TS & TSX
 # title: About TS and TSX
 
 # post specific
@@ -41,37 +41,37 @@ date: 2023-07-11 09:00:00 +0900
 
 <!-- outline-start -->
 
-### ts와 tsx의 차이에 대하여
+### About the difference between TS and TSX
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-개발을 하다가 저희 프로젝트는 타입스크립트로 구성되기에 ts 확장자를 사용하는데 tsx 확장자도 눈에 들어오기 시작했습니다.
-모르는채로 넘어갈 수 없기에 확인 후 글을 정리합니다.
+During my development, I started to see the TS extension, which I use because our project is written in TypeScript, but also the TSX extension.
+I couldn't let it go unnoticed, so I checked it out and organized the post.
 
-#### ts 확장자란?
+#### What is the TS extension?
 
-.ts 확장자는 TypeScript 파일을 나타냅니다.
-TypeScript는 JavaScript에 정적 타입 체크 기능을 추가한 언어로, JavaScript와 거의 동일한 문법을 사용하며 타입 시스템을 지원합니다.
+The .ts extension represents a TypeScript file.
+TypeScript is a language that adds static type checking to JavaScript, using almost the same syntax as JavaScript and supporting a type system.
 
-.ts 확장자를 사용하는 파일은 타입스크립트 코드로 인식됩니다.
+Files that use the .ts extension are recognized as TypeScript code.
 
-#### tsx 확장자란?
+#### What is the TSX extension?
 
-.tsx 확장자는 TypeScript로 작성된 파일 중 리액트 컴포넌트를 정의하는 파일을 나타냅니다. 리액트는 UI를 구성하기 위한 JavaScript 라이브러리이며, JSX라는 문법을 사용하여 컴포넌트를 작성합니다.
-.tsx 확장자를 사용하는 파일은 JSX 문법을 포함한 타입스크립트 코드로 인식됩니다.
+The .tsx extension indicates a file written in TypeScript that defines a React component. React is a JavaScript library for constructing UIs, and it uses a syntax called JSX to write components.
+Files that use the .tsx extension are recognized as Typescript code that contains JSX syntax.
 
-그렇다면 JSX는 무엇일까요?
+So what is JSX?
 
 #### JSX란?
 
-리액트(React)에서 사용되는 JavaScript의 확장 문법입니다.
-JSX는 XML과 유사한 구문을 사용하여 JavaScript 코드 안에 UI 컴포넌트를 작성할 수 있도록 도와줍니다.
+An extended syntax for JavaScript used in React.
+JSX helps you write UI components inside your JavaScript code using an XML-like syntax.
 
-JSX를 사용하여 간단한 "Hello, World!" 메시지를 표시하는 리액트 컴포넌트의 예시를 보여드리겠습니다.
+Let's show an example of a React component that uses JSX to display a simple "Hello, World!" message.
 
-#### JSX 사용 예시
+#### Example of using JSX
 
 ```javascript
 import React from "react";
@@ -83,18 +83,18 @@ function HelloWorld() {
 export default HelloWorld;
 ```
 
-"div" 태그는 리액트 컴포넌트의 출력을 나타내는 HTML 요소입니다.
-JSX 문법을 사용하여 이러한 태그를 작성하고, JavaScript 코드 안에서 리액트 컴포넌트를 정의할 수 있습니다.
+The "div" tag is an HTML element that represents the output of a React component.
+You can write these tags using JSX syntax, and define React components inside your JavaScript code.
 
-##### JSX에 대한 오해
+You can learn more about JSX here: ##### Misconceptions about JSX
 
-그럼 HTML 요소가 포함되면 무조건 .jsx 확장자를 사용해야 하는가라는 의문이 저는 먼저 들었습니다.
-확인 결과 확장자를 .jsx로 사용하는 것은 필수적인 것은 아니였습니다.
-JSX 문법을 사용하는 파일의 확장자를 .js로 지정하여도 동작은 합니다. 다만, .jsx 확장자를 사용함으로써 개발자와 도구가 파일이 JSX를 포함하고 있음을 명확히 알 수 있으므로 가독성과 유지 보수성을 높일 수 있습니다.
+So, the first question I had was, do I have to use the .jsx extension whenever I include an HTML element?
+As it turns out, it's not mandatory to use the .jsx extension.
+Files that use JSX syntax can be named with a .js extension and still work. However, using the .jsx extension makes it clear to developers and tools that the file contains JSX, making it more readable and maintainable.
 
-두 확장자의 개념에 대해서는 이제 알았습니다. 그럼 상황에 맞는 확장자를 선택하기 위해서는 어떻게 판단할까요?
+Now that you know the concept of both extensions, how do you determine which one is right for your situation?
 
-##### 상황에 맞는 사용 방법
+##### How to use contextual
 
-기본적으로 .tsx 확장자를 사용하는 파일은 타입스크립트의 타입 체크를 수행하면서 리액트 컴포넌트를 작성합니다.
-또한 .ts 확장자를 사용하는 파일은 타입스크립트 타입 체크를 수행하면서 일반적인 JavaScript 코드를 작성합니다.
+By default, files that use the .tsx extension write React components while performing TypeScript's type checks.
+Also, files with the .ts extension write normal JavaScript code while performing TypeScript type checking.

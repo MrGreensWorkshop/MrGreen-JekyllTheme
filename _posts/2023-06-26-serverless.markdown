@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Serverless_Function
-title: Serverless function에 대하여
+title: About serverless function
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,44 +40,44 @@ date: 2023-06-26 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 서버리스 함수에 대한 글입니다.
+### This is a post about serverless functions.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### 서버리스 함수(Serverless Functions)함수란?
+#### Serverless FunctionsWhat is a function?
 
-클라우드 컴퓨팅 환경에서 실행되는 독립적인 함수입니다. 서버리스 아키텍처는 개발자가 서버 인프라를 관리하지 않고도 애플리케이션 코드를 실행할 수 있도록 하는 방식입니다. 서버리스 함수는 필요할 때만 호출되며, 인프라 리소스에 대한 자동 확장과 관리를 클라우드 제공업체가 처리합니다.
+It is an independent function that runs in a cloud computing environment. Serverless architecture is a way for developers to run application code without having to manage server infrastructure. Serverless functions are called only when needed, and the cloud provider handles the automatic scaling and management of infrastructure resources.
 
-또한, 이벤트 기반(event-driven)으로 동작하며, 특정 이벤트가 발생하면 실행됩니다. 예를 들어, HTTP 요청, 메시지 큐, 타이머 등의 이벤트가 서버리스 함수를 트리거할 수 있습니다. 함수는 단일 기능을 수행하며, 일반적으로 몇 초에서 몇 분까지 짧은 실행 시간을 갖습니다.
+They are also event-driven, meaning they are executed when certain events occur. For example, events such as HTTP requests, message queues, and timers can trigger serverless functions. Functions perform a single function and typically have a short execution time, ranging from a few seconds to a few minutes.
 
-##### 서버리스 함수의 주요 특징
+##### Key Features of Serverless Functions
 
-- **관리의 간소화**: 서버 인프라를 관리할 필요 없이 개발자는 함수의 코드에 집중할 수 있습니다. 인프라 자동화, 확장, 모니터링 등은 클라우드 제공업체가 처리합니다.
+- Simplified management: Without the need to manage server infrastructure, developers can focus on the code of the function. Infrastructure automation, scaling, monitoring, etc. are handled by the cloud provider.
 
-- **이벤트 트리거**: 함수는 이벤트에 의해 트리거되며, 필요한 경우 자동으로 확장됩니다. 이벤트는 다양한 소스에서 발생할 수 있으며, 서버리스 함수를 트리거하여 실행합니다.
+- Event-triggered: Functions are triggered by events and automatically scale if necessary. Events can come from a variety of sources and trigger serverless functions to execute.
 
-- **과금 방식**: 대부분의 서버리스 플랫폼은 함수의 실행 시간과 리소스 소비량에 따라 과금합니다. 함수가 비활성 상태인 경우에도 인프라 리소스가 할당되지 않으므로 효율적인 비용 관리가 가능합니다.
+- Billing: Most serverless platforms charge based on the execution time and resource consumption of the function. Even when a function is inactive, no infrastructure resources are allocated, allowing for efficient cost management.
 
-- **확장성**: 함수는 필요에 따라 자동으로 확장되므로, 트래픽이 증가하거나 부하가 발생할 때도 안정적으로 처리할 수 있습니다.
+- Scalable: Functions automatically scale as needed, so they can reliably handle increased traffic or load.
 
-##### 서버리스 함수 예시(Vercel)
+##### Example of a serverless function (Vercel)
 
 ```javascript
 const sharp = require("sharp");
 
 module.exports = async (req, res) => {
   try {
-    const { image } = req.body; // 이미지 데이터는 요청의 바디로부터 받아옵니다.
+    const { image } = req.body; // Get the image data from the body of the request.
 
-    // 이미지 압축을 위해 sharp 라이브러리를 사용합니다.
+    // We use the sharp library for image compression.
     const compressedImageBuffer = await sharp(image)
-      .resize(800) // 이미지 리사이징
-      .toBuffer(); // 압축된 이미지 버퍼 반환
+      .resize(800) // resize the image
+      .toBuffer(); // return the compressed image buffer
 
-    // 압축된 이미지를 저장하거나 클라이언트에게 반환합니다.
-    // 이 예시에서는 압축된 이미지를 바로 클라이언트에게 반환합니다.
+    // Save the compressed image or return it to the client.
+    // In this example, we return the compressed image directly to the client.
     res.setHeader("Content-Type", "image/jpeg");
     res.send(compressedImageBuffer);
   } catch (error) {
@@ -87,6 +87,6 @@ module.exports = async (req, res) => {
 };
 ```
 
-###### 예시 설명
+###### Example Description
 
-sharp 라이브러리를 사용하여 이미지 압축을 처리합니다. 애즈펑션의 요청 바디로부터 이미지 데이터를 받아온 후, sharp를 사용하여 이미지를 리사이징하고 압축된 이미지 버퍼를 생성합니다. 마지막으로, 압축된 이미지를 클라이언트에게 반환합니다.
+Use the sharp library to handle image compression. After receiving the image data from the request body of the ad function, it uses sharp to resize the image and create a compressed image buffer. Finally, it returns the compressed image to the client.

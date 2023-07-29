@@ -41,38 +41,38 @@ date: 2023-07-17 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 버퍼에 대하여
+### About buffers
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-어느 날, 개발 동료에게 버퍼가 뭐냐는 질문을 받았습니다.
-어디서 많이 들어본 단어임에도 제대로 알지 못하고 있었다는 것을 느끼고 학습 후, 글을 작성했습니다.
+One day, I was asked by a development colleague what a buffer was.
+Realizing that I had heard the word a lot, but didn't really know what it was, I did some research and wrote about it.
 
-우선 버퍼란 무엇일까요?
+First of all, what is a buffer?
 
-#### 버퍼란?
+#### What is a buffer?
 
-컴퓨터 과학에서 사용되는 용어로 , 데이터를 임시로 저장하는 메모리 영역을 가리킵니다. 버퍼는 데이터를 한 곳에서 다른 곳으로 전송하는 동안 임시로 저장하는 역할을 합니다.
+A term used in computer science that refers to an area of memory that temporarily stores data. A buffer serves to temporarily store data while it is being transferred from one place to another.
 
-그럼 갑자기 궁금해지는게 있습니다. 우리가 일상 속에서 영상을 보다가 기다리는 상황에 자주 사용하는 버퍼링은 무엇을 의미하는 걸까요?
+So here's the question. What does buffering, which we often use in our daily lives when we're waiting to watch a video, mean?
 
-#### 버퍼링이란?
+#### What is buffering?
 
-데이터를 임시로 저장하는 버퍼를 사용하는 과정이나 기술을 가리킵니다.
-버퍼링은 데이터의 흐름을 조절하고, 데이터 송수신 간의 속도 차이나 지연을 완화하기 위해 버퍼를 활용합니다.
+It refers to the process or technique of using buffers to temporarily store data.
+Buffering utilizes buffers to regulate the flow of data and mitigate speed differences or delays between sending and receiving data.
 
-그럼 다시 돌아와 버퍼의 사용법에 대하여 알아보겠습니다.
+So let's come back and see how buffers are used.
 
-#### 버퍼의 사용법
+#### How buffers are used
 
-파일을 읽을 때, 운영 체제는 일정량의 데이터를 한 번에 읽어서 버퍼에 저장합니다. 이후 프로그램은 버퍼에서 데이터를 읽어들입니다.
+When reading a file, the operating system reads a certain amount of data at a time and stores it in a buffer. Later, programs read data from the buffer.
 
-#### 버퍼 사용의 이점
+#### Benefits of using buffers
 
-파일을 조금씩 여러 번 읽는 것보다 효율적이고 빠른 속도를 제공합니다. 데이터를 한 번에 저장하거나 전송할 수 있기 때문입니다.
+It's more efficient and faster than reading a file several times in small chunks. This is because data can be stored or transferred all at once.
 
-#### 결론
+#### Conclusion
 
-버퍼는 데이터의 일시적인 저장과 처리 속도의 조절을 통해 시스템 성능을 향상시키는 데 사용되는 하나의 개념적인 용어이다.
+A buffer is a conceptual term used to describe the temporary storage of data and the throttling of processing speed to improve system performance.

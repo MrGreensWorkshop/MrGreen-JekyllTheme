@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Local_Session_Storage
-title: 로컬, 세션 저장소에 대하여
+title: About local & session storage
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,44 +40,45 @@ date: 2023-06-29 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Local Storage와 Session Storage에 대하여
+### About Local Storage and Session Storage
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-이번에 비회원에 대한 로직 시스템 개발을 맡게되어 Storage에 대한 개념을 알아볼 수 있는 시간이 있었습니다.
-알게된 개념이 매우 유용하다고 생각되어 글로 정리하고자 합니다.
+I've been assigned to develop a logic system for non-members, which has given me some time to learn about storage concepts.
+I thought the concepts I learned were very useful, so I'd like to summarize them in a post.
 
-#### Local Storage 개념
+#### Local Storage Concept
 
-먼저 Local Storage의 개념입니다.
-Local Storage는 웹 브라우저의 클라이언트 측에 데이터를 영구적으로 저장하는 웹 스토리지 메커니즘입니다. 로컬 스토리지를 사용하면 웹 페이지가 닫히거나 재시작해도 저장된 데이터가 유지됩니다.
+First, the concept of Local Storage.
+Local Storage is a web storage mechanism that persistently stores data on the client side of a web browser. With local storage, stored data is retained even when the web page is closed or restarted.
 
-로컬 스토리지는 HTML5에서 도입된 Web Storage API의 일부로 제공됩니다. 이 API를 사용하여 데이터를 로컬 스토리지에 저장하고 검색할 수 있습니다. 로컬 스토리지는 도메인과 브라우저에 종속되며, 같은 도메인의 모든 페이지에서 접근할 수 있습니다.
+Local storage is provided as part of the Web Storage API introduced in HTML5. You can use this API to store and retrieve data in local storage. Local storage is domain- and browser-dependent and can be accessed from any page in the same domain.
 
-로컬 스토리지는 키-값 쌍으로 데이터를 저장합니다. 데이터는 문자열 형태로 저장되며, JavaScript를 사용하여 로컬 스토리지에 데이터를 추가, 수정, 삭제 및 조회할 수 있습니다. 로컬 스토리지는 주로 웹 애플리케이션에서 사용자의 설정, 사용자 환경, 사용자 지정 데이터 등을 영구적으로 저장하고 활용하는 데 사용됩니다.
+Local storage stores data as key-value pairs. Data is stored as strings, and you can add, modify, delete, and retrieve data in local storage using JavaScript. Local storage is primarily used by web applications to persistently store and utilize user settings, user preferences, custom data, and more.
 
-로컬 스토리지의 용량 제한은 브라우저마다 다를 수 있으며, 일반적으로 5MB 정도의 용량을 가지고 있습니다. 브라우저에서는 개발자 도구를 통해 로컬 스토리지의 데이터를 확인하고 관리할 수 있습니다.
+The capacity limit for local storage can vary from browser to browser, and is typically around 5 MB. Browsers allow you to view and manage data in local storage through developer tools.
 
-#### Session Storage 개념
+#### Session Storage concepts
 
-다음은 Session Storage의 개념입니다.
+The following are the concepts of Session Storage
 
-웹 브라우저의 클라이언트 측에 데이터를 저장하는 웹 스토리지 메커니즘 중 하나입니다.
-세션 스토리지는 웹 애플리케이션에서 사용자의 세션 기간 동안 데이터를 임시로 저장하고 유지하는 데 사용됩니다.
+It is one of the web storage mechanisms for storing data on the client side of a web browser.
+Session storage is used by web applications to temporarily store and maintain data for the duration of a user's session.
 
-세션 스토리지는 클라이언트 측에서만 유지되며, 웹 브라우저를 닫거나 세션을 종료하면 저장된 데이터가 삭제됩니다. 이는 세션 스토리지가 영구적인 데이터 저장을 위한 용도가 아니라, 임시 데이터나 세션 관련 정보를 유지하기 위한 용도로 사용된다는 것을 의미합니다.
+Session storage is maintained only on the client side, and the stored data is deleted when you close the web browser or end the session. This means that session storage is not intended for permanent data storage, but rather for maintaining temporary data or session-related information.
 
-세션 스토리지는 JavaScript를 사용하여 웹 페이지에서 데이터를 읽고 쓸 수 있습니다. sessionStorage 객체를 통해 세션 스토리지에 접근할 수 있으며, 데이터는 키-값 쌍으로 저장됩니다. 저장된 데이터는 도메인과 세션에 한정되며, 다른 도메인이나 세션에서는 접근할 수 없습니다.
+Session storage allows you to read and write data from a web page using JavaScript. You can access session storage through the sessionStorage object, and data is stored as key-value pairs. The stored data is specific to your domain and session and cannot be accessed by other domains or sessions.
 
-세션 스토리지는 웹 애플리케이션에서 로그인 상태 유지, 임시 데이터 저장, 사용자 환경 설정 등 다양한 용도로 활용될 수 있습니다. 하지만 보안적인 측면에서는 주의해야 합니다. 세션 스토리지에 중요한 정보를 저장하거나 민감한 데이터를 보관하는 것은 취약점을 유발할 수 있으므로, 보안을 고려하여 사용해야 합니다.
+Session storage can be utilized for a variety of purposes in web applications, including keeping users logged in, storing temporary data, and setting user preferences. However, you need to be careful from a security perspective. Storing critical information or sensitive data in Session Storage can introduce vulnerabilities and should be used with security in mind.
 
-#### Local Storage와 Session Storage의 차이점
+#### Differences between Local Storage and Session Storage
 
-다음은 차이점에 대해서 알아보겠습니다.
+The following are the differences
 
-1. 데이터 수명: 세션 스토리지는 웹 브라우저 세션이 유지되는 동안 데이터를 저장하며, 웹 브라우저를 닫거나 세션을 종료하면 데이터가 삭제됩니다. 반면에 로컬 스토리지는 데이터가 명시적으로 제거되기 전까지 계속 유지됩니다.
-2. 데이터 공유: 세션 스토리지는 같은 세션(동일한 웹 브라우저 세션) 내에서만 데이터에 접근할 수 있습니다. 다른 브라우저 탭이나 창에서는 동일한 세션 스토리지에 접근할 수 있지만, 다른 세션에서는 접근할 수 없습니다. 반면에 로컬 스토리지는 동일한 도메인의 모든 탭과 창에서 데이터에 접근할 수 있습니다.
-3. 데이터 지속성: 세션 스토리지는 웹 브라우저 세션 동안에만 유지되므로, 사용자가 웹 페이지를 다시 방문할 때 데이터는 새로 생성됩니다. 반면에 로컬 스토리지는 데이터가 영구적으로 유지됩니다. 사용자가 웹 페이지를 다시 방문하더라도 이전에 저장된 데이터는 그대로 유지됩니다.
-4. 용량 제한: 일반적으로 로컬 스토리지의 용량 제한은 세션 스토리지보다 큽니다. 세션 스토리지의 경우 일반적으로 5MB 정도의 용량을 가지고 있으며, 로컬 스토리지는 더 큰 용량을 가질 수 있습니다. 그러나 브라우저마다 용량 제한이 다를 수 있으므로 실제 용량은 브라우저에 따라 다를 수 있습니다.
+1. Data lifetime: Session storage stores data for as long as the web browser session lasts, and the data is deleted when you close the web browser or end the session. Local storage, on the other hand, keeps data until it is explicitly removed.
+2. Data sharing: Session storage can only access data within the same session (the same web browser session). You can access the same session storage from different browser tabs or windows, but not from different sessions. Local storage, on the other hand, allows you to access data from all tabs and windows in the same domain.
+3. Data persistence: Session storage persists only for the duration of the web browser session, so the data is fresh when the user revisits the web page. Local storage, on the other hand, keeps data persistent. Even if a user revisits a web page, the previously stored data remains intact.
+4. Capacity limit: Generally, the capacity limit of local storage is higher than that of session storage. Session storage typically has a capacity of around 5 MB, while local storage can have a larger capacity. However, different browsers may have different capacity limits, so the actual capacity may vary depending on the browser.
+   Translated with www.DeepL.com/Translator (free version)

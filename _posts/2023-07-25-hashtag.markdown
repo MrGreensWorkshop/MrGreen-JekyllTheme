@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Implementing_hashtag_function
-title: 해시태그(hashtag) 기능 구현에 대하여
+title: About implementing the hashtag feature
 # title: About Implementing hashtag function
 
 # post specific
@@ -41,20 +41,20 @@ date: 2023-07-25 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 해시태그 기능 구현하기
+### Implementing hashtag functionality
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-SNS에서 해시태그는 꼭 필요한 기능으로 요구되곤 합니다.
-사용자들 간의 상호작용을 유발할 수도 있고, 트렌드 및 마케팅적 요소로도 사용할 수 있기 때문입니다.
+On social media, hashtags are often considered a must-have feature.
+They can trigger interactions between users, and they can also be used as a trending and marketing element.
 
-이번에 재직중인 기업에서 해시태그를 구현할 기회가 생겨, 간단한 예제를 통해 어떤 식으로 구현하면 될지 알아보도록 하겠습니다.
+I had the opportunity to implement hashtags at my current company, so I thought I'd walk through a simple example to show you how to do it.
 
-#### 해시태그 구현 예제
+#### Hashtag implementation example
 
-1. 해시태그 컴포넌트 생성: 해시태그를 표시하기 위한 React 컴포넌트를 생성합니다.
+1. Create a hashtag component: Create a React component to display the hashtag.
 
 ```javascript
 # hashtag.js
@@ -66,7 +66,7 @@ const Hashtag = ({ tag }) => {
 };
 ```
 
-2. 해시태그 사용: 컴포넌트를 사용하여 해시태그를 표시합니다.
+2. Use hashtags: Use the component to display hashtags.
 
 ```javascript
 # App.js
@@ -89,7 +89,7 @@ const App = () => {
 export default App;
 ```
 
-위 예제는 Hashtag 컴포넌트를 만들어 해시태그를 표시하고, 'App' 컴포넌트에서 'hashtags' 배열에 저장된 해시태그를 매핑하여 화면에 표시합니다.
-'key' prop은 React에서 컴포넌트 리스트를 렌더링할 때 필요한 고유 식별자로 사용했습니다.
+The above example creates a Hashtag component to display hashtags, and maps the hashtags stored in the 'hashtags' array in the 'App' component to display them on the screen.
+We used the 'key' prop as a unique identifier that React needs when rendering the component list.
 
-다음은 서버에서 해시태그를 구현하기 위해 어떤 식으로 설계되어야 하는가에 대해 알아보겠습니다.
+Next, we'll talk about how hashtags should be designed to be implemented on the server.

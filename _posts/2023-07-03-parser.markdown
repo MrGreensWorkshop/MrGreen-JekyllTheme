@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Parser
-title: Parser에 대하여
+title: About parser
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,25 +40,25 @@ date: 2023-07-03 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Parser란?
+### What is a Parser?
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-이번에 게시물 생성 시간에 따른 텍스트 노출 기능을 구현하던 중(정확히는 수정된 게시물에 대해서 생성 시간 옆에 트리거 텍스트를 구현하는 일이였습니다)
-Parser라는 함수를 다루게 되어 알아보고, 알게된 정보를 공유하고자 합니다.
+While implementing a feature to display text based on post creation time (or more precisely, trigger text next to creation time for modified posts), I came across a function called Parser.
+I came across a function called Parser and wanted to share what I learned.
 
-#### 개념
+#### Concept
 
-Parser는 주어진 입력 데이터를 분석하여 의미 있는 구성 요소로 분리하는 소프트웨어 도구나 모듈을 말합니다.
-Parser는 일련의 문자열 또는 토큰을 입력으로 받아 문법 규칙에 따라 분석하고, 그 결과를 트리 또는 추상 구문 표현으로 변환합니다.
+A Parser is a software tool or module that analyzes a given input data and separates it into meaningful components.
+A parser takes a series of strings or tokens as input, analyzes them according to grammar rules, and converts the results into a tree or abstract syntactic representation.
 
-#### 주 사용처
+#### Main uses
 
-컴파일러, 인터프리터, 데이터베이스 쿼리 처리기, 마크업 언어 처리기 등과 같은 프로그램에서 사용됩니다.
-이러한 프로그램은 특정 문법 규칙에 따라 입력을 분석하고, 그에 맞게 토큰화하거나 구문 트리를 생성하여 의미를 해석하거나 실행합니다.
+Used in programs such as compilers, interpreters, database query processors, markup language processors, etc.
+These programs analyze input according to specific grammar rules, tokenize it accordingly, or generate a syntax tree to interpret or execute its meaning.
 
-#### 결론
+#### Conclusion
 
-프로그램은 입력 데이터를 효과적으로 처리하고, 데이터의 의미를 이해하거나 실행할 수 있습니다.
+Programs can effectively process input data and understand or execute the meaning of the data.

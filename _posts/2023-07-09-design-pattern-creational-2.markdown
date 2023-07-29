@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Design-Pattern-Creational-2
-title: 디자인 패턴, 생성 패턴에 대하여(2)
+title: About design pattern creational(2)
 # title: About Design Pattern Creational(2)
 
 # post specific
@@ -41,36 +41,36 @@ date: 2023-07-09 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 디자인 패턴, 생성 패턴(2)
+### Design Patterns, Generation Patterns (2)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-지난 글에선 싱글톤 패턴에 대해서 알아보았습니다.
-싱글톤 패턴을 한 줄로 설명하자면 하나의 인스턴스만을 생성하고 이를 전역적으로 접근할 수 있게 하는 기법이였습니다.
+In the last post, we looked at the Singleton pattern.
+In a nutshell, the Singleton pattern is a technique for creating only one instance and making it globally accessible.
 
-이번 글에선 생성 패턴 중 팩토리(Factory) 패턴에 대해 학습하도록 하겠습니다.
+In this article, we'll learn about the Factory pattern, which is one of the creation patterns.
 
-#### 팩토리(Factory) 패턴이란?
+#### What is the Factory pattern?
 
-객체 생성을 담당하는 별도의 팩토리 클래스를 도입하여 객체 생성 과정을 캡슐화하고 유연성을 제공하는 기법입니다.
+It is a technique that encapsulates the object creation process and provides flexibility by introducing a separate factory class that is responsible for creating objects.
 
-#### 캡슐화란?
+#### What is encapsulation?
 
-객체 내부 구현을 외부로부터 숨겨 오로지 외부에서 제공되는 인터페이스를 통해 객체와 상호작용할 수 있도록 합니다. 이를 통해 객체의 상태와 동작을 보호하고, 외부에서의 잘못된 접근에 대해 객체를 보호할 수 있습니다. 객체는 오직 메서드를 통해 데이터를 조작하고 상태를 변경할 수 있습니다.
+Hiding an object's internal implementation from the outside world, allowing you to interact with the object solely through externally provided interfaces. This protects the object's state and behavior, and protects the object against improper access from the outside world. An object can only manipulate data and change its state through methods.
 
-TS(Type Script)로 팩토리 패턴을 적용하는 예시를 보여드릴까합니다.
+I'd like to show you an example of applying the factory pattern with Type Script (TS).
 
-#### 예시
+#### Example
 
 ```javascript
-// 인터페이스: 생성될 객체들이 구현해야 하는 메서드를 정의합니다.
+// Interface: defines the methods that the objects to be created must implement.
 interface Product {
   operation(): void;
 }
 
-// 구체적인 객체 클래스: 인터페이스를 구현한 구체적인 객체들입니다.
+// Concrete object classes: these are the concrete objects that implement the interface.
 class ConcreteProductA implements Product {
   operation(): void {
     console.log("ConcreteProductA operation");
@@ -83,7 +83,7 @@ class ConcreteProductB implements Product {
   }
 }
 
-// 팩토리 클래스: 객체를 생성하고 반환하는 역할을 합니다.
+// Factory class: responsible for creating and returning objects.
 class Factory {
   createProduct(type: string): Product {
     if (type === "A") {
@@ -96,7 +96,7 @@ class Factory {
   }
 }
 
-// 클라이언트 코드
+// Client code
 const factory = new Factory();
 
 const productA = factory.createProduct("A");
