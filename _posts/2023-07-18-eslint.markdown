@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_ES_Lint
-title: ESLint에 대하여
+title: About ES Lint
 # title: About ESLint
 
 # post specific
@@ -41,42 +41,42 @@ date: 2023-07-18 09:00:00 +0900
 
 <!-- outline-start -->
 
-### ESLint 대하여
+### About ESLint
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-이번에 저희 회사에선 프로젝트에 Eslint 관련 규칙을 강하게 잡는 것을 목표로 eslintrc.json 파일의 설정을 수정하고 관련하여 코드 포맷팅을 진행하고 있습니다.
+This time around, we're modifying the settings in the eslintrc.json file and formatting the code around it, with the goal of enforcing Eslint-related rules in our project.
 
-포맷팅을 하는 과정에서 알게된 바가 있어 이를 여러분과 공유하고 알아보도록 하겠습니다.
-우선 저희 팀의 프로젝트에 대한 설명이 필요합니다. 저희 프로젝트에는 원래 약한 단계의 eslint 설정이 되어있었고, 이에 따라 프로젝트의 의존성에 eslint가 이미 설치되어 있었습니다.
+During the process of formatting, we learned some things that we would like to share with you.
+First, a little background on our team's project. Our project originally had a weak ESLINT setup, which meant that ESLINT was already installed in our project's dependencies.
 
-이슈는 여기서부터 출발합니다.
+The issue starts here.
 
-#### 이슈
+#### issue
 
-포맷팅을 할 때, 변경될 eslintrc.json 과 package.json 파일이 제공되었습니다.
-저 같은 경우 eslint는 이미 설치되어 있으니 설정 파일만 변경하고 lint 명령어를 통해 포맷팅 수행을 하면 된다고 생각했습니다.
-그러나 package.json 파일에는 "@typescript-eslint/eslint-plugin" 이런 의존성 코드들이 존재했습니다.
-따라서 저의 생각은 "이미 eslint가 설치되어 있는데 의존성을 별도로 설치해야 할까?" 라는 생각을 했습니다.
+When formatting, we were given the eslintrc.json and package.json files to change.
+I thought that since eslint was already installed, I would only need to change the configuration file and perform the formatting via the lint command.
+However, in the package.json file, there were dependency codes like "@typescript-eslint/eslint-plugin".
+So my thought was, "I already have eslint installed, do I need to install the dependencies separately?" I thought.
 
-그래서 알고 있지만 확실히 하기 위해 학습을 해봤습니다.
+So I know I do, but just to be sure, I did some learning.
 
-#### ESLint란?
+#### What is ESLint?
 
-ESLint는 자체적으로 코드 스타일 규칙, 일반적인 JavaScript 규칙, ECMAScript 버전별 규칙 등을 제공합니다.
-그러나 몇 가지 특정한 케이스나 프레임워크에 대한 규칙은 ESLint의 기본 제공 규칙에 포함되어 있지 않을 수 있습니다.
-이러한 경우 해당 프레임워크나 라이브러리에 대한 ESLint 플러그인을 설치하여 추가적인 규칙을 활성화할 수 있습니다.
+ESLint itself provides code style rules, general JavaScript rules, ECMAScript version-specific rules, and more.
+However, rules for some specific cases or frameworks may not be included in ESLint's built-in rules.
+In these cases, you can enable additional rules by installing an ESLint plugin for that framework or library.
 
-eslint에 대해 알았습니다. 그럼 왜 별도의 eslint 관련 플러그인을 의존성으로 설치하는 것일까요?
+Now that we know about ESLint, why install a separate ESLint-specific plugin as a dependency?
 
-#### 왜 별도로 eslint 플러그인을 설치하는가
+#### Why install a separate ESLINT plugin?
 
-1. 프레임워크/라이브러리 특정 규칙: 특정 프레임워크나 라이브러리는 고유한 규칙을 가질 수 있습니다. 예를 들어, React 애플리케이션에는 JSX 문법, React 훅 사용 규칙 등이 있을 수 있습니다. React 관련 ESLint 플러그인인 eslint-plugin-react를 설치하면 이러한 React 관련 규칙을 활성화할 수 있습니다.
-2. 커뮤니티 기여: 특정 프로젝트나 커뮤니티에서 개발한 사용자 정의 규칙이나 플러그인을 사용하고 싶을 수 있습니다. 이러한 플러그인을 설치하여 커뮤니티에서 제공하는 추가 규칙을 활용할 수 있습니다. 예를 들어, TypeScript 관련 ESLint 규칙을 제공하는 @typescript-eslint/eslint-plugin 플러그인을 설치할 수 있습니다.
-3. 프로젝트 요구 사항: 특정 프로젝트나 팀은 고유한 규칙을 정의하여 일관된 코드 스타일과 품질을 유지하고 싶을 수 있습니다. 이 경우에는 팀이나 프로젝트에 맞는 사용자 정의 규칙을 정의하고 관리하기 위해 해당 규칙을 활성화하는 플러그인을 설치할 수 있습니다.
+1. Framework/library specific rules: Certain frameworks or libraries may have their own rules. For example, a React application might have a JSX syntax, rules for using React hooks, etc. You can enable these React-specific rules by installing the React-specific ESLint plugin, eslint-plugin-react.
+2. Community contributions: You may want to use custom rules or plugins developed by a specific project or community. You can install these plugins to take advantage of additional rules provided by the community. For example, you can install the @typescript-eslint/eslint-plugin plugin, which provides TypeScript-specific ESLint rules.
+3. Project requirements: Specific projects or teams may want to define their own rules to maintain consistent code style and quality. In this case, you can install a plugin that enables those rules to define and manage custom rules for your team or project.
 
-#### 결론
+#### Conclusion
 
-ESLint 플러그인은 추가적인 규칙, 설정, 확장 프로그램을 제공하여 개발자가 ESLint를 특정 프레임워크, 라이브러리, 프로젝트 요구 사항에 맞게 유연하게 확장하고 적용할 수 있도록 도와줍니다.
+ESLint plugins provide additional rules, settings, and extensions, giving developers the flexibility to extend and adapt ESLint to their specific framework, library, and project needs.

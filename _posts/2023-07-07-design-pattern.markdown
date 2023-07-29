@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Design-Pattern
-title: 디자인 패턴에 대하여
+title: About design pattern
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
@@ -39,56 +39,56 @@ date: 2023-07-07 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 디자인 패턴이란
+### What is a design pattern?
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-이번에 회사에서 업무 처리 방침 과정을 개편하며 1주일간 학습 기간을 받게 되었습니다.
-이에 따라 팀장님의 추천대로 디자인 패턴에 대한 학습을 선행적으로 수행할 예정입니다.
+My company is reorganizing its workflow process and I've been given a one-week learning period.
+So, as recommended by my team leader, I'm going to take the initiative to learn about design patterns.
 
-#### 디자인 패턴이란 무엇일까요?
+You can read more about them here: #### What are design patterns?
 
-소프트웨어 설계에서 발생하는 공통적인 문제들에 대한 해결책을 제시하는 구조화된 접근 방법입니다.
-즉, 디자인 패턴은 경험적으로 쌓인 소프트웨어 설계의 노하우를 체계화하고 공유하기 위해 사용됩니다.
+A structured approach to providing solutions to common problems in software design.
+In other words, design patterns are used to organize and share empirical software design know-how.
 
-그렇다면 이를 따로 학습해야 하는 이유는 무엇일까요?
+So why should you learn them?
 
-#### 디자인 패턴 학습 이유
+#### Reasons to learn design patterns
 
-소프트웨어의 유연성, 재사용성, 확장성을 향상시키는 데 중요한 역할을 합니다.
-패턴은 일반적인 설계 문제를 해결하기 위한 템플릿이나 가이드로 작용하며, 개발자들이 비슷한 문제를 해결하는 데 도움을 줍니다.
+They play an important role in making software more flexible, reusable, and extensible.
+Patterns act as templates or guides for solving common design problems and help developers solve similar problems.
 
-학습하는 이유는 알았습니다. 그렇다면 디자인 패턴은 어떤 상황을 분류하고 분류된 종류가 무엇일까요?
+We know why we're learning them, but what situations do design patterns categorize and what are the different kinds?
 
-#### 디자인 패턴의 분류와 종류
+#### Classification and types of design patterns
 
-1. 생성(Creational) 패턴: 객체의 생성과 관련된 패턴으로, 객체를 생성하는 방법과 객체 간의 의존성을 관리하는 방법에 대해 다룹니다.
-   - 대표적인 예로는 싱글톤(Singleton), 팩토리(Factory), 추상 팩토리(Abstract Factory) 등이 있습니다.
-2. 구조(Structural) 패턴: 클래스나 객체를 조합하여 더 큰 구조를 형성하는 패턴으로, 클래스나 객체 간의 관계와 상호작용을 다룹니다.
-   - 대표적인 예로는 어댑터(Adapter), 데코레이터(Decorator), 컴포지트(Composite) 등이 있습니다.
-3. 행위(Behavioral) 패턴: 객체나 클래스 간의 상호작용과 알고리즘을 다루는 패턴으로, 프로그램의 동작을 조직화하고 제어하는 방법에 대해 다룹니다.
-   - 대표적인 예로는 옵저버(Observer), 스트래티지(Strategy), 커맨드(Command) 등이 있습니다.
+1. Creational patterns: These are patterns related to the creation of objects, and they deal with how to create objects and how to manage dependencies between objects.
+   - Typical examples include Singleton, Factory, and Abstract Factory.
+2. Structural pattern: Patterns that combine classes or objects to form a larger structure, covering relationships and interactions between classes or objects.
+   - Examples include Adapter, Decorator, and Composite.
+3. Behavioral patterns: These are patterns that deal with interactions and algorithms between objects or classes, and how to organize and control the behavior of a program.
+   - Some examples include Observer, Strategy, and Command.
 
-디자인 패턴에는 객체라는 단어가 많이 나오는데, 객체가 정확히 무엇일까요?
+The word object appears a lot in design patterns, but what exactly is an object?
 
-#### 객체란?
+#### What is an object?
 
-클래스의 인스턴스를 의미합니다.
-즉, 소프트웨어에서 데이터와 해당 데이터를 조작하는 동작을 함께 묶어 표현합니다.
-객체는 속성(데이터)와 메서드(동작)을 함께 묶어 표현합니다.
+It's an instance of a class.
+In other words, it's a bundled representation of data and the behavior of manipulating that data in software.
+An object represents properties (data) and methods (behavior) bundled together.
 
-#### 클래스의 인스턴스란?
+#### What is an instance of a class?
 
-클래스를 기반으로 생성된 개별 객체를 의미합니다. 개별 객체는 해당 클래스에 정의된 속성과 메서드를 실제로 가지고 있는 객체입니다.
+An individual object created based on a class. An individual object is an object that actually has the properties and methods defined in that class.
 
-즉, 클래스와 인스턴스의 차이에 대해서 논하자면 클래스는 추상적인 개념에서 묶는 점이고, 인스턴스는 실체화된 객체입니다.
+In other words, the difference between a class and an instance is that a class is an abstract concept that binds things together, while an instance is a materialized object.
 
-#### 클래스와 인스턴스의 관계
+#### Relationship between classes and instances
 
-인스턴스는 클래스의 특성을 상속받으며, 해당 클래스에서 정의된 속성과 메서드를 사용할 수 있습니다.
-인스턴스는 클래스의 생성자를 호출하여 생성되며, 각각의 인스턴스는 독립적인 상태를 가질 수 있습니다.
-이는 인스턴스마다 속성의 값이 다를 수 있고, 메서드 호출에 따라 동작이 다를 수도 있습니다.
+An instance inherits the characteristics of a class and can use the properties and methods defined in that class.
+Instances are created by calling the class's constructor, and each instance can have independent state.
+This means that different instances can have different values for properties, and different methods can have different behaviors when called.
 
-다음 시간엔 패턴에 대해 자세히 알아보겠습니다.
+Next time, we'll take a closer look at the pattern.

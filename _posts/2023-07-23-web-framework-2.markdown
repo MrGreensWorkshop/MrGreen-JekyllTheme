@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Web_Framework_2
-title: Web framework에 대하여(2)
+title: About web framework(2)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,37 +40,37 @@ date: 2023-07-23 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 웹 프레임워크에 대하여(2)
+### About Web Frameworks (2)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-지난 글에서 우리는 간단한 웹서버를 생성하는 방법에 대해 코드를 작성하고 실습을 진행해보았습니다. 하지만 그것만으론 웹 프레임워크를 대체할 수 있다 말하기 힘듭니다.
+In the last post, we wrote code and went through a hands-on exercise on how to create a simple web server, but that's not a substitute for a web framework.
 
-그래서 이번 글에선 웹 프레임워크의 핵심 기능 중 하나인 라우팅 구현을 expressjs없이 구현해보도록 하겠습니다.
+So in this post, we'll try to implement one of the core features of a web framework - routing - without expressjs.
 
-#### 우선 라우팅은 무엇일까요?
+#### First of all, what is routing?
 
-간단하게 URL과 요청 핸들러를 연결해주는 기능을 제공합니다.
-즉, 웹 애플리케이션의 다양한 엔드포인트를 관리할 수 있습니다.
+Simply put, it provides the ability to connect URLs and request handlers.
+In other words, it allows you to manage the various endpoints of your web application.
 
-#### 엔드포인트(Endpoint)란 무엇일까요?
+Here's an example: #### What is an endpoint?
 
-엔드포인트란 웹 API에서 클라이언트가 특정한 요청을 수행하기 위해 접근하는 URL 경로를 나타냅니다.
+An endpoint is a URL path in a web API that a client accesses to perform a specific request.
 
-#### 엔드포인트 예시
+#### endpoints example
 
-GET /posts: 모든 게시물을 가져오는 엔드포인트
-GET /posts/{id}: 특정 게시물을 가져오는 엔드포인트
-POST /posts: 새로운 게시물을 생성하는 엔드포인트
-PUT /posts/{id}: 특정 게시물을 수정하는 엔드포인트
-DELETE /posts/{id}: 특정 게시물을 삭제하는 엔드포인트
+GET /posts: Endpoint to get all posts
+GET /posts/{id}: Endpoint to get a specific post
+POST /posts: Endpoint to create a new post
+PUT /posts/{id}: Endpoint to edit a specific post
+DELETE /posts/{id}: endpoint to delete a specific post
 
-그럼 다시 돌아와서 Express 없이 Node.js만을 사용하여 라우팅을 구현해보겠습니다.
-저흰 HTTP 모듈을 사용할 예정입니다. Node.js에는 기본적으로 내장된 HTTP 모듈이 있습니다. 이를 사용하여 웹 서버를 만들고 라우팅을 구현해보겠습니다.
+So let's come back and implement the routing using just Node.js without Express.
+We'll be using the HTTP module. Node.js has a built-in HTTP module by default. Let's use it to create a web server and implement routing.
 
-##### 예시
+##### Example
 
 ```javascript
 const http = require("http");
@@ -80,7 +80,7 @@ const server = http.createServer((req, res) => {
 
   if (method === "GET" && url === "/") {
     res.statusCode = 200;
-    // HTTP 응답 헤더는 웹 서버가 클라이언트에게 보내는 메타데이터로, 응답의 속성과 내용에 대한 정보를 담고 있습니다.
+    // HTTP response headers are metadata sent by the web server to the client, containing information about the properties and content of the response.
     res.setHeader("Content-Type", "text/plain");
     res.end("Hello, World!");
   } else if (method === "GET" && url === "/about") {
@@ -100,23 +100,24 @@ server.listen(port, () => {
 });
 ```
 
-위의 코드를 간단하게 설명하자면 단순한 HTTP 서버를 생성하고, 요청에 따라 라우팅을 구현합니다. 경로에 따른 응답을 받습니다. 지정한 경로 외의 요청은 404 Not Found 응답을 보냅니다.
+To simplify the above code, it creates a simple HTTP server, and implements routing based on requests. It receives responses based on the route, and sends a 404 Not Found response for requests outside the specified route.
 
-##### 추가
+##### Add information
 
-요청에 HTTP 응답 헤더에 Content-Type과 같은 필드를 설정하지 않으면 어떻게 되는지 궁금하여 알아보았습니다.
+We were curious to see what would happen if we didn't set a field like Content-Type in the HTTP response header for our request.
 
-###### 응답 헤더에 필드를 설정하지 않을 시 발생할 수 있는 문제
+###### Possible problems with not setting fields in the response header
 
-클라이언트는 서버로부터 받은 응답의 내용에 대한 정보를 알 수 없게 됩니다.
-정보를 알 수 없다는 것은 클라이언트가 받은 데이터를 올바르게 해석하고 처리하는 데에 영향을 줄 수 있습니다.
+The client will be uninformed about the content of the response it receives from the server.
+This lack of information can affect the client's ability to correctly interpret and process the data it receives.
 
-###### 예시
+###### Example
 
-서버가 Content-Type을 헤더에 설정하지 않을 시, 웹 브라우저는 해당 응답을 일반 텍스트로 간주할 수 있습니다. 결과적으로 HTML 태그나 구조를 올바르게 해석 하지 못하고 일반 텍스트로 표시하게 될 수 있습니다.
+If the server does not set the Content-Type in the header, the web browser may assume that the response is plain text. As a result, it may not be able to interpret the HTML tags or structures correctly and display them as plain text.
 
-다음 글에선 위의 코드를 웹 프레임워크인 Express를 통해 사용한 예시와 웹 프레임워크 사용의 장단점에 대해 다루도록 하겠습니다.
+In the next post, I'll cover an example of using the above code with the web framework Express and the pros and cons of using a web framework.
 
-참고한 링크
+References.
 
-- [nodejs 공식문서](https://nodejs.org/ko/docs/guides/anatomy-of-an-http-transaction)
+- [nodejs official documentation](https://nodejs.org/ko/docs/guides/anatomy-of-an-http-transaction)
+  Translated with www.DeepL.com/Translator (free version)

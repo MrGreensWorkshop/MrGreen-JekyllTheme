@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Image_Compression_1
-title: 이미지 압축에 대하여(1)
+title: About image compression(1)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,7 +40,7 @@ date: 2023-06-22 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Image Compression에 대한 글입니다.
+### This is an article about Image Compression.
 
 {:data-align="center"}
 
@@ -48,21 +48,21 @@ date: 2023-06-22 09:00:00 +0900
 
 #### Package Manager
 
-예를들어 서비스에 사용된 이미지와 앞으로 업로드될 이미지에 대해 압축을 본 서비스에 적용한다고 가정해보겠습니다.
+For example, let's say we want to apply compression to our service for images used in the service and for images that will be uploaded in the future.
 
-##### 이상적인 설계란?
+##### What is the ideal design?
 
-제가 생각하는 이상적인 설계란 다음과 같습니다.
+To me, an ideal design looks like this
 
-1. 내가 사용하는 프로젝트 구조 파악
-2. 관련 라이브러리 선행 조사
-3. 프로젝트에 맞는 라이브러리 선별
-4. 라이브러리 테스트 후, 각각 최대 용량 몇까지 요구 사항인 {num}MB로 줄일 수 있는지 조사
-5. 현재 서비스에 렌더링된 이미지의 평균 용량 체크
-6. 적용 가능한 라이브러리 선별 후, 테스트
-7. 기존 업로드된 이미지 압축
-8. 앞으로 업로드될 이미지에 대해 압축
+1. understand the project structure I'm using
+2. research relevant libraries
+3. select the right libraries for my project
+4. test the libraries and investigate how many of their maximum size can be reduced to the required {num}MB each
+5. check the average size of images rendered on the current service
+6. select applicable libraries and test them
+7. compress existing uploaded images
+8. compress future uploaded images
 
-**이미지 압축은 어디서 진행되는게 좋은가?**
-실제로 적용해보기 전에 일반적으로 이미지 압축을 어느 파트(클라이언트 혹은 서버)에서 수행하는게 좋을지 고민되어 알아보았습니다.
-자세한 사항은 2편에서 다루도록 하겠습니다.
+**Where should image compression be done?**
+Before actually applying it, I was wondering where image compression should be performed in general (client or server).
+We'll cover that in part 2.

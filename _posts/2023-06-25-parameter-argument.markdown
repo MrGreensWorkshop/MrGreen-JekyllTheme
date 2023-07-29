@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Parameter-Argument
-title: 매개변수와 인자에 대하여
+title: About parameter argument
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,24 +40,24 @@ date: 2023-06-25 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 파라미터와 인자에 대한 글입니다.
+### This article is about parameters and arguments.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-개발자로 업무에 임하게 되면 파라미터와 인자에 대해 수없이 많은 글과 얘기를 하게 됩니다.
+When you're a developer, you're going to write and talk about parameters and arguments a lot.
 
-파라미터와 인자는 그만큼 많이 쓰이지만 저 같은 경우 같은 의미로 사용하기도 했는데요.
-정확한 의미를 알고보니 구분되는 용어였습니다.
+Parameters and arguments are used a lot, but I used to use them interchangeably.
+It turns out they're not the same thing.
 
-#### 파라미터(Parameters)란 무엇인가?
+#### What are Parameters?
 
-파라미터는 함수나 메서드의 정의 부분에서 사용되는 변수를 가리킵니다.
-함수나 메서드를 정의할 때 파라미터를 선언하고, 해당 파라미터는 함수나 메서드 내에서 사용되는 값들을 받아들이는 역할을 합니다.
-**즉, 파라미터는 함수나 메서드의 입력으로 사용되며, 함수가 호출될 때 값을 전달받을 수 있습니다.**
+A parameter is a variable used in the definition part of a function or method.
+When you define a function or method, you declare a parameter, and that parameter accepts values that are used within the function or method.
+**In other words, a parameter is used as an input to a function or method and can be passed a value when the function is called.**
 
-#### 그렇다면 인자(Arguments)란 무엇일까요?
+#### So what are arguments?
 
-인자는 함수를 호출할 때 전달되는 값들을 가리킵니다. 함수를 호출할 때 인자는 함수에 전달되어 파라미터에 할당됩니다.
-**즉, 인자는 함수나 메서드를 호출할 때 함수의 기대되는 파라미터의 값을 전달하는 방법입니다.**
+Arguments are the values that are passed to a function when it is called. When you call a function, arguments are passed to the function and assigned to parameters.
+**In other words, arguments are a way of passing the values of the function's expected parameters when you call a function or method.**

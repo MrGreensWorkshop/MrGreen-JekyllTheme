@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Edge-Function
-title: Edge function에 대하여
+title: About edge function
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,37 +40,37 @@ date: 2023-06-24 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Edge function에 대한 글입니다.
+### This is a post about the Edge function.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### Edge function이란?
+#### What is an edge function?
 
-Edge function은 클라우드 환경에서 실행되는 서버리스 컴퓨팅 기능입니다. 일반적으로 웹 애플리케이션 또는 API와 같은 클라우드 서비스의 일부로 사용됩니다.
+An edge function is a serverless computing function that runs in a cloud environment. They are typically used as part of a cloud service, such as a web application or API.
 
-제 회사에서 사용하고 있는 Vercel과 NextJS를 중심으로 설명하겠습니다.
+I'll focus on Vercel and NextJS, which I use at my company.
 
 ##### Vercel
 
-###### Vercel 이란?
+###### What is Vercel?
 
-Vercel은 정적 웹사이트 및 싱글 페이지 애플리케이션(SPA)을 위한 서버리스 플랫폼입니다. Vercel의 애즈펑션(AS Function)은 이 플랫폼에서 제공하는 서버리스 함수(Serverless Functions)의 한 형태입니다.
+Vercel is a serverless platform for static websites and single-page applications (SPAs). Vercel's AS Function is a form of Serverless Functions provided by this platform.
 
 ###### Vercel Edge function
 
-클라우드 환경에서 실행되는 작은 코드 조각으로, 특정 HTTP 요청에 대한 응답을 생성하고 처리하는 데 사용됩니다. 이는 서버리스 아키텍처의 핵심 개념 중 하나인 함수 계산(Function-as-a-Service, FaaS)의 구현 방식입니다.
+A small piece of code that runs in a cloud environment and is used to generate and process responses to specific HTTP requests. It is an implementation of Function-as-a-Service (FaaS), one of the core concepts of serverless architecture.
 
-Vercel의 다른 기능과 통합하여 사용할 수 있으며, 정적 웹사이트와 함께 호스팅되는 애플리케이션의 전체 기능을 개발하고 배포하는 데 사용될 수 있습니다.
+It can be used in conjunction with other features of Vercel, and can be used to develop and deploy the full functionality of applications hosted alongside static websites.
 
 ##### NextJS
 
-###### NextJS 이란?
+###### What is NextJS?
 
-React 기반의 프레임워크로서, SSR(Server-Side Rendering), 정적 사이트 생성(Static Site Generation), 클라이언트 사이드 라우팅 등을 지원합니다. Next.js에서 애즈펑션은 서버리스 함수를 사용하여 백엔드 로직을 구현하고 실행할 수 있는 기능입니다.
+It is a React-based framework that supports server-side rendering (SSR), static site generation, client-side routing, and more. In Next.js, AdsFunction is a feature that allows you to implement and execute backend logic using serverless functions.
 
 ###### NextJS Edge function
 
-API 라우트를 생성하는 방식으로 구현됩니다. .js 또는 .ts 확장자를 가진 파일을 생성하고, 해당 파일 내에서 API 엔드포인트의 로직을 작성합니다. 이 파일은 Next.js 애플리케이션과 함께 빌드되며, 생성된 API 엔드포인트는 클라이언트나 다른 부분에서 호출할 수 있습니다.
-더하여 Next.js 애플리케이션 내에서 백엔드 로직을 구현하고, 데이터베이스와의 상호 작용, 외부 API 호출, 인증 및 인가, 파일 업로드 등의 작업을 수행할 수 있습니다. 이를 통해 Next.js 애플리케이션은 클라이언트와 서버 사이의 완전한 통합을 제공하며, 다양한 종류의 데이터 요청을 처리할 수 있습니다.
+is implemented by creating an API route. You create a file with a .js or .ts extension, and within that file you write the logic for the API endpoint. This file is built with your Next.js application, and the generated API endpoints can be called by clients or other parts of your application.
+In addition, you can implement backend logic within your Next.js application, interact with databases, call external APIs, authenticate and authorize, upload files, and more. This gives your Next.js application full integration between client and server, and it can handle many different kinds of data requests.

@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Design-Pattern-Creational-3
-title: 디자인 패턴, 생성 패턴에 대하여(3)
+title: About design pattern creational(3)
 # title: About Design Pattern Creational(3)
 
 # post specific
@@ -41,74 +41,74 @@ date: 2023-07-10 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 디자인 패턴, 생성 패턴(3)
+### Design Patterns, Generative Patterns (3)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-지난 글에선 팩토리 패턴에 대해서 알아보았습니다.
-이번에도 한 줄로 설명하자면 객체 생성을 담당하는 별도의 팩토리 클래스를 도입해, 객체 생성 과정을 캡슐화하고 유연성을 제공하는 기법이였습니다.
+In the last post, we introduced the Factory pattern.
+In a nutshell, it's a technique that encapsulates the object creation process and provides flexibility by introducing a separate factory class responsible for object creation.
 
-이번 글에선 생성 패턴 중 추상 팩토리(Abstract Factory) 패턴에 대해 학습하도록 하겠습니다.
+In this article, we'll learn about the Abstract Factory pattern, which is one of the creation patterns.
 
-#### 추상 팩토리(Abstract Factory) 패턴이란?
+#### What is the Abstract Factory pattern?
 
-이를 설명하기에 앞서 팩토리 패턴의 개념을 알고 넘어가야 하는데요. 팩토리 패턴에서는 하나의 하나의 팩토리 클래스가 인자 값에 따라 조건문을 사용해 다양한 서브 클래스를 리턴하는 형식이였습니다.
+Before we get into this, it's important to understand the concept of the factory pattern. In the factory pattern, a single factory class returns a variety of subclasses using conditional statements based on argument values.
 
-추상 팩토리 패턴에서는 팩토리 클래스에서 서브 클래스를 생성하는 데에 있어 조건문을 제외합니다.
+The abstract factory pattern excludes conditional statements from generating subclasses from a factory class.
 
-TS(Type Script)로 팩토리 패턴을 적용하는 예시를 보여드릴까합니다.
+I'd like to show you an example of applying the Factory Pattern with Type Script (TS).
 
-#### 예시
+#### Example
 
 ```javascript
-// 추상 팩토리 인터페이스
+// Abstract Factory interface
 interface AbstractFactory {
   createProduct(): Product;
 }
 
-// WindowsFactory 클래스
+// WindowsFactory class
 export class WindowsFactory implements AbstractFactory {
   createProduct(): Product {
     return new WindowsProduct();
   }
 }
 
-// MacFactory 클래스
+// MacFactory class
 export class MacFactory implements AbstractFactory {
   createProduct(): Product {
     return new MacButton();
   }
 }
 
-// 추상 제품 클래스
+// abstract product class
 abstract class Product {
   abstract operation(): string;
 }
 
-// WindowsFactory의 제품 클래스
+// Product class in WindowsFactory
 class WindowsProduct extends Product {
   operation(): string {
     return "Rendering a Windows Product";
   }
 }
 
-// MacFactory의 제품 클래스
+// Product class for MacFactory
 class MacButton extends Product {
   operation(): string {
     return "Rendering a Mac Product ";
   }
 }
 
-// 클라이언트 코드
+// Client code
 function createUI(factory: AbstractFactory) {
   const button = factory.createProduct();
 
   button.operation();
 }
 
-// 사용 예시
+// Example usage
 const windowsFactory = new WindowsFactory();
 createUI(windowsFactory);
 

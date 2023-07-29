@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Fast_API
-title: Fast API에 대하여
+title: About fast API
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,38 +40,38 @@ date: 2023-06-28 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Fast API란 무엇인가
+### What is the Fast API
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-이번엔 Python 기반 웹 API 개발에 사용되는 프레임 워크인 Fast API에 대해 알아보도록 하겠습니다.
+Today we're going to learn about Fast API, a framework used to develop Python-based web APIs.
 
-알아보기 전에 Python으로 서버를 개발하는 것이 일반적인지 궁금하여 알아보았습니다. 제가 아는 서버 개발자들은 Java를 기반으로 하는 Spring을 주로 사용했기 때문입니다.
+Before we dive in, I wanted to find out if it's common to develop servers in Python, because the server developers I know have mostly used Spring, which is based on Java.
 
-#### 웹 개발에 가장 많이 사용되는 상위 5개 언어
+#### Top 5 most popular languages for web development
 
-2021년 Stack Overflow의 개발자 설문조사 결과를 기준으로, 그에 따른 점유율
+Based on the results of Stack Overflow's developer survey in 2021, with their respective shares
 
-1. JavaScript: 67.8%
-2. HTML/CSS: 63.1%
-3. SQL: 56.5%
-4. Python: 50.7%
-5. Java: 39.7%
+1. JavaScript: 67.8
+2. HTML/CSS: 63.1
+3. SQL: 56.5
+4. Python: 50.7
+5. Java: 39.7
 
-위 순위와 점유율은 개발자들이 웹 개발에 가장 많이 사용하는 언어를 기준으로 한 것입니다. 주의할 점은 각 언어의 점유율은 합이 100%가 아니며, 여러 언어를 혼합해서 사용하는 경우가 많기 때문에 겹치는 부분이 있을 수 있습니다.
+The above rankings and shares are based on the most popular languages used by developers for web development. It's important to note that the shares for each language do not add up to 100%, and there may be some overlap as developers often use a mix of languages.
 
-이처럼 Python으로 웹 개발을 하는 사람은 Java 사용자보다 많음을 단편적으로 알 수 있었습니다!
+As you can see, there are more people doing web development in Python than there are Java users!
 
-그럼 이제 많은 사람이 Python을 사용하는 것을 알았으니 이를 기반으로 하는 **웹 프레임워크 Fast API**에 대해 알아보도록 하겠습니다.
+Now that we know that a lot of people use Python, let's talk about the web framework Fast API, which is based on it.
 
-#### Fast API 개념
+#### Fast API Concept
 
-FastAPI는 현대적인 Python 웹 개발을 위해 설계되었으며, 타입 힌트(Type Hints)와 같은 Python 3.6 이상의 기능을 활용하여 효율적인 개발을 할 수 있습니다.
-타입 힌트를 사용하면 개발자는 코드를 더 명확하게 작성할 수 있고, IDE의 자동완성 기능을 활용하여 더 빠르게 개발할 수 있습니다.
+FastAPI is designed for modern Python web development and utilizes Python 3.6 and later features like Type Hints for efficient development.
+Type hints allow developers to write code more clearly and utilize the IDE's autocomplete features to develop faster.
 
-#### 특징
+#### Features
 
-FastAPI는 Python 기반의 웹 프레임워크로, 빠른 속도와 간편한 개발 경험을 제공하는 것이 특징입니다.
-또한, FastAPI는 Swagger와 같은 API 문서 자동 생성 기능을 제공하여 API의 사용 방법과 데이터 모델을 쉽게 확인할 수 있고, Pydantic 라이브러리를 사용하여 데이터 유효성 검사와 직렬화 등의 작업을 편리하게 처리할 수 있습니다.
+FastAPI is a Python-based web framework that is characterized by its fast speed and easy development experience.
+FastAPI also provides API documentation auto-generation features such as Swagger, which makes it easy to see how an API is used and its data model, and the Pydantic library makes it convenient to handle tasks such as data validation and serialization.

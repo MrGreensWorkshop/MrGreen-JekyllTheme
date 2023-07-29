@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Web_Cache
-title: 웹캐시(Web Cache)에 대하여
+title: About web cache
 # title: About Web Cache
 
 # post specific
@@ -41,47 +41,47 @@ date: 2023-07-13 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Web Cache에 대하여
+### About Web Cache
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-FrontEnd 파트 쪽 일을 하게 되면 Web Cache에 대하여 비교적 자주 접할 수 있습니다.
-이번 시간에 알아보도록 하겠습니다.
+If you're working on the FrontEnd, you'll come across Web Cache fairly often.
+Let's take a look at it.
 
-#### 웹 캐시란 무엇인가
+#### What is a Web Cache
 
-인터넷에서 웹 페이지나 파일을 임시로 저장하는 시스템입니다.
-웹 캐시는 사용자가 웹 페이지에 접속할 때 해당 페이지의 복사본을 저장하고, 이후에 같은 페이지에 접속할 때 웹 서버에 직접 요청하는 대신에 캐시에서 페이지를 가져옵니다.
-이를 통해 사용자의 경험을 향상시키고 네트워크 트래픽을 줄이는 데 도움을 줍니다.
+A system that temporarily stores web pages or files from the Internet.
+When a user accesses a web page, a web cache stores a copy of that page, and the next time the user accesses the same page, the page is fetched from the cache instead of requesting it directly from the web server.
+This improves the user's experience and helps reduce network traffic.
 
-그럼 궁금해집니다. 사용자가 웹페이지에 접속할 때 해당 페이지의 복사본을 저장한다면 어디에 저장할까요?
+This begs the question. If we store a copy of a webpage when a user accesses it, where do we store it?
 
-#### 웹 캐시는 어디에 저장되는가
+#### Where is Web Cache Stored
 
-우선 웹 캐시는 다양한 형태로 구현될 수 있습니다.
-주요한 형태로는 사용자의 웹 브라우저 내부에 있는 개인 캐시(Private Cache), 중개 서버에 위치한 공용 캐시(Shared Cache), 그리고 콘텐츠 전송 네트워크(CDN)의 캐시 등이 있습니다.
+First of all, web caches can be implemented in many different forms.
+The main ones include a private cache inside the user's web browser, a shared cache located on an intermediary server, and a cache on a content delivery network (CDN).
 
-몇 개는 알겠는데 중개 서버에 위치한 공용 캐시(Shared Cache)는 무엇일까요? 간단히 알아보았습니다.
+We recognize some of these, but what is a shared cache located on an intermediary server? Here's a quick refresher.
 
-#### 중개 서버에 위치한 공용 캐시(Shared Cache)란
+#### What is a shared cache located on an intermediary server?
 
-여러 사용자 또는 클라이언트가 공유하는 캐시 시스템입니다.
-이러한 캐시는 중개 서버(또는 프록시 서버)에 설치되어 있으며, 이 서버는 사용자의 요청을 받아들이고 해당 요청에 대한 응답을 반환합니다.
-그러나 요청된 리소스의 복사본이 캐시에 이미 저장되어 있는 경우, 중개 서버는 웹 서버에 직접 요청하지 않고 캐시에서 해당 리소스를 가져와 클라이언트에게 제공합니다.
+A cache system that is shared by multiple users or clients.
+These caches are installed on an intermediary server (or proxy server), which accepts requests from users and returns responses to those requests.
+However, if a copy of the requested resource is already stored in the cache, the intermediary server will fetch it from the cache and serve it to the client instead of making a direct request to the web server.
 
-#### 공용 캐시 장점
+#### Public cache advantages
 
-공용 캐시는 네트워크 트래픽을 줄이고 웹 서버의 부하를 경감시키는 데 도움을 줍니다.
-여러 사용자가 동일한 리소스에 접근하는 경우, 중개 서버의 공용 캐시는 처음 요청된 리소스의 복사본을 저장하여 이후 동일한 리소스에 대한 요청에 대해 빠른 응답을 제공합니다.
-이를 통해 네트워크 대역폭을 절약하고 전체적인 웹 성능을 향상시킬 수 있습니다.
+Public caches help reduce network traffic and lighten the load on web servers.
+When multiple users access the same resource, an intermediary server's public cache stores a copy of the first requested resource to provide a faster response to subsequent requests for the same resource.
+This can save network bandwidth and improve overall web performance.
 
-다시 돌아와 웹 캐시의 이점에 대해 알아보겠습니다.
+Let's come back and discuss the benefits of web cache.
 
-#### 웹 캐시 장점
+#### Web Cache Benefits
 
-- 대역폭 절약: 웹 캐시는 이미 다운로드된 리소스를 재사용하므로 네트워크 대역폭을 절약합니다.
-- 응답 시간 개선: 웹 캐시는 웹 페이지의 복사본을 로컬에 저장하므로 웹 서버에 대한 요청이 줄어들어 응답 시간이 단축될 수 있습니다.
-- 트래픽 감소: 웹 캐시는 중개 서버에서 웹 페이지의 복사본을 제공하므로 웹 서버의 부하를 줄이고 전체 트래픽을 감소시킵니다.
-- 사용자 경험 향상: 웹 캐시는 웹 페이지를 로컬에서 제공하므로 더 빠른 페이지 로딩과 더 부드러운 사용자 경험을 제공할 수 있습니다.
+- Saves bandwidth: Web caching reuses resources that have already been downloaded, saving network bandwidth.
+- Improved response time: Because web caches store copies of web pages locally, there are fewer requests to the web server, which can result in faster response times.
+- Reduced traffic: Because web caching serves copies of web pages from an intermediary server, it reduces the load on your web server and reduces overall traffic.
+- Improved user experience: Because web caches serve web pages locally, they can provide faster page loading and a smoother user experience.

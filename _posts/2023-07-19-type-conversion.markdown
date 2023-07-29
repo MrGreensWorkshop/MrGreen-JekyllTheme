@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Type_Conversion
-title: 형 변환(Type Conversion)에 대하여
+title: About type conversion
 # title: About Type Conversion
 
 # post specific
@@ -41,21 +41,21 @@ date: 2023-07-19 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 형변환에 대하여
+### About casts
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-저희 회사에서 이번에 eslint의 조건을 강하게 줘서 코드 포맷팅을 해줘야 하는 상황이 왔는데요.
-그 중 "Redundant double negation.eslintno-extra-boolean-cast" 문장을 가장 많이 마주했습니다.
+At my company, we had a situation where we had to format our code because eslint gave us some strong conditions.
+Among them, I encountered the sentence "Redundant double negation.eslintno-extra-boolean-cast" the most.
 
-저 에러는 무엇이고, 왜 뜨는 것이고 해결책은 무엇인지 알아보겠습니다.
+Let's see what that error is, why it pops up, and what the solution is.
 
-#### "Redundant double negation.eslintno-extra-boolean-cast" 에러는 무엇인가?
+#### What is the "Redundant double negation.eslintno-extra-boolean-cast" error?
 
-eslint 사용 시, 보일 수 있는 "Redundant double negation.eslintno-extra-boolean-cast" 는 흔히
-"no-extra-boolean-cast"라는 규칙으로 알려져 있습니다. 이 규칙은 불필요한 두 번의 부정 연산을 감지하고 경고를 표시합니다.
+When using eslint, the "Redundant double negation.eslintno-extra-boolean-cast" error that you may see is often caused by the error
+is known as the "no-extra-boolean-cast" rule. This rule detects unnecessary double negation operations and displays a warning.
 
 ```javascript
 if (!!value) {
@@ -63,20 +63,20 @@ if (!!value) {
 }
 ```
 
-이런 코드에서 볼 수 있는 문구입니다.
-어떤 문구인지는 알았습니다.
+This is what you see in code like this.
+I knew what it was.
 
-#### 왜 뜨는 걸까요?
+#### Why does it come up?
 
-위의 예제에서 볼 수 있듯 '!!value"는 불리언 값 'value'를 강제로 부정 연산한 후, 다시 부정 연산을 수행하는 것으로 2번 반복합니다.
-이는 형변환의 형태로 사용되고 우리에게 이해되지만 eslint가 권장하는 포맷 형식에는 불필요하며, 코드를 더 복잡하게 만들고 가독성을 낮춘다고 판단합니다.
+As you can see in the example above, "!!value" forces a negative operation on the boolean value 'value', then repeats it twice by performing the negative operation again.
+While this is used as a form of casts and makes sense to us, it is unnecessary for the formatting recommended by eslint, and we believe it makes the code more complex and less readable.
 
-이제 왜 저런 문구가 뜨는지 알았습니다. 그렇다면 어떻게 해결할 수 있을지 알아보겠습니다.
+Now that we know why we're seeing that, let's see how we can fix it.
 
-#### 해결책
+#### Solution
 
-위의 문구는 설명한대로 불필요하기 때문에 eslint에서는 제거하도록 권장합니다.
-아래와 같이 말이죠.
+Since the above phrase is unnecessary as described, ESLINT recommends removing it.
+It should look like this
 
 ```javascript
 if (value) {
@@ -84,9 +84,9 @@ if (value) {
 }
 ```
 
-위의 수정된 코드는 'value'를 그대로 사용하여 조건을 평가합니다. 따라서 불필요한 부정 연산을 제거하고 코드를 더 간결하게 만듭니다.
+The modified code above uses 'value' as it is to evaluate the condition. This eliminates unnecessary negative operations and makes the code more concise.
 
-#### 참고
+#### Reference
 
-eslint를 사용하여 코드를 정적으로 분석할 때, "Redundant double negation" 규칙이 적용되어 이와 유사한 불필요한 부정 연산을 감지할 수 있습니다.
-이 규칙을 적용하면 코드의 가독성을 높이고, 잠재적인 버그를 방지할 수 있습니다.
+When using eslint to statically analyze code, the "Redundant double negation" rule is applied to detect similar unnecessary negative operations.
+By applying this rule, you can make your code more readable and avoid potential bugs.

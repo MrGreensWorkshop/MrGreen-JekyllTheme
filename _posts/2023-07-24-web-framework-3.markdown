@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Web_Framework_3
-title: Web framework에 대하여(3)
+title: About web framework(3)
 # title: About web framework(3)
 
 # post specific
@@ -41,18 +41,18 @@ date: 2023-07-24 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 웹 프레임워크에 대하여(3)
+### About Web Frameworks (3)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-지난 글에서는 코드를 Node.JS에서 제공하는 HTTP기능을 통해 웹서버를 다뤘습니다. 웹 프레임워크가 없이 구현한다면 어떻게 구현할지 알기 위해서 입니다.
-이번엔 이전 글과 동일한 기능을 하도록 Express로 구현한 예시로 웹 프레임워크의 유용함과 프로젝트에 웹 프레임워크 사용의 장단점에 대해 다루도록 하겠습니다.
+In the last article, we covered webservers using the HTTP features provided by Node.JS. This was to give you an idea of how to implement it without a web framework.
+This time, I'm going to cover the usefulness of web frameworks and the advantages and disadvantages of using them in your projects with an example implementation in Express that does the same thing as the previous article.
 
-먼저 이전에 작성한 코드를 가져오겠습니다.
+First, let's import the code we wrote earlier.
 
-#### 이전에 작성한 코드
+#### Previously written code
 
 ```javascript
 const http = require("http");
@@ -62,7 +62,7 @@ const server = http.createServer((req, res) => {
 
   if (method === "GET" && url === "/") {
     res.statusCode = 200;
-    // HTTP 응답 헤더는 웹 서버가 클라이언트에게 보내는 메타데이터로, 응답의 속성과 내용에 대한 정보를 담고 있습니다.
+    // HTTP response headers are metadata sent by the web server to the client, containing information about the properties and content of the response.
     res.setHeader("Content-Type", "text/plain");
     res.end("Hello, World!");
   } else if (method === "GET" && url === "/about") {
@@ -82,16 +82,16 @@ server.listen(port, () => {
 });
 ```
 
-우리는 이전 글에서 웹서버를 생성하고, Node.js에서 기본적으로 제공하는 HTTP 모듈로 라우팅 기능을 구현했습니다.
+In the previous post, we created a webserver and implemented the routing functionality with the HTTP module provided by Node.js by default.
 
-#### 참고
+#### Add information
 
-모듈이란?
-재사용 가능한 코드 조각을 담고 있는 독립적인 단위입니다. 모듈은 변수, 함수, 클래스, 객체 등을 내보내거나 가져올 수 있으며, 코드의 재사용성과 모듈화를 가능하게 합니다.
+What is a module?
+It is a self-contained unit that contains reusable code snippets. Modules can export or import variables, functions, classes, objects, etc. and enable reusability and modularity of code.
 
-다시 돌아와 이제 동일한 기능을 수행하는 express를 활용하여 코드를 작성해보겠습니다.
+Let's come back and write some code utilizing express to accomplish the same thing.
 
-#### express를 활용하여 코드 예시
+#### Example code utilizing express
 
 ```javascript
 const express = require("express");
@@ -116,28 +116,29 @@ app.listen(port, () => {
 });
 ```
 
-위의 예제 코드도 동일하게 라우팅을 구현합니다. 다만 get()함수를 사용하여 경로에 대한 GET 요청을 처리하고, 응답을 반환합니다. 또한 use()함수를 사용해 모든 경로에 대한 처리를 합니다.
-위에서 정의한 경로들과 일치하지 않는 모든 요청을 처리하며 응답을 반환합니다.
+The example code above implements routing in the same way. However, it uses the get() function to process GET requests for routes and return the response. It also uses the use() function to process all routes.
+It handles all requests that don't match any of the routes we defined above and returns a response.
 
-코드를 비교해보면 알겠지만 훨씬 가독성이 좋으며, 적은 코드로 넓은 범용성으로 커스텀이 가능합니다.
+As you can see by comparing the code, it's much more readable and customizable with less code and greater versatility.
 
-그럼 이제 궁금합니다. 웹 프레임워크를 프로젝트에 도입하면 장점만 있을 것 같은데 단점은 뭐가 있을지 말입니다.
-그래서 알아보았습니다.
+So now you're wondering. With all the advantages of introducing a web framework into your project, what are the disadvantages?
+So we did some research.
 
-##### 웹 프레임워크를 프로젝트에 도입할 시 고려할 점
+##### Things to consider when bringing a web framework into your project
 
-주의: Express의 관점에서 알아보았습니다.
+Note: This is from an Express perspective.
 
-###### 도입 장점
+###### Pros
 
-- 간편한 라우팅: Express는 라우팅을 설정하는 데 매우 편리한 기능을 제공합니다. URL 경로와 HTTP 메서드를 기반으로 라우팅을 설정하고 처리할 수 있으며, 다양한 라우팅 기능을 제공하여 개발자가 간단하게 엔드포인트를 관리할 수 있습니다.
-- 다양한 미들웨어: Express는 다양한 미들웨어를 지원하여 요청과 응답을 변형하고 처리하는 작업을 쉽게 수행할 수 있습니다. 로깅, 인증, 세션 관리, 에러 처리 등의 작업을 편리하게 처리할 수 있습니다.
-- 유연한 템플릿 엔진: Express는 다양한 템플릿 엔진을 지원하여 동적인 HTML 페이지를 생성할 수 있습니다. 템플릿 엔진을 사용하면 데이터와 템플릿을 결합하여 클라이언트에게 동적인 컨텐츠를 제공할 수 있습니다.
-- 확장성: Express는 유연한 구조를 가지고 있어 필요한 경우 미들웨어, 라우터, 템플릿 엔진 등을 추가하거나 사용자 정의할 수 있습니다. 이를 통해 개발자는 자신의 프로젝트에 맞게 기능을 확장하고 커스터마이징할 수 있습니다.
+- Easy routing: Express provides very convenient features for setting up routing. You can set up and handle routing based on URL paths and HTTP methods, and it offers a wide range of routing features to make managing endpoints simple for developers.
+- A wide range of middleware: Express supports a wide range of middleware, making it easy to transform and process requests and responses. You can conveniently handle logging, authentication, session management, error handling, and more.
+- Flexible template engine: Express supports a variety of template engines to create dynamic HTML pages. Template engines allow you to combine data and templates to deliver dynamic content to your clients.
+- Extensibility: Express has a flexible structure that allows you to add or customize middleware, routers, template engines, and more as needed. This allows developers to extend and customize the functionality for their own projects.
 
-###### 도입 단점
+###### Adoption Cons
 
-- 추가적인 학습 곡선: Express는 일부 기능을 제공하는 상대적으로 작은 프레임워크입니다. 따라서 처음 사용하는 개발자들에게는 적응이 필요할 수 있습니다. Express의 문법과 구조를 이해하고 사용하는 데에는 추가적인 학습이 필요할 수 있습니다.
-- 너무 많은 유연성: Express는 많은 유연성을 제공하기 때문에 개발자가 프로젝트를 구성하고 구현하는 데 자유도가 큽니다. 이는 명확한 구조 및 가이드라인이 없을 경우 코드의 일관성을 유지하기 어렵게 만들 수 있습니다.
+- Additional learning curve: Express is a relatively small framework that provides some functionality, so it can take some getting used to for first-time developers. Understanding and using the syntax and structure of Express can require additional learning.
+- Too much flexibility: Because Express offers a lot of flexibility, developers have a lot of freedom to organize and implement their projects. This can make it difficult to maintain consistency in your code if you don't have a clear structure and guidelines.
 
-다음 글에선 웹 프레임워크의 핵심 기능 중 미들웨어에 대하여 다루도록 하겠습니다.
+In my next post, I'll cover middleware, a key feature of web frameworks.
+Translated with www.DeepL.com/Translator (free version)

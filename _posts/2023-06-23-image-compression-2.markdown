@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Image_Compression_2
-title: 이미지 압축에 대하여(2)
+title: About image compression(2)
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -40,62 +40,63 @@ date: 2023-06-23 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Image Compression에 대한 글입니다.
+### This is an article about Image Compression.
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-#### 이미지 압축은 어디서 진행되는게 좋을까?
+#### Where should image compression take place?
 
-실제로 적용해보기 전에 일반적으로 이미지 압축을 어느 파트(클라이언트 혹은 서버)에서 수행하는게 좋을지 고민되어 알아보았습니다.
+Before we get into the actual application, I was wondering where image compression should be done in general (client or server).
 
-##### 클라이언트 측 이미지 압축
+##### Client-side image compression
 
-###### 장점
+###### Advantages
 
-1. 대역폭 절약: 이미지 압축은 파일 크기를 줄여 네트워크 대역폭을 절약하는 데 도움을 줄 수 있습니다. 작은 파일 크기는 이미지를 빠르게 다운로드하고 렌더링하는 데 도움이 됩니다.
+1. Save bandwidth: Image compression can help save network bandwidth by reducing file size. Smaller file sizes help images download and render faster.
 
-• 네트워크 대역폭 절약이란?
-이미지 압축을 통해 전송되는 데이터 양을 줄여서 네트워크에서 전송되는 데이터 양을 감소시키는 것을 의미합니다. 이미지 파일의 크기를 줄이면 전송해야 할 데이터 양도 줄어들어 네트워크 트래픽을 감소시킬 수 있습니다.
+- What is network bandwidth savings?
+  Image compression means reducing the amount of data that is transmitted over the network by reducing the amount of data that is transferred. Reducing the size of an image file reduces the amount of data that needs to be transferred, which can reduce network traffic.
 
-###### 단점
+###### Disadvantages
 
-1. 클라이언트 자원 사용: 클라이언트에서 이미지 압축을 수행하면 해당 장치의 자원을 사용해야 합니다. 특히 큰 이미지나 여러 이미지를 동시에 압축하는 경우 클라이언트의 성능에 영향을 줄 수 있습니다.
-2. 호환성 문제: 모든 클라이언트가 이미지 압축을 지원하는 것은 아닙니다. 일부 브라우저 또는 디바이스에서는 클라이언트 측 압축을 처리할 수 없을 수 있습니다.
-3. 보안 문제: 이미지 압축은 이미지 파일을 변환하므로 악의적인 사용자가 이미지를 변조하거나 해독하는 데 활용될 수 있습니다.
+1. client resource usage: Performing image compression on a client requires the use of that device's resources, which can affect the client's performance, especially when compressing large images or multiple images at the same time.
+2. Compatibility issues: Not all clients support image compression. Some browsers or devices may not be able to handle client-side compression.
+3. Security issues: Because image compression transforms image files, it can be utilized by malicious users to tamper with or decrypt images.
 
-##### 서버 측 이미지 압축
+##### Server-side image compression
 
-###### 장점
+###### Advantages
 
-1. 성능 최적화: 이미지 압축은 대개 CPU 집약적인 작업이므로 서버에서 이를 처리하면 클라이언트의 성능에 영향을 미치지 않고 서버 리소스를 사용할 수 있습니다. 클라이언트는 이미지를 압축해야 할 필요가 없으므로 성능 향상을 기대할 수 있습니다.
+1. Performance optimization: Image compression is often a CPU-intensive task, so handling it on the server can free up server resources without impacting client performance. Clients don't need to compress images, so they can expect a performance boost.
 
-2. 다양한 변환 옵션: 서버 측 이미지 압축은 다양한 변환 옵션을 적용할 수 있는 유연성을 제공합니다. 예를 들어, 이미지 크기 조정, 포맷 변경, 품질 조정 등을 서버에서 제어할 수 있습니다. 이는 이미지 표시의 최적화와 관련하여 웹 성능을 향상시키는 데 도움을 줍니다.
+2. More conversion options: Server-side image compression gives you the flexibility to apply different conversion options. For example, you can control image resizing, formatting, quality adjustments, and more on the server. This helps to improve web performance when it comes to optimizing the display of images.
 
-3. 보안 및 데이터 일관성: 서버 측 이미지 압축은 이미지 처리 로직을 서버에 중앙 집중화하여 이미지 데이터의 보안과 일관성을 유지할 수 있습니다. 클라이언트가 압축 작업을 수행하는 경우에는 클라이언트 자체에서 데이터의 일관성을 보장하기 어려울 수 있습니다.
+3. Security and data consistency: Server-side image compression can maintain the security and consistency of image data by centralizing the image processing logic on the server. When compression is performed by the client, it can be difficult to ensure data consistency on the client itself.
 
-4. 압축 최적화: 서버 측에서는 클라이언트의 요청에 따라 동적으로 압축 옵션을 조정할 수 있습니다. 예를 들어, 클라이언트의 네트워크 속도, 장치 능력 등을 고려하여 압축 수준을 동적으로 조정하여 최적의 사용자 경험을 제공할 수 있습니다.
+4. Compression optimization: On the server side, you can dynamically adjust compression options based on client requests. For example, compression levels can be dynamically adjusted to take into account the client's network speed, device capabilities, etc. to provide an optimal user experience.
 
-5. 대용량 이미지 처리: 클라이언트에서 대용량 이미지를 압축하려면 클라이언트 자원에 부담이 될 수 있습니다. 서버 측 이미지 압축은 클라이언트로 전송되기 전에 대용량 이미지를 처리하고 최적화할 수 있으므로, 클라이언트 측에서의 성능 문제나 리소스 제한을 피할 수 있습니다.
+5. Handling large images: Compressing large images on the client can be taxing on client resources. Server-side image compression can process and optimize large images before they are sent to the client, avoiding performance issues or resource limitations on the client side.
 
-###### 단점
+###### Cons
 
-1. 추가적인 서버 리소스: 이미지 압축은 CPU와 메모리 리소스를 요구하므로 서버에 부담이 될 수 있습니다. 따라서, 적절한 서버 스케일링과 리소스 관리가 필요합니다.
+1. Additional server resources: Image compression can be a burden on the server as it requires CPU and memory resources. Therefore, it requires proper server scaling and resource management.
 
-2. 중앙 집중화된 처리: 서버 측 이미지 압축은 이미지 처리 작업을 중앙 집중화하여 서버에서 처리합니다. 이로 인해 서버에 장애가 발생하거나 서버가 부하를 겪는 경우, 이미지 압축 작업이 지연될 수 있습니다. 이는 클라이언트의 응답 시간에 영향을 줄 수 있습니다. 또한, 서버의 가용성과 확장성에 따라 이미지 압축 작업의 처리량이 제한될 수 있습니다.
+2. Centralized processing: Server-side image compression centralizes image processing tasks and handles them on the server. This can result in delays in image compression operations if the server fails or if the server is under load. This can affect client response times. Also, the availability and scalability of the server can limit the throughput of image compression tasks.
 
-3. 처리 시간 및 대기 시간: 이미지 압축은 추가적인 처리 시간이 필요합니다. 따라서, 이미지 압축 작업이 서버에서 이루어지는 경우, 클라이언트는 이미지를 요청하고 압축이 완료될 때까지 대기해야 할 수 있습니다. 이로 인해 클라이언트의 응답 속도가 느려질 수 있습니다.
+3. Processing time and latency: Image compression requires additional processing time. Therefore, if the image compression operation takes place on the server, the client may need to request the image and wait for the compression to complete. This can result in slower client responses.
 
-4. 확장성 제약: 이미지 압축 작업은 서버에서 처리되므로, 많은 수의 동시 요청이 있을 경우 서버 부하가 증가할 수 있습니다. 이로 인해 확장성 제약이 발생할 수 있으며, 추가 서버 리소스가 필요할 수 있습니다.
+4. Scalability constraints: Because image compression operations are handled on the server, the server load can increase if there are a large number of concurrent requests. This can cause scalability constraints and may require additional server resources.
 
-5. 유연성 제한: 서버 측 이미지 압축은 클라이언트가 이미지를 요청할 때마다 동일한 압축 옵션이 적용될 수 있습니다. 클라이언트별로 다른 압축 수준이나 옵션이 필요한 경우, 서버에서는 이를 동적으로 제어하기 어려울 수 있습니다.
+5. Limited flexibility: Server-side image compression can result in the same compression options being applied each time a client requests an image. If different clients require different compression levels or options, it can be difficult to dynamically control this on the server.
 
-6. 네트워크 트래픽: 서버 측 이미지 압축은 클라이언트로부터 이미지 요청을 받아서 압축한 후 전송해야 합니다. 이로 인해 서버와 클라이언트 간의 네트워크 트래픽이 증가할 수 있습니다.
+6. Network traffic: Server-side image compression requires receiving image requests from clients, compressing them, and then sending them. This can increase network traffic between the server and clients.
 
-7. 캐싱 어려움: 클라이언트 측에서 이미지 압축을 처리하는 경우 클라이언트는 압축된 이미지를 캐싱하여 재사용할 수 있습니다. 그러나 서버 측에서 이미지 압축을 처리하는 경우, 서버에서는 이미지 압축된 버전을 캐싱하기 어려울 수 있습니다.
+7. Caching difficulties: If image compression is handled on the client side, the client can cache and reuse the compressed image. However, if image compression is handled on the server side, the server may find it difficult to cache the compressed version of the image.
 
-###### 결론
+###### Conclusion
 
-실제로는 상황과 요구 사항에 따라 클라이언트 측 이미지 압축이 더 적절한 경우도 있을 수 있습니다.
-따라서, 압축 방식을 결정할 때는 해당 프로젝트의 목표, 사용자 환경, 리소스 제약 등을 종합적으로 고려해야 합니다.
+In practice, there may be times when client-side image compression is more appropriate, depending on the situation and requirements.
+Therefore, when deciding on a compression method, you should consider your project's goals, user experience, and resource constraints.
+Translated with www.DeepL.com/Translator (free version)
