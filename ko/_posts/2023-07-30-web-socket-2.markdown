@@ -1,0 +1,91 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Web_Sockets_1
+title: 웹 소켓에 대하여(1)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Network
+# multiple tag entries are possible
+tags: [network, http]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-29 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### 웹 소켓에 대하여(1)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+이번에 토이프로젝트를 진행하려고 하면서 멀티플레이에 대한 얘기가 나왔습니다.
+이를 위한 기술로 웹소켓에 대한 내용이 나왔는데요. 이에 학습 후 글로 공유하고자 합니다.
+
+#### 웹소켓이란?
+
+웹소켓(WebSockets)은 실시간 양방향 통신을 지원하는 프로토콜입니다.
+웹 브라우저와 웹 서버 간에 양방향 데이터 통신을 가능케하는 기술입니다.
+웹소켓은 기존의 HTTP 프로토콜과 함께 사용되며, 클라이언트와 서버 간에 지속적인 연결을 제공하여 실시간 데이터를 보다 효율적으로 교환할 수 있게 해줍니다.
+
+웹소켓의 주요 특징에 대해 더 알아보겠습니다.
+
+#### 특징
+
+- 양방향 통신: 웹소켓은 클라이언트와 서버 간에 양방향으로 데이터를 주고받을 수 있습니다. 이를 통해 서버가 클라이언트에게 데이터를 전달하거나 클라이언트가 서버에게 데이터를 보낼 수 있습니다.
+- 지속적인 연결: 웹소켓은 HTTP와 달리 지속적인 연결을 제공합니다. 따라서 클라이언트와 서버 간에 연결을 유지하고 있으면서 데이터를 전달할 수 있으므로, 연결을 새로 맺어야 하는 오버헤드가 줄어듭니다.
+- 작은 오버헤드: 웹소켓은 연결을 위한 핸드셰이크 단계가 간단하며, 데이터 프레임의 크기도 작습니다. 이는 불필요한 데이터 오버헤드를 줄여줍니다.
+- 실시간 데이터 전송: 웹소켓을 사용하면 실시간으로 데이터를 주고받을 수 있으므로, 채팅, 게임, 주식 시장 등 실시간 업데이트가 필요한 애플리케이션에 적합합니다.
+- 웹소켓은 일반적으로 JavaScript를 사용하여 클라이언트 측에서 구현하며, 서버 측에서는 WebSocket 프로토콜을 지원하는 서버를 구축하여 처리합니다. 웹소켓은 모든 최신 웹 브라우저에서 지원되며, 웹 애플리케이션의 실시간성을 향상시키는 데 중요한 역할을 합니다.
+
+학습이 필요한 단어에 대해 알아보겠습니다.
+
+#### 핸드셰이크란?
+
+핸드셰이크(Handshake)란 웹소켓 연결을 설정하기 위해 클라이언트와 서버 간에 주고받는 초기화 단계를 말합니다.
+클라이언트가 서버에 웹소켓 연결을 요청하면, 서버와 클라이언트 간에 핸드셰이크 과정이 수행되어 웹소켓 연결을 확립합니다.
+이 단계에서 필요한 메타데이터와 설정 정보 등이 교환됩니다.
+
+##### 일반적인 웹소켓의 핸드셰이크 과정
+
+- 클라이언트가 서버에 웹소켓 연결 요청을 보냅니다.
+- 서버는 클라이언트의 요청을 받고, 웹소켓 연결을 허용할 수 있는지 확인합니다.
+- 서버가 클라이언트에게 웹소켓 연결이 성공적으로 이루어졌음을 응답합니다.
+
+즉, 웹소켓에서 핸드셰이크 과정은 간단하며, 이로 인해 웹소켓 연결이 빠르게 설정되어 실시간 통신을 빠르고 효율적으로 시작할 수 있습니다.
+
+##### 웹소켓에서 데이터프레임의 크기가 작은 이유
+
+데이터 프레임의 크기에 관해서는 웹소켓은 작은 오버헤드를 갖기 때문에 작은 크기의 데이터 프레임을 사용할 수 있습니다.
+HTTP와 달리 웹소켓은 데이터 프레임에 추가적인 메타데이터를 포함하지 않고도 데이터를 전송할 수 있습니다.
+이는 웹소켓이 빠르고 경량화된 프로토콜이라는 이유 중 하나입니다. 작은 데이터 프레임을 사용함으로써 불필요한 데이터 오버헤드를 줄이고, 실시간 통신에 더욱 효율적으로 사용될 수 있도록 합니다.
+
+이렇게 특징까지 알아보았습니다. 그렇다면 웹소켓이 왜 나왔는지에 대해 2편에서 다루도록 하겠습니다.
