@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Web_Sockets_1
-title: About Web Sockets (1)
+lng_pair: id_About_Web_Sockets_2
+title: About web sockets(2)
 # title: About browser
 
 # post specific
@@ -17,7 +17,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-07-29 09:00:00 +0900
+date: 2023-07-30 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -41,51 +41,44 @@ date: 2023-07-29 09:00:00 +0900
 
 <!-- outline-start -->
 
-### About Web Sockets (1)
+### About web sockets(2)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-While working on a toy project this time, we talked about multiplayer.
-I learned about web sockets as a technology for this, and I'd like to share it in this post.
+In the last article, we learned what web sockets are and what their features are.
+In this article, we'll look at why we need web sockets in the first place.
 
-#### What is WebSockets?
+Without web sockets, how would we communicate with servers?
+Without web sockets, web applications typically only have one-way communication using the HTTP protocol. The HTTP protocol works in a one-way fashion, with the client sending requests to the server and the server returning responses to those requests. This means that after the client sends a request, the client only maintains a connection with the server until the server sends a response.
 
-WebSockets is a protocol that supports real-time two-way communication.
-It is a technology that enables two-way data communication between a web browser and a web server.
-WebSockets are used in conjunction with the existing HTTP protocol and provide a continuous connection between the client and server, allowing for a more efficient exchange of real-time data.
+#### Disadvantages of one-way communication
 
-Let's take a closer look at the key features of WebSockets.
+- It is difficult to send and receive data in real time.
+- You need to implement indirect real-time communication using techniques such as periodic polling or long polling. However, these methods are not efficient and have disadvantages such as creating unnecessary load on the server.
 
-#### Features
+Let's take a quick look at polling and long polling here.
 
-- Bidirectional communication: Websockets can send and receive data in both directions between the client and server. This allows the server to pass data to the client, or the client to send data to the server.
-- Persistent connection: Unlike HTTP, websockets provide a persistent connection. This means that data can be passed between the client and server while maintaining a connection, reducing the overhead of establishing new connections.
-- Small overhead: WebSockets have a simple handshake for connecting, and the data frames are small in size, which reduces unnecessary data overhead.
-- Real-time data transfer: WebSockets allow you to send and receive data in real time, making them ideal for applications that require real-time updates, such as chat, games, and the stock market.
-- WebSockets are typically implemented on the client side using JavaScript, while the server side is handled by building a server that supports the WebSocket protocol. WebSockets are supported by all modern web browsers and play an important role in making web applications more real-time.
+#### Polling
 
-Let's talk about the vocabulary you need to learn.
+Polling is when a client sends a request to the server at regular intervals to see if there is any new data.
+The client requests data from the server at regular intervals, and the server delivers the current state of the data in response to the request.
+The client then sends another periodic request to the server to get updated data, and so on.
+The downside of polling is that the periodic requests generate unnecessary traffic.
+It can be burdensome for both the server and the client, especially if there are only a few data updates, as the requests must be sent over and over again.
 
-#### What is a handshake?
+#### Long Polling
 
-A handshake is an initialization step that is exchanged between a client and a server to establish a websocket connection.
-When a client requests a WebSockets connection from a server, a handshake is performed between the server and client to establish a WebSockets connection.
-During this phase, necessary metadata and configuration information is exchanged.
+Long polling is a way to improve on the disadvantages of polling, where the client sends a request and the server keeps the connection open until new data is ready.
+When a client sends a request to a server, the server holds the response until new data is available.
+When the new data is ready, it sends a response to the client.
+The client can then immediately send another request to get the new data.
 
-##### The handshake process in a typical Websocket
+##### Conclusion
 
-- The client sends a WebSocket connection request to the server.
-- The server receives the client's request and checks to see if it can accept a websocket connection.
-- The server responds to the client that the WebSocket connection was successful.
+WebSockets overcome these limitations of one-way communication and enable real-time, two-way communication.
+WebSockets are optimized for sending and receiving data in real time because they maintain a continuous connection between the client and server, and both sides can send and receive data.
+As a result, WebSockets can be used to provide a better user experience and real-time in web applications.
 
-In other words, the handshake process in websockets is simple, and because of this, websocket connections are quickly established so that real-time communication can begin quickly and efficiently.
-
-##### Why dataframes are small in Websockets
-
-When it comes to the size of the data frame, websockets have a small overhead, which allows them to use a small size data frame.
-Unlike HTTP, websockets can send data without including additional metadata in the data frame.
-This is one of the reasons why WebSockets is a fast and lightweight protocol. By using small data frames, it reduces unnecessary data overhead and makes it more efficient for real-time communication.
-
-Now that we've covered the features, let's talk about why websockets came about in part 2.
+In the next post, we'll discuss the disadvantages of websockets.
