@@ -1,0 +1,91 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Web_Sockets_1
+title: About Web Sockets (1)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Network
+# multiple tag entries are possible
+tags: [network, http]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-29 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### About Web Sockets (1)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+While working on a toy project this time, we talked about multiplayer.
+I learned about web sockets as a technology for this, and I'd like to share it in this post.
+
+#### What is WebSockets?
+
+WebSockets is a protocol that supports real-time two-way communication.
+It is a technology that enables two-way data communication between a web browser and a web server.
+WebSockets are used in conjunction with the existing HTTP protocol and provide a continuous connection between the client and server, allowing for a more efficient exchange of real-time data.
+
+Let's take a closer look at the key features of WebSockets.
+
+#### Features
+
+- Bidirectional communication: Websockets can send and receive data in both directions between the client and server. This allows the server to pass data to the client, or the client to send data to the server.
+- Persistent connection: Unlike HTTP, websockets provide a persistent connection. This means that data can be passed between the client and server while maintaining a connection, reducing the overhead of establishing new connections.
+- Small overhead: WebSockets have a simple handshake for connecting, and the data frames are small in size, which reduces unnecessary data overhead.
+- Real-time data transfer: WebSockets allow you to send and receive data in real time, making them ideal for applications that require real-time updates, such as chat, games, and the stock market.
+- WebSockets are typically implemented on the client side using JavaScript, while the server side is handled by building a server that supports the WebSocket protocol. WebSockets are supported by all modern web browsers and play an important role in making web applications more real-time.
+
+Let's talk about the vocabulary you need to learn.
+
+#### What is a handshake?
+
+A handshake is an initialization step that is exchanged between a client and a server to establish a websocket connection.
+When a client requests a WebSockets connection from a server, a handshake is performed between the server and client to establish a WebSockets connection.
+During this phase, necessary metadata and configuration information is exchanged.
+
+##### The handshake process in a typical Websocket
+
+- The client sends a WebSocket connection request to the server.
+- The server receives the client's request and checks to see if it can accept a websocket connection.
+- The server responds to the client that the WebSocket connection was successful.
+
+In other words, the handshake process in websockets is simple, and because of this, websocket connections are quickly established so that real-time communication can begin quickly and efficiently.
+
+##### Why dataframes are small in Websockets
+
+When it comes to the size of the data frame, websockets have a small overhead, which allows them to use a small size data frame.
+Unlike HTTP, websockets can send data without including additional metadata in the data frame.
+This is one of the reasons why WebSockets is a fast and lightweight protocol. By using small data frames, it reduces unnecessary data overhead and makes it more efficient for real-time communication.
+
+Now that we've covered the features, let's talk about why websockets came about in part 2.
