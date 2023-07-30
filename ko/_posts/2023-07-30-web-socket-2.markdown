@@ -1,0 +1,84 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Web_Sockets_2
+title: 웹 소켓에 대하여(2)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Network
+# multiple tag entries are possible
+tags: [network, http]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-30 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### 웹 소켓에 대하여(2)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+지난 글에서는 웹 소켓이란 무엇이고, 특징은 무엇인지 알아보았습니다.
+이번 글에선 왜 웹 소켓이라는 개념이 필요해졌는지 알아보도록 하겠습니다.
+
+웹 소켓이 없다면 우리는 어떤 식으로 서버와 통신을 할까요?
+웹소켓이 없는 경우, 일반적으로 웹 애플리케이션은 HTTP 프로토콜을 사용하여 단방향 통신만 가능합니다. HTTP 프로토콜은 클라이언트가 서버에 요청을 보내고, 서버는 해당 요청에 대한 응답을 반환하는 단방향 방식으로 동작합니다. 이것은 클라이언트가 요청을 보낸 후 서버가 응답을 보내기 전까지만 클라이언트가 서버와의 연결을 유지하는 것을 의미합니다.
+
+#### 단방향 통신의 단점
+
+- 실시간으로 데이터를 주고받기 어렵습니다.
+- 주기적인 폴링(Polling)이나 롱 폴링(Long Polling) 등의 기술을 사용하여 간접적인 실시간 통신을 구현해야 합니다. 하지만 이러한 방식은 효율적이지 않으며, 서버에 불필요한 부하를 발생시키는 등의 단점이 있습니다.
+
+여기서 폴링과 롱 폴링에 대해 간단히 짚어보고 넘어가겠습니다.
+
+#### 폴링(Polling)
+
+폴링은 클라이언트가 일정한 간격으로 서버에 요청을 보내서 새로운 데이터가 있는지 확인하는 방식입니다.
+클라이언트는 일정한 주기로 서버에 데이터를 요청하고, 서버는 요청에 대한 응답으로 현재 상태의 데이터를 전달합니다.
+이후 클라이언트는 다시 주기적으로 서버에 요청을 보내어 업데이트된 데이터를 받아오는 방식으로 동작합니다.
+폴링의 단점은 주기적인 요청이 불필요한 트래픽을 발생시킨다는 점입니다.
+특히 데이터 업데이트가 적은 경우에도 계속해서 요청을 보내야 하므로 서버와 클라이언트 모두에게 부담이 될 수 있습니다.
+
+#### 롱 폴링(Long Polling)
+
+롱 폴링은 폴링의 단점을 개선하기 위한 방법으로, 클라이언트가 요청을 보낸 후 서버에서 새로운 데이터가 준비될 때까지 연결을 유지하는 방식입니다.
+클라이언트가 서버에 요청을 보내면, 서버는 새로운 데이터가 준비될 때까지 응답을 보류합니다.
+그리고 새로운 데이터가 준비되었을 때 클라이언트에게 응답을 보냅니다.
+이후 클라이언트는 바로 다시 요청을 보내서 새로운 데이터를 받아올 수 있습니다.
+
+##### 결론
+
+웹소켓은 이러한 단방향 통신의 한계를 극복하고, 실시간 양방향 통신을 가능하게 합니다.
+웹소켓은 클라이언트와 서버 간에 지속적인 연결을 유지하고, 양쪽 모두 데이터를 주고받을 수 있으므로 실시간으로 데이터를 전송하고 받는 데 최적화되어 있습니다.
+따라서 웹소켓을 사용하면 웹 애플리케이션에서 더 나은 사용자 경험과 실시간성을 제공할 수 있습니다.
+
+다음 글에선 웹소켓의 단점에 대해 알아보겠습니다.
