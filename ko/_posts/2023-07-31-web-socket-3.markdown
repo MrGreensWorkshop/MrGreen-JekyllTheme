@@ -1,0 +1,63 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Web_Sockets_2
+title: About web sockets(3)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Network
+# multiple tag entries are possible
+tags: [network, http]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-31 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### 웹 소켓에 대하여(3)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+웹 소켓에 대하여(2)에서는 왜 웹 소켓이 세상에 나오게 되었는지와 단방향 통신의 단점에 대해 알아보았습니다.
+이번엔 웹소켓(양방향 통신)의 단점을 알아보겠습니다.
+
+#### 단점
+
+- 복잡성과 유지보수의 어려움: 양방향 통신은 클라이언트와 서버 간에 지속적인 연결을 유지해야 합니다. 이로 인해 애플리케이션의 복잡성이 증가하고 유지보수가 어려워질 수 있습니다. 특히 대규모 애플리케이션에서는 연결 관리와 오류 처리 등에 추가적인 작업이 필요할 수 있습니다.
+- 보안과 인증 문제: 양방향 통신은 지속적인 연결을 필요로 하기 때문에 보안과 인증에 더 많은 주의가 필요합니다. 악의적인 사용자들이 연결을 남용하거나, 보안상 취약한 지점이 생길 수 있습니다. 이에 대한 적절한 보안 대책을 마련해야 합니다.
+- 서버 자원 사용: 양방향 통신은 클라이언트와 서버 간의 지속적인 연결을 유지해야 하므로 서버의 자원 사용량이 증가할 수 있습니다. 대량의 동시 연결이 발생할 경우, 서버 부하에 영향을 미칠 수 있습니다.
+- 호환성 문제: 양방향 통신은 모든 클라이언트가 지원해야 하는 기능이므로, 모든 브라우저와 플랫폼에서 호환성 문제가 발생할 수 있습니다. 특히 오래된 브라우저나 기기에서는 양방향 통신을 지원하지 않을 수 있습니다.
+- 네트워크 환경에 따른 제한: 양방향 통신은 클라이언트와 서버 사이에 지속적인 연결이 필요하기 때문에, 네트워크 환경에 따라 제한을 받을 수 있습니다. 방화벽이나 프록시 등 네트워크 구성 요소들이 양방향 통신을 차단하는 경우가 있을 수 있습니다.
+
+#### 결론
+
+이러한 단점들은 양방향 통신을 구현할 때 고려해야 할 사항들이며, 애플리케이션의 요구사항과 환경을 고려하여 적절한 방식으로 양방향 통신을 구현해야 합니다.

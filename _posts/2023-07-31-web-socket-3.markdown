@@ -1,0 +1,62 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Web_Sockets_2
+title: About web sockets(3)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Network
+# multiple tag entries are possible
+tags: [network, http]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-07-31 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### About web sockets(3)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+In About Web Sockets (2), we discussed why Web Sockets came into existence and the disadvantages of one-way communication. Today, we'll discuss the disadvantages of Web Sockets (two-way communication).
+
+#### Disadvantages
+
+- Complexity and difficulty maintaining: Two-way communication requires a constant connection between the client and server. This can increase the complexity of the application and make it difficult to maintain. Especially in large applications, it can require additional work to manage connections and handle errors.
+- Security and authentication issues: Because two-way communication requires a persistent connection, it requires more attention to security and authentication. Malicious users can abuse the connection, or there can be security weaknesses. Make sure you have appropriate security measures in place.
+- Server resource usage: Bi-directional communication can increase the resource usage of the server as it needs to maintain a continuous connection between the client and the server. If a large number of simultaneous connections occur, this can impact server load.
+- Compatibility issues: Because bi-directional communication is a feature that all clients must support, there can be compatibility issues with all browsers and platforms. In particular, older browsers or devices may not support bi-directional communication.
+- Network limitations: Because two-way communication requires a continuous connection between the client and server, it can be limited by the network environment. Sometimes network components, such as firewalls or proxies, can block two-way communication.
+
+#### Conclusion
+
+These disadvantages are things to consider when implementing bidirectional communication, and you should implement it in a way that is appropriate for your application's needs and environment.
