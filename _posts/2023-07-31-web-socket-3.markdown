@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Web_Sockets_2
-title: About web sockets(2)
+title: About web sockets(3)
 # title: About browser
 
 # post specific
@@ -17,7 +17,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-07-30 09:00:00 +0900
+date: 2023-07-31 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -41,44 +41,22 @@ date: 2023-07-30 09:00:00 +0900
 
 <!-- outline-start -->
 
-### About web sockets(2)
+### About web sockets(3)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-In the last article, we learned what web sockets are and what their features are.
-In this article, we'll look at why we need web sockets in the first place.
+In About Web Sockets (2), we discussed why Web Sockets came into existence and the disadvantages of one-way communication. Today, we'll discuss the disadvantages of Web Sockets (two-way communication).
 
-Without web sockets, how would we communicate with servers?
-Without web sockets, web applications typically only have one-way communication using the HTTP protocol. The HTTP protocol works in a one-way fashion, with the client sending requests to the server and the server returning responses to those requests. This means that after the client sends a request, the client only maintains a connection with the server until the server sends a response.
+#### Disadvantages
 
-#### Disadvantages of one-way communication
+- Complexity and difficulty maintaining: Two-way communication requires a constant connection between the client and server. This can increase the complexity of the application and make it difficult to maintain. Especially in large applications, it can require additional work to manage connections and handle errors.
+- Security and authentication issues: Because two-way communication requires a persistent connection, it requires more attention to security and authentication. Malicious users can abuse the connection, or there can be security weaknesses. Make sure you have appropriate security measures in place.
+- Server resource usage: Bi-directional communication can increase the resource usage of the server as it needs to maintain a continuous connection between the client and the server. If a large number of simultaneous connections occur, this can impact server load.
+- Compatibility issues: Because bi-directional communication is a feature that all clients must support, there can be compatibility issues with all browsers and platforms. In particular, older browsers or devices may not support bi-directional communication.
+- Network limitations: Because two-way communication requires a continuous connection between the client and server, it can be limited by the network environment. Sometimes network components, such as firewalls or proxies, can block two-way communication.
 
-- It is difficult to send and receive data in real time.
-- You need to implement indirect real-time communication using techniques such as periodic polling or long polling. However, these methods are not efficient and have disadvantages such as creating unnecessary load on the server.
+#### Conclusion
 
-Let's take a quick look at polling and long polling here.
-
-#### Polling
-
-Polling is when a client sends a request to the server at regular intervals to see if there is any new data.
-The client requests data from the server at regular intervals, and the server delivers the current state of the data in response to the request.
-The client then sends another periodic request to the server to get updated data, and so on.
-The downside of polling is that the periodic requests generate unnecessary traffic.
-It can be burdensome for both the server and the client, especially if there are only a few data updates, as the requests must be sent over and over again.
-
-#### Long Polling
-
-Long polling is a way to improve on the disadvantages of polling, where the client sends a request and the server keeps the connection open until new data is ready.
-When a client sends a request to a server, the server holds the response until new data is available.
-When the new data is ready, it sends a response to the client.
-The client can then immediately send another request to get the new data.
-
-##### Conclusion
-
-WebSockets overcome these limitations of one-way communication and enable real-time, two-way communication.
-WebSockets are optimized for sending and receiving data in real time because they maintain a continuous connection between the client and server, and both sides can send and receive data.
-As a result, WebSockets can be used to provide a better user experience and real-time in web applications.
-
-In the next post, we'll discuss the disadvantages of websockets.
+These disadvantages are things to consider when implementing bidirectional communication, and you should implement it in a way that is appropriate for your application's needs and environment.
