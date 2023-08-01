@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Web_Sockets_2
-title: About web sockets(3)
+lng_pair: id_About_Web_Sockets_3
+title: 웹 소켓에 대하여(3)
 # title: About browser
 
 # post specific
