@@ -1,23 +1,23 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Web_Sockets_3
-title: About web sockets(3)
+lng_pair: id_About_the_ide_for_android_apps
+title: About the IDE(for Android apps)
 # title: About browser
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
 author: Yeonuk
 # multiple category is not supported
-category: Network
+category: Development
 # multiple tag entries are possible
-tags: [network, http]
+tags: [development]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
 # comments_disable: true
 
 # publish date
-date: 2023-07-31 09:00:00 +0900
+date: 2023-08-01 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -38,6 +38,8 @@ date: 2023-07-31 09:00:00 +0900
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
+
+ntegrated Development Environment
 
 <!-- outline-start -->
 
