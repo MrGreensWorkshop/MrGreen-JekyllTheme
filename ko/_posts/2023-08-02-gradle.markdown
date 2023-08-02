@@ -1,0 +1,69 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_gradle
+title: Gradle에 대하여(안드로이드 앱 관련)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Android
+# multiple tag entries are possible
+tags: [android]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-02 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### 그래들(gradle)에 대하여
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+이번에 회사에서 앱개발 업무를 맡게되어 kotlin을 학습하던 중 gradle 버전으로 인한 이슈가 있었습니다.
+바로 gradle의 unstable한 버전으로 인해 라이브러리 빌드 및 디버깅이 안되는 것이였는데요.
+에러메세지도 gradle의 버전에 대한 이슈로 알려주는 것이 아닌 "그냥 이거 실행 안돼. 다시 해봐" 이런 문구만 떠서 문제 해결에 난항을 겪었습니다.
+이 때문에 아니 덕분이라 해야할지 라이프사이클에 대한 공부를 하고 있던 저에게 안드로이드에서의 빌드란 무엇이고, gradle이 뭔지 근본부터 알아볼 수 있었던 시간이였습니다.
+때문에 이 글을 통해 회고하고자 gradle이 무엇인지 공유하고자 합니다.
+
+#### Gradle 이란?
+
+Gradle(그래들)은 현대적인 빌드 자동화 시스템과 빌드 도구입니다. 안드로이드 프로젝트뿐만 아니라 다양한 플랫폼과 언어의 프로젝트에서도 사용됩니다.
+Java, Kotlin, Groovy 등 다양한 언어로 작성된 프로젝트를 빌드할 수 있으며, 빌드 스크립트를 통해 프로젝트를 구성하고 관리하는데 사용됩니다.
+
+Gradle의 정의와 역할에 대해서 알게 되었습니다. 그럼 이제 Gradle의 주요 특징을 알아보겠습니다.
+
+#### Gradle의 특징
+
+- 선언적 DSL(Domain-Specific Language): Gradle은 Groovy를 기반으로 하는 도메인 특화 언어를 사용하여 빌드 스크립트를 작성합니다. 이로 인해 간결하고 가독성이 좋은 빌드 스크립트를 작성할 수 있습니다.
+- Convention over Configuration: Gradle은 일반적인 빌드 설정들에 대해 미리 정의된 규칙을 제공하므로, 프로젝트에서 이러한 규칙에 따르면 별도의 설정 없이 자동으로 동작합니다. 하지만 필요에 따라 사용자 정의 설정을 추가할 수도 있습니다.
+- Incremental Build: Gradle은 이전 빌드 결과를 캐시하고 변경사항이 있는 부분만 재빌드하여 빌드 시간을 최소화합니다.
+- 다양한 플러그인 지원: Gradle은 다양한 플러그인을 지원하여 Java, Kotlin, 안드로이드, 웹 개발 등 다양한 영역에서 사용할 수 있습니다. 플러그인을 통해 기능을 확장하고 특정 플랫폼이나 라이브러리를 쉽게 통합할 수 있습니다.
+- 멀티 프로젝트 지원: Gradle은 멀티 모듈 또는 멀티 프로젝트 구조를 지원하여 여러 프로젝트를 하나로 관리할 수 있습니다.

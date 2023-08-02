@@ -1,0 +1,69 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_gradle
+title: About gradle
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Android
+# multiple tag entries are possible
+tags: [android]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-02 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### About Gradle
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+This time, I was assigned to develop an app in my company, and while learning kotlin, I encountered an issue with the gradle version.
+I was unable to build and debug the library due to the unstable version of gradle.
+The error message was also an issue with gradle's version, but it didn't say "This just doesn't work. Try again", which made troubleshooting difficult.
+Because of this, it was a time when I was studying the lifecycle, and I was able to learn the basics of what a build on Android is and what gradle is.
+So, in this post, I'd like to share what gradle is for a retrospective.
+
+#### What is Gradle?
+
+Gradle is a modern build automation system and build tool. It is used not only for Android projects, but also for projects on various platforms and languages.
+It can build projects written in different languages like Java, Kotlin, Groovy, etc. and is used to organize and manage projects through build scripts.
+
+Now that we know what Gradle is and what it does, let's take a look at its main features.
+
+#### Features of Gradle
+
+- Declarative Domain-Specific Language (DSL): Gradle uses a domain-specific language based on Groovy to write build scripts. This allows you to write concise and readable build scripts.
+- Convention over Configuration: Gradle provides predefined conventions for common build settings, so if your project follows these conventions, it will work automatically without any configuration. However, you can also add custom settings as needed.
+- Incremental Build: Gradle minimizes build time by caching the results of previous builds and rebuilding only the parts that have changed.
+- Support for a wide range of plugins: Gradle supports a wide range of plugins, allowing you to use it in a variety of areas, including Java, Kotlin, Android, and web development. Plugins allow you to extend functionality and easily integrate specific platforms or libraries.
+- Multi-project support: Gradle supports multi-module or multi-project structures, allowing you to manage multiple projects as one.
