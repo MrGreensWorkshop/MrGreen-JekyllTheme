@@ -41,60 +41,29 @@ date: 2023-08-02 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 안드로이드스튜디오(Android Studio)와 인텔리제이(IntelliJ) IDE에 대하여
+### 그래들(gradle)에 대하여
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-이번에 AOS 개발을 진행하며, 어떤 IDE(Integrated Development Environment)에서 개발을 해야할지 많은 고민을 했습니다.
-이에 기본적인 개념을 알아보고 AOS 개발자 측면에서 어떤 IDE가 이점이 더 클지 고민한 것까지 함께 알아보도록 하겠습니다.
+이번에 회사에서 앱개발 업무를 맡게되어 kotlin을 학습하던 중 gradle 버전으로 인한 이슈가 있었습니다.
+바로 gradle의 unstable한 버전으로 인해 라이브러리 빌드 및 디버깅이 안되는 것이였는데요.
+에러메세지도 gradle의 버전에 대한 이슈로 알려주는 것이 아닌 "그냥 이거 실행 안돼. 다시 해봐" 이런 문구만 떠서 문제 해결에 난항을 겪었습니다.
+이 때문에 아니 덕분이라 해야할지 라이프사이클에 대한 공부를 하고 있던 저에게 안드로이드에서의 빌드란 무엇이고, gradle이 뭔지 근본부터 알아볼 수 있었던 시간이였습니다.
+때문에 이 글을 통해 회고하고자 gradle이 무엇인지 공유하고자 합니다.
 
-### Android Studio와 IntelliJ IDE의 개념
+#### Gradle 이란?
 
-#### Android Studio란?
+Gradle(그래들)은 현대적인 빌드 자동화 시스템과 빌드 도구입니다. 안드로이드 프로젝트뿐만 아니라 다양한 플랫폼과 언어의 프로젝트에서도 사용됩니다.
+Java, Kotlin, Groovy 등 다양한 언어로 작성된 프로젝트를 빌드할 수 있으며, 빌드 스크립트를 통해 프로젝트를 구성하고 관리하는데 사용됩니다.
 
-Android 용 앱을 개발하기 위한 공식 통합 개발 환경(IDE)입니다.
-IntelliJ IDE의 상용 버전인 IntelliJ IDEA를 기반으로하며, Google에서 개발하고 관리합니다.
-Android Studio는 Android 플랫폼에 특화된 기능과 도구들을 제공합니다.
+Gradle의 정의와 역할에 대해서 알게 되었습니다. 그럼 이제 Gradle의 주요 특징을 알아보겠습니다.
 
-#### IntelliJ란?
+#### Gradle의 특징
 
-Jetbrains에서 개발한 통합 개발 환경으로, 여러 프로그래밍 언어를 지원합니다.
-IntelliJ IDEA는 Community (무료) 버전과 Ultimate (유료) 버전이 있습니다.
-Ultimate 버전은 웹 개발, 데이터베이스 지원 등 추가 기능을 제공합니다.
-
-그럼 이제 각 개발 환경에 대한 장단점을 알아보겠습니다.
-
-#### Android Studio
-
-##### 장점
-
-- Android 개발에 특화: Android Studio는 Android 앱 개발에 필요한 모든 도구와 기능을 통합하고 있습니다. 이에는 에뮬레이터, 디바이스를 위한 APK 생성 기능, Lint 도구로의 코드 분석, ProGuard와 앱 서명 도구 등이 포함됩니다.
-- Android 플랫폼과 강한 통합: Google Play 서비스와 같은 플랫폼 서비스, Firebase, Google Cloud 등과의 연동이 쉽습니다.
-- 지속적인 업데이트: Google은 지속적으로 새로운 Android 버전과 동시에 Android Studio를 업데이트합니다.
-
-###### 단점
-
-- Android 특화 기능에 한정: Android 개발 이외의 일반적인 자바 또는 코틀린 개발에는 IntelliJ가 제공하는 일부 고급 기능이 누락될 수 있습니다.
-- 상대적으로 더 무거운 시스템 요구 사항: Android Studio는 IntelliJ에 비해 더 많은 시스템 리소스를 요구하는 경향이 있습니다.
-
-#### IntelliJ IDE
-
-##### 장점
-
-- 다양한 언어 지원: IntelliJ는 Java와 Kotlin 외에도 다양한 언어(JavaScript, Groovy, Scala 등)를 지원하므로, 다양한 언어를 사용하는 프로젝트에 유용합니다.
-- 웹 개발 지원: Ultimate Edition은 웹 및 엔터프라이즈 개발을 위한 추가 도구를 제공합니다. 이러한 도구에는 SQL 데이터베이스 도구, 서버 통합 도구, 스프링 프레임워크 지원 등이 포함됩니다.
-
-##### 단점
-
-- Android 개발에 특화된 기능 부족: Android Studio와 비교하여 IntelliJ는 Android 특화 기능이 덜합니다.
-- 비용: IntelliJ의 Ultimate Edition은 유료입니다.
-
-#### 결론
-
-주로 Android 앱 개발에 초점을 두고 있다면, Android Studio가 더 나은 선택일 수 있습니다.
-그러나 여러 프로그래밍 언어를 사용하여 다양한 유형의 프로젝트(예: 웹 및 엔터프라이즈 애플리케이션)를 개발하는 경우 IntelliJ를 고려해 볼 만합니다.
-또한 IntelliJ의 Community Edition은 무료이지만, 모든 기능을 활용하려면 Ultimate Edition을 구매해야 합니다.
-
-**저는 Android Studio로 개발 환경을 구축했습니다.**
+- 선언적 DSL(Domain-Specific Language): Gradle은 Groovy를 기반으로 하는 도메인 특화 언어를 사용하여 빌드 스크립트를 작성합니다. 이로 인해 간결하고 가독성이 좋은 빌드 스크립트를 작성할 수 있습니다.
+- Convention over Configuration: Gradle은 일반적인 빌드 설정들에 대해 미리 정의된 규칙을 제공하므로, 프로젝트에서 이러한 규칙에 따르면 별도의 설정 없이 자동으로 동작합니다. 하지만 필요에 따라 사용자 정의 설정을 추가할 수도 있습니다.
+- Incremental Build: Gradle은 이전 빌드 결과를 캐시하고 변경사항이 있는 부분만 재빌드하여 빌드 시간을 최소화합니다.
+- 다양한 플러그인 지원: Gradle은 다양한 플러그인을 지원하여 Java, Kotlin, 안드로이드, 웹 개발 등 다양한 영역에서 사용할 수 있습니다. 플러그인을 통해 기능을 확장하고 특정 플랫폼이나 라이브러리를 쉽게 통합할 수 있습니다.
+- 멀티 프로젝트 지원: Gradle은 멀티 모듈 또는 멀티 프로젝트 구조를 지원하여 여러 프로젝트를 하나로 관리할 수 있습니다.
