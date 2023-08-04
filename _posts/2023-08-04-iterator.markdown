@@ -41,48 +41,67 @@ date: 2023-08-04 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Closure(클로저)에 대하여
+### About Iterators
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-JS를 공부하다 보면 함수형 프로그래밍에 대해 많이 접할 수 있습니다.
-함수형 프로그래밍에는 빠지지 않고 등장하는 개념이 있는데 일급 함수(first-class functions)와 클로저(closure)입니다.
+When I was testing my code, I came across a solution in someone else's code that utilized an iterator object.
+I had a general idea of the concept, but I had never seen it utilized before, so I thought it would be interesting to learn more about it and write a tutorial.
 
-오늘은 클로저에 대해 알아보겠습니다.
+#### What is an Iterator Object?
 
-#### Gradle 이란?
+An Iterator object is an object that provides an interface used in JavaScript to iterate over iterable objects.
+An iterator is used to access and iterate over each element within a traversable object.
 
-Gradle(그래들)은 현대적인 빌드 자동화 시스템과 빌드 도구입니다. 안드로이드 프로젝트뿐만 아니라 다양한 플랫폼과 언어의 프로젝트에서도 사용됩니다.
-Java, Kotlin, Groovy 등 다양한 언어로 작성된 프로젝트를 빌드할 수 있으며, 빌드 스크립트를 통해 프로젝트를 구성하고 관리하는데 사용됩니다.
+An iterator has two functions.
 
-Gradle의 정의와 역할에 대해서 알게 되었습니다. 그럼 이제 Gradle의 주요 특징을 알아보겠습니다.
+##### next() function
 
-#### 클로저란 무엇일까요?
+This method is called each time the iterator object is traversed. Each time it is called, it returns an iterator result object that points to the next element within the traversable object.
+The return object has two properties: value and done.
+value: The value of the element the iterator is currently pointing to.
+done: true when all traversable objects have been traversed, false otherwise.
 
-클로저(closure)는 함수와 그 함수가 선언될 때의 환경 정보 사이의 조합입니다.
-다시 말해, 클로저는 함수 내부에 있는 로컬 변수들이 함수의 실행이 끝나도 사라지지 않고 유지되는 특성을 말합니다.
+##### Symbol.iterator function
 
-#### 특징
+This method is a special symbolic identifier (Symbol) that returns an iterator object. It is used to traverse through the iterable objects.
 
-클로저의 중요한 특징은 내부 함수가 외부 함수의 변수에 접근할 수 있으며, 외부 함수가 종료된 후에도 그 상태를 기억한다는 점입니다.
-
-#### 예시
+##### Example
 
 ```javascript
-function makeAdder(x) {
-  return function (y) {
-    return x + y;
-  };
-}
+const arr = [1, 2, 3];
+const iterator = arr[Symbol.iterator](); // get the iterator of the array
 
-let add5 = makeAdder(5);
-console.log(add5(2)); // 출력: 7
+console.log(iterator.next()); // output: { value: 1, done: false }
+console.log(iterator.next()); // output: { value: 2, done: false }
+console.log(iterator.next()); // output: { value: 3, done: false }
+console.log(iterator.next()); // Output: { value: undefined, done: true }
+
+const iterator = arr[Symbol.iterator](); // Initialize an iterator in an array
+
+-----
+
+// Convert a string to an array
+const str = 'Hello';
+const arr = Array.from(str);
+console.log(arr); // Output: ['H', 'e', 'l', 'l', 'o']
+
+-----
+
+// Create an array by applying a mapping function to an iterable object
+const set = new Set([1, 2, 3]);
+const arr = Array.from(set, (item) => item * 2);
+console.log(arr); // Output: [2, 4, 6]
+
+-----
+
+// Create an array of numbers from 1 to N
+const newArray = Array.from({ length: 9 }, (value, index) => index + 1);
+console.log(newArray); // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-위의 예제에서 makeAdder는 클로저를 반환합니다. add5라는 변수는 makeAdder 함수에 의해 반환된 함수를 저장하고 있습니다. 이 함수는 makeAdder 함수의 매개변수 x에 접근할 수 있으며, makeAdder 함수의 실행이 끝난 후에도 x의 상태를 기억합니다. 그래서 add5(2)를 실행하면, 이전에 저장된 x 값인 5와 새로운 입력 2를 더한 결과 7을 출력합니다.
+#### See
 
-#### 결론
-
-이러한 클로저의 특성은 데이터를 숨기고 캡슐화하는데 유용하게 사용될 수 있습니다.
+Array is an iterable object, so you can use an iterator to traverse the elements of an array. String, Set, Map, etc. are also iterable objects and can be traversed using an iterator.
