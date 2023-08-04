@@ -1,0 +1,107 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Iterator
+title: About iterator
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Javascript
+# multiple tag entries are possible
+tags: [javascript, js]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-04 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### About Iterators
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+When I was testing my code, I came across a solution in someone else's code that utilized an iterator object.
+I had a general idea of the concept, but I had never seen it utilized before, so I thought it would be interesting to learn more about it and write a tutorial.
+
+#### What is an Iterator Object?
+
+An Iterator object is an object that provides an interface used in JavaScript to iterate over iterable objects.
+An iterator is used to access and iterate over each element within a traversable object.
+
+An iterator has two functions.
+
+##### next() function
+
+This method is called each time the iterator object is traversed. Each time it is called, it returns an iterator result object that points to the next element within the traversable object.
+The return object has two properties: value and done.
+value: The value of the element the iterator is currently pointing to.
+done: true when all traversable objects have been traversed, false otherwise.
+
+##### Symbol.iterator function
+
+This method is a special symbolic identifier (Symbol) that returns an iterator object. It is used to traverse through the iterable objects.
+
+##### Example
+
+```javascript
+const arr = [1, 2, 3];
+const iterator = arr[Symbol.iterator](); // get the iterator of the array
+
+console.log(iterator.next()); // output: { value: 1, done: false }
+console.log(iterator.next()); // output: { value: 2, done: false }
+console.log(iterator.next()); // output: { value: 3, done: false }
+console.log(iterator.next()); // Output: { value: undefined, done: true }
+
+const iterator = arr[Symbol.iterator](); // Initialize an iterator in an array
+
+-----
+
+// Convert a string to an array
+const str = 'Hello';
+const arr = Array.from(str);
+console.log(arr); // Output: ['H', 'e', 'l', 'l', 'o']
+
+-----
+
+// Create an array by applying a mapping function to an iterable object
+const set = new Set([1, 2, 3]);
+const arr = Array.from(set, (item) => item * 2);
+console.log(arr); // Output: [2, 4, 6]
+
+-----
+
+// Create an array of numbers from 1 to N
+const newArray = Array.from({ length: 9 }, (value, index) => index + 1);
+console.log(newArray); // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+#### See
+
+Array is an iterable object, so you can use an iterator to traverse the elements of an array. String, Set, Map, etc. are also iterable objects and can be traversed using an iterator.
