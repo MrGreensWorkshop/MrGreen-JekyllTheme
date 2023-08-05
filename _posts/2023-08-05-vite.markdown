@@ -1,0 +1,107 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Vite
+title: 바이트(Iterator)에 대하여
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Javascript
+# multiple tag entries are possible
+tags: [javascript, js]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-04 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### 이터레이터(Iterator)에 대하여
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+코딩 테스트를 진행하며, 다른 사람의 코드 중 이터레이터 객체를 활용하는 풀이법을 보았습니다.
+대략 어떤 개념인지는 알았지만 활용하는 사례는 처음 보았기에 흥미롭게 제대로 공부할 기회가 생겨 자습 후 글로 남깁니다.
+
+#### 이터레이터 객체란?
+
+이터레이터(Iterator) 객체는 자바스크립트에서 반복 가능한(iterable) 객체를 순회하기 위해 사용되는 인터페이스를 제공하는 객체입니다.
+이터레이터는 순회 가능한 객체 내의 각 요소에 접근하고 반복하는 데 사용됩니다.
+
+이터레이터는 2개의 함수를 가지고 있습니다.
+
+##### next() 함수
+
+이 메서드는 이터레이터 객체를 순회할 때마다 호출됩니다. 호출될 때마다 순회 가능한 객체 내의 다음 요소를 가리키는 이터레이터 결과 객체를 반환합니다.
+반환 객체에는 value와 done 두 개의 속성이 있습니다.
+value: 현재 이터레이터가 가리키고 있는 요소의 값입니다.
+done: 순회 가능한 객체를 모두 순회했을 때 true, 그렇지 않을 때 false입니다.
+
+##### Symbol.iterator 함수
+
+이 메서드는 이터레이터 객체를 반환하는 특수한 기호 식별자(Symbol)입니다. 이를 통해 반복 가능한 객체를 순회하는 데 사용됩니다.
+
+##### 예시
+
+```javascript
+const arr = [1, 2, 3];
+const iterator = arr[Symbol.iterator](); // 배열의 이터레이터를 얻음
+
+console.log(iterator.next()); // 출력: { value: 1, done: false }
+console.log(iterator.next()); // 출력: { value: 2, done: false }
+console.log(iterator.next()); // 출력: { value: 3, done: false }
+console.log(iterator.next()); // 출력: { value: undefined, done: true }
+
+const iterator = arr[Symbol.iterator](); // 배열의 이터레이터 초기화
+
+-----
+
+// 문자열을 배열로 변환하기
+const str = 'Hello';
+const arr = Array.from(str);
+console.log(arr); // 출력: ['H', 'e', 'l', 'l', 'o']
+
+-----
+
+// 이터러블 객체에 맵핑 함수 적용하여 배열 생성하기
+const set = new Set([1, 2, 3]);
+const arr = Array.from(set, (item) => item * 2);
+console.log(arr); // 출력: [2, 4, 6]
+
+-----
+
+// 1~N까지의 숫자 배열 만들기
+const newArray = Array.from({ length: 9 }, (value, index) => index + 1);
+console.log(newArray); // 출력: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+#### 참고
+
+배열(Array)은 반복 가능한 객체(iterable)이므로 배열의 요소들을 순회하기 위해 이터레이터를 사용할 수 있습니다. 또한, 문자열(String), Set, Map 등도 반복 가능한 객체이므로 이터레이터를 활용하여 순회할 수 있습니다.
