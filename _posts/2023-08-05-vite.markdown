@@ -1,0 +1,74 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Vite
+title: About Vite
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Development
+# multiple tag entries are possible
+tags: [development]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-05 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### About Vite
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+I recently created a board game called Great Kingdom on the web as a toy project, and I implemented it using Vite, which I recently discovered.
+I was impressed with how fast it was and how productive the code was due to real-time change detection. Today I'm going to explore this Vite.
+
+#### Concept
+
+What is Vite? It is an open source platform for distributed application development. Vite is designed to develop web applications and distributed applications quickly and efficiently.
+It's a tool for developers using JavaScript and TypeScript, and was developed by Evan You, the creator of the Vue.js framework. Vite is optimized for Vue.js applications, but it can also be used with other frameworks and libraries.
+
+##### Advantages
+
+The core concepts behind Vite are "fast development server" and "fast bundling". Vite provides a fast development server that allows developers to detect changes in real-time as they develop their applications and have them reflected immediately in the browser. Vite also quickly bundles code to create optimized static resources, which can significantly improve the loading speed of your application.
+It acts as a module bundler. Based on the ES module format, it supports "fast bundling" - splitting your application's resources into modules and loading only the modules you need. This can reduce initial loading time and improve the performance of your application.
+
+So how is it different from the CRAs that many people have used in the past?
+
+Vite and Create React App (CRA) are both front-end development tools, but there are some key differences.
+
+##### Vite vs CRA differences
+
+- Development server startup time: Vite significantly reduces server startup time. Vite uses ES Modules (ESM) to create modules that work right in the browser. This allows us to load only the files we need during development and not bundle the entire application. This provides significantly faster Hot Module Replacement (HMR). CRA, on the other hand, is based on Webpack, which bundles the entire application.
+- Build performance: Vite uses Rollup, which improves build performance, and supports optimizations for code splitting and tree shaking. The CRA uses Webpack to generate production builds, and build times can be quite long on large projects.
+- Plugin system: Vite supports Rollup plugins, so the number of available plugins is higher. CRA uses an ejection system that limits customization.
+- Framework support: Vite supports a wide range of frameworks, including Vue, React, Preact, and LitElement. CRA is primarily focused on React.
+- Typescript support: Vite supports Typescript natively. CRA supports Typescript via Babel, but this is not type-checked.
+- Configuration: CRA provides fairly robust default settings, but to customize them you need to do an eject, which adds a lot of complexity and makes it difficult to get updates from CRA in the future. Vite, on the other hand, makes it easy to customize settings.
