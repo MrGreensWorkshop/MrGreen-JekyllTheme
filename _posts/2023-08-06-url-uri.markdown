@@ -41,34 +41,34 @@ date: 2023-08-06 09:00:00 +0900
 
 <!-- outline-start -->
 
-### URL(Uniform Resource Locator)과 URI(Uniform Resource Identifier)의 차이점에 대하여
+### The difference between a Uniform Resource Locator (URL) and a Uniform Resource Identifier (URI).
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-최근에 토이프로젝트로 그레이트 킹덤이라는 보드게임을 웹에서 만들고 있었는데 최근에 새로 알게된 Vite를 통해 구현을 했습니다.
-꽤 빠른 속도와 실시간 변화 감지로 인한 코드 생산성이 높아 인상적이였습니다. 오늘은 이 Vite를 알아보겠습니다.
+This time I spent some time refactoring some code that consisted of a webview, and I came across a URI.
+At first I thought it was a typo, but then I realized that it's an acronym with a different meaning, which I'd like to share.
 
-#### 개념
+Let's start with the misunderstood URL.
 
-Vite란? 분산된 애플리케이션 개발을 위한 오픈 소스 플랫폼입니다. Vite는 웹 애플리케이션과 분산된 애플리케이션을 빠르고 효율적으로 개발할 수 있도록 설계되었습니다.
-JavaScript 및 TypeScript를 사용하는 개발자들을 위한 도구로, Vue.js 프레임워크의 개발자인 Evan You가 개발했습니다. Vite는 Vue.js 애플리케이션을 위해 최적화되어 있지만, 다른 프레임워크 및 라이브러리와도 함께 사용할 수 있습니다.
+#### What is a URL (Uniform Resource Locator)?
 
-##### 장점
+It's a subset of a URI that specifies a specific location for a resource.
+In other words, a URL is an address that tells you the "location" of a specific file, page, etc. on the web.
 
-Vite의 핵심 개념은 "빠른 개발 서버"와 "빠른 번들링"입니다. Vite는 개발자가 애플리케이션을 개발할 때 실시간으로 변화를 감지하고 브라우저에서 즉시 반영될 수 있는 빠른 개발 서버를 제공합니다. 또한 Vite는 코드를 빠르게 번들링하여 최적화된 정적 자원을 생성하며, 이를 통해 애플리케이션의 로딩 속도를 크게 개선할 수 있습니다.
-모듈 번들러로서의 역할을 수행합니다. ES 모듈 형식을 기반으로 하며, 애플리케이션의 자원을 모듈 단위로 분할하여 필요한 모듈만 불러오는 "빠른 번들링"을 지원합니다. 이를 통해 초기 로딩 시간을 줄이고 애플리케이션의 성능을 향상시킬 수 있습니다.
+##### Example URL
 
-그렇다면 기존에 많은 사람들이 사용했던 CRA와 무슨 차이길래 사용을 하는 것일까요?
+The address 'https://www.example.com/pages' is a URL - it points to the exact location of a specific page on the web. At the same time, this address is also a URI, because it uniquely identifies a specific resource.
 
-Vite와 Create React App (CRA)은 모두 프론트엔드 개발 도구이지만, 몇 가지 주요한 차이점이 있습니다.
+What is a Uniform Resource Identifier (URI)?
+It is the only string of characters that identifies a specific resource on the Internet.
+A URI might not specify the location of a resource. Instead, a URI provides a way to provide the only name for a resource in a particular namespace.
 
-##### Vite와 CRA차이점
+##### Example URI
 
-- 개발 서버 시작 시간: Vite는 서버 시작 시간을 크게 줄입니다. Vite는 ES Modules (ESM)를 사용하여 브라우저에서 바로 작동하는 모듈을 생성합니다. 이를 통해 개발 중 필요한 파일만 로드하여 전체 애플리케이션을 번들하지 않습니다. 이는 상당히 빠른 HMR (Hot Module Replacement)를 제공합니다. 반면에 CRA는 전체 애플리케이션을 번들하는 Webpack을 기반으로 합니다.
-- 빌드 성능: Vite는 빌드 성능을 향상시키는 Rollup을 사용하고, 코드 스플리팅과 트리 쉐이킹을 위한 최적화를 지원합니다. CRA는 Webpack을 사용하여 프로덕션 빌드를 생성하며, 큰 프로젝트에서는 빌드 시간이 상당히 길어질 수 있습니다.
-- 플러그인 시스템: Vite는 Rollup 플러그인을 지원하므로, 사용 가능한 플러그인의 수가 더 많습니다. CRA는 사용자 정의 설정을 제한하는 ejection 시스템을 사용합니다.
-- 프레임워크 지원: Vite는 Vue, React, Preact, LitElement 등 다양한 프레임워크를 지원합니다. CRA는 주로 React에 초점을 맞추고 있습니다.
-- 타입스크립트 지원: Vite는 기본적으로 타입스크립트를 지원합니다. CRA는 Babel을 통해 타입스크립트를 지원하지만, 이는 타입 체크를 하지 않습니다.
-- 환경 설정: CRA는 상당히 강력한 기본 설정을 제공하나, 이를 사용자 정의하기 위해서는 eject를 수행해야 합니다. 이는 많은 복잡성을 추가하며, 이후 CRA의 업데이트를 받는 것이 어려워집니다. 반면에 Vite는 설정을 사용자 정의하기 쉽게 만들어져 있습니다.
+An address like 'example@example.com' is a URI. This address is used to identify an email address, but it does not specify the actual "location" of the email address. Therefore, it is a URI, but not a URL.
+
+#### Conclusion
+
+Every URL is a URI, but not every URI is a URL. A URL is a special case of a URI that specifies the physical location of a resource.
