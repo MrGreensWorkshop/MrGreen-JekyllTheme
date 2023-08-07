@@ -17,7 +17,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-08-06 09:00:00 +0900
+date: 2023-08-07 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -40,3 +40,52 @@ date: 2023-08-06 09:00:00 +0900
 ---
 
 <!-- outline-start -->
+
+### About ES6 syntax (let and const)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+This post is to summarize ES6 syntax, which I recently revisited in preparation for a coding test.
+
+ES6 stands for ECMAScript, which was released in 2015, and is a standardized version of JavaScript.
+
+#### About variable declarations (let, const)
+
+These are the keywords used to declare block-scoped variables.
+
+- let: No duplicate declarations are allowed, so it cannot be declared multiple times with the same name. The value can be reassigned after the variable is declared.
+- const: The declared variable is a constant, so the value cannot be changed once assigned.
+
+##### Example of a let declaration
+
+```javascript
+let count = 0;
+count = 5; // can be reassigned
+
+if (true) {
+  let count = 10; // Declare a new block scope variable
+  console.log(count); // output: 10
+}
+
+console.log(count); // output: 5 (variables outside the block are not affected)
+```
+
+##### Example of a const declaration
+
+```javascript
+const PI = 3.14159;
+PI = 3.14; // Error - constants cannot be reassigned
+
+if (true) {
+  const age = 30; // Declare a new block scope constant
+  console.log(age); // output: 30
+}
+
+console.log(age); // Error - constant cannot be accessed from outside the block
+```
+
+#### What is a block-scoped variable?
+
+A variable that is valid only within the block in which it is declared.
