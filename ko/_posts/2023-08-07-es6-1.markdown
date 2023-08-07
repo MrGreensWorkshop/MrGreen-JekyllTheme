@@ -1,0 +1,91 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_ES6_1
+title: ES6 문법에 대하여 1 (let과 const)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: ES
+# multiple tag entries are possible
+tags: [es, es6]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-07 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### ES6 문법에 대하여(let과 const)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+최근 코딩테스트를 준비하며 다시 공부하게된 ES6문법에 대해 정리하고자 하는 글입니다.
+
+ES6는 2015년에 출시된 ECMAScript의 약자이며, 자바스크립트의 표준, 규격을 나타내는 용어입니다.
+
+#### 변수 선언(let, const)에 대하여
+
+블록 범위 변수를 선언하는데 사용되는 키워드입니다.
+
+- let: 중복 선언이 허용되지 않아 같은 이름으로 여러 번 선언할 수 없습니다. 변수 선언 후에 값의 재할당이 가능합니다.
+- const: 선언된 변수는 상수이기 때문에 한 번 할당한 값은 변경할 수 없습니다.
+
+##### let 선언 예시
+
+```javascript
+let count = 0;
+count = 5; // 재할당이 가능
+
+if (true) {
+  let count = 10; // 새로운 블록 범위 변수를 선언
+  console.log(count); // 출력: 10
+}
+
+console.log(count); // 출력: 5 (블록 외부의 변수는 영향을 받지 않음)
+```
+
+##### const 선언 예시
+
+```javascript
+const PI = 3.14159;
+PI = 3.14; // 에러 발생 - 상수는 재할당이 불가능
+
+if (true) {
+  const age = 30; // 새로운 블록 범위 상수를 선언
+  console.log(age); // 출력: 30
+}
+
+console.log(age); // 에러 발생 - 블록 외부에서 상수에 접근할 수 없음
+```
+
+#### 블록범위 변수란?
+
+선언된 블록 내에서만 유효한 변수를 의미합니다.
