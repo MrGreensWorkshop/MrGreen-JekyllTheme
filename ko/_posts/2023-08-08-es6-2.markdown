@@ -17,7 +17,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-08-07 09:00:00 +0900
+date: 2023-08-08 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -41,7 +41,7 @@ date: 2023-08-07 09:00:00 +0900
 
 <!-- outline-start -->
 
-### ES6 문법에 대하여(let과 const)
+### ES6 문법에 대하여(Arrow Function)
 
 {:data-align="center"}
 
@@ -51,41 +51,21 @@ date: 2023-08-07 09:00:00 +0900
 
 ES6는 2015년에 출시된 ECMAScript의 약자이며, 자바스크립트의 표준, 규격을 나타내는 용어입니다.
 
-#### 변수 선언(let, const)에 대하여
+#### 화살표 함수(Arrow Function)이란?
 
-블록 범위 변수를 선언하는데 사용되는 키워드입니다.
+화살표 함수는 몇 가지 제한점이 있고, 모든 상황에 사용할 수는 없습니다.
+함수 표현식을 화살표 함수로 표현할 수도 있습니다.
+화살표 함수가 추가되어 함수를 간결하게 나타낼 수 있어, 가독성 및 유지 보수성이 올라갑니다.
+만약 함수의 본문(body)에 return만 있는 경우 화살표 함수는 return과 {}를 생략할 수 있습니다. 단, return과 {}를 함께 생략해야 합니다.
+return문에서 소괄호는 사용가능하다.
 
-- let: 중복 선언이 허용되지 않아 같은 이름으로 여러 번 선언할 수 없습니다. 변수 선언 후에 값의 재할당이 가능합니다.
-- const: 선언된 변수는 상수이기 때문에 한 번 할당한 값은 변경할 수 없습니다.
-
-##### let 선언 예시
-
-```javascript
-let count = 0;
-count = 5; // 재할당이 가능
-
-if (true) {
-  let count = 10; // 새로운 블록 범위 변수를 선언
-  console.log(count); // 출력: 10
-}
-
-console.log(count); // 출력: 5 (블록 외부의 변수는 영향을 받지 않음)
-```
-
-##### const 선언 예시
+##### Arrow Function 예시
 
 ```javascript
-const PI = 3.14159;
-PI = 3.14; // 에러 발생 - 상수는 재할당이 불가능
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-if (true) {
-  const age = 30; // 새로운 블록 범위 상수를 선언
-  console.log(age); // 출력: 30
-}
-
-console.log(age); // 에러 발생 - 블록 외부에서 상수에 접근할 수 없음
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
 ```
 
-#### 블록범위 변수란?
-
-선언된 블록 내에서만 유효한 변수를 의미합니다.
+예시처럼 화살표 함수를 통해 우리는 더 간결한 코드를 작성할 수 있습니다.

@@ -17,7 +17,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-08-07 09:00:00 +0900
+date: 2023-08-08 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -41,51 +41,31 @@ date: 2023-08-07 09:00:00 +0900
 
 <!-- outline-start -->
 
-### ES6 문법에 대하여(let과 const)
+### About ES6 Syntax (Arrow Function)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-최근 코딩테스트를 준비하며 다시 공부하게된 ES6문법에 대해 정리하고자 하는 글입니다.
+This post is to summarize ES6 syntax, which I recently revisited in preparation for a coding test.
 
-ES6는 2015년에 출시된 ECMAScript의 약자이며, 자바스크립트의 표준, 규격을 나타내는 용어입니다.
+ES6 stands for ECMAScript, a standardized version of JavaScript released in 2015.
 
-#### 변수 선언(let, const)에 대하여
+You can learn more about ES6 here: #### What is an Arrow Function?
 
-블록 범위 변수를 선언하는데 사용되는 키워드입니다.
+Arrow functions have some limitations and can't be used in every situation.
+A function expression can also be expressed as an arrow function.
+The addition of arrow functions allows you to represent functions concisely, making them more readable and maintainable.
+If the body of the function contains only a return, the arrow function can omit the return and {}. However, the return and {} must be omitted together.
+In the return statement, you can use the parentheses.
 
-- let: 중복 선언이 허용되지 않아 같은 이름으로 여러 번 선언할 수 없습니다. 변수 선언 후에 값의 재할당이 가능합니다.
-- const: 선언된 변수는 상수이기 때문에 한 번 할당한 값은 변경할 수 없습니다.
-
-##### let 선언 예시
-
-```javascript
-let count = 0;
-count = 5; // 재할당이 가능
-
-if (true) {
-  let count = 10; // 새로운 블록 범위 변수를 선언
-  console.log(count); // 출력: 10
-}
-
-console.log(count); // 출력: 5 (블록 외부의 변수는 영향을 받지 않음)
-```
-
-##### const 선언 예시
+##### Arrow Function Example
 
 ```javascript
-const PI = 3.14159;
-PI = 3.14; // 에러 발생 - 상수는 재할당이 불가능
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-if (true) {
-  const age = 30; // 새로운 블록 범위 상수를 선언
-  console.log(age); // 출력: 30
-}
-
-console.log(age); // 에러 발생 - 블록 외부에서 상수에 접근할 수 없음
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
 ```
 
-#### 블록범위 변수란?
-
-선언된 블록 내에서만 유효한 변수를 의미합니다.
+As shown in the example, the arrow function allows us to write more concise code.
