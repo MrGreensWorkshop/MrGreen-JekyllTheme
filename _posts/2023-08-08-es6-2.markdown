@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_ES6_1
-title: About ES6 syntax 1 (let and const)
+lng_pair: id_About_ES6_2
+title: About ES6 syntax 2 (Arrow Function)
 # title: About browser
 
 # post specific
@@ -17,7 +17,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-08-07 09:00:00 +0900
+date: 2023-08-08 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -41,7 +41,7 @@ date: 2023-08-07 09:00:00 +0900
 
 <!-- outline-start -->
 
-### About ES6 syntax (let and const)
+### About ES6 Syntax (Arrow Function)
 
 {:data-align="center"}
 
@@ -49,43 +49,23 @@ date: 2023-08-07 09:00:00 +0900
 
 This post is to summarize ES6 syntax, which I recently revisited in preparation for a coding test.
 
-ES6 stands for ECMAScript, which was released in 2015, and is a standardized version of JavaScript.
+ES6 stands for ECMAScript, a standardized version of JavaScript released in 2015.
 
-#### About variable declarations (let, const)
+You can learn more about ES6 here: #### What is an Arrow Function?
 
-These are the keywords used to declare block-scoped variables.
+Arrow functions have some limitations and can't be used in every situation.
+A function expression can also be expressed as an arrow function.
+The addition of arrow functions allows you to represent functions concisely, making them more readable and maintainable.
+If the body of the function contains only a return, the arrow function can omit the return and {}. However, the return and {} must be omitted together.
+In the return statement, you can use the parentheses.
 
-- let: No duplicate declarations are allowed, so it cannot be declared multiple times with the same name. The value can be reassigned after the variable is declared.
-- const: The declared variable is a constant, so the value cannot be changed once assigned.
-
-##### Example of a let declaration
-
-```javascript
-let count = 0;
-count = 5; // can be reassigned
-
-if (true) {
-  let count = 10; // Declare a new block scope variable
-  console.log(count); // output: 10
-}
-
-console.log(count); // output: 5 (variables outside the block are not affected)
-```
-
-##### Example of a const declaration
+##### Arrow Function Example
 
 ```javascript
-const PI = 3.14159;
-PI = 3.14; // Error - constants cannot be reassigned
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-if (true) {
-  const age = 30; // Declare a new block scope constant
-  console.log(age); // output: 30
-}
-
-console.log(age); // Error - constant cannot be accessed from outside the block
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
 ```
 
-#### What is a block-scoped variable?
-
-A variable that is valid only within the block in which it is declared.
+As shown in the example, the arrow function allows us to write more concise code.

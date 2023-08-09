@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_URI_URL
-title: URL과 URI의 차이점에 대하여
+title: About the difference between URLs and URIs
 # title: About browser
 
 # post specific

@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_ES6_1
-title: About ES6 syntax 1 (let and const)
+lng_pair: id_About_ES6_2
+title: ES6 문법에 대하여 2 (Arrow Function)
 # title: About browser
 
 # post specific
@@ -17,7 +17,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-08-07 09:00:00 +0900
+date: 2023-08-08 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -41,51 +41,31 @@ date: 2023-08-07 09:00:00 +0900
 
 <!-- outline-start -->
 
-### About ES6 syntax (let and const)
+### ES6 문법에 대하여(Arrow Function)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-This post is to summarize ES6 syntax, which I recently revisited in preparation for a coding test.
+최근 코딩테스트를 준비하며 다시 공부하게된 ES6문법에 대해 정리하고자 하는 글입니다.
 
-ES6 stands for ECMAScript, which was released in 2015, and is a standardized version of JavaScript.
+ES6는 2015년에 출시된 ECMAScript의 약자이며, 자바스크립트의 표준, 규격을 나타내는 용어입니다.
 
-#### About variable declarations (let, const)
+#### 화살표 함수(Arrow Function)이란?
 
-These are the keywords used to declare block-scoped variables.
+화살표 함수는 몇 가지 제한점이 있고, 모든 상황에 사용할 수는 없습니다.
+함수 표현식을 화살표 함수로 표현할 수도 있습니다.
+화살표 함수가 추가되어 함수를 간결하게 나타낼 수 있어, 가독성 및 유지 보수성이 올라갑니다.
+만약 함수의 본문(body)에 return만 있는 경우 화살표 함수는 return과 {}를 생략할 수 있습니다. 단, return과 {}를 함께 생략해야 합니다.
+return문에서 소괄호는 사용가능하다.
 
-- let: No duplicate declarations are allowed, so it cannot be declared multiple times with the same name. The value can be reassigned after the variable is declared.
-- const: The declared variable is a constant, so the value cannot be changed once assigned.
-
-##### Example of a let declaration
-
-```javascript
-let count = 0;
-count = 5; // can be reassigned
-
-if (true) {
-  let count = 10; // Declare a new block scope variable
-  console.log(count); // output: 10
-}
-
-console.log(count); // output: 5 (variables outside the block are not affected)
-```
-
-##### Example of a const declaration
+##### Arrow Function 예시
 
 ```javascript
-const PI = 3.14159;
-PI = 3.14; // Error - constants cannot be reassigned
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-if (true) {
-  const age = 30; // Declare a new block scope constant
-  console.log(age); // output: 30
-}
-
-console.log(age); // Error - constant cannot be accessed from outside the block
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
 ```
 
-#### What is a block-scoped variable?
-
-A variable that is valid only within the block in which it is declared.
+예시처럼 화살표 함수를 통해 우리는 더 간결한 코드를 작성할 수 있습니다.

@@ -1,0 +1,122 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_ES6_3
+title: ES6 문법에 대하여 3 (repeat function)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: ES
+# multiple tag entries are possible
+tags: [es, es6]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-09 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### ES6 문법에 대하여(repeat 함수)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+최근 코딩테스트를 준비하며 다시 공부하게된 ES6문법에 대해 정리하고자 하는 글입니다.
+
+ES6는 2015년에 출시된 ECMAScript의 약자이며, 자바스크립트의 표준, 규격을 나타내는 용어입니다.
+
+문자열 메서드 중 하나로 repeat 메서드는 ES6(ES2015)에서 도입되었습니다.
+지정된 횟수만큼 문자열을 반복하여 새로운 문자열을 생성합니다.
+
+기존에도 for 함수 등의 반복문 제어를 통해 수행할 수 있었음에도 repeat 함수가 ES6에 포함된 이유는 무엇일지 궁금하여 for함수와 비교해보았습니다.
+
+#### for 함수
+
+for 메서드는 일반적인 반복 구문으로, 문자열 반복을 예시로 든다면 문자열의 길이만큼 반복하게 됩니다.
+
+##### for 함수 예시
+
+```javascript
+function repeatStringUsingFor(str, num) {
+  let result = "";
+  for (let i = 0; i < num; i++) {
+    result += str;
+  }
+  return result;
+}
+```
+
+##### Arrow Function 예시
+
+```javascript
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
+
+시간 복잡도: O(N \* M)
+N: 문자열 str의 길이
+M: 반복 횟수 num
+for문에서 문자열의 길이만큼 반복하고 각 반복에서 문자열 str을 결과 문자열에 추가하기 때문에 반복 횟수 num과 문자열의 길이 N의 곱만큼의 시간이 소요됩니다.
+
+#### repeat 함수
+
+사용처가 문자열 반복을 위해 생겼기 때문에 문자열의 길이만큼 반복하게 됩니다.
+
+##### repeat 함수 예시
+
+```javascript
+function repeatStringUsingRepeat(str, num) {
+  return str.repeat(num);
+}
+```
+
+시간 복잡도: O(N \* M)
+N: 문자열 str의 길이
+M: 반복 횟수 num
+repeat 함수는 문자열의 길이 N에 비례해서만 시간이 소요되므로 반복 횟수 num과는 무관하게 선형 시간이 소요됩니다.
+
+코딩테스트에서 위와 같은 문자열 반복문제에서 for과 repeat 함수를 다 사용해본 결과
+repeat로 구현한 코드의 수행 시간이 더 짧았습니다. 궁금해져 알아보았습니다.
+
+#### 같은 결과를 내는 코드에서 for보다 repeat 함수가 더 효율적인 이유
+
+**JavaScript 엔진이 내부적으로 최적화를 수행하기 때문입니다.** repeat 함수는 반복 횟수만큼 문자열을 반복하여 새로운 문자열을 생성하는 작업을 수행합니다. 이때 JavaScript 엔진은 다양한 최적화 기법을 사용하여 성능을 향상시킵니다.
+
+그럼 JavaScript 엔진이 어떤 최적화 기법을 사용할까요? 궁금해져 알아보았습니다.
+
+#### repeat 함수에 적용된 최적화 기법
+
+자바스크립트 엔진은 String.prototype.repeat() 함수를 최적화하기 위해 다양한 방법을 사용합니다. repeat 함수의 최적화 기법은 자바스크립트 엔진의 종류와 버전에 따라 다를 수 있으며, 다음과 같은 몇 가지 일반적인 최적화 기법이 사용될 수 있습니다:
+
+- 반복 횟수 최적화: repeat() 함수의 반복 횟수가 음수이거나 무한대(Infinity)인 경우에는 빈 문자열('')을 반환합니다. 따라서 이러한 특수한 경우를 미리 처리함으로써 최적화를 수행합니다.
+- 반복 문자열 길이 최적화: repeat() 함수의 최적화된 구현은 미리 반복 횟수와 원래 문자열의 길이를 곱하여 결과를 한 번만 출력합니다. 이를 통해 결과 문자열의 길이를 미리 예측하여 메모리 할당과 문자열 병합 작업을 최소화합니다.
+- 메모리 최적화: repeat() 함수는 새로운 문자열을 생성하여 반환합니다. 이때 메모리 할당 및 관리를 효율적으로 처리하여 성능을 향상시킵니다. 일부 엔진에서는 문자열 병합보다 문자열 조작에 대해 메모리를 더 효율적으로 관리합니다.
+- 기계 코드 최적화: 일부 엔진은 repeat() 함수를 실행할 때 기계 코드로 컴파일하여 빠르게 실행되도록 최적화합니다. 기계 코드로 컴파일된 함수는 이후에 빠르게 재사용할 수 있으므로 성능이 향상됩니다.

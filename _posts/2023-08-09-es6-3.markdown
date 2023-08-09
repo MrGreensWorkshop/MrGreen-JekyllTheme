@@ -1,0 +1,123 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_ES6_3
+title: About ES6 syntax 3 (repeat function)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: ES
+# multiple tag entries are possible
+tags: [es, es6]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-09 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### About ES6 syntax (repeat function)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+This post is to summarize ES6 syntax, which I recently revisited in preparation for a coding test.
+
+ES6 stands for ECMAScript, which was released in 2015, and is a standardized version of JavaScript.
+
+As one of the string methods, the repeat method was introduced in ES6 (ES2015).
+It generates a new string by repeating a string a specified number of times.
+
+I wondered why the repeat function was included in ES6, even though it could have been done before with the for function, so I compared it to the for function.
+
+#### for function
+
+The for method is a common iteration syntax, and if you're iterating over a string, for example, you'll repeat the length of the string.
+
+##### for function example
+
+```javascript
+function repeatStringUsingFor(str, num) {
+  let result = "";
+  for (let i = 0; i < num; i++) {
+    result += str;
+  }
+  return result;
+}
+```
+
+##### Arrow Function example
+
+```javascript
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
+
+Time complexity: O(N \* M)
+N: Length of the string str
+M: Number of iterations num
+It takes time equal to the product of the number of iterations, num, and the length of the string, N, because it iterates the length of the string in the for statement and appends the string str to the result string at each iteration.
+
+#### repeat function
+
+Since its usage is for repeating a string, it will repeat the length of the string.
+
+##### repeat function example
+
+```javascript
+function repeatStringUsingRepeat(str, num) {
+  return str.repeat(num);
+}
+```
+
+Time complexity: O(N \* M)
+N: length of the string str
+M: the number of iterations num
+The repeat function only takes time proportional to the length N of the string, so it takes linear time regardless of the number of iterations num.
+
+In the coding test, I used both for and repeat functions in the string iteration problem above.
+The code I implemented with REPEAT took less time to perform, so I got curious and looked into it.
+
+#### Why is the REPEAT function more efficient than FOR in code that produces the same result?
+
+**It's because the JavaScript engine performs optimizations internally:** The repeat function performs the task of repeating a string a number of times to generate a new string. In doing so, the JavaScript engine uses various optimization techniques to improve performance.
+
+But what optimization techniques does the JavaScript engine use? We were curious, so we found out.
+
+#### Optimization techniques applied to the repeat function
+
+JavaScript engines use a variety of methods to optimize the String.prototype.repeat() function. The optimization techniques for the repeat function may vary depending on the type and version of the JavaScript engine, but there are a few common optimization techniques that may be used:
+
+- Optimizing the number of iterations: The repeat() function returns an empty string ('') if the number of iterations is negative or infinity, so optimization is done by handling these special cases in advance.
+- Optimize the length of the iterated string: The optimized implementation of the repeat() function outputs the result only once, by multiplying the number of iterations in advance by the length of the original string. This minimizes memory allocation and string merging operations by predicting the length of the resulting string in advance.
+- Memory optimization: The repeat() function generates and returns a new string. It does this by efficiently handling memory allocation and management to improve performance. Some engines manage memory more efficiently for string manipulation than for string merging.
+- Machine code optimization: When running the repeat() function, some engines compile it to machine code to optimize it for faster execution. Functions compiled to machine code can be quickly reused later, which improves performance.
+  Translated with www.DeepL.com/Translator (free version)
