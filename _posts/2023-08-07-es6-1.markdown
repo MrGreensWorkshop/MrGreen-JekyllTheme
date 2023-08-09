@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_ES6_1
-title: ES6 문법에 대하여 1 (let과 const)
+title: About ES6 syntax 1 (let and const)
 # title: About browser
 
 # post specific
