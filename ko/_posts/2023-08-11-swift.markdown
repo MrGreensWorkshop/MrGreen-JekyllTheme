@@ -1,0 +1,95 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Swift
+title: Swift에 대하여
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Swift
+# multiple tag entries are possible
+tags: [swift]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-11 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### ES6 문법에 대하여(Template literals, Object initializer)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+최근 코딩테스트를 준비하며 다시 공부하게된 ES6문법에 대해 정리하고자 하는 글입니다.
+
+ES6는 2015년에 출시된 ECMAScript의 약자이며, 자바스크립트의 표준, 규격을 나타내는 용어입니다.
+
+#### 템플릿 리터럴(Template literals)에 대하여
+
+사용하기 위해선 이중 따옴표(" ")나 작은 따옴표(' ') 대신 백틱(` `)을 이용합니다. 또한 플레이스 홀더를 이용하여 표현식을 넣을 수 있습니다. $와 중괄호( ${expression} )으로 표기할 수 있습니다. 플레이스 홀더 안에서 표현식과 그 사이의 텍스트는 함께 함수로 전달됩니다. 또한 기본 함수는 단순히 해당 부분을 단일 문자열로 연결시켜줍니다.
+
+만약 템플릿 리터럴 안에서 백틱 문자를 사용하려면 백틱앞에 백슬래쉬(\)를 넣으면 됩니다.
+
+##### 템플릿 리터럴(Template literals) 예시
+
+```javascript
+`\`` === "`"; // --> true
+```
+
+#### 객체 리터럴(Object initializer)에 대하여
+
+메소드에 더이상 콜론( : ) 이나 function을 붙이지 않아도 됩니다.
+함수명이 겹치는 경우에는 한 번만 쓸 수 있습니다.
+객체의 프로퍼티를 동적으로 생성하기 위해선 객체 리터럴 바깥에서 선언했어야 했으나 ES6부터는 객체 안에서 바로 속성으로 사용할 수 있습니다.
+
+##### 객체 리터럴(Object initializer) 예시
+
+```javascript
+const myFunction = function () {
+  console.log("my function");
+};
+
+const myText = "text";
+
+const myObject = {
+  // Create myObject in innerFunction
+  innerFunction() {
+    console.log("Declare a function directly inside an object.");
+  },
+  // Call outside function
+  myFunction,
+  // Call outside string and Update key, value
+  [myText + 1]: "Chamber",
+};
+
+myObject.innerFunction(); // result: Declare a function directly inside an object.
+myObject.myFunction(); // result: my function
+console.log(myObject.text1); // result: Chamber
+```
