@@ -1,0 +1,72 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Swift
+title: Swift에 대하여
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Swift
+# multiple tag entries are possible
+tags: [swift]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-11 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### Swift에 대하여
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+iOS에 대한 학습이 필요한 상황이 와서 알아보고 있습니다.
+강의를 알아보던 중 iOS 네이티브 앱을 개발하기 위한 목적인 swift라는 언어에 대해 궁금해져 알아보았습니다.
+
+#### Swift란?
+
+Swift는 Apple이 iOS, macOS, watchOS, tvOS와 같은 제품을 위해 개발한 프로그래밍 언어입니다. 2014년에 처음 공개되었으며, Objective-C와 호환되게 설계되었습니다. 다른 C언어와 비교하면 상대적으로 쓰기 쉽고, 안전하며, 빠르다는 것이 특징입니다.
+
+Swift는 애플의 기기뿐만 아니라 리눅스와 같은 다른 플랫폼에서도 사용할 수 있으며, 커뮤니티 주도 프로젝트인 Swift on Server를 통해 서버 사이드 개발에도 사용되고 있습니다. 최신 버전의 Swift는 옵셔널 처리, 패턴 매칭, 함수형 프로그래밍 패러다임과 같은 현대적인 프로그래밍 기능을 제공하고 있습니다.
+
+##### 특징
+
+Swift는 타입 안전성을 강조하여 런타임 오류를 줄이고, 코드의 명확성과 효율성을 높이기 위한 여러 기능을 제공합니다. 이러한 특성은 프로그래머가 더욱 효율적이고 안정적인 코드를 작성하는 데 도움이 됩니다.
+
+Objective-C와 호환이 가능하다고 하여 같이 알아보았습니다.
+
+그렇다면 Objective-C란 무엇일까요??
+
+#### Objective-C란?
+
+Objective-C는 객체 지향 프로그래밍 언어입니다. C언어를 기반으로 하며, Smalltalk의 객체 지향 기능이 추가된 형태로 설계되었습니다.
+애플에서 macOS와 iOS의 기본 프로그래밍 언어로 채택되었으며, 그 후 수년 동안 많은 애플 애플리케이션과 프레임워크가 Objective-C로 작성되었습니다.
+언어와 완벽하게 호환되므로, C 코드를 직접 사용하거나 C 라이브러리를 호출할 수 있습니다. 그러나 문법은 복잡할 수 있으며, 메모리 관리와 같은 일부 부분은 다루기 어려울 수 있습니다.
+애플은 Objective-C의 후속으로 Swift를 소개하였으며, 이로 인해 Objective-C의 중요성은 점차 감소하고 있지만, 여전히 많은 기존 프로젝트와 시스템에서 사용되고 있습니다.

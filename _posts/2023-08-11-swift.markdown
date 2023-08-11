@@ -1,0 +1,72 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Swift
+title: About Swift
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Swift
+# multiple tag entries are possible
+tags: [swift]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-11 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### About Swift
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+I'm in a situation where I need to learn about iOS, so I'm doing some research.
+While researching courses, I became curious about a language called swift, which is aimed at developing iOS native apps.
+
+#### What is Swift?
+
+Swift is a programming language developed by Apple for products like iOS, macOS, watchOS, and tvOS. It was first released in 2014 and is designed to be compatible with Objective-C. It is characterized by being relatively easy to write, secure, and fast compared to other C languages.
+
+Swift is available for Apple's devices as well as other platforms such as Linux, and is also used for server-side development through the community-driven project Swift on Server. The latest version of Swift offers modern programming features such as option handling, pattern matching, and functional programming paradigms.
+
+##### Features
+
+Swift emphasizes type safety to reduce runtime errors, and provides a number of features to increase the clarity and efficiency of code. These characteristics help programmers write more efficient and reliable code.
+
+It's also compatible with Objective-C, so we thought we'd check it out.
+
+But what is Objective-C?
+
+#### What is Objective-C?
+
+Objective-C is an object-oriented programming language. It's based on the C language and is designed with the object-oriented features of Smalltalk.
+It was adopted by Apple as the primary programming language for macOS and iOS, and in the years since, many Apple applications and frameworks have been written in Objective-C.
+The language is fully compatible, meaning you can use C code directly or call C libraries. However, the syntax can be complex, and some parts, such as memory management, can be difficult to handle.
+Apple introduced Swift as a successor to Objective-C, which has made it less and less important, but it is still used in many existing projects and systems.

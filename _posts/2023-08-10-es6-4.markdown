@@ -1,0 +1,95 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_ES6_4
+title: About ES6 syntax 4 (Template literals, Object initializer)
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: ES
+# multiple tag entries are possible
+tags: [es, es6]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-10 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### About ES6 syntax (Template literals, Object initializer)
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+This post is to summarize ES6 syntax, which I recently revisited in preparation for a coding test.
+
+ES6 stands for ECMAScript, a standardized version of JavaScript released in 2015.
+
+#### About Template literals
+
+To use them, use backticks (` `) instead of double quotes (" ") or single quotes (' '). You can also use placeholders to contain expressions. They are represented by a $ and curly braces ( ${expression} ). Inside a placeholder, the expression and the text between them are passed to the function together, and the default function simply concatenates those parts into a single string.
+
+If you want to use the backtick character inside a template literal, you can do so by putting a backslash (\) in front of the backtick.
+
+##### Example Template literals
+
+```javascript
+`\`` === "`"; // --> true
+```
+
+#### About object literals (Object initializers)
+
+Methods no longer need to be prefixed with a colon ( : ) or function.
+If you have overlapping function names, you can only write them once.
+To dynamically create a property of an object, you used to have to declare it outside of an object literal, but starting with ES6, you can use it as a property right inside the object.
+
+##### Example of an object literal (Object initializer)
+
+```javascript
+const myFunction = function () {
+  console.log("my function");
+};
+
+const myText = "text";
+
+const myObject = {
+  // Create myObject in innerFunction
+  innerFunction() {
+    console.log("Declare a function directly inside an object.");
+  },
+  // Call outside function
+  myFunction,
+  // Call outside string and Update key, value
+  [myText + 1]: "Chamber",
+};
+
+myObject.innerFunction(); // result: Declare a function directly inside an object. myObject.innerFunction(); // result: Declare a function directly inside an object.
+myObject.myFunction(); // result: my function
+console.log(myObject.text1); // result: Chamber
+```
