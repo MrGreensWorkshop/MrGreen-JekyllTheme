@@ -41,55 +41,32 @@ date: 2023-08-11 09:00:00 +0900
 
 <!-- outline-start -->
 
-### ES6 문법에 대하여(Template literals, Object initializer)
+### Swift에 대하여
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-최근 코딩테스트를 준비하며 다시 공부하게된 ES6문법에 대해 정리하고자 하는 글입니다.
+iOS에 대한 학습이 필요한 상황이 와서 알아보고 있습니다.
+강의를 알아보던 중 iOS 네이티브 앱을 개발하기 위한 목적인 swift라는 언어에 대해 궁금해져 알아보았습니다.
 
-ES6는 2015년에 출시된 ECMAScript의 약자이며, 자바스크립트의 표준, 규격을 나타내는 용어입니다.
+#### Swift란?
 
-#### 템플릿 리터럴(Template literals)에 대하여
+Swift는 Apple이 iOS, macOS, watchOS, tvOS와 같은 제품을 위해 개발한 프로그래밍 언어입니다. 2014년에 처음 공개되었으며, Objective-C와 호환되게 설계되었습니다. 다른 C언어와 비교하면 상대적으로 쓰기 쉽고, 안전하며, 빠르다는 것이 특징입니다.
 
-사용하기 위해선 이중 따옴표(" ")나 작은 따옴표(' ') 대신 백틱(` `)을 이용합니다. 또한 플레이스 홀더를 이용하여 표현식을 넣을 수 있습니다. $와 중괄호( ${expression} )으로 표기할 수 있습니다. 플레이스 홀더 안에서 표현식과 그 사이의 텍스트는 함께 함수로 전달됩니다. 또한 기본 함수는 단순히 해당 부분을 단일 문자열로 연결시켜줍니다.
+Swift는 애플의 기기뿐만 아니라 리눅스와 같은 다른 플랫폼에서도 사용할 수 있으며, 커뮤니티 주도 프로젝트인 Swift on Server를 통해 서버 사이드 개발에도 사용되고 있습니다. 최신 버전의 Swift는 옵셔널 처리, 패턴 매칭, 함수형 프로그래밍 패러다임과 같은 현대적인 프로그래밍 기능을 제공하고 있습니다.
 
-만약 템플릿 리터럴 안에서 백틱 문자를 사용하려면 백틱앞에 백슬래쉬(\)를 넣으면 됩니다.
+##### 특징
 
-##### 템플릿 리터럴(Template literals) 예시
+Swift는 타입 안전성을 강조하여 런타임 오류를 줄이고, 코드의 명확성과 효율성을 높이기 위한 여러 기능을 제공합니다. 이러한 특성은 프로그래머가 더욱 효율적이고 안정적인 코드를 작성하는 데 도움이 됩니다.
 
-```javascript
-`\`` === "`"; // --> true
-```
+Objective-C와 호환이 가능하다고 하여 같이 알아보았습니다.
 
-#### 객체 리터럴(Object initializer)에 대하여
+그렇다면 Objective-C란 무엇일까요??
 
-메소드에 더이상 콜론( : ) 이나 function을 붙이지 않아도 됩니다.
-함수명이 겹치는 경우에는 한 번만 쓸 수 있습니다.
-객체의 프로퍼티를 동적으로 생성하기 위해선 객체 리터럴 바깥에서 선언했어야 했으나 ES6부터는 객체 안에서 바로 속성으로 사용할 수 있습니다.
+#### Objective-C란?
 
-##### 객체 리터럴(Object initializer) 예시
-
-```javascript
-const myFunction = function () {
-  console.log("my function");
-};
-
-const myText = "text";
-
-const myObject = {
-  // Create myObject in innerFunction
-  innerFunction() {
-    console.log("Declare a function directly inside an object.");
-  },
-  // Call outside function
-  myFunction,
-  // Call outside string and Update key, value
-  [myText + 1]: "Chamber",
-};
-
-myObject.innerFunction(); // result: Declare a function directly inside an object.
-myObject.myFunction(); // result: my function
-console.log(myObject.text1); // result: Chamber
-```
+Objective-C는 객체 지향 프로그래밍 언어입니다. C언어를 기반으로 하며, Smalltalk의 객체 지향 기능이 추가된 형태로 설계되었습니다.
+애플에서 macOS와 iOS의 기본 프로그래밍 언어로 채택되었으며, 그 후 수년 동안 많은 애플 애플리케이션과 프레임워크가 Objective-C로 작성되었습니다.
+언어와 완벽하게 호환되므로, C 코드를 직접 사용하거나 C 라이브러리를 호출할 수 있습니다. 그러나 문법은 복잡할 수 있으며, 메모리 관리와 같은 일부 부분은 다루기 어려울 수 있습니다.
+애플은 Objective-C의 후속으로 Swift를 소개하였으며, 이로 인해 Objective-C의 중요성은 점차 감소하고 있지만, 여전히 많은 기존 프로젝트와 시스템에서 사용되고 있습니다.
