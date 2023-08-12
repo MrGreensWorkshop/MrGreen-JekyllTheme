@@ -1,0 +1,89 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Scanner
+title: Scanner에 대하여
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Java
+# multiple tag entries are possible
+tags: [java, scanner, coding test]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-12 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### Scanner 클래스에 대하여
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+이번에 코딩테스트를 준비하며 직무와 맞게 시험을 보기 위해 객체지향적 코딩을 위한 언어인 Java로 다시 진행하고 있습니다. 진행하며 알게된 scanner 클래스에 대한 글을 남기고자 합니다.
+
+#### Scanner 객체란?
+
+객체 생성을 위해 아래의 예시와 같이 생성자에 System.in의 parameter 값을 주면 됩니다.
+
+##### 예시
+
+```java
+Scanner scanner = new Scanner(System.in);
+```
+
+Scanner 클래스에서 next(), nextLine()메서드는 String 타입으로 parameter 값을 리턴해줍니다.
+
+next()와 nextLine() 메소드의 차이는 무엇일까요?
+
+#### next()와 nextLine() 메소드의 차이 예시
+
+```java
+import java.util.Scanner;
+
+public class scannerExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // input: abcde fghij
+        String a = sc.next();
+        System.out.println(a);
+        // result: abcde
+        String b = sc.nextLine();
+        System.out.println(b);
+        // result: abcde fghij
+    }
+}
+```
+
+예제의 주석을 참고하면 nextLine()과 next()메소드의 차이는 nextLine()메소드는 개행이 되기 전까지의 문자열을 모두 리턴하고, next() 메소드는 공백 전까지 입력받은 문자열을 리턴합니다.
+
+#### 결론
+
+공백이 있는 한 줄을 리턴받고 싶다면 nextLine() 메소드를 사용하고, 한 단어만 리턴받고 싶으면 next() 메소드를 사용하면 됩니다.

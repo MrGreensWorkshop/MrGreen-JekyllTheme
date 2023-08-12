@@ -1,0 +1,89 @@
+---
+# multilingual page pair id, this must pair with translations of this page. (This name must be unique)
+lng_pair: id_About_Scanner
+title: Scanner에 대하여
+# title: About browser
+
+# post specific
+# if not specified, .name will be used from _data/owner/[language].yml
+author: Yeonuk
+# multiple category is not supported
+category: Java
+# multiple tag entries are possible
+tags: [java, scanner, coding test]
+# thumbnail image for post
+img: ":post_pic1.jpg"
+# disable comments on this page
+# comments_disable: true
+
+# publish date
+date: 2023-08-12 09:00:00 +0900
+# seo
+# if not specified, date will be used.
+#meta_modify_date: 2021-08-10 11:32:53 +0900
+# check the meta_common_description in _data/owner/[language].yml
+#meta_description: ""
+
+# optional
+# please use the "image_viewer_on" below to enable image viewer for individual pages or posts (_posts/ or [language]/_posts folders).
+# image viewer can be enabled or disabled for all posts using the "image_viewer_posts: true" setting in _data/conf/main.yml.
+#image_viewer_on: true
+# please use the "image_lazy_loader_on" below to enable image lazy loader for individual pages or posts (_posts/ or [language]/_posts folders).
+# image lazy loader can be enabled or disabled for all posts using the "image_lazy_loader_posts: true" setting in _data/conf/main.yml.
+#image_lazy_loader_on: true
+# exclude from on site search
+#on_site_search_exclude: true
+# exclude from search engines
+#search_engine_exclude: true
+# to disable this page, simply set published: false or delete this file
+#published: false
+---
+
+<!-- outline-start -->
+
+### About the Scanner class
+
+{:data-align="center"}
+
+<!-- outline-end -->
+
+I'm back to Java, a language for object-oriented coding, this time to prepare for a coding test and make it relevant to my job. I wanted to write a post about the scanner class that I've been working on.
+
+#### What is a Scanner object?
+
+To create an object, you can give the constructor a parameter value from System.in, as shown in the example below.
+
+##### Example
+
+```java
+Scanner scanner = new Scanner(System.in);
+```
+
+In the Scanner class, the next() and nextLine() methods return the value of the parameter as a String.
+
+What is the difference between next() and nextLine() methods?
+
+#### Example of the difference between next() and nextLine() methods
+
+```java
+import java.util.Scanner;
+
+public class scannerExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // input: abcde fghij
+        String a = sc.next();
+        System.out.println(a);
+        // result: abcde
+        String b = sc.nextLine();
+        System.out.println(b);
+        // result: abcde fghij
+    }
+}
+```
+
+Referring to the comments in the example, the difference between the nextLine() and next() methods is that the nextLine() method returns all of the string up to the newline, while the next() method returns the string as input up to the whitespace.
+
+#### Conclusion
+
+If you want to return a single line with spaces, use the nextLine() method, and if you want to return a single word, use the next() method.
