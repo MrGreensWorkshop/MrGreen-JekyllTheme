@@ -41,32 +41,49 @@ date: 2023-08-12 09:00:00 +0900
 
 <!-- outline-start -->
 
-### Swift에 대하여
+### Scanner 클래스에 대하여
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-iOS에 대한 학습이 필요한 상황이 와서 알아보고 있습니다.
-강의를 알아보던 중 iOS 네이티브 앱을 개발하기 위한 목적인 swift라는 언어에 대해 궁금해져 알아보았습니다.
+이번에 코딩테스트를 준비하며 직무와 맞게 시험을 보기 위해 객체지향적 코딩을 위한 언어인 Java로 다시 진행하고 있습니다. 진행하며 알게된 scanner 클래스에 대한 글을 남기고자 합니다.
 
-#### Swift란?
+#### Scanner 객체란?
 
-Swift는 Apple이 iOS, macOS, watchOS, tvOS와 같은 제품을 위해 개발한 프로그래밍 언어입니다. 2014년에 처음 공개되었으며, Objective-C와 호환되게 설계되었습니다. 다른 C언어와 비교하면 상대적으로 쓰기 쉽고, 안전하며, 빠르다는 것이 특징입니다.
+객체 생성을 위해 아래의 예시와 같이 생성자에 System.in의 parameter 값을 주면 됩니다.
 
-Swift는 애플의 기기뿐만 아니라 리눅스와 같은 다른 플랫폼에서도 사용할 수 있으며, 커뮤니티 주도 프로젝트인 Swift on Server를 통해 서버 사이드 개발에도 사용되고 있습니다. 최신 버전의 Swift는 옵셔널 처리, 패턴 매칭, 함수형 프로그래밍 패러다임과 같은 현대적인 프로그래밍 기능을 제공하고 있습니다.
+##### 예시
 
-##### 특징
+```java
+Scanner scanner = new Scanner(System.in);
+```
 
-Swift는 타입 안전성을 강조하여 런타임 오류를 줄이고, 코드의 명확성과 효율성을 높이기 위한 여러 기능을 제공합니다. 이러한 특성은 프로그래머가 더욱 효율적이고 안정적인 코드를 작성하는 데 도움이 됩니다.
+Scanner 클래스에서 next(), nextLine()메서드는 String 타입으로 parameter 값을 리턴해줍니다.
 
-Objective-C와 호환이 가능하다고 하여 같이 알아보았습니다.
+next()와 nextLine() 메소드의 차이는 무엇일까요?
 
-그렇다면 Objective-C란 무엇일까요??
+#### next()와 nextLine() 메소드의 차이 예시
 
-#### Objective-C란?
+```java
+import java.util.Scanner;
 
-Objective-C는 객체 지향 프로그래밍 언어입니다. C언어를 기반으로 하며, Smalltalk의 객체 지향 기능이 추가된 형태로 설계되었습니다.
-애플에서 macOS와 iOS의 기본 프로그래밍 언어로 채택되었으며, 그 후 수년 동안 많은 애플 애플리케이션과 프레임워크가 Objective-C로 작성되었습니다.
-언어와 완벽하게 호환되므로, C 코드를 직접 사용하거나 C 라이브러리를 호출할 수 있습니다. 그러나 문법은 복잡할 수 있으며, 메모리 관리와 같은 일부 부분은 다루기 어려울 수 있습니다.
-애플은 Objective-C의 후속으로 Swift를 소개하였으며, 이로 인해 Objective-C의 중요성은 점차 감소하고 있지만, 여전히 많은 기존 프로젝트와 시스템에서 사용되고 있습니다.
+public class scannerExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // input: abcde fghij
+        String a = sc.next();
+        System.out.println(a);
+        // result: abcde
+        String b = sc.nextLine();
+        System.out.println(b);
+        // result: abcde fghij
+    }
+}
+```
+
+예제의 주석을 참고하면 nextLine()과 next()메소드의 차이는 nextLine()메소드는 개행이 되기 전까지의 문자열을 모두 리턴하고, next() 메소드는 공백 전까지 입력받은 문자열을 리턴합니다.
+
+#### 결론
+
+공백이 있는 한 줄을 리턴받고 싶다면 nextLine() 메소드를 사용하고, 한 단어만 리턴받고 싶으면 next() 메소드를 사용하면 됩니다.
