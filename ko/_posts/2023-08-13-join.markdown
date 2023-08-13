@@ -47,43 +47,22 @@ date: 2023-08-13 09:00:00 +0900
 
 <!-- outline-end -->
 
-이번에 코딩테스트를 준비하며 직무와 맞게 시험을 보기 위해 객체지향적 코딩을 위한 언어인 Java로 다시 진행하고 있습니다. 진행하며 알게된 scanner 클래스에 대한 글을 남기고자 합니다.
+코딩테스트를 준비하며 직무와 맞게 시험을 보기 위해 객체지향적 코딩을 위한 언어인 Java로 다시 진행하고 있습니다.
+이번 글에선 문자열 배열을 문자열로 변환하는 방법에 대해 다루겠습니다.
 
-#### Scanner 객체란?
+바로 join() 입니다.
 
-객체 생성을 위해 아래의 예시와 같이 생성자에 System.in의 parameter 값을 주면 됩니다.
+#### join() 이란?
 
-##### 예시
+String 클래스의 join()을 사용하면 문자열 배열을 문자열로 변환할 수 있습니다.
+join()은 2개의 인수를 가집니다. 첫 번째 인수는 배열을 문자열로 변환할 때 각각의 element의 구분자 역할을 합니다. 두 번째 인수는 변환할 문자열 배열을 삽입합니다.
+이 때 리턴 값은 String입니다.
 
-```java
-Scanner scanner = new Scanner(System.in);
-```
-
-Scanner 클래스에서 next(), nextLine()메서드는 String 타입으로 parameter 값을 리턴해줍니다.
-
-next()와 nextLine() 메소드의 차이는 무엇일까요?
-
-#### next()와 nextLine() 메소드의 차이 예시
+##### join() 사용법 예시
 
 ```java
-import java.util.Scanner;
-
-public class scannerExample {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        // input: abcde fghij
-        String a = sc.next();
-        System.out.println(a);
-        // result: abcde
-        String b = sc.nextLine();
-        System.out.println(b);
-        // result: abcde fghij
-    }
-}
+String[] strArr = {"a","b"};
+String str = String.join("",strArr);
+System.out.println(str);
+// result: ab
 ```
-
-예제의 주석을 참고하면 nextLine()과 next()메소드의 차이는 nextLine()메소드는 개행이 되기 전까지의 문자열을 모두 리턴하고, next() 메소드는 공백 전까지 입력받은 문자열을 리턴합니다.
-
-#### 결론
-
-공백이 있는 한 줄을 리턴받고 싶다면 nextLine() 메소드를 사용하고, 한 단어만 리턴받고 싶으면 next() 메소드를 사용하면 됩니다.

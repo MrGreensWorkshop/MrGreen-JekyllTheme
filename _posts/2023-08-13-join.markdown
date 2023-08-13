@@ -41,49 +41,28 @@ date: 2023-08-13 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 문자열 배열을 문자열로 변환하는 방법에 대하여(with.Java)
+### How to convert an array of strings to a string (with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-이번에 코딩테스트를 준비하며 직무와 맞게 시험을 보기 위해 객체지향적 코딩을 위한 언어인 Java로 다시 진행하고 있습니다. 진행하며 알게된 scanner 클래스에 대한 글을 남기고자 합니다.
+In preparation for my coding test and to make it job-appropriate, I'm going back to Java, a language for object-oriented coding.
+In this article, we're going to cover how to convert an array of strings into a string.
 
-#### Scanner 객체란?
+The method is join().
 
-객체 생성을 위해 아래의 예시와 같이 생성자에 System.in의 parameter 값을 주면 됩니다.
+#### What is join()?
 
-##### 예시
+With join() of class String, you can convert an array of strings to a string.
+join() takes two arguments. The first argument acts as a delimiter for each element when converting the array to a string. The second argument inserts the array of strings to be converted.
+In this case, the return value is a String.
 
-```java
-Scanner scanner = new Scanner(System.in);
-```
-
-Scanner 클래스에서 next(), nextLine()메서드는 String 타입으로 parameter 값을 리턴해줍니다.
-
-next()와 nextLine() 메소드의 차이는 무엇일까요?
-
-#### next()와 nextLine() 메소드의 차이 예시
+##### join() usage example
 
 ```java
-import java.util.Scanner;
-
-public class scannerExample {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        // input: abcde fghij
-        String a = sc.next();
-        System.out.println(a);
-        // result: abcde
-        String b = sc.nextLine();
-        System.out.println(b);
-        // result: abcde fghij
-    }
-}
+String[] strArr = {"a","b"};
+String str = String.join("",strArr);
+System.out.println(str);
+// result: ab
 ```
-
-예제의 주석을 참고하면 nextLine()과 next()메소드의 차이는 nextLine()메소드는 개행이 되기 전까지의 문자열을 모두 리턴하고, next() 메소드는 공백 전까지 입력받은 문자열을 리턴합니다.
-
-#### 결론
-
-공백이 있는 한 줄을 리턴받고 싶다면 nextLine() 메소드를 사용하고, 한 단어만 리턴받고 싶으면 next() 메소드를 사용하면 됩니다.
