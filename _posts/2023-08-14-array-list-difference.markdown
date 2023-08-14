@@ -41,28 +41,62 @@ date: 2023-08-14 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 문자열 배열을 문자열로 변환하는 방법에 대하여(with.Java)
+### The difference between an Array and a List (with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩테스트를 준비하며 직무와 맞게 시험을 보기 위해 객체지향적 코딩을 위한 언어인 Java로 다시 진행하고 있습니다.
-이번 글에선 문자열 배열을 문자열로 변환하는 방법에 대해 다루겠습니다.
+I'm preparing for a coding test and learning about grammar and organization. In this article, we'll learn about arrays and lists.
 
-바로 join() 입니다.
+#### The purpose of Arrays and Lists
 
-#### join() 이란?
+Array and List are data structures for managing multiple pieces of data under one name.
 
-String 클래스의 join()을 사용하면 문자열 배열을 문자열로 변환할 수 있습니다.
-join()은 2개의 인수를 가집니다. 첫 번째 인수는 배열을 문자열로 변환할 때 각각의 element의 구분자 역할을 합니다. 두 번째 인수는 변환할 문자열 배열을 삽입합니다.
-이 때 리턴 값은 String입니다.
+##### They serve the same purpose, but what's the difference?
 
-##### join() 사용법 예시
+Array:
+
+- It has a fixed space and an index (identifier). ex) arr[5]
+- Size allocation is mandatory when creating the object. ex) char[] a = new char[5]
+- In terms of speed, inserts and deletes are slow and data lookups are fast.
+
+List:
+
+- No Index (identifier), if the 0th element is missing from a list with a size of 3, the newly added element can be stored at 0th.
+- No need for size allocation - in Java, it's automatically increased by a factor of 1.5.
+- In terms of speed, inserts and deletes are fast and data lookups are slow.
+
+Now that we know the differences, we can conclude.
+
+##### Conclusion
+
+When faced with a problem, if the data has a fixed size, use an Array; if there is no mention of size, use an Array.
+
+Having concluded, we often write ArrayList among Java methods.
+What is it all about...?
+
+#### What is an ArrayList?
+
+It's a method that combines the best of Array and List, allowing you to write identifiers with index, an Array attribute, and dynamically allocate the size with a List attribute.
+
+In other words, it is a List that can write index!
+
+##### How to use ArrayList
 
 ```java
-String[] strArr = {"a","b"};
-String str = String.join("",strArr);
-System.out.println(str);
-// result: ab
+import java.util.ArrayList
+
+ArrayList<Integer> integers1 = new ArrayList<Integer>(); // Specify the Integer type
 ```
+
+##### introduces various uses
+
+- add(index, element): Adds element to the ArrayList at index. Index can be omitted, but if so, the value is added to the end of the ArrayList.
+- set(index, element): Resets element to match index in the ArrayList. Any element at index that exists in the existing ArrayList will be lost.
+- remove(index | element): Clears the element at index in the ArrayList or directly clears an element in the ArrayList. remove can assign the value of the cleared element to a variable.
+- clear(): Deletes all elements in an ArrayList.
+- size(): Get the size of an ArrayList as an int type.
+- get(index): Get the element that matches the index of the ArrayList.
+- contains(element): Returns in the form of a boolean if the element exists in the ArrayList.
+- indexOf(element): Returns the index in the form of an int if the element exists in the ArrayList.
