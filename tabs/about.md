@@ -35,3 +35,7 @@ img: "/assets/img/default/profile.jpg"
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
+
+{%- comment -%} Please delete below and place your page content here {%- endcomment -%}
+
+Cheers to your day, no matter what time of day or night it is!
