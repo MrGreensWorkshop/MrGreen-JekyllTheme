@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Join
-title: 문자열 배열을 문자열로 변환하는 방법에 대하여(with.Java)
+title: How to convert an array of strings to a string (with.Java)
 # title: About browser
 
 # post specific
@@ -10,7 +10,7 @@ author: Yeonuk
 # multiple category is not supported
 category: Java
 # multiple tag entries are possible
-tags: [java, coding test, join]
+tags: [java, coding test]
 # thumbnail image for post
 img: ":post_pic1.jpg"
 # disable comments on this page
