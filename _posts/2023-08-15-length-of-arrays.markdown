@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Join
-title: 문자열 배열을 문자열로 변환하는 방법에 대하여(with.Java)
+lng_pair: id_About_Comparing_The_Lengths_Of_Arrays
+title: About comparing the lengths of arrays (with.Java)
 # title: About browser
 
 # post specific
@@ -17,7 +17,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-08-13 09:00:00 +0900
+date: 2023-08-15 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -41,28 +41,25 @@ date: 2023-08-13 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 문자열 배열을 문자열로 변환하는 방법에 대하여(with.Java)
+### About comparing the lengths of arrays (with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩테스트를 준비하며 직무와 맞게 시험을 보기 위해 객체지향적 코딩을 위한 언어인 Java로 다시 진행하고 있습니다.
-이번 글에선 문자열 배열을 문자열로 변환하는 방법에 대해 다루겠습니다.
+I'm preparing for a coding test and learning about grammar and organization.
 
-바로 join() 입니다.
+There are many ways to compare the lengths of arrays. I'm going to utilize one of them, Math.
 
-#### join() 이란?
+Math is a library function in Java, and the functions I will introduce to compare the length of an array are min and max.
 
-String 클래스의 join()을 사용하면 문자열 배열을 문자열로 변환할 수 있습니다.
-join()은 2개의 인수를 가집니다. 첫 번째 인수는 배열을 문자열로 변환할 때 각각의 element의 구분자 역할을 합니다. 두 번째 인수는 변환할 문자열 배열을 삽입합니다.
-이 때 리턴 값은 String입니다.
+#### What is Math.min()?
 
-##### join() 사용법 예시
+It is a function that returns the smaller of two given numbers.
+For example, if you call Math.min(a, b), it will return the smaller of a and b.
 
-```java
-String[] strArr = {"a","b"};
-String str = String.join("",strArr);
-System.out.println(str);
-// result: ab
-```
+#### What is Math.max()?
+
+A function that returns the larger of two given numbers. This function works in reverse to Math.min().
+
+For example, calling Math.max(a, b) returns the larger of a and b.

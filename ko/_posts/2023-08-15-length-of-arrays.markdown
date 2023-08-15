@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_About_Join
-title: 문자열 배열을 문자열로 변환하는 방법에 대하여(with.Java)
+lng_pair: id_About_Comparing_The_Lengths_Of_Arrays
+title: 배열의 길이 비교에 대하여(with.Java)
 # title: About browser
 
 # post specific
@@ -17,7 +17,7 @@ img: ":post_pic1.jpg"
 # comments_disable: true
 
 # publish date
-date: 2023-08-13 09:00:00 +0900
+date: 2023-08-15 09:00:00 +0900
 # seo
 # if not specified, date will be used.
 #meta_modify_date: 2021-08-10 11:32:53 +0900
@@ -41,28 +41,25 @@ date: 2023-08-13 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 문자열 배열을 문자열로 변환하는 방법에 대하여(with.Java)
+### 배열의 길이 비교에 대하여(with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩테스트를 준비하며 직무와 맞게 시험을 보기 위해 객체지향적 코딩을 위한 언어인 Java로 다시 진행하고 있습니다.
-이번 글에선 문자열 배열을 문자열로 변환하는 방법에 대해 다루겠습니다.
+코딩 테스트를 준비하며, 문법과 자료구조에 대한 학습을 병행하고 있습니다.
 
-바로 join() 입니다.
+배열의 길이를 비교하는데는 많은 방법이 있습니다. 저는 그 중에서도 Math를 활용하고자 합니다.
 
-#### join() 이란?
+Math란 Java의 라이브러리 함수로 배열의 길이 비교를 위해 소개할 함수는 min과 max입니다.
 
-String 클래스의 join()을 사용하면 문자열 배열을 문자열로 변환할 수 있습니다.
-join()은 2개의 인수를 가집니다. 첫 번째 인수는 배열을 문자열로 변환할 때 각각의 element의 구분자 역할을 합니다. 두 번째 인수는 변환할 문자열 배열을 삽입합니다.
-이 때 리턴 값은 String입니다.
+#### Math.min()란?
 
-##### join() 사용법 예시
+주어진 두 개의 숫자 중에서 작은 값을 반환하는 함수입니다.
+예를 들어, Math.min(a, b)를 호출하면 a와 b 중에서 작은 값을 반환합니다.
 
-```java
-String[] strArr = {"a","b"};
-String str = String.join("",strArr);
-System.out.println(str);
-// result: ab
-```
+#### Math.max()란?
+
+주어진 두 개의 숫자 중에서 큰 값을 반환하는 함수입니다. 이 함수는 Math.min()과 반대로 작동합니다.
+
+예를 들어, Math.max(a, b)를 호출하면 a와 b 중에서 큰 값을 반환합니다.
