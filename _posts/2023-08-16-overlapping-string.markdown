@@ -41,25 +41,94 @@ date: 2023-08-16 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 배열의 길이 비교에 대하여(with.Java)
+### How to overlap strings (with. Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩 테스트를 준비하며, 문법과 자료구조에 대한 학습을 병행하고 있습니다.
+We're going to learn by solving a coding test problem, reflecting on the problem we solved, and exploring other ways to solve it.
+Let's start with the problem.
 
-배열의 길이를 비교하는데는 많은 방법이 있습니다. 저는 그 중에서도 Math를 활용하고자 합니다.
+#### Problem
 
-Math란 Java의 라이브러리 함수로 배열의 길이 비교를 위해 소개할 함수는 min과 max입니다.
+You are given the strings my_string, overwrite_string, and an integer s. Write a solution function that returns a string that replaces the string my_string with the string overwrite_string from index s in the string my_string to the length of overwrite_string.
 
-#### Math.min()란?
+##### Example input and output
 
-주어진 두 개의 숫자 중에서 작은 값을 반환하는 함수입니다.
-예를 들어, Math.min(a, b)를 호출하면 a와 b 중에서 작은 값을 반환합니다.
+my_string: He11oWor1d
+overwrite_string: lloWorl
+s: 2
+result: HelloWorld
 
-#### Math.max()란?
+The problem is that the part of my_string from index 2 up to the length of overwrite_string is "11oWor1" and we need to return "HelloWorld" with this replaced by "lloWorl".
 
-주어진 두 개의 숫자 중에서 큰 값을 반환하는 함수입니다. 이 함수는 Math.min()과 반대로 작동합니다.
+#### My solution to the problem
 
-예를 들어, Math.max(a, b)를 호출하면 a와 b 중에서 큰 값을 반환합니다.
+```java
+class Solution {
+    public String solution(String my_string, String overwrite_string, int s) {
+        String answer = "";
+        char[] a = my_string.toCharArray();
+        char[] b = overwrite_string.toCharArray();
+        int j = 0;
+        int limit = s + b.length;
+        for(int i = s; i<limit; i++){
+            a[i] = b[j];
+            j++;
+        }
+        answer = new String(a);
+        return answer;
+    }
+}
+```
+
+In my case, I use the toCharArray() method to change two variables of string type, my_string and overwrite_string, to character array type. In this case, each character is mapped to one index. We then solved this problem by replacing the string from the sth element through j for each for statement.
+Finally, we combined the char array into a single String type using the new String() function and printed it out.
+
+Now let's look at a cleaner way of solving this problem using a function provided by java.
+This is substring(), which allows you to truncate a string type at any position.
+
+##### How to use substring()
+
+substring() takes two arguments: substring(int beginIndex, int endIndex) You can use it like this. With two arguments, this returns a string from beginIndex to endIndex.
+
+##### substring(int beginIndex, int endIndex) Example
+
+```java
+String str = "012345";
+
+// substring(int beginIndex, int endIndex)
+str.substring(1,3)
+
+// result: 123
+```
+
+Alternatively, you can use only one argument, like this: substring(int previousIndex), which will return the rest of the string, starting from index 0 and ending with the number -1 of the int type written in previousIndex.
+
+##### substring(int previousIndex) Example
+
+```java
+String str = "012345";
+
+// substring(int index)
+str.substring(3)
+
+// result: 345
+```
+
+Let's try to solve the same problem using the substring() function we've learned so far, but more concisely than the code I wrote.
+
+#### solved using substring()
+
+```java
+class Solution {
+    public String solution(String my_string, String overwrite_string, int s) {
+        String before = my_string.substring(0, s);
+        String after = my_string.substring(s + overwrite_string.length());
+        return before + overwrite_string + after;
+    }
+}
+```
+
+That's really short, and the code I wrote just truncated the string before and after to match the criteria in s and pasted the string to be changed. I'll have to utilize this function in my next test problem, thanks for the work. Translated with www.DeepL.com/Translator (free version)
