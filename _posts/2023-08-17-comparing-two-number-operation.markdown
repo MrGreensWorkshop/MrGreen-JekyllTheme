@@ -42,94 +42,107 @@ date: 2023-08-17 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 문자열 겹쳐쓰는 방법에 대하여(with. Java)
+### For comparing two numbers (with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩 테스트 문제를 풀며, 풀었던 문제에 대한 회고와 다른 풀이 방법을 알아보며, 알아가고자 합니다.
-문제에 대해 먼저 알아보겠습니다.
+As we go through the Coding Test questions, we'll look back on the problems we solved and learn about other ways to solve them.
+Let's start with the problem.
 
-#### 문제
+#### Problem
 
-문자열 my_string, overwrite_string과 정수 s가 주어집니다. 문자열 my_string의 인덱스 s부터 overwrite_string의 길이만큼을 문자열 overwrite_string으로 바꾼 문자열을 return 하는 solution 함수를 작성해 주세요.
+The operation ⊕ is an operation on two integers that returns the value written by concatenating the two integers. For example
 
-##### 입출력 예시
+12 ⊕ 3 = 123
+3 ⊕ 12 = 312
+Given positive integers a and b, complete a solution function that returns the greater of a ⊕ b and 2 _ a _ b.
 
-my_string: He11oWor1d
-overwrite_string: lloWorl
-s: 2
-result: HelloWorld
+However, if a ⊕ b and 2 _ a _ b are equal, return a ⊕ b.
 
-즉, my_string에서 인덱스 2부터 overwrite_string의 길이만큼에 해당하는 부분은 "11oWor1"이고 이를 "lloWorl"로 바꾼 "HelloWorld"를 return 해야 하는 문제입니다.
+##### Example input and output
 
-#### 문제에 대한 나의 풀이
+a: 2
+b: 91
+result: 364
+
+This means that the value of 2 _ a _ b, 364, is greater than the value of a ⊕ b, 291, so the value of 2 _ a _ b should be stored in the result.
+
+#### My solution to the problem
 
 ```java
+import java.util.*;
+
 class Solution {
-    public String solution(String my_string, String overwrite_string, int s) {
-        String answer = "";
-        char[] a = my_string.toCharArray();
-        char[] b = overwrite_string.toCharArray();
-        int j = 0;
-        int limit = s + b.length;
-        for(int i = s; i<limit; i++){
-            a[i] = b[j];
-            j++;
-        }
-        answer = new String(a);
+    public int solution(int a, int b) {
+        int answer = 0;
+
+        ArrayList<String> arrList = new ArrayList<>();
+        arrList.add(String.valueOf(a));
+        arrList.add(String.valueOf(b));
+
+        var i = arrList.get(0)+arrList.get(1);
+        var j = 2*a*b;
+
+
+        answer = Integer.parseInt(i) >= j ? Integer.parseInt(i) : j;
+
         return answer;
     }
 }
 ```
 
-저 같은 경우 toCharArray() 메서드를 활용해 my_string, overwrite_string 총 2개의 string 타입의 변수를 character array타입으로 변경해서 저장합니다. 이럴 경우 문자 하나당 하나의 인덱스로 매핑됩니다. 이후, 각각의 for문으로 각각의 요소에 대해 s번째 요소부터 j를 통해 문자열을 대체하는 방식으로 이 문제를 풀었습니다.
-더하여 마지막에 char형 배열을 new String() 함수를 사용하여 합쳐 하나의 String 타입으로 만들어 출력하였습니다.
+Create an ArrayList to store the int types a and b by converting them to strings.
+We declare a variable i to hold the value of a ⊕ b. We store the value of 2 _ a _ b in variable j. Then, we use a ternary operator to convert i to int and return answer if the value is greater than or equal to j, and j if it is less.
 
-그럼 이제 java에서 제공하는 함수를 사용하여 더 깔끔하게 푸는 방식을 알아보겠습니다.
-바로 substring()입니다. 이 함수는 string 타입에 대해서 원하는 위치에서 자를 수 있습니다.
+Now, let's solve the problem using Math.
 
-##### substring() 사용법
+##### First of all, what is Math in Java?
 
-substring()은 인자를 총 2개 받을 수 있습니다. substring(int beginIndex, int endIndex) 이렇게 사용할 수 있습니다. 이렇게 2개의 인자를 사용할 경우 beginIndex부터 endIndex까지의 문자열을 반환합니다.
+The Math class is a utility class used to perform mathematical operations in Java.
 
-##### substring(int beginIndex, int endIndex) 예시
+Let's see some of the important methods to use the Math class.
 
-```java
-String str = "012345";
+##### Using the Math class
 
-// substring(int beginIndex, int endIndex)
-str.substring(1,3)
+Math.max(a, b): Returns the greater of the two arguments.
 
-// result: 123
-```
+Math.min(a, b): Returns the smaller of two arguments.
 
-또는 인자를 1개만 사용하는 방법도 있습니다.substring(int previousIndex) 이런식으로 말이죠. 이렇게 사용할 경우 0번 째 index부터 previousIndex에 적힌 int 타입의 숫자 -1번 째까지를 제외한 나머지 문자열을 반환합니다.
+Math.abs(a): Returns the absolute value of the given number.
 
-##### substring(int previousIndex) 예시
+Math.pow(a, b): Returns the value of a to the power of b.
 
-```java
-String str = "012345";
+Math.sqrt(a): Returns the square root of a given number.
 
-// substring(int index)
-str.substring(3)
+Math.round(a): Rounds the given number and returns it as an integer.
 
-// result: 345
-```
+Math.floor(a): Returns the largest integer that is less than or equal to the given number.
 
-그럼 지금까지 배운 substring() 함수를 이용해 제가 짠 코드보다 간결하게 같은 문제를 해결해보도록 하겠습니다.
+Math.ceil(a): Returns the smallest integer that is greater than or equal to the given number.
 
-#### substring()을 활용한 풀이
+Math.random(): Returns a random number greater than 0 and less than 1.
 
-```java
+Math.sin(a), Math.cos(a), Math.tan(a): Returns the sine, cosine, and tangent values of a given angle.
+
+Math.exp(a): Returns the value of a squared of e (the natural constant).
+
+Math.log(a): Returns the value of the natural logarithm of a given number.
+
+Math.log10(a): Returns the decimal logarithm of a given number.
+
+Math.PI: Returns the value of the circumference ratio (π).
+
+Math.E: Returns the value of the natural constant e.
+
+###### Solve problems with Math
+
+````java
 class Solution {
-    public String solution(String my_string, String overwrite_string, int s) {
-        String before = my_string.substring(0, s);
-        String after = my_string.substring(s + overwrite_string.length());
-        return before + overwrite_string + after;
+    public int solution(int a, int b) {
+        return Math.max(Integer.parseInt(String.valueOf(a)+String.valueOf(b)),2*a*b);
     }
 }
-```
-
-정말 짧아졌습니다. 작성된 코드는 문자열을 s의 기준에 맞춰 앞과 뒤로 잘라 변경할 문자열을 붙여넣는 방법을 사용했습니다. 저도 다음 테스트 문제에서 이 함수를 활용 해야겠습니다. 고생하셨습니다.
+``` Translated with www.DeepL.com/Translator (free version)
+````
