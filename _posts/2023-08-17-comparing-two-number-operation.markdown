@@ -57,9 +57,9 @@ The operation ⊕ is an operation on two integers that returns the value written
 
 12 ⊕ 3 = 123
 3 ⊕ 12 = 312
-Given positive integers a and b, complete a solution function that returns the greater of a ⊕ b and 2 _ a _ b.
+Given positive integers a and b, complete a solution function that returns the greater of a ⊕ b and ` 2 * a * b`.
 
-However, if a ⊕ b and 2 _ a _ b are equal, return a ⊕ b.
+However, if a ⊕ b and ` 2 * a * b` are equal, return a ⊕ b.
 
 ##### Example input and output
 
@@ -67,7 +67,7 @@ a: 2
 b: 91
 result: 364
 
-This means that the value of 2 _ a _ b, 364, is greater than the value of a ⊕ b, 291, so the value of 2 _ a _ b should be stored in the result.
+This means that the value of ` 2 * a * b`, 364, is greater than the value of a ⊕ b, 291, so the value of ` 2 * a * b` should be stored in the result.
 
 #### My solution to the problem
 
