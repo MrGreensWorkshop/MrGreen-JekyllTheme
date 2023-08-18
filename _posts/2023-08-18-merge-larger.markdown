@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_Merge_Larger
-title: 더 크게 합치기에 대하여(with.Java)
+title: About Merge Larger(with.Java)
 
 # title: About browser
 
