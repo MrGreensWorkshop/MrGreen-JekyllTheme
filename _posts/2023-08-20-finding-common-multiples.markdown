@@ -42,37 +42,37 @@ date: 2023-08-20 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 두 수의 연산값 비교에 대하여(with.Java)
+### About finding a common multiple (with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩 테스트 문제를 풀며, 풀었던 문제에 대한 회고와 다른 풀이 방법을 알아보며, 알아가고자 합니다.
-문제에 대해 먼저 알아보겠습니다.
+We're going to learn as we go by solving the Coding Test problem, reflecting on the problem we solved, and exploring other ways to solve it.
+Let's start with the problem.
 
-#### 문제
+#### Problem
 
-정수 num과 n이 매개 변수로 주어질 때, num이 n의 배수이면 1을 return n의 배수가 아니라면 0을 return하도록 solution 함수를 완성해주세요.
+Given an integer number and n, m. Complete the solution function so that it returns 1 if number is a multiple of n and a multiple of m, or 0 otherwise.
 
-##### 입출력 예시
+##### Example input and output
 
-num: 98
+num: 60
 n: 2
+m: 3
 result: 1
 
-즉, 98은 2의 배수이기 때문에 1이 결과 값이 되어야 합니다.
+In other words, 60 is a multiple of 2, which is also a multiple of 3, so 1 should be the result.
 
-#### 문제에 대한 나의 풀이
+#### My solution to the problem
 
 ```java
 class Solution {
-    public int solution(int num, int n) {
-        int answer = 0;
-        answer = (num % n == 0) ? 1 : 0;
+    public int solution(int number, int n, int m) {
+        int answer = (number % n == 0) && (number % m == 0) ? 1 : 0;
         return answer;
     }
 }
 ```
 
-배수 판별하는 것이 핵심이였기 때문에 % 연산자를 통해 num을 n으로 나누고 나머지 값이 0이면 배수라고 판단하여 answer에 1을 아니라면 0을 넣어서 풀었습니다.
+To determine the conjugate multiple, we divided num by n via the % operator and determined that if the remainder was zero, it was a multiple, so we solved by putting a 0 in answer if it wasn't a 1. At the same time, it must also be a multiple of m, so we added a condition using the && AND logical operators.

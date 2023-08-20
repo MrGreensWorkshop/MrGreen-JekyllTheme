@@ -42,7 +42,7 @@ date: 2023-08-20 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 두 수의 연산값 비교에 대하여(with.Java)
+### 공배수를 구하는 것에 대하여(with.Java)
 
 {:data-align="center"}
 
@@ -53,26 +53,26 @@ date: 2023-08-20 09:00:00 +0900
 
 #### 문제
 
-정수 num과 n이 매개 변수로 주어질 때, num이 n의 배수이면 1을 return n의 배수가 아니라면 0을 return하도록 solution 함수를 완성해주세요.
+정수 number와 n, m이 주어집니다. number가 n의 배수이면서 m의 배수이면 1을 아니라면 0을 return하도록 solution 함수를 완성해주세요.
 
 ##### 입출력 예시
 
-num: 98
+num: 60
 n: 2
+m: 3
 result: 1
 
-즉, 98은 2의 배수이기 때문에 1이 결과 값이 되어야 합니다.
+즉, 60은 2의 배수이고, 3의 배수에도 해당되기 때문에 1이 결과 값이 되어야 합니다.
 
 #### 문제에 대한 나의 풀이
 
 ```java
 class Solution {
-    public int solution(int num, int n) {
-        int answer = 0;
-        answer = (num % n == 0) ? 1 : 0;
+    public int solution(int number, int n, int m) {
+        int answer = (number % n == 0) && (number % m == 0) ? 1 : 0;
         return answer;
     }
 }
 ```
 
-배수 판별하는 것이 핵심이였기 때문에 % 연산자를 통해 num을 n으로 나누고 나머지 값이 0이면 배수라고 판단하여 answer에 1을 아니라면 0을 넣어서 풀었습니다.
+공배수를 판별하기 위해 % 연산자를 통해 num을 n으로 나누고 나머지 값이 0이면 배수라고 판단하여 answer에 1을 아니라면 0을 넣어서 풀었습니다. 동시에 m의 배수에도 해당되어야 하기 때문에 && AND 논리 연산자를 사용하여 조건을 추가하였습니다.
