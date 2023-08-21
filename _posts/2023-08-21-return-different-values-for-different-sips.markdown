@@ -42,37 +42,72 @@ date: 2023-08-21 09:00:00 +0900
 
 <!-- outline-start -->
 
-### How to return different values for different sips (with.Java)
+### How to return different values based on sips (with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩 테스트 문제를 풀며, 풀었던 문제에 대한 회고와 다른 풀이 방법을 알아보며, 알아가고자 합니다.
-문제에 대해 먼저 알아보겠습니다.
+We're going to learn as we go along by solving coding test problems, reflecting on the problems we solved, and exploring other ways to solve them.
+Let's start with the problem.
 
-#### 문제
+#### Problem
 
-정수 number와 n, m이 주어집니다. number가 n의 배수이면서 m의 배수이면 1을 아니라면 0을 return하도록 solution 함수를 완성해주세요.
+Given a positive integer n as a parameter, write a solution function that returns the sum of all positive integers less than or equal to n if n is odd, or the sum of the squares of all positive integers less than or equal to n if n is even.
 
-##### 입출력 예시
+##### Example input and output
 
-num: 60
-n: 2
-m: 3
-result: 1
+n: 7
+result: 16
 
-즉, 60은 2의 배수이고, 3의 배수에도 해당되기 때문에 1이 결과 값이 되어야 합니다.
+This means that n is odd by 7. All positive odd numbers below 7 are 1, 3, 5, and 7, and their sum, 1 + 3 + 5 + 7 = 16, should be returned.
 
-#### 문제에 대한 나의 풀이
+#### My solution to the problem
 
 ```java
+import java.util.*;
+
 class Solution {
-    public int solution(int number, int n, int m) {
-        int answer = (number % n == 0) && (number % m == 0) ? 1 : 0;
-        return answer;
+    public int solution(int n) {
+        int answer = 0;
+        int[] newArray = new int[n/2];
+        if(n % 2 == 0){
+            Arrays.setAll(newArray, even -> (int)Math.pow((even+1)*2,2));
+            answer = Arrays.stream(newArray).sum();
+        } else {
+            Arrays.setAll(newArray, odd -> (odd+2)*2-1);
+            answer = Arrays.stream(newArray).sum()+1;
+        }
+        } return answer;
     }
 }
 ```
 
-공배수를 판별하기 위해 % 연산자를 통해 num을 n으로 나누고 나머지 값이 0이면 배수라고 판단하여 answer에 1을 아니라면 0을 넣어서 풀었습니다. 동시에 m의 배수에도 해당되어야 하기 때문에 && AND 논리 연산자를 사용하여 조건을 추가하였습니다.
+##### Solution
+
+Specify the size of the array by dividing newArray in half. To determine even and odd numbers, we utilize the Arrays.setAll function to reset the values of the elements in newArray. For even numbers, we need to square the values, so we do that with the Math.pow() function. We also cast Math.pow() to int since its default type is double. We then reassign the sum of the elements to the answer variable with Arrays.stream(arr).sum().
+For odd numbers, I implemented similar logic as for even numbers, and for sum()+1, I added it because I didn't want the array to contain any 1s.
+
+I solved the problem with an array as shown above, but there's actually a simpler way.
+That's right, you can do the math through a loop instead of controlling it with an array!
+
+#### How to do math through a loop
+
+```java
+class Solution {
+    public long solution(int n) {
+        long answer = 0;
+
+        if (n % 2 == 1) {
+            for (int i = 1; i <= n; i += 2) {
+                answer += i;
+            }
+        } else {
+            for (int i = 2; i <= n; i += 2) {
+                answer += (long) i * i;
+            }
+        }
+        } return answer;
+    }
+}
+```
