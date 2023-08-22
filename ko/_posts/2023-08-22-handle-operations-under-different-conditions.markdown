@@ -42,7 +42,7 @@ date: 2023-08-22 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 홀짝에 따라 다른 값 반환하는 방법에 대하여(with.Java)
+### 다양한 조건에서 연산 처리하는 방법에 대하여(with.Java)
 
 {:data-align="center"}
 
@@ -53,30 +53,54 @@ date: 2023-08-22 09:00:00 +0900
 
 #### 문제
 
-양의 정수 n이 매개변수로 주어질 때, n이 홀수라면 n 이하의 홀수인 모든 양의 정수의 합을 return 하고 n이 짝수라면 n 이하의 짝수인 모든 양의 정수의 제곱의 합을 return 하는 solution 함수를 작성해 주세요.
+문자열 code가 주어집니다.
+code를 앞에서부터 읽으면서 만약 문자가 "1"이면 mode를 바꿉니다. mode에 따라 code를 읽어가면서 문자열 ret을 만들어냅니다.
+
+mode는 0과 1이 있으며, idx를 0 부터 code의 길이 - 1 까지 1씩 키워나가면서 code[idx]의 값에 따라 다음과 같이 행동합니다.
+
+mode가 0일 때
+code[idx]가 "1"이 아니면 idx가 짝수일 때만 ret의 맨 뒤에 code[idx]를 추가합니다.
+code[idx]가 "1"이면 mode를 0에서 1로 바꿉니다.
+mode가 1일 때
+code[idx]가 "1"이 아니면 idx가 홀수일 때만 ret의 맨 뒤에 code[idx]를 추가합니다.
+code[idx]가 "1"이면 mode를 1에서 0으로 바꿉니다.
+문자열 code를 통해 만들어진 문자열 ret를 return 하는 solution 함수를 완성해 주세요.
+
+단, 시작할 때 mode는 0이며, return 하려는 ret가 만약 빈 문자열이라면 대신 "EMPTY"를 return 합니다.
 
 ##### 입출력 예시
 
-n: 7
-result: 16
+code: "abc1abc1abc"
+result: "acbac"
 
-즉, n은 7로 홀수입니다. 7 이하의 모든 양의 홀수는 1, 3, 5, 7이고 이들의 합인 1 + 3 + 5 + 7 = 16을 return 합니다.
+즉, code의 각 인덱스 i에 따라 다음과 같이 mode와 ret가 변합니다.
+따라서 "acbac"를 return 합니다.
 
 #### 문제에 대한 나의 풀이
 
 ```java
-import java.util.*;
-
 class Solution {
-    public int solution(int n) {
-        int answer = 0;
-        int[] newArray = new int[n/2];
-        if(n % 2 == 0){
-            Arrays.setAll(newArray, even -> (int)Math.pow((even+1)*2,2));
-            answer = Arrays.stream(newArray).sum();
-        } else {
-            Arrays.setAll(newArray, odd -> (odd+2)*2-1);
-            answer = Arrays.stream(newArray).sum()+1;
+    public String solution(String code) {
+        String answer = "";
+        String[] codeArr = code.split("");
+        Integer mode = 0;
+        for (Integer i = 0; i < codeArr.length; i++){
+            if(codeArr[i].equals("0") || codeArr[i].equals("1")){
+                mode = (mode == 0) ? 1 : 0;
+                continue;
+            }
+            if(i % 2 == 0){
+                if(mode == 0){
+                    answer += codeArr[i];
+                }
+            } else{
+                if(mode == 1){
+                    answer += codeArr[i];
+                }
+            }
+        }
+        if(answer.equals("")){
+            answer += "EMPTY";
         }
         return answer;
     }
@@ -85,29 +109,7 @@ class Solution {
 
 ##### 풀이 설명
 
-newArray를 반으로 나눠 배열의 크기를 지정합니다. 짝수와 홀수를 판단하기 위해 Arrays.setAll 함수를 활용하여 newArray의 요소 값을 재설정합니다. 짝수일 경우 값을 제곱해야 하기에 Math.pow()함수로 제곱을 해줬습니다. 또한 Math.pow()의 경우 기본 타입이 double 이기 때문에 int로 형변환을 해줬습니다. 이후 answer 변수에 Arrays.stream(arr).sum()을 통해 요소들의 합을 재할당하였습니다.
-홀수의 경우도 짝수와 비슷한 로직으로 구현했으며, sum()+1의 경우는 배열에 1은 포함하지 않게 계산을 하였기 때문에 추가해줬습니다.
-
-저는 위처럼 배열을 통해 문제를 해결했지만 사실 더 간단한 방법이 있습니다.
-바로 배열로 제어하는 것이 아닌 반복문을 통해 산술을 계산하면 됩니다!
-
-#### 반복문을 통해 산술 계산하는 방법
-
-```java
-class Solution {
-    public long solution(int n) {
-        long answer = 0;
-
-        if (n % 2 == 1) {
-            for (int i = 1; i <= n; i += 2) {
-                answer += i;
-            }
-        } else {
-            for (int i = 2; i <= n; i += 2) {
-                answer += (long) i * i;
-            }
-        }
-        return answer;
-    }
-}
-```
+문자열인 code를 문자열 배열의 형태로 선언된 codeArr로 split()를 활용해 값을 삽입하였습니다.
+이후 codeArr의 요소 크기만큼 반복하는 반복문을 선언했습니다.
+이 때, 반복문 안에는 총 2개의 조건문이 존재하는데 첫 번째 조건문은 codeArr의 요소 중 0, 1의 값이 포함되었는지 확인합니다. 만약 존재한다면 그 값에 대해서 서로의 값을 가질 수 있도록 재할당해줬습니다. 더하여 문제에 나온대로 숫자는 결과값에 포함되면 안되기 때문에 continue문을 사용하여 해당되는 for문 index에 대하여 넘길 수 있도록 처리를 해줬습니다. 2번 째 조건문은 index의 홀짝을 판별하는 표현식을 사용했습니다. 해당되는 것에 따라 mode의 값을 확인하고 결과 값에 codeArr[index]에 해당하는 String 요소를 추가하고 있습니다.
+마지막으로 문제에서 나왔듯 answer의 값이 empty 상태라면 "EMPTY"를 삽입하라는 조건이 있습니다. 그에 따라 equals 문으로 empty값인지 판별 후, 지정된 문자열을 삽입했습니다.

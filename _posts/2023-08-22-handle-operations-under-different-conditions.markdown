@@ -42,72 +42,75 @@ date: 2023-08-22 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 홀짝에 따라 다른 값 반환하는 방법에 대하여(with.Java)
+### How to handle operations under different conditions (with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩 테스트 문제를 풀며, 풀었던 문제에 대한 회고와 다른 풀이 방법을 알아보며, 알아가고자 합니다.
-문제에 대해 먼저 알아보겠습니다.
+We're going to learn by solving a coding test problem, reflecting on the problem we solved, and exploring other ways to solve it.
+Let's start with the problem.
 
-#### 문제
+#### Problem
 
-양의 정수 n이 매개변수로 주어질 때, n이 홀수라면 n 이하의 홀수인 모든 양의 정수의 합을 return 하고 n이 짝수라면 n 이하의 짝수인 모든 양의 정수의 제곱의 합을 return 하는 solution 함수를 작성해 주세요.
+You are given the string code.
+Read code from front to back and if the character is "1", change mode. Read code according to mode and produce the string ret.
 
-##### 입출력 예시
+There are 0s and 1s for mode, and we increment idx by 1 from 0 to the length of code - 1, behaving as follows depending on the value of code[idx].
 
-n: 7
-result: 16
+When mode is 0
+If code[idx] is not "1", append code[idx] to the end of ret only if idx is an even number.
+If code[idx] is "1", change mode from 0 to 1.
+When mode is 1
+If code[idx] is not "1", append code[idx] to the end of ret only if idx is odd.
+If code[idx] is "1", change mode from 1 to 0.
+Complete the solution function to return the string ret created by the string code.
 
-즉, n은 7로 홀수입니다. 7 이하의 모든 양의 홀수는 1, 3, 5, 7이고 이들의 합인 1 + 3 + 5 + 7 = 16을 return 합니다.
+Note that mode is 0 to start, and if the ret you want to return is an empty string, return "EMPTY" instead.
 
-#### 문제에 대한 나의 풀이
+##### Example input and output
+
+code: "abc1abc1abc"
+result: "acbac"
+
+This means that for each index i in code, mode and ret change as follows.
+Therefore, it returns "acbac".
+
+#### My solution to the problem
 
 ```java
-import java.util.*;
-
 class Solution {
-    public int solution(int n) {
-        int answer = 0;
-        int[] newArray = new int[n/2];
-        if(n % 2 == 0){
-            Arrays.setAll(newArray, even -> (int)Math.pow((even+1)*2,2));
-            answer = Arrays.stream(newArray).sum();
-        } else {
-            Arrays.setAll(newArray, odd -> (odd+2)*2-1);
-            answer = Arrays.stream(newArray).sum()+1;
+    public String solution(String code) {
+        String answer = "";
+        String[] codeArr = code.split("");
+        Integer mode = 0;
+        for (Integer i = 0; i < codeArr.length; i++){
+            if(codeArr[i].equals("0") || codeArr[i].equals("1")){
+                mode = (mode == 0) ? 1 : 0;
+                continue;
+            }
+            if(i % 2 == 0){
+                if(mode == 0){
+                    answer += codeArr[i];
+                }
+            } else{
+                if(mode == 1){
+                    answer += codeArr[i];
+                }
+            }
         }
-        return answer;
+        if(answer.equals("")){
+            answer += "EMPTY";
+        }
+        } return answer;
     }
 }
 ```
 
-##### 풀이 설명
+##### Solution
 
-newArray를 반으로 나눠 배열의 크기를 지정합니다. 짝수와 홀수를 판단하기 위해 Arrays.setAll 함수를 활용하여 newArray의 요소 값을 재설정합니다. 짝수일 경우 값을 제곱해야 하기에 Math.pow()함수로 제곱을 해줬습니다. 또한 Math.pow()의 경우 기본 타입이 double 이기 때문에 int로 형변환을 해줬습니다. 이후 answer 변수에 Arrays.stream(arr).sum()을 통해 요소들의 합을 재할당하였습니다.
-홀수의 경우도 짝수와 비슷한 로직으로 구현했으며, sum()+1의 경우는 배열에 1은 포함하지 않게 계산을 하였기 때문에 추가해줬습니다.
-
-저는 위처럼 배열을 통해 문제를 해결했지만 사실 더 간단한 방법이 있습니다.
-바로 배열로 제어하는 것이 아닌 반복문을 통해 산술을 계산하면 됩니다!
-
-#### 반복문을 통해 산술 계산하는 방법
-
-```java
-class Solution {
-    public long solution(int n) {
-        long answer = 0;
-
-        if (n % 2 == 1) {
-            for (int i = 1; i <= n; i += 2) {
-                answer += i;
-            }
-        } else {
-            for (int i = 2; i <= n; i += 2) {
-                answer += (long) i * i;
-            }
-        }
-        return answer;
-    }
-}
-```
+The string code was inserted using split() into codeArr, which is declared as an array of strings.
+We then declared a loop that iterates over the elements in codeArr.
+There are a total of two conditional statements in the loop, the first of which checks to see if any of the elements in codeArr contain values of 0 or 1. If they do, we reassign them so that they can have each other's values. In addition, since the problem states that numbers should not be included in the result, we use a continue statement to allow them to be passed to the corresponding for statement index. The second conditional statement used an expression to determine the sip for index. We're checking the value of mode based on which one applies and adding a String element to the result value corresponding to codeArr[index].
+Finally, there is a condition that says to insert "EMPTY" if the value of answer is empty, as shown in the question. We checked if it is empty with the equals statement and inserted the specified string.
+Translated with www.DeepL.com/Translator (free version)
