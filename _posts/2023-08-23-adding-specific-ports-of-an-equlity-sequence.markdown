@@ -1,8 +1,8 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_adding_specific_ports_of_an_equality_sequence
-title: 등차수열의 특정한 항만 더하기(with.Java)
-Adding Specific Ports of an Equality Sequence (with.Java)
+title: Adding Specific Ports of an Equality Sequence (with.Java)
+
 
 # title: About browser
 
