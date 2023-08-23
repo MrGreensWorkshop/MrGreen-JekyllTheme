@@ -43,74 +43,53 @@ date: 2023-08-23 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 다양한 조건에서 연산 처리하는 방법에 대하여(with.Java)
+### Adding specific ports of an equality sequence (with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩 테스트 문제를 풀며, 풀었던 문제에 대한 회고와 다른 풀이 방법을 알아보며, 알아가고자 합니다.
-문제에 대해 먼저 알아보겠습니다.
+We're going to go through the Coding Test problem, providing a retrospective on the problem we solved, and learning about other ways to solve it.
+Let's start with the problem.
 
-#### 문제
+#### Problem
 
-문자열 code가 주어집니다.
-code를 앞에서부터 읽으면서 만약 문자가 "1"이면 mode를 바꿉니다. mode에 따라 code를 읽어가면서 문자열 ret을 만들어냅니다.
+You are given two integers a, d and a boolean array included of length n. Write a solution function that returns the sum of only those terms in the included sequence whose first term is a and whose tolerance is d such that included[i] means term i + 1, where included is true for terms 1 through n in this included sequence.
 
-mode는 0과 1이 있으며, idx를 0 부터 code의 길이 - 1 까지 1씩 키워나가면서 code[idx]의 값에 따라 다음과 같이 행동합니다.
+What is an identity sequence in this problem?
+It is a list of numbers where the difference between neighboring numbers is the same.
 
-mode가 0일 때
-code[idx]가 "1"이 아니면 idx가 짝수일 때만 ret의 맨 뒤에 code[idx]를 추가합니다.
-code[idx]가 "1"이면 mode를 0에서 1로 바꿉니다.
-mode가 1일 때
-code[idx]가 "1"이 아니면 idx가 홀수일 때만 ret의 맨 뒤에 code[idx]를 추가합니다.
-code[idx]가 "1"이면 mode를 1에서 0으로 바꿉니다.
-문자열 code를 통해 만들어진 문자열 ret를 return 하는 solution 함수를 완성해 주세요.
+##### Example input and output
 
-단, 시작할 때 mode는 0이며, return 하려는 ret가 만약 빈 문자열이라면 대신 "EMPTY"를 return 합니다.
+a: 3
+b: 4
+included: [true, false, false, true, true]
+result: 37
 
-##### 입출력 예시
+This means that a and d are 3 and 4, respectively, and the length of included is 5. A tabular representation of this would look like this
 
-code: "abc1abc1abc"
-result: "acbac"
+Term 1 Term 2 Term 3 Term 4 Term 5 Term
+equality: 3, 7, 11, 15, 19
+included: true, false, false, true, true
+So, we can add the terms 1, 4, and 5 that correspond to true and return 3 + 15 + 19 = 37.
 
-즉, code의 각 인덱스 i에 따라 다음과 같이 mode와 ret가 변합니다.
-따라서 "acbac"를 return 합니다.
-
-#### 문제에 대한 나의 풀이
+#### My solution to the problem
 
 ```java
 class Solution {
-    public String solution(String code) {
-        String answer = "";
-        String[] codeArr = code.split("");
-        Integer mode = 0;
-        for (Integer i = 0; i < codeArr.length; i++){
-            if(codeArr[i].equals("0") || codeArr[i].equals("1")){
-                mode = (mode == 0) ? 1 : 0;
-                continue;
+    public int solution(int a, int d, boolean[] included) {
+        int answer = 0;
+        for(int i = 0; i<included.length; i++){
+            if(included[i]){
+                answer += a;
             }
-            if(i % 2 == 0){
-                if(mode == 0){
-                    answer += codeArr[i];
-                }
-            } else{
-                if(mode == 1){
-                    answer += codeArr[i];
-                }
-            }
-        }
-        if(answer.equals("")){
-            answer += "EMPTY";
+            a += d;
         }
         return answer;
     }
 }
 ```
 
-##### 풀이 설명
+##### Solution Explained
 
-문자열인 code를 문자열 배열의 형태로 선언된 codeArr로 split()를 활용해 값을 삽입하였습니다.
-이후 codeArr의 요소 크기만큼 반복하는 반복문을 선언했습니다.
-이 때, 반복문 안에는 총 2개의 조건문이 존재하는데 첫 번째 조건문은 codeArr의 요소 중 0, 1의 값이 포함되었는지 확인합니다. 만약 존재한다면 그 값에 대해서 서로의 값을 가질 수 있도록 재할당해줬습니다. 더하여 문제에 나온대로 숫자는 결과값에 포함되면 안되기 때문에 continue문을 사용하여 해당되는 for문 index에 대하여 넘길 수 있도록 처리를 해줬습니다. 2번 째 조건문은 index의 홀짝을 판별하는 표현식을 사용했습니다. 해당되는 것에 따라 mode의 값을 확인하고 결과 값에 codeArr[index]에 해당하는 String 요소를 추가하고 있습니다.
-마지막으로 문제에서 나왔듯 answer의 값이 empty 상태라면 "EMPTY"를 삽입하라는 조건이 있습니다. 그에 따라 equals 문으로 empty값인지 판별 후, 지정된 문자열을 삽입했습니다.
+Since we need to iterate over the size of included, we use a loop and store the value of a in answer if any of the elements of included in the subsequent boolean array are true. Given that it is an equality sequence, we implemented the logic by continuing to add as many values of d to a in the loop.
