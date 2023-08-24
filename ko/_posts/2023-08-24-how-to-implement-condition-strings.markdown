@@ -2,8 +2,6 @@
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_About_implement_condition_strings
 title: 조건 문자열을 구현하는 방법에 대하여(with.Java)
-How to implement condition strings (with.Java)
-
 # title: About browser
 
 # post specific
