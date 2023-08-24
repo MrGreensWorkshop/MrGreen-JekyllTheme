@@ -43,7 +43,7 @@ date: 2023-08-24 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 등차수열의 특정한 항만 더하기(with.Java)
+### 조건 문자열을 구현하는 방법에 대하여(with.Java)
 
 {:data-align="center"}
 
@@ -54,36 +54,43 @@ date: 2023-08-24 09:00:00 +0900
 
 #### 문제
 
-두 정수 a, d와 길이가 n인 boolean 배열 included가 주어집니다. 첫째항이 a, 공차가 d인 등차수열에서 included[i]가 i + 1항을 의미할 때, 이 등차수열의 1항부터 n항까지 included가 true인 항들만 더한 값을 return 하는 solution 함수를 작성해 주세요.
+문자열에 따라 다음과 같이 두 수의 크기를 비교하려고 합니다.
 
-문제에서 말하는 등차수열이란?
-인접한 수의 차이가 같은 수의 나열입니다.
+두 수가 n과 m이라면
+">", "=" : n >= m
+"<", "=" : n <= m
+">", "!" : n > m
+"<", "!" : n < m
+두 문자열 ineq와 eq가 주어집니다. ineq는 "<"와 ">"중 하나고, eq는 "="와 "!"중 하나입니다. 그리고 두 정수 n과 m이 주어질 때, n과 m이 ineq와 eq의 조건에 맞으면 1을 아니면 0을 return하도록 solution 함수를 완성해주세요.
 
 ##### 입출력 예시
 
-a: 3
-b: 4
-included: [true, false, false, true, true]
-result: 37
+ineq: "<"
+eq: "="
+n: 20
+m: 50
+result: 1
 
-즉, a와 d가 각각 3, 4이고 included의 길이가 5입니다. 이를 표로 나타내면 다음과 같습니다.
-
-1항 2항 3항 4항 5항
-등차수열: 3, 7, 11, 15, 19
-included: true, false, false, true, true
-따라서 true에 해당하는 1항, 4항, 5항을 더한 3 + 15 + 19 = 37을 return 합니다.
+즉, 20 <= 50은 참이기 때문에 1을 return합니다.
 
 #### 문제에 대한 나의 풀이
 
 ```java
 class Solution {
-    public int solution(int a, int d, boolean[] included) {
+    public int solution(String ineq, String eq, int n, int m) {
         int answer = 0;
-        for(int i = 0; i<included.length; i++){
-            if(included[i]){
-                answer += a;
+        if(ineq == "<"){
+            if(eq == "="){
+                answer = n <= m ? 1 : 0;
+            }else{
+                answer = n < m ? 1 : 0;
             }
-            a += d;
+        } else{
+            if(eq == "="){
+                answer = n >= m ? 1 : 0;
+            }else{
+                answer = n > m ? 1 : 0;
+            }
         }
         return answer;
     }
@@ -92,4 +99,38 @@ class Solution {
 
 ##### 풀이 설명
 
-included의 크기만큼 반복해야 하기 때문에 반복문을 사용하고 이후 boolean 배열의 included의 요소 중 true가 있다면 answer에 a의 값을 저장합니다. 등차수열인 점을 감안하여 반복문에서 a에 d의 값만큼을 계속 더하는 것으로 로직을 구현했습니다.
+ineq 문자열이 <와 일치하는지 판별하고, 맞다면 eq 문자여리 =과 일치하는지의 여부에 따라 값을 리턴하는 로직을 구성하여 발생할 수 있는 4가지의 경우를 처리하였습니다.
+
+하지만 일부 케이스에 대해서 적용이 안되는 문제를 확인하였습니다.
+이후 공부를 거듭한 결과 이유에 대해서 알게되었습니다.
+
+일부 케이스에 '==' 연산자가 적용되지 않는 이
+JavaScript에선 비교할 때 비교 연산자를 통해 주로 처리를 했는데 **Java에선 문자열 비교 시, '==' 연산자보다는 '.equals()' 메서드 사용이 권장**된다고 합니다. 이유는 문자열을 비교할 때 문자열의 실제 내용을 비교하기 위해서입니다.
+
+== 연산자는 참조(메모리 주소)를 비교하므로, 두 문자열이 내용은 같지만 다른 메모리에 저장된 경우에는 같다고 판단하지 않을 수 있습니다. 반면에 .equals() 메서드는 실제 문자열 내용을 비교하기 때문에 내용이 같으면 같다고 판단합니다.
+
+따라서 ineq == "<"와 같은 비교는 문자열 내용이 같더라도 제대로 작동하지 않을 수 있습니다. 이런 경우에는 .equals() 메서드를 사용하여 문자열 내용을 비교하는 것이 올바른 방법입니다.
+
+##### 다시 풀어서 통과한 문제에 대한 나의 풀이
+
+```java
+class Solution {
+    public int solution(String ineq, String eq, int n, int m) {
+        int answer = 0;
+        if(ineq.equals("<")){
+            if(eq.equals("=")){
+                answer = n <= m ? 1 : 0;
+            }else{
+                answer = n < m ? 1 : 0;
+            }
+        } else{
+            if(eq.equals("=")){
+                answer = n >= m ? 1 : 0;
+            }else{
+                answer = n > m ? 1 : 0;
+            }
+        }
+        return answer;
+    }
+}
+```

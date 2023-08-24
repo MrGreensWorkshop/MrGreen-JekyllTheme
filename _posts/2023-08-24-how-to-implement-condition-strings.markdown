@@ -42,53 +42,94 @@ date: 2023-08-24 09:00:00 +0900
 
 <!-- outline-start -->
 
-### 등차수열의 특정한 항만 더하기(with.Java)
+### How to implement a condition string (with.Java)
 
 {:data-align="center"}
 
 <!-- outline-end -->
 
-코딩 테스트 문제를 풀며, 풀었던 문제에 대한 회고와 다른 풀이 방법을 알아보며, 알아가고자 합니다.
-문제에 대해 먼저 알아보겠습니다.
+We're going to learn by solving a coding test problem, reflecting on the problem we solved, and exploring other ways to solve it.
+Let's start with the problem.
 
-#### 문제
+#### Problem
 
-두 정수 a, d와 길이가 n인 boolean 배열 included가 주어집니다. 첫째항이 a, 공차가 d인 등차수열에서 included[i]가 i + 1항을 의미할 때, 이 등차수열의 1항부터 n항까지 included가 true인 항들만 더한 값을 return 하는 solution 함수를 작성해 주세요.
+We want to compare the magnitude of two numbers based on a string, as follows.
 
-문제에서 말하는 등차수열이란?
-인접한 수의 차이가 같은 수의 나열입니다.
+If the two numbers are n and m
+">", "=" : n >= m
+"<", "=" : n <= m
+">", "!" : n > m
+"<", "!" : n < m
+Given two strings, ineq and eq. Complete the solution function so that, given two integers n and m, it returns 1 if n and m satisfy the conditions in ineq and eq, and 0 otherwise.
 
-##### 입출력 예시
+##### Example input and output
 
-a: 3
-b: 4
-included: [true, false, false, true, true]
-result: 37
+ineq: "<"
+eq: "="
+n: 20
+m: 50
+result: 1
 
-즉, a와 d가 각각 3, 4이고 included의 길이가 5입니다. 이를 표로 나타내면 다음과 같습니다.
+In other words, it returns 1 because 20 <= 50 is true.
 
-1항 2항 3항 4항 5항
-등차수열: 3, 7, 11, 15, 19
-included: true, false, false, true, true
-따라서 true에 해당하는 1항, 4항, 5항을 더한 3 + 15 + 19 = 37을 return 합니다.
-
-#### 문제에 대한 나의 풀이
+#### My solution to the problem
 
 ```java
 class Solution {
-    public int solution(int a, int d, boolean[] included) {
+    public int solution(String ineq, String eq, int n, int m) {
         int answer = 0;
-        for(int i = 0; i<included.length; i++){
-            if(included[i]){
-                answer += a;
+        if(ineq == "<"){
+            if(eq == "="){
+                answer = n <= m ? 1 : 0;
+            }else{
+                answer = n < m ? 1 : 0;
             }
-            a += d;
+        } else{
+            if(eq == "="){
+                answer = n >= m ? 1 : 0;
+            }else{
+                answer = n > m ? 1 : 0;
+            }
         }
-        return answer;
+        } return answer;
     }
 }
 ```
 
-##### 풀이 설명
+##### Solution Explanation
 
-included의 크기만큼 반복해야 하기 때문에 반복문을 사용하고 이후 boolean 배열의 included의 요소 중 true가 있다면 answer에 a의 값을 저장합니다. 등차수열인 점을 감안하여 반복문에서 a에 d의 값만큼을 계속 더하는 것으로 로직을 구현했습니다.
+We've handled four possible cases by constructing logic to determine if the ineq string matches < and, if so, return a value based on whether it matches the eq character string =.
+
+However, I noticed that it didn't work for some cases.
+After further study, I realized why.
+
+This '==' operator doesn't work in some cases
+In JavaScript, I used to use the comparison operator for comparison, but it is said that **Java recommends using the '.equals()' method rather than the '==' operator when comparing strings**. The reason is to compare the actual contents of the strings when comparing strings.
+
+The == operator compares references (memory addresses), so if two strings have the same content but are stored in different memory, they may not be equal. The .equals() method, on the other hand, compares the actual contents of the strings, so if the contents are the same, they are equal.
+
+Therefore, a comparison like ineq == "<" might not work correctly even if the string contents are the same. In this case, using the .equals() method to compare string contents is the correct way to go.
+
+##### My solution to the problem, which I solved again and passed
+
+```java
+class Solution {
+    public int solution(String ineq, String eq, int n, int m) {
+        int answer = 0;
+        if(ineq.equals("<")){
+            if(eq.equals("=")){
+                answer = n <= m ? 1 : 0;
+            }else{
+                answer = n < m ? 1 : 0;
+            }
+        } else{
+            if(eq.equals("=")){
+                answer = n >= m ? 1 : 0;
+            }else{
+                answer = n > m ? 1 : 0;
+            }
+        }
+        } return answer;
+    }
+}
+```
