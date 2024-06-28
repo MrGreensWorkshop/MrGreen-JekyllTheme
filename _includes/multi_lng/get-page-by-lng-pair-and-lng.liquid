@@ -25,7 +25,7 @@
     {%- endif -%}
   {%- endfor -%}
   {%- if out_lng_page == nil %}
-    {%- assign page_lng = "en" -%}
+    {%- assign page_lng = site.data.conf.main.default_lng -%}
   {%- else -%}
     {%- break -%}
   {%- endif -%}
