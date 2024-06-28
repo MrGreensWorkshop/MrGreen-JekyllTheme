@@ -12,7 +12,7 @@
 
 {%- if site.data.conf.posts.post_query_tabs_all_button_enable %}
 <li>
-  <a href="javascript:void(0);" data-query-link onclick="PostQuery.runQuery('{{ include.type | downcase }}','all');" {{ effect_upside_button }}>
+  <a href="javascript:void(0);" role="button" data-query-link onclick="PostQuery.runQuery('{{ include.type | downcase }}','all');" {{ effect_upside_button }}>
   {%- if include.icon != null -%}<i class="{{ 'fa-fw ' }}{{ include.icon }}" aria-hidden="true"></i>{%- endif -%}
   {{ site.data.lang[lng].post-list.upside_down_tabs.tab.all }}</a>
 </li>
@@ -34,7 +34,7 @@
 {%- comment %} add links {% endcomment -%}
 {%- for _item in item_list %}
   <li>
-    <a href="javascript:void(0);" data-query-link onclick="PostQuery.runQuery('{{ include.type | downcase }}','{{ _item | downcase }}');" {{ effect_upside_button }}>
+    <a href="javascript:void(0);" role="button" data-query-link onclick="PostQuery.runQuery('{{ include.type | downcase }}','{{ _item | downcase }}');" {{ effect_upside_button }}>
     {%- if include.icon != null -%}<i class="{{ 'fa-fw ' }}{{ include.icon }}" aria-hidden="true"></i>{%- endif -%}
     {{ _item | capitalize }}</a>
   </li>

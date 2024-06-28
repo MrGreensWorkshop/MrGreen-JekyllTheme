@@ -35,6 +35,8 @@ no_translation_tooltip: Não há tradução
 
 navigation:
   contact_header: Contato
+  side_navigation_button: Menu lateral
+  scroll_back_to_top: Voltar ao topo
 
 color_scheme_switch_tooltip: Escolha a cor
 
@@ -194,6 +196,7 @@ cookie_consent:
       accept: &accept_button Aceitar
       settings: Configurações
       deny: &deny_button Negar
+      close: Fechar
   panel_settings:
     title: *cookie_settings
     msg: >

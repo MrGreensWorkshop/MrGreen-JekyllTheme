@@ -28,7 +28,7 @@ layout: default
         {%- if site.data.conf.others.about.show_email and email %}
           {%- assign _email = email | split: '@' %}
           <p class="email">
-            <a href="javascript:void(0);" onclick="setAddress('{{ _email[0] }}', '{{ _email[1] }}');">
+            <a href="javascript:void(0);" aria-label="{{ site.data.lang[lng].about.email_title }}" onclick="setAddress('{{ _email[0] }}', '{{ _email[1] }}');">
               {%- if site.data.conf.others.about.email_icon %}<i class="{{ 'fa-fw ' }}{{ site.data.conf.others.about.email_icon }}"></i>{% endif -%}
               &nbsp;{{ site.data.lang[lng].about.email_title }}
             </a>

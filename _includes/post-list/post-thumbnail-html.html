@@ -5,7 +5,7 @@
 {%-endcomment-%}
 
 <div class="thumbnails" >
-  <a href="{{include.url}}"></a>
+  <a href="{{include.url}}" role="button" aria-label="{{include.title}}"></a>
   <div class="image-holder" style="background-image:url('{{include.image}}');{{include.display}}"></div>
   <div class="excerpt-holder" {{include.max_width}}>
     <div class="post-title">{{include.title}}</div>
