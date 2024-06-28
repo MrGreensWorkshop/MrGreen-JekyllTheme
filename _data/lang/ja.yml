@@ -34,6 +34,8 @@ no_translation_tooltip: 訳がありません
 
 navigation:
   contact_header: コンタクト
+  side_navigation_button: サイドメニュー
+  scroll_back_to_top: トップへ戻る
 
 color_scheme_switch_tooltip: 配色
 
@@ -106,7 +108,7 @@ post:
       telegram: Telegram
       linkedin: LinkedIn
       email: メール
-      copy_link: リンクコピー
+      copy_link: リンクをコピー
 
 # for post-list layout
 post-list:
@@ -193,6 +195,7 @@ cookie_consent:
       accept: &accept_button 全て許可
       settings: 設定
       deny: &deny_button 拒否
+      close: 閉じる
   panel_settings:
     title: *cookie_settings
     msg: >

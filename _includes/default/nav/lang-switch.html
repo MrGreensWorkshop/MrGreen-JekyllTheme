@@ -50,7 +50,7 @@
       {%- endfor -%}
       {%- if lng_set_flg == nil -%}
         <li>
-          <a href="javascript:void(0);" class="{{ site.data.conf.main.language_switch_hover_effect }}" onclick="showToolTip(this, '{{ site.data.lang[tmp_lng].no_translation_tooltip }}');" data-toggle="tooltip" data-placement="bottom" title="">
+          <a href="javascript:void(0);" role="button" class="{{ site.data.conf.main.language_switch_hover_effect }}" onclick="showToolTip(this, '{{ site.data.lang[tmp_lng].no_translation_tooltip }}');" data-toggle="tooltip" data-placement="bottom" title="">
             {{ site.data.lang[tmp_lng].lng.switch_title }}&nbsp;</a>
         </li>
       {%- endif -%}

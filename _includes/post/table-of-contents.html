@@ -16,7 +16,7 @@
       {{ site.data.lang[lng].post.table_of_contents.heading }}
       <span class="pull-right">
         {%comment-%} close button {%endcomment-%}
-        <a href="javascript:void(0);" class="close-button" onclick="document.getElementById('toc-container').style.display = 'none';">
+        <a href="javascript:void(0);" aria-label="{{ site.data.lang[lng].post.table_of_contents.tooltip.close }}" role="button" rel="nofollow" class="close-button" onclick="document.getElementById('toc-container').style.display = 'none';">
           <i class="fa fa-times" {{ tooltip_close }}></i>
         </a>
       </span>
