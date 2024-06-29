@@ -34,8 +34,6 @@ no_translation_tooltip: No Translation
 
 navigation:
   contact_header: Contact
-  side_navigation_button: Side menu
-  scroll_back_to_top: Back to top
 
 color_scheme_switch_tooltip: Color scheme
 
@@ -195,7 +193,6 @@ cookie_consent:
       accept: &accept_button Allow all
       settings: Customize
       deny: &deny_button Deny
-      close: Close
   panel_settings:
     title: *cookie_settings
     msg: >

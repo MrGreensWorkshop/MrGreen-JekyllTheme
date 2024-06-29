@@ -66,7 +66,7 @@
           {%- unless forloop.last %}{%- assign arguments = arguments | append: " " -%} {% endunless -%}
         {%-endfor%}
         {%-if index == item[1][0] %}
-          <a href="javascript:void(0);" class="btn-base {{ arguments }}" onclick="CookieConsent.consentSettingDone('{{ name }}');" role="button" rel="nofollow">{{ data_conf.buttons[name] }}</a>
+          <a href="javascript:void(0);" class="btn-base {{ arguments }}" onclick="CookieConsent.consentSettingDone('{{ name }}');" role="button">{{ data_conf.buttons[name] }}</a>
         {%-endif-%}
       {%-endfor%}
     {%-endfor%}

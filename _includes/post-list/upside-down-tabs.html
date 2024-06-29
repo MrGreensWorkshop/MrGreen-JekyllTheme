@@ -48,14 +48,14 @@
           {%- capture tooltip_clear -%} data-toggle="tooltip" data-placement="bottom" title="{{ site.data.lang[lng].post-list.upside_down_tabs.tab.tooltip.clear }}" {%- endcapture %}
         {%- endif -%}
         <li {{ tooltip_clear }}>
-          <a href="javascript:void(0);" role="button" aria-label="{{ site.data.lang[lng].post-list.upside_down_tabs.tab.clear }}" id="clear_filters" data-query-link onclick="PostQuery.showAll();"><i class="{{ 'fa-fw ' }}{{ site.data.conf.posts.post_query_tabs_clear_tab_icon }}" aria-hidden="true"></i>{%- if site.data.conf.posts.post_query_tabs_clear_tab_title_visible != false or site.data.conf.posts.post_query_tabs_clear_tab_icon == null or site.data.conf.posts.post_query_tabs_clear_tab_icon == "" %}{{ site.data.lang[lng].post-list.upside_down_tabs.tab.clear }}{% endif -%}</a>
+          <a href="javascript:void(0);" id="clear_filters" data-query-link onclick="PostQuery.showAll();"><i class="{{ 'fa-fw ' }}{{ site.data.conf.posts.post_query_tabs_clear_tab_icon }}" aria-hidden="true"></i>{%- if site.data.conf.posts.post_query_tabs_clear_tab_title_visible != false or site.data.conf.posts.post_query_tabs_clear_tab_icon == null or site.data.conf.posts.post_query_tabs_clear_tab_icon == "" %}{{ site.data.lang[lng].post-list.upside_down_tabs.tab.clear }}{% endif -%}</a>
         </li>
       {% endif -%}
       {%- if site.data.conf.posts.post_query_tabs_tooltip -%}
         {%- capture tooltip_close -%} data-toggle="tooltip" data-placement="bottom" title="{{ site.data.lang[lng].post-list.upside_down_tabs.tab.tooltip.close }}" {%- endcapture %}
       {%- endif -%}
       <li class="active" {{ tooltip_close }}>
-        <a href="javascript:void(0);" role="button" aria-label="{{ site.data.lang[lng].post-list.upside_down_tabs.tab.close }}" id="close_tabs"><i class="{{ 'fa-fw ' }}{{ site.data.conf.posts.post_query_tabs_close_tab_icon }}" aria-hidden="true"></i>{%- if site.data.conf.posts.post_query_tabs_close_tab_title_visible != false or site.data.conf.posts.post_query_tabs_close_tab_icon == null or site.data.conf.posts.post_query_tabs_close_tab_icon == null %}{{ site.data.lang[lng].post-list.upside_down_tabs.tab.close }}{% endif -%}</a>
+        <a href="javascript:void(0);" id="close_tabs"><i class="{{ 'fa-fw ' }}{{ site.data.conf.posts.post_query_tabs_close_tab_icon }}" aria-hidden="true"></i>{%- if site.data.conf.posts.post_query_tabs_close_tab_title_visible != false or site.data.conf.posts.post_query_tabs_close_tab_icon == null or site.data.conf.posts.post_query_tabs_close_tab_icon == null %}{{ site.data.lang[lng].post-list.upside_down_tabs.tab.close }}{% endif -%}</a>
       </li>
     </ul>
   </div>

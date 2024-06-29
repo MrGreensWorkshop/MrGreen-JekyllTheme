@@ -85,7 +85,6 @@
     }
     /* add text and url */
     linkObj.find("a").text(text).attr("href", url);
-    linkObj.find("a").text(text).attr("role", "button");
     if (addActive == false && addDisable == false) {
       linkObj.find("a").attr("onclick", 'PagerPageNumbers.buttonClick(this);');
     }
