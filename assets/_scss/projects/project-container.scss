@@ -56,7 +56,8 @@
   margin-top: 10px;
 }
 
-.project-container .project-header > h4 {
+.project-container .project-header > h2 {
+  margin-top: 10px;
   margin-bottom: 19px;
 }
 
@@ -93,7 +94,7 @@
   padding-bottom: calc(var(--text-spacing) / 2);
 }
 
-.project-container .project-header > h4 {
+.project-container .project-header > h2 {
   font-weight: 300;
   font-size: 1.6rem;
 }

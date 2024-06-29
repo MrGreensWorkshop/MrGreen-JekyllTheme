@@ -29,6 +29,10 @@
   right: 10px;
 }
 
+.consent-bar a {
+  font-weight: 400;
+}
+
 /* consent settings */
 .consent-settings {
   @include get_scheme(consent-settings-colors-);
@@ -78,6 +82,10 @@
   white-space: initial;
   /*text-align: justify;*/
   text-justify: inter-word;
+}
+
+.consent-settings .info-text a {
+  font-weight: 400;
 }
 
 .consent-settings .info {

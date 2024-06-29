@@ -65,6 +65,10 @@ footer {
   background-color: var(--footer-background-color);
 }
 
+.footer-powered a {
+  font-weight: 400;
+}
+
 .footer-text-centered {
   transform: translateX(-50%);
   left: 50%;
