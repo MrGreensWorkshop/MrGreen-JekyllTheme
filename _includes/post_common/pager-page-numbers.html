@@ -10,7 +10,7 @@
     <ul class="pagination" {{hide_panel}}>
 {%- if site.data.conf.posts.pager_page_numbers_auto_generator %}
     {%comment-%} flickering fix {%-endcomment-%}
-    <li><a href="javascript:void(0);">1</a></li>
+    <li><a href="javascript:void(0);" role="button">1</a></li>
 {%- else %}
   {% include post_common/pager-page-number-links.html pages = include.pages current_page_url = page.url -%}
 {% endif -%}
