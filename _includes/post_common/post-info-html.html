@@ -17,7 +17,7 @@
   {%- if site.data.conf.posts.comments.engine == "disqus" and site.data.conf.posts.comments.disqus.comment_count %}
   <small class="meta-link" {{include.comment_style}}>
     &nbsp;&nbsp;&nbsp;<i class="fa fa-comments-o"></i>&nbsp;<a href="{{include.url}}#comment_thread">-</a>
-    <a href="javascript:void(0);" onclick="window.location.href='{{include.url}}#comment_thread'" role="button" rel="nofollow">{{ site.data.lang[lng].post.comments.disqus.count_title }}</a>
+    <a href="javascript:void(0);" onclick="window.location.href='{{include.url}}#comment_thread'">{{ site.data.lang[lng].post.comments.disqus.count_title }}</a>
   </small>
   {% endif -%}
 </div>

@@ -213,7 +213,7 @@ top_nav_brand_text_enable: true
 
 # set profile image
 # comment to disable the profile image
-side_nav_profile_img_path: /assets/img/default/profile_pic.jpg
+side_nav_profile_img_path: /assets/img/posts/post_pic1.jpg
 
 # this adds hover effect to bottom buttons
 side_nav_bottom_buttons_hover_effect: "hover-effect"
@@ -300,7 +300,7 @@ meta:
   schema_markup_post_add_postbody: true
   schema_markup_logo_img: /assets/img/favicons/apple-touch-icon.png
   schema_markup_about_img: /assets/img/about/about.jpg
-  schema_markup_default_meta_img: /assets/img/home/home-heading.jpg
+  schema_markup_default_meta_img: /assets/img/about/about.jpg
   mobile_app: true
   android_mobile_app: true
   ios_mobile_app: true
