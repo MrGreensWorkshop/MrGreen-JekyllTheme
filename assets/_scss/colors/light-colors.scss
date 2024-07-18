@@ -9,12 +9,12 @@
 // light color scheme definitions
 $brand-color-light: #416289;
 $main-background-light: #efefef;
-$button-color-light: #a19e9e;
+$button-color-light: #9d9d9d;
 $menu-background-light: #f9f9f9;
 $header-color-light: #5f5e5e;
 $container-background-light: #fff;
 $hr-color-light: #eee;
-$anchor-text-color-light: #3389de;
+$anchor-text-color-light: #206EBC;
 
 // layout: default
 // default/body-main-styles
@@ -52,7 +52,7 @@ $anchor-text-color-light: #3389de;
 // default/footer
 %footer-colors-light {
   --footer-background-color: #{$main-background-light};
-  --footer-text-color: #808080;
+  --footer-text-color: #6B6B6B;
 }
 // default/nav/lang-switch
 %lang-switch-colors-light {
@@ -125,7 +125,7 @@ $anchor-text-color-light: #3389de;
 }
 // common/button
 %button-colors-light {
-  --button-text-color: #777;
+  --button-text-color: #757575;
   --button-border-color: #ccc;
   --button-background-color: #fff;
   --button-shadow-color: #77747455;

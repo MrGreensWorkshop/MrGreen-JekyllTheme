@@ -16,7 +16,7 @@
 {%- assign info_text = info_text | append : privacy_text -%}
 
 <div class="consent-bar">
-  <a class="close-button" href="javascript:void(0);" onclick="CookieConsent.hideConsentBar();"><i class="fa-fw fa fa-times"></i></a>
+  <a class="close-button" href="javascript:void(0);" onclick="CookieConsent.hideConsentBar();" aria-label="{{ data_conf.buttons.close }}" role="button" rel="nofollow"><i class="fa-fw fa fa-times"></i></a>
   <p>{{ info_text }}</p>
   {%- assign items = site.data.conf.main.cookie_consent.bar_buttons %}
   {%- for index in (1..items.size) %}
@@ -29,7 +29,7 @@
         {%- unless forloop.last %}{%- assign arguments = arguments | append: " " -%} {% endunless -%}
       {%-endfor%}
       {%-if index == item[1][0] %}
-        <a href="javascript:void(0);" class="btn-base {{ arguments }}" onclick="CookieConsent.consentBarDone('{{ name }}');" role="button">{{ data_conf.buttons[name] }}</a>
+        <a href="javascript:void(0);" class="btn-base {{ arguments }}" onclick="CookieConsent.consentBarDone('{{ name }}');" role="button" rel="nofollow">{{ data_conf.buttons[name] }}</a>
       {%-endif-%}
     {%-endfor%}
   {%-endfor%}
