@@ -34,7 +34,7 @@ J'allais créer mon site Web et j'ai pensé que si je le faisais en tant que gab
 ### Caractéristiques
 
 - Site Internet multilingue
-  - Anglais (par défaut), japonais, portugais brésilien, français
+  - Anglais (par défaut), japonais, portugais brésilien, français, chinois
 - Fonction de suggestion de langue
 - Ajout de boutons de navigation automatique avec icône, options d'activation et de désactivation
 - Mises en page pour `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` et plus
@@ -120,6 +120,7 @@ Merci pour vos contributions!
 
 - Traduction portugaise brésilienne par [Vitor DallAcqua](https://github.com/fandangos).
 - Corrections de la traduction française par [Jean-Philippe Morissette](https://github.com/JPMorissette).
+- Traduction chinoise par [fairycn](https://github.com/fairycn).
 
 ### Licence
 

@@ -35,6 +35,8 @@ no_translation_tooltip: 无翻译
 
 navigation:
   contact_header: 联系方式
+  side_navigation_button: 侧边菜单
+  scroll_back_to_top: 返回顶部
 
 color_scheme_switch_tooltip: 颜色方案
 
@@ -65,7 +67,7 @@ not-found:
 # for post layout
 post:
   read_time:
-    unit: " min"
+    unit: " 分钟"
     text: " 阅读"
     # c for char w for word
     word_char: w
@@ -86,7 +88,7 @@ post:
         text: >
           评论功能由第三方托管。通过显示外部内容，您接受disqus.com的$terms和$privacy_policy。
           <br>如果您希望退出定向广告，请打开$settings_link，然后单击“退出”按钮并关闭。返回此处并加载注释。
-        terms_link_text: Terms of Service
+        terms_link_text: 服务条款
         privacy_link_text: 隐私政策
         settings_link_text: 此链接
         button:
@@ -138,7 +140,7 @@ home:
   title: 欢迎
   button_name: 首页
   new_posts_title: 新文章
-  new_posts_show_more_button: 阅读更多信息 ...
+  new_posts_show_more_button: 阅读更多信息 …
 
 # for archives layout
 archives:
@@ -189,17 +191,18 @@ cookie_consent:
     msg: >
       本网站使用cookie优化网站功能。
       它将在你的批准下被激活。
-    privacy_msg: 检查 $privacy_link.
+    privacy_msg: 检查 $privacy_link。
     buttons:
       accept: &accept_button 允许所有
       settings: 自定义
       deny: &deny_button 拒绝
+      close: 关闭
   panel_settings:
     title: *cookie_settings
     msg: >
       本网站使用cookie优化网站功能。
       它将在您的批准下激活。请单击下面的每个项目以了解cookie策略。
-    privacy_msg: 检查 $privacy_link.
+    privacy_msg: 检查 $privacy_link。
     buttons:
       accept: *accept_button
       save: 允许选择
@@ -225,13 +228,12 @@ cookie_consent:
     gtag_info:
       # from https://support.google.com/tagmanager/answer/10718549#consent-types
       ad_storage: >
-        启用与广告有关的存储（如cookies）。
+        启用与广告相关的存储（例如 Cookie）。
       analytics_storage: >
-        启用与分析有关的存储（如cookies），例如访问时间。
+        启用与分析（例如访问持续时间）相关的存储（例如 Cookie）。
       functionality_storage: >
-        启用支持网站或应用程序功能的存储，例如语言设置。
+        启用可为网站或应用的功能（例如语言设置）提供支持的存储。
       personalization_storage: >
-        启用与个性化相关的存储，例如视频推荐。
+        启用与个性化（例如视频推荐）相关的存储。
       security_storage: >
-        启用与安全有关的存储，如认证功能，
-        预防欺诈，以及其他用户保护。
+        启用与安全性（例如，身份验证功能、欺诈防范功能和其他用户保护功能）相关的存储。

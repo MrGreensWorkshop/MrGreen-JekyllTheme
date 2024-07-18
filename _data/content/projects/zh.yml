@@ -173,8 +173,8 @@ page_data:
 
     # picture
     - type: id_picture
-      project_name: "Example Project"
-      project_excerpt: "Picture"
+      project_name: "项目示例"
+      project_excerpt: "图片"
       img: ":project2_thumb.jpg"
       img_title: "img title2"
       date: "2021-04-23"
@@ -186,7 +186,7 @@ page_data:
 
     # quote
     - type: id_quote
-      project_name: "Example Project"
+      project_name: "项目示例"
       project_excerpt: "William Shakespeare"
       #img: ":project1_thumb.jpg"
       #img_title: "img title3"
