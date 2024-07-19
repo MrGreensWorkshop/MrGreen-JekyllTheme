@@ -28,7 +28,11 @@
   {%- else %}
     "data-theme": "{{ site.data.conf.posts.comments.giscus.theme-light }}",
   {%- endif %}
+  {%- if lng_code == "zh" %}
+    "data-lang": "{{ lng_code }}-{{ site.data.lang[lng_code].lng.country }}",
+  {%- else %}
     "data-lang": "{{ lng_code }}",
+  {%- endif %}
   {%- if site.data.conf.posts.comments.giscus.loading != nil
       and site.data.conf.posts.comments.giscus.loading != empty
   %}
