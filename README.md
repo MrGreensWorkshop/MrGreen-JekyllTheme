@@ -1,4 +1,4 @@
-[English] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)]
+[English] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)]
 
 ## Mr. Green Jekyll Theme
 
@@ -34,7 +34,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 ### Features
 
 - Multilingual web site
-  - English (default), Japanese, Brazilian Portuguese, French
+  - English (default), Japanese, Brazilian Portuguese, French, Chinese (Simplified)
 - Recommended language offer feature
 - Auto Navigation Button adder with icon enable disable options
 - Layouts for `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` and more
@@ -120,6 +120,7 @@ Thank you for your contributions!
 
 - Brazilian Portuguese translation by [Vitor DallAcqua](https://github.com/fandangos).
 - French translation corrections by [Jean-Philippe Morissette](https://github.com/JPMorissette).
+- Chinese translation by [fairycn](https://github.com/fairycn).
 
 ### License
 
