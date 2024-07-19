@@ -34,6 +34,8 @@ no_translation_tooltip: 번역 없음
 
 navigation:
   contact_header: 연락하다
+  side_navigation_button: 사이드 메뉴
+  scroll_back_to_top: 맨 위로
 
 color_scheme_switch_tooltip: 색 구성표
 
@@ -193,6 +195,7 @@ cookie_consent:
       accept: &accept_button 모두 허용
       settings: 커스터마이징
       deny: &deny_button 부인하다
+      close: 닫다
   panel_settings:
     title: *cookie_settings
     msg: >
