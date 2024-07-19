@@ -39,7 +39,7 @@
           ,image: {
             titleSrc: 'alt'
             /* Error message */
-            ,tError: '{{ site.data.lang[lng].image_viewer.load_error }}{{ err_img_path }}'
+            ,tError: "{{ site.data.lang[lng].image_viewer.load_error }}{{ err_img_path }}"
             /* Set to null to disable zoom out cursor. */
             /*,cursor: null */
           }
@@ -96,8 +96,8 @@
         paginatorListContainerName: ".pagination_wrapper .pagination"
         ,pageList: ["{{lng_pages}}"]
       {%- if site.data.conf.posts.pager_page_numbers_first_last_buttons %}
-        ,firstButtonName: '{{ site.data.lang[lng].post.pager_buttons.first_post }}'
-        ,lastButtonName: '{{ site.data.lang[lng].post.pager_buttons.last_post }}'
+        ,firstButtonName: "{{ site.data.lang[lng].post.pager_buttons.first_post }}"
+        ,lastButtonName: "{{ site.data.lang[lng].post.pager_buttons.last_post }}"
       {%- endif %}
         ,prevButtonName: "«"
         ,nextButtonName: "»"

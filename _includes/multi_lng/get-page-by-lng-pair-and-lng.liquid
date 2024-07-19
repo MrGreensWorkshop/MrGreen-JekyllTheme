@@ -5,6 +5,7 @@
 {%-endcomment-%}
 
 {%-comment-%} out: out_lng_page {%-endcomment-%}
+{%- assign out_lng_page = nil -%}
 
 {%- if include.lng != nil -%}
   {%- assign page_lng = include.lng -%}
@@ -15,10 +16,17 @@
 
 {%- include multi_lng/get-pages-by-lng-pair.liquid lng_pair=include.lng_pair layout=include.layout pages=include.pages -%}
 
-{%- for _page in lng_page_pair -%}
-  {%- include multi_lng/get-lng-by-url.liquid url = _page.url -%}
-  {%- if get_lng == page_lng -%}
-    {%- assign out_lng_page = _page -%}
+{%- for i in (1..2) -%}
+  {%- for _page in lng_page_pair -%}
+    {%- include multi_lng/get-lng-by-url.liquid url = _page.url -%}
+    {%- if get_lng == page_lng -%}
+      {%- assign out_lng_page = _page -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if out_lng_page == nil %}
+    {%- assign page_lng = site.data.conf.main.default_lng -%}
+  {%- else -%}
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}

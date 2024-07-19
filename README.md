@@ -1,15 +1,15 @@
-[English] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)]
+[English] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)]
 
 ## Mr. Green Jekyll Theme
 
 <!-- readme -->
 
 [<img src="https://img.shields.io/github/issues/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub issues" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/issues)
-[<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub forks" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
-[<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
+[<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme?style=flat" alt="GitHub forks" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
+[<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme?style=flat" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
 [<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt)
 [<img src="https://shields.io/badge/Github%20Sponsors-Support%20me-blue?logo=GitHub+Sponsors" alt="Support me on GitHub Sponsors" data-no-image-viewer>](https://github.com/sponsors/MrGreensWorkshop "Support me on GitHub Sponsors")
-[<img src="https://shields.io/badge/Patreon-Support%20me-blue?logo=Patreon" alt="Support me on Patreon" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Support me on Patreon")
+[<img src="https://shields.io/badge/Patreon-Support%20me-blue?logo=Patreon" alt="Be my Patron" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Be my Patron")
 [<img src="https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi" alt="Tip me via Ko-fi" data-no-image-viewer>](https://ko-fi.com/MrGreensWorkshop "Tip me via Ko-fi")
 
 ---
@@ -34,7 +34,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 ### Features
 
 - Multilingual web site
-  - English (default), Japanese, Brazilian Portuguese, Korean
+  - English (default), Japanese, Brazilian Portuguese, French, Chinese (Simplified), Korean
 - Recommended language offer feature
 - Auto Navigation Button adder with icon enable disable options
 - Layouts for `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` and more
@@ -66,7 +66,7 @@ I was going to make my website and thought if I did it as a template, I could sh
 
 ### Installation
 
-#### Github pages
+#### GitHub pages
 
 1. [Fork the repo](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/fork).
 1. Edit \_config.yml and change `url` like below and push changes.
@@ -75,22 +75,22 @@ I was going to make my website and thought if I did it as a template, I could sh
    url: "https://your_github_user_name.github.io"
    ```
 
-1. Rename the repo name to `your_github_user_name.github.io`
+1. Rename the repo name to `your_github_user_name.github.io`.
 1. Check Deploy status `Actions` tab on the repo.
-1. When it's turned to green, your site is up and running at `https://your_github_user_name.github.io`
+1. When it's turned to green, your site is up and running at `https://your_github_user_name.github.io`.
 
 #### Local build
 
-1. [Install Jekyll](https://jekyllrb.com/docs/installation/) to your OS
-1. Clone or [download](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest) the repo, in command prompt go to the folder run `bundle install` command
-1. Build using `bundle exec jekyll serve --watch --host 0.0.0.0 --safe` command
+1. [Install Jekyll](https://jekyllrb.com/docs/installation/) to your OS.
+1. Clone or [download](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest) the repo, in command prompt go to the folder run `bundle install` command.
+1. Build using `bundle exec jekyll serve --watch --host 0.0.0.0 --safe` command,
     - with `--host 0.0.0.0` parameter you can access web server from same lan.
-    - with `--safe` parameter you can make sure no 3rd party plugin added. (for Github pages development)
+    - with `--safe` parameter you can make sure no 3rd party plugin added. (for GitHub pages development)
 1. Your page will be up and running at the `0.0.0.0:4000/` address.
 
 ### Documentation
 
-Check out [Mr. Green theme tutorials playlist](https://www.youtube.com/playlist?list=PLAymxPbYHgl-fFy5can7uZBMJtFWVcphD) on YouTube
+Check out [Mr. Green theme tutorials playlist](https://www.youtube.com/playlist?list=PLAymxPbYHgl-fFy5can7uZBMJtFWVcphD) on YouTube.
 
 ### Credits
 
@@ -100,7 +100,7 @@ I want to thank these projects that gave me an opportunity to build my web site.
 
 - [GitHub Pages](https://pages.github.com/) Hosted directly from your GitHub repository. Just push the changes and the site will be automatically generated.
 
-Some of the sites that I find useful while I'm working on this project. [links page](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/tabs/links.html)
+Some of the sites that I find useful while I'm working on this project. [Links page](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/tabs/links.html).
 
 ### You Can Support My Work
 
@@ -119,6 +119,8 @@ Pull Requests are welcome. Please check the instructions in the Issues and Pull 
 Thank you for your contributions!
 
 - Brazilian Portuguese translation by [Vitor DallAcqua](https://github.com/fandangos).
+- French translation corrections by [Jean-Philippe Morissette](https://github.com/JPMorissette).
+- Chinese translation by [fairycn](https://github.com/fairycn).
 
 ### License
 

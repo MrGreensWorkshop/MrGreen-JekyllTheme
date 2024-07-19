@@ -76,15 +76,15 @@ page_data:
     - type: id_jekyiiliquid
       title: "Liquid for Designers"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Designers"
-      info: "Liquid for Designers wiki on GitHub"
+      info: "Liquid for Designers wiki on GitHub."
     - type: id_jekyiiliquid
       title: "Liquid for Programmers"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers"
-      info: "Liquid for Programmers wiki on GitHub"
+      info: "Liquid for Programmers wiki on GitHub."
     - type: id_jekyiiliquid
       title: "Liquid Reference"
       url: "https://shopify.dev/api/liquid/"
-      info: "Liquid is a template language created by Shopify and written in Ruby. It is now available as an open source project on GitHub"
+      info: "Liquid is a template language created by Shopify and written in Ruby. It is now available as an open source project on GitHub."
 
     # webdesign
     - type: id_webdesign

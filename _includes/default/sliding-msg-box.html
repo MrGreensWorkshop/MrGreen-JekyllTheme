@@ -4,9 +4,10 @@
   Licensed under MIT
 {%-endcomment-%}
 
+{%- assign data_conf = site.data.lang[lng].cookie_consent.panel_bar -%}
 {%- capture sliding_msg_box_html -%}
 <div class="slideBox">
-  <a class="close-button" href="javascript:void(0);"><i class="fa-fw fa fa-times"></i></a>
+  <a class="close-button" href="javascript:void(0);" aria-label="{{ data_conf.buttons.close }}" role="button" rel="nofollow"><i class="fa-fw fa fa-times"></i></a>
 </div>
 {%- endcapture -%}
 

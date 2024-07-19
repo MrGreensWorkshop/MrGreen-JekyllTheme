@@ -1,12 +1,12 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)] [Português do Brasil] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [Português do Brasil] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)]
 
 ## Tema Mr. Green Jekyll
 
 <!-- readme -->
 
 [<img src="https://img.shields.io/github/issues/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub issues" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/issues)
-[<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub forks" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
-[<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
+[<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme?style=flat" alt="GitHub forks" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
+[<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme?style=flat" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
 [<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt)
 [<img src="https://shields.io/badge/Github%20Sponsors-Support%20me-blue?logo=GitHub+Sponsors" alt="Me apoie no GitHub Sponsors" data-no-image-viewer>](https://github.com/sponsors/MrGreensWorkshop "Me apoie no GitHub Sponsors")
 [<img src="https://shields.io/badge/Patreon-Support%20me-blue?logo=Patreon" alt="Me apoie no Patreon" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Me apoie no Patreon")
@@ -34,7 +34,7 @@ Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia
 ### Recursos disponíveis
 
 - Website para vários idiomas.
-  - Inglês (padrão), Japonês, Português do Brasil, Coreano
+  - Inglês (padrão), Japonês, Português do Brasil, Francês, Chinês, Coreano
 - Recomendação de idioma
 - Auto navegação com possibilidade de habilitar e desabilitar os ícones.
 - Layout para `Principal`, `Sobre`, `Arquivos`, `Lista-de-Posts`, `Links`, `Projetos` e mais
@@ -66,7 +66,7 @@ Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia
 
 ### Instalação
 
-#### Github pages
+#### GitHub pages
 
 1. [Faça um fork do repositório](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/fork).
 1. Edite \_config.yml e o link do `url` e suba suas alterações.
@@ -119,6 +119,8 @@ Pull Requests são muito bem vindos. Por favor, veja as instruções em Problema
 Obrigado por suas contribuições!
 
 - Tradução para o português brasileiro por [Vitor DallAcqua](https://github.com/fandangos).
+- Correções da tradução para o francês por [Jean-Philippe Morissette](https://github.com/JPMorissette).
+- Tradução para o chinês por [fairycn](https://github.com/fairycn).
 
 ### Licença
 

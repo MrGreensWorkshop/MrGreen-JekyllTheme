@@ -36,7 +36,7 @@
         {%- endcapture %}
       {%- endif %}
       <li>
-        <a href="{{ tag_url }}" {{ tag_attr }} {{ tooltip_share_buttons }} {{ effect_share_button }}>
+        <a href="{{ tag_url }}" aria-label="{{ site.data.lang[lng].post.share.tooltip[share_key] }}" role="button" {{ tag_attr }} {{ tooltip_share_buttons }} {{ effect_share_button }}>
           <i class="{{ share_const.icon }}{{' fa-fw'}}" aria-hidden="true"></i>
         </a>
       </li>

@@ -1,3 +1,7 @@
+# Mr. Green Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+# Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+# Licensed under MIT
+
 lng:
   name: 日本語
   # based on ISO_639-1 https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
@@ -30,6 +34,8 @@ no_translation_tooltip: 訳がありません
 
 navigation:
   contact_header: コンタクト
+  side_navigation_button: サイドメニュー
+  scroll_back_to_top: トップへ戻る
 
 color_scheme_switch_tooltip: 配色
 
@@ -102,7 +108,7 @@ post:
       telegram: Telegram
       linkedin: LinkedIn
       email: メール
-      copy_link: リンクコピー
+      copy_link: リンクをコピー
 
 # for post-list layout
 post-list:
@@ -189,6 +195,7 @@ cookie_consent:
       accept: &accept_button 全て許可
       settings: 設定
       deny: &deny_button 拒否
+      close: 閉じる
   panel_settings:
     title: *cookie_settings
     msg: >

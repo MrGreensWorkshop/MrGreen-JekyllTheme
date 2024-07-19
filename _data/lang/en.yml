@@ -1,3 +1,7 @@
+# Mr. Green Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+# Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+# Licensed under MIT
+
 lng:
   name: English
   # based on ISO_639-1 https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
@@ -11,7 +15,7 @@ lng:
     title: Language
     msg_page: View this page in English.
     # if page translation is not available, use this.
-    msg_site: To English home page
+    msg_site: To home
 
 date:
   # if %b is used in the long format, it will be replaced with the corresponding item in 'months' list below.
@@ -30,12 +34,14 @@ no_translation_tooltip: No Translation
 
 navigation:
   contact_header: Contact
+  side_navigation_button: Side menu
+  scroll_back_to_top: Back to top
 
 color_scheme_switch_tooltip: Color scheme
 
 search:
   placeholder: Search
-  noResultText: No results found.
+  noResultText: No results were found.
 
 image_viewer:
   load_error: The image could not be loaded.
@@ -75,7 +81,7 @@ post:
     noscript: Please enable JavaScript to view the Comments.
     disqus:
       count_title: Comments
-      click_to_load: "Load Comments"
+      click_to_load: "Load comments"
       consent:
         title: Comments (Disqus.com)
         text: >
@@ -189,6 +195,7 @@ cookie_consent:
       accept: &accept_button Allow all
       settings: Customize
       deny: &deny_button Deny
+      close: Close
   panel_settings:
     title: *cookie_settings
     msg: >
@@ -209,7 +216,7 @@ cookie_consent:
           These cookies do not store any personally identifiable information.
           $gtag_info
       analytics:
-        title: Performance cookies #Performance and analytics cookies
+        title: Performance cookies
         info: $gtag_info
       preferences:
         title: Functionality cookies

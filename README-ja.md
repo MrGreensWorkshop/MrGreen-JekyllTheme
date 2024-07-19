@@ -1,12 +1,12 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)]
 
 ## Mr. Green Jekyll テーマ
 
 <!-- readme -->
 
 [<img src="https://img.shields.io/github/issues/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub issues" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/issues)
-[<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub forks" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)
-[<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-jp.md#readme)
+[<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme?style=flat" alt="GitHub forks" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)
+[<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme?style=flat" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)
 [<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt)
 [<img src="https://shields.io/badge/Github%20Sponsors-Support%20me-blue?logo=GitHub+Sponsors" alt="GitHubでスポンサーになる" data-no-image-viewer>](https://github.com/sponsors/MrGreensWorkshop "GitHubでスポンサーになる")
 [<img src="https://shields.io/badge/Patreon-Support%20me-blue?logo=Patreon" alt="Patreonで支援" data-no-image-viewer>](https://patreon.com/MrGreenWorkshop "Patreonで支援")
@@ -34,7 +34,7 @@
 ### Features
 
 - 多言語Webサイト
-  - 英語 (デフォルト)、日本語、ブラジルポルトガル語、韓国語
+  - 英語 (デフォルト)、日本語、ブラジルポルトガル語、フランス語、中国語
 - おすすめの言語提供機能
 - アイコン有効無効オプション付き自動ナビゲーションボタン追加機能
 - `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` 等々のレイアウト
@@ -66,7 +66,7 @@
 
 ### Installation
 
-#### Github pages
+#### GitHub pages
 
 1. [リポをフォークする](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/fork)。
 1. \_config.yml を編集し、`url` を以下のように変え、変更をプッシュする。
@@ -119,6 +119,8 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 貢献していただきありがとうございます！
 
 - ブラジルポルトガル語の翻訳 [Vitor DallAcqua](https://github.com/fandangos)。
+- フランス語の翻訳修正 [Jean-Philippe Morissette](https://github.com/JPMorissette)。
+- 中国語の翻訳 [fairycn](https://github.com/fairycn)。
 
 ### License
 
