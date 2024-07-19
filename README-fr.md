@@ -17,7 +17,7 @@
 <div align="center">
   <img src="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/assets/img/posts/mock1.jpg" max-height="500" alt="screen_mock">
   <br><br>
-  <a href="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com" style="font-weight: bold;" >Cliquez ici pour voir un exemple en ligne</a>
+  <a href="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/fr" style="font-weight: bold;" >Cliquez ici pour voir un exemple en ligne</a>
 </div>
 
 
