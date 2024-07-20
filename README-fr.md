@@ -1,4 +1,4 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [français] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [français] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)]
 
 ## Thème de Mr. Green Jekyll
 
@@ -34,7 +34,7 @@ J'allais créer mon site Web et j'ai pensé que si je le faisais en tant que gab
 ### Caractéristiques
 
 - Site Internet multilingue
-  - Anglais (par défaut), japonais, portugais brésilien, français, chinois, coréen
+  - Anglais (par défaut), japonais, portugais brésilien, français, chinois, coréen, turc
 - Fonction de suggestion de langue
 - Ajout de boutons de navigation automatique avec icône, options d'activation et de désactivation
 - Mises en page pour `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` et plus
