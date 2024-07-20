@@ -29,7 +29,7 @@
 
 <!-- outline-end -->
 
-我打算做我的网站，并认为如果我把它做为一个模板，我可以与开源社区分享它。这就是为什么我决定把它建成一个主题。我很努力地工作，使之成为可能，[请考虑成为一名赞助者](#you-can-support-my-work). 谢谢。
+我打算做我的网站，并认为如果我把它做为一个模板，我可以与开源社区分享它。这就是为什么我决定把它建成一个主题。我很努力地工作，使之成为可能，[请考虑成为一名赞助者](#你可以支持我的工作). 谢谢。
 
 ### 特色
 
@@ -126,7 +126,7 @@
 
 正如它所说，在 [MIT 许可证](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt), 你可以在任何地方使用这个主题，只要你包括许可证和版权声明。
 
-`版权所有 (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com`
+`Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com`
 
 请添加链接到我的页面或在页脚留下 "Pwrd by Mr. Green" 这样我的工作就能得到认可。
 
@@ -140,7 +140,7 @@ Mr. Green Jekyll 主题包含了下面写的库。没有这些库，我不可能
 | :----------------------------------- | ---- |
 | [jQuery v3.6.0](https://github.com/jquery/jquery/tree/3.6.0)，版权所有 [OpenJS Foundation](https://openjsf.org) 和其他贡献者。 jQuery 是根据 MIT 许可证条款分发的。 | [jquery-3.6.0.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/jquery-3.6.0.min.js) |
 | [Bootstrap v3.3.7](https://github.com/twbs/bootstrap/tree/v3.3.7), 版权所有 (c) 2011-2016 Twitter, Inc. Bootstrap 根据 MIT 许可证条款分发。 | [bootstrap.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap.min.js), [bootstrap.min.css](assets/css/bootstrap.min.css) |
-| [Bootstrap Table of Contents v0.4.1](https://github.com/afeld/bootstrap-toc/tree/v0.4.1), 版权所有 (c) 2015 Aidan Feldman Aidan Feldman. Bootstrap 目录是根据 MIT 许可证条款分发的。 | [bootstrap-toc.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap-toc.min.js), [bootstrap-toc.min.css](assets/css/bootstrap-toc.min.css) |
+| [Bootstrap Table of Contents v0.4.1](https://github.com/afeld/bootstrap-toc/tree/v0.4.1), 版权所有 (c) 2015 Aidan Feldman. Bootstrap 目录是根据 MIT 许可证条款分发的。 | [bootstrap-toc.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap-toc.min.js), [bootstrap-toc.min.css](assets/css/bootstrap-toc.min.css) |
 | [Font Awesome v4.7.0](https://github.com/FortAwesome/Font-Awesome/tree/v4.7.0), 版权所有 (c) 2017 Dave Gandy. Font Awesome v4.7.0，版权所有 (c) 2017 Dave Gandy。 Font Awesome 字体根据 [SIL OFL 1.1](http://scripts.sil.org/OFL) 条款进行分发。 Font Awesome CSS、LESS 和 Sass 文件根据 [MIT 许可证](https://opensource.org/licenses/mit-license.html) 条款分发。| [font-awesome.min.css](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/css/font-awesome.min.css), [FontAwesome](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/fonts/) |
 | [Lozad.js v1.16.0](https://github.com/ApoorvSaxena/lozad.js/tree/v1.16.0), 版权所有 (c) 2017 Apoorv Saxena. Lozad.js 根据 MIT 许可证条款分发。 | [lozad.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/lozad.min.js) |
 | [Magnific Popup v1.1.0](https://github.com/dimsemenov/Magnific-Popup/tree/1.1.0), 版权所有 (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com。 Magnific Popup 是根据 MIT 许可证条款分发的。 | [jquery.magnific-popup.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/jquery.magnific-popup.min.js), [magnific-popup.css](assets/css/magnific-popup.css) |

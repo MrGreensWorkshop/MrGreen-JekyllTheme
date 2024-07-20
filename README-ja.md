@@ -21,7 +21,7 @@
 </div>
 
 
-### Introduction
+### イントロ
 
 <!-- outline-start -->
 
@@ -29,9 +29,9 @@
 
 <!-- outline-end -->
 
-私は自分のWebサイトを作るつもりでしたが、それをテンプレートとして作成すれば、オープンソースコミュニティと共有できると思い、テーマとして作ることにしました。 このプロジェクトの作成に多くの時間と労力を費やしました。そのため、[サポートする](#you-can-support-my-work)ことを考えて頂けたら嬉しいです。
+私は自分のWebサイトを作るつもりでしたが、それをテンプレートとして作成すれば、オープンソースコミュニティと共有できると思い、テーマとして作ることにしました。 このプロジェクトの作成に多くの時間と労力を費やしました。そのため、[支援する](#支援する)ことを考えて頂けたら嬉しいです。
 
-### Features
+### 機能
 
 - 多言語Webサイト
   - 英語 (デフォルト)、日本語、ブラジルポルトガル語、フランス語、中国語、韓国語
@@ -64,7 +64,7 @@
 - モバイル端末対応 (Android と IOS でテスト済み)
 - 開発者向けに整理されたフォルダ構造 (Chrome, Safari, FireFox でテスト済み)
 
-### Installation
+### インストール
 
 #### GitHub pages
 
@@ -79,7 +79,7 @@
 1. デプロイのステイタスは、リポ上の `Actions` タブで確認する。
 1. 緑色に変わると、サイトは `https://GitHubユーザー名.github.io` で利用可能になる。
 
-#### Local build
+#### ローカルビルド
 
 1. [Jekyll をインストール](https://jekyllrb-ja.github.io/docs/installation/)する。
 1. リポをクローン、または [ダウンロード](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/releases/latest)し、コマンドプロンプトでフォルダに移動し、`bundle install` コマンドを実行する。
@@ -88,11 +88,11 @@
     - `--safe`を指定すると、第三者のプラグインが追加されていないことが確認できる。(Github ページ開発用)
 1. ページは `0.0.0.0:4000/` アドレスで稼働する。
 
-### Documentation
+### ドキュメンテーション
 
 YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https://www.youtube.com/playlist?list=PL8XOPe9jXvWOrg6XAulRzy9MQl_-A7Yns)を確認してみてください。
 
-### Credits
+### 謝辞
 
 自分のWebサイトを構築する機会を与えてくれたこれらのプロジェクトに感謝します。
 
@@ -102,7 +102,7 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 
 このプロジェクト作成中に見つけた役立つサイトを紹介します。[リンクページへ](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/ja/tabs/links.html)
 
-### You Can Support My Work
+### 支援する
 
 何もないところからプロジェクトを立ち上げるのは、とても時間がかかるものです。私がこの様なプロジェクトに取り組み続け、皆さんに新しいコンテンツを提供できるよう、支援をご検討いただければ幸いです。
 
@@ -110,11 +110,11 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 - [Ko-fi](https://ko-fi.com/MrGreenWorkshop "Ko-fiで支援")で支援する (一回)
 - [GitHubでスポンサー](https://github.com/sponsors/MrGreensWorkshop "GitHubでスポンサーになる")になる (一回／月々)
 
-### Contribute
+### 貢献する
 
 プルリクは大歓迎です。イシューとプルリクのテンプレートの手順を確認してください。
 
-### Contributors
+### 貢献者
 
 貢献していただきありがとうございます！
 
@@ -122,9 +122,9 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 - フランス語の翻訳修正 [Jean-Philippe Morissette](https://github.com/JPMorissette)。
 - 中国語の翻訳 [fairycn](https://github.com/fairycn)。
 
-### License
+### ライセンス
 
-[MIT license](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt)でも示されている通り、ライセンス及び著作権表示をした上で、このテーマをどこでも使用することができます。
+[MIT ライセンス](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt)でも示されている通り、ライセンス及び著作権表示をした上で、このテーマをどこでも使用することができます。
 
 `Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com`
 
@@ -132,19 +132,19 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 
 ありがとうございます。
 
-### Other Licenses
+### その他のライセンス
 
 Mr. Green Jekyll テーマには、以下のライブラリが組み込まれています。これらのライブラリがなければ、このテーマを完成させることができませんでした。
 
-| Library                              | file |
+| ライブラリー                            | ファイル |
 | :----------------------------------- | ---- |
-| [jQuery v3.6.0](https://github.com/jquery/jquery/tree/3.6.0), Copyright [OpenJS Foundation](https://openjsf.org) and other contributors. jQuery is distributed under the terms of the MIT License. | [jquery-3.6.0.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/jquery-3.6.0.min.js) |
-| [Bootstrap v3.3.7](https://github.com/twbs/bootstrap/tree/v3.3.7), Copyright (c) 2011-2016 Twitter, Inc. Bootstrap is distributed under the terms of the MIT License. | [bootstrap.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap.min.js), [bootstrap.min.css](assets/css/bootstrap.min.css) |
-| [Bootstrap Table of Contents v0.4.1](https://github.com/afeld/bootstrap-toc/tree/v0.4.1), Copyright (c) 2015 Aidan Feldman Aidan Feldman. Bootstrap Table of Contents is distributed under the terms of the MIT License. | [bootstrap-toc.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap-toc.min.js), [bootstrap-toc.min.css](assets/css/bootstrap-toc.min.css) |
-| [Font Awesome v4.7.0](https://github.com/FortAwesome/Font-Awesome/tree/v4.7.0), Copyright (c) 2017 Dave Gandy. The Font Awesome font is distributed under the terms of the [SIL OFL 1.1](http://scripts.sil.org/OFL). Font Awesome CSS, LESS, and Sass files are distributed under the terms of the [MIT License](https://opensource.org/licenses/mit-license.html). | [font-awesome.min.css](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/css/font-awesome.min.css), [FontAwesome](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/fonts/) |
-| [Lozad.js v1.16.0](https://github.com/ApoorvSaxena/lozad.js/tree/v1.16.0), Copyright (c) 2017 Apoorv Saxena. Lozad.js is distributed under the terms of the MIT License. | [lozad.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/lozad.min.js) |
-| [Magnific Popup v1.1.0](https://github.com/dimsemenov/Magnific-Popup/tree/1.1.0), Copyright (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com. Magnific Popup is distributed under the terms of the MIT License. | [jquery.magnific-popup.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/jquery.magnific-popup.min.js), [magnific-popup.css](assets/css/magnific-popup.css) |
-| [Simple-Jekyll-Search v1.9.2](https://github.com/christian-fei/Simple-Jekyll-Search/tree/v1.9.2), Copyright (c) 2015 Christian Fei. Simple-Jekyll-Search is distributed under the terms of the MIT License. | [simple-jekyll-search-1.9.2.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/simple-jekyll-search-1.9.2.min.js) |
-| [Compress HTML in Jekyll v3.1.0](https://github.com/penibelst/jekyll-compress-html/tree/v3.1.0), Copyright (c) 2014 Anatol Broder. Compress HTML in Jekyll is distributed under the terms of the MIT License. | [compress.liquid](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/_layouts/util/compress.liquid) |
+| [jQuery v3.6.0](https://github.com/jquery/jquery/tree/3.6.0), 著作権は [OpenJS Foundation](https://openjsf.org) およびその他の貢献者に帰属します。jQuery は MIT ライセンスの条件に基づいて配布されます。| [jquery-3.6.0.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/jquery-3.6.0.min.js) |
+| [Bootstrap v3.3.7](https://github.com/twbs/bootstrap/tree/v3.3.7), 著作権 (c) 2011-2016 Twitter, Inc. Bootstrap は、MIT ライセンスの条件に基づいて配布されます。 | [bootstrap.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap.min.js), [bootstrap.min.css](assets/css/bootstrap.min.css) |
+| [Bootstrap Table of Contents v0.4.1](https://github.com/afeld/bootstrap-toc/tree/v0.4.1), 著作権 (c) 2015 Aidan Feldman. Bootstrap Table of Contents は、MIT ライセンスの条件に基づいて配布されます。 | [bootstrap-toc.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap-toc.min.js), [bootstrap-toc.min.css](assets/css/bootstrap-toc.min.css) |
+| [Font Awesome v4.7.0](https://github.com/FortAwesome/Font-Awesome/tree/v4.7.0), 著作権 (c) 2017 Dave Gandy. Font Awesome フォントは、[SIL OFL 1.1](http://scripts.sil.org/OFL) の条件に基づいて配布されます。Font Awesome CSS、LESS、および Sass ファイルは、[MIT ライセンス](https://opensource.org/licenses/mit-license.html)の条件に基づいて配布されます。 | [font-awesome.min.css](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/css/font-awesome.min.css), [FontAwesome](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/fonts/) |
+| [Lozad.js v1.16.0](https://github.com/ApoorvSaxena/lozad.js/tree/v1.16.0), 著作権 (c) 2017 Apoorv Saxena. Lozad.js は、MIT ライセンスの条件に基づいて配布されます。 | [lozad.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/lozad.min.js) |
+| [Magnific Popup v1.1.0](https://github.com/dimsemenov/Magnific-Popup/tree/1.1.0), 著作権 (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com. Magnific Popup は、MIT ライセンスの条件に基づいて配布されます。 | [jquery.magnific-popup.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/jquery.magnific-popup.min.js), [magnific-popup.css](assets/css/magnific-popup.css) |
+| [Simple-Jekyll-Search v1.9.2](https://github.com/christian-fei/Simple-Jekyll-Search/tree/v1.9.2), 著作権 (c) 2015 Christian Fei. Simple-Jekyll-Search は、MIT ライセンスの条件に基づいて配布されます。 | [simple-jekyll-search-1.9.2.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/simple-jekyll-search-1.9.2.min.js) |
+| [Compress HTML in Jekyll v3.1.0](https://github.com/penibelst/jekyll-compress-html/tree/v3.1.0), 著作権 (c) 2014 Anatol Broder. Compress HTML in Jekyll は、MIT ライセンスの条件に基づいて配布されています。 | [compress.liquid](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/_layouts/util/compress.liquid) |
 
 [Mr. Green Jekyll テーマ](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)

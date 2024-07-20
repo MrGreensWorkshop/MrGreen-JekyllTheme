@@ -34,7 +34,7 @@
 ### 특징
 
 - 다국어 웹사이트
-  - 영어(기본값), 일본어, 브라질 포르투갈어, 프랑스 국민, 중국인, 한국인
+  - 영어(기본값), 일본어, 브라질 포르투갈어, 프랑스 국민, 중국인, 한국어
 - 추천 언어 제공 기능
 - 아이콘 활성화 비활성화 옵션이 있는 자동 탐색 버튼 추가기
 - `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` 등에 대한 레이아웃
@@ -140,7 +140,7 @@ Mr. Green Jekyll 테마는 아래에 작성된 라이브러리를 통합합니�
 | :----------------------------------- | ---- |
 | [jQuery v3.6.0](https://github.com/jquery/jquery/tree/3.6.0), 저작권 [OpenJS Foundation](https://openjsf.org) 및 기타 기여자. jQuery는 MIT 라이선스 조건에 따라 배포됩니다. | [jquery-3.6.0.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/jquery-3.6.0.min.js) |
 | [Bootstrap v3.3.7](https://github.com/twbs/bootstrap/tree/v3.3.7), 저작권 (c) 2011-2016 Twitter, Inc. Bootstrap은 MIT 라이선스 조건에 따라 배포됩니다. | [bootstrap.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap.min.js), [bootstrap.min.css](assets/css/bootstrap.min.css) |
-| [Bootstrap Table of Contents v0.4.1](https://github.com/afeld/bootstrap-toc/tree/v0.4.1), 저작권 (c) 2015 Aidan Feldman Aidan Feldman. Bootstrap 목차는 MIT 라이센스 조건에 따라 배포됩니다. | [bootstrap-toc.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap-toc.min.js), [bootstrap-toc.min.css](assets/css/bootstrap-toc.min.css) |
+| [Bootstrap Table of Contents v0.4.1](https://github.com/afeld/bootstrap-toc/tree/v0.4.1), 저작권 (c) 2015 Aidan Feldman. Bootstrap 목차는 MIT 라이센스 조건에 따라 배포됩니다. | [bootstrap-toc.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/bootstrap-toc.min.js), [bootstrap-toc.min.css](assets/css/bootstrap-toc.min.css) |
 | [Font Awesome v4.7.0](https://github.com/FortAwesome/Font-Awesome/tree/v4.7.0), 저작권 (c) 2017 Dave Gandy. Font Awesome 글꼴은 [SIL OFL 1.1](http://scripts.sil.org/OFL)의 조건에 따라 배포됩니다. Font Awesome CSS, LESS 및 Sass 파일은 [MIT 라이센스](https://opensource.org/licenses/mit-license.html) 조건에 따라 배포됩니다. | [font-awesome.min.css](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/css/font-awesome.min.css), [FontAwesome](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/fonts/) |
 | [Lozad.js v1.16.0](https://github.com/ApoorvSaxena/lozad.js/tree/v1.16.0), 저작권 (c) 2017 Apoorv Saxena. Lozad.js은 MIT 라이선스 조건에 따라 배포됩니다. | [lozad.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/lozad.min.js) |
 | [Magnific Popup v1.1.0](https://github.com/dimsemenov/Magnific-Popup/tree/1.1.0), 저작권 (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com. Magnific Popup은 MIT 라이선스 조건에 따라 배포됩니다. | [jquery.magnific-popup.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/jquery.magnific-popup.min.js), [magnific-popup.css](assets/css/magnific-popup.css) |
