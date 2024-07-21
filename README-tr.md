@@ -135,7 +135,7 @@ Teşekkür ederim!
 
 ### Diğer Lisanslar
 
-Bay Green Jekyll Teması, aşağıda yazılı kütüphaneleri içerir. Bu kütüphaneler olmasaydı bu projeyi mümkün kılamazdım.
+Mr. Green Jekyll Teması, aşağıda yazılı kütüphaneleri içerir. Bu kütüphaneler olmasaydı bu projeyi mümkün kılamazdım.
 
 | Kütüphane                             | dosya |
 | :----------------------------------- | ---- |
