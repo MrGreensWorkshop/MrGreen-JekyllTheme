@@ -1,4 +1,4 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [한국어]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [한국어] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)]
 
 ## Mr. Green Jekyll 테마
 
@@ -34,7 +34,7 @@
 ### 특징
 
 - 다국어 웹사이트
-  - 영어(기본값), 일본어, 브라질 포르투갈어, 프랑스 국민, 중국인, 한국어
+  - 영어(기본값), 일본어, 브라질 포르투갈어, 프랑스 국민, 중국어, 한국어, 터키어
 - 추천 언어 제공 기능
 - 아이콘 활성화 비활성화 옵션이 있는 자동 탐색 버튼 추가기
 - `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` 등에 대한 레이아웃
@@ -120,7 +120,8 @@ YouTube에서 [Mr. Green 테마 자습서 재생 목록을](https://www.youtube.
 
 - [Vitor DallAcqua](https://github.com/fandangos)의 브라질 포르투갈어 번역.
 - [Jean-Philippe Morissette](https://github.com/JPMorissette)의 프랑스어 번역 수정.
-- [fairycn](https://github.com/fairycn)의 브라질 포르투갈어 번역.
+- [fairycn](https://github.com/fairycn)의 중국어 번역.
+- [Onur Ergünay](https://github.com/onurergunay)의 터키어 번역.
 
 ### 특허
 
