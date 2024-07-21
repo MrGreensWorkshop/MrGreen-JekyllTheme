@@ -29,7 +29,7 @@
 
 <!-- outline-end -->
 
-Web sitemi yapacaktım ve bunu şablon olarak yaparsam açık kaynak topluluğuyla paylaşabileceğimi düşündüm. Bu yüzden bu temayı oluşturmaya karar verdim ve bir araya getirmek için çok uğraştım. Eğer isterseniz [çalışmalarıma destek olabilirsiniz](#you-can-support-my-work). Teşekkürler.
+Web sitemi yapacaktım ve bunu şablon olarak yaparsam açık kaynak topluluğuyla paylaşabileceğimi düşündüm. Bu yüzden bu temayı oluşturmaya karar verdim ve bir araya getirmek için çok uğraştım. Eğer isterseniz [çalışmalarıma destek olabilirsiniz](#çalışmalarıma-destek-olabilirsiniz). Teşekkürler.
 
 ### Özellikler
 
