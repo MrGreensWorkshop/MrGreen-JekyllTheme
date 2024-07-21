@@ -121,6 +121,7 @@ Thank you for your contributions!
 - Brazilian Portuguese translation by [Vitor DallAcqua](https://github.com/fandangos).
 - French translation corrections by [Jean-Philippe Morissette](https://github.com/JPMorissette).
 - Chinese translation by [fairycn](https://github.com/fairycn).
+- Turkish translation by [Onur Ergünay](https://github.com/onurergunay).
 
 ### License
 

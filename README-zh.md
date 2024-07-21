@@ -121,6 +121,7 @@
 - [Vitor DallAcqua](https://github.com/fandangos) 的巴西葡萄牙语翻译。
 - [Jean-Philippe Morissette](https://github.com/JPMorissette) 的法文翻译更正。
 - [fairycn](https://github.com/fairycn) 的简体中文翻译。
+- [Onur Ergünay](https://github.com/onurergunay) 的土耳其语翻译。
 
 ### 执照
 

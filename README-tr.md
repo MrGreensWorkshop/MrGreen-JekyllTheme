@@ -121,6 +121,7 @@ Katkılarınız için teşekkür ederiz!
 - Brezilya Portekizcesi çevirisi [Vitor DallAcqua](https://github.com/fandangos) tarafından yapılmıştır.
 - Fransızca çeviri düzeltmeleri [Jean-Philippe Morissette](https://github.com/JPMorissette) tarafından yapılmıştır.
 - Çince çevirisi [fairycn](https://github.com/fairycn) tarafından yapılmıştır.
+- Türkçe çevirisi [Onur Ergünay](https://github.com/onurergunay) tarafından yapılmıştır.
 
 ### Lisans
 
