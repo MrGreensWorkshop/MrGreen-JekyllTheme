@@ -36,9 +36,13 @@ img: ":about.jpg"
 #published: false
 ---
 
-{%- comment -%} Please delete below and place your page content here {%- endcomment -%}
+Bonjour à tous,
 
-{%- include util/auto-content-generator.liquid -%}
-{{ website_info_text_first }}
+Je m'appelle Jason et je prévois de voyager de Munich au Cap en longeant la côte ouest de l'Afrique, en traversant de l'Espagne au Maroc par ferry.
 
-{{ website_info_text_second }}
+De 2016 à 2018, j'ai fait un voyage similaire en moto de Brisbane à Munich.
+C'est une sorte de continuation spirituelle de ce voyage et, je l'espère, une autre étape d'une aventure autour du monde.
+
+J'en ajouterai plus ici dès que j'en aurai le temps (une estimation très imprécise de mon itinéraire serait cool).
+
+Traduit avec DeepL.com (version gratuite)

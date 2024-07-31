@@ -25,7 +25,9 @@ default_lng: en
 # to prevent adding languages with no folder
 # single language disables language switch
 # language order is linked to array order
-language_switch_lang_list: [en, ja, pt, fr]
+#language_switch_lang_list: [en]
+# TODO: Add french support
+language_switch_lang_list: [en, fr]
 
 # if the opened page is not in the user's language list,
 # suggest language(s) matching with the one(s) in browser language list and user language list.
@@ -127,7 +129,7 @@ color_scheme_default_dark: false
 
 # default color will change based on browser dark color scheme (color_scheme_default_dark should be disabled.)
 # you don't need to enable this if any switch is enabled.
-color_scheme_browser_color_mode: true
+color_scheme_browser_color_mode: false
 
 # side nav and top nav color scheme switches
 # when any switch is enabled, if browser color scheme is dark, site default color is set to dark at page load.
@@ -191,8 +193,9 @@ side_and_top_nav_buttons:
     icon: "fa fa-pencil-square-o"
   - archives:
     icon: "fa fa-archive"
-  - projects:
-    icon: "fa fa-cog"
+  # TODO: I don't think this actually disables page creation though
+  #- projects:
+    #icon: "fa fa-cog"
   - links:
     icon: "fa fa-link"
   - about:

@@ -9,7 +9,7 @@ lng:
   # specifically needed for open-graph meta og:locale. if open_graph or html_lng_with_country_code not enabled in _data/conf/main.yml, it's not necessary.
   # For html tags, you can enable or disable using html_lng_with_country_code defined in _data/conf/main.yml
   # based on ISO_3166-1 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-  country: US
+  country: AU
   switch_title: En
   offer:
     title: Language
@@ -28,7 +28,6 @@ date:
 not_found:
   header: Page not found
   line1: The page you requested could not be found.
-  line2: Try menu, or site search if available.
 
 no_translation_tooltip: No Translation
 
@@ -173,9 +172,9 @@ privacy-policy:
 
 # constants to be replaced for
 constants:
-  greetings: Hello
-  welcome: Welcome
-  sample: Sample
+  greetings: sample_greeting_replace_me
+  welcome: sample_welcome_replace_me
+  sample: sample_text_replace_me
 
 # for contact form
 contact_form:

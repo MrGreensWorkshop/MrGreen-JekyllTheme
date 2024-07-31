@@ -7,8 +7,7 @@ lng_pair: id_about
 img: ":about.jpg"
 # publish date (used for seo)
 # if not specified, site.time will be used.
-#date: 2022-03-03 12:32:00 +0000
-
+date: 2024-07-28 16:10:00
 # for override items in _data/lang/[language].yml
 #title: My title
 #button_name: "My button"
@@ -36,9 +35,11 @@ img: ":about.jpg"
 #published: false
 ---
 
-{%- comment -%} Please delete below and place your page content here {%- endcomment -%}
+Hi there,
 
-{%- include util/auto-content-generator.liquid -%}
-{{ website_info_text_first }}
+I'm Jason and I'm planning to travel from Munich to Cape Town in along the west coast of Africa, crossing from Spain to Morocco by ferry.
 
-{{ website_info_text_second }}
+From 2016 to 2018 I did a similar trip by motorbike from Brisbane to Munich.
+This is a kind of spiritual continuation of that trip and hopefully another leg in a Round-The-World adventure.
+
+I'll add more here when I get a moment (a wildly inaccurate guess of my route would be cool).

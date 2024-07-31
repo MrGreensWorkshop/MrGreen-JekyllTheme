@@ -2,28 +2,29 @@
 # Owner's Personal Information
 ###########################################################
 # This is your brand name
-brand: "Your Brand"
+brand: "RTW with BoB"
 
 # text below the brand name
-brand_sub_text: "$site_sample"
+brand_sub_text: "Bobbing around the world"
 
 # used for seo meta post author (if it's not defined in post)
-name: "Your Name"
+name: "Jason Jooste"
 
-# home page top header texts
+# home page top header texts. This is superimposed over the image
 home:
   # you can also use $site_brand, $site_greetings, $site_welcome in line1 and line2 for replacing texts.
-  top_header_line1: "$site_welcome"
+  top_header_line1: ""
   # if commented, top header will be a single line
-  top_header_line2: "$site_brand"
+  top_header_line2: ""
 
 # about page sub title
 about:
-  sub_title: "$site_sample"
+  # TODO: Why not template this?
+  sub_title: "Bobbing around the world"
 
 # if you don't want to add copyright year, comment or leave it blank.
 # the year during which the claimed copyright for the work was first asserted.
-copyright_start_year: "2022"
+copyright_start_year: "2024"
 
 # make sure creative_commons.enable is true in _data/conf/main.yml file
 creative_commons:
@@ -42,14 +43,14 @@ creative_commons:
 # seo meta this is needed for each language
 # If meta_description is not defined in front matter, it's created from (post / page) content,
 # if it has no content, this will be used for page description. It is also used in manifest.json
-meta_common_description: "Your meta description."
+meta_common_description: "A travel blog about biking from Europe to South Africa"
 
 # contact options (side nav bottom and about page)
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
   #- github: ""
-  #- email: ""
+  - email: "jason@rtwbob.net"
   #- linkedin: ""
   #- twitter: ""
   #- mastodon: ""
