@@ -13,7 +13,7 @@ name: "Mingfeng Li2"
 # home page top header texts
 home:
   # you can also use $site_brand, $site_greetings, $site_welcome in line1 and line2 for replacing texts.
-  top_header_line1: "$学无止境"
+  top_header_line1: "学无止境"
   # if commented, top header will be a single line
   top_header_line2: "There's always something new to study."
 
@@ -57,7 +57,7 @@ contacts:
   - youtube: "@lucaslee1112"
   - facebook: "100056092487350"
 # to add more, check the _data/const/contact.yml file
-  - wechat: "/assets/img/mywechatQR.jpg"
+  - wechat: "/assets/img/Mywechat.jpg"
 
 # make sure one of comment engine is enabled in _data/conf/posts.yml file
 comments:
@@ -91,3 +91,4 @@ google_site_verification: ""
 # - Click the link icon from "Send via" list and copy the link.
 # - Then paste the link between double quotes.
 google_forms_contact_form_url: "https://docs.google.com/forms/d/e/1FAIpQLSfbnZEpSx9QcYH160XkscXFd_zWj3k7IFG4Ty3_VTv0q4P4GQ/viewform?usp=sf_link"
+

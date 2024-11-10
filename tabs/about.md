@@ -36,17 +36,6 @@ img: ":about.jpg"
 #published: false
 ---
 
-{%- comment -%} Please delete below and place your page content here {%- endcomment -%}
-
-{%- include util/auto-content-generator.liquid -%}
-
-this is website_info_text_first: 
-
-{{ website_info_text_first }}
-
-this is website_info_text_second: 
-
-{{ website_info_text_second }}
 
 ## Education
 
@@ -63,3 +52,6 @@ this is website_info_text_second:
   - 1st Class student (distinction)
   - Main courses include Software Workshop (Java programming), Data Structures, Algorithms, Databases, Computer Systems, AI, and ML, etc.
 
+
+___
+### ⬇️If you'd like to contact me via email, please click send me a message below :)

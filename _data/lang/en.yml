@@ -179,7 +179,7 @@ constants:
 
 # for contact form
 contact_form:
-  button_name: Contact Form
+  button_name: Contact me via Email
   formLoadingText: Loading the Contact Form...
 
 # for cookie consent
