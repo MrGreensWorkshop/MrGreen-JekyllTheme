@@ -52,6 +52,15 @@ img: ":about.jpg"
   - 1st Class student (distinction)
   - Main courses include Software Workshop (Java programming), Data Structures, Algorithms, Databases, Computer Systems, AI, and ML, etc.
 
+- **PwC Leeds, UK**  
+  *Technology consultant*  
+  *September 2022 - July 2024*  
+  - Graduate Schema: 3 months time to learn all the skills and then rotate through many different projects every period of time.
+  - Technologies involved include:
+  
+   AWS cloud implementations, Microsoft platform tools (Power Automation, Power BI), SAP, Salesforce, Selenium and pytest based test automation, AlteryX based workflow automation. Data Flow Architect, etc. See blog for detailed job and responsibilities
 
-___
+  - Main courses include Software Workshop (Java programming), Data Structures, Algorithms, Databases, Computer Systems, AI, and ML, etc.
+  
+  ___
 ### ⬇️If you'd like to contact me via email, please click send me a message below :)

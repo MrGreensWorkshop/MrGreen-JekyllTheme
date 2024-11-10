@@ -49,7 +49,7 @@ meta_common_description: "Your meta description."
 # comment to remove any contact item
 contacts:
   - github: "18336452014"
-  - email: "lmf18336452014@gmail.com"
+  - email: ""
   - linkedin: "lucas-li-269a07222"
   - twitter: "lucasLe61790381"
   #- mastodon: ""
@@ -57,7 +57,7 @@ contacts:
   - youtube: "@lucaslee1112"
   - facebook: "100056092487350"
 # to add more, check the _data/const/contact.yml file
-  - wechat: "/assets/img/Mywechat.jpg"
+  - wechat: ""
 
 # make sure one of comment engine is enabled in _data/conf/posts.yml file
 comments:

@@ -33,12 +33,13 @@ instagram:
   url: "???"
 youtube:
   icon: "fa fa-youtube-play"
-  url: ""
+  url: "https://www.youtube.com/"
 facebook:
   icon: "fa fa-facebook"
-  url: ""
+  url: "https://www.facebook.com/"
 # add your new contact
 wechat:
   icon: "fa fa-weixin"
   aria-hidden: "true"
   image: /assets/img/Mywechat.jpg
+  url: "https://18336452014.github.io/Mingfeng-Li-Blog.github.io/assets/img/Mywechat.jpg"
