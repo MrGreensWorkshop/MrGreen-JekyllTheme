@@ -41,12 +41,14 @@ date: 2017-09-01 11:32:53 +0900
 
 ![NEU in China](/assets/img/posts/NEU_CN.jpg)
 
+
+
 ## **College of Science, Northeastern University, Shenyang, China**  
   *Bachelor of Science in Physics*  
   *September 2017 - July 2021*  
   Liaoning, China  
 
-![Life in neu](path/to/image.jpg)
+![Life in neu](../assets/img/posts/degree_verify_En.pdf)
 
 ![transcript1_en](path/to/image.jpg)
 
@@ -58,11 +60,14 @@ date: 2017-09-01 11:32:53 +0900
 
 ![prove](path/to/image.jpg)
 
-<iframe src="/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
+<iframe src="degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
 
-<embed src="/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" type="application/pdf">
+<iframe src="../assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
 
 
-If degree verification file not load correctly, please [click here](Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf)
+<embed src="https://18336452014.github.io/Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" type="application/pdf">
 
-[View the document](https://18336452014.github.io/Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf)
+[verify](/assets/img/posts/degree_verify_En.pdf)
+
+
+If degree verification file not load correctly, please [click here](https://18336452014.github.io/Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf)
