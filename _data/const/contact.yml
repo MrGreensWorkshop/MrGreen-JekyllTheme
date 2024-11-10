@@ -17,7 +17,7 @@ github:
   url: "https://github.com"
 email:
   icon: "fa fa-envelope-o"
-  url: ""
+  url: "https://18336452014.github.io/Mingfeng-Li-Blog.github.io"
 linkedin:
   icon: "fa fa-linkedin"
   url: "https://www.linkedin.com/in"
@@ -30,16 +30,16 @@ twitter:
 #   url: "https://mastodon.social"
 instagram:
   icon: "fa fa-instagram"
-  url: "???"
+  url: "https://www.instagram.com"
 youtube:
   icon: "fa fa-youtube-play"
-  url: "https://www.youtube.com/"
+  url: "https://www.youtube.com"
 facebook:
   icon: "fa fa-facebook"
-  url: "https://www.facebook.com/"
+  url: "https://www.facebook.com"
 # add your new contact
 wechat:
   icon: "fa fa-weixin"
   aria-hidden: "true"
   image: "{{ site.baseurl }}/assets/img/Mywechat.jpg"
-  url: "https://18336452014.github.io/Mingfeng-Li-Blog.github.io/"
+  url: "https://18336452014.github.io/Mingfeng-Li-Blog.github.io"

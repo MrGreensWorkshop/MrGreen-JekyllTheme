@@ -58,9 +58,10 @@ img: ":about.jpg"
   - Graduate Schema: 3 months time to learn all the skills and then rotate through many different projects every period of time.
   - Technologies involved include: (Please see blog for detailed roles and responsibilities for all projects.)
   
-    -  _AWS cloud implementations, Microsoft platform tools (Power Automation, Power BI), SAP, Salesforce, Selenium and pytest based test automation, AlteryX based workflow automation. Data Flow Architect, etc. See blog for detailed job and responsibilities_
+    - _AWS cloud implementations, Microsoft platform tools (Power Automation, Power BI), SAP, Salesforce, Selenium and pytest based test automation, AlteryX based workflow automation. Data Flow Architect, etc. See blog for detailed job and responsibilities_
 
-  - Obtained Certifications: .
+  - Obtained Certifications: `AWS Certified Cloud Practitioner (CLF-C01)`, `Alteryx Designer Core`, `Power BI Data Analyst Associate (PL-300)`, `Power Platform App Maker Associate (PL-100)`, `Power Platform Fundamentals (PL-900)`, `Azure Fundamentals (AZ-900)`, `SalesForce associate`.
   
+
   ___
-### ⬇️If you'd like to contact me via email, please click send me a message below :)
+### ⬇️If you`d like to contact me via email, please click send me a message below :)
