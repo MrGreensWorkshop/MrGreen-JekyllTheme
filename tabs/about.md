@@ -56,11 +56,11 @@ img: ":about.jpg"
   *Technology consultant*  
   *September 2022 - July 2024*  
   - Graduate Schema: 3 months time to learn all the skills and then rotate through many different projects every period of time.
-  - Technologies involved include:
+  - Technologies involved include: (Please see blog for detailed roles and responsibilities for all projects.)
   
-   AWS cloud implementations, Microsoft platform tools (Power Automation, Power BI), SAP, Salesforce, Selenium and pytest based test automation, AlteryX based workflow automation. Data Flow Architect, etc. See blog for detailed job and responsibilities
+    -  _AWS cloud implementations, Microsoft platform tools (Power Automation, Power BI), SAP, Salesforce, Selenium and pytest based test automation, AlteryX based workflow automation. Data Flow Architect, etc. See blog for detailed job and responsibilities_
 
-  - Main courses include Software Workshop (Java programming), Data Structures, Algorithms, Databases, Computer Systems, AI, and ML, etc.
+  - Obtained Certifications: .
   
   ___
 ### ⬇️If you'd like to contact me via email, please click send me a message below :)

@@ -17,7 +17,7 @@ github:
   url: "https://github.com"
 email:
   icon: "fa fa-envelope-o"
-  url: "https://18336452014.github.io/Mingfeng-Li-Blog.github.io/tabs/about"
+  url: ""
 linkedin:
   icon: "fa fa-linkedin"
   url: "https://www.linkedin.com/in"
@@ -41,5 +41,5 @@ facebook:
 wechat:
   icon: "fa fa-weixin"
   aria-hidden: "true"
-  image: /assets/img/Mywechat.jpg
-  url: "https://18336452014.github.io/Mingfeng-Li-Blog.github.io/assets/img/Mywechat.jpg"
+  image: "{{ site.baseurl }}/assets/img/Mywechat.jpg"
+  url: "https://18336452014.github.io/Mingfeng-Li-Blog.github.io/"

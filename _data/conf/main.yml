@@ -158,7 +158,7 @@ scroll_back_to_top_button: true
 side_nav_footer: true
 
 # this enables footer text to the bottom of the page
-main_footer: false
+main_footer: true
 
 # this sets footer text position to fixed positioning. Always visible.
 main_fixed_footer: true
