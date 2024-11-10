@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_NEU
-title: NEU graduate
+title: NEU start
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -11,12 +11,12 @@ category: Profile
 # multiple tag entries are possible
 tags: [Profile, Study]
 # thumbnail image for post
-img: ":NEU_seals.jpg"
+img: ":NEU_seal.jpg"
 # disable comments on this page
 comments_disable: false
 
 # publish date
-date: 2021-07-01 11:32:53 +0900
+date: 2017-09-01 11:32:53 +0900
 
 # seo
 # if not specified, date will be used.
@@ -58,6 +58,7 @@ date: 2021-07-01 11:32:53 +0900
 
 ![prove](path/to/image.jpg)
 
-<iframe src="/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
+<iframe src="Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
 
-If degree verification file not load correctly, please [click here](Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf)
+If degree verification file not load correctly, please [click here](/assets/img/posts/degree_verify_En.pdf)
+
