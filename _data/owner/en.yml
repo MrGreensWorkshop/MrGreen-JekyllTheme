@@ -49,15 +49,16 @@ meta_common_description: "Your meta description."
 # comment to remove any contact item
 contacts:
   - github: "18336452014"
-  - email: "tabs/about"
   - linkedin: "lucas-li-269a07222"
+  - wechat: "assets/img/Mywechat.jpg"
   - twitter: "lucasLe61790381"
+  - email: "tabs/about"
   #- mastodon: ""
   #- instagram: ""
   - youtube: "@lucaslee1112"
   - facebook: "100056092487350"
 # to add more, check the _data/const/contact.yml file
-  - wechat: "assets/img/Mywechat.jpg"
+  
 
 # make sure one of comment engine is enabled in _data/conf/posts.yml file
 comments:
