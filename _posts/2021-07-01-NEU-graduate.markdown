@@ -58,7 +58,11 @@ date: 2017-09-01 11:32:53 +0900
 
 ![prove](path/to/image.jpg)
 
-<iframe src="Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
+<iframe src="/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
 
-If degree verification file not load correctly, please [click here](/assets/img/posts/degree_verify_En.pdf)
+<embed src="/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" type="application/pdf">
 
+
+If degree verification file not load correctly, please [click here](Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf)
+
+[View the document](https://18336452014.github.io/Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf)
