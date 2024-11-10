@@ -14,16 +14,16 @@
 
 github:
   icon: "fa fa-github"
-  url: ""
+  url: "ggg"
 email:
   icon: "fa fa-envelope-o"
-  url: ""
+  url: "eee"
 linkedin:
   icon: "fa fa-linkedin"
-  url: ""
+  url: "lll"
 twitter:
   icon: "fa fa-twitter"
-  url: ""
+  url: "ttt"
 # mastodon:
 # # The mastodon svg file was obtained from this link: https://github.com/mastodon/joinmastodon/blob/master/public/logos/logo-black.svg
 #   icon: "/assets/img/default/mastodon.svg"

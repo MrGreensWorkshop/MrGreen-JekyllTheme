@@ -2,10 +2,10 @@
 # Owner's Personal Information
 ###########################################################
 # This is your brand name
-brand: "Mingfeng Li1"
+brand: "Mingfeng Li"
 
 # text below the brand name
-brand_sub_text: "$site_sample"
+brand_sub_text: ""
 
 # used for seo meta post author (if it's not defined in post)
 name: "Mingfeng Li2"
@@ -13,9 +13,9 @@ name: "Mingfeng Li2"
 # home page top header texts
 home:
   # you can also use $site_brand, $site_greetings, $site_welcome in line1 and line2 for replacing texts.
-  top_header_line1: "$site_welcome"
+  top_header_line1: "$学无止境"
   # if commented, top header will be a single line
-  top_header_line2: "$site_brand"
+  top_header_line2: "There's always something new to study."
 
 # about page sub title
 about:
@@ -48,16 +48,16 @@ meta_common_description: "Your meta description."
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
-  - github: "https://github.com/18336452014?tab=repositories"
+  - github: "18336452014"
   - email: "lmf18336452014@gmail.com"
-  - linkedin: "https://www.linkedin.com/in/lucas-li-269a07222/"
-  - twitter: "https://x.com/lucasLe61790381"
+  - linkedin: "lucas-li-269a07222"
+  - twitter: "lucasLe61790381"
   #- mastodon: ""
   #- instagram: ""
-  - youtube: "https://www.youtube.com/@lucaslee1112"
-  - facebook: "https://www.facebook.com/profile.php?id=100056092487350"
+  - youtube: "@lucaslee1112"
+  - facebook: "100056092487350"
 # to add more, check the _data/const/contact.yml file
-  - wechat: "/assets/images/Mywechat.jpg"
+  - wechat: "/assets/img/mywechatQR.jpg"
 
 # make sure one of comment engine is enabled in _data/conf/posts.yml file
 comments:

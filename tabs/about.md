@@ -39,6 +39,27 @@ img: ":about.jpg"
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
 {%- include util/auto-content-generator.liquid -%}
+
+this is website_info_text_first: 
+
 {{ website_info_text_first }}
 
+this is website_info_text_second: 
+
 {{ website_info_text_second }}
+
+## Education
+
+- **College of Science, Northeastern University, Shenyang, China**  
+  *Bachelor of Science in Physics*  
+  *September 2017 - July 2021*  
+  Liaoning, China  
+  - Main courses include Calculus, Linear Algebra, Mechanics and its branches, Probability Theory, and Mathematical Statistics, etc.
+  - Class Mental Health Coordinator, NEU Volunteer Association sector leader
+
+- **School of Computer Science, University of Birmingham, UK**  
+  *Master of Science in Computer Science*  
+  *September 2021 - September 2022*  
+  - 1st Class student (distinction)
+  - Main courses include Software Workshop (Java programming), Data Structures, Algorithms, Databases, Computer Systems, AI, and ML, etc.
+
