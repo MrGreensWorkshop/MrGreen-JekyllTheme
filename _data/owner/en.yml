@@ -2,13 +2,13 @@
 # Owner's Personal Information
 ###########################################################
 # This is your brand name
-brand: "Your Brand"
+brand: "Mingfeng Li1"
 
 # text below the brand name
 brand_sub_text: "$site_sample"
 
 # used for seo meta post author (if it's not defined in post)
-name: "Your Name"
+name: "Mingfeng Li2"
 
 # home page top header texts
 home:
@@ -19,11 +19,11 @@ home:
 
 # about page sub title
 about:
-  sub_title: "$site_sample"
+  sub_title: "Biography"
 
 # if you don't want to add copyright year, comment or leave it blank.
 # the year during which the claimed copyright for the work was first asserted.
-copyright_start_year: "2022"
+copyright_start_year: "2020"
 
 # make sure creative_commons.enable is true in _data/conf/main.yml file
 creative_commons:
@@ -48,16 +48,16 @@ meta_common_description: "Your meta description."
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
-  #- github: ""
-  #- email: ""
-  #- linkedin: ""
-  #- twitter: ""
+  - github: "https://github.com/18336452014?tab=repositories"
+  - email: "lmf18336452014@gmail.com"
+  - linkedin: "https://www.linkedin.com/in/lucas-li-269a07222/"
+  - twitter: "https://x.com/lucasLe61790381"
   #- mastodon: ""
   #- instagram: ""
-  #- youtube: ""
-  #- facebook: ""
+  - youtube: "https://www.youtube.com/@lucaslee1112"
+  - facebook: "https://www.facebook.com/profile.php?id=100056092487350"
 # to add more, check the _data/const/contact.yml file
-#  - your_new_contact: ""
+  - wechat: ""
 
 # make sure one of comment engine is enabled in _data/conf/posts.yml file
 comments:
@@ -90,4 +90,4 @@ google_site_verification: ""
 # - Click the "Send" button at the top right.
 # - Click the link icon from "Send via" list and copy the link.
 # - Then paste the link between double quotes.
-google_forms_contact_form_url: ""
+google_forms_contact_form_url: "https://docs.google.com/forms/d/e/1FAIpQLSfbnZEpSx9QcYH160XkscXFd_zWj3k7IFG4Ty3_VTv0q4P4GQ/viewform?usp=sf_link"

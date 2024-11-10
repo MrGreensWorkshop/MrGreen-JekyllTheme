@@ -239,7 +239,7 @@ contacts_mastodon_link_verification: false
 # this will add contact form feature.
 # make sure google_forms_contact_form_url is set in _data/owner/[language].yml
 contact_form:
-  enable: false
+  enable: true
   # select one below
   # 1. slideBoxTopToDown
   # 2. slideBoxBottomToUp
@@ -257,7 +257,7 @@ copyright_add_text_to_end: false
 
 # this will add creative commons license. check _data/owner/[language].yml for license type.
 creative_commons:
-  enable: true
+  enable: false
   tooltip: true
   add_all_icons: true
   license_url: "https://creativecommons.org/licenses/$license/4.0/deed.$lng"

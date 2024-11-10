@@ -138,18 +138,18 @@ post-list:
 home:
   title: Welcome
   button_name: Home
-  new_posts_title: New Articles
+  new_posts_title: Quick Look
   new_posts_show_more_button: View More ...
 
 # for archives layout
 archives:
-  title: Archive
-  button_name: Archive
-  page_header: Archive
+  title: Timeline
+  button_name: Timeline
+  page_header: Timeline
 
 # for about layout
 about:
-  title: About
+  title: About Me
   button_name: About
   email_title: email
 
@@ -175,7 +175,7 @@ privacy-policy:
 constants:
   greetings: Hello
   welcome: Welcome
-  sample: Sample
+  sample: metest
 
 # for contact form
 contact_form:
