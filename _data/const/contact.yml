@@ -14,30 +14,31 @@
 
 github:
   icon: "fa fa-github"
-  url: "https://github.com/18336452014?tab=repositories"
+  url: ""
 email:
   icon: "fa fa-envelope-o"
-  url: "lmf18336452014@gmail.com"
+  url: ""
 linkedin:
   icon: "fa fa-linkedin"
-  url: "https://www.linkedin.com/in/lucas-li-269a07222/"
+  url: ""
 twitter:
   icon: "fa fa-twitter"
-  url: "https://x.com/lucasLe61790381"
-mastodon:
-# The mastodon svg file was obtained from this link: https://github.com/mastodon/joinmastodon/blob/master/public/logos/logo-black.svg
-  icon: "/assets/img/default/mastodon.svg"
-  url: "https://mastodon.social"
+  url: ""
+# mastodon:
+# # The mastodon svg file was obtained from this link: https://github.com/mastodon/joinmastodon/blob/master/public/logos/logo-black.svg
+#   icon: "/assets/img/default/mastodon.svg"
+#   url: "https://mastodon.social"
 instagram:
   icon: "fa fa-instagram"
-  url: "https://www.instagram.com"
+  url: ""
 youtube:
   icon: "fa fa-youtube-play"
-  url: "https://www.youtube.com/@lucaslee1112"
+  url: ""
 facebook:
   icon: "fa fa-facebook"
-  url: "https://www.facebook.com/profile.php?id=100056092487350"
+  url: ""
 # add your new contact
-your_new_contact:
+wechat:
   icon: "fa fa-weixin"
-  image: "/assets/images/Mywechat.jpg"
+  aria-hidden: "true"
+  url: ""

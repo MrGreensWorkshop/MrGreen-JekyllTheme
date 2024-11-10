@@ -57,7 +57,7 @@ contacts:
   - youtube: "https://www.youtube.com/@lucaslee1112"
   - facebook: "https://www.facebook.com/profile.php?id=100056092487350"
 # to add more, check the _data/const/contact.yml file
-  - wechat: ""
+  - wechat: "/assets/images/Mywechat.jpg"
 
 # make sure one of comment engine is enabled in _data/conf/posts.yml file
 comments:
