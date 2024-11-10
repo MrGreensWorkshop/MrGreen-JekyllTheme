@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_NEU
-title: Education: NEU graduate
+title: NEU graduate
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -58,6 +58,6 @@ date: 2021-07-01 11:32:53 +0900
 
 ![prove](path/to/image.jpg)
 
-<iframe src="/path/to/your-document.pdf" width="100%" height="600px" style="border: none;"></iframe>
+<iframe src="/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
 
-If degree verification file not load correctly, please [click here](/assets/img/posts/degree_verify_En.pdf)
+If degree verification file not load correctly, please [click here](Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf)
