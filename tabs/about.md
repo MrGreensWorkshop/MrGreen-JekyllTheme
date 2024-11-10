@@ -64,4 +64,5 @@ img: ":about.jpg"
   
 
   ___
-### ⬇️If you`d like to contact me via email, please click send me a message below :)
+### ⬇️If you`d like to contact me via email
+### ⬇️please click send me a message below :)

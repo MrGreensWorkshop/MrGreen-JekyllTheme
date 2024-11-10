@@ -1,22 +1,22 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
-lng_pair: id_test_2
-title: my delete 1, 2
+lng_pair: id_UOB
+title: UOB graduate
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
-#author: ""
+author: "Mingfeng Li"
 # multiple category is not supported
-category: auto generated
+category: Profile
 # multiple tag entries are possible
-tags: [jekyll, test]
+tags: [Profile, Study]
 # thumbnail image for post
 img: ":post_pic2.jpg"
 # disable comments on this page
-comments_disable: true
+comments_disable: false
 
 # publish date
-date: 2021-08-11 12:35:04 +0900
+date: 2022-08-11 12:35:04 +0900
 
 # seo
 # if not specified, date will be used.

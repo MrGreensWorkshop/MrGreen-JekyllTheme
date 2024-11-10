@@ -5,28 +5,27 @@
 page_data:
   main:
     header: "Projects"
-    info: "Your Project page description."
+    info: "Here are some random project records of my broken or perfect toys accompanied by notes on experimentation."
     text_color: "white"
     # if you don't want to use background image, comment it. back_color will be activated.
     img: ":projects-heading.jpg"
     back_color: "lightblue"
 
   category:
-    - title: "Example"
-      type: id_example
+    - title: "Project"
+      type: id_project
       color: "gray"
-    - title: "Picture"
-      type: id_picture
+    - title: "code snippet"
+      type: id_code
       color: "#62b462"
-    - title: "Quote"
-      type: id_quote
+    - title: "Notes"
+      type: id_note
       color: "#2FD0ED"
 
   list:
-    # example
-    - type: id_example
+    - type: id_project
       project_name: "Example Project"
-      project_excerpt: "Examples"
+      project_excerpt: "My example"
       img: ":project1_thumb.jpg"
       img_title: "img title1"
       date: "2021-03-13"
@@ -171,10 +170,10 @@ page_data:
           print(i)
         ```
 
-    # picture
-    - type: id_picture
-      project_name: "Example Project"
-      project_excerpt: "Picture"
+    # code
+    - type: id_code
+      project_name: "Example Code"
+      project_excerpt: "Code"
       img: ":project2_thumb.jpg"
       img_title: "img title2"
       date: "2021-04-23"
@@ -206,24 +205,24 @@ page_data:
         But bears it out even to the edge of doom.
         If this be error and upon me proved,
         I never writ, nor no man ever loved.
-    - type: id_quote
-      project_name: "Example Project"
+    - type: id_note
+      project_name: "Example note"
       project_excerpt: "Albert Einstein"
       img: ":project2_thumb.jpg"
       img_title: "img title4"
       date: "2021-06-08"
       post: |
         Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
-    - type: id_quote
-      project_name: "Example Project"
+    - type: id_note
+      project_name: "Example note"
       project_excerpt: "Mae West"
       img: ":project1_thumb.jpg"
       img_title: "img title5"
       date: "2021-08-20"
       post: |
         You only live once, but if you do it right, once is enough.
-    - type: id_quote
-      project_name: "Example Project"
+    - type: id_note
+      project_name: "Example note"
       project_excerpt: "Mahatma Gandhi "
       img: ":project2_thumb.jpg"
       img_title: "img title6"

@@ -15,7 +15,7 @@ home:
   # you can also use $site_brand, $site_greetings, $site_welcome in line1 and line2 for replacing texts.
   top_header_line1: "学无止境"
   # if commented, top header will be a single line
-  top_header_line2: "There's always something new to study."
+  top_header_line2: "There's always something new to learn."
 
 # about page sub title
 about:
