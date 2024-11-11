@@ -51,12 +51,12 @@ contacts:
   - github: "18336452014"
   - linkedin: "lucas-li-269a07222"
   - wechat: "assets/img/Mywechat.jpg"
+  - facebook: "100056092487350"
   - twitter: "lucasLe61790381"
-  - email: "lmf18336452014@gmail.com"
+  # - email: "lmf18336452014@gmail.com"
   #- mastodon: ""
   #- instagram: ""
   - youtube: "@lucaslee1112"
-  - facebook: "100056092487350"
 # to add more, check the _data/const/contact.yml file
   
 

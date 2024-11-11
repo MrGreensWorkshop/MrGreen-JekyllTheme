@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_NEU
-title: NEU graduate
+title: NEU start
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -16,7 +16,7 @@ img: ":NEU_seal.jpg"
 comments_disable: false
 
 # publish date
-date: 2021-07-01 11:32:53 +0900
+date: 2017-09-01 11:32:53 +0900
 
 # seo
 # if not specified, date will be used.

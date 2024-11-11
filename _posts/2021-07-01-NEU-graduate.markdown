@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_NEU
-title: NEU start
+title: NEU graduate
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -16,7 +16,7 @@ img: ":NEU_seal.jpg"
 comments_disable: false
 
 # publish date
-date: 2017-09-01 11:32:53 +0900
+date: 2021-07-01 11:32:53 +0900
 
 # seo
 # if not specified, date will be used.
@@ -41,33 +41,19 @@ date: 2017-09-01 11:32:53 +0900
 
 ![NEU in China](/assets/img/posts/NEU_CN.jpg)
 
-
-
 ## **College of Science, Northeastern University, Shenyang, China**  
   *Bachelor of Science in Physics*  
   *September 2017 - July 2021*  
   Liaoning, China  
 
-![Life in neu](../assets/img/posts/degree_verify_En.pdf)
+![transcript1_en](/assets/img/posts/Academic%20Transcript1.jpeg)
 
-![transcript1_en](path/to/image.jpg)
+![transcript2_en](/assets/img/posts/Academic%20Transcript2.jpg)
 
-![transcript2_en](path/to/image.jpg)
+![cert](/assets/img/posts/Education%20Certificate.jpg)
 
-![cert](path/to/image.jpg)
-
-![degree](path/to/image.jpg)
-
-![prove](path/to/image.jpg)
-
-<iframe src="degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
+![degree](/assets/img/posts/Bachelor‘s%20degree.jpeg)
 
 <iframe src="../assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
-
-
-<embed src="https://18336452014.github.io/Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" type="application/pdf">
-
-[verify](/assets/img/posts/degree_verify_En.pdf)
-
 
 If degree verification file not load correctly, please [click here](https://18336452014.github.io/Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf)

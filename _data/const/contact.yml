@@ -15,9 +15,9 @@
 github:
   icon: "fa fa-github"
   url: "https://github.com"
-email:
-  icon: "fa fa-envelope-o"
-  url: "mailto:"
+# email:
+#   icon: "fa fa-envelope-o"
+#   url: "mailto:"
 linkedin:
   icon: "fa fa-linkedin"
   url: "https://www.linkedin.com/in"
