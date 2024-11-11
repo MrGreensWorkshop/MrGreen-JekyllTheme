@@ -11,7 +11,7 @@ category: Profile
 # multiple tag entries are possible
 tags: [Profile, Study]
 # thumbnail image for post
-img: ":UOB_name.jpg"
+img: ":UOB_name.png"
 # disable comments on this page
 comments_disable: false
 
