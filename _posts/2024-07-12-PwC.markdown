@@ -42,14 +42,180 @@ date: 2024-07-12 13:45:08 +0900
 - # PwC Leeds, UK 
   *Technology consultant*  
   *September 2022 - July 2024*  
-  *Graduate Scheme*
+  *Graduate Scheme*  
+  *In order to comply with the company's code of conduct, I will withhold the client's name and certain pieces of work*  
 
-  ### Technologies involved include:
+  | Project | period|roles|
+  | ------------------- | :------------------: | ----------------: |
+  | Data Flow Architect[#data-flow-architect]                |       Dec 2022 - Feb 2023       |              Data Architect |
+  | AWS cloud implementations[#aws-cloud-implementations]             | 2  |               999 |
+  | Orange              |      3       |                99 |
+  | Lemon               |      4       |                 9 |
 
-  AWS cloud implementations
-    - Project team.
-    - 
-  Microsoft platform tools (Power Automation, Power BI), SAP, Salesforce, Selenium and pytest based test automation, AlteryX based workflow automation. Data Flow Architect, etc. See blog for detailed job and responsibilities
+----
+
+  ### AWS cloud implementations
+  - Project team.
+  - roles and respon
+  - comments & 量化
+
+----
+  ### Data Flow Architect
+  
+  *Dec 2022 - Feb 2023*
+  *Data Architect*
+
+  - This project is about redesigning the cloud architecture of a hypermarket, and I'm on the Data team to help build the data architecture.
+
+  - I was responsible for the data flows design. In short, I designed a process that allowed the client to clearly see the life of the data and to legally use the data collected from users in a compliant manner. This includes:
+    - Data collection: data will be obtained from a variety of sources including user feedbacks, surveys, consumer records, supermarket records, warehouse inventory lists, etc.
+
+    - Data pre-processing: data cleansing, data normalization, data screening to ensure high quality data. And in a unified form into the database
+
+    - Data storage and use (the main part, including rights management, data modeling and other detailed specifications)
+
+    - Compliance checking and monitoring of data (updating and deletion of data, in order to comply with GDPR and other policies).
+
+    - Borrowing the concept of spotify's squad combined with the whole group in the center of excellence (COE), I help designed the client's Client data team employee structure with my team members.
+
+
+  - I was very motivated to complete my first project successfully, and looking back, I think I'm still very satisfied. I was able to make a lot of changes to my work under the guidance of my manager, and in the end, both the manager and I were very happy with the results.  
+
+    >  *“Lucas is a talented associate and his efforts are obvious to all. I think he is very knowledgeable in   the field of data and our whole team has benefited from him."*
+    >  *<p align="right">Patrick</p>*
+
+----
+
+  ### Microsoft platform tools (Power Automation, Power BI)
+  *Dec 2022 - Feb 2023*
+  *Data Architect*
+
+  - This project is about redesigning the cloud architecture of a hypermarket, and I'm on the Data team to help build the data architecture.
+
+  - I was responsible for the data flows design. In short, I designed a process that allowed the client to clearly see the life of the data and to legally use the data collected from users in a compliant manner. This includes:
+    - Data collection: data will be obtained from a variety of sources including user feedbacks, surveys, consumer records, supermarket records, warehouse inventory lists, etc.
+
+    - Data pre-processing: data cleansing, data normalization, data screening to ensure high quality data. And in a unified form into the database
+
+    - Data storage and use (the main part, including rights management, data modeling and other detailed specifications)
+
+    - Compliance checking and monitoring of data (updating and deletion of data, in order to comply with GDPR and other policies).
+
+    - Borrowing the concept of spotify's squad combined with the whole group in the center of excellence (COE), I help designed the client's Client data team employee structure with my team members.
+
+
+  - I was very motivated to complete my first project successfully, and looking back, I think I'm still very satisfied. I was able to make a lot of changes to my work under the guidance of my manager, and in the end, both the manager and I were very happy with the results.  
+
+    >  *“Lucas is a talented associate and his efforts are obvious to all. I think he is very knowledgeable in   the field of data and our whole team has benefited from him."*
+    >  *<p align="right">Patrick</p>*
+
+
+----
+
+
+  ### SAP
+  *Dec 2022 - Feb 2023*
+  *Data Architect*
+
+  - This project is about redesigning the cloud architecture of a hypermarket, and I'm on the Data team to help build the data architecture.
+
+  - I was responsible for the data flows design. In short, I designed a process that allowed the client to clearly see the life of the data and to legally use the data collected from users in a compliant manner. This includes:
+    - Data collection: data will be obtained from a variety of sources including user feedbacks, surveys, consumer records, supermarket records, warehouse inventory lists, etc.
+
+    - Data pre-processing: data cleansing, data normalization, data screening to ensure high quality data. And in a unified form into the database
+
+    - Data storage and use (the main part, including rights management, data modeling and other detailed specifications)
+
+    - Compliance checking and monitoring of data (updating and deletion of data, in order to comply with GDPR and other policies).
+
+    - Borrowing the concept of spotify's squad combined with the whole group in the center of excellence (COE), I help designed the client's Client data team employee structure with my team members.
+
+
+  - I was very motivated to complete my first project successfully, and looking back, I think I'm still very satisfied. I was able to make a lot of changes to my work under the guidance of my manager, and in the end, both the manager and I were very happy with the results.  
+
+    >  *“Lucas is a talented associate and his efforts are obvious to all. I think he is very knowledgeable in   the field of data and our whole team has benefited from him."*
+    >  *<p align="right">Patrick</p>*
+
+
+----
+
+
+  ### Salesforce
+
+  *Dec 2022 - Feb 2023*
+  *Data Architect*
+
+  - This project is about redesigning the cloud architecture of a hypermarket, and I'm on the Data team to help build the data architecture.
+
+  - I was responsible for the data flows design. In short, I designed a process that allowed the client to clearly see the life of the data and to legally use the data collected from users in a compliant manner. This includes:
+    - Data collection: data will be obtained from a variety of sources including user feedbacks, surveys, consumer records, supermarket records, warehouse inventory lists, etc.
+
+    - Data pre-processing: data cleansing, data normalization, data screening to ensure high quality data. And in a unified form into the database
+
+    - Data storage and use (the main part, including rights management, data modeling and other detailed specifications)
+
+    - Compliance checking and monitoring of data (updating and deletion of data, in order to comply with GDPR and other policies).
+
+    - Borrowing the concept of spotify's squad combined with the whole group in the center of excellence (COE), I help designed the client's Client data team employee structure with my team members.
+
+
+  - I was very motivated to complete my first project successfully, and looking back, I think I'm still very satisfied. I was able to make a lot of changes to my work under the guidance of my manager, and in the end, both the manager and I were very happy with the results.  
+
+    >  *“Lucas is a talented associate and his efforts are obvious to all. I think he is very knowledgeable in   the field of data and our whole team has benefited from him."*
+    >  *<p align="right">Patrick</p>*
+
+----
+
+  ### Selenium and pytest based test automation
+
+  *Dec 2022 - Feb 2023*
+  *Data Architect*
+
+  - This project is about redesigning the cloud architecture of a hypermarket, and I'm on the Data team to help build the data architecture.
+
+  - I was responsible for the data flows design. In short, I designed a process that allowed the client to clearly see the life of the data and to legally use the data collected from users in a compliant manner. This includes:
+    - Data collection: data will be obtained from a variety of sources including user feedbacks, surveys, consumer records, supermarket records, warehouse inventory lists, etc.
+
+    - Data pre-processing: data cleansing, data normalization, data screening to ensure high quality data. And in a unified form into the database
+
+    - Data storage and use (the main part, including rights management, data modeling and other detailed specifications)
+
+    - Compliance checking and monitoring of data (updating and deletion of data, in order to comply with GDPR and other policies).
+
+    - Borrowing the concept of spotify's squad combined with the whole group in the center of excellence (COE), I help designed the client's Client data team employee structure with my team members.
+
+
+  - I was very motivated to complete my first project successfully, and looking back, I think I'm still very satisfied. I was able to make a lot of changes to my work under the guidance of my manager, and in the end, both the manager and I were very happy with the results.  
+
+    >  *“Lucas is a talented associate and his efforts are obvious to all. I think he is very knowledgeable in   the field of data and our whole team has benefited from him."*
+    >  *<p align="right">Patrick</p>*
+
+
+----
+
+
+  ### AlteryX based workflow automation
+  *Dec 2022 - Feb 2023*
+  *Data Architect*
+
+  - This project is about redesigning the cloud architecture of a hypermarket, and I'm on the Data team to help build the data architecture.
+
+  - I was responsible for the data flows design. In short, I designed a process that allowed the client to clearly see the life of the data and to legally use the data collected from users in a compliant manner. This includes:
+    - Data collection: data will be obtained from a variety of sources including user feedbacks, surveys, consumer records, supermarket records, warehouse inventory lists, etc.
+
+    - Data pre-processing: data cleansing, data normalization, data screening to ensure high quality data. And in a unified form into the database
+
+    - Data storage and use (the main part, including rights management, data modeling and other detailed specifications)
+
+    - Compliance checking and monitoring of data (updating and deletion of data, in order to comply with GDPR and other policies).
+
+    - Borrowing the concept of spotify's squad combined with the whole group in the center of excellence (COE), I help designed the client's Client data team employee structure with my team members.
+
+
+  - I was very motivated to complete my first project successfully, and looking back, I think I'm still very satisfied. I was able to make a lot of changes to my work under the guidance of my manager, and in the end, both the manager and I were very happy with the results.  
+
+    >  *“Lucas is a talented associate and his efforts are obvious to all. I think he is very knowledgeable in   the field of data and our whole team has benefited from him."*
+    >  *<p align="right">Patrick</p>*
 
 
   ### Obtained Certifications
@@ -58,11 +224,11 @@ date: 2024-07-12 13:45:08 +0900
 
 | Certifications |      Date |
 | ------ | ---------------: |
-| [Power BI Data Analyst Associate (PL-300)](../assets/img/Cert/Power%20BI%20Data%20Analyst%20Associate.pdf) |                |
-| [Power Platform App Maker Associate (PL-100)](../assets/img/Cert/Power%20Platform%20App%20Maker%20Associate.pdf)  |                 |
-| [Power Platform Fundamentals (PL-900)](../assets/img/Cert/Power%20Platform%20Fundamentals.pdf)   |                 |
-| [Azure Fundamentals (AZ-900)](../assets/img/Cert/Azure%20Fundamentals.pdf)  |                 |
-| [SalesForce associate](../assets/img/Cert/Certification%20-%20SF%20associate.pdf)  |                 |
+| [Power BI Data Analyst Associate (PL-300)](/assets/img/Cert/Power%20BI%20Data%20Analyst%20Associate.pdf) |                |
+| [Power Platform App Maker Associate (PL-100)](/assets/img/Cert/Power%20Platform%20App%20Maker%20Associate.pdf)  |                 |
+| [Power Platform Fundamentals (PL-900)](/assets/img/Cert/Power%20Platform%20Fundamentals.pdf)   |                 |
+| [Azure Fundamentals (AZ-900)](/assets/img/Cert/Azure%20Fundamentals.pdf)  |                 |
+| [SalesForce associate](/assets/img/Cert/Certification%20-%20SF%20associate.pdf)  |                 |
 | AWS Certified Cloud Practitioner (CLF-C01)  |              |
 | Alteryx Designer Core |               |
 

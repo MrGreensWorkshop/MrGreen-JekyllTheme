@@ -54,6 +54,6 @@ date: 2021-07-01 11:32:53 +0900
 
 ![degree](/assets/img/posts/Bachelor‘s%20degree.jpeg)
 
-<iframe src="../assets/img/posts/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
+<iframe src="/assets/img/Cert/degree_verify_En.pdf" width="100%" height="600px" style="border: none;"></iframe>
 
 If degree verification file not load correctly, please [click here](https://18336452014.github.io/Mingfeng-Li-Blog.github.io/assets/img/posts/degree_verify_En.pdf)

@@ -39,10 +39,11 @@ date: 2022-09-10 13:45:08 +0900
 #published: false
 ---
 
-![NEU in China](/assets/img/posts/Uob_overview.jpg)
+![UOB](/assets/img/posts/Uob_overview.jpg)
 
 - **School of Computer Science, University of Birmingham, UK**  
   *Master of Science in Computer Science*  
   *September 2021 - September 2022*  
   - 1st Class student (distinction)
   - Main courses include Software Workshop (Java programming), Data Structures, Algorithms, Databases, Computer Systems, AI, and ML, etc.
+
