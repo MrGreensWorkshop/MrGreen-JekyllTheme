@@ -11,7 +11,7 @@ category: Profile
 # multiple tag entries are possible
 tags: [Profile, Study]
 # thumbnail image for post
-img: ":UOB_name.png"
+img: ":PwC_logo.png"
 # disable comments on this page
 comments_disable: false
 
@@ -39,6 +39,24 @@ date: 2024-07-12 13:45:08 +0900
 #published: false
 ---
 
-my delete 0,1
+- # PwC Leeds, UK 
+  *Technology consultant*  
+  *September 2022 - July 2024*  
+  *Graduate Scheme*
 
-{{ website_info_text_second }}
+  ### Technologies involved include: 
+  AWS cloud implementations, Microsoft platform tools (Power Automation, Power BI), SAP, Salesforce, Selenium and pytest based test automation, AlteryX based workflow automation. Data Flow Architect, etc. See blog for detailed job and responsibilities_
+
+
+  ### Obtained Certifications
+
+  Some certs are lost but won't be hard to obtain again.
+
+| Fruits | num (left align) | num (right align) | num  | num  | num  | num  | num  | num  |
+| ------ | :--------------- | ----------------: | ---- | ---- | ---- | ---- | ---- | ---- |
+| Apple  | 1111             |              1111 | 2222 | 3333 | 4444 | 5555 | 6666 | 7777 |
+| Banana | 111              |               111 | 222  | 333  | 444  | 555  | 666  | 777  |
+| Orange | 11               |                11 | 22   | 33   | 44   | 55   | 66   | 77   |
+| Lemon  | 1                |                 1 | 2    | 3    | 4    | 5    | 6    | 7    |
+  
+  ``, `Alteryx Designer Core`, `Power BI Data Analyst Associate (PL-300)`, `Power Platform App Maker Associate (PL-100)`, `Power Platform Fundamentals (PL-900)`, `Azure Fundamentals (AZ-900)`, `SalesForce associate`.
