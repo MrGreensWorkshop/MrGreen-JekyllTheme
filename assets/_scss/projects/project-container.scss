@@ -6,13 +6,11 @@
 .project-heading-container {
   background-size: cover;
   text-align: center;
-  // background-size: contain;
-  // text-align: center;
-  // WIDTH: 1000px;
-  // height: 400px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
+  height: 350px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-heading-container .project-buttons {
