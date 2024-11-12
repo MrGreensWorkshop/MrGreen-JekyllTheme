@@ -44,8 +44,12 @@ date: 2024-07-12 13:45:08 +0900
   *September 2022 - July 2024*  
   *Graduate Scheme*
 
-  ### Technologies involved include: 
-  AWS cloud implementations, Microsoft platform tools (Power Automation, Power BI), SAP, Salesforce, Selenium and pytest based test automation, AlteryX based workflow automation. Data Flow Architect, etc. See blog for detailed job and responsibilities
+  ### Technologies involved include:
+
+  AWS cloud implementations
+    - Project team.
+    - 
+  Microsoft platform tools (Power Automation, Power BI), SAP, Salesforce, Selenium and pytest based test automation, AlteryX based workflow automation. Data Flow Architect, etc. See blog for detailed job and responsibilities
 
 
   ### Obtained Certifications
