@@ -32,12 +32,12 @@
 
 .thumbnails > .image-holder {
   width: 30%;
-  max-width: 100%;
-  min-width: 150px;
+  max-height: 100%;
+  width: 150px;
   /* column view picture height */
-  min-height: 120px;
+  height: auto;
   border-radius: 10px;
-  background-size: cover;
+  background-size: contain;
   background-position: 50% 50%;
   border: none;
 }
