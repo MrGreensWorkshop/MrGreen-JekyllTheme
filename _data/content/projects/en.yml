@@ -24,11 +24,11 @@ page_data:
 
   list:
     - type: id_project
-      project_name: "Example Project"
-      project_excerpt: "My example"
-      img: ":project1_thumb.jpg"
-      img_title: "img title1"
-      date: "2021-03-13"
+      project_name: "Python"
+      project_excerpt: "My Python project for dissertation with notes & research"
+      img: ":python.svg"
+      img_title: "python"
+      date: "2022-08-13"
       post: |
         # Examples
 
@@ -174,8 +174,8 @@ page_data:
     - type: id_code
       project_name: "Example Code"
       project_excerpt: "Code"
-      img: ":project2_thumb.jpg"
-      img_title: "img title2"
+      img: ":Microsoft-Power-Platform.png"
+      img_title: "ms"
       date: "2021-04-23"
       post: |
         # Title
@@ -185,10 +185,13 @@ page_data:
 
     # quote
     - type: id_quote
-      project_name: "Example Project"
-      project_excerpt: "William Shakespeare"
-      #img: ":project1_thumb.jpg"
-      #img_title: "img title3"
+      project_name: " AlteryX based workflow automation"
+      project_excerpt: |
+        it would suit the needs of most Companies files include regular reports, data process, data regualtory, document generation with customised field etc.
+        Compatible with xsl, doc, ggsheets DB(for large dataset) etc.
+
+      img: ":AlteryX.jpg"
+      img_title: "AlteryX"
       date: "2021-05-27"
       post: |
         Let me not to the marriage of true minds
