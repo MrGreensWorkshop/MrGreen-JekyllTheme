@@ -67,3 +67,4 @@ date: 2024-07-12 13:45:08 +0900
 | Alteryx Designer Core |               |
 
 
+Changes
