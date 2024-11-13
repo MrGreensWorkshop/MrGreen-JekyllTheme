@@ -46,6 +46,11 @@ date: 2024-07-12 13:45:08 +0900
 *Graduate Scheme*  
 *To comply with the company's code of conduct, I will withhold the client's name and specific project details.*
 
+# THIS IS MY TOC: CHECK?
+* TOC
+{:toc}
+
+
 ---
 
 ## Projects Overview
@@ -62,21 +67,21 @@ date: 2024-07-12 13:45:08 +0900
 ### Data Flow Architect
 
 *Dec 2022 - Feb 2023*  
-*Role: Data Architect*  
+*Data Architect*  
 
-- **Project Summary**: This project involved redesigning the cloud architecture for a large hypermarket. I was part of the Data team, focused on developing the data architecture.
+- **Project Team**: This project involved redesigning the cloud architecture for a large supermarket. I was part of the Data team, focused on developing the data architecture.
   
-- **Responsibilities**:
+- **Roles and Responsibilities**:
   - **Data Flows Design**: Created a process to visualize and manage the data lifecycle, ensuring compliance with data usage policies.
   - **Data Collection**: Integrated multiple sources including user feedback, surveys, consumer records, supermarket and warehouse inventories.
   - **Data Pre-Processing**: Handled data cleansing, normalization, and screening to ensure high-quality, unified data in the database.
   - **Data Storage and Use**: Designed detailed specifications for data rights management, modeling, and storage.
-  - **Compliance**: Established processes for data updates and deletion to adhere to GDPR and other regulations.
-  - **Team Structure**: Assisted in designing the client’s Data Team structure, incorporating concepts from Spotify's squad model and the Center of Excellence (COE).
+  - **Data Compliance**: Established processes for data updates and deletion to adhere to GDPR and other regulations.
+  - **Team collaboration**: Assisted in designing the client’s Data Team structure, incorporating concepts from Spotify's squad model and the Center of Excellence (COE).
 
-- **Reflection**: This first project provided a rewarding experience. Under my manager's guidance, I refined my approach and delivered a successful outcome.
+- **Key Accomplishments**: This first project provided a rewarding experience. Under my manager's guidance, I refined my approach and delivered a successful outcome.
 
-> *“Lucas is a talented associate, and his efforts are evident. His knowledge in data architecture has benefited the team immensely.”*  
+> *“Lucas is a talented associate, and his efforts are evident. His knowledge in data area has benefited the team immensely.”*  
 > <p align="right">— Patrick</p>  
 
 ---
@@ -96,10 +101,10 @@ Certifications without links are unfortunately lost.
 
 | Certification | Date Obtained |
 | ------------------------------------------ | ----------------------: |
-| [Power BI Data Analyst Associate (PL-300)](/assets/img/Cert/Power%20BI%20Data%20Analyst%20Associate.pdf) | |
-| [Power Platform App Maker Associate (PL-100)](/assets/img/Cert/Power%20Platform%20App%20Maker%20Associate.pdf) | |
-| [Power Platform Fundamentals (PL-900)](/assets/img/Cert/Power%20Platform%20Fundamentals.pdf) | |
-| [Azure Fundamentals (AZ-900)](/assets/img/Cert/Azure%20Fundamentals.pdf) | |
-| [Salesforce Associate](/assets/img/Cert/Certification-SF-Associate.pdf) | |
+| [Power BI Data Analyst Associate (PL-300)](../assets/img/Cert/Power%20BI%20Data%20Analyst%20Associate.pdf) | |
+| [Power Platform App Maker Associate (PL-100)](../assets/img/Cert/Power%20Platform%20App%20Maker%20Associate.pdf) | |
+| [Power Platform Fundamentals (PL-900)](../assets/img/Cert/Power%20Platform%20Fundamentals.pdf) | |
+| [Azure Fundamentals (AZ-900)](../assets/img/Cert/Azure%20Fundamentals.pdf) | |
+| [Salesforce Associate](../assets/img/Cert/Certification-SF-Associate.pdf) | |
 | AWS Certified Cloud Practitioner (CLF-C01) | |
 | Alteryx Designer Core | |
