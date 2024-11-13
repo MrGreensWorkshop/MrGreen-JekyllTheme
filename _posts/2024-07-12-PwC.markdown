@@ -39,7 +39,7 @@ date: 2024-07-12 13:45:08 +0900
 #published: false
 ---
 
-- # PwC Leeds, UK 
+ # PwC Leeds, UK 
   *Technology consultant*  
   *September 2022 - July 2024*  
   *Graduate Scheme*  
@@ -52,18 +52,21 @@ date: 2024-07-12 13:45:08 +0900
   | Orange              |      3       |                99 |
   | Lemon               |      4       |                 9 |
 
-----
 
-  ### AWS cloud implementations
-  - Project team.
-  - roles and respon
-  - comments & 量化
 
 ----
-  ### Data Flow Architect
+
+  ### AWS cloud implementations  
+  - Project team.  
+  - roles and respon  
+  - comments & 量化  
+
+----
+
+  ### Data Flow Architect  
   
-  *Dec 2022 - Feb 2023*
-  *Data Architect*
+  *Dec 2022 - Feb 2023*  
+  *Data Architect*  
 
   - This project is about redesigning the cloud architecture of a hypermarket, and I'm on the Data team to help build the data architecture.
 
@@ -82,13 +85,14 @@ date: 2024-07-12 13:45:08 +0900
   - I was very motivated to complete my first project successfully, and looking back, I think I'm still very satisfied. I was able to make a lot of changes to my work under the guidance of my manager, and in the end, both the manager and I were very happy with the results.  
 
     >  *“Lucas is a talented associate and his efforts are obvious to all. I think he is very knowledgeable in   the field of data and our whole team has benefited from him."*
-    >  *<p align="right">Patrick</p>*
+    >  *<p align="right">Patrick</p>*  
 
-----
+----  
 
-  ### Microsoft platform tools (Power Automation, Power BI)
-  *Dec 2022 - Feb 2023*
-  *Data Architect*
+  ### Microsoft platform tools (Power Automation, Power BI)  
+  
+  *Dec 2022 - Feb 2023*  
+  *Data Architect*  
 
   - This project is about redesigning the cloud architecture of a hypermarket, and I'm on the Data team to help build the data architecture.
 
@@ -193,9 +197,9 @@ date: 2024-07-12 13:45:08 +0900
 
 ----
 
-
   ### AlteryX based workflow automation
-  *Dec 2022 - Feb 2023*
+  
+  *Dec 2022 - Feb 2023*  
   *Data Architect*
 
   - This project is about redesigning the cloud architecture of a hypermarket, and I'm on the Data team to help build the data architecture.

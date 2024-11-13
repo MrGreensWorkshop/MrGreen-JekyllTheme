@@ -40,4 +40,4 @@ date: 2022-08-29 12:35:04 +0900
 ---
 
 
-[Click here to UOB graduate](/posts/2022-09-10-UOB%20graduate.markdown)
+[Click here to UOB graduate](/posts/2022-09-10-UOB%20graduate)

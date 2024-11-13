@@ -41,8 +41,8 @@ date: 2017-09-01 11:32:53 +0900
 
 {%- include util/auto-content-generator.liquid -%}
 
-[Click here to NEU graduate](../posts/2021-07-01-NEU-graduate.markdown)
+[Click here to NEU graduate](../posts/2021-07-01-NEU-graduate)
 
-[Click here to NEU graduate]({{ site.url }}/posts/2021-07-01-NEU-graduate.markdown)
+[Click here to NEU graduate]({{ site.url }}/posts/2021-07-01-NEU-graduate)
 
-[Click here to NEU graduate]({{ site.baseurl }}/posts/2021-07-01-NEU-graduate.markdown)
+[Click here to NEU graduate]({{ site.baseurl }}/posts/2021-07-01-NEU-graduate)
