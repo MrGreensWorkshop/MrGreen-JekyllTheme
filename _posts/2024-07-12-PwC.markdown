@@ -38,7 +38,8 @@ date: 2024-07-12 13:45:08 +0900
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
-
+* TOC
+{:toc}
 
 # PwC Leeds, UK  
 *Technology Consultant*  
@@ -46,28 +47,17 @@ date: 2024-07-12 13:45:08 +0900
 *Graduate Scheme*  
 *To comply with the company's code of conduct, I will withhold the client's name and specific project details.*
 
-# THIS IS MY TOC: CHECK?
-* TOC
-{:toc}
-
 
 ---
 
 ## Projects Overview
 
-| Project | Period | Role |
-| ---------------------------- | :-----------------------: | -------------------------: |
-| [Data Flow Architect](#data-flow-architect)             | Dec 2022 - Feb 2023       | Data Architect             |
-| [AWS Cloud Implementations](#aws-cloud-implementations) | May 2023 - July 2023      | Cloud Consultant           |
-| Orange Project               | March 2023 - April 2023  | Data Analyst              |
-| Lemon Project                | July 2023 - August 2023  | Systems Analyst           |
-
----
 
 ### Data Flow Architect
 
 *Dec 2022 - Feb 2023*  
-*Data Architect*  
+*Data Architect*
+*architecture, Microsoft Visio, Jira, agile*
 
 - **Project Team**: This project involved redesigning the cloud architecture for a large supermarket. I was part of the Data team, focused on developing the data architecture.
   
@@ -79,19 +69,43 @@ date: 2024-07-12 13:45:08 +0900
   - **Data Compliance**: Established processes for data updates and deletion to adhere to GDPR and other regulations.
   - **Team collaboration**: Assisted in designing the client’s Data Team structure, incorporating concepts from Spotify's squad model and the Center of Excellence (COE).
 
-- **Key Accomplishments**: This first project provided a rewarding experience. Under my manager's guidance, I refined my approach and delivered a successful outcome.
+- **Key Accomplishments**: Overall, this first project really provided a rewarding experience to me in my future career. I've developed a bunch of good habits thanks to my manager Patrick. Under his guidance, I refined my work and delivered a successful outcome to the client.
 
 > *“Lucas is a talented associate, and his efforts are evident. His knowledge in data area has benefited the team immensely.”*  
 > <p align="right">— Patrick</p>  
 
 ---
 
-<a name="aws-cloud-implementations"></a>
+### Test automation workflow
+
+*March 2023 - July 2023*  
+*Quality Assurance, Test automation implementation leader*  
+*Azure devOps, Python, Selenium, Pytest*
+
+- **Project Team**: This project is a business development work to build and maintain an internal platform as DevOps. I worked on the QA team and also interface with the data/development team.
+  
+- **Roles and Responsibilities**:
+  - **Test assurance**: ensure that all the expected functions works well for any new updates, maintain a list of bugs(to be fixed), .
+  - **Dashboard development**: to monitor the platform status from the backend, Generate dashboard for all tests cases and pages monitor.
+
+  - **Test Automation**: Leading a squad of 4 members, we built a well-structured test automation project for smoke tests over the course of three months and drafted the program's structure documentation, usage documentation and example usage for future test union extensions.
+
+- **Key Accomplishments**: To be honest, I think this test automation project is a masterpiece, it's so rubostic that I can see it running all day! It seems that they still develop it on github enterprise and have about 300 test cases
+
+> *“He works harder than anyone else I think. He's very interested in coding, and I think we've been able to move the project forward largely because of him. I don't have any concerns about his skills. When it comes to communication, sometimes lucas takes a while to find the right word, but I don't think it affects his performance at all and I wish to have him in my team forever.”*  
+> <p align="right">— Jonathan</p>  
+
+---
+
 ### AWS Cloud Implementations
 
 - **Project Team**: Collaborated with a cross-functional team to implement AWS cloud solutions.
 - **Roles and Responsibilities**: Led the design and deployment of cloud infrastructure, focusing on scalability and security.
 - **Key Accomplishments**: Quantified improvements in system performance and cost efficiency, meeting client’s KPIs and expectations.
+
+---
+
+### To be editted.
 
 ---
 
@@ -108,3 +122,4 @@ Certifications without links are unfortunately lost.
 | [Salesforce Associate](../assets/img/Cert/Certification-SF-Associate.pdf) | |
 | AWS Certified Cloud Practitioner (CLF-C01) | |
 | Alteryx Designer Core | |
+

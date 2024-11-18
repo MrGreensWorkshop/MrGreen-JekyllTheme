@@ -36,7 +36,7 @@ date: 2022-01-01 10:04:30 +0900
 # exclude from search engines
 #search_engine_exclude: true
 # to disable this page, simply set published: false or delete this file
-#published: false
+published: false
 ---
 <!-- outline-start -->
 

@@ -38,6 +38,8 @@ date: 2022-09-10 13:45:08 +0900
 # to disable this page, simply set published: false or delete this file
 #published: false
 ---
+* TOC
+{:toc}
 
 ![UOB](/assets/img/posts/Uob_overview.jpg)
 
@@ -47,3 +49,12 @@ date: 2022-09-10 13:45:08 +0900
   - 1st Class student (distinction)
   - Main courses include Software Workshop (Java programming), Data Structures, Algorithms, Databases, Computer Systems, AI, and ML, etc.
 
+
+# University of Birmingham certification
+
+<iframe src="../assets/img/Cert/e certification UOB.pdf" width="100%" height="600px" style="border: none;"></iframe>
+
+
+# University of Birmingham Transcript
+
+<iframe src="../assets/img/Cert/Transcript_UOB.pdf" width="100%" height="600px" style="border: none;"></iframe>
