@@ -1,7 +1,7 @@
 ---
 # multilingual page pair id, this must pair with translations of this page. (This name must be unique)
 lng_pair: id_blog
-title: Remote control PC desktop solution based on open source software
+title: Remote control PC desktop solution based on WOL + RUST
 
 # post specific
 # if not specified, .name will be used from _data/owner/[language].yml
@@ -38,4 +38,11 @@ date: 2024-08-30 08:11:06 +0900
 # to disable this page, simply set published: false or delete this file
 published: false
 ---
+
+我在攻读硕士学位时对 NLP 产生了兴趣，我的论文是利用 NLP 识别讽刺性文本。
+在对 transformer、lstm 和 bayers 等不同模型进行比较后，我讨论了性能方面可能存在的原因。
+我发现，经过针对讽刺文本的迁移学习后，基于转换器的模型在判断讽刺文本和获取原意方面表现最佳。
+I became interested in NLP when I did my master's degree, and my dissertation is to recognize sarcastic text using NLP.  
+After comparing different models such as transformer, lstm, and bayers, i discuss the possible reasons about the performance.
+I found that a transformer-based model after transfer learning against sarcasm performs best in determining the sarcasm and obtaining the original intent.
 
