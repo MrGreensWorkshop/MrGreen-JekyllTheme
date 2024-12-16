@@ -99,19 +99,18 @@ date: 2024-07-12 13:45:08 +0900
 
 ### AWS Cloud Implementations
 
-- **Project Team**: Collaborated with a cross-functional team to implement AWS cloud solutions.
-- **Roles and Responsibilities**: Led the design and deployment of cloud infrastructure, focusing on scalability and security.
-- **Key Accomplishments**: Quantified improvements in system performance and cost efficiency, meeting client’s KPIs and expectations.
+- **Project Team**: This project is a British City council project in order to improve the service quality. Our team is responsible for the implementation of the city service line chatbot based on AWS cloud.
+- **Roles and Responsibilities**: 
+  - **Business**: I talk to the client and extract their business logic into a process map, in additional I provide a modular approach to deal with the homogeneous content of the processes.  
 
----
+  - **Technology**: I was involved in building some of the underlying python code in the AWS console. Particularly, I proposed a concept of removing the stop word, which I borrowed from NLP (AI field) to improve the accurancy of the voice recognition.  
 
-### To be editted.
+  - **Quality assurance**: I participated in the QA test and documented the current state and potential bugs of the program before it went live.
+- **Key Accomplishments**: During my time at the team, we completed the second phase of the process map, which set the direction for future goals. On the technical side, after the improvements I proposed in chatbot, the success rate of the service call increased by about 10% within two weeks.
 
 ---
 
 ## Certifications
-
-Certifications without links are unfortunately lost.
 
 | Certification | Date Obtained |
 | ------------------------------------------ | ----------------------: |
