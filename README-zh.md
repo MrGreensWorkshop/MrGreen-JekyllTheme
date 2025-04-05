@@ -1,4 +1,5 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [简体中文] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [简体中文] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [[Español](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
+
 
 ## Mr. Green Jekyll 主题
 
@@ -122,6 +123,7 @@
 - [Jean-Philippe Morissette](https://github.com/JPMorissette) 的法文翻译更正。
 - [fairycn](https://github.com/fairycn) 的简体中文翻译。
 - [Onur Ergünay](https://github.com/onurergunay) 的土耳其语翻译。
+- [Manuel Nájera](https://github.com/manuelnajera) 翻译成 墨西哥 西班牙语
 
 ### 执照
 

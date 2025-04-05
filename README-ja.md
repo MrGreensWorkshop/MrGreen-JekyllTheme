@@ -1,4 +1,5 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [[Español](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
+
 
 ## Mr. Green Jekyll テーマ
 
@@ -122,6 +123,7 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 - フランス語の翻訳修正 [Jean-Philippe Morissette](https://github.com/JPMorissette)。
 - 中国語の翻訳 [fairycn](https://github.com/fairycn)。
 - トルコ語の翻訳 [Onur Ergünay](https://github.com/onurergunay)。
+- スペイン語翻訳 [Manuel Nájera](https://github.com/manuelnajera)
 
 ### ライセンス
 

@@ -1,4 +1,5 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [한국어] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [한국어] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [[Español](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
+
 
 ## Mr. Green Jekyll 테마
 
@@ -122,6 +123,7 @@ YouTube에서 [Mr. Green 테마 자습서 재생 목록을](https://www.youtube.
 - [Jean-Philippe Morissette](https://github.com/JPMorissette)의 프랑스어 번역 수정.
 - [fairycn](https://github.com/fairycn)의 중국어 번역.
 - [Onur Ergünay](https://github.com/onurergunay)의 터키어 번역.
+- [Manuel Nájera](https://github.com/manuelnajera)스페인어 번역
 
 ### 특허
 

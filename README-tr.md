@@ -1,4 +1,5 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [Türkçe]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [Türkçe] [[Español](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
+
 
 ## Mr. Green Jekyll Teması
 
@@ -122,6 +123,7 @@ Katkılarınız için teşekkür ederiz!
 - Fransızca çeviri düzeltmeleri [Jean-Philippe Morissette](https://github.com/JPMorissette) tarafından yapılmıştır.
 - Çince çevirisi [fairycn](https://github.com/fairycn) tarafından yapılmıştır.
 - Türkçe çevirisi [Onur Ergünay](https://github.com/onurergunay) tarafından yapılmıştır.
+- Meksika İspanyolcasına çeviri [Manuel Nájera](https://github.com/manuelnajera) tarafından yapılmıştır.
 
 ### Lisans
 
