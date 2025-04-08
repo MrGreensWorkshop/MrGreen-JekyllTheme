@@ -1,3 +1,6 @@
+multi_language: true
+languages: ["en", "ar"]
+
 ###########################################################
 # Global Configuration (https://jekyllrb.com/docs/configuration/options/)
 ###########################################################
