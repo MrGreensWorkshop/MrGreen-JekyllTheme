@@ -51,12 +51,12 @@ copyright:
 creative_commons:
   some_rights_reserved: Algunos derechos reservados.
   # check _data/owner/[language].yml for license type.
-  by: Except where otherwise noted, content on this web site is licensed under a Creative Commons Attribution 4.0 International License.
-  by-nd: Except where otherwise noted, content on this web site is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License.
-  by-sa: Except where otherwise noted, content on this web site is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-  by-nc: Except where otherwise noted, content on this web site is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
-  by-nc-nd: Except where otherwise noted, content on this web site is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
-  by-nc-sa: Except where otherwise noted, content on this web site is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+  by: Salvo que se indique lo contrario, el contenido de este sitio web está bajo una licencia Creative Commons Attribution 4.0 International License.
+  by-nd: Salvo que se indique lo contrario, el contenido de este sitio web está bajo una licencia Creative Commons Attribution-NoDerivatives 4.0 International License.
+  by-sa: Salvo que se indique lo contrario, el contenido de este sitio web está bajo una licencia Creative Commons Attribution-ShareAlike 4.0 International License.
+  by-nc: Salvo que se indique lo contrario, el contenido de este sitio web está bajo una licencia Creative Commons Attribution-NonCommercial 4.0 International License.
+  by-nc-nd: Salvo que se indique lo contrario, el contenido de este sitio web está bajo una licencia Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+  by-nc-sa: Salvo que se indique lo contrario, el contenido de este sitio web está bajo una licencia Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 # for 404 layout
 not-found:
