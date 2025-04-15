@@ -1,5 +1,6 @@
 # Mr. Green Jekyll Theme (https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
 # Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+# Copyright (c) 2025 Manuel Nájera https://github.com/manuelnajera
 # Licensed under MIT
 
 lng:
@@ -10,7 +11,7 @@ lng:
   # For html tags, you can enable or disable using html_lng_with_country_code defined in _data/conf/main.yml
   # based on ISO_3166-1 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
   country: MX
-  switch_title: Español
+  switch_title: Es
   offer:
     title: Idioma
     msg_page: Ver esta página en español.
@@ -18,11 +19,12 @@ lng:
     msg_site: Ir a inicio
 
 date:
+  # if %b is used in the long format, it will be replaced with the corresponding item in 'months' list below.
   long: "%-d de %b de %Y"
   day: "%-d"
   year: "%Y"
+  # months itself also used in Archive page.
   months: [Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]
-
 
 not_found:
   header: Página no encontrada
@@ -84,7 +86,7 @@ post:
       consent:
         title: Commentarios (Disqus.com)
         text: >
-           La función de comentarios está alojada por un tercero. Al mostrar el contenido externo, aceptas los $terms y la $privacy_policy de disqus.com.
+          La función de comentarios está alojada por un tercero. Al mostrar el contenido externo, aceptas los $terms y la $privacy_policy de disqus.com.
            <br>Si prefieres no recibir publicidad dirigida, abre $settings_link y haz clic en "opt-out" y cierra. Regresa aquí y carga los comentarios.
         terms_link_text: Términos de servicio
         privacy_link_text: Politica de privacidad
@@ -148,9 +150,9 @@ archives:
 
 # for about layout
 about:
-   title: Acerca de
-   button_name: Acerca de
-   email_title: correo electrónico
+  title: Acerca de
+  button_name: Acerca de
+  email_title: correo electrónico
 
 # for links layout
 links:
@@ -213,15 +215,16 @@ cookie_consent:
           Estas cookies son esenciales para el funcionamiento del sitio web y no se pueden desactivar.
           Suelen establecerse cuando se cambia alguna configuración del sitio, como el esquema de color.
           Estas cookies no almacenan información personal identificable.
+          $gtag_info
       analytics:
         title: Cookies de rendimiento
-        info: Cookies utilizadas para análisis y duración de la visita.
+        info: $gtag_info
       preferences:
         title: Cookies de funcionalidad
-        info: Cookies que almacenan configuraciones como el idioma.
+        info: $gtag_info
       advertising:
         title: Cookies de publicidad y segmentación
-        info: Cookies utilizadas para personalización y anuncios dirigidos.
+        info: $gtag_info
     gtag_info:
       # from https://support.google.com/tagmanager/answer/10718549#consent-types
       ad_storage: >
@@ -229,8 +232,9 @@ cookie_consent:
       analytics_storage: >
         Permite el almacenamiento (como cookies) relacionado con el análisis, por ejemplo, la duración de la visita.
       functionality_storage: >
-        Habilita el almacenamiento que respalda la funcionalidad del sitio web o la aplicación, por ejemplo, la configuración de idioma.
+        Habilita el almacenamiento que permite el correcto funcionamiento del sitio web o la aplicación (p. ej., la configuración de idioma).
       personalization_storage: >
-        Permite el almacenamiento relacionado con la personalización, por ejemplo, recomendaciones de vídeos.
+        Habilita el almacenamiento relacionado con la personalización (p. ej., las recomendaciones de videos).
       security_storage: >
-        Permite el almacenamiento relacionado con la seguridad, como la funcionalidad de autenticación, la prevención del fraude y otras protecciones del usuario.
+        Habilita el almacenamiento relacionado con la seguridad, como la función de autenticación,
+        la prevención de fraudes y otras protecciones del usuario.

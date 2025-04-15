@@ -1,4 +1,4 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [Español]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [Español mexicano]
 
 ## Mr. Green - Tema para Jekyll
 
@@ -8,9 +8,9 @@
 [<img src="https://img.shields.io/github/forks/MrGreensWorkshop/MrGreen-JekyllTheme?style=flat" alt="GitHub forks" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
 [<img src="https://img.shields.io/github/stars/MrGreensWorkshop/MrGreen-JekyllTheme?style=flat" alt="GitHub stars" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)
 [<img src="https://img.shields.io/github/license/MrGreensWorkshop/MrGreen-JekyllTheme" alt="GitHub license" data-no-image-viewer>](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt)
-[<img src="https://shields.io/badge/Github%20Sponsors-Support%20me-blue?logo=GitHub+Sponsors" alt="Support me on GitHub Sponsors" data-no-image-viewer>](https://github.com/sponsors/MrGreensWorkshop "Support me on GitHub Sponsors")
-[<img src="https://shields.io/badge/Patreon-Support%20me-blue?logo=Patreon" alt="Be my Patron" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Be my Patron")
-[<img src="https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi" alt="Tip me via Ko-fi" data-no-image-viewer>](https://ko-fi.com/MrGreensWorkshop "Tip me via Ko-fi")
+[<img src="https://shields.io/badge/Github%20Sponsors-Support%20me-blue?logo=GitHub+Sponsors" alt="Apoyame on GitHub Sponsors" data-no-image-viewer>](https://github.com/sponsors/MrGreensWorkshop "Apoyame on GitHub Sponsors")
+[<img src="https://shields.io/badge/Patreon-Support%20me-blue?logo=Patreon" alt="Sé mi Patreon" data-no-image-viewer>](https://patreon.com/MrGreensWorkshop "Sé mi Patreon")
+[<img src="https://shields.io/badge/Ko--fi-Tip%20me-blue?logo=kofi" alt="Puedes darme una propina en Ko-fi" data-no-image-viewer>](https://ko-fi.com/MrGreensWorkshop "Puedes darme una propina en Ko-fi")
 
 ---
 
@@ -34,7 +34,7 @@ Iba a hacer mi sitio web y pensé que si lo hacía como plantilla, podría compa
 ### Características
 
 - Sitio web multilingüe
-  - Inglés (predeterminado), japonés, portugués brasileño, francés, chino (simplificado), coreano, turco y español.
+  - Inglés (predeterminado), japonés, portugués brasileño, francés, chino (simplificado), coreano, turco, español mexicano.
 - Función de sugerencia de idioma recomendado
 - Botón de navegación automática con icono, con opción para desactivar
 - Diseños para `Inicio`, `Acerca de`, `Archivo`, `Lista de publicaciones`, `Enlaces`, `Proyectos` y más
@@ -100,7 +100,7 @@ Quiero agradecer a estos proyectos que me dieron la oportunidad de construir mi 
 
 - [GitHub Pages](https://pages.github.com/) Almacenado directamente desde su repositorio de GitHub. Simplemente suba (push) los cambios y el sitio se generará automáticamente.
 
-Algunos de los sitios que encontré útiles mientras trabajaba en este proyecto.. [Página de enlaces](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/es/tabs/links.html).
+Algunos de los sitios que encontré útiles mientras trabajaba en este proyecto. [Página de enlaces](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/es/tabs/links.html).
 
 ### Puedes apoyar a mi trabajo
 
@@ -108,7 +108,7 @@ La creación de proyectos que comienzan de la nada lleva una gran cantidad de ti
 
 - Puedes ser uno de mis [GitHub Sponsors](https://github.com/sponsors/MrGreensWorkshop "Apoyame on GitHub Sponsors") (mensual o una vez)
 - Puedes ser uno de mis[Patreons](https://patreon.com/MrGreensWorkshop "Sé mi Patreon") (mensual)
-- Puedes darme propina a través de [Ko-fi](https://ko-fi.com/MrGreensWorkshop "Tip Me via Ko-fi") (una vez)
+- Puedes darme propina a través de [Ko-fi](https://ko-fi.com/MrGreensWorkshop "Puedes darme una propina en Ko-fi") (una vez)
 
 ### Contribuir
 
@@ -149,4 +149,4 @@ El tema de Mr. Green Jekyll incorpora las bibliotecas mencionadas a continuació
 | [Simple-Jekyll-Search v1.9.2](https://github.com/christian-fei/Simple-Jekyll-Search/tree/v1.9.2), Copyright (c) 2015 Christian Fei. Simple-Jekyll-Search is distributed under the terms of the MIT License. | [simple-jekyll-search-1.9.2.min.js](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/assets/js/simple-jekyll-search-1.9.2.min.js) |
 | [Compress HTML in Jekyll v3.1.0](https://github.com/penibelst/jekyll-compress-html/tree/v3.1.0), Copyright (c) 2014 Anatol Broder. Compress HTML in Jekyll is distributed under the terms of the MIT License. | [compress.liquid](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/_layouts/util/compress.liquid) |
 
-[Mr. Green Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)
+[Mr. Green - Tema para Jekyll](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme)

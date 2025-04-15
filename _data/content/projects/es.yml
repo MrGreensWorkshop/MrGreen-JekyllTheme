@@ -31,9 +31,9 @@ page_data:
       img_title: "img title1"
       date: "2021-03-13"
       post: |
-        # Ejemplos
+        # Examples
 
-        Esta es una página de ejemplo para mostrar estilos relacionados con Markdown para el tema Jekyll de Mr.Green.
+        This is an example page to display markdown related styles for Mr. Green Jekyll Theme.
 
         ### Headings (centered)
         {:data-align="center"}

@@ -1,4 +1,4 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [Türkçe] [[Español](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [Türkçe] [[Español mexicano](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
 
 
 ## Mr. Green Jekyll Teması
@@ -35,7 +35,7 @@ Web sitemi yapacaktım ve bunu şablon olarak yaparsam açık kaynak topluluğuy
 ### Özellikler
 
 - Çok dilli web sitesi
-  - İngilizce (varsayılan), Japonca, Brezilya Portekizcesi, Fransızca, Çince, Korece, Türkçe
+  - İngilizce (varsayılan), Japonca, Brezilya Portekizcesi, Fransızca, Çince, Korece, Türkçe, Meksika İspanyolcası
 - Önerilen dil teklifi özelliği
 - Otomatik gezinme düğmesi ekleyicisi (Açma/kapama özelliği ile)
 - `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` ve daha fazlası için hazır şablonlar
@@ -101,7 +101,7 @@ Bana web sitemi kurma fırsatı veren bu projelere teşekkür etmek istiyorum.
 
 - [GitHub Pages](https://pages.github.com/) Doğrudan GitHub reponuzdan barındırılır. Sadece değişiklikleri pushlayın ve site otomatik olarak oluşturulacaktır.
 
-Bu proje üzerinde çalışırken faydalı bulduğum sitelerden bazıları. [Bağlantılar sayfası](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/tabs/links.html).
+Bu proje üzerinde çalışırken faydalı bulduğum sitelerden bazıları. [Bağlantılar sayfası](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/tr/tabs/links.html).
 
 ### Çalışmalarıma Destek Olabilirsiniz
 
@@ -123,7 +123,7 @@ Katkılarınız için teşekkür ederiz!
 - Fransızca çeviri düzeltmeleri [Jean-Philippe Morissette](https://github.com/JPMorissette) tarafından yapılmıştır.
 - Çince çevirisi [fairycn](https://github.com/fairycn) tarafından yapılmıştır.
 - Türkçe çevirisi [Onur Ergünay](https://github.com/onurergunay) tarafından yapılmıştır.
-- Meksika İspanyolcasına çeviri [Manuel Nájera](https://github.com/manuelnajera) tarafından yapılmıştır.
+- Meksika İspanyolcası çevirisi [Manuel Nájera](https://github.com/manuelnajera) tarafından yapılmıştır.
 
 ### Lisans
 

@@ -1,4 +1,4 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [français] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [[Español](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [français] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [[Español mexicano](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
 
 
 ## Thème de Mr. Green Jekyll
@@ -35,7 +35,7 @@ J'allais créer mon site Web et j'ai pensé que si je le faisais en tant que gab
 ### Caractéristiques
 
 - Site Internet multilingue
-  - Anglais (par défaut), japonais, portugais brésilien, français, chinois, coréen, turc
+  - Anglais (par défaut), japonais, portugais brésilien, français, chinois, coréen, turc, espagnol mexicain
 - Fonction de suggestion de langue
 - Ajout de boutons de navigation automatique avec icône, options d'activation et de désactivation
 - Mises en page pour `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` et plus
@@ -101,7 +101,7 @@ Je tiens à remercier ces projets qui m'ont donné l'opportunité de construire 
 
 - [Pages GitHub](https://pages.github.com/) hébergées directement depuis votre référentiel GitHub. Appuyez simplement sur les modifications et le site sera automatiquement généré.
 
-Certains des sites que je trouve utiles pendant que je travaille sur ce projet. [Pages de liens](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/tabs/links.html).
+Certains des sites que je trouve utiles pendant que je travaille sur ce projet. [Pages de liens](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/fr/tabs/links.html).
 
 ### Vous pouvez soutenir mon travail
 
@@ -123,7 +123,7 @@ Merci pour vos contributions!
 - Corrections de la traduction française par [Jean-Philippe Morissette](https://github.com/JPMorissette).
 - Traduction chinoise par [fairycn](https://github.com/fairycn).
 - Traduction turc par [Onur Ergünay](https://github.com/onurergunay).
-- Traduction espagnole par [Manuel Nájera](https://github.com/manuelnajera)
+- Traduction mexicaine espagnole par [Manuel Nájera](https://github.com/manuelnajera).
 
 ### Licence
 
