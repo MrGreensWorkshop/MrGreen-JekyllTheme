@@ -1,4 +1,5 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [日本語] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [[Español mexicano](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
+
 
 ## Mr. Green Jekyll テーマ
 
@@ -34,7 +35,7 @@
 ### 機能
 
 - 多言語Webサイト
-  - 英語 (デフォルト)、日本語、ブラジルポルトガル語、フランス語、中国語、韓国語、トルコ語
+  - 英語 (デフォルト)、日本語、ブラジル系ポルトガル語、フランス語、中国語、韓国語、トルコ語、メキシコ系スペイン語
 - おすすめの言語提供機能
 - アイコン有効無効オプション付き自動ナビゲーションボタン追加機能
 - `Home`, `About`, `Archives`, `Post-list`, `Links`, `Projects` 等々のレイアウト
@@ -122,6 +123,7 @@ YouTubeの[Mr. Green テーマチュートリアルのプレイリスト](https:
 - フランス語の翻訳修正 [Jean-Philippe Morissette](https://github.com/JPMorissette)。
 - 中国語の翻訳 [fairycn](https://github.com/fairycn)。
 - トルコ語の翻訳 [Onur Ergünay](https://github.com/onurergunay)。
+- メキシコ系スペイン語翻訳 [Manuel Nájera](https://github.com/manuelnajera)。
 
 ### ライセンス
 

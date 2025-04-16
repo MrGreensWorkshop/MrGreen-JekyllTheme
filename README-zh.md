@@ -1,4 +1,5 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [简体中文] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [[Português do Brasil](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-pt.md#readme)] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [简体中文] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [[Español mexicano](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
+
 
 ## Mr. Green Jekyll 主题
 
@@ -34,7 +35,7 @@
 ### 特色
 
 - 多语言网站
-  - 英语（默认）、日语、巴西葡萄牙语、法语、简体中文、韩语、土耳其语
+  - 英语（默认）、日语、巴西葡萄牙语、法语、简体中文、韩语、土耳其语、墨西哥西班牙语
 - 推荐的语言建议功能
 - 带图标的自动导航按钮添加器 启用禁用选项
 - “首页”、“关于”、“归档”、“文章列表”、“链接”、“项目”等的布局
@@ -100,7 +101,7 @@
 
 - [GitHub Pages](https://pages.github.com/) 直接从您的 GitHub 存储库托管。只需推送更改，网站就会自动生成。
 
-在我从事这个项目时，我发现一些有用的网站。 [链接页面](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/tabs/links.html)
+在我从事这个项目时，我发现一些有用的网站。 [链接页面](https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/zh/tabs/links.html)
 
 ### 你可以支持我的工作
 
@@ -122,6 +123,7 @@
 - [Jean-Philippe Morissette](https://github.com/JPMorissette) 的法文翻译更正。
 - [fairycn](https://github.com/fairycn) 的简体中文翻译。
 - [Onur Ergünay](https://github.com/onurergunay) 的土耳其语翻译。
+- [Manuel Nájera](https://github.com/manuelnajera) 的墨西哥西班牙语翻译。
 
 ### 执照
 

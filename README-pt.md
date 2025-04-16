@@ -1,4 +1,5 @@
-[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [Português do Brasil] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)]
+[[English](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README.md#readme)] [[日本語](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ja.md#readme)] [Português do Brasil] [[français](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-fr.md#readme)] [[简体中文](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-zh.md#readme)] [[한국어](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-ko.md#readme)] [[Türkçe](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-tr.md#readme)] [[Español mexicano](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/README-es.md#readme)]
+
 
 ## Tema Mr. Green Jekyll
 
@@ -34,7 +35,7 @@ Eu estava criando meu wbesite e pensei em fazê-lo como um modelo que eu poderia
 ### Recursos disponíveis
 
 - Website para vários idiomas.
-  - Inglês (padrão), Japonês, Português do Brasil, Francês, Chinês, Coreano, Turco
+  - Inglês (padrão), Japonês, Português do Brasil, Francês, Chinês, Coreano, Turco, Espanhol Mexicano
 - Recomendação de idioma
 - Auto navegação com possibilidade de habilitar e desabilitar os ícones.
 - Layout para `Principal`, `Sobre`, `Arquivos`, `Lista-de-Posts`, `Links`, `Projetos` e mais
@@ -122,6 +123,7 @@ Obrigado por suas contribuições!
 - Correções da tradução para o francês por [Jean-Philippe Morissette](https://github.com/JPMorissette).
 - Tradução para o chinês por [fairycn](https://github.com/fairycn).
 - Tradução para o turco por [Onur Ergünay](https://github.com/onurergunay).
+- Tradução para o espanhol mexicano por [Manuel Nájera](https://github.com/manuelnajera).
 
 ### Licença
 
