@@ -29,7 +29,7 @@
 
 <!-- outline-end -->
 
-Iba a hacer mi sitio web y pensé que si lo hacía como plantilla, podría compartirlo con la comunidad de código abierto. Por eso decidí construirlo como un tema. He trabajado muy duro para hacer esto posible, así que por favor considere [apoyar mi trabajo](#you-can-support-my-work). Gracias.
+Iba a hacer mi sitio web y pensé que si lo hacía como plantilla, podría compartirlo con la comunidad de código abierto. Por eso decidí construirlo como un tema. He trabajado muy duro para hacer esto posible, así que por favor considere [apoyar mi trabajo](#puedes-apoyar-a-mi-trabajo). Gracias.
 
 ### Características
 
@@ -76,7 +76,7 @@ Iba a hacer mi sitio web y pensé que si lo hacía como plantilla, podría compa
    ```
 
 3. Cambia el nombre del repositorio `tu_nombre_de_usuario_de_github.github.io`.
-4. Revisa el estado de despliegue (Deploy) en la pestaña 'Acciones(`Actions`)" del repositorio.
+4. Revisa el estado de despliegue (Deploy) en la pestaña Acciones (`Actions`) del repositorio.
 5. Cuando se vuelva verde, tu sitio está en funcionamiento en `https://tu_nombre_de_usuario_de_github.github.io`.
 
 #### Compilación local
@@ -86,7 +86,7 @@ Iba a hacer mi sitio web y pensé que si lo hacía como plantilla, podría compa
 3. Compila usando el comando `bundle exec jekyll serve --watch --host 0.0.0.0 --safe`,
     - El parametro `--host 0.0.0.0` permite acceder al sitio desde otros dispositivos en la misma red
     - El parametro `--safe` garantiza que no se cargue ningún plugin de terceros (recomendado para el desarrollo con GitHub Pages).
-4. Su sitio estará disponible en la dirección `0.0.0.0:4000/.
+4. Su sitio estará disponible en la dirección `0.0.0.0:4000/`.
 
 ### Documentación
 
@@ -107,7 +107,7 @@ Algunos de los sitios que encontré útiles mientras trabajaba en este proyecto.
 La creación de proyectos que comienzan de la nada lleva una gran cantidad de tiempo. Apreciaría mucho si consideras apoyarme para que pueda continuar proyectos como este y crear nuevos contenidos para todos.
 
 - Puedes ser uno de mis [GitHub Sponsors](https://github.com/sponsors/MrGreensWorkshop "Apoyame on GitHub Sponsors") (mensual o una vez)
-- Puedes ser uno de mis[Patreons](https://patreon.com/MrGreensWorkshop "Sé mi Patreon") (mensual)
+- Puedes ser uno de mis [Patreons](https://patreon.com/MrGreensWorkshop "Sé mi Patreon") (mensual)
 - Puedes darme propina a través de [Ko-fi](https://ko-fi.com/MrGreensWorkshop "Puedes darme una propina en Ko-fi") (una vez)
 
 ### Contribuir
