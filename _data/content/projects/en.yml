@@ -5,7 +5,7 @@
 page_data:
   main:
     header: "Projects"
-    info: "Here are some random project records of my broken or perfect toys accompanied by notes on experimentation."
+    info: "Here are some project records of my work or hobby."
     text_color: "white"
     # if you don't want to use background image, comment it. back_color will be activated.
     img: ":projects-heading.gif"
