@@ -30,87 +30,87 @@ page_data:
       img_title: "PwC"
       date: "2023-08-13"
       post: |
-# Power BI Bid Insight Dashboard Overview
+          # Power BI Bid Insight Dashboard Overview
 
-![Pic 1](1.png)
-![Pic 2](2.png)
-![Pic 3](3.png)
+          ![Pic 1](1.png)
+          ![Pic 2](2.png)
+          ![Pic 3](3.png)
 
-## 1. Chart Overview – What Each Chart Shows
+          ## 1. Chart Overview – What Each Chart Shows
 
-| **Chart / Visual** | **Description** | **Insight / Takeaway** |
-|--------------------|-----------------|------------------------|
-| **Executive KPIs (Top-Level Cards)** |  |  |
-| Bids on Track (%) | Percentage of bids progressing according to schedule (currently 81.08%). | Shows bid execution health and timeline adherence. |
-| Total Bid Wins | Total number of successfully won bids (4,054). | Provides a direct measure of sales success. |
-| Targeted Bids | Number of high-priority bids (1,354). | Helps track strategic focus on key deals. |
-| % Calls Abandoned | Percentage of stakeholder calls abandoned (18.92%). | Highlights communication risks affecting bid outcomes. |
-| **Sector Leaderboard (Horizontal Bar Chart)** | Ranks business sectors by total bid wins. | Quickly identifies top-performing sectors (e.g., Technical Support, Contract-related, Streaming). |
-| **People Leaderboard (Horizontal Bar Chart)** | Displays individual-level performance in terms of total bid wins. | Recognizes high performers (e.g., Jim with 666 wins), promoting internal best practice sharing. |
-| **Bid Status Distribution (Donut Chart)** | Visualizes bid outcomes: <br> - Bid Wins (40.54%) <br> - Bid Losses (36.46%) <br> - Should Win But Lost (9.46%) <br> - Must Win (13.54%) | Shows overall pipeline health and highlights where key risks or lost opportunities are concentrated. |
-| **Total Profit Over Time (Area Line Chart)** | Tracks cumulative bid-generated profit over time. | Measures the financial impact of bidding activities and supports revenue forecasting. |
-| **Bid Loss Reasons (Pie Chart)** | Breakdown of reasons for lost bids: Relevant Experience, Relationship Issues, Technical Gaps, Pricing Issues, etc. | Focuses leadership attention on the most common and actionable loss drivers. |
-| **Sector Score Benchmark (Grouped Bar Chart with Targets)** | Compares each sector’s Technical and Commercial scores against predefined benchmarks (with target lines shown). | Highlights underperforming sectors relative to targets, enabling targeted improvement strategies. |
-| **Bid Records Table (Interactive Table)** | Provides detailed, drill-down level data including deadline, competition level, bid type, and Salesforce link. | Enables granular investigation by analysts and bid managers for individual case reviews. |
+          | **Chart / Visual** | **Description** | **Insight / Takeaway** |
+          |--------------------|-----------------|------------------------|
+          | **Executive KPIs (Top-Level Cards)** |  |  |
+          | Bids on Track (%) | Percentage of bids progressing according to schedule (currently 81.08%). | Shows bid execution health and timeline adherence. |
+          | Total Bid Wins | Total number of successfully won bids (4,054). | Provides a direct measure of sales success. |
+          | Targeted Bids | Number of high-priority bids (1,354). | Helps track strategic focus on key deals. |
+          | % Calls Abandoned | Percentage of stakeholder calls abandoned (18.92%). | Highlights communication risks affecting bid outcomes. |
+          | **Sector Leaderboard (Horizontal Bar Chart)** | Ranks business sectors by total bid wins. | Quickly identifies top-performing sectors (e.g., Technical Support, Contract-related, Streaming). |
+          | **People Leaderboard (Horizontal Bar Chart)** | Displays individual-level performance in terms of total bid wins. | Recognizes high performers (e.g., Jim with 666 wins), promoting internal best practice sharing. |
+          | **Bid Status Distribution (Donut Chart)** | Visualizes bid outcomes: <br> - Bid Wins (40.54%) <br> - Bid Losses (36.46%) <br> - Should Win But Lost (9.46%) <br> - Must Win (13.54%) | Shows overall pipeline health and highlights where key risks or lost opportunities are concentrated. |
+          | **Total Profit Over Time (Area Line Chart)** | Tracks cumulative bid-generated profit over time. | Measures the financial impact of bidding activities and supports revenue forecasting. |
+          | **Bid Loss Reasons (Pie Chart)** | Breakdown of reasons for lost bids: Relevant Experience, Relationship Issues, Technical Gaps, Pricing Issues, etc. | Focuses leadership attention on the most common and actionable loss drivers. |
+          | **Sector Score Benchmark (Grouped Bar Chart with Targets)** | Compares each sector’s Technical and Commercial scores against predefined benchmarks (with target lines shown). | Highlights underperforming sectors relative to targets, enabling targeted improvement strategies. |
+          | **Bid Records Table (Interactive Table)** | Provides detailed, drill-down level data including deadline, competition level, bid type, and Salesforce link. | Enables granular investigation by analysts and bid managers for individual case reviews. |
 
----
+          ---
 
-## 2. Dashboard Design Storyline – Why This Layout?
+          ## 2. Dashboard Design Storyline – Why This Layout?
 
-The dashboard follows a **top-down storytelling flow** from summary to detail, reflecting the decision-making process of business users:
+          The dashboard follows a **top-down storytelling flow** from summary to detail, reflecting the decision-making process of business users:
 
-- **Leadership Snapshot First:**  
-  Starting with **KPI cards** and **high-level charts** (Sector and People leaderboards), leadership users get a **quick health check** on overall bid performance.
+          - **Leadership Snapshot First:**  
+            Starting with **KPI cards** and **high-level charts** (Sector and People leaderboards), leadership users get a **quick health check** on overall bid performance.
 
-- **Cause-and-Effect Middle Section:**  
-  The second section shifts focus to **root cause analysis** (Bid Status, Loss Reasons, Sector Benchmarks).  
-  This answers the key business question:  
-  *"Why are we winning or losing?"*
+          - **Cause-and-Effect Middle Section:**  
+            The second section shifts focus to **root cause analysis** (Bid Status, Loss Reasons, Sector Benchmarks).  
+            This answers the key business question:  
+            *"Why are we winning or losing?"*
 
-- **Detailed Drill-Down Last:**  
-  The final layer includes the **interactive Bid Records Table**, empowering analysts to **explore specific bids for case-by-case reviews**.
+          - **Detailed Drill-Down Last:**  
+            The final layer includes the **interactive Bid Records Table**, empowering analysts to **explore specific bids for case-by-case reviews**.
 
-- **Interactivity Built-in:**  
-  Throughout the dashboard, I implemented **slicers for Date Range, Sector, Price Bucket, People, and Bid Status**, allowing users to **customize views in real time**.
+          - **Interactivity Built-in:**  
+            Throughout the dashboard, I implemented **slicers for Date Range, Sector, Price Bucket, People, and Bid Status**, allowing users to **customize views in real time**.
 
-This layout ensures that **each user group—from executives to data analysts—gets exactly the level of detail they need, in the order they prefer to consume it**.
+          This layout ensures that **each user group—from executives to data analysts—gets exactly the level of detail they need, in the order they prefer to consume it**.
 
----
+          ---
 
-## 3. Advantages of the Dashboard (with Explanations)
+          ## 3. Advantages of the Dashboard (with Explanations)
 
-✅ **Executive-Friendly Overview:**  
-Immediate visibility of KPIs allows **time-strapped leaders** to make fast decisions without navigating multiple pages.
+          ✅ **Executive-Friendly Overview:**  
+          Immediate visibility of KPIs allows **time-strapped leaders** to make fast decisions without navigating multiple pages.
 
-✅ **Data Storytelling Flow:**  
-From **high-level metrics → to root causes → to granular data**.  
-This structure mirrors **real-time business conversations** and decision-making processes.
+          ✅ **Data Storytelling Flow:**  
+          From **high-level metrics → to root causes → to granular data**.  
+          This structure mirrors **real-time business conversations** and decision-making processes.
 
-✅ **Root Cause Visibility:**  
-The **loss reason pie chart** and **sector benchmarks** help teams **focus on actionable areas for improvement** (e.g., training, pricing strategies).
+          ✅ **Root Cause Visibility:**  
+          The **loss reason pie chart** and **sector benchmarks** help teams **focus on actionable areas for improvement** (e.g., training, pricing strategies).
 
-✅ **Performance Benchmarking:**  
-The **sector comparison with target lines** makes **underperformance immediately obvious**, prompting corrective actions.
+          ✅ **Performance Benchmarking:**  
+          The **sector comparison with target lines** makes **underperformance immediately obvious**, prompting corrective actions.
 
-✅ **Individual Accountability:**  
-**People Leaderboards** motivate performance by **showing who’s excelling and who may need additional support**.
+          ✅ **Individual Accountability:**  
+          **People Leaderboards** motivate performance by **showing who’s excelling and who may need additional support**.
 
-✅ **Profit Impact Tracking:**  
-The **time-series profit chart** links bidding activity **directly to revenue outcomes**.
+          ✅ **Profit Impact Tracking:**  
+          The **time-series profit chart** links bidding activity **directly to revenue outcomes**.
 
-✅ **Flexible Interactivity:**  
-Custom **slicers and filters** allow every user—from **senior leadership to analysts**—to **personalize their insights** without needing to export or manipulate raw data.
+          ✅ **Flexible Interactivity:**  
+          Custom **slicers and filters** allow every user—from **senior leadership to analysts**—to **personalize their insights** without needing to export or manipulate raw data.
 
-✅ **Scalable Design:**  
-The dashboard structure was **easily replicated across other sectors** after initial success.
+          ✅ **Scalable Design:**  
+          The dashboard structure was **easily replicated across other sectors** after initial success.
 
----
+          ---
 
-## 4. Business Impact
+          ## 4. Business Impact
 
-The deployment of this dashboard led to:
+          The deployment of this dashboard led to:
 
-- **7% increase in bid win rate** in the C&DT sector within six months.
-- **Significant time savings** for leadership teams by **reducing the need for manual reporting**.
-- **Improved strategic decision-making**, thanks to **clear visibility of loss reasons and sector performance gaps**.
-- **Cross-sector adoption**, as the dashboard design was later **rolled out across other business units in PwC UK** after receiving **positive user feedback (85% satisfaction rate)**.
+          - **7% increase in bid win rate** in the C&DT sector within six months.
+          - **Significant time savings** for leadership teams by **reducing the need for manual reporting**.
+          - **Improved strategic decision-making**, thanks to **clear visibility of loss reasons and sector performance gaps**.
+          - **Cross-sector adoption**, as the dashboard design was later **rolled out across other business units in PwC UK** after receiving **positive user feedback (85% satisfaction rate)**.
