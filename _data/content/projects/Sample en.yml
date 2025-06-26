@@ -1,0 +1,78 @@
+# you can move this content to front matter of [language]/tabs/projects.md
+###########################################################
+#                Projects Page Data
+###########################################################
+
+  list:
+    - type: id_project
+      project_name: "Python"
+      project_excerpt: "My Python project for dissertation with notes & research"
+      img: ":python.svg"
+      img_title: "python"
+      date: "2022-08-13"
+      post: |
+       
+
+
+
+    - type: id_project
+      project_name: "Power BI "
+      project_excerpt: "Code"
+      img: ":Microsoft-Power-Platform.png"
+      img_title: "ms"
+      date: "2021-04-23"
+      post: |
+        # Title
+        This is project content.
+
+        ![Image](:project2_thumb.jpg)
+
+    # quote
+    - type: id_quote
+      project_name: " AlteryX based workflow automation"
+      project_excerpt: |
+        it would suit the needs of most Companies files include regular reports, data process, data regualtory, document generation with customised field etc.
+        Compatible with xsl, doc, ggsheets DB(for large dataset) etc.
+
+      img: ":AlteryX.jpg"
+      img_title: "AlteryX"
+      date: "2021-05-27"
+      post: |
+        Let me not to the marriage of true minds
+        Admit impediments. Love is not love
+        Which alters when it alteration finds,
+        Or bends with the remover to remove.
+        O no, it is an ever-fixed mark
+        That looks on tempests and is never shaken;
+        It is the star to every wand'ring barque,
+        Whose worth's unknown, although his height be taken.
+        Love's not Time's fool, though rosy lips and cheeks
+        Within his bending sickle's compass come;
+        Love alters not with his brief hours and weeks,
+        But bears it out even to the edge of doom.
+        If this be error and upon me proved,
+        I never writ, nor no man ever loved.
+    - type: id_note
+      project_name: "Example note"
+      project_excerpt: "Albert Einstein"
+      img: ":project2_thumb.jpg"
+      img_title: "img title4"
+      date: "2021-06-08"
+      post: |
+        Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
+    - type: id_note
+      project_name: "Example note"
+      project_excerpt: "Mae West"
+      img: ":project1_thumb.jpg"
+      img_title: "img title5"
+      date: "2021-08-20"
+      post: |
+        You only live once, but if you do it right, once is enough.
+    - type: id_note
+      project_name: "Example note"
+      project_excerpt: "Mahatma Gandhi "
+      img: ":project2_thumb.jpg"
+      img_title: "img title6"
+      date: "2021-12-20"
+      post: |
+        Be the change that you wish to see in the world.

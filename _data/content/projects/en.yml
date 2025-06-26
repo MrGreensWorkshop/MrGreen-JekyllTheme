@@ -24,211 +24,93 @@ page_data:
 
   list:
     - type: id_project
-      project_name: "Python"
-      project_excerpt: "My Python project for dissertation with notes & research"
-      img: ":python.svg"
-      img_title: "python"
-      date: "2022-08-13"
+      project_name: "Power BI"
+      project_excerpt: "Bid Insight Dashboard Overview"
+      img: ":PwC.png"
+      img_title: "PwC"
+      date: "2023-08-13"
       post: |
-    #     # Examples
+# Power BI Bid Insight Dashboard Overview
 
-    #     This is an example page to display markdown related styles for Mr. Green Jekyll Theme.
+![Pic 1](1.png)
+![Pic 2](2.png)
+![Pic 3](3.png)
 
-    #     ### Headings (centered)
-    #     {:data-align="center"}
+## 1. Chart Overview – What Each Chart Shows
 
-    #     # Heading 1
+| **Chart / Visual** | **Description** | **Insight / Takeaway** |
+|--------------------|-----------------|------------------------|
+| **Executive KPIs (Top-Level Cards)** |  |  |
+| Bids on Track (%) | Percentage of bids progressing according to schedule (currently 81.08%). | Shows bid execution health and timeline adherence. |
+| Total Bid Wins | Total number of successfully won bids (4,054). | Provides a direct measure of sales success. |
+| Targeted Bids | Number of high-priority bids (1,354). | Helps track strategic focus on key deals. |
+| % Calls Abandoned | Percentage of stakeholder calls abandoned (18.92%). | Highlights communication risks affecting bid outcomes. |
+| **Sector Leaderboard (Horizontal Bar Chart)** | Ranks business sectors by total bid wins. | Quickly identifies top-performing sectors (e.g., Technical Support, Contract-related, Streaming). |
+| **People Leaderboard (Horizontal Bar Chart)** | Displays individual-level performance in terms of total bid wins. | Recognizes high performers (e.g., Jim with 666 wins), promoting internal best practice sharing. |
+| **Bid Status Distribution (Donut Chart)** | Visualizes bid outcomes: <br> - Bid Wins (40.54%) <br> - Bid Losses (36.46%) <br> - Should Win But Lost (9.46%) <br> - Must Win (13.54%) | Shows overall pipeline health and highlights where key risks or lost opportunities are concentrated. |
+| **Total Profit Over Time (Area Line Chart)** | Tracks cumulative bid-generated profit over time. | Measures the financial impact of bidding activities and supports revenue forecasting. |
+| **Bid Loss Reasons (Pie Chart)** | Breakdown of reasons for lost bids: Relevant Experience, Relationship Issues, Technical Gaps, Pricing Issues, etc. | Focuses leadership attention on the most common and actionable loss drivers. |
+| **Sector Score Benchmark (Grouped Bar Chart with Targets)** | Compares each sector’s Technical and Commercial scores against predefined benchmarks (with target lines shown). | Highlights underperforming sectors relative to targets, enabling targeted improvement strategies. |
+| **Bid Records Table (Interactive Table)** | Provides detailed, drill-down level data including deadline, competition level, bid type, and Salesforce link. | Enables granular investigation by analysts and bid managers for individual case reviews. |
 
-    #     ## Heading 2
+---
 
-    #     ### Heading 3
+## 2. Dashboard Design Storyline – Why This Layout?
 
-    #     #### Heading 4
+The dashboard follows a **top-down storytelling flow** from summary to detail, reflecting the decision-making process of business users:
 
-    #     ##### Heading 5
+- **Leadership Snapshot First:**  
+  Starting with **KPI cards** and **high-level charts** (Sector and People leaderboards), leadership users get a **quick health check** on overall bid performance.
 
-    #     ###### Heading 6
+- **Cause-and-Effect Middle Section:**  
+  The second section shifts focus to **root cause analysis** (Bid Status, Loss Reasons, Sector Benchmarks).  
+  This answers the key business question:  
+  *"Why are we winning or losing?"*
 
-    #     ***
+- **Detailed Drill-Down Last:**  
+  The final layer includes the **interactive Bid Records Table**, empowering analysts to **explore specific bids for case-by-case reviews**.
 
-    #     ### Paragraphs
+- **Interactivity Built-in:**  
+  Throughout the dashboard, I implemented **slicers for Date Range, Sector, Price Bucket, People, and Bid Status**, allowing users to **customize views in real time**.
 
-    #     #### Paragraph
+This layout ensures that **each user group—from executives to data analysts—gets exactly the level of detail they need, in the order they prefer to consume it**.
 
-    #     **William Shakespeare**, Let me not to the marriage of true minds
-    #     Admit impediments. Love is not love
-    #     Which alters when it alteration finds,
-    #     Or bends with the remover to remove.
-    #     O no, it is an ever-fixed mark
-    #     That looks on tempests and is never shaken;
-    #     It is the star to every wand'ring barque,
-    #     Whose worth's unknown, although his height be taken.
-    #     Love's not Time's fool, though rosy lips and cheeks
-    #     Within his bending sickle's compass come;
-    #     Love alters not with his brief hours and weeks,
-    #     But bears it out even to the edge of doom.
-    #     If this be error and upon me proved,
-    #     I never writ, nor no man ever loved.
+---
 
-    #     #### Texts
+## 3. Advantages of the Dashboard (with Explanations)
 
-    #     Quoted text `Hello world`
+✅ **Executive-Friendly Overview:**  
+Immediate visibility of KPIs allows **time-strapped leaders** to make fast decisions without navigating multiple pages.
 
-    #     Bold text **Hello world**
+✅ **Data Storytelling Flow:**  
+From **high-level metrics → to root causes → to granular data**.  
+This structure mirrors **real-time business conversations** and decision-making processes.
 
-    #     Italic text _Hello world_
+✅ **Root Cause Visibility:**  
+The **loss reason pie chart** and **sector benchmarks** help teams **focus on actionable areas for improvement** (e.g., training, pricing strategies).
 
-    #     kbd text <kbd>Hello world</kbd>
+✅ **Performance Benchmarking:**  
+The **sector comparison with target lines** makes **underperformance immediately obvious**, prompting corrective actions.
 
-    #     #### Blockquote
+✅ **Individual Accountability:**  
+**People Leaderboards** motivate performance by **showing who’s excelling and who may need additional support**.
 
-    #     > **William Shakespeare**, Let me not to the marriage of true minds
-    #     Admit impediments. Love is not love
-    #     Which alters when it alteration finds,
-    #     Or bends with the remover to remove.
-    #     O no, it is an ever-fixed mark
-    #     That looks on tempests and is never shaken;
-    #     It is the star to every wand'ring barque,
-    #     Whose worth's unknown, although his height be taken.
-    #     Love's not Time's fool, though rosy lips and cheeks
-    #     Within his bending sickle's compass come;
-    #     Love alters not with his brief hours and weeks,
-    #     But bears it out even to the edge of doom.
-    #     If this be error and upon me proved,
-    #     I never writ, nor no man ever loved.
+✅ **Profit Impact Tracking:**  
+The **time-series profit chart** links bidding activity **directly to revenue outcomes**.
 
-    #     ### Link
+✅ **Flexible Interactivity:**  
+Custom **slicers and filters** allow every user—from **senior leadership to analysts**—to **personalize their insights** without needing to export or manipulate raw data.
 
-    #     This is [Mr. Green Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme), a simple theme built for [Jekyll](https://jekyllrb.com/).
+✅ **Scalable Design:**  
+The dashboard structure was **easily replicated across other sectors** after initial success.
 
-    #     ### Picture
+---
 
-    #     ![such a lovely place](:projects-heading.jpg)
+## 4. Business Impact
 
-    #     ### Picture (centered)
+The deployment of this dashboard led to:
 
-    #     ![such a lovely place](:project1_thumb.jpg){:data-align="center"}
-
-    #     ### Lists
-
-    #     - Apple
-    #     - Banana
-    #     - Orange
-
-    #     1. Fruits
-    #         1. Apples
-    #             - Granny Smith
-    #             - Mutsu
-    #         1. Bananas
-    #             - Cavendish
-    #             - Red
-    #     1. Vegetables
-
-    #     ***
-
-    #     ### Tables
-
-    #     #### Small Table (centered)
-
-    #     | Fruits(not aligned) | Alignment (centered) | num (right align) |
-    #     | ------------------- | :------------------: | ----------------: |
-    #     | Apple               |       centered       |              9999 |
-    #     | Banana              |  centered long text  |               999 |
-    #     | Orange              |       centered       |                99 |
-    #     | Lemon               |       centered       |                 9 |
-    #     {:data-align="center"}
-
-    #     #### Wide Table (centered)
-
-    #     scroll enabled when page is narrow
-
-    #     | Fruits | num (left align) | num (right align) | num  | num  | num  |
-    #     | ------ | :--------------- | ----------------: | ---- | ---- | ---- |
-    #     | Apple  | 1111             |              1111 | 2222 | 3333 | 4444 |
-    #     | Banana | 111              |               111 | 222  | 333  | 444  |
-    #     | Orange | 11               |                11 | 22   | 33   | 44   |
-    #     | Lemon  | 1                |                 1 | 2    | 3    | 4    |
-    #     {:data-align="center"}
-
-    #     #### Wider Table
-
-    #     scroll enabled when page is narrow
-
-    #     | Fruits | num (left align) | num (right align) | num  | num  | num  | num  | num  | num  |
-    #     | ------ | :--------------- | ----------------: | ---- | ---- | ---- | ---- | ---- | ---- |
-    #     | Apple  | 1111             |              1111 | 2222 | 3333 | 4444 | 5555 | 6666 | 7777 |
-    #     | Banana | 111              |               111 | 222  | 333  | 444  | 555  | 666  | 777  |
-    #     | Orange | 11               |                11 | 22   | 33   | 44   | 55   | 66   | 77   |
-    #     | Lemon  | 1                |                 1 | 2    | 3    | 4    | 5    | 6    | 7    |
-
-    #     ### Code
-
-    #     #### Quote
-
-    #     ```python
-    #     for i in range(5, 10):
-    #       print(i)
-    #     ```
-
-    # # code
-    # - type: id_code
-    #   project_name: "Example Code"
-    #   project_excerpt: "Code"
-    #   img: ":Microsoft-Power-Platform.png"
-    #   img_title: "ms"
-    #   date: "2021-04-23"
-    #   post: |
-    #     # Title
-    #     This is project content.
-
-    #     ![Image](:project2_thumb.jpg)
-
-    # # quote
-    # - type: id_quote
-    #   project_name: " AlteryX based workflow automation"
-    #   project_excerpt: |
-    #     it would suit the needs of most Companies files include regular reports, data process, data regualtory, document generation with customised field etc.
-    #     Compatible with xsl, doc, ggsheets DB(for large dataset) etc.
-
-    #   img: ":AlteryX.jpg"
-    #   img_title: "AlteryX"
-    #   date: "2021-05-27"
-    #   post: |
-    #     Let me not to the marriage of true minds
-    #     Admit impediments. Love is not love
-    #     Which alters when it alteration finds,
-    #     Or bends with the remover to remove.
-    #     O no, it is an ever-fixed mark
-    #     That looks on tempests and is never shaken;
-    #     It is the star to every wand'ring barque,
-    #     Whose worth's unknown, although his height be taken.
-    #     Love's not Time's fool, though rosy lips and cheeks
-    #     Within his bending sickle's compass come;
-    #     Love alters not with his brief hours and weeks,
-    #     But bears it out even to the edge of doom.
-    #     If this be error and upon me proved,
-    #     I never writ, nor no man ever loved.
-    # - type: id_note
-    #   project_name: "Example note"
-    #   project_excerpt: "Albert Einstein"
-    #   img: ":project2_thumb.jpg"
-    #   img_title: "img title4"
-    #   date: "2021-06-08"
-    #   post: |
-    #     Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
-    # - type: id_note
-    #   project_name: "Example note"
-    #   project_excerpt: "Mae West"
-    #   img: ":project1_thumb.jpg"
-    #   img_title: "img title5"
-    #   date: "2021-08-20"
-    #   post: |
-    #     You only live once, but if you do it right, once is enough.
-    # - type: id_note
-    #   project_name: "Example note"
-    #   project_excerpt: "Mahatma Gandhi "
-    #   img: ":project2_thumb.jpg"
-    #   img_title: "img title6"
-    #   date: "2021-12-20"
-    #   post: |
-    #     Be the change that you wish to see in the world.
+- **7% increase in bid win rate** in the C&DT sector within six months.
+- **Significant time savings** for leadership teams by **reducing the need for manual reporting**.
+- **Improved strategic decision-making**, thanks to **clear visibility of loss reasons and sector performance gaps**.
+- **Cross-sector adoption**, as the dashboard design was later **rolled out across other business units in PwC UK** after receiving **positive user feedback (85% satisfaction rate)**.
