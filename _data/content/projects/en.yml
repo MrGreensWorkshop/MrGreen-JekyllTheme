@@ -42,13 +42,13 @@ page_data:
           | **Chart / Visual** | **Description** | **Insight / Takeaway** |
           |--------------------|-----------------|------------------------|
           | **Executive KPIs (Top-Level Cards)** |  |  |
-          | Bids on Track (%) | Percentage of bids progressing according to schedule (currently 81.08%). | Shows bid execution health and timeline adherence. |
-          | Total Bid Wins | Total number of successfully won bids (4,054). | Provides a direct measure of sales success. |
-          | Targeted Bids | Number of high-priority bids (1,354). | Helps track strategic focus on key deals. |
-          | % Calls Abandoned | Percentage of stakeholder calls abandoned (18.92%). | Highlights communication risks affecting bid outcomes. |
+          | Bids on Track (%) | Percentage of bids progressing according to schedule | Shows bid execution health and timeline adherence. |
+          | Total Bid Wins | Total number of successfully won bids. | Provides a direct measure of sales success. |
+          | Targeted Bids | Number of high-priority bids. | Helps track strategic focus on key deals. |
+          | % Calls Abandoned | Percentage of stakeholder calls abandoned. | Highlights communication risks affecting bid outcomes. |
           | **Sector Leaderboard (Horizontal Bar Chart)** | Ranks business sectors by total bid wins. | Quickly identifies top-performing sectors (e.g., Technical Support, Contract-related, Streaming). |
-          | **People Leaderboard (Horizontal Bar Chart)** | Displays individual-level performance in terms of total bid wins. | Recognizes high performers (e.g., Jim with 666 wins), promoting internal best practice sharing. |
-          | **Bid Status Distribution (Donut Chart)** | Visualizes bid outcomes: <br> - Bid Wins (40.54%) <br> - Bid Losses (36.46%) <br> - Should Win But Lost (9.46%) <br> - Must Win (13.54%) | Shows overall pipeline health and highlights where key risks or lost opportunities are concentrated. |
+          | **People Leaderboard (Horizontal Bar Chart)** | Displays individual-level performance in terms of total bid wins. | Recognizes high performers, promoting internal best practice sharing. |
+          | **Bid Status Distribution (Donut Chart)** | Visualizes bid outcomes: <br> - Bid Wins<br> - Bid Losses<br> - Should Win But Lost<br> - Must Win  | Shows overall pipeline health and highlights where key risks or lost opportunities are concentrated. |
           | **Total Profit Over Time (Area Line Chart)** | Tracks cumulative bid-generated profit over time. | Measures the financial impact of bidding activities and supports revenue forecasting. |
           | **Bid Loss Reasons (Pie Chart)** | Breakdown of reasons for lost bids: Relevant Experience, Relationship Issues, Technical Gaps, Pricing Issues, etc. | Focuses leadership attention on the most common and actionable loss drivers. |
           | **Sector Score Benchmark (Grouped Bar Chart with Targets)** | Compares each sector’s Technical and Commercial scores against predefined benchmarks (with target lines shown). | Highlights underperforming sectors relative to targets, enabling targeted improvement strategies. |
