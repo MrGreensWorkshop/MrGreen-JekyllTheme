@@ -32,9 +32,10 @@ page_data:
       post: |
           # Power BI Bid Insight Dashboard Overview
 
-          ![Pic 1](1.png)
-          ![Pic 2](2.png)
-          ![Pic 3](3.png)
+          ![Cover Page](/assets/img/project/1.png)
+          ![Page 1 -- Leadership](/assets/img/project/2.png)
+          ![Page 2 -- Team Leader](/assets/img/project/3.png)
+          ![Page 3 -- Team member](/assets/img/project/4.png)
 
           ## 1. Chart Overview – What Each Chart Shows
 
@@ -55,7 +56,7 @@ page_data:
 
           ---
 
-          ## 2. Dashboard Design Storyline – Why This Layout?
+          ## 2. Dashboard Design
 
           The dashboard follows a **top-down storytelling flow** from summary to detail, reflecting the decision-making process of business users:
 
@@ -73,11 +74,11 @@ page_data:
           - **Interactivity Built-in:**  
             Throughout the dashboard, I implemented **slicers for Date Range, Sector, Price Bucket, People, and Bid Status**, allowing users to **customize views in real time**.
 
-          This layout ensures that **each user group—from executives to data analysts—gets exactly the level of detail they need, in the order they prefer to consume it**.
+          This layout ensures that **each user group gets exactly the level of detail they need, in the order they prefer to consume it**.
 
           ---
 
-          ## 3. Advantages of the Dashboard (with Explanations)
+          ## 3. Advantages of the Dashboard
 
           ✅ **Executive-Friendly Overview:**  
           Immediate visibility of KPIs allows **time-strapped leaders** to make fast decisions without navigating multiple pages.
