@@ -115,3 +115,37 @@ page_data:
           - **Significant time savings** for leadership teams by **reducing the need for manual reporting**.
           - **Improved strategic decision-making**, thanks to **clear visibility of loss reasons and sector performance gaps**.
           - **Cross-sector adoption**, as the dashboard design was later **rolled out across other business units in PwC UK** after receiving **positive user feedback (85% satisfaction rate)**.
+
+
+
+    - type: id_project
+      project_name: "AlteryX "
+      project_excerpt: "Code"
+      img: ":AlteryX.jpg"
+      img_title: "ms"
+      date: "2024-04-23"
+      post: |
+        ### **Automatic Workflow for Leadership Updates Based on AlteryX **
+
+        This workflow generates a **leadership-facing Excel report** containing **processed, high-level business performance data**. The output file is designed to be **directly linked to executive presentation slides**, ensuring **real-time updates** with **minimal manual effort**.
+
+        ---
+
+        #### **The report will contain:**
+
+        - **Total Revenue and Profit Summaries**  
+        - **Revenue growth trends** compared to the previous period  
+        - **Pipeline health indicators** (e.g., deal stages, delays)  
+        - **Top-performing teams or individuals**  
+        - **Departmental and regional breakdowns** for **strategic oversight**
+
+        ---
+
+        #### **Impact:**
+
+        - **Reduced manual reporting effort by over 80%**, replacing **spreadsheet-based processes** with **automated weekly Alteryx workflows** delivering **consistent leadership updates**.  
+        - **Improved data accuracy** and **presentation consistency** across reports  
+        - **Used by 3+ departments**, facing **more than 500 people**, and received **87% positive feedback**
+
+
+        ![Image](:AlteryX Workflow 1.png)
