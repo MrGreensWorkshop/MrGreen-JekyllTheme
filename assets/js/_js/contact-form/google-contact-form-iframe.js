@@ -42,6 +42,11 @@
     SlidingMsgBox.show(globals.slidingBoxId);
   }
 
+  function isEmpty(value) {
+    if (value === "" || value === null || typeof value === "undefined") return true;
+    return false;
+  }
+
   function htmlFormatter(property_obj, layout) {
     return layout.replace(properties.matchPattern, function (matchStr, property) {
       /* if no property to match, to prevent adding {text} etc. */
