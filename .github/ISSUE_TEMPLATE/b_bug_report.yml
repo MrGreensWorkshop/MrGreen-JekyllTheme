@@ -25,8 +25,11 @@ body:
   attributes:
     label: Are you sure this is a bug?
     description: |
-      The Issues in this repo is only used for 'Bug reports' or 'Feature requests'.
+      The Issues in this repo is only used for 'Bug reports'.
       If you are not sure if this is a bug or not, please ask a question from [Discussions](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/issues/new?assignees=&labels=delete+me&template=a_questions.yml&title=%3Ctitle%3E).
+    options:
+    - label: Yes, I checked that the bug can be reproducible on the main branch, and I will provide step-by-step instructions to do so.
+      required: true
     options:
     - label: I'm sure this is definitely a bug.
       required: true
