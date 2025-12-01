@@ -1,5 +1,5 @@
-name: Enhancement or Feature
-description: Use this with related PR that you created
+name: Detailed Pull Request explanation
+description: Use this with related PR to explain the enhancement or feature that you created.
 title: "<title>"
 labels: enhancement
 body:
