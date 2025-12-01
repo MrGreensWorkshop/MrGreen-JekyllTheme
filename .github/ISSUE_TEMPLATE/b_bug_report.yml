@@ -30,7 +30,6 @@ body:
     options:
     - label: Yes, I checked that the bug can be reproducible on the main branch, and I will provide step-by-step instructions to do so.
       required: true
-    options:
     - label: I'm sure this is definitely a bug.
       required: true
 - type: textarea
